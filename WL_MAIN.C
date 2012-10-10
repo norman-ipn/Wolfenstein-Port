@@ -1,5 +1,10 @@
 // WL_MAIN.C
 
+
+/*
+ *  'conio.h' can't be used on linux system.
+ *
+ * */
 #include <conio.h>
 #include "WL_DEF.H"
 #pragma hdrstop
@@ -26,6 +31,10 @@
 */
 
 
+/*
+ *  This defines must be changed to 'const' variables.
+ *
+ * */
 #define FOCALLENGTH     (0x5700l)               // in global coordinates
 #define VIEWGLOBAL      0x10000                 // globals visable flush to wall
 
@@ -89,17 +98,28 @@ char	configname[13]="CONFIG.";
 
 void ReadConfig(void)
 {
-	int                     file;
+	int             file;
 	SDMode          sd;
 	SMMode          sm;
 	SDSMode         sds;
 
-
+/*
+ *     the configname is "CONFIG."
+ *  */
 	if ( (file = open(configname,O_BINARY | O_RDONLY)) != -1)
 	{
 	//
 	// valid config file
 	//
+		/*
+	  		the read are done in 'binary' format
+			And the sizes must be changed 
+			to use data types instead of variables.
+
+			HighScore is a typedef on 'ID_US.H' file
+
+			We must get rid of all typedefs.
+		*/
 		read(file,Scores,sizeof(HighScore) * MaxScores);
 
 		read(file,&sd,sizeof(sd));
@@ -233,6 +253,11 @@ void WriteConfig(void)
 = Patch386
 =
 = Patch ldiv to use 32 bit instructions
+
+
+	This pathing is not necessary, 
+	the objetive is to port on standar C language.
+
 =
 ========================
 */
@@ -301,6 +326,11 @@ void DiskFlopAnim(int x,int y)
 }
 
 
+/**
+ *  This functions must be reallocated on a 'utils.h' library 
+ *  because its not part of the main game file.
+ *
+ * */
 long DoChecksum(byte far *source,unsigned size,long checksum)
 {
  unsigned i;
@@ -550,6 +580,12 @@ boolean LoadTheGame(int file,int x,int y)
 = ShutdownId
 =
 = Shuts down all ID_?? managers
+
+:w
+
+
+
+
 =
 ==========================
 */
