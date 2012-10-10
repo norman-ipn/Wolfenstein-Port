@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__VL_8H.html#a324bc865f0f44dda58c10ada4eae8bb5" title="VL_DePlaneVGA" alt="" coords="163,32,285,61"/>
+<area shape="rect" id="node5" href="$ID__VL_8H.html#a49a6717be931b39c40a299c8e6383d82" title="VL_SetVGAPlaneMode" alt="" coords="335,32,492,61"/>
+<area shape="rect" id="node7" href="$WL__MAIN_8C.html#a88d551c35376f2082704379c45c542ec" title="SignonScreen" alt="" coords="543,32,644,61"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="693,32,768,61"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="816,5,867,35"/>
+<area shape="rect" id="node13" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="916,32,1004,61"/>
+</map>

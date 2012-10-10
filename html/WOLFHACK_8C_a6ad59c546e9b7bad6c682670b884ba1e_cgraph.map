@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WOLFHACK_8C.html#a74fe032af0daeb2b94e5313e32ee378c" title="DrawSpans" alt="" coords="167,119,257,148"/>
+<area shape="rect" id="node7" href="$WOLFHACK_8C.html#a522f0e08c31d2c568ff188e825cfe9c4" title="SetPlaneViewSize" alt="" coords="147,172,277,202"/>
+<area shape="rect" id="node5" href="$WOLFHACK_8C.html#abfc050cf3ca8d5863a10f7a95b87b9f2" title="FixedMul" alt="" coords="339,119,413,148"/>
+<area shape="rect" id="node9" href="$ID__PM_8C.html#a80f33d5bd3e0a9a388063a78edf53329" title="PM_GetPage" alt="" coords="327,172,425,202"/>
+<area shape="rect" id="node11" href="$ID__PM_8C.html#a6d8376b84fdfd88c991b82d9d9cebcfd" title="PM_GetPageAddress" alt="" coords="1316,354,1463,383"/>
+<area shape="rect" id="node17" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1887,274,1932,303"/>
+<area shape="rect" id="node20" href="$ID__PM_8C.html#a15cc7513b41c134b24cd20536a63f892" title="PML_GetPageFromXMS" alt="" coords="476,146,641,175"/>
+<area shape="rect" id="node40" href="$ID__PM_8C.html#a14156f3e9e18532f92f4c00e761fa0b7" title="PML_LoadPage" alt="" coords="501,199,616,228"/>
+<area shape="rect" id="node13" href="$ID__PM_8C.html#aa4215b4363055b96b571bedb294d39a2" title="PML_GetEMSAddress" alt="" coords="1523,326,1677,355"/>
+<area shape="rect" id="node15" href="$ID__PM_8C.html#ab2f720eba0924c15d0a7c6a487fc0626" title="PML_MapEMS" alt="" coords="1727,351,1836,380"/>
+<area shape="rect" id="node22" href="$ID__PM_8C.html#a4694a0931f68c73c15c7cdd4b6a4cb61" title="PML_GetAPageBuffer" alt="" coords="692,172,841,202"/>
+<area shape="rect" id="node25" href="$ID__PM_8C.html#a1a23d717675f8d14bd6e07bb7bcbd4b4" title="PML_GiveLRUPage" alt="" coords="1113,95,1252,124"/>
+<area shape="rect" id="node28" href="$ID__PM_8C.html#aa2abd895c0ac117de4d033b6850a9a07" title="PML_TransferPageSpace" alt="" coords="891,327,1061,356"/>
+<area shape="rect" id="node31" href="$ID__PM_8C.html#a0b6f9ec457913559bcff1d9258a15552" title="PML_PutPageInXMS" alt="" coords="1109,300,1256,330"/>
+<area shape="rect" id="node34" href="$ID__PM_8C.html#aa3210f7fc8e7367f2349cd17cbec0c67" title="PML_GiveLRUXMSPage" alt="" coords="1305,300,1473,330"/>
+<area shape="rect" id="node43" href="$ID__PM_8C.html#a3e8875fd1618f89f3e98f9d2ae4f0945" title="PML_ReadFromFile" alt="" coords="1531,456,1669,486"/>
+<area shape="rect" id="node45" href="$ID__CA_8C.html#a9d7ef0e3d4f10f25abd940094a4db437" title="CA_FarRead" alt="" coords="1732,507,1831,536"/>
+</map>

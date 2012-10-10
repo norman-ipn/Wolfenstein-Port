@@ -1,0 +1,471 @@
+\hypertarget{WL__INTER_8C}{
+\section{WL\_\-INTER.C File Reference}
+\label{WL__INTER_8C}\index{WL\_\-INTER.C@{WL\_\-INTER.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WL\_\-INTER.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__INTER_8C_a2cf43e900bb281b39b5d58f59bbe45da}{RATIOX}~6
+\item 
+\#define \hyperlink{WL__INTER_8C_a1d637d5ac9cd9bae9d726959f61437c0}{RATIOY}~14
+\item 
+\#define \hyperlink{WL__INTER_8C_a32eeb5ea5d3a32039c13b74137dc5bc0}{TIMEX}~14
+\item 
+\#define \hyperlink{WL__INTER_8C_a3662b0eb834e198ab900720e51ee03ad}{TIMEY}~8
+\item 
+\#define \hyperlink{WL__INTER_8C_ab64ae2457b96475a0ad9bcf5088acc8e}{VBLWAIT}~30
+\item 
+\#define \hyperlink{WL__INTER_8C_a03af7e2635475ea9e7d82dbbdfb63d36}{PAR\_\-AMOUNT}~500
+\item 
+\#define \hyperlink{WL__INTER_8C_a0dfa3c33be744c938e397f67877a27cb}{PERCENT100AMT}~10000
+\item 
+\#define \hyperlink{WL__INTER_8C_ad72246e57edaf2c7c8d190711c5f187b}{RATIOXX}~37
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__INTER_8C_a8805b889a7e1284ca6c88619137588d3}{ClearSplitVWB} (void)
+\item 
+void \hyperlink{WL__INTER_8C_aaa41fd21f2b55e23622375ac43624b99}{Victory} (void)
+\item 
+void \hyperlink{WL__INTER_8C_af2a55f58d44dd0a7745407495a1ac819}{PG13} (void)
+\item 
+void \hyperlink{WL__INTER_8C_a2a840b71aa584f6332da78f4eeec8767}{Write} (int x, int y, char $\ast$string)
+\item 
+void \hyperlink{WL__INTER_8C_afa3cce805f1be8492753978e33f016fb}{BJ\_\-Breathe} (void)
+\item 
+void \hyperlink{WL__INTER_8C_ab396c53c02f20e288d2d718c0ee64728}{LevelCompleted} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__INTER_8C_a9c6d8dd07b26f9e832dfafded62b779c}{PreloadUpdate} (unsigned current, unsigned total)
+\item 
+void \hyperlink{WL__INTER_8C_a62b222f44bcc97cfca512fe6b24f4863}{PreloadGraphics} (void)
+\item 
+void \hyperlink{WL__INTER_8C_a249116c49fb1a498be1ac71aac320343}{DrawHighScores} (void)
+\item 
+void \hyperlink{WL__INTER_8C_ab41d5a4fd5a76f25d8773cff34929243}{CheckHighScore} (long score, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} other)
+\item 
+void \hyperlink{WL__INTER_8C_aa6b18519250a34e966e6900c6328008b}{NonShareware} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structLRstruct}{LRstruct} \hyperlink{WL__INTER_8C_a38e5edee41d32a1fe1b993d9246fc74d}{LevelRatios} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__INTER_8C_a03af7e2635475ea9e7d82dbbdfb63d36}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!PAR\_\-AMOUNT@{PAR\_\-AMOUNT}}
+\index{PAR\_\-AMOUNT@{PAR\_\-AMOUNT}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{PAR\_\-AMOUNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PAR\_\-AMOUNT~500}}
+\label{WL__INTER_8C_a03af7e2635475ea9e7d82dbbdfb63d36}
+\hypertarget{WL__INTER_8C_a0dfa3c33be744c938e397f67877a27cb}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!PERCENT100AMT@{PERCENT100AMT}}
+\index{PERCENT100AMT@{PERCENT100AMT}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{PERCENT100AMT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PERCENT100AMT~10000}}
+\label{WL__INTER_8C_a0dfa3c33be744c938e397f67877a27cb}
+\hypertarget{WL__INTER_8C_a2cf43e900bb281b39b5d58f59bbe45da}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!RATIOX@{RATIOX}}
+\index{RATIOX@{RATIOX}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{RATIOX}]{\setlength{\rightskip}{0pt plus 5cm}\#define RATIOX~6}}
+\label{WL__INTER_8C_a2cf43e900bb281b39b5d58f59bbe45da}
+\hypertarget{WL__INTER_8C_ad72246e57edaf2c7c8d190711c5f187b}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!RATIOXX@{RATIOXX}}
+\index{RATIOXX@{RATIOXX}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{RATIOXX}]{\setlength{\rightskip}{0pt plus 5cm}\#define RATIOXX~37}}
+\label{WL__INTER_8C_ad72246e57edaf2c7c8d190711c5f187b}
+\hypertarget{WL__INTER_8C_a1d637d5ac9cd9bae9d726959f61437c0}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!RATIOY@{RATIOY}}
+\index{RATIOY@{RATIOY}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{RATIOY}]{\setlength{\rightskip}{0pt plus 5cm}\#define RATIOY~14}}
+\label{WL__INTER_8C_a1d637d5ac9cd9bae9d726959f61437c0}
+\hypertarget{WL__INTER_8C_a32eeb5ea5d3a32039c13b74137dc5bc0}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!TIMEX@{TIMEX}}
+\index{TIMEX@{TIMEX}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{TIMEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMEX~14}}
+\label{WL__INTER_8C_a32eeb5ea5d3a32039c13b74137dc5bc0}
+\hypertarget{WL__INTER_8C_a3662b0eb834e198ab900720e51ee03ad}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!TIMEY@{TIMEY}}
+\index{TIMEY@{TIMEY}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{TIMEY}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMEY~8}}
+\label{WL__INTER_8C_a3662b0eb834e198ab900720e51ee03ad}
+\hypertarget{WL__INTER_8C_ab64ae2457b96475a0ad9bcf5088acc8e}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!VBLWAIT@{VBLWAIT}}
+\index{VBLWAIT@{VBLWAIT}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{VBLWAIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define VBLWAIT~30}}
+\label{WL__INTER_8C_ab64ae2457b96475a0ad9bcf5088acc8e}
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__INTER_8C_afa3cce805f1be8492753978e33f016fb}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!BJ\_\-Breathe@{BJ\_\-Breathe}}
+\index{BJ\_\-Breathe@{BJ\_\-Breathe}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{BJ\_\-Breathe}]{\setlength{\rightskip}{0pt plus 5cm}void BJ\_\-Breathe (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_afa3cce805f1be8492753978e33f016fb}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_afa3cce805f1be8492753978e33f016fb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_afa3cce805f1be8492753978e33f016fb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_ab41d5a4fd5a76f25d8773cff34929243}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!CheckHighScore@{CheckHighScore}}
+\index{CheckHighScore@{CheckHighScore}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{CheckHighScore}]{\setlength{\rightskip}{0pt plus 5cm}void CheckHighScore (
+\begin{DoxyParamCaption}
+\item[{long}]{score, }
+\item[{{\bf word}}]{other}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_ab41d5a4fd5a76f25d8773cff34929243}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_ab41d5a4fd5a76f25d8773cff34929243_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_ab41d5a4fd5a76f25d8773cff34929243_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_a8805b889a7e1284ca6c88619137588d3}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!ClearSplitVWB@{ClearSplitVWB}}
+\index{ClearSplitVWB@{ClearSplitVWB}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{ClearSplitVWB}]{\setlength{\rightskip}{0pt plus 5cm}void ClearSplitVWB (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_a8805b889a7e1284ca6c88619137588d3}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a8805b889a7e1284ca6c88619137588d3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_a249116c49fb1a498be1ac71aac320343}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!DrawHighScores@{DrawHighScores}}
+\index{DrawHighScores@{DrawHighScores}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{DrawHighScores}]{\setlength{\rightskip}{0pt plus 5cm}void DrawHighScores (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_a249116c49fb1a498be1ac71aac320343}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a249116c49fb1a498be1ac71aac320343_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a249116c49fb1a498be1ac71aac320343_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_ab396c53c02f20e288d2d718c0ee64728}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!LevelCompleted@{LevelCompleted}}
+\index{LevelCompleted@{LevelCompleted}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{LevelCompleted}]{\setlength{\rightskip}{0pt plus 5cm}void LevelCompleted (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_ab396c53c02f20e288d2d718c0ee64728}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__INTER_8C_ab396c53c02f20e288d2d718c0ee64728_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_ab396c53c02f20e288d2d718c0ee64728_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_aa6b18519250a34e966e6900c6328008b}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!NonShareware@{NonShareware}}
+\index{NonShareware@{NonShareware}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{NonShareware}]{\setlength{\rightskip}{0pt plus 5cm}void NonShareware (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_aa6b18519250a34e966e6900c6328008b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_aa6b18519250a34e966e6900c6328008b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_aa6b18519250a34e966e6900c6328008b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_af2a55f58d44dd0a7745407495a1ac819}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!PG13@{PG13}}
+\index{PG13@{PG13}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{PG13}]{\setlength{\rightskip}{0pt plus 5cm}void PG13 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_af2a55f58d44dd0a7745407495a1ac819}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_af2a55f58d44dd0a7745407495a1ac819_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_af2a55f58d44dd0a7745407495a1ac819_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_a62b222f44bcc97cfca512fe6b24f4863}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!PreloadGraphics@{PreloadGraphics}}
+\index{PreloadGraphics@{PreloadGraphics}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{PreloadGraphics}]{\setlength{\rightskip}{0pt plus 5cm}void PreloadGraphics (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_a62b222f44bcc97cfca512fe6b24f4863}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a62b222f44bcc97cfca512fe6b24f4863_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a62b222f44bcc97cfca512fe6b24f4863_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_a9c6d8dd07b26f9e832dfafded62b779c}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!PreloadUpdate@{PreloadUpdate}}
+\index{PreloadUpdate@{PreloadUpdate}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{PreloadUpdate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} PreloadUpdate (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{current, }
+\item[{unsigned}]{total}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_a9c6d8dd07b26f9e832dfafded62b779c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a9c6d8dd07b26f9e832dfafded62b779c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a9c6d8dd07b26f9e832dfafded62b779c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_aaa41fd21f2b55e23622375ac43624b99}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!Victory@{Victory}}
+\index{Victory@{Victory}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{Victory}]{\setlength{\rightskip}{0pt plus 5cm}void Victory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_aaa41fd21f2b55e23622375ac43624b99}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__INTER_8C_aaa41fd21f2b55e23622375ac43624b99_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_aaa41fd21f2b55e23622375ac43624b99_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__INTER_8C_a2a840b71aa584f6332da78f4eeec8767}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!Write@{Write}}
+\index{Write@{Write}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Write (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}
+\label{WL__INTER_8C_a2a840b71aa584f6332da78f4eeec8767}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=392pt]{WL__INTER_8C_a2a840b71aa584f6332da78f4eeec8767_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__INTER_8C_a2a840b71aa584f6332da78f4eeec8767_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__INTER_8C_a38e5edee41d32a1fe1b993d9246fc74d}{
+\index{WL\_\-INTER.C@{WL\_\-INTER.C}!LevelRatios@{LevelRatios}}
+\index{LevelRatios@{LevelRatios}!WL_INTER.C@{WL\_\-INTER.C}}
+\subsubsection[{LevelRatios}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LRstruct} {\bf LevelRatios}\mbox{[}8\mbox{]}}}
+\label{WL__INTER_8C_a38e5edee41d32a1fe1b993d9246fc74d}

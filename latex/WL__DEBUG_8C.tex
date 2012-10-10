@@ -1,0 +1,302 @@
+\hypertarget{WL__DEBUG_8C}{
+\section{WL\_\-DEBUG.C File Reference}
+\label{WL__DEBUG_8C}\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+{\ttfamily \#include $<$BIOS.H$>$}\par
+Include dependency graph for WL\_\-DEBUG.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__DEBUG_8C_a77945c3643f65749c3d8cd087cb85eed}{VIEWTILEX}~(\hyperlink{WL__MAIN_8C_a9d8a9239749c5174f26cf73ab9625c3b}{viewwidth}/16)
+\item 
+\#define \hyperlink{WL__DEBUG_8C_a288430a87bfe2090e84963840519a619}{VIEWTILEY}~(\hyperlink{WL__MAIN_8C_abbbcb01b7dcc4679d07cde1acfbf1412}{viewheight}/16)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a49b0ed5f566fdac620e78abf0bd322f1}{mapview}, 
+\hyperlink{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a9030c0217671c02f0b10d1d51b420cc3}{tilemapview}, 
+\hyperlink{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a184216f1fae1c92c0f41d21ba4afafea}{actoratview}, 
+\hyperlink{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a2843b61646893c3190e9e8229d2e0c3b}{visview}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{WL__DEBUG_8C_ae61234b6d03ca70ebed1f5a423d17ba5}{DebugKeys} (void)
+\item 
+void \hyperlink{WL__DEBUG_8C_a8d87c0ce658aedaf268900bb0638f931}{ViewMap} (void)
+\item 
+void \hyperlink{WL__DEBUG_8C_a5d1644a9390130b32a7ec37c6aaa7f37}{DebugMemory} (void)
+\item 
+void \hyperlink{WL__DEBUG_8C_ab9152a6602faeb55c8da615da9e8befd}{CountObjects} (void)
+\item 
+void \hyperlink{WL__DEBUG_8C_a98df47014d2079dafa7b7b0911bef3ff}{PicturePause} (void)
+\item 
+void \hyperlink{WL__DEBUG_8C_a0c4cc614683ec32e9c6d2ddd544a77ea}{ShapeTest} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{WL__DEBUG_8C_a27e43aecdefe2c697d1e0a97192c21dc}{maporgx}
+\item 
+int \hyperlink{WL__DEBUG_8C_a4b59524a68e247d43cf291393d7fea9d}{maporgy}
+\item 
+enum  \{ ... \}  \hyperlink{WL__DEBUG_8C_a90350393f1f20314966dc81ca8d9511c}{viewtype}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__DEBUG_8C_a77945c3643f65749c3d8cd087cb85eed}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!VIEWTILEX@{VIEWTILEX}}
+\index{VIEWTILEX@{VIEWTILEX}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{VIEWTILEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIEWTILEX~({\bf viewwidth}/16)}}
+\label{WL__DEBUG_8C_a77945c3643f65749c3d8cd087cb85eed}
+\hypertarget{WL__DEBUG_8C_a288430a87bfe2090e84963840519a619}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!VIEWTILEY@{VIEWTILEY}}
+\index{VIEWTILEY@{VIEWTILEY}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{VIEWTILEY}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIEWTILEY~({\bf viewheight}/16)}}
+\label{WL__DEBUG_8C_a288430a87bfe2090e84963840519a619}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7}{
+\subsubsection[{"@1}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{mapview@{mapview}!WL\_\-DEBUG.C@{WL\_\-DEBUG.C}}\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!mapview@{mapview}}\item[{\em 
+\hypertarget{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a49b0ed5f566fdac620e78abf0bd322f1}{
+mapview}
+\label{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a49b0ed5f566fdac620e78abf0bd322f1}
+}]\index{tilemapview@{tilemapview}!WL\_\-DEBUG.C@{WL\_\-DEBUG.C}}\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!tilemapview@{tilemapview}}\item[{\em 
+\hypertarget{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a9030c0217671c02f0b10d1d51b420cc3}{
+tilemapview}
+\label{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a9030c0217671c02f0b10d1d51b420cc3}
+}]\index{actoratview@{actoratview}!WL\_\-DEBUG.C@{WL\_\-DEBUG.C}}\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!actoratview@{actoratview}}\item[{\em 
+\hypertarget{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a184216f1fae1c92c0f41d21ba4afafea}{
+actoratview}
+\label{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a184216f1fae1c92c0f41d21ba4afafea}
+}]\index{visview@{visview}!WL\_\-DEBUG.C@{WL\_\-DEBUG.C}}\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!visview@{visview}}\item[{\em 
+\hypertarget{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a2843b61646893c3190e9e8229d2e0c3b}{
+visview}
+\label{WL__DEBUG_8C_adf764cbdea00d65edcd07bb9953ad2b7a2843b61646893c3190e9e8229d2e0c3b}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__DEBUG_8C_ab9152a6602faeb55c8da615da9e8befd}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!CountObjects@{CountObjects}}
+\index{CountObjects@{CountObjects}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{CountObjects}]{\setlength{\rightskip}{0pt plus 5cm}void CountObjects (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__DEBUG_8C_ab9152a6602faeb55c8da615da9e8befd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_ab9152a6602faeb55c8da615da9e8befd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_ab9152a6602faeb55c8da615da9e8befd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__DEBUG_8C_ae61234b6d03ca70ebed1f5a423d17ba5}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!DebugKeys@{DebugKeys}}
+\index{DebugKeys@{DebugKeys}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{DebugKeys}]{\setlength{\rightskip}{0pt plus 5cm}int DebugKeys (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__DEBUG_8C_ae61234b6d03ca70ebed1f5a423d17ba5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__DEBUG_8C_ae61234b6d03ca70ebed1f5a423d17ba5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_ae61234b6d03ca70ebed1f5a423d17ba5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__DEBUG_8C_a5d1644a9390130b32a7ec37c6aaa7f37}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!DebugMemory@{DebugMemory}}
+\index{DebugMemory@{DebugMemory}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{DebugMemory}]{\setlength{\rightskip}{0pt plus 5cm}void DebugMemory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__DEBUG_8C_a5d1644a9390130b32a7ec37c6aaa7f37}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_a5d1644a9390130b32a7ec37c6aaa7f37_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_a5d1644a9390130b32a7ec37c6aaa7f37_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__DEBUG_8C_a98df47014d2079dafa7b7b0911bef3ff}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!PicturePause@{PicturePause}}
+\index{PicturePause@{PicturePause}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{PicturePause}]{\setlength{\rightskip}{0pt plus 5cm}void PicturePause (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__DEBUG_8C_a98df47014d2079dafa7b7b0911bef3ff}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_a98df47014d2079dafa7b7b0911bef3ff_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_a98df47014d2079dafa7b7b0911bef3ff_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__DEBUG_8C_a0c4cc614683ec32e9c6d2ddd544a77ea}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!ShapeTest@{ShapeTest}}
+\index{ShapeTest@{ShapeTest}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{ShapeTest}]{\setlength{\rightskip}{0pt plus 5cm}void ShapeTest (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__DEBUG_8C_a0c4cc614683ec32e9c6d2ddd544a77ea}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_a0c4cc614683ec32e9c6d2ddd544a77ea_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_a0c4cc614683ec32e9c6d2ddd544a77ea_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__DEBUG_8C_a8d87c0ce658aedaf268900bb0638f931}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!ViewMap@{ViewMap}}
+\index{ViewMap@{ViewMap}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{ViewMap}]{\setlength{\rightskip}{0pt plus 5cm}void ViewMap (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__DEBUG_8C_a8d87c0ce658aedaf268900bb0638f931}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__DEBUG_8C_a8d87c0ce658aedaf268900bb0638f931_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__DEBUG_8C_a27e43aecdefe2c697d1e0a97192c21dc}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!maporgx@{maporgx}}
+\index{maporgx@{maporgx}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{maporgx}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf maporgx}}}
+\label{WL__DEBUG_8C_a27e43aecdefe2c697d1e0a97192c21dc}
+\hypertarget{WL__DEBUG_8C_a4b59524a68e247d43cf291393d7fea9d}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!maporgy@{maporgy}}
+\index{maporgy@{maporgy}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{maporgy}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf maporgy}}}
+\label{WL__DEBUG_8C_a4b59524a68e247d43cf291393d7fea9d}
+\hypertarget{WL__DEBUG_8C_a90350393f1f20314966dc81ca8d9511c}{
+\index{WL\_\-DEBUG.C@{WL\_\-DEBUG.C}!viewtype@{viewtype}}
+\index{viewtype@{viewtype}!WL_DEBUG.C@{WL\_\-DEBUG.C}}
+\subsubsection[{viewtype}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \} 	 {\bf viewtype}}}
+\label{WL__DEBUG_8C_a90350393f1f20314966dc81ca8d9511c}

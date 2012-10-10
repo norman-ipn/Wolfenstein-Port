@@ -1,0 +1,585 @@
+\hypertarget{WL__STATE_8C}{
+\section{WL\_\-STATE.C File Reference}
+\label{WL__STATE_8C}\index{WL\_\-STATE.C@{WL\_\-STATE.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WL\_\-STATE.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__STATE_8C_ae9d98dc089ac680e627983201f31bb7f}{CHECKDIAG}(x, y)
+\item 
+\#define \hyperlink{WL__STATE_8C_afd15e6f6383a5e37013e5a267f3a74fc}{CHECKSIDE}(x, y)
+\item 
+\#define \hyperlink{WL__STATE_8C_ac84fc3a644e9e6dac37e6563be9664ef}{MINSIGHT}~0x18000l
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__STATE_8C_a2672e808d8c088645b48e17c1f3608ce}{SpawnNewObj} (unsigned tilex, unsigned tiley, \hyperlink{structstatestruct}{statetype} $\ast$state)
+\item 
+void \hyperlink{WL__STATE_8C_aefe4aac0ca3aa18b1943d8e096162a13}{NewState} (\hyperlink{structobjstruct}{objtype} $\ast$ob, \hyperlink{structstatestruct}{statetype} $\ast$state)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__STATE_8C_afc2aee564bbde3329ca837f177130917}{TryWalk} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__STATE_8C_acc590a0c3cb09dd88e7727cbed040ec4}{MoveObj} (\hyperlink{structobjstruct}{objtype} $\ast$ob, long move)
+\item 
+void \hyperlink{WL__STATE_8C_ab414c5cb884ce9d89439a787a5b8c8de}{KillActor} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__STATE_8C_a0dd7c0f5423efb70928fd80fa08e013a}{DamageActor} (\hyperlink{structobjstruct}{objtype} $\ast$ob, unsigned damage)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__STATE_8C_ad9ba23a7cef5028a4aafaa790c89ef9e}{CheckLine} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__STATE_8C_a222e7af294ae4981ffac72c16b9f7a01}{FirstSighting} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__STATE_8C_a78d1b5b5a62255da160d304dedbe2eae}{CheckSight} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__STATE_8C_abf00c4afcd01d66f8b6ba4d9b308ce6f}{SelectDodgeDir} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__STATE_8C_aaa5f3bd33e28df6ee38db0b950fb1b45}{SelectChaseDir} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__STATE_8C_a160d81dd6ea23ee5cee5cd31d6b9c627}{SelectRunDir} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__STATE_8C_ade1f64f9cd6e724d30037ed9e503037a}{DropItem} (\hyperlink{WL__DEF_8H_aba6727854ac6a393ef9918fe0c42500f}{stat\_\-t} itemtype, int tilex, int tiley)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__STATE_8C_a3a43f9647b8793707a682d5507017ecd}{SightPlayer} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{WL__DEF_8H_a04ddebf7fd2f3611173b2d219f4ec05f}{dirtype} \hyperlink{WL__STATE_8C_a3787e913f047b454249a44046f17639d}{opposite} \mbox{[}9\mbox{]}
+\item 
+\hyperlink{WL__DEF_8H_a04ddebf7fd2f3611173b2d219f4ec05f}{dirtype} \hyperlink{WL__STATE_8C_a10ebed132303227c107c0a505ebc4681}{diagonal} \mbox{[}9\mbox{]}\mbox{[}9\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__STATE_8C_ae9d98dc089ac680e627983201f31bb7f}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!CHECKDIAG@{CHECKDIAG}}
+\index{CHECKDIAG@{CHECKDIAG}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{CHECKDIAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHECKDIAG(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_ae9d98dc089ac680e627983201f31bb7f}
+{\bfseries Value:}
+\begin{DoxyCode}
+{                                                   \
+        temp=(unsigned)actorat[x][y];                   \
+        if (temp)                                       \
+        {                                               \
+                if (temp<256)                               \
+                        return false;                           \
+                if (((objtype *)temp)->flags&FL_SHOOTABLE)  \
+                        return false;                           \
+        }                                               \
+}
+\end{DoxyCode}
+\hypertarget{WL__STATE_8C_afd15e6f6383a5e37013e5a267f3a74fc}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!CHECKSIDE@{CHECKSIDE}}
+\index{CHECKSIDE@{CHECKSIDE}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{CHECKSIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHECKSIDE(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_afd15e6f6383a5e37013e5a267f3a74fc}
+{\bfseries Value:}
+\begin{DoxyCode}
+{                                                   \
+        temp=(unsigned)actorat[x][y];                   \
+        if (temp)                                       \
+        {                                               \
+                if (temp<128)                               \
+                        return false;                           \
+                if (temp<256)                               \
+                        doornum = temp&63;                      \
+                else if (((objtype *)temp)->flags&FL_SHOOTABLE)\
+                        return false;                           \
+        }                                               \
+}
+\end{DoxyCode}
+\hypertarget{WL__STATE_8C_ac84fc3a644e9e6dac37e6563be9664ef}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!MINSIGHT@{MINSIGHT}}
+\index{MINSIGHT@{MINSIGHT}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{MINSIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MINSIGHT~0x18000l}}
+\label{WL__STATE_8C_ac84fc3a644e9e6dac37e6563be9664ef}
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__STATE_8C_ad9ba23a7cef5028a4aafaa790c89ef9e}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!CheckLine@{CheckLine}}
+\index{CheckLine@{CheckLine}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{CheckLine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} CheckLine (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_ad9ba23a7cef5028a4aafaa790c89ef9e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_ad9ba23a7cef5028a4aafaa790c89ef9e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_a78d1b5b5a62255da160d304dedbe2eae}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!CheckSight@{CheckSight}}
+\index{CheckSight@{CheckSight}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{CheckSight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} CheckSight (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_a78d1b5b5a62255da160d304dedbe2eae}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{WL__STATE_8C_a78d1b5b5a62255da160d304dedbe2eae_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{WL__STATE_8C_a78d1b5b5a62255da160d304dedbe2eae_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_a0dd7c0f5423efb70928fd80fa08e013a}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!DamageActor@{DamageActor}}
+\index{DamageActor@{DamageActor}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{DamageActor}]{\setlength{\rightskip}{0pt plus 5cm}void DamageActor (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob, }
+\item[{unsigned}]{damage}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_a0dd7c0f5423efb70928fd80fa08e013a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_a0dd7c0f5423efb70928fd80fa08e013a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=354pt]{WL__STATE_8C_a0dd7c0f5423efb70928fd80fa08e013a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_ade1f64f9cd6e724d30037ed9e503037a}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!DropItem@{DropItem}}
+\index{DropItem@{DropItem}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{DropItem}]{\setlength{\rightskip}{0pt plus 5cm}void DropItem (
+\begin{DoxyParamCaption}
+\item[{{\bf stat\_\-t}}]{itemtype, }
+\item[{int}]{tilex, }
+\item[{int}]{tiley}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_ade1f64f9cd6e724d30037ed9e503037a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{WL__STATE_8C_ade1f64f9cd6e724d30037ed9e503037a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_a222e7af294ae4981ffac72c16b9f7a01}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!FirstSighting@{FirstSighting}}
+\index{FirstSighting@{FirstSighting}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{FirstSighting}]{\setlength{\rightskip}{0pt plus 5cm}void FirstSighting (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_a222e7af294ae4981ffac72c16b9f7a01}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_a222e7af294ae4981ffac72c16b9f7a01_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_a222e7af294ae4981ffac72c16b9f7a01_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_ab414c5cb884ce9d89439a787a5b8c8de}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!KillActor@{KillActor}}
+\index{KillActor@{KillActor}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{KillActor}]{\setlength{\rightskip}{0pt plus 5cm}void KillActor (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_ab414c5cb884ce9d89439a787a5b8c8de}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_ab414c5cb884ce9d89439a787a5b8c8de_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_ab414c5cb884ce9d89439a787a5b8c8de_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_acc590a0c3cb09dd88e7727cbed040ec4}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!MoveObj@{MoveObj}}
+\index{MoveObj@{MoveObj}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{MoveObj}]{\setlength{\rightskip}{0pt plus 5cm}void MoveObj (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob, }
+\item[{long}]{move}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_acc590a0c3cb09dd88e7727cbed040ec4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_acc590a0c3cb09dd88e7727cbed040ec4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{WL__STATE_8C_acc590a0c3cb09dd88e7727cbed040ec4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_aefe4aac0ca3aa18b1943d8e096162a13}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!NewState@{NewState}}
+\index{NewState@{NewState}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{NewState}]{\setlength{\rightskip}{0pt plus 5cm}void NewState (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob, }
+\item[{{\bf statetype} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_aefe4aac0ca3aa18b1943d8e096162a13}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_aefe4aac0ca3aa18b1943d8e096162a13_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_aaa5f3bd33e28df6ee38db0b950fb1b45}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!SelectChaseDir@{SelectChaseDir}}
+\index{SelectChaseDir@{SelectChaseDir}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{SelectChaseDir}]{\setlength{\rightskip}{0pt plus 5cm}void SelectChaseDir (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_aaa5f3bd33e28df6ee38db0b950fb1b45}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=360pt]{WL__STATE_8C_aaa5f3bd33e28df6ee38db0b950fb1b45_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{WL__STATE_8C_aaa5f3bd33e28df6ee38db0b950fb1b45_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_abf00c4afcd01d66f8b6ba4d9b308ce6f}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!SelectDodgeDir@{SelectDodgeDir}}
+\index{SelectDodgeDir@{SelectDodgeDir}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{SelectDodgeDir}]{\setlength{\rightskip}{0pt plus 5cm}void SelectDodgeDir (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_abf00c4afcd01d66f8b6ba4d9b308ce6f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=360pt]{WL__STATE_8C_abf00c4afcd01d66f8b6ba4d9b308ce6f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{WL__STATE_8C_abf00c4afcd01d66f8b6ba4d9b308ce6f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_a160d81dd6ea23ee5cee5cd31d6b9c627}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!SelectRunDir@{SelectRunDir}}
+\index{SelectRunDir@{SelectRunDir}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{SelectRunDir}]{\setlength{\rightskip}{0pt plus 5cm}void SelectRunDir (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_a160d81dd6ea23ee5cee5cd31d6b9c627}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{WL__STATE_8C_a160d81dd6ea23ee5cee5cd31d6b9c627_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{WL__STATE_8C_a160d81dd6ea23ee5cee5cd31d6b9c627_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_a3a43f9647b8793707a682d5507017ecd}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!SightPlayer@{SightPlayer}}
+\index{SightPlayer@{SightPlayer}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{SightPlayer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SightPlayer (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_a3a43f9647b8793707a682d5507017ecd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_a3a43f9647b8793707a682d5507017ecd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{WL__STATE_8C_a3a43f9647b8793707a682d5507017ecd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_a2672e808d8c088645b48e17c1f3608ce}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!SpawnNewObj@{SpawnNewObj}}
+\index{SpawnNewObj@{SpawnNewObj}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{SpawnNewObj}]{\setlength{\rightskip}{0pt plus 5cm}void SpawnNewObj (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{tilex, }
+\item[{unsigned}]{tiley, }
+\item[{{\bf statetype} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_a2672e808d8c088645b48e17c1f3608ce}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{WL__STATE_8C_a2672e808d8c088645b48e17c1f3608ce_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__STATE_8C_a2672e808d8c088645b48e17c1f3608ce_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__STATE_8C_afc2aee564bbde3329ca837f177130917}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!TryWalk@{TryWalk}}
+\index{TryWalk@{TryWalk}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{TryWalk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} TryWalk (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__STATE_8C_afc2aee564bbde3329ca837f177130917}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{WL__STATE_8C_afc2aee564bbde3329ca837f177130917_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=366pt]{WL__STATE_8C_afc2aee564bbde3329ca837f177130917_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__STATE_8C_a10ebed132303227c107c0a505ebc4681}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!diagonal@{diagonal}}
+\index{diagonal@{diagonal}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{diagonal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dirtype} {\bf diagonal}\mbox{[}9\mbox{]}\mbox{[}9\mbox{]}}}
+\label{WL__STATE_8C_a10ebed132303227c107c0a505ebc4681}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+{
+        {nodir,nodir,northeast,nodir,nodir,nodir,southeast,nodir,nodir},
+                        {nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
+ {northeast,nodir,nodir,nodir,northwest,nodir,nodir,nodir,nodir},
+                        {nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
+  {nodir,nodir,northwest,nodir,nodir,nodir,southwest,nodir,nodir},
+                        {nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
+ {southeast,nodir,nodir,nodir,southwest,nodir,nodir,nodir,nodir},
+                        {nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
+                        {nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir}
+}
+\end{DoxyCode}
+\hypertarget{WL__STATE_8C_a3787e913f047b454249a44046f17639d}{
+\index{WL\_\-STATE.C@{WL\_\-STATE.C}!opposite@{opposite}}
+\index{opposite@{opposite}!WL_STATE.C@{WL\_\-STATE.C}}
+\subsubsection[{opposite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dirtype} {\bf opposite}\mbox{[}9\mbox{]}}}
+\label{WL__STATE_8C_a3787e913f047b454249a44046f17639d}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+        {west,southwest,south,southeast,east,northeast,north,northwest,nodir}
+\end{DoxyCode}

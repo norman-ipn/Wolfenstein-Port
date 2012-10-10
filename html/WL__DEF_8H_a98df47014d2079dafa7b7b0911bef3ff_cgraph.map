@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__CA_8C.html#a20eee13eb260608d4612aafc05ffc246" title="CA_SetAllPurge" alt="" coords="163,636,280,665"/>
+<area shape="rect" id="node11" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1099,348,1144,377"/>
+<area shape="rect" id="node14" href="$WL__DEF_8H.html#aef10ed8266c6a98e92c5d6543e7035d6" title="ClearMemory" alt="" coords="172,244,271,273"/>
+<area shape="rect" id="node45" href="$WL__DEF_8H.html#aa8f57ca7046b2d2a91ed59450822ecbc" title="FinishPaletteShifts" alt="" coords="156,689,287,719"/>
+<area shape="rect" id="node47" href="$ID__VL_8C.html#ae2508644c57749de78a11a9122a36157" title="VL_SetPalette" alt="" coords="341,740,448,769"/>
+<area shape="rect" id="node49" href="$ID__IN_8C.html#a781003199e06bab03bde6ff7051bdcbe" title="IN_Shutdown" alt="" coords="171,820,272,849"/>
+<area shape="rect" id="node57" href="$ID__MM_8C.html#ab70f353278bae916507eb350c39f4ebb" title="MM_GetPtr" alt="" coords="177,375,265,404"/>
+<area shape="rect" id="node5" href="$ID__CA_8C.html#aa71d55f13e89f4276b8ff1d161a51815" title="CA_SetGrPurge" alt="" coords="337,687,452,716"/>
+<area shape="rect" id="node9" href="$ID__MM_8C.html#a114de4a52bcc47e8d668ab78a7c702c9" title="MM_SetPurge" alt="" coords="515,636,619,665"/>
+<area shape="rect" id="node7" href="$ID__CA_8C.html#aadc64e6b6e9b1c11f2dd11282662572e" title="CA_ClearMarks" alt="" coords="509,689,624,719"/>
+<area shape="rect" id="node16" href="$ID__MM_8C.html#a1ab3355666068dc56c6d591354b17a3e" title="MM_SortMem" alt="" coords="343,244,447,273"/>
+<area shape="rect" id="node25" href="$ID__SD_8C.html#af508ee24c35bb22fae070def8e7c80ac" title="SD_StopDigitized" alt="" coords="687,111,812,140"/>
+<area shape="rect" id="node18" href="$ID__MM_8C.html#acbec6e3295a580e1067bbd69ea89d275" title="MM_SetLock" alt="" coords="700,271,799,300"/>
+<area shape="rect" id="node21" href="$ID__SD_8C.html#a32826e61458fce0f5667e3e1f4db95f4" title="SD_SoundPlaying" alt="" coords="503,219,631,248"/>
+<area shape="rect" id="node23" href="$ID__SD_8C.html#ac98e41e0645d624d0645219c8eca9615" title="SD_StopSound" alt="" coords="511,164,623,193"/>
+<area shape="rect" id="node38" href="$ID__SD_8C.html#ac4a243a2df697871871f0d62df9248db" title="SDL_ALStopSound" alt="" coords="683,217,816,247"/>
+<area shape="rect" id="node42" href="$ID__SD_8C.html#a8fdd4a72618197048986b80ee715e96f" title="SDL_PCStopSound" alt="" coords="680,164,819,193"/>
+<area shape="rect" id="node27" href="$ID__PM_8C.html#a1e7da5d85fc01341f8f9a893ddc87cfc" title="PM_SetPageLock" alt="" coords="877,165,1003,195"/>
+<area shape="rect" id="node30" href="$ID__SD_8C.html#a6cca2dc7a94fe6d4e6a69b7f320b452a" title="SDL_PCStopSample" alt="" coords="868,5,1012,35"/>
+<area shape="rect" id="node34" href="$ID__SD_8C.html#ad0bed6aae151cee1ce9b468e83a16c57" title="SDL_SBStopSample" alt="" coords="868,59,1012,88"/>
+<area shape="rect" id="node36" href="$ID__SD_8C.html#a4b4cb4383cfa055401dc7ff4ff6f0104" title="SDL_SSStopSample" alt="" coords="868,112,1012,141"/>
+<area shape="rect" id="node32" href="$ID__SD_8C.html#a6e015404fba7543853cacd8420353315" title="SDL_IndicatePC" alt="" coords="1061,5,1181,35"/>
+<area shape="rect" id="node40" href="$ID__SD_8C.html#a022c0a65b79644cb7ea86a2ce77b3c42" title="alOut" alt="" coords="913,219,967,248"/>
+<area shape="rect" id="node51" href="$ID__IN_8C.html#a9a35bfa212a39d07b87e13af5b740b50" title="INL_ShutJoy" alt="" coords="345,900,444,929"/>
+<area shape="rect" id="node53" href="$ID__IN_8C.html#a4b4b0638af5d09c616ee26ab55f32240" title="INL_ShutKbd" alt="" coords="345,793,444,823"/>
+<area shape="rect" id="node55" href="$ID__IN_8C.html#aead9805eb3ed448a0e173e4581d107c0" title="INL_ShutMouse" alt="" coords="337,847,452,876"/>
+<area shape="rect" id="node61" href="$WL__DEF_8H.html#af74ea12ed1f33b5eb32cee5062ea034c" title="SetViewSize" alt="" coords="347,425,443,455"/>
+<area shape="rect" id="node63" href="$WL__DEF_8H.html#a82156c01cf0c6b616ccb2bc2dff569a6" title="CalcProjection" alt="" coords="513,425,620,455"/>
+<area shape="rect" id="node65" href="$ID__MM_8C.html#aec67dba21150a6028caa41540d8575ca" title="MM_BombOnError" alt="" coords="501,479,632,508"/>
+<area shape="rect" id="node68" href="$CONTIGSC_8C.html#aaba41b509b2c39129abfed4d8e0e4255" title="SetupScaling" alt="" coords="517,532,616,561"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__TEXT_8C.html#ab37df8a0a1c922da15b4ed950eaa3f0d" title="ParseTimedCommand" alt="" coords="192,45,344,75"/>
+<area shape="rect" id="node9" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="201,99,335,128"/>
+<area shape="rect" id="node11" href="$ID__VH_8C.html#a997467dad7e57de584aa100eb9a8c882" title="VWB_DrawPic" alt="" coords="213,152,323,181"/>
+<area shape="rect" id="node5" href="$WL__TEXT_8C.html#a2cb5d5c64873238c927112cfa403455a" title="ParseNumber" alt="" coords="419,5,520,35"/>
+<area shape="rect" id="node7" href="$WL__TEXT_8C.html#a4ce1d6ef4ea4445f18f5d7c2dcce817e" title="RipToEOL" alt="" coords="428,59,511,88"/>
+<area shape="rect" id="node13" href="$ID__VL_8C.html#a9395a541fc6c21a2d7e7d8b4932d134e" title="VL_MemToScreen" alt="" coords="404,125,535,155"/>
+<area shape="rect" id="node15" href="$ID__VH_8C.html#a989fc2652f729213162c520d378578b3" title="VW_MarkUpdateBlock" alt="" coords="392,179,547,208"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MENU_8C.html#ad1faffefd1153f6d40ce3d2eaa598646" title="CalibrateJoystick" alt="" coords="152,163,275,192"/>
+<area shape="rect" id="node31" href="$ID__IN_8C.html#a9b6ff4a88bfe152f44195609081589bc" title="INL_StartJoy" alt="" coords="323,215,421,244"/>
+<area shape="rect" id="node5" href="$WL__MENU_8H.html#a8d89e45be2c67ed682acb9ee0c09cd75" title="CP_Control" alt="" coords="327,161,417,191"/>
+<area shape="rect" id="node7" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="469,161,592,191"/>
+<area shape="rect" id="node9" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="640,99,731,128"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1051,112,1136,141"/>
+<area shape="rect" id="node11" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="780,72,855,101"/>
+<area shape="rect" id="node13" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="911,5,996,35"/>
+<area shape="rect" id="node24" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="912,59,995,88"/>
+<area shape="rect" id="node27" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="904,112,1003,141"/>
+<area shape="rect" id="node17" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1184,112,1235,141"/>
+<area shape="rect" id="node19" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1284,112,1372,141"/>
+<area shape="rect" id="node21" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1421,164,1496,193"/>
+<area shape="rect" id="node33" href="$ID__IN_8C.html#a20a23654ead536c7d999b6de31a5168c" title="IN_Startup" alt="" coords="488,215,573,244"/>
+</map>

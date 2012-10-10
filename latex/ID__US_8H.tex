@@ -1,0 +1,919 @@
+\hypertarget{ID__US_8H}{
+\section{ID\_\-US.H File Reference}
+\label{ID__US_8H}\index{ID\_\-US.H@{ID\_\-US.H}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structHighScore}{HighScore}
+\item 
+struct \hyperlink{structSaveGame}{SaveGame}
+\item 
+struct \hyperlink{structWindowRec}{WindowRec}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__US_8H_a93952ac585139409afd79b1a1b61cfa7}{MaxX}~320
+\item 
+\#define \hyperlink{ID__US_8H_ae2ae2176ed49211e6403f49357cb5fdc}{MaxY}~200
+\item 
+\#define \hyperlink{ID__US_8H_a909a10be4fab6f0eed436c87d17920e9}{MaxHelpLines}~500
+\item 
+\#define \hyperlink{ID__US_8H_af6d3afd29d045cf4b34ab6b9ad5afa68}{MaxHighName}~57
+\item 
+\#define \hyperlink{ID__US_8H_a6cc14dc7719f85ae8dc70a8529882ddc}{MaxScores}~7
+\item 
+\#define \hyperlink{ID__US_8H_a7c274595deab3b8ade507abbc882b21c}{MaxGameName}~32
+\item 
+\#define \hyperlink{ID__US_8H_ae3bed0542e872abd122a710880841152}{MaxSaveGames}~6
+\item 
+\#define \hyperlink{ID__US_8H_ab154998a3a376095f3601bc35c5cf523}{MaxString}~128
+\item 
+\#define \hyperlink{ID__US_8H_af82bba8cbc36c0af7785e562eebbd2e0}{US\_\-HomeWindow}()~\{\hyperlink{ID__US__1_8C_af88ed0e04fa671a4e672334f1e0c4828}{PrintX} = \hyperlink{ID__US__1_8C_a961df5c1b62bed0978a9e2948458a05c}{WindowX}; \hyperlink{ID__US__1_8C_a9ba4b756f739163c3d3d5736cba818a4}{PrintY} = \hyperlink{ID__US__1_8C_a8bde891542c367fab8f3a9dfb9d2250e}{WindowY};\}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06}{GameDiff} \{ \hyperlink{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06acc0e1f50a6bc8ed59670fb0cce0f4045}{gd\_\-Continue}, 
+\hyperlink{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06afb20abdea78e90da6d584db6e1da0dc7}{gd\_\-Easy}, 
+\hyperlink{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06a7b04daf569cb442bb94a8a37d073a560}{gd\_\-Normal}, 
+\hyperlink{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06a5ab4f1b1ce58ced5654a20d270c421ea}{gd\_\-Hard}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__US_8H_acc17ee7f6b4a6d3a5f3af994a06aae03}{TEDDeath} (void)
+\item 
+void \hyperlink{ID__US_8H_a25cccf3faa98e384b1f88c33a0a4e09f}{US\_\-Startup} (void)
+\item 
+void \hyperlink{ID__US_8H_a7f351b55990dbacb7f925f676fd19d23}{US\_\-Setup} (void)
+\item 
+void \hyperlink{ID__US_8H_aea2712f28a63f8aca70c66df1f532ecc}{US\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__US_8H_af90797d9eb1c8e16c131f5df8b98d97b}{US\_\-InitRndT} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} randomize)
+\item 
+void \hyperlink{ID__US_8H_a136ce300263380c66dd7c5c51b87053f}{US\_\-SetLoadSaveHooks} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean}($\ast$load)(int), \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean}($\ast$save)(int), void($\ast$reset)(void))
+\item 
+void \hyperlink{ID__US_8H_a401247a70ea837fd7e1886aa1aa28ec1}{US\_\-TextScreen} (void)
+\item 
+void \hyperlink{ID__US_8H_a5b2db1bb79094d0a68de30116a9799c3}{US\_\-UpdateTextScreen} (void)
+\item 
+void \hyperlink{ID__US_8H_a63505d74840aed8700273284b1a784cd}{US\_\-FinishTextScreen} (void)
+\item 
+void \hyperlink{ID__US_8H_a06cee19903ed682701ef040c7f1b1ffa}{US\_\-DrawWindow} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} x, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} y, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} w, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} h)
+\item 
+void \hyperlink{ID__US_8H_a0a6805dcfec12b770eb77c6b0f887bb4}{US\_\-CenterWindow} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word}, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word})
+\item 
+void \hyperlink{ID__US_8H_ae18de9eca3bc3460904860a60bf6108e}{US\_\-SaveWindow} (\hyperlink{structWindowRec}{WindowRec} $\ast$win)
+\item 
+void \hyperlink{ID__US_8H_a0e39c60fcd5edda420d1caf8ebeb3c35}{US\_\-RestoreWindow} (\hyperlink{structWindowRec}{WindowRec} $\ast$win)
+\item 
+void \hyperlink{ID__US_8H_a9987548b83195953febc41d3a3bc86f2}{US\_\-ClearWindow} (void)
+\item 
+void \hyperlink{ID__US_8H_aed7467cd936e319d9378cf958bd02236}{US\_\-SetPrintRoutines} (void($\ast$measure)(char far $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$), void($\ast$print)(char far $\ast$))
+\item 
+void \hyperlink{ID__US_8H_a524fd911a8a3ceedd0a3efe9b5f76830}{US\_\-PrintCentered} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US_8H_a45d1b7ebde4b4cbfd5a34b3b0134ee8b}{US\_\-CPrint} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US_8H_ad8fa7aed3bed622bff4925586de5e0dd}{US\_\-CPrintLine} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US_8H_ae158b4a99ff8fe4bca4517925b6b429c}{US\_\-Print} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US_8H_aaaf7bf10a561ab0338f8b3742c408b86}{US\_\-PrintUnsigned} (\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} n)
+\item 
+void \hyperlink{ID__US_8H_adcea441d26d8338b8eb2cd44c3c4a105}{US\_\-PrintSigned} (long n)
+\item 
+void \hyperlink{ID__US_8H_a7784ccadb4700633909e272573d49806}{US\_\-StartCursor} (void)
+\item 
+void \hyperlink{ID__US_8H_a80fd969f89032b7571d470dbcfc70d1b}{US\_\-ShutCursor} (void)
+\item 
+void \hyperlink{ID__US_8H_a8b3adcb17ce610352bb65780387320e7}{US\_\-CheckHighScore} (long score, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} other)
+\item 
+void \hyperlink{ID__US_8H_aa2674d21db32bed27292c1ba0f1f08fe}{US\_\-DisplayHighScores} (int which)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_a97bebeef6503c38ba7c0b7c61840e9b3}{US\_\-UpdateCursor} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_a8b8c9a7afe469e4c90c2540c9158ea94}{US\_\-LineInput} (int x, int y, char $\ast$buf, char $\ast$def, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} escok, int maxchars, int maxwidth)
+\item 
+int \hyperlink{ID__US_8H_ab779824eaa9432170162847f92aff6f9}{US\_\-CheckParm} (char $\ast$parm, char $\ast$$\ast$strings)
+\item 
+int \hyperlink{ID__US_8H_af7dbbf782f072ed2c7cb57cd66b10c24}{US\_\-RndT} (void)
+\item 
+void \hyperlink{ID__US_8H_abd887f54352061deb6deb73c7ff9399e}{USL\_\-PrintInCenter} (char far $\ast$s, \hyperlink{structRect}{Rect} r)
+\item 
+char $\ast$ \hyperlink{ID__US_8H_a8cfc23ff1c5be3546c42fa0965a65580}{USL\_\-GiveSaveName} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} game)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_ae4f570f74d8fa87a5c00a8ebb38dbbd5}{tedlevel}
+\item 
+int \hyperlink{ID__US_8H_aecad4308d4e4f895479ae314b36ecadb}{tedlevelnum}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_aa5cd2906ddbef01eb4893f711504c438}{ingame}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_ac4a9dc792bc42d983ad78cba0dcc4865}{abortgame}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_a2361eb57d882933d300f22fae83e8fa0}{loadedgame}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_aac051dcdf0618ac25f7661d8c6ddd82c}{NoWait}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_a69c5d04ca9c20f211988e39b7835ea1d}{HighScoresDirty}
+\item 
+char $\ast$ \hyperlink{ID__US_8H_a4af009c4eb68eb1aaa0a93c8bffb3512}{abortprogram}
+\item 
+\hyperlink{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06}{GameDiff} \hyperlink{ID__US_8H_a31d9b937aab37f09772e9cf11124f11e}{restartgame}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US_8H_af88ed0e04fa671a4e672334f1e0c4828}{PrintX}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US_8H_a9ba4b756f739163c3d3d5736cba818a4}{PrintY}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US_8H_a961df5c1b62bed0978a9e2948458a05c}{WindowX}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US_8H_a8bde891542c367fab8f3a9dfb9d2250e}{WindowY}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US_8H_a417e7f10e3b946e0ce329aff1b619c3f}{WindowW}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US_8H_aaeba48e7e4c3c27582d73da5718a0c0c}{WindowH}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_a7fa08780907017f971b2dc0909bd77fd}{Button0}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_aca6b2fe999220340d0569ece03a0026d}{Button1}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US_8H_abf5358251c5b519d71e3d8bca8256510}{CursorBad}
+\item 
+int \hyperlink{ID__US_8H_af51730b2758fe5daa55ca8445a8f7c3b}{CursorX}
+\item 
+int \hyperlink{ID__US_8H_a7f5c998973d0526fcb8d52f37e5547da}{CursorY}
+\item 
+void($\ast$ \hyperlink{ID__US_8H_ac392829f8abc2e03447a6abf023352b1}{USL\_\-MeasureString} )(char far $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$)
+\item 
+void($\ast$)($\ast$) \hyperlink{ID__US_8H_a49825cde2ac607e0d17407fb33f14a00}{USL\_\-DrawString} (char far $\ast$)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean}($\ast$ \hyperlink{ID__US_8H_a26a6bc7aa90c2c828190df5c67db8692}{USL\_\-SaveGame} )(int)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean}($\ast$)($\ast$) \hyperlink{ID__US_8H_a929fff4158aee7d4a88ffc63c52817f1}{USL\_\-LoadGame} (int)
+\item 
+void($\ast$ \hyperlink{ID__US_8H_a7ac3fe59ccca28a6946051e6dc90b372}{USL\_\-ResetGame} )(void)
+\item 
+\hyperlink{structSaveGame}{SaveGame} \hyperlink{ID__US_8H_a155f9931f0842c8f97f962eef9cd22f7}{Games} \mbox{[}MaxSaveGames\mbox{]}
+\item 
+\hyperlink{structHighScore}{HighScore} \hyperlink{ID__US_8H_a83f5d32c01cb878eee4eb39ef5b9d323}{Scores} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__US_8H_a7c274595deab3b8ade507abbc882b21c}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxGameName@{MaxGameName}}
+\index{MaxGameName@{MaxGameName}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxGameName}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxGameName~32}}
+\label{ID__US_8H_a7c274595deab3b8ade507abbc882b21c}
+\hypertarget{ID__US_8H_a909a10be4fab6f0eed436c87d17920e9}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxHelpLines@{MaxHelpLines}}
+\index{MaxHelpLines@{MaxHelpLines}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxHelpLines}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxHelpLines~500}}
+\label{ID__US_8H_a909a10be4fab6f0eed436c87d17920e9}
+\hypertarget{ID__US_8H_af6d3afd29d045cf4b34ab6b9ad5afa68}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxHighName@{MaxHighName}}
+\index{MaxHighName@{MaxHighName}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxHighName}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxHighName~57}}
+\label{ID__US_8H_af6d3afd29d045cf4b34ab6b9ad5afa68}
+\hypertarget{ID__US_8H_ae3bed0542e872abd122a710880841152}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxSaveGames@{MaxSaveGames}}
+\index{MaxSaveGames@{MaxSaveGames}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxSaveGames}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxSaveGames~6}}
+\label{ID__US_8H_ae3bed0542e872abd122a710880841152}
+\hypertarget{ID__US_8H_a6cc14dc7719f85ae8dc70a8529882ddc}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxScores@{MaxScores}}
+\index{MaxScores@{MaxScores}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxScores}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxScores~7}}
+\label{ID__US_8H_a6cc14dc7719f85ae8dc70a8529882ddc}
+\hypertarget{ID__US_8H_ab154998a3a376095f3601bc35c5cf523}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxString@{MaxString}}
+\index{MaxString@{MaxString}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxString}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxString~128}}
+\label{ID__US_8H_ab154998a3a376095f3601bc35c5cf523}
+\hypertarget{ID__US_8H_a93952ac585139409afd79b1a1b61cfa7}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxX@{MaxX}}
+\index{MaxX@{MaxX}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxX}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxX~320}}
+\label{ID__US_8H_a93952ac585139409afd79b1a1b61cfa7}
+\hypertarget{ID__US_8H_ae2ae2176ed49211e6403f49357cb5fdc}{
+\index{ID\_\-US.H@{ID\_\-US.H}!MaxY@{MaxY}}
+\index{MaxY@{MaxY}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{MaxY}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxY~200}}
+\label{ID__US_8H_ae2ae2176ed49211e6403f49357cb5fdc}
+\hypertarget{ID__US_8H_af82bba8cbc36c0af7785e562eebbd2e0}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-HomeWindow@{US\_\-HomeWindow}}
+\index{US\_\-HomeWindow@{US\_\-HomeWindow}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-HomeWindow}]{\setlength{\rightskip}{0pt plus 5cm}\#define US\_\-HomeWindow(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{{\bf PrintX} = {\bf WindowX}; {\bf PrintY} = {\bf WindowY};\}}}
+\label{ID__US_8H_af82bba8cbc36c0af7785e562eebbd2e0}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06}{
+\index{ID\_\-US.H@{ID\_\-US.H}!GameDiff@{GameDiff}}
+\index{GameDiff@{GameDiff}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{GameDiff}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf GameDiff}}}
+\label{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{gd\_\-Continue@{gd\_\-Continue}!ID\_\-US.H@{ID\_\-US.H}}\index{ID\_\-US.H@{ID\_\-US.H}!gd\_\-Continue@{gd\_\-Continue}}\item[{\em 
+\hypertarget{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06acc0e1f50a6bc8ed59670fb0cce0f4045}{
+gd\_\-Continue}
+\label{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06acc0e1f50a6bc8ed59670fb0cce0f4045}
+}]\index{gd\_\-Easy@{gd\_\-Easy}!ID\_\-US.H@{ID\_\-US.H}}\index{ID\_\-US.H@{ID\_\-US.H}!gd\_\-Easy@{gd\_\-Easy}}\item[{\em 
+\hypertarget{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06afb20abdea78e90da6d584db6e1da0dc7}{
+gd\_\-Easy}
+\label{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06afb20abdea78e90da6d584db6e1da0dc7}
+}]\index{gd\_\-Normal@{gd\_\-Normal}!ID\_\-US.H@{ID\_\-US.H}}\index{ID\_\-US.H@{ID\_\-US.H}!gd\_\-Normal@{gd\_\-Normal}}\item[{\em 
+\hypertarget{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06a7b04daf569cb442bb94a8a37d073a560}{
+gd\_\-Normal}
+\label{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06a7b04daf569cb442bb94a8a37d073a560}
+}]\index{gd\_\-Hard@{gd\_\-Hard}!ID\_\-US.H@{ID\_\-US.H}}\index{ID\_\-US.H@{ID\_\-US.H}!gd\_\-Hard@{gd\_\-Hard}}\item[{\em 
+\hypertarget{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06a5ab4f1b1ce58ced5654a20d270c421ea}{
+gd\_\-Hard}
+\label{ID__US_8H_aaf1c9f1ca500faf979469b42245b8e06a5ab4f1b1ce58ced5654a20d270c421ea}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__US_8H_acc17ee7f6b4a6d3a5f3af994a06aae03}{
+\index{ID\_\-US.H@{ID\_\-US.H}!TEDDeath@{TEDDeath}}
+\index{TEDDeath@{TEDDeath}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{TEDDeath}]{\setlength{\rightskip}{0pt plus 5cm}void TEDDeath (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_acc17ee7f6b4a6d3a5f3af994a06aae03}
+\hypertarget{ID__US_8H_a0a6805dcfec12b770eb77c6b0f887bb4}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-CenterWindow@{US\_\-CenterWindow}}
+\index{US\_\-CenterWindow@{US\_\-CenterWindow}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-CenterWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-CenterWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{, }
+\item[{{\bf word}}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a0a6805dcfec12b770eb77c6b0f887bb4}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a0a6805dcfec12b770eb77c6b0f887bb4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a8b3adcb17ce610352bb65780387320e7}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-CheckHighScore@{US\_\-CheckHighScore}}
+\index{US\_\-CheckHighScore@{US\_\-CheckHighScore}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-CheckHighScore}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-CheckHighScore (
+\begin{DoxyParamCaption}
+\item[{long}]{score, }
+\item[{{\bf word}}]{other}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a8b3adcb17ce610352bb65780387320e7}
+\hypertarget{ID__US_8H_ab779824eaa9432170162847f92aff6f9}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-CheckParm@{US\_\-CheckParm}}
+\index{US\_\-CheckParm@{US\_\-CheckParm}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-CheckParm}]{\setlength{\rightskip}{0pt plus 5cm}int US\_\-CheckParm (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{parm, }
+\item[{char $\ast$$\ast$}]{strings}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_ab779824eaa9432170162847f92aff6f9}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_ab779824eaa9432170162847f92aff6f9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a9987548b83195953febc41d3a3bc86f2}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-ClearWindow@{US\_\-ClearWindow}}
+\index{US\_\-ClearWindow@{US\_\-ClearWindow}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-ClearWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-ClearWindow (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a9987548b83195953febc41d3a3bc86f2}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a9987548b83195953febc41d3a3bc86f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a45d1b7ebde4b4cbfd5a34b3b0134ee8b}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-CPrint@{US\_\-CPrint}}
+\index{US\_\-CPrint@{US\_\-CPrint}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-CPrint}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-CPrint (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a45d1b7ebde4b4cbfd5a34b3b0134ee8b}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a45d1b7ebde4b4cbfd5a34b3b0134ee8b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_ad8fa7aed3bed622bff4925586de5e0dd}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-CPrintLine@{US\_\-CPrintLine}}
+\index{US\_\-CPrintLine@{US\_\-CPrintLine}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-CPrintLine}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-CPrintLine (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_ad8fa7aed3bed622bff4925586de5e0dd}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{ID__US_8H_ad8fa7aed3bed622bff4925586de5e0dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_aa2674d21db32bed27292c1ba0f1f08fe}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-DisplayHighScores@{US\_\-DisplayHighScores}}
+\index{US\_\-DisplayHighScores@{US\_\-DisplayHighScores}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-DisplayHighScores}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-DisplayHighScores (
+\begin{DoxyParamCaption}
+\item[{int}]{which}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_aa2674d21db32bed27292c1ba0f1f08fe}
+\hypertarget{ID__US_8H_a06cee19903ed682701ef040c7f1b1ffa}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-DrawWindow@{US\_\-DrawWindow}}
+\index{US\_\-DrawWindow@{US\_\-DrawWindow}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-DrawWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-DrawWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{x, }
+\item[{{\bf word}}]{y, }
+\item[{{\bf word}}]{w, }
+\item[{{\bf word}}]{h}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a06cee19903ed682701ef040c7f1b1ffa}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a06cee19903ed682701ef040c7f1b1ffa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a63505d74840aed8700273284b1a784cd}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-FinishTextScreen@{US\_\-FinishTextScreen}}
+\index{US\_\-FinishTextScreen@{US\_\-FinishTextScreen}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-FinishTextScreen}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-FinishTextScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a63505d74840aed8700273284b1a784cd}
+\hypertarget{ID__US_8H_af90797d9eb1c8e16c131f5df8b98d97b}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-InitRndT@{US\_\-InitRndT}}
+\index{US\_\-InitRndT@{US\_\-InitRndT}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-InitRndT}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-InitRndT (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{randomize}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_af90797d9eb1c8e16c131f5df8b98d97b}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_af90797d9eb1c8e16c131f5df8b98d97b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a8b8c9a7afe469e4c90c2540c9158ea94}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-LineInput@{US\_\-LineInput}}
+\index{US\_\-LineInput@{US\_\-LineInput}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-LineInput}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} US\_\-LineInput (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char $\ast$}]{buf, }
+\item[{char $\ast$}]{def, }
+\item[{{\bf boolean}}]{escok, }
+\item[{int}]{maxchars, }
+\item[{int}]{maxwidth}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a8b8c9a7afe469e4c90c2540c9158ea94}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{ID__US_8H_a8b8c9a7afe469e4c90c2540c9158ea94_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a8b8c9a7afe469e4c90c2540c9158ea94_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_ae158b4a99ff8fe4bca4517925b6b429c}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-Print@{US\_\-Print}}
+\index{US\_\-Print@{US\_\-Print}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-Print}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-Print (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_ae158b4a99ff8fe4bca4517925b6b429c}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__US_8H_ae158b4a99ff8fe4bca4517925b6b429c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a524fd911a8a3ceedd0a3efe9b5f76830}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-PrintCentered@{US\_\-PrintCentered}}
+\index{US\_\-PrintCentered@{US\_\-PrintCentered}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-PrintCentered}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-PrintCentered (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a524fd911a8a3ceedd0a3efe9b5f76830}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a524fd911a8a3ceedd0a3efe9b5f76830_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_adcea441d26d8338b8eb2cd44c3c4a105}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-PrintSigned@{US\_\-PrintSigned}}
+\index{US\_\-PrintSigned@{US\_\-PrintSigned}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-PrintSigned}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-PrintSigned (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_adcea441d26d8338b8eb2cd44c3c4a105}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_adcea441d26d8338b8eb2cd44c3c4a105_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_aaaf7bf10a561ab0338f8b3742c408b86}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-PrintUnsigned@{US\_\-PrintUnsigned}}
+\index{US\_\-PrintUnsigned@{US\_\-PrintUnsigned}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-PrintUnsigned}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-PrintUnsigned (
+\begin{DoxyParamCaption}
+\item[{{\bf longword}}]{n}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_aaaf7bf10a561ab0338f8b3742c408b86}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_aaaf7bf10a561ab0338f8b3742c408b86_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a0e39c60fcd5edda420d1caf8ebeb3c35}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-RestoreWindow@{US\_\-RestoreWindow}}
+\index{US\_\-RestoreWindow@{US\_\-RestoreWindow}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-RestoreWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-RestoreWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf WindowRec} $\ast$}]{win}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a0e39c60fcd5edda420d1caf8ebeb3c35}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a0e39c60fcd5edda420d1caf8ebeb3c35_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_af7dbbf782f072ed2c7cb57cd66b10c24}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-RndT@{US\_\-RndT}}
+\index{US\_\-RndT@{US\_\-RndT}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-RndT}]{\setlength{\rightskip}{0pt plus 5cm}int US\_\-RndT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_af7dbbf782f072ed2c7cb57cd66b10c24}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__US_8H_af7dbbf782f072ed2c7cb57cd66b10c24_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_ae18de9eca3bc3460904860a60bf6108e}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-SaveWindow@{US\_\-SaveWindow}}
+\index{US\_\-SaveWindow@{US\_\-SaveWindow}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-SaveWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-SaveWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf WindowRec} $\ast$}]{win}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_ae18de9eca3bc3460904860a60bf6108e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=398pt]{ID__US_8H_ae18de9eca3bc3460904860a60bf6108e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a136ce300263380c66dd7c5c51b87053f}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-SetLoadSaveHooks@{US\_\-SetLoadSaveHooks}}
+\index{US\_\-SetLoadSaveHooks@{US\_\-SetLoadSaveHooks}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-SetLoadSaveHooks}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-SetLoadSaveHooks (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)(int)}]{load, }
+\item[{{\bf boolean}($\ast$)(int)}]{save, }
+\item[{void($\ast$)(void)}]{reset}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a136ce300263380c66dd7c5c51b87053f}
+\hypertarget{ID__US_8H_aed7467cd936e319d9378cf958bd02236}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-SetPrintRoutines@{US\_\-SetPrintRoutines}}
+\index{US\_\-SetPrintRoutines@{US\_\-SetPrintRoutines}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-SetPrintRoutines}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-SetPrintRoutines (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(char far $\ast$, {\bf word} $\ast$, {\bf word} $\ast$)}]{measure, }
+\item[{void($\ast$)(char far $\ast$)}]{print}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_aed7467cd936e319d9378cf958bd02236}
+\hypertarget{ID__US_8H_a7f351b55990dbacb7f925f676fd19d23}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-Setup@{US\_\-Setup}}
+\index{US\_\-Setup@{US\_\-Setup}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-Setup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a7f351b55990dbacb7f925f676fd19d23}
+\hypertarget{ID__US_8H_a80fd969f89032b7571d470dbcfc70d1b}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-ShutCursor@{US\_\-ShutCursor}}
+\index{US\_\-ShutCursor@{US\_\-ShutCursor}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-ShutCursor}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-ShutCursor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a80fd969f89032b7571d470dbcfc70d1b}
+\hypertarget{ID__US_8H_aea2712f28a63f8aca70c66df1f532ecc}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-Shutdown@{US\_\-Shutdown}}
+\index{US\_\-Shutdown@{US\_\-Shutdown}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_aea2712f28a63f8aca70c66df1f532ecc}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__US_8H_aea2712f28a63f8aca70c66df1f532ecc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a7784ccadb4700633909e272573d49806}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-StartCursor@{US\_\-StartCursor}}
+\index{US\_\-StartCursor@{US\_\-StartCursor}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-StartCursor}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-StartCursor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a7784ccadb4700633909e272573d49806}
+\hypertarget{ID__US_8H_a25cccf3faa98e384b1f88c33a0a4e09f}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-Startup@{US\_\-Startup}}
+\index{US\_\-Startup@{US\_\-Startup}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a25cccf3faa98e384b1f88c33a0a4e09f}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US_8H_a25cccf3faa98e384b1f88c33a0a4e09f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US_8H_a401247a70ea837fd7e1886aa1aa28ec1}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-TextScreen@{US\_\-TextScreen}}
+\index{US\_\-TextScreen@{US\_\-TextScreen}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-TextScreen}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-TextScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a401247a70ea837fd7e1886aa1aa28ec1}
+\hypertarget{ID__US_8H_a97bebeef6503c38ba7c0b7c61840e9b3}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-UpdateCursor@{US\_\-UpdateCursor}}
+\index{US\_\-UpdateCursor@{US\_\-UpdateCursor}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-UpdateCursor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} US\_\-UpdateCursor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a97bebeef6503c38ba7c0b7c61840e9b3}
+\hypertarget{ID__US_8H_a5b2db1bb79094d0a68de30116a9799c3}{
+\index{ID\_\-US.H@{ID\_\-US.H}!US\_\-UpdateTextScreen@{US\_\-UpdateTextScreen}}
+\index{US\_\-UpdateTextScreen@{US\_\-UpdateTextScreen}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{US\_\-UpdateTextScreen}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-UpdateTextScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a5b2db1bb79094d0a68de30116a9799c3}
+\hypertarget{ID__US_8H_a8cfc23ff1c5be3546c42fa0965a65580}{
+\index{ID\_\-US.H@{ID\_\-US.H}!USL\_\-GiveSaveName@{USL\_\-GiveSaveName}}
+\index{USL\_\-GiveSaveName@{USL\_\-GiveSaveName}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{USL\_\-GiveSaveName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ USL\_\-GiveSaveName (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{game}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_a8cfc23ff1c5be3546c42fa0965a65580}
+\hypertarget{ID__US_8H_abd887f54352061deb6deb73c7ff9399e}{
+\index{ID\_\-US.H@{ID\_\-US.H}!USL\_\-PrintInCenter@{USL\_\-PrintInCenter}}
+\index{USL\_\-PrintInCenter@{USL\_\-PrintInCenter}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{USL\_\-PrintInCenter}]{\setlength{\rightskip}{0pt plus 5cm}void USL\_\-PrintInCenter (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s, }
+\item[{{\bf Rect}}]{r}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US_8H_abd887f54352061deb6deb73c7ff9399e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{ID__US_8H_abd887f54352061deb6deb73c7ff9399e_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__US_8H_ac4a9dc792bc42d983ad78cba0dcc4865}{
+\index{ID\_\-US.H@{ID\_\-US.H}!abortgame@{abortgame}}
+\index{abortgame@{abortgame}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{abortgame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf abortgame}}}
+\label{ID__US_8H_ac4a9dc792bc42d983ad78cba0dcc4865}
+\hypertarget{ID__US_8H_a4af009c4eb68eb1aaa0a93c8bffb3512}{
+\index{ID\_\-US.H@{ID\_\-US.H}!abortprogram@{abortprogram}}
+\index{abortprogram@{abortprogram}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{abortprogram}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf abortprogram}}}
+\label{ID__US_8H_a4af009c4eb68eb1aaa0a93c8bffb3512}
+\hypertarget{ID__US_8H_a7fa08780907017f971b2dc0909bd77fd}{
+\index{ID\_\-US.H@{ID\_\-US.H}!Button0@{Button0}}
+\index{Button0@{Button0}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{Button0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf Button0}}}
+\label{ID__US_8H_a7fa08780907017f971b2dc0909bd77fd}
+\hypertarget{ID__US_8H_aca6b2fe999220340d0569ece03a0026d}{
+\index{ID\_\-US.H@{ID\_\-US.H}!Button1@{Button1}}
+\index{Button1@{Button1}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{Button1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf Button1}}}
+\label{ID__US_8H_aca6b2fe999220340d0569ece03a0026d}
+\hypertarget{ID__US_8H_abf5358251c5b519d71e3d8bca8256510}{
+\index{ID\_\-US.H@{ID\_\-US.H}!CursorBad@{CursorBad}}
+\index{CursorBad@{CursorBad}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{CursorBad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf CursorBad}}}
+\label{ID__US_8H_abf5358251c5b519d71e3d8bca8256510}
+\hypertarget{ID__US_8H_af51730b2758fe5daa55ca8445a8f7c3b}{
+\index{ID\_\-US.H@{ID\_\-US.H}!CursorX@{CursorX}}
+\index{CursorX@{CursorX}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{CursorX}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf CursorX}}}
+\label{ID__US_8H_af51730b2758fe5daa55ca8445a8f7c3b}
+\hypertarget{ID__US_8H_a7f5c998973d0526fcb8d52f37e5547da}{
+\index{ID\_\-US.H@{ID\_\-US.H}!CursorY@{CursorY}}
+\index{CursorY@{CursorY}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{CursorY}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf CursorY}}}
+\label{ID__US_8H_a7f5c998973d0526fcb8d52f37e5547da}
+\hypertarget{ID__US_8H_a155f9931f0842c8f97f962eef9cd22f7}{
+\index{ID\_\-US.H@{ID\_\-US.H}!Games@{Games}}
+\index{Games@{Games}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{Games}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SaveGame} {\bf Games}\mbox{[}MaxSaveGames\mbox{]}}}
+\label{ID__US_8H_a155f9931f0842c8f97f962eef9cd22f7}
+\hypertarget{ID__US_8H_a69c5d04ca9c20f211988e39b7835ea1d}{
+\index{ID\_\-US.H@{ID\_\-US.H}!HighScoresDirty@{HighScoresDirty}}
+\index{HighScoresDirty@{HighScoresDirty}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{HighScoresDirty}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf HighScoresDirty}}}
+\label{ID__US_8H_a69c5d04ca9c20f211988e39b7835ea1d}
+\hypertarget{ID__US_8H_aa5cd2906ddbef01eb4893f711504c438}{
+\index{ID\_\-US.H@{ID\_\-US.H}!ingame@{ingame}}
+\index{ingame@{ingame}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{ingame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf ingame}}}
+\label{ID__US_8H_aa5cd2906ddbef01eb4893f711504c438}
+\hypertarget{ID__US_8H_a2361eb57d882933d300f22fae83e8fa0}{
+\index{ID\_\-US.H@{ID\_\-US.H}!loadedgame@{loadedgame}}
+\index{loadedgame@{loadedgame}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{loadedgame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf loadedgame}}}
+\label{ID__US_8H_a2361eb57d882933d300f22fae83e8fa0}
+\hypertarget{ID__US_8H_aac051dcdf0618ac25f7661d8c6ddd82c}{
+\index{ID\_\-US.H@{ID\_\-US.H}!NoWait@{NoWait}}
+\index{NoWait@{NoWait}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{NoWait}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf NoWait}}}
+\label{ID__US_8H_aac051dcdf0618ac25f7661d8c6ddd82c}
+\hypertarget{ID__US_8H_af88ed0e04fa671a4e672334f1e0c4828}{
+\index{ID\_\-US.H@{ID\_\-US.H}!PrintX@{PrintX}}
+\index{PrintX@{PrintX}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{PrintX}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PrintX}}}
+\label{ID__US_8H_af88ed0e04fa671a4e672334f1e0c4828}
+\hypertarget{ID__US_8H_a9ba4b756f739163c3d3d5736cba818a4}{
+\index{ID\_\-US.H@{ID\_\-US.H}!PrintY@{PrintY}}
+\index{PrintY@{PrintY}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{PrintY}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PrintY}}}
+\label{ID__US_8H_a9ba4b756f739163c3d3d5736cba818a4}
+\hypertarget{ID__US_8H_a31d9b937aab37f09772e9cf11124f11e}{
+\index{ID\_\-US.H@{ID\_\-US.H}!restartgame@{restartgame}}
+\index{restartgame@{restartgame}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{restartgame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GameDiff} {\bf restartgame}}}
+\label{ID__US_8H_a31d9b937aab37f09772e9cf11124f11e}
+\hypertarget{ID__US_8H_a83f5d32c01cb878eee4eb39ef5b9d323}{
+\index{ID\_\-US.H@{ID\_\-US.H}!Scores@{Scores}}
+\index{Scores@{Scores}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{Scores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HighScore} {\bf Scores}\mbox{[}$\,$\mbox{]}}}
+\label{ID__US_8H_a83f5d32c01cb878eee4eb39ef5b9d323}
+\hypertarget{ID__US_8H_ae4f570f74d8fa87a5c00a8ebb38dbbd5}{
+\index{ID\_\-US.H@{ID\_\-US.H}!tedlevel@{tedlevel}}
+\index{tedlevel@{tedlevel}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{tedlevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf tedlevel}}}
+\label{ID__US_8H_ae4f570f74d8fa87a5c00a8ebb38dbbd5}
+\hypertarget{ID__US_8H_aecad4308d4e4f895479ae314b36ecadb}{
+\index{ID\_\-US.H@{ID\_\-US.H}!tedlevelnum@{tedlevelnum}}
+\index{tedlevelnum@{tedlevelnum}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{tedlevelnum}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tedlevelnum}}}
+\label{ID__US_8H_aecad4308d4e4f895479ae314b36ecadb}
+\hypertarget{ID__US_8H_a49825cde2ac607e0d17407fb33f14a00}{
+\index{ID\_\-US.H@{ID\_\-US.H}!USL\_\-DrawString@{USL\_\-DrawString}}
+\index{USL\_\-DrawString@{USL\_\-DrawString}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{USL\_\-DrawString}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$)($\ast$) {\bf USL\_\-DrawString}(char far $\ast$)}}
+\label{ID__US_8H_a49825cde2ac607e0d17407fb33f14a00}
+\hypertarget{ID__US_8H_a929fff4158aee7d4a88ffc63c52817f1}{
+\index{ID\_\-US.H@{ID\_\-US.H}!USL\_\-LoadGame@{USL\_\-LoadGame}}
+\index{USL\_\-LoadGame@{USL\_\-LoadGame}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{USL\_\-LoadGame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean}($\ast$)($\ast$) {\bf USL\_\-LoadGame}(int)}}
+\label{ID__US_8H_a929fff4158aee7d4a88ffc63c52817f1}
+\hypertarget{ID__US_8H_ac392829f8abc2e03447a6abf023352b1}{
+\index{ID\_\-US.H@{ID\_\-US.H}!USL\_\-MeasureString@{USL\_\-MeasureString}}
+\index{USL\_\-MeasureString@{USL\_\-MeasureString}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{USL\_\-MeasureString}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf USL\_\-MeasureString})(char far $\ast$, {\bf word} $\ast$, {\bf word} $\ast$)}}
+\label{ID__US_8H_ac392829f8abc2e03447a6abf023352b1}
+\hypertarget{ID__US_8H_a7ac3fe59ccca28a6946051e6dc90b372}{
+\index{ID\_\-US.H@{ID\_\-US.H}!USL\_\-ResetGame@{USL\_\-ResetGame}}
+\index{USL\_\-ResetGame@{USL\_\-ResetGame}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{USL\_\-ResetGame}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf USL\_\-ResetGame})(void)}}
+\label{ID__US_8H_a7ac3fe59ccca28a6946051e6dc90b372}
+\hypertarget{ID__US_8H_a26a6bc7aa90c2c828190df5c67db8692}{
+\index{ID\_\-US.H@{ID\_\-US.H}!USL\_\-SaveGame@{USL\_\-SaveGame}}
+\index{USL\_\-SaveGame@{USL\_\-SaveGame}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{USL\_\-SaveGame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean}($\ast$ {\bf USL\_\-SaveGame})(int)}}
+\label{ID__US_8H_a26a6bc7aa90c2c828190df5c67db8692}
+\hypertarget{ID__US_8H_aaeba48e7e4c3c27582d73da5718a0c0c}{
+\index{ID\_\-US.H@{ID\_\-US.H}!WindowH@{WindowH}}
+\index{WindowH@{WindowH}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{WindowH}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowH}}}
+\label{ID__US_8H_aaeba48e7e4c3c27582d73da5718a0c0c}
+\hypertarget{ID__US_8H_a417e7f10e3b946e0ce329aff1b619c3f}{
+\index{ID\_\-US.H@{ID\_\-US.H}!WindowW@{WindowW}}
+\index{WindowW@{WindowW}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{WindowW}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowW}}}
+\label{ID__US_8H_a417e7f10e3b946e0ce329aff1b619c3f}
+\hypertarget{ID__US_8H_a961df5c1b62bed0978a9e2948458a05c}{
+\index{ID\_\-US.H@{ID\_\-US.H}!WindowX@{WindowX}}
+\index{WindowX@{WindowX}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{WindowX}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowX}}}
+\label{ID__US_8H_a961df5c1b62bed0978a9e2948458a05c}
+\hypertarget{ID__US_8H_a8bde891542c367fab8f3a9dfb9d2250e}{
+\index{ID\_\-US.H@{ID\_\-US.H}!WindowY@{WindowY}}
+\index{WindowY@{WindowY}!ID_US.H@{ID\_\-US.H}}
+\subsubsection[{WindowY}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowY}}}
+\label{ID__US_8H_a8bde891542c367fab8f3a9dfb9d2250e}

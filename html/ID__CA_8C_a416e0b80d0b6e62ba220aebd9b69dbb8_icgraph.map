@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__CA_8C.html#ae145d2f5100f331f8f3a25518ceb4959" title="CAL_SetupAudioFile" alt="" coords="177,5,319,35"/>
+<area shape="rect" id="node14" href="$ID__CA_8C.html#a01f3f70d7e61e8d3cb383031a7f3bb62" title="CAL_SetupGrFile" alt="" coords="187,59,309,88"/>
+<area shape="rect" id="node17" href="$ID__CA_8C.html#a0a406782cb0615131e468e7dcfb70fe0" title="CAL_SetupMapFile" alt="" coords="181,112,315,141"/>
+<area shape="rect" id="node5" href="$ID__CA_8H.html#a4a88bf7bd8bef6188a34abe153f071e0" title="CA_Startup" alt="" coords="368,59,459,88"/>
+<area shape="rect" id="node7" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="507,59,581,88"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="629,32,680,61"/>
+<area shape="rect" id="node11" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="729,59,817,88"/>
+</map>

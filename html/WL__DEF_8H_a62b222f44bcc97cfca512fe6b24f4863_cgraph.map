@@ -1,0 +1,37 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DEF_8H.html#a8805b889a7e1284ca6c88619137588d3" title="ClearSplitVWB" alt="" coords="177,5,287,35"/>
+<area shape="rect" id="node5" href="$WL__AGENT_8C.html#ae76d82b105193ca17991c489b709b57f" title="DrawLevel" alt="" coords="191,59,273,88"/>
+<area shape="rect" id="node11" href="$ID__VH_8C.html#a0170b65c8e23e18b960bde1e8908887b" title="LatchDrawPic" alt="" coords="763,85,867,115"/>
+<area shape="rect" id="node15" href="$WL__DEF_8H.html#ade09a6750662d5cca8156a38ae0a4b7a" title="DrawPlayBorder" alt="" coords="173,220,291,249"/>
+<area shape="rect" id="node17" href="$ID__VH_8C.html#a5496b8df6f9a9de1b3f788ce6951c865" title="VWB_Bar" alt="" coords="367,323,447,352"/>
+<area shape="rect" id="node30" href="$ID__IN_8C.html#a9f2f68f5b727261b95762dcef168de14" title="IN_UserInput" alt="" coords="183,429,281,459"/>
+<area shape="rect" id="node45" href="$ID__PM_8C.html#ab97049dc4c67f252768239ca432f4204" title="PM_Preload" alt="" coords="185,945,279,975"/>
+<area shape="rect" id="node90" href="$WL__INTER_8C.html#a9c6d8dd07b26f9e832dfafded62b779c" title="PreloadUpdate" alt="" coords="179,324,285,353"/>
+<area shape="rect" id="node92" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="340,376,473,405"/>
+<area shape="rect" id="node7" href="$WL__AGENT_8C.html#a05089437497aca93a4e4125cbfd96b80" title="LatchNumber" alt="" coords="357,59,456,88"/>
+<area shape="rect" id="node9" href="$WL__AGENT_8C.html#adc83960f6d18ebc42df7465f6bbc0e75" title="StatusDrawPic" alt="" coords="552,59,661,88"/>
+<area shape="rect" id="node13" href="$ID__VL_8C.html#a80443116a2a895fc294adfe9b2220819" title="VL_LatchToScreen" alt="" coords="957,85,1091,115"/>
+<area shape="rect" id="node21" href="$ID__VH_8C.html#a5438374e81536560343d6be41205ecf6" title="VWB_Hlin" alt="" coords="365,163,448,192"/>
+<area shape="rect" id="node24" href="$ID__VH_8C.html#a9ebc1393c381167c87778c7270148f4d" title="VWB_Plot" alt="" coords="365,216,448,245"/>
+<area shape="rect" id="node27" href="$ID__VH_8C.html#adad5945cddefd75d9c787644201b242f" title="VWB_Vlin" alt="" coords="365,269,448,299"/>
+<area shape="rect" id="node19" href="$ID__VH_8C.html#a989fc2652f729213162c520d378578b3" title="VW_MarkUpdateBlock" alt="" coords="529,243,684,272"/>
+<area shape="rect" id="node32" href="$ID__IN_8C.html#a50a122900022f7051ec64d5c4613ebcf" title="IN_CheckAck" alt="" coords="355,429,459,459"/>
+<area shape="rect" id="node38" href="$ID__IN_8C.html#ac666b84a87364ddab589ceb0daaa129a" title="IN_StartAck" alt="" coords="360,483,453,512"/>
+<area shape="rect" id="node34" href="$ID__IN_8C.html#abc6dd93d0e7777cd67e20f61361f353d" title="IN_JoyButtons" alt="" coords="552,403,661,432"/>
+<area shape="rect" id="node36" href="$ID__IN_8C.html#a1dc32dd9a62a416001a9954a70dc4563" title="IN_MouseButtons" alt="" coords="544,456,669,485"/>
+<area shape="rect" id="node40" href="$ID__IN_8C.html#a20251e701cb941d1b39665a9afa51f23" title="IN_ClearKeysDown" alt="" coords="537,509,676,539"/>
+<area shape="rect" id="node47" href="$ID__PM_8C.html#a80f33d5bd3e0a9a388063a78edf53329" title="PM_GetPage" alt="" coords="357,844,456,873"/>
+<area shape="rect" id="node55" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1935,816,1980,845"/>
+<area shape="rect" id="node81" href="$ID__PM_8C.html#a3e8875fd1618f89f3e98f9d2ae4f0945" title="PML_ReadFromFile" alt="" coords="745,999,884,1028"/>
+<area shape="rect" id="node49" href="$ID__PM_8C.html#a6d8376b84fdfd88c991b82d9d9cebcfd" title="PM_GetPageAddress" alt="" coords="1364,920,1511,949"/>
+<area shape="rect" id="node58" href="$ID__PM_8C.html#a15cc7513b41c134b24cd20536a63f892" title="PML_GetPageFromXMS" alt="" coords="524,767,689,796"/>
+<area shape="rect" id="node78" href="$ID__PM_8C.html#a14156f3e9e18532f92f4c00e761fa0b7" title="PML_LoadPage" alt="" coords="549,844,664,873"/>
+<area shape="rect" id="node51" href="$ID__PM_8C.html#aa4215b4363055b96b571bedb294d39a2" title="PML_GetEMSAddress" alt="" coords="1571,791,1725,820"/>
+<area shape="rect" id="node53" href="$ID__PM_8C.html#ab2f720eba0924c15d0a7c6a487fc0626" title="PML_MapEMS" alt="" coords="1775,816,1884,845"/>
+<area shape="rect" id="node60" href="$ID__PM_8C.html#a4694a0931f68c73c15c7cdd4b6a4cb61" title="PML_GetAPageBuffer" alt="" coords="740,767,889,796"/>
+<area shape="rect" id="node63" href="$ID__PM_8C.html#a1a23d717675f8d14bd6e07bb7bcbd4b4" title="PML_GiveLRUPage" alt="" coords="1161,715,1300,744"/>
+<area shape="rect" id="node66" href="$ID__PM_8C.html#aa2abd895c0ac117de4d033b6850a9a07" title="PML_TransferPageSpace" alt="" coords="939,844,1109,873"/>
+<area shape="rect" id="node69" href="$ID__PM_8C.html#a0b6f9ec457913559bcff1d9258a15552" title="PML_PutPageInXMS" alt="" coords="1157,819,1304,848"/>
+<area shape="rect" id="node72" href="$ID__PM_8C.html#aa3210f7fc8e7367f2349cd17cbec0c67" title="PML_GiveLRUXMSPage" alt="" coords="1353,816,1521,845"/>
+<area shape="rect" id="node83" href="$ID__CA_8C.html#a9d7ef0e3d4f10f25abd940094a4db437" title="CA_FarRead" alt="" coords="1599,1075,1697,1104"/>
+</map>

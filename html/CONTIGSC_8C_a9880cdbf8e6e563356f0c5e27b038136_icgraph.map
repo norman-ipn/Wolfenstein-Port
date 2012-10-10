@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DEF_8H.html#ac4e07b4cd66c3fa71e9f675325f5e8ca" title="ScaleShape" alt="" coords="155,5,245,35"/>
+<area shape="rect" id="node31" href="$WL__DEF_8H.html#a11d04052928f61aec9102f6cce71fadb" title="SimpleScaleShape" alt="" coords="135,59,265,88"/>
+<area shape="rect" id="node5" href="$WL__DRAW_8C.html#a3f31beef974ac9e631c4b634d91ba701" title="DrawScaleds" alt="" coords="335,5,433,35"/>
+<area shape="rect" id="node7" href="$WL__DRAW_8C.html#abde2aab3bb185f39bd50f4574444a034" title="ThreeDRefresh" alt="" coords="503,35,612,64"/>
+<area shape="rect" id="node9" href="$WL__GAME_8C.html#a27540b39d401cbea76d1dc2d5d701736" title="Died" alt="" coords="815,9,863,39"/>
+<area shape="rect" id="node22" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="801,63,876,92"/>
+<area shape="rect" id="node11" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="932,9,1017,39"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1072,63,1157,92"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1205,63,1256,92"/>
+<area shape="rect" id="node17" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1305,36,1393,65"/>
+<area shape="rect" id="node19" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1443,63,1517,92"/>
+<area shape="rect" id="node25" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="933,63,1016,92"/>
+<area shape="rect" id="node28" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="925,116,1024,145"/>
+<area shape="rect" id="node33" href="$WL__DRAW_8C.html#ae3f72ce964ddefe4c1f76a8e31a65cad" title="DrawPlayerWeapon" alt="" coords="315,59,453,88"/>
+<area shape="rect" id="node36" href="$WL__DEBUG_8C.html#a0c4cc614683ec32e9c6d2ddd544a77ea" title="ShapeTest" alt="" coords="341,112,427,141"/>
+<area shape="rect" id="node38" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="512,112,603,141"/>
+<area shape="rect" id="node40" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="661,112,752,141"/>
+</map>

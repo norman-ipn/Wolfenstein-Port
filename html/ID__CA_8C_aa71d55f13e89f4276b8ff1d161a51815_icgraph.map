@@ -1,0 +1,36 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__CA_8H.html#a20eee13eb260608d4612aafc05ffc246" title="CA_SetAllPurge" alt="" coords="171,541,288,570"/>
+<area shape="rect" id="node5" href="$WL__DEF_8H.html#a98df47014d2079dafa7b7b0911bef3ff" title="PicturePause" alt="" coords="337,541,436,570"/>
+<area shape="rect" id="node7" href="$WL__MENU_8C.html#ad1faffefd1153f6d40ce3d2eaa598646" title="CalibrateJoystick" alt="" coords="485,594,608,623"/>
+<area shape="rect" id="node35" href="$WL__MENU_8H.html#a03f63a618731c692b7496b92fa2002bd" title="Confirm" alt="" coords="513,357,580,386"/>
+<area shape="rect" id="node52" href="$WL__MENU_8H.html#a95a4685a2d017477e6a863344b787642" title="CP_ChangeView" alt="" coords="485,749,608,778"/>
+<area shape="rect" id="node55" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="1005,762,1096,791"/>
+<area shape="rect" id="node58" href="$WL__MENU_8H.html#ad290f8e33560355805666460ffa302b0" title="HandleMenu" alt="" coords="500,541,593,570"/>
+<area shape="rect" id="node76" href="$WL__INTER_8C.html#ab396c53c02f20e288d2d718c0ee64728" title="LevelCompleted" alt="" coords="1161,205,1276,234"/>
+<area shape="rect" id="node79" href="$WL__MENU_8H.html#a8a190d4f3b624a81b86aa5c75d1bd4d1" title="MouseSensitivity" alt="" coords="485,647,608,677"/>
+<area shape="rect" id="node81" href="$WL__TEXT_8C.html#ab5697774e1a05a1e3e51b02688f1561f" title="ShowArticle" alt="" coords="501,177,592,206"/>
+<area shape="rect" id="node85" href="$WL__INTER_8C.html#aaa41fd21f2b55e23622375ac43624b99" title="Victory" alt="" coords="851,21,912,50"/>
+<area shape="rect" id="node9" href="$WL__MENU_8H.html#a8d89e45be2c67ed682acb9ee0c09cd75" title="CP_Control" alt="" coords="669,747,760,777"/>
+<area shape="rect" id="node11" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="989,463,1112,493"/>
+<area shape="rect" id="node13" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="1173,490,1264,519"/>
+<area shape="rect" id="node19" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1597,490,1683,519"/>
+<area shape="rect" id="node15" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="1327,490,1401,519"/>
+<area shape="rect" id="node17" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="1457,341,1543,370"/>
+<area shape="rect" id="node28" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="1459,490,1541,519"/>
+<area shape="rect" id="node31" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="1451,543,1549,573"/>
+<area shape="rect" id="node21" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1731,503,1781,533"/>
+<area shape="rect" id="node23" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1831,555,1919,585"/>
+<area shape="rect" id="node25" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1968,555,2043,585"/>
+<area shape="rect" id="node37" href="$WL__MENU_8H.html#a95a8089ef599aecc8a81f90ba35032dd" title="CP_CheckQuick" alt="" coords="821,437,941,466"/>
+<area shape="rect" id="node40" href="$WL__MENU_8H.html#a36185687b73d760059be35f2c35aaad1" title="CP_EndGame" alt="" coords="828,333,935,362"/>
+<area shape="rect" id="node43" href="$WL__MENU_8H.html#a8f189c2d0971b91261fe50e58bc4b64a" title="CP_NewGame" alt="" coords="660,435,769,465"/>
+<area shape="rect" id="node45" href="$WL__MENU_8H.html#ad29825b90b8a92ca853643f18f868705" title="CP_Quit" alt="" coords="845,279,917,309"/>
+<area shape="rect" id="node48" href="$WL__MENU_8H.html#a62fb7c17655ed1e0031cbeafd182ee31" title="CP_SaveGame" alt="" coords="659,382,771,411"/>
+<area shape="rect" id="node61" href="$WL__MENU_8H.html#a2ca12f5b43c80ee49b36a78621ac8ce4" title="CP_LoadGame" alt="" coords="660,489,769,518"/>
+<area shape="rect" id="node67" href="$WL__MENU_8H.html#a33c03c428f4fe132d1e5006416422ed4" title="CP_Sound" alt="" coords="839,541,924,570"/>
+<area shape="rect" id="node70" href="$WL__MENU_8H.html#a0631548359f161b2a227317582c6c4a6" title="CustomControls" alt="" coords="656,593,773,622"/>
+<area shape="rect" id="node72" href="$WL__MAIN_8C.html#aeff0948270bdff815c7b30e558e7129b" title="DoJukebox" alt="" coords="1007,658,1095,687"/>
+<area shape="rect" id="node83" href="$WL__TEXT_8C.html#a11ef38288d701a8921caf515d527cd58" title="EndText" alt="" coords="680,123,749,153"/>
+<area shape="rect" id="node88" href="$WL__TEXT_8C.html#a7dfe666305b63dcb0a03ee9960b74d01" title="HelpScreens" alt="" coords="667,177,763,206"/>
+<area shape="rect" id="node90" href="$WL__MENU_8C.html#a20363b80c8caa7c6be4a2fee67a2d250" title="CP_ReadThis" alt="" coords="829,226,933,255"/>
+</map>

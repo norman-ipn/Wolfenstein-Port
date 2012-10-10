@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__AGENT_8C.html#a383b7b6dc8f0fe10dde5eeaeeb0e9b76" title="TakeDamage" alt="" coords="116,84,215,113"/>
+<area shape="rect" id="node21" href="$ID__US_8H.html#af7dbbf782f072ed2c7cb57cd66b10c24" title="US_RndT" alt="" coords="125,137,205,167"/>
+<area shape="rect" id="node5" href="$WL__AGENT_8C.html#a8be593acb7e02c668d964d6042679fde" title="DrawFace" alt="" coords="452,5,535,35"/>
+<area shape="rect" id="node7" href="$WL__AGENT_8C.html#adc83960f6d18ebc42df7465f6bbc0e75" title="StatusDrawPic" alt="" coords="593,57,703,87"/>
+<area shape="rect" id="node13" href="$WL__AGENT_8C.html#a72c88545eb3ce65cd96f2af4d7704f42" title="DrawHealth" alt="" coords="284,109,375,139"/>
+<area shape="rect" id="node18" href="$WL__DEF_8H.html#a9d82bd76126e466b5d9fa28eea3d00f1" title="StartDamageFlash" alt="" coords="264,163,395,192"/>
+<area shape="rect" id="node9" href="$ID__VH_8C.html#a0170b65c8e23e18b960bde1e8908887b" title="LatchDrawPic" alt="" coords="752,57,856,87"/>
+<area shape="rect" id="node11" href="$ID__VL_8C.html#a80443116a2a895fc294adfe9b2220819" title="VL_LatchToScreen" alt="" coords="904,57,1037,87"/>
+<area shape="rect" id="node15" href="$WL__AGENT_8C.html#a05089437497aca93a4e4125cbfd96b80" title="LatchNumber" alt="" coords="444,109,543,139"/>
+</map>

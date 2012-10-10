@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__ACT1_8C.html#aa95642b9bb56e3ff983d8ea0d25bb935" title="DoorOpen" alt="" coords="147,59,227,88"/>
+<area shape="rect" id="node26" href="$WL__DEF_8H.html#a0169afc52fe92fa36608b9e37b56359c" title="OperateDoor" alt="" coords="139,112,235,141"/>
+<area shape="rect" id="node5" href="$WL__DEF_8H.html#a1dc87c7ff6adc5fc586c9abe07ddf5c8" title="MoveDoors" alt="" coords="284,59,372,88"/>
+<area shape="rect" id="node7" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="423,59,497,88"/>
+<area shape="rect" id="node9" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="553,5,639,35"/>
+<area shape="rect" id="node20" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="555,59,637,88"/>
+<area shape="rect" id="node23" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="547,112,645,141"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="693,59,779,88"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="827,59,877,88"/>
+<area shape="rect" id="node15" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="927,32,1015,61"/>
+<area shape="rect" id="node17" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1064,59,1139,88"/>
+<area shape="rect" id="node28" href="$WL__AGENT_8C.html#aebccb5f10d715a9d66e9045fc2d372a0" title="Cmd_Use" alt="" coords="288,112,368,141"/>
+<area shape="rect" id="node30" href="$WL__AGENT_8C.html#a146c62d526ddb53a04fe11af48e91c96" title="T_Player" alt="" coords="423,112,497,141"/>
+</map>

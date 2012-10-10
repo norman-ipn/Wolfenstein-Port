@@ -1,0 +1,26 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__PM_8H.html#a80f33d5bd3e0a9a388063a78edf53329" title="PM_GetPage" alt="" coords="223,245,321,275"/>
+<area shape="rect" id="node5" href="$WL__DRAW_8C.html#a5d1512cb6cadbf0425a0592969b0b3ad" title="HitHorizDoor" alt="" coords="387,5,485,35"/>
+<area shape="rect" id="node7" href="$WL__DRAW_8C.html#ad40f149ac1d729c05048070e5e44222c" title="HitHorizPWall" alt="" coords="384,59,488,88"/>
+<area shape="rect" id="node9" href="$WL__DRAW_8C.html#a489668c5f832e695224cb9b1022f3448" title="HitHorizWall" alt="" coords="388,112,484,141"/>
+<area shape="rect" id="node11" href="$WL__DRAW_8C.html#aae630232d435e6ac2f55605b02234738" title="HitVertDoor" alt="" coords="391,165,481,195"/>
+<area shape="rect" id="node13" href="$WL__DRAW_8C.html#a29679cfe78e8257f4b05113f66b6c1a0" title="HitVertPWall" alt="" coords="387,219,485,248"/>
+<area shape="rect" id="node15" href="$WL__DRAW_8C.html#ad2e8beb940ef03b1bbb0672123ededaf" title="HitVertWall" alt="" coords="392,272,480,301"/>
+<area shape="rect" id="node17" href="$ID__PM_8C.html#ab97049dc4c67f252768239ca432f4204" title="PM_Preload" alt="" coords="389,376,483,405"/>
+<area shape="rect" id="node32" href="$ID__SD_8C.html#aaa6e5b91a13ba85fc9628f255947e8e5" title="SDL_SetupDigi" alt="" coords="549,324,661,353"/>
+<area shape="rect" id="node37" href="$WOLFHACK_8C.html#a522f0e08c31d2c568ff188e825cfe9c4" title="SetPlaneViewSize" alt="" coords="371,429,501,459"/>
+<area shape="rect" id="node41" href="$WL__DEBUG_8C.html#a0c4cc614683ec32e9c6d2ddd544a77ea" title="ShapeTest" alt="" coords="393,483,479,512"/>
+<area shape="rect" id="node19" href="$WL__INTER_8C.html#a62b222f44bcc97cfca512fe6b24f4863" title="PreloadGraphics" alt="" coords="711,376,828,405"/>
+<area shape="rect" id="node21" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="1023,376,1108,405"/>
+<area shape="rect" id="node23" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1163,429,1248,459"/>
+<area shape="rect" id="node25" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1296,428,1347,457"/>
+<area shape="rect" id="node27" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1396,376,1484,405"/>
+<area shape="rect" id="node29" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1533,376,1608,405"/>
+<area shape="rect" id="node34" href="$ID__SD_8C.html#a9e273885efbb6410be25e887f5ac6bdd" title="SD_Startup" alt="" coords="877,324,968,353"/>
+<area shape="rect" id="node39" href="$WOLFHACK_8C.html#a6ad59c546e9b7bad6c682670b884ba1e" title="DrawPlanes" alt="" coords="559,429,652,459"/>
+<area shape="rect" id="node43" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="560,483,651,512"/>
+<area shape="rect" id="node45" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="724,456,815,485"/>
+<area shape="rect" id="node47" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="885,443,960,472"/>
+<area shape="rect" id="node50" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="1024,483,1107,512"/>
+<area shape="rect" id="node53" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="1016,429,1115,459"/>
+</map>

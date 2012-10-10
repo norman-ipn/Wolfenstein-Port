@@ -1,0 +1,33 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MENU_8H.html#a95a4685a2d017477e6a863344b787642" title="CP_ChangeView" alt="" coords="327,104,449,133"/>
+<area shape="rect" id="node29" href="$WL__MENU_8H.html#a94d0412c951284a8ea98378116c23566" title="EnterCtrlData" alt="" coords="337,472,439,501"/>
+<area shape="rect" id="node44" href="$WL__MENU_8H.html#ad290f8e33560355805666460ffa302b0" title="HandleMenu" alt="" coords="341,208,435,237"/>
+<area shape="rect" id="node69" href="$WL__MENU_8H.html#a8a190d4f3b624a81b86aa5c75d1bd4d1" title="MouseSensitivity" alt="" coords="327,525,449,555"/>
+<area shape="rect" id="node71" href="$WL__MENU_8H.html#a4f5f54a27864fe7144f735c2d3529774" title="TicDelay" alt="" coords="181,208,256,237"/>
+<area shape="rect" id="node75" href="$WL__MENU_8H.html#a3434990df52efeb93017e54af5a20860" title="WaitKeyUp" alt="" coords="175,352,263,381"/>
+<area shape="rect" id="node5" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="856,204,979,233"/>
+<area shape="rect" id="node7" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="1027,204,1117,233"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1437,151,1523,180"/>
+<area shape="rect" id="node9" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="1167,204,1241,233"/>
+<area shape="rect" id="node11" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="1297,204,1383,233"/>
+<area shape="rect" id="node22" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="1299,257,1381,287"/>
+<area shape="rect" id="node25" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="1291,151,1389,180"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1571,127,1621,156"/>
+<area shape="rect" id="node17" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1671,75,1759,104"/>
+<area shape="rect" id="node19" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1808,75,1883,104"/>
+<area shape="rect" id="node31" href="$WL__MENU_8H.html#a0a00df1716b0a174dc25901d829aea93" title="DefineJoyBtns" alt="" coords="523,632,629,661"/>
+<area shape="rect" id="node35" href="$WL__MENU_8H.html#a6f23a62131fda11af6f0aa3002bdfffb" title="DefineKeyBtns" alt="" coords="521,472,631,501"/>
+<area shape="rect" id="node38" href="$WL__MENU_8H.html#a666771efec8f7ee7f225adda60c1f5e0" title="DefineKeyMove" alt="" coords="519,525,633,555"/>
+<area shape="rect" id="node41" href="$WL__MENU_8H.html#af9ffcf08793f2da25a6f54f439e15ddf" title="DefineMouseBtns" alt="" coords="513,579,639,608"/>
+<area shape="rect" id="node33" href="$WL__MENU_8H.html#a0631548359f161b2a227317582c6c4a6" title="CustomControls" alt="" coords="689,525,807,555"/>
+<area shape="rect" id="node46" href="$WL__MENU_8H.html#a8d89e45be2c67ed682acb9ee0c09cd75" title="CP_Control" alt="" coords="531,104,621,133"/>
+<area shape="rect" id="node49" href="$WL__MENU_8H.html#a2ca12f5b43c80ee49b36a78621ac8ce4" title="CP_LoadGame" alt="" coords="521,261,631,291"/>
+<area shape="rect" id="node55" href="$WL__MENU_8H.html#a8f189c2d0971b91261fe50e58bc4b64a" title="CP_NewGame" alt="" coords="521,419,631,448"/>
+<area shape="rect" id="node57" href="$WL__MENU_8H.html#a62fb7c17655ed1e0031cbeafd182ee31" title="CP_SaveGame" alt="" coords="520,315,632,344"/>
+<area shape="rect" id="node61" href="$WL__MENU_8H.html#a33c03c428f4fe132d1e5006416422ed4" title="CP_Sound" alt="" coords="533,208,619,237"/>
+<area shape="rect" id="node65" href="$WL__MAIN_8C.html#aeff0948270bdff815c7b30e558e7129b" title="DoJukebox" alt="" coords="873,5,961,35"/>
+<area shape="rect" id="node51" href="$WL__MENU_8H.html#a95a8089ef599aecc8a81f90ba35032dd" title="CP_CheckQuick" alt="" coords="688,309,808,339"/>
+<area shape="rect" id="node79" href="$WL__MENU_8H.html#ae1fe464efcd5a1d1f43e8dabc2841832" title="DrawLoadSaveScreen" alt="" coords="312,312,464,341"/>
+<area shape="rect" id="node83" href="$WL__MENU_8H.html#a41d17005e1b49c4a62b1506b9d213a12" title="DrawNewEpisode" alt="" coords="325,419,451,448"/>
+<area shape="rect" id="node86" href="$WL__MENU_8H.html#a4f8733a1d462a92cecf3cff18eb486ba" title="DrawNewGame" alt="" coords="331,365,445,395"/>
+</map>

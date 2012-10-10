@@ -1,0 +1,1330 @@
+\hypertarget{WL__AGENT_8C}{
+\section{WL\_\-AGENT.C File Reference}
+\label{WL__AGENT_8C}\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WL\_\-AGENT.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structatkinf}{atkinf}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__AGENT_8C_adb1a33704348cfb6b7e24b5adbae7598}{MAXMOUSETURN}~10
+\item 
+\#define \hyperlink{WL__AGENT_8C_addd337c4e652effc84b749baf914107b}{MOVESCALE}~150l
+\item 
+\#define \hyperlink{WL__AGENT_8C_ae0376bd5f21024fe8205b6d59d54e6d9}{BACKMOVESCALE}~100l
+\item 
+\#define \hyperlink{WL__AGENT_8C_a3ab7501145c7f7bd3f4c5c76589e5863}{ANGLESCALE}~20
+\item 
+\#define \hyperlink{WL__AGENT_8C_ada7d88a2854f689de2c9cccf791e44eb}{FACETICS}~70
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__AGENT_8C_a146c62d526ddb53a04fe11af48e91c96}{T\_\-Player} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__AGENT_8C_a0cce1c4b64372c27c6ff79e6fb397772}{T\_\-Attack} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__AGENT_8C_a0b198c7d98710fffb49091dae4fc6122}{DrawWeapon} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_aabcbbb80ba8c11b87f33bd15707410c6}{GiveWeapon} (int weapon)
+\item 
+void \hyperlink{WL__AGENT_8C_af6a9d18983cf35f34e0cf72dc1af934e}{GiveAmmo} (int ammo)
+\item 
+void \hyperlink{WL__AGENT_8C_a0c4bf51d64253df2bcb951f27fb00009}{Attack} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_adc24d3d235d4bcf9395baf4ec0236d55}{Use} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_a1260045e2f1ee6eb8f7537f1025e889b}{Search} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__AGENT_8C_a989e44d07e9bcaada66fca71b72eaf1c}{SelectWeapon} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_ad79707913bcf532f74ea70cf354f902c}{SelectItem} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__AGENT_8C_aa96ec78c47832d4ff39bc3fadf9e6c3c}{TryMove} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__AGENT_8C_a2a36d44974095d5ab513f7ad1e50376b}{ClipMove} (\hyperlink{structobjstruct}{objtype} $\ast$ob, long xmove, long ymove)
+\item 
+void \hyperlink{WL__AGENT_8C_a4941089cd324d9a04dfd2f43df4a017c}{CheckWeaponChange} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_a6091384ff3bca148557c73627df60b77}{ControlMovement} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__AGENT_8C_adc83960f6d18ebc42df7465f6bbc0e75}{StatusDrawPic} (unsigned x, unsigned y, unsigned \hyperlink{WL__TEXT_8C_a38ee8916c0c328929ad672895daca6d6}{picnum})
+\item 
+void \hyperlink{WL__AGENT_8C_a8be593acb7e02c668d964d6042679fde}{DrawFace} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_ac2f68a8b36dbfb20a38bc619c6622d16}{UpdateFace} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_a05089437497aca93a4e4125cbfd96b80}{LatchNumber} (int x, int y, int width, long number)
+\item 
+void \hyperlink{WL__AGENT_8C_a72c88545eb3ce65cd96f2af4d7704f42}{DrawHealth} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_a383b7b6dc8f0fe10dde5eeaeeb0e9b76}{TakeDamage} (int points, \hyperlink{structobjstruct}{objtype} $\ast$attacker)
+\item 
+void \hyperlink{WL__AGENT_8C_ad7b857c66f0f0e7bc7b961a9d2024538}{HealSelf} (int points)
+\item 
+void \hyperlink{WL__AGENT_8C_ae76d82b105193ca17991c489b709b57f}{DrawLevel} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_aefc0a3d13bbeb119a08400ef0217dfb6}{DrawLives} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_acb68c87a8a1dbcc48e7009f56d1dc7fe}{GiveExtraMan} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_a5adcab0b538029aa93ac79c08adc129c}{DrawScore} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_aced31f0edae6f9496d6d56942f318aba}{GivePoints} (long points)
+\item 
+void \hyperlink{WL__AGENT_8C_af3f3b9f79b56cd9e8e740e2ffd7522ab}{DrawKeys} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_a4fcb6f04271d5008c0cb4c71fd02dcfe}{DrawAmmo} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_ac83a75229c96c115e1391140ffe2de8a}{GiveKey} (int key)
+\item 
+void \hyperlink{WL__AGENT_8C_ae541a99035c0697e4b819dbe96f16a6a}{GetBonus} (\hyperlink{structstatstruct}{statobj\_\-t} $\ast$check)
+\item 
+void \hyperlink{WL__AGENT_8C_a9689cff3b028c2472976623b51e378fc}{VictoryTile} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_ad49e33617f0da8e8ae3f643172eb39da}{Thrust} (int \hyperlink{WL__DRAW_8C_a63177970cacb40efba67ce501ea89210}{angle}, long speed)
+\item 
+void \hyperlink{WL__AGENT_8C_ae2ed34a82b25a60e89d3532c1f8fb70c}{Cmd\_\-Fire} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_aebccb5f10d715a9d66e9045fc2d372a0}{Cmd\_\-Use} (void)
+\item 
+void \hyperlink{WL__AGENT_8C_a4bc0a75c89b1b52cf115c63b5c07ff9c}{SpawnPlayer} (int tilex, int tiley, int dir)
+\item 
+void \hyperlink{WL__AGENT_8C_afd37f9f9ac8d36180f9348c67195a4db}{KnifeAttack} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__AGENT_8C_a1afb01b78673abfdfaddceee3a198eb5}{GunAttack} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\item 
+void \hyperlink{WL__AGENT_8C_aac046185c3a93b503c24f82a7019e556}{VictorySpin} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__AGENT_8C_a2bb58b88ac256b165a95a806ae3b41e5}{running}
+\item 
+long \hyperlink{WL__AGENT_8C_ac9683e4ab6c67081743f542dc09a74c0}{thrustspeed}
+\item 
+unsigned \hyperlink{WL__AGENT_8C_a098f3c7a6e9b99f0d4d5fbb552b46754}{plux}
+\item 
+unsigned \hyperlink{WL__AGENT_8C_a2b130e086f58d4d881053d67b98c8251}{pluy}
+\item 
+int \hyperlink{WL__AGENT_8C_a1f69f7886d762367ccbc2596edaf00e9}{anglefrac}
+\item 
+int \hyperlink{WL__AGENT_8C_a4d977ede63beb6fb29e846e16204974b}{gotgatgun}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__AGENT_8C_aefadb4c91f358f1a8b80113dff2433f1}{LastAttacker}
+\item 
+\hyperlink{structstatestruct}{statetype} \hyperlink{WL__AGENT_8C_aef2c7d76826104ab1e029f84a95c41c7}{s\_\-player} = \{false,0,0,T\_\-Player,NULL,NULL\}
+\item 
+\hyperlink{structstatestruct}{statetype} \hyperlink{WL__AGENT_8C_a8cf5fca2f0794aeeca4ba0504e1230ef}{s\_\-attack} = \{false,0,0,T\_\-Attack,NULL,NULL\}
+\item 
+long \hyperlink{WL__AGENT_8C_a7f5cea5586913d773629c89545c77a07}{playerxmove}
+\item 
+long \hyperlink{WL__AGENT_8C_ab34d4aa1726c04e90dabd23eff2c324f}{playerymove}
+\item 
+struct \hyperlink{structatkinf}{atkinf} \hyperlink{WL__AGENT_8C_abc99d4ffe13803cdc38c290fb96a8b6f}{attackinfo} \mbox{[}4\mbox{]}\mbox{[}14\mbox{]}
+\item 
+int \hyperlink{WL__AGENT_8C_a57082f1acfc5cc0d2e86c88c1d22adff}{strafeangle} \mbox{[}9\mbox{]} = \{0,90,180,270,45,135,225,315,0\}
+\item 
+int \hyperlink{WL__AGENT_8C_aba3b8c5c49be6b7ece93f58d0283fdfe}{facecount}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__AGENT_8C_a3ab7501145c7f7bd3f4c5c76589e5863}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!ANGLESCALE@{ANGLESCALE}}
+\index{ANGLESCALE@{ANGLESCALE}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{ANGLESCALE}]{\setlength{\rightskip}{0pt plus 5cm}\#define ANGLESCALE~20}}
+\label{WL__AGENT_8C_a3ab7501145c7f7bd3f4c5c76589e5863}
+\hypertarget{WL__AGENT_8C_ae0376bd5f21024fe8205b6d59d54e6d9}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!BACKMOVESCALE@{BACKMOVESCALE}}
+\index{BACKMOVESCALE@{BACKMOVESCALE}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{BACKMOVESCALE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BACKMOVESCALE~100l}}
+\label{WL__AGENT_8C_ae0376bd5f21024fe8205b6d59d54e6d9}
+\hypertarget{WL__AGENT_8C_ada7d88a2854f689de2c9cccf791e44eb}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!FACETICS@{FACETICS}}
+\index{FACETICS@{FACETICS}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{FACETICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define FACETICS~70}}
+\label{WL__AGENT_8C_ada7d88a2854f689de2c9cccf791e44eb}
+\hypertarget{WL__AGENT_8C_adb1a33704348cfb6b7e24b5adbae7598}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!MAXMOUSETURN@{MAXMOUSETURN}}
+\index{MAXMOUSETURN@{MAXMOUSETURN}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{MAXMOUSETURN}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXMOUSETURN~10}}
+\label{WL__AGENT_8C_adb1a33704348cfb6b7e24b5adbae7598}
+\hypertarget{WL__AGENT_8C_addd337c4e652effc84b749baf914107b}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!MOVESCALE@{MOVESCALE}}
+\index{MOVESCALE@{MOVESCALE}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{MOVESCALE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MOVESCALE~150l}}
+\label{WL__AGENT_8C_addd337c4e652effc84b749baf914107b}
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__AGENT_8C_a0c4bf51d64253df2bcb951f27fb00009}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!Attack@{Attack}}
+\index{Attack@{Attack}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{Attack}]{\setlength{\rightskip}{0pt plus 5cm}void Attack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a0c4bf51d64253df2bcb951f27fb00009}
+\hypertarget{WL__AGENT_8C_a4941089cd324d9a04dfd2f43df4a017c}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!CheckWeaponChange@{CheckWeaponChange}}
+\index{CheckWeaponChange@{CheckWeaponChange}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{CheckWeaponChange}]{\setlength{\rightskip}{0pt plus 5cm}void CheckWeaponChange (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a4941089cd324d9a04dfd2f43df4a017c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a4941089cd324d9a04dfd2f43df4a017c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{WL__AGENT_8C_a4941089cd324d9a04dfd2f43df4a017c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a2a36d44974095d5ab513f7ad1e50376b}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!ClipMove@{ClipMove}}
+\index{ClipMove@{ClipMove}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{ClipMove}]{\setlength{\rightskip}{0pt plus 5cm}void ClipMove (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob, }
+\item[{long}]{xmove, }
+\item[{long}]{ymove}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a2a36d44974095d5ab513f7ad1e50376b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a2a36d44974095d5ab513f7ad1e50376b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a2a36d44974095d5ab513f7ad1e50376b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_ae2ed34a82b25a60e89d3532c1f8fb70c}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!Cmd\_\-Fire@{Cmd\_\-Fire}}
+\index{Cmd\_\-Fire@{Cmd\_\-Fire}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{Cmd\_\-Fire}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\_\-Fire (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ae2ed34a82b25a60e89d3532c1f8fb70c}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{WL__AGENT_8C_ae2ed34a82b25a60e89d3532c1f8fb70c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_aebccb5f10d715a9d66e9045fc2d372a0}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!Cmd\_\-Use@{Cmd\_\-Use}}
+\index{Cmd\_\-Use@{Cmd\_\-Use}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{Cmd\_\-Use}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\_\-Use (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_aebccb5f10d715a9d66e9045fc2d372a0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aebccb5f10d715a9d66e9045fc2d372a0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{WL__AGENT_8C_aebccb5f10d715a9d66e9045fc2d372a0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a6091384ff3bca148557c73627df60b77}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!ControlMovement@{ControlMovement}}
+\index{ControlMovement@{ControlMovement}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{ControlMovement}]{\setlength{\rightskip}{0pt plus 5cm}void ControlMovement (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a6091384ff3bca148557c73627df60b77}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a6091384ff3bca148557c73627df60b77_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{WL__AGENT_8C_a6091384ff3bca148557c73627df60b77_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a4fcb6f04271d5008c0cb4c71fd02dcfe}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawAmmo@{DrawAmmo}}
+\index{DrawAmmo@{DrawAmmo}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawAmmo}]{\setlength{\rightskip}{0pt plus 5cm}void DrawAmmo (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a4fcb6f04271d5008c0cb4c71fd02dcfe}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a4fcb6f04271d5008c0cb4c71fd02dcfe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a4fcb6f04271d5008c0cb4c71fd02dcfe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a8be593acb7e02c668d964d6042679fde}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawFace@{DrawFace}}
+\index{DrawFace@{DrawFace}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawFace}]{\setlength{\rightskip}{0pt plus 5cm}void DrawFace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a8be593acb7e02c668d964d6042679fde}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a8be593acb7e02c668d964d6042679fde_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a8be593acb7e02c668d964d6042679fde_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a72c88545eb3ce65cd96f2af4d7704f42}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawHealth@{DrawHealth}}
+\index{DrawHealth@{DrawHealth}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawHealth}]{\setlength{\rightskip}{0pt plus 5cm}void DrawHealth (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a72c88545eb3ce65cd96f2af4d7704f42}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a72c88545eb3ce65cd96f2af4d7704f42_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a72c88545eb3ce65cd96f2af4d7704f42_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_af3f3b9f79b56cd9e8e740e2ffd7522ab}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawKeys@{DrawKeys}}
+\index{DrawKeys@{DrawKeys}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawKeys}]{\setlength{\rightskip}{0pt plus 5cm}void DrawKeys (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_af3f3b9f79b56cd9e8e740e2ffd7522ab}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_af3f3b9f79b56cd9e8e740e2ffd7522ab_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_af3f3b9f79b56cd9e8e740e2ffd7522ab_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_ae76d82b105193ca17991c489b709b57f}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawLevel@{DrawLevel}}
+\index{DrawLevel@{DrawLevel}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawLevel}]{\setlength{\rightskip}{0pt plus 5cm}void DrawLevel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ae76d82b105193ca17991c489b709b57f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ae76d82b105193ca17991c489b709b57f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ae76d82b105193ca17991c489b709b57f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_aefc0a3d13bbeb119a08400ef0217dfb6}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawLives@{DrawLives}}
+\index{DrawLives@{DrawLives}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawLives}]{\setlength{\rightskip}{0pt plus 5cm}void DrawLives (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_aefc0a3d13bbeb119a08400ef0217dfb6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aefc0a3d13bbeb119a08400ef0217dfb6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aefc0a3d13bbeb119a08400ef0217dfb6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a5adcab0b538029aa93ac79c08adc129c}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawScore@{DrawScore}}
+\index{DrawScore@{DrawScore}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawScore}]{\setlength{\rightskip}{0pt plus 5cm}void DrawScore (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a5adcab0b538029aa93ac79c08adc129c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a5adcab0b538029aa93ac79c08adc129c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a5adcab0b538029aa93ac79c08adc129c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a0b198c7d98710fffb49091dae4fc6122}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!DrawWeapon@{DrawWeapon}}
+\index{DrawWeapon@{DrawWeapon}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{DrawWeapon}]{\setlength{\rightskip}{0pt plus 5cm}void DrawWeapon (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a0b198c7d98710fffb49091dae4fc6122}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a0b198c7d98710fffb49091dae4fc6122_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a0b198c7d98710fffb49091dae4fc6122_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_ae541a99035c0697e4b819dbe96f16a6a}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!GetBonus@{GetBonus}}
+\index{GetBonus@{GetBonus}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{GetBonus}]{\setlength{\rightskip}{0pt plus 5cm}void GetBonus (
+\begin{DoxyParamCaption}
+\item[{{\bf statobj\_\-t} $\ast$}]{check}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ae541a99035c0697e4b819dbe96f16a6a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ae541a99035c0697e4b819dbe96f16a6a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ae541a99035c0697e4b819dbe96f16a6a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_af6a9d18983cf35f34e0cf72dc1af934e}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!GiveAmmo@{GiveAmmo}}
+\index{GiveAmmo@{GiveAmmo}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{GiveAmmo}]{\setlength{\rightskip}{0pt plus 5cm}void GiveAmmo (
+\begin{DoxyParamCaption}
+\item[{int}]{ammo}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_af6a9d18983cf35f34e0cf72dc1af934e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_af6a9d18983cf35f34e0cf72dc1af934e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_af6a9d18983cf35f34e0cf72dc1af934e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_acb68c87a8a1dbcc48e7009f56d1dc7fe}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!GiveExtraMan@{GiveExtraMan}}
+\index{GiveExtraMan@{GiveExtraMan}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{GiveExtraMan}]{\setlength{\rightskip}{0pt plus 5cm}void GiveExtraMan (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_acb68c87a8a1dbcc48e7009f56d1dc7fe}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_acb68c87a8a1dbcc48e7009f56d1dc7fe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_acb68c87a8a1dbcc48e7009f56d1dc7fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_ac83a75229c96c115e1391140ffe2de8a}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!GiveKey@{GiveKey}}
+\index{GiveKey@{GiveKey}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{GiveKey}]{\setlength{\rightskip}{0pt plus 5cm}void GiveKey (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ac83a75229c96c115e1391140ffe2de8a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ac83a75229c96c115e1391140ffe2de8a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ac83a75229c96c115e1391140ffe2de8a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_aced31f0edae6f9496d6d56942f318aba}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!GivePoints@{GivePoints}}
+\index{GivePoints@{GivePoints}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{GivePoints}]{\setlength{\rightskip}{0pt plus 5cm}void GivePoints (
+\begin{DoxyParamCaption}
+\item[{long}]{points}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_aced31f0edae6f9496d6d56942f318aba}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aced31f0edae6f9496d6d56942f318aba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aced31f0edae6f9496d6d56942f318aba_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_aabcbbb80ba8c11b87f33bd15707410c6}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!GiveWeapon@{GiveWeapon}}
+\index{GiveWeapon@{GiveWeapon}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{GiveWeapon}]{\setlength{\rightskip}{0pt plus 5cm}void GiveWeapon (
+\begin{DoxyParamCaption}
+\item[{int}]{weapon}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_aabcbbb80ba8c11b87f33bd15707410c6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aabcbbb80ba8c11b87f33bd15707410c6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aabcbbb80ba8c11b87f33bd15707410c6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a1afb01b78673abfdfaddceee3a198eb5}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!GunAttack@{GunAttack}}
+\index{GunAttack@{GunAttack}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{GunAttack}]{\setlength{\rightskip}{0pt plus 5cm}void GunAttack (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a1afb01b78673abfdfaddceee3a198eb5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a1afb01b78673abfdfaddceee3a198eb5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{WL__AGENT_8C_a1afb01b78673abfdfaddceee3a198eb5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_ad7b857c66f0f0e7bc7b961a9d2024538}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!HealSelf@{HealSelf}}
+\index{HealSelf@{HealSelf}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{HealSelf}]{\setlength{\rightskip}{0pt plus 5cm}void HealSelf (
+\begin{DoxyParamCaption}
+\item[{int}]{points}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ad7b857c66f0f0e7bc7b961a9d2024538}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ad7b857c66f0f0e7bc7b961a9d2024538_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ad7b857c66f0f0e7bc7b961a9d2024538_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_afd37f9f9ac8d36180f9348c67195a4db}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!KnifeAttack@{KnifeAttack}}
+\index{KnifeAttack@{KnifeAttack}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{KnifeAttack}]{\setlength{\rightskip}{0pt plus 5cm}void KnifeAttack (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_afd37f9f9ac8d36180f9348c67195a4db}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_afd37f9f9ac8d36180f9348c67195a4db_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{WL__AGENT_8C_afd37f9f9ac8d36180f9348c67195a4db_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a05089437497aca93a4e4125cbfd96b80}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!LatchNumber@{LatchNumber}}
+\index{LatchNumber@{LatchNumber}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{LatchNumber}]{\setlength{\rightskip}{0pt plus 5cm}void LatchNumber (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{width, }
+\item[{long}]{number}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a05089437497aca93a4e4125cbfd96b80}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a05089437497aca93a4e4125cbfd96b80_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a05089437497aca93a4e4125cbfd96b80_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a1260045e2f1ee6eb8f7537f1025e889b}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!Search@{Search}}
+\index{Search@{Search}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}void Search (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a1260045e2f1ee6eb8f7537f1025e889b}
+\hypertarget{WL__AGENT_8C_ad79707913bcf532f74ea70cf354f902c}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!SelectItem@{SelectItem}}
+\index{SelectItem@{SelectItem}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{SelectItem}]{\setlength{\rightskip}{0pt plus 5cm}void SelectItem (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ad79707913bcf532f74ea70cf354f902c}
+\hypertarget{WL__AGENT_8C_a989e44d07e9bcaada66fca71b72eaf1c}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!SelectWeapon@{SelectWeapon}}
+\index{SelectWeapon@{SelectWeapon}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{SelectWeapon}]{\setlength{\rightskip}{0pt plus 5cm}void SelectWeapon (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a989e44d07e9bcaada66fca71b72eaf1c}
+\hypertarget{WL__AGENT_8C_a4bc0a75c89b1b52cf115c63b5c07ff9c}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!SpawnPlayer@{SpawnPlayer}}
+\index{SpawnPlayer@{SpawnPlayer}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{SpawnPlayer}]{\setlength{\rightskip}{0pt plus 5cm}void SpawnPlayer (
+\begin{DoxyParamCaption}
+\item[{int}]{tilex, }
+\item[{int}]{tiley, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a4bc0a75c89b1b52cf115c63b5c07ff9c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a4bc0a75c89b1b52cf115c63b5c07ff9c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a4bc0a75c89b1b52cf115c63b5c07ff9c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_adc83960f6d18ebc42df7465f6bbc0e75}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!StatusDrawPic@{StatusDrawPic}}
+\index{StatusDrawPic@{StatusDrawPic}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{StatusDrawPic}]{\setlength{\rightskip}{0pt plus 5cm}void StatusDrawPic (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{x, }
+\item[{unsigned}]{y, }
+\item[{unsigned}]{picnum}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_adc83960f6d18ebc42df7465f6bbc0e75}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_adc83960f6d18ebc42df7465f6bbc0e75_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_adc83960f6d18ebc42df7465f6bbc0e75_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a0cce1c4b64372c27c6ff79e6fb397772}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!T\_\-Attack@{T\_\-Attack}}
+\index{T\_\-Attack@{T\_\-Attack}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{T\_\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}void T\_\-Attack (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a0cce1c4b64372c27c6ff79e6fb397772}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a0cce1c4b64372c27c6ff79e6fb397772_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a146c62d526ddb53a04fe11af48e91c96}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!T\_\-Player@{T\_\-Player}}
+\index{T\_\-Player@{T\_\-Player}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{T\_\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void T\_\-Player (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a146c62d526ddb53a04fe11af48e91c96}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a146c62d526ddb53a04fe11af48e91c96_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a383b7b6dc8f0fe10dde5eeaeeb0e9b76}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{TakeDamage}]{\setlength{\rightskip}{0pt plus 5cm}void TakeDamage (
+\begin{DoxyParamCaption}
+\item[{int}]{points, }
+\item[{{\bf objtype} $\ast$}]{attacker}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a383b7b6dc8f0fe10dde5eeaeeb0e9b76}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a383b7b6dc8f0fe10dde5eeaeeb0e9b76_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a383b7b6dc8f0fe10dde5eeaeeb0e9b76_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_ad49e33617f0da8e8ae3f643172eb39da}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!Thrust@{Thrust}}
+\index{Thrust@{Thrust}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{Thrust}]{\setlength{\rightskip}{0pt plus 5cm}void Thrust (
+\begin{DoxyParamCaption}
+\item[{int}]{angle, }
+\item[{long}]{speed}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ad49e33617f0da8e8ae3f643172eb39da}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ad49e33617f0da8e8ae3f643172eb39da_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ad49e33617f0da8e8ae3f643172eb39da_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_aa96ec78c47832d4ff39bc3fadf9e6c3c}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!TryMove@{TryMove}}
+\index{TryMove@{TryMove}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{TryMove}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} TryMove (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_aa96ec78c47832d4ff39bc3fadf9e6c3c}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_aa96ec78c47832d4ff39bc3fadf9e6c3c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_ac2f68a8b36dbfb20a38bc619c6622d16}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!UpdateFace@{UpdateFace}}
+\index{UpdateFace@{UpdateFace}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{UpdateFace}]{\setlength{\rightskip}{0pt plus 5cm}void UpdateFace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_ac2f68a8b36dbfb20a38bc619c6622d16}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_ac2f68a8b36dbfb20a38bc619c6622d16_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{WL__AGENT_8C_ac2f68a8b36dbfb20a38bc619c6622d16_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_adc24d3d235d4bcf9395baf4ec0236d55}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!Use@{Use}}
+\index{Use@{Use}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{Use}]{\setlength{\rightskip}{0pt plus 5cm}void Use (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_adc24d3d235d4bcf9395baf4ec0236d55}
+\hypertarget{WL__AGENT_8C_aac046185c3a93b503c24f82a7019e556}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!VictorySpin@{VictorySpin}}
+\index{VictorySpin@{VictorySpin}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{VictorySpin}]{\setlength{\rightskip}{0pt plus 5cm}void VictorySpin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_aac046185c3a93b503c24f82a7019e556}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{WL__AGENT_8C_aac046185c3a93b503c24f82a7019e556_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__AGENT_8C_a9689cff3b028c2472976623b51e378fc}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!VictoryTile@{VictoryTile}}
+\index{VictoryTile@{VictoryTile}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{VictoryTile}]{\setlength{\rightskip}{0pt plus 5cm}void VictoryTile (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__AGENT_8C_a9689cff3b028c2472976623b51e378fc}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a9689cff3b028c2472976623b51e378fc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__AGENT_8C_a9689cff3b028c2472976623b51e378fc_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__AGENT_8C_a1f69f7886d762367ccbc2596edaf00e9}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!anglefrac@{anglefrac}}
+\index{anglefrac@{anglefrac}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{anglefrac}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf anglefrac}}}
+\label{WL__AGENT_8C_a1f69f7886d762367ccbc2596edaf00e9}
+\hypertarget{WL__AGENT_8C_abc99d4ffe13803cdc38c290fb96a8b6f}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!attackinfo@{attackinfo}}
+\index{attackinfo@{attackinfo}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{attackinfo}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf atkinf}  {\bf attackinfo}\mbox{[}4\mbox{]}\mbox{[}14\mbox{]}}}
+\label{WL__AGENT_8C_abc99d4ffe13803cdc38c290fb96a8b6f}
+\hypertarget{WL__AGENT_8C_aba3b8c5c49be6b7ece93f58d0283fdfe}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!facecount@{facecount}}
+\index{facecount@{facecount}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{facecount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf facecount}}}
+\label{WL__AGENT_8C_aba3b8c5c49be6b7ece93f58d0283fdfe}
+\hypertarget{WL__AGENT_8C_a4d977ede63beb6fb29e846e16204974b}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!gotgatgun@{gotgatgun}}
+\index{gotgatgun@{gotgatgun}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{gotgatgun}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf gotgatgun}}}
+\label{WL__AGENT_8C_a4d977ede63beb6fb29e846e16204974b}
+\hypertarget{WL__AGENT_8C_aefadb4c91f358f1a8b80113dff2433f1}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!LastAttacker@{LastAttacker}}
+\index{LastAttacker@{LastAttacker}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{LastAttacker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype}$\ast$ {\bf LastAttacker}}}
+\label{WL__AGENT_8C_aefadb4c91f358f1a8b80113dff2433f1}
+\hypertarget{WL__AGENT_8C_a7f5cea5586913d773629c89545c77a07}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!playerxmove@{playerxmove}}
+\index{playerxmove@{playerxmove}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{playerxmove}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf playerxmove}}}
+\label{WL__AGENT_8C_a7f5cea5586913d773629c89545c77a07}
+\hypertarget{WL__AGENT_8C_ab34d4aa1726c04e90dabd23eff2c324f}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!playerymove@{playerymove}}
+\index{playerymove@{playerymove}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{playerymove}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf playerymove}}}
+\label{WL__AGENT_8C_ab34d4aa1726c04e90dabd23eff2c324f}
+\hypertarget{WL__AGENT_8C_a098f3c7a6e9b99f0d4d5fbb552b46754}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!plux@{plux}}
+\index{plux@{plux}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{plux}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf plux}}}
+\label{WL__AGENT_8C_a098f3c7a6e9b99f0d4d5fbb552b46754}
+\hypertarget{WL__AGENT_8C_a2b130e086f58d4d881053d67b98c8251}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!pluy@{pluy}}
+\index{pluy@{pluy}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{pluy}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf pluy}}}
+\label{WL__AGENT_8C_a2b130e086f58d4d881053d67b98c8251}
+\hypertarget{WL__AGENT_8C_a2bb58b88ac256b165a95a806ae3b41e5}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!running@{running}}
+\index{running@{running}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{running}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf running}}}
+\label{WL__AGENT_8C_a2bb58b88ac256b165a95a806ae3b41e5}
+\hypertarget{WL__AGENT_8C_a8cf5fca2f0794aeeca4ba0504e1230ef}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!s\_\-attack@{s\_\-attack}}
+\index{s\_\-attack@{s\_\-attack}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{s\_\-attack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statetype} {\bf s\_\-attack} = \{false,0,0,T\_\-Attack,NULL,NULL\}}}
+\label{WL__AGENT_8C_a8cf5fca2f0794aeeca4ba0504e1230ef}
+\hypertarget{WL__AGENT_8C_aef2c7d76826104ab1e029f84a95c41c7}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!s\_\-player@{s\_\-player}}
+\index{s\_\-player@{s\_\-player}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{s\_\-player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statetype} {\bf s\_\-player} = \{false,0,0,T\_\-Player,NULL,NULL\}}}
+\label{WL__AGENT_8C_aef2c7d76826104ab1e029f84a95c41c7}
+\hypertarget{WL__AGENT_8C_a57082f1acfc5cc0d2e86c88c1d22adff}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!strafeangle@{strafeangle}}
+\index{strafeangle@{strafeangle}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{strafeangle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf strafeangle}\mbox{[}9\mbox{]} = \{0,90,180,270,45,135,225,315,0\}}}
+\label{WL__AGENT_8C_a57082f1acfc5cc0d2e86c88c1d22adff}
+\hypertarget{WL__AGENT_8C_ac9683e4ab6c67081743f542dc09a74c0}{
+\index{WL\_\-AGENT.C@{WL\_\-AGENT.C}!thrustspeed@{thrustspeed}}
+\index{thrustspeed@{thrustspeed}!WL_AGENT.C@{WL\_\-AGENT.C}}
+\subsubsection[{thrustspeed}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf thrustspeed}}}
+\label{WL__AGENT_8C_ac9683e4ab6c67081743f542dc09a74c0}

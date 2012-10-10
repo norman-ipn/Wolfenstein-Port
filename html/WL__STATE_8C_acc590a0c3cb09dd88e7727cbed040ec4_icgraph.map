@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__ACT2_8C.html#a91daf02857f7ca74eae329b0329fb66e" title="T_BJJump" alt="" coords="135,5,220,35"/>
+<area shape="rect" id="node5" href="$WL__ACT2_8C.html#a7a0e7fd0cd65af1f29fb483e7690e46e" title="T_BJRun" alt="" coords="139,59,216,88"/>
+<area shape="rect" id="node7" href="$WL__ACT2_8C.html#a2d2e0445a6661b21ec497072f261b2c0" title="T_Chase" alt="" coords="140,112,215,141"/>
+<area shape="rect" id="node9" href="$WL__ACT2_8C.html#a1723fcb57e315538ff5dbe4f9b5f28a0" title="T_DogChase" alt="" coords="128,165,227,195"/>
+<area shape="rect" id="node11" href="$WL__ACT2_8C.html#a5f8b7b86236c7cc444781f34eba13965" title="T_Fake" alt="" coords="144,219,211,248"/>
+<area shape="rect" id="node13" href="$WL__ACT2_8C.html#a7ef997abd87b43b1e1fd675f6aefb5e8" title="T_Fat" alt="" coords="149,272,205,301"/>
+<area shape="rect" id="node15" href="$WL__ACT2_8C.html#a6bde7f5f6c9bef2510fd97adacbfd707" title="T_Ghosts" alt="" coords="139,325,216,355"/>
+<area shape="rect" id="node17" href="$WL__ACT2_8C.html#aa143ff701cf1be118333ca0bb097bc72" title="T_Gift" alt="" coords="148,379,207,408"/>
+<area shape="rect" id="node19" href="$WL__ACT2_8C.html#a297fbc8b826bdbe6e04f2fe6a0c2a128" title="T_Path" alt="" coords="145,432,209,461"/>
+<area shape="rect" id="node21" href="$WL__ACT2_8C.html#ab666f1455bb55512f01418413679962a" title="T_Schabb" alt="" coords="137,485,217,515"/>
+</map>

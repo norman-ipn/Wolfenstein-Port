@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MENU_8C.html#a91236b82219168a5270605919725ba2c" title="DrawCustJoy" alt="" coords="164,59,265,88"/>
+<area shape="rect" id="node9" href="$WL__MENU_8C.html#a55ce148269754602b0c814448911b27d" title="DrawCustKeybd" alt="" coords="156,112,273,141"/>
+<area shape="rect" id="node16" href="$WL__MENU_8C.html#ace6221928d863a720c5674fad34b11fa" title="DrawCustKeys" alt="" coords="160,165,269,195"/>
+<area shape="rect" id="node22" href="$WL__MENU_8C.html#a79141a9518504a36ce3c15682aa836ec" title="DrawCustMouse" alt="" coords="155,5,275,35"/>
+<area shape="rect" id="node27" href="$ID__VH_8C.html#a5438374e81536560343d6be41205ecf6" title="VWB_Hlin" alt="" coords="173,219,256,248"/>
+<area shape="rect" id="node5" href="$WL__MENU_8C.html#a88eda1a3eb3e81618c3fdd5debf5f8ff" title="PrintCustJoy" alt="" coords="351,59,449,88"/>
+<area shape="rect" id="node7" href="$ID__US_8H.html#ae158b4a99ff8fe4bca4517925b6b429c" title="US_Print" alt="" coords="553,85,628,115"/>
+<area shape="rect" id="node11" href="$WL__MENU_8C.html#adcd1d339231514422736a0da10f0b92b" title="PrintCustKeybd" alt="" coords="343,112,457,141"/>
+<area shape="rect" id="node13" href="$ID__IN_8H.html#a730756d76f67179d94d1a8ee90495a29" title="IN_GetScanName" alt="" coords="527,165,655,195"/>
+<area shape="rect" id="node18" href="$WL__MENU_8C.html#aff9049f7e08b5e6a90e8da5bb81b287a" title="PrintCustKeys" alt="" coords="347,165,453,195"/>
+<area shape="rect" id="node24" href="$WL__MENU_8C.html#a997209233b25445a026a6e5ca017dd57" title="PrintCustMouse" alt="" coords="343,5,457,35"/>
+<area shape="rect" id="node29" href="$ID__VH_8C.html#a989fc2652f729213162c520d378578b3" title="VW_MarkUpdateBlock" alt="" coords="323,219,477,248"/>
+</map>

@@ -1,0 +1,1225 @@
+\hypertarget{WL__PLAY_8C}{
+\section{WL\_\-PLAY.C File Reference}
+\label{WL__PLAY_8C}\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WL\_\-PLAY.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__PLAY_8C_a42ab74830eae12bd71ffd50128828f03}{sc\_\-Question}~0x35
+\item 
+\#define \hyperlink{WL__PLAY_8C_ac120c9862b4140e3f3b9bb6aaad6013d}{BASEMOVE}~35
+\item 
+\#define \hyperlink{WL__PLAY_8C_a4bcabd3b2997298e8cc763b099b706b7}{RUNMOVE}~70
+\item 
+\#define \hyperlink{WL__PLAY_8C_a3a2b917f95e7f8f9a5141fae0bb9b757}{BASETURN}~35
+\item 
+\#define \hyperlink{WL__PLAY_8C_a8cca6973a6865f19e5f000c12fd74d2b}{RUNTURN}~70
+\item 
+\#define \hyperlink{WL__PLAY_8C_ae6dd494737de7bf6861cfefffb18288a}{JOYSCALE}~2
+\item 
+\#define \hyperlink{WL__PLAY_8C_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}~320
+\item 
+\#define \hyperlink{WL__PLAY_8C_a25602e1c79852e5be195490eceff513f}{MAXY}~160
+\item 
+\#define \hyperlink{WL__PLAY_8C_aa03e114d2c4f071feea44ba13072b4d3}{NUMREDSHIFTS}~6
+\item 
+\#define \hyperlink{WL__PLAY_8C_a591c8126ebe86a2bdf68ec4d26d1bd6a}{REDSTEPS}~8
+\item 
+\#define \hyperlink{WL__PLAY_8C_aa1820e26a699a6152c28af99cd5f2e16}{NUMWHITESHIFTS}~3
+\item 
+\#define \hyperlink{WL__PLAY_8C_a6829288fda11b8e39e3cb50e999ec127}{WHITESTEPS}~20
+\item 
+\#define \hyperlink{WL__PLAY_8C_a819d82401803c20efd7aaa43da8ae021}{WHITETICS}~6
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__PLAY_8C_a673946129c833c78df674cf8b38fdd61}{CenterWindow} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} w, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} h)
+\item 
+void \hyperlink{WL__PLAY_8C_a7e299f71964777aaec29a227f3787a08}{InitObjList} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a2cf5a059e3bf9f094eb8427afbd49664}{RemoveObj} (\hyperlink{structobjstruct}{objtype} $\ast$gone)
+\item 
+void \hyperlink{WL__PLAY_8C_a15ba9210e22ebca4139dd64d5ede0d05}{PollControls} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a4f0b9aceb236c59d54712be5ace9e96e}{StopMusic} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a3374c0ac5e4769e46cebf74f4180dca4}{StartMusic} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a1093a19e7a1263f20a026e662db7121f}{PlayLoop} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a22fdcf55958dec2af2a4cadf2527132b}{PollKeyboardButtons} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_ab275bee53ffe48bfc6c7872c69bd2005}{PollMouseButtons} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_aa7748b3251e7e3ada1602178da175b5a}{PollJoystickButtons} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a2421aa5bd193c7bde69471bb17874e18}{PollKeyboardMove} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a9a5a5d7e7fb47d410c066dc8f62b62b0}{PollMouseMove} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a81edd19fd047b993a9e690f9414b3eff}{PollJoystickMove} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a17d3d73686c9990962f3957447344f0b}{CheckKeys} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a8d7a0f55f08fed814aee83d9376482cd}{InitActorList} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_abf7aec13a61bd972c2756f07143abf80}{GetNewActor} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_ae062cb46486d374e2bbd2a68c3fd6a96}{InitRedShifts} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a855e78d8cabc6be0f77876b4597b25f1}{ClearPaletteShifts} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a18616827acc24f2c2b1b9a77326bc024}{StartBonusFlash} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_a9d82bd76126e466b5d9fa28eea3d00f1}{StartDamageFlash} (int damage)
+\item 
+void \hyperlink{WL__PLAY_8C_a04fa5e7859eabbc20d946b414b5de67b}{UpdatePaletteShifts} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_aa8f57ca7046b2d2a91ed59450822ecbc}{FinishPaletteShifts} (void)
+\item 
+void \hyperlink{WL__PLAY_8C_af6b67ccc715009ed1b1da40a030e657d}{DoActor} (\hyperlink{structobjstruct}{objtype} $\ast$ob)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a4971e2bca2f2589e2a6a70d6d6c54caa}{madenoise}
+\item 
+\hyperlink{WL__DEF_8H_a1f5fa69e42ee452aa28c256fd25c33cf}{exit\_\-t} \hyperlink{WL__PLAY_8C_a7bc9cfbaebb2f8731fc6a008d5e02bff}{playstate}
+\item 
+int \hyperlink{WL__PLAY_8C_ae6eb42bd1f26cebf1f3e0d3d8bf8ff27}{DebugOk}
+\item 
+\hyperlink{structobjstruct}{objtype} \hyperlink{WL__PLAY_8C_a6e9f072b148ef10ec86e297a493110f2}{objlist} \mbox{[}MAXACTORS\mbox{]}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__PLAY_8C_aeef0824257f536812a114a0e932b654f}{new}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__PLAY_8C_af2676bb450cb1b81beed4d6cb5038ac1}{obj}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__PLAY_8C_aab35f908015a45224c5de99938b392f0}{player}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__PLAY_8C_afcd8a7c0f5c40f4a956efc9b5c0f7eb7}{lastobj}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__PLAY_8C_a0bbfafb17a6f027cbcd951f84a1bb2ee}{objfreelist}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__PLAY_8C_a93feadbaf779c18179439f73f406a0d9}{killerobj}
+\item 
+unsigned \hyperlink{WL__PLAY_8C_a2d3a9ae720f57b0ebde086d13cdb9af7}{farmapylookup} \mbox{[}MAPSIZE\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$ \hyperlink{WL__PLAY_8C_a3cee47da7077796a8215395d7bf23a8b}{nearmapylookup} \mbox{[}MAPSIZE\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a46d81099af6d10af477bc30272a05919}{singlestep}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a23bd83aac925fcfe8d07fc3bbbfc7969}{godmode}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_aad83c32aa52b632f075c971e15ac0180}{noclip}
+\item 
+int \hyperlink{WL__PLAY_8C_abb2d216c89203065d594e55c09f500d5}{extravbls}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{WL__PLAY_8C_a71276ae4f97677e43033f2f6103b8720}{tilemap} \mbox{[}MAPSIZE\mbox{]}\mbox{[}MAPSIZE\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{WL__PLAY_8C_a4d17a83d6ebae084e33130e818311b0f}{spotvis} \mbox{[}MAPSIZE\mbox{]}\mbox{[}MAPSIZE\mbox{]}
+\item 
+\hyperlink{structobjstruct}{objtype} $\ast$ \hyperlink{WL__PLAY_8C_a8b6c7ec70ee351719afac0dd216445c7}{actorat} \mbox{[}MAPSIZE\mbox{]}\mbox{[}MAPSIZE\mbox{]}
+\item 
+unsigned \hyperlink{WL__PLAY_8C_a18042bb0860852b7365837e7fb7366c1}{mapwidth}
+\item 
+unsigned \hyperlink{WL__PLAY_8C_aa57a71a17124e3d1995584f7b4fe1ca0}{mapheight}
+\item 
+unsigned \hyperlink{WL__PLAY_8C_a2b5fccfe4a509a1a5f685bb7b7399997}{tics}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_ac82e52209129dcc9cad9d8c8d6b2a77a}{compatability}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$ \hyperlink{WL__PLAY_8C_a120692504a35218a45eabb70ed0e4fe7}{updateptr}
+\item 
+unsigned \hyperlink{WL__PLAY_8C_a2aec10bd4a21a6d0178fbdd701ab0fb9}{mapwidthtable} \mbox{[}64\mbox{]}
+\item 
+unsigned \hyperlink{WL__PLAY_8C_af6ce3eaaf641bdbacc8cd7e98eaa90b9}{uwidthtable} \mbox{[}UPDATEHIGH\mbox{]}
+\item 
+unsigned \hyperlink{WL__PLAY_8C_a55e89f395ced8a12eba2634336292526}{blockstarts} \mbox{[}UPDATEWIDE $\ast$UPDATEHIGH\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{WL__PLAY_8C_a377ee66e839b90ae7140bb0dbde6c696}{update} \mbox{[}UPDATESIZE\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a36b9d776c596f97e2f6fac5bcc96fad3}{mouseenabled}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_aedd645e0ac8f3dd90af15172766bb406}{joystickenabled}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_ae95b411b2704beb68add5bf14c150af5}{joypadenabled}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_aac8667efc78cc65ac4e1e8a5c45669aa}{joystickprogressive}
+\item 
+int \hyperlink{WL__PLAY_8C_a7756f30a454b3f333c7b6292fb73cc1c}{joystickport}
+\item 
+int \hyperlink{WL__PLAY_8C_ac9e7de0629d53e5cfa59e985910855c5}{dirscan} \mbox{[}4\mbox{]} = \{sc\_\-UpArrow,sc\_\-RightArrow,sc\_\-DownArrow,sc\_\-LeftArrow\}
+\item 
+int \hyperlink{WL__PLAY_8C_a1f33f8928f170492601ca03d06dcaed5}{buttonscan} \mbox{[}NUMBUTTONS\mbox{]}
+\item 
+int \hyperlink{WL__PLAY_8C_aba18dce29b201b4aa0f95ac4b26a230d}{buttonmouse} \mbox{[}4\mbox{]} = \{bt\_\-attack,bt\_\-strafe,bt\_\-use,bt\_\-nobutton\}
+\item 
+int \hyperlink{WL__PLAY_8C_a7d53efcab80b501943d05e6f82ca1b61}{buttonjoy} \mbox{[}4\mbox{]} = \{bt\_\-attack,bt\_\-strafe,bt\_\-use,bt\_\-run\}
+\item 
+int \hyperlink{WL__PLAY_8C_a600cf8c414283a1b5615342c73605284}{viewsize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a0c7b9b3b7a3c5a984902f52507d194ab}{buttonheld} \mbox{[}NUMBUTTONS\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a29ad9ab3cdb052a60b70348e9de1c33e}{demorecord}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a49497ef447e431d2e365f96d1fd6f2a8}{demoplayback}
+\item 
+char far $\ast$ \hyperlink{WL__PLAY_8C_aacc691a23998ed80395749868f5124e9}{demoptr}
+\item 
+char far far $\ast$ \hyperlink{WL__PLAY_8C_ac5eb2656741bc6d98c3337122048bf45}{lastdemoptr}
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{WL__PLAY_8C_a1ecc350196af0f2d39e17d758ee66ba3}{demobuffer}
+\item 
+int \hyperlink{WL__PLAY_8C_a6343ac6ef7aa896e23ee621de5be7389}{controlx}
+\item 
+int \hyperlink{WL__PLAY_8C_abf431ed8fcd1eb83dbfebb06f325efcc}{controly}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a20a88de6f72f7a0d0ecae027aa6052d4}{buttonstate} \mbox{[}NUMBUTTONS\mbox{]}
+\item 
+\hyperlink{structobjstruct}{objtype} \hyperlink{WL__PLAY_8C_a0e5a8cf650979c9507f17a53423b62d0}{dummyobj}
+\item 
+int \hyperlink{WL__PLAY_8C_a4af95f8ed94849394a922f8dab8c1dd7}{songs} \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{WL__PLAY_8C_a9727f781b3f4cd2b8b28838f132ebb57}{objcount}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{WL__PLAY_8C_a9662d2ac7202ad45530f94f43124fef1}{redshifts} \mbox{[}NUMREDSHIFTS\mbox{]}\mbox{[}768\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{WL__PLAY_8C_a5b8536a1ac5c83ff0cbe8c01222ccb40}{whiteshifts} \mbox{[}NUMREDSHIFTS\mbox{]}\mbox{[}768\mbox{]}
+\item 
+int \hyperlink{WL__PLAY_8C_abaab1e8ae0a070c271e7872c6ec22667}{damagecount}
+\item 
+int \hyperlink{WL__PLAY_8C_a3b8983c4cb5a8c78246addd30658d896}{bonuscount}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__PLAY_8C_a5201d2df7fa5b1e931f93a08277da76a}{palshifted}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{WL__PLAY_8C_a72ce00e98a92644d4cbf41fb10a2f7ad}{gamepal}
+\item 
+long \hyperlink{WL__PLAY_8C_a04613e65e640f316854208a4fc7bdc02}{funnyticount}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__PLAY_8C_ac120c9862b4140e3f3b9bb6aaad6013d}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!BASEMOVE@{BASEMOVE}}
+\index{BASEMOVE@{BASEMOVE}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{BASEMOVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BASEMOVE~35}}
+\label{WL__PLAY_8C_ac120c9862b4140e3f3b9bb6aaad6013d}
+\hypertarget{WL__PLAY_8C_a3a2b917f95e7f8f9a5141fae0bb9b757}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!BASETURN@{BASETURN}}
+\index{BASETURN@{BASETURN}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{BASETURN}]{\setlength{\rightskip}{0pt plus 5cm}\#define BASETURN~35}}
+\label{WL__PLAY_8C_a3a2b917f95e7f8f9a5141fae0bb9b757}
+\hypertarget{WL__PLAY_8C_ae6dd494737de7bf6861cfefffb18288a}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!JOYSCALE@{JOYSCALE}}
+\index{JOYSCALE@{JOYSCALE}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{JOYSCALE}]{\setlength{\rightskip}{0pt plus 5cm}\#define JOYSCALE~2}}
+\label{WL__PLAY_8C_ae6dd494737de7bf6861cfefffb18288a}
+\hypertarget{WL__PLAY_8C_a7bb5845dcf8072f09f0a8d246b47e032}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!MAXX@{MAXX}}
+\index{MAXX@{MAXX}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{MAXX}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXX~320}}
+\label{WL__PLAY_8C_a7bb5845dcf8072f09f0a8d246b47e032}
+\hypertarget{WL__PLAY_8C_a25602e1c79852e5be195490eceff513f}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!MAXY@{MAXY}}
+\index{MAXY@{MAXY}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{MAXY}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXY~160}}
+\label{WL__PLAY_8C_a25602e1c79852e5be195490eceff513f}
+\hypertarget{WL__PLAY_8C_aa03e114d2c4f071feea44ba13072b4d3}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!NUMREDSHIFTS@{NUMREDSHIFTS}}
+\index{NUMREDSHIFTS@{NUMREDSHIFTS}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{NUMREDSHIFTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define NUMREDSHIFTS~6}}
+\label{WL__PLAY_8C_aa03e114d2c4f071feea44ba13072b4d3}
+\hypertarget{WL__PLAY_8C_aa1820e26a699a6152c28af99cd5f2e16}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!NUMWHITESHIFTS@{NUMWHITESHIFTS}}
+\index{NUMWHITESHIFTS@{NUMWHITESHIFTS}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{NUMWHITESHIFTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define NUMWHITESHIFTS~3}}
+\label{WL__PLAY_8C_aa1820e26a699a6152c28af99cd5f2e16}
+\hypertarget{WL__PLAY_8C_a591c8126ebe86a2bdf68ec4d26d1bd6a}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!REDSTEPS@{REDSTEPS}}
+\index{REDSTEPS@{REDSTEPS}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{REDSTEPS}]{\setlength{\rightskip}{0pt plus 5cm}\#define REDSTEPS~8}}
+\label{WL__PLAY_8C_a591c8126ebe86a2bdf68ec4d26d1bd6a}
+\hypertarget{WL__PLAY_8C_a4bcabd3b2997298e8cc763b099b706b7}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!RUNMOVE@{RUNMOVE}}
+\index{RUNMOVE@{RUNMOVE}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{RUNMOVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define RUNMOVE~70}}
+\label{WL__PLAY_8C_a4bcabd3b2997298e8cc763b099b706b7}
+\hypertarget{WL__PLAY_8C_a8cca6973a6865f19e5f000c12fd74d2b}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!RUNTURN@{RUNTURN}}
+\index{RUNTURN@{RUNTURN}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{RUNTURN}]{\setlength{\rightskip}{0pt plus 5cm}\#define RUNTURN~70}}
+\label{WL__PLAY_8C_a8cca6973a6865f19e5f000c12fd74d2b}
+\hypertarget{WL__PLAY_8C_a42ab74830eae12bd71ffd50128828f03}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!sc\_\-Question@{sc\_\-Question}}
+\index{sc\_\-Question@{sc\_\-Question}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{sc\_\-Question}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Question~0x35}}
+\label{WL__PLAY_8C_a42ab74830eae12bd71ffd50128828f03}
+\hypertarget{WL__PLAY_8C_a6829288fda11b8e39e3cb50e999ec127}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!WHITESTEPS@{WHITESTEPS}}
+\index{WHITESTEPS@{WHITESTEPS}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{WHITESTEPS}]{\setlength{\rightskip}{0pt plus 5cm}\#define WHITESTEPS~20}}
+\label{WL__PLAY_8C_a6829288fda11b8e39e3cb50e999ec127}
+\hypertarget{WL__PLAY_8C_a819d82401803c20efd7aaa43da8ae021}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!WHITETICS@{WHITETICS}}
+\index{WHITETICS@{WHITETICS}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{WHITETICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define WHITETICS~6}}
+\label{WL__PLAY_8C_a819d82401803c20efd7aaa43da8ae021}
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__PLAY_8C_a673946129c833c78df674cf8b38fdd61}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!CenterWindow@{CenterWindow}}
+\index{CenterWindow@{CenterWindow}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{CenterWindow}]{\setlength{\rightskip}{0pt plus 5cm}void CenterWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{w, }
+\item[{{\bf word}}]{h}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a673946129c833c78df674cf8b38fdd61}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{WL__PLAY_8C_a673946129c833c78df674cf8b38fdd61_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a673946129c833c78df674cf8b38fdd61_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a17d3d73686c9990962f3957447344f0b}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!CheckKeys@{CheckKeys}}
+\index{CheckKeys@{CheckKeys}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{CheckKeys}]{\setlength{\rightskip}{0pt plus 5cm}void CheckKeys (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a17d3d73686c9990962f3957447344f0b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__PLAY_8C_a17d3d73686c9990962f3957447344f0b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a17d3d73686c9990962f3957447344f0b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a855e78d8cabc6be0f77876b4597b25f1}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!ClearPaletteShifts@{ClearPaletteShifts}}
+\index{ClearPaletteShifts@{ClearPaletteShifts}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{ClearPaletteShifts}]{\setlength{\rightskip}{0pt plus 5cm}void ClearPaletteShifts (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a855e78d8cabc6be0f77876b4597b25f1}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a855e78d8cabc6be0f77876b4597b25f1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_af6b67ccc715009ed1b1da40a030e657d}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!DoActor@{DoActor}}
+\index{DoActor@{DoActor}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{DoActor}]{\setlength{\rightskip}{0pt plus 5cm}void DoActor (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{ob}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_af6b67ccc715009ed1b1da40a030e657d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{WL__PLAY_8C_af6b67ccc715009ed1b1da40a030e657d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_af6b67ccc715009ed1b1da40a030e657d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_aa8f57ca7046b2d2a91ed59450822ecbc}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!FinishPaletteShifts@{FinishPaletteShifts}}
+\index{FinishPaletteShifts@{FinishPaletteShifts}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{FinishPaletteShifts}]{\setlength{\rightskip}{0pt plus 5cm}void FinishPaletteShifts (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_aa8f57ca7046b2d2a91ed59450822ecbc}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{WL__PLAY_8C_aa8f57ca7046b2d2a91ed59450822ecbc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_aa8f57ca7046b2d2a91ed59450822ecbc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_abf7aec13a61bd972c2756f07143abf80}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!GetNewActor@{GetNewActor}}
+\index{GetNewActor@{GetNewActor}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{GetNewActor}]{\setlength{\rightskip}{0pt plus 5cm}void GetNewActor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_abf7aec13a61bd972c2756f07143abf80}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{WL__PLAY_8C_abf7aec13a61bd972c2756f07143abf80_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_abf7aec13a61bd972c2756f07143abf80_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a8d7a0f55f08fed814aee83d9376482cd}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!InitActorList@{InitActorList}}
+\index{InitActorList@{InitActorList}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{InitActorList}]{\setlength{\rightskip}{0pt plus 5cm}void InitActorList (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a8d7a0f55f08fed814aee83d9376482cd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{WL__PLAY_8C_a8d7a0f55f08fed814aee83d9376482cd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a8d7a0f55f08fed814aee83d9376482cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a7e299f71964777aaec29a227f3787a08}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!InitObjList@{InitObjList}}
+\index{InitObjList@{InitObjList}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{InitObjList}]{\setlength{\rightskip}{0pt plus 5cm}void InitObjList (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a7e299f71964777aaec29a227f3787a08}
+\hypertarget{WL__PLAY_8C_ae062cb46486d374e2bbd2a68c3fd6a96}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!InitRedShifts@{InitRedShifts}}
+\index{InitRedShifts@{InitRedShifts}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{InitRedShifts}]{\setlength{\rightskip}{0pt plus 5cm}void InitRedShifts (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_ae062cb46486d374e2bbd2a68c3fd6a96}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_ae062cb46486d374e2bbd2a68c3fd6a96_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a1093a19e7a1263f20a026e662db7121f}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PlayLoop@{PlayLoop}}
+\index{PlayLoop@{PlayLoop}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PlayLoop}]{\setlength{\rightskip}{0pt plus 5cm}void PlayLoop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a1093a19e7a1263f20a026e662db7121f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__PLAY_8C_a1093a19e7a1263f20a026e662db7121f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a1093a19e7a1263f20a026e662db7121f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a15ba9210e22ebca4139dd64d5ede0d05}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PollControls@{PollControls}}
+\index{PollControls@{PollControls}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PollControls}]{\setlength{\rightskip}{0pt plus 5cm}void PollControls (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a15ba9210e22ebca4139dd64d5ede0d05}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a15ba9210e22ebca4139dd64d5ede0d05_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a15ba9210e22ebca4139dd64d5ede0d05_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_aa7748b3251e7e3ada1602178da175b5a}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PollJoystickButtons@{PollJoystickButtons}}
+\index{PollJoystickButtons@{PollJoystickButtons}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PollJoystickButtons}]{\setlength{\rightskip}{0pt plus 5cm}void PollJoystickButtons (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_aa7748b3251e7e3ada1602178da175b5a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{WL__PLAY_8C_aa7748b3251e7e3ada1602178da175b5a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_aa7748b3251e7e3ada1602178da175b5a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a81edd19fd047b993a9e690f9414b3eff}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PollJoystickMove@{PollJoystickMove}}
+\index{PollJoystickMove@{PollJoystickMove}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PollJoystickMove}]{\setlength{\rightskip}{0pt plus 5cm}void PollJoystickMove (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a81edd19fd047b993a9e690f9414b3eff}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a81edd19fd047b993a9e690f9414b3eff_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a81edd19fd047b993a9e690f9414b3eff_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a22fdcf55958dec2af2a4cadf2527132b}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PollKeyboardButtons@{PollKeyboardButtons}}
+\index{PollKeyboardButtons@{PollKeyboardButtons}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PollKeyboardButtons}]{\setlength{\rightskip}{0pt plus 5cm}void PollKeyboardButtons (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a22fdcf55958dec2af2a4cadf2527132b}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a22fdcf55958dec2af2a4cadf2527132b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a2421aa5bd193c7bde69471bb17874e18}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PollKeyboardMove@{PollKeyboardMove}}
+\index{PollKeyboardMove@{PollKeyboardMove}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PollKeyboardMove}]{\setlength{\rightskip}{0pt plus 5cm}void PollKeyboardMove (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a2421aa5bd193c7bde69471bb17874e18}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a2421aa5bd193c7bde69471bb17874e18_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_ab275bee53ffe48bfc6c7872c69bd2005}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PollMouseButtons@{PollMouseButtons}}
+\index{PollMouseButtons@{PollMouseButtons}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PollMouseButtons}]{\setlength{\rightskip}{0pt plus 5cm}void PollMouseButtons (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_ab275bee53ffe48bfc6c7872c69bd2005}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{WL__PLAY_8C_ab275bee53ffe48bfc6c7872c69bd2005_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_ab275bee53ffe48bfc6c7872c69bd2005_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a9a5a5d7e7fb47d410c066dc8f62b62b0}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!PollMouseMove@{PollMouseMove}}
+\index{PollMouseMove@{PollMouseMove}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{PollMouseMove}]{\setlength{\rightskip}{0pt plus 5cm}void PollMouseMove (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a9a5a5d7e7fb47d410c066dc8f62b62b0}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a9a5a5d7e7fb47d410c066dc8f62b62b0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a2cf5a059e3bf9f094eb8427afbd49664}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!RemoveObj@{RemoveObj}}
+\index{RemoveObj@{RemoveObj}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{RemoveObj}]{\setlength{\rightskip}{0pt plus 5cm}void RemoveObj (
+\begin{DoxyParamCaption}
+\item[{{\bf objtype} $\ast$}]{gone}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a2cf5a059e3bf9f094eb8427afbd49664}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{WL__PLAY_8C_a2cf5a059e3bf9f094eb8427afbd49664_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a2cf5a059e3bf9f094eb8427afbd49664_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a18616827acc24f2c2b1b9a77326bc024}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!StartBonusFlash@{StartBonusFlash}}
+\index{StartBonusFlash@{StartBonusFlash}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{StartBonusFlash}]{\setlength{\rightskip}{0pt plus 5cm}void StartBonusFlash (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a18616827acc24f2c2b1b9a77326bc024}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a18616827acc24f2c2b1b9a77326bc024_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a9d82bd76126e466b5d9fa28eea3d00f1}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!StartDamageFlash@{StartDamageFlash}}
+\index{StartDamageFlash@{StartDamageFlash}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{StartDamageFlash}]{\setlength{\rightskip}{0pt plus 5cm}void StartDamageFlash (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a9d82bd76126e466b5d9fa28eea3d00f1}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a9d82bd76126e466b5d9fa28eea3d00f1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a3374c0ac5e4769e46cebf74f4180dca4}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!StartMusic@{StartMusic}}
+\index{StartMusic@{StartMusic}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{StartMusic}]{\setlength{\rightskip}{0pt plus 5cm}void StartMusic (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a3374c0ac5e4769e46cebf74f4180dca4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a3374c0ac5e4769e46cebf74f4180dca4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a3374c0ac5e4769e46cebf74f4180dca4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a4f0b9aceb236c59d54712be5ace9e96e}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!StopMusic@{StopMusic}}
+\index{StopMusic@{StopMusic}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{StopMusic}]{\setlength{\rightskip}{0pt plus 5cm}void StopMusic (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a4f0b9aceb236c59d54712be5ace9e96e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{WL__PLAY_8C_a4f0b9aceb236c59d54712be5ace9e96e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a4f0b9aceb236c59d54712be5ace9e96e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__PLAY_8C_a04fa5e7859eabbc20d946b414b5de67b}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!UpdatePaletteShifts@{UpdatePaletteShifts}}
+\index{UpdatePaletteShifts@{UpdatePaletteShifts}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{UpdatePaletteShifts}]{\setlength{\rightskip}{0pt plus 5cm}void UpdatePaletteShifts (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__PLAY_8C_a04fa5e7859eabbc20d946b414b5de67b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{WL__PLAY_8C_a04fa5e7859eabbc20d946b414b5de67b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__PLAY_8C_a04fa5e7859eabbc20d946b414b5de67b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__PLAY_8C_a8b6c7ec70ee351719afac0dd216445c7}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!actorat@{actorat}}
+\index{actorat@{actorat}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{actorat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype}$\ast$ {\bf actorat}\mbox{[}MAPSIZE\mbox{]}\mbox{[}MAPSIZE\mbox{]}}}
+\label{WL__PLAY_8C_a8b6c7ec70ee351719afac0dd216445c7}
+\hypertarget{WL__PLAY_8C_a55e89f395ced8a12eba2634336292526}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!blockstarts@{blockstarts}}
+\index{blockstarts@{blockstarts}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{blockstarts}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf blockstarts}\mbox{[}UPDATEWIDE $\ast$UPDATEHIGH\mbox{]}}}
+\label{WL__PLAY_8C_a55e89f395ced8a12eba2634336292526}
+\hypertarget{WL__PLAY_8C_a3b8983c4cb5a8c78246addd30658d896}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!bonuscount@{bonuscount}}
+\index{bonuscount@{bonuscount}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{bonuscount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf bonuscount}}}
+\label{WL__PLAY_8C_a3b8983c4cb5a8c78246addd30658d896}
+\hypertarget{WL__PLAY_8C_a0c7b9b3b7a3c5a984902f52507d194ab}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!buttonheld@{buttonheld}}
+\index{buttonheld@{buttonheld}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{buttonheld}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf buttonheld}\mbox{[}NUMBUTTONS\mbox{]}}}
+\label{WL__PLAY_8C_a0c7b9b3b7a3c5a984902f52507d194ab}
+\hypertarget{WL__PLAY_8C_a7d53efcab80b501943d05e6f82ca1b61}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!buttonjoy@{buttonjoy}}
+\index{buttonjoy@{buttonjoy}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{buttonjoy}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf buttonjoy}\mbox{[}4\mbox{]} = \{bt\_\-attack,bt\_\-strafe,bt\_\-use,bt\_\-run\}}}
+\label{WL__PLAY_8C_a7d53efcab80b501943d05e6f82ca1b61}
+\hypertarget{WL__PLAY_8C_aba18dce29b201b4aa0f95ac4b26a230d}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!buttonmouse@{buttonmouse}}
+\index{buttonmouse@{buttonmouse}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{buttonmouse}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf buttonmouse}\mbox{[}4\mbox{]} = \{bt\_\-attack,bt\_\-strafe,bt\_\-use,bt\_\-nobutton\}}}
+\label{WL__PLAY_8C_aba18dce29b201b4aa0f95ac4b26a230d}
+\hypertarget{WL__PLAY_8C_a1f33f8928f170492601ca03d06dcaed5}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!buttonscan@{buttonscan}}
+\index{buttonscan@{buttonscan}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{buttonscan}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf buttonscan}\mbox{[}NUMBUTTONS\mbox{]}}}
+\label{WL__PLAY_8C_a1f33f8928f170492601ca03d06dcaed5}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+                        {sc_Control,sc_Alt,sc_RShift,sc_Space,sc_1,sc_2,sc_3,
+      sc_4}
+\end{DoxyCode}
+\hypertarget{WL__PLAY_8C_a20a88de6f72f7a0d0ecae027aa6052d4}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!buttonstate@{buttonstate}}
+\index{buttonstate@{buttonstate}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{buttonstate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf buttonstate}\mbox{[}NUMBUTTONS\mbox{]}}}
+\label{WL__PLAY_8C_a20a88de6f72f7a0d0ecae027aa6052d4}
+\hypertarget{WL__PLAY_8C_ac82e52209129dcc9cad9d8c8d6b2a77a}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!compatability@{compatability}}
+\index{compatability@{compatability}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{compatability}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf compatability}}}
+\label{WL__PLAY_8C_ac82e52209129dcc9cad9d8c8d6b2a77a}
+\hypertarget{WL__PLAY_8C_a6343ac6ef7aa896e23ee621de5be7389}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!controlx@{controlx}}
+\index{controlx@{controlx}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{controlx}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf controlx}}}
+\label{WL__PLAY_8C_a6343ac6ef7aa896e23ee621de5be7389}
+\hypertarget{WL__PLAY_8C_abf431ed8fcd1eb83dbfebb06f325efcc}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!controly@{controly}}
+\index{controly@{controly}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{controly}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf controly}}}
+\label{WL__PLAY_8C_abf431ed8fcd1eb83dbfebb06f325efcc}
+\hypertarget{WL__PLAY_8C_abaab1e8ae0a070c271e7872c6ec22667}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!damagecount@{damagecount}}
+\index{damagecount@{damagecount}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{damagecount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf damagecount}}}
+\label{WL__PLAY_8C_abaab1e8ae0a070c271e7872c6ec22667}
+\hypertarget{WL__PLAY_8C_ae6eb42bd1f26cebf1f3e0d3d8bf8ff27}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!DebugOk@{DebugOk}}
+\index{DebugOk@{DebugOk}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{DebugOk}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DebugOk}}}
+\label{WL__PLAY_8C_ae6eb42bd1f26cebf1f3e0d3d8bf8ff27}
+\hypertarget{WL__PLAY_8C_a1ecc350196af0f2d39e17d758ee66ba3}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!demobuffer@{demobuffer}}
+\index{demobuffer@{demobuffer}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{demobuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} {\bf demobuffer}}}
+\label{WL__PLAY_8C_a1ecc350196af0f2d39e17d758ee66ba3}
+\hypertarget{WL__PLAY_8C_a49497ef447e431d2e365f96d1fd6f2a8}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!demoplayback@{demoplayback}}
+\index{demoplayback@{demoplayback}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{demoplayback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf demoplayback}}}
+\label{WL__PLAY_8C_a49497ef447e431d2e365f96d1fd6f2a8}
+\hypertarget{WL__PLAY_8C_aacc691a23998ed80395749868f5124e9}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!demoptr@{demoptr}}
+\index{demoptr@{demoptr}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{demoptr}]{\setlength{\rightskip}{0pt plus 5cm}char far$\ast$ {\bf demoptr}}}
+\label{WL__PLAY_8C_aacc691a23998ed80395749868f5124e9}
+\hypertarget{WL__PLAY_8C_a29ad9ab3cdb052a60b70348e9de1c33e}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!demorecord@{demorecord}}
+\index{demorecord@{demorecord}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{demorecord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf demorecord}}}
+\label{WL__PLAY_8C_a29ad9ab3cdb052a60b70348e9de1c33e}
+\hypertarget{WL__PLAY_8C_ac9e7de0629d53e5cfa59e985910855c5}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!dirscan@{dirscan}}
+\index{dirscan@{dirscan}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{dirscan}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dirscan}\mbox{[}4\mbox{]} = \{sc\_\-UpArrow,sc\_\-RightArrow,sc\_\-DownArrow,sc\_\-LeftArrow\}}}
+\label{WL__PLAY_8C_ac9e7de0629d53e5cfa59e985910855c5}
+\hypertarget{WL__PLAY_8C_a0e5a8cf650979c9507f17a53423b62d0}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!dummyobj@{dummyobj}}
+\index{dummyobj@{dummyobj}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{dummyobj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} {\bf dummyobj}}}
+\label{WL__PLAY_8C_a0e5a8cf650979c9507f17a53423b62d0}
+\hypertarget{WL__PLAY_8C_abb2d216c89203065d594e55c09f500d5}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!extravbls@{extravbls}}
+\index{extravbls@{extravbls}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{extravbls}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf extravbls}}}
+\label{WL__PLAY_8C_abb2d216c89203065d594e55c09f500d5}
+\hypertarget{WL__PLAY_8C_a2d3a9ae720f57b0ebde086d13cdb9af7}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!farmapylookup@{farmapylookup}}
+\index{farmapylookup@{farmapylookup}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{farmapylookup}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf farmapylookup}\mbox{[}MAPSIZE\mbox{]}}}
+\label{WL__PLAY_8C_a2d3a9ae720f57b0ebde086d13cdb9af7}
+\hypertarget{WL__PLAY_8C_a04613e65e640f316854208a4fc7bdc02}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!funnyticount@{funnyticount}}
+\index{funnyticount@{funnyticount}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{funnyticount}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf funnyticount}}}
+\label{WL__PLAY_8C_a04613e65e640f316854208a4fc7bdc02}
+\hypertarget{WL__PLAY_8C_a72ce00e98a92644d4cbf41fb10a2f7ad}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!gamepal@{gamepal}}
+\index{gamepal@{gamepal}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{gamepal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf gamepal}}}
+\label{WL__PLAY_8C_a72ce00e98a92644d4cbf41fb10a2f7ad}
+\hypertarget{WL__PLAY_8C_a23bd83aac925fcfe8d07fc3bbbfc7969}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!godmode@{godmode}}
+\index{godmode@{godmode}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{godmode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf godmode}}}
+\label{WL__PLAY_8C_a23bd83aac925fcfe8d07fc3bbbfc7969}
+\hypertarget{WL__PLAY_8C_ae95b411b2704beb68add5bf14c150af5}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!joypadenabled@{joypadenabled}}
+\index{joypadenabled@{joypadenabled}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{joypadenabled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf joypadenabled}}}
+\label{WL__PLAY_8C_ae95b411b2704beb68add5bf14c150af5}
+\hypertarget{WL__PLAY_8C_aedd645e0ac8f3dd90af15172766bb406}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!joystickenabled@{joystickenabled}}
+\index{joystickenabled@{joystickenabled}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{joystickenabled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf joystickenabled}}}
+\label{WL__PLAY_8C_aedd645e0ac8f3dd90af15172766bb406}
+\hypertarget{WL__PLAY_8C_a7756f30a454b3f333c7b6292fb73cc1c}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!joystickport@{joystickport}}
+\index{joystickport@{joystickport}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{joystickport}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf joystickport}}}
+\label{WL__PLAY_8C_a7756f30a454b3f333c7b6292fb73cc1c}
+\hypertarget{WL__PLAY_8C_aac8667efc78cc65ac4e1e8a5c45669aa}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!joystickprogressive@{joystickprogressive}}
+\index{joystickprogressive@{joystickprogressive}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{joystickprogressive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf joystickprogressive}}}
+\label{WL__PLAY_8C_aac8667efc78cc65ac4e1e8a5c45669aa}
+\hypertarget{WL__PLAY_8C_a93feadbaf779c18179439f73f406a0d9}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!killerobj@{killerobj}}
+\index{killerobj@{killerobj}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{killerobj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} $\ast$ {\bf killerobj}}}
+\label{WL__PLAY_8C_a93feadbaf779c18179439f73f406a0d9}
+\hypertarget{WL__PLAY_8C_ac5eb2656741bc6d98c3337122048bf45}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!lastdemoptr@{lastdemoptr}}
+\index{lastdemoptr@{lastdemoptr}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{lastdemoptr}]{\setlength{\rightskip}{0pt plus 5cm}char far far$\ast$ {\bf lastdemoptr}}}
+\label{WL__PLAY_8C_ac5eb2656741bc6d98c3337122048bf45}
+\hypertarget{WL__PLAY_8C_afcd8a7c0f5c40f4a956efc9b5c0f7eb7}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!lastobj@{lastobj}}
+\index{lastobj@{lastobj}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{lastobj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} $\ast$ {\bf lastobj}}}
+\label{WL__PLAY_8C_afcd8a7c0f5c40f4a956efc9b5c0f7eb7}
+\hypertarget{WL__PLAY_8C_a4971e2bca2f2589e2a6a70d6d6c54caa}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!madenoise@{madenoise}}
+\index{madenoise@{madenoise}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{madenoise}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf madenoise}}}
+\label{WL__PLAY_8C_a4971e2bca2f2589e2a6a70d6d6c54caa}
+\hypertarget{WL__PLAY_8C_aa57a71a17124e3d1995584f7b4fe1ca0}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!mapheight@{mapheight}}
+\index{mapheight@{mapheight}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{mapheight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf mapheight}}}
+\label{WL__PLAY_8C_aa57a71a17124e3d1995584f7b4fe1ca0}
+\hypertarget{WL__PLAY_8C_a18042bb0860852b7365837e7fb7366c1}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!mapwidth@{mapwidth}}
+\index{mapwidth@{mapwidth}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{mapwidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf mapwidth}}}
+\label{WL__PLAY_8C_a18042bb0860852b7365837e7fb7366c1}
+\hypertarget{WL__PLAY_8C_a2aec10bd4a21a6d0178fbdd701ab0fb9}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!mapwidthtable@{mapwidthtable}}
+\index{mapwidthtable@{mapwidthtable}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{mapwidthtable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf mapwidthtable}\mbox{[}64\mbox{]}}}
+\label{WL__PLAY_8C_a2aec10bd4a21a6d0178fbdd701ab0fb9}
+\hypertarget{WL__PLAY_8C_a36b9d776c596f97e2f6fac5bcc96fad3}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!mouseenabled@{mouseenabled}}
+\index{mouseenabled@{mouseenabled}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{mouseenabled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf mouseenabled}}}
+\label{WL__PLAY_8C_a36b9d776c596f97e2f6fac5bcc96fad3}
+\hypertarget{WL__PLAY_8C_a3cee47da7077796a8215395d7bf23a8b}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!nearmapylookup@{nearmapylookup}}
+\index{nearmapylookup@{nearmapylookup}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{nearmapylookup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte}$\ast$ {\bf nearmapylookup}\mbox{[}MAPSIZE\mbox{]}}}
+\label{WL__PLAY_8C_a3cee47da7077796a8215395d7bf23a8b}
+\hypertarget{WL__PLAY_8C_aeef0824257f536812a114a0e932b654f}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!new@{new}}
+\index{new@{new}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} $\ast$ {\bf new}}}
+\label{WL__PLAY_8C_aeef0824257f536812a114a0e932b654f}
+\hypertarget{WL__PLAY_8C_aad83c32aa52b632f075c971e15ac0180}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!noclip@{noclip}}
+\index{noclip@{noclip}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{noclip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf noclip}}}
+\label{WL__PLAY_8C_aad83c32aa52b632f075c971e15ac0180}
+\hypertarget{WL__PLAY_8C_af2676bb450cb1b81beed4d6cb5038ac1}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!obj@{obj}}
+\index{obj@{obj}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{obj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} $\ast$ {\bf obj}}}
+\label{WL__PLAY_8C_af2676bb450cb1b81beed4d6cb5038ac1}
+\hypertarget{WL__PLAY_8C_a9727f781b3f4cd2b8b28838f132ebb57}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!objcount@{objcount}}
+\index{objcount@{objcount}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{objcount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf objcount}}}
+\label{WL__PLAY_8C_a9727f781b3f4cd2b8b28838f132ebb57}
+\hypertarget{WL__PLAY_8C_a0bbfafb17a6f027cbcd951f84a1bb2ee}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!objfreelist@{objfreelist}}
+\index{objfreelist@{objfreelist}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{objfreelist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} $\ast$ {\bf objfreelist}}}
+\label{WL__PLAY_8C_a0bbfafb17a6f027cbcd951f84a1bb2ee}
+\hypertarget{WL__PLAY_8C_a6e9f072b148ef10ec86e297a493110f2}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!objlist@{objlist}}
+\index{objlist@{objlist}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{objlist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} {\bf objlist}\mbox{[}MAXACTORS\mbox{]}}}
+\label{WL__PLAY_8C_a6e9f072b148ef10ec86e297a493110f2}
+\hypertarget{WL__PLAY_8C_a5201d2df7fa5b1e931f93a08277da76a}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!palshifted@{palshifted}}
+\index{palshifted@{palshifted}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{palshifted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf palshifted}}}
+\label{WL__PLAY_8C_a5201d2df7fa5b1e931f93a08277da76a}
+\hypertarget{WL__PLAY_8C_aab35f908015a45224c5de99938b392f0}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!player@{player}}
+\index{player@{player}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objtype} $\ast$ {\bf player}}}
+\label{WL__PLAY_8C_aab35f908015a45224c5de99938b392f0}
+\hypertarget{WL__PLAY_8C_a7bc9cfbaebb2f8731fc6a008d5e02bff}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!playstate@{playstate}}
+\index{playstate@{playstate}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{playstate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf exit\_\-t} {\bf playstate}}}
+\label{WL__PLAY_8C_a7bc9cfbaebb2f8731fc6a008d5e02bff}
+\hypertarget{WL__PLAY_8C_a9662d2ac7202ad45530f94f43124fef1}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!redshifts@{redshifts}}
+\index{redshifts@{redshifts}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{redshifts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf redshifts}\mbox{[}NUMREDSHIFTS\mbox{]}\mbox{[}768\mbox{]}}}
+\label{WL__PLAY_8C_a9662d2ac7202ad45530f94f43124fef1}
+\hypertarget{WL__PLAY_8C_a46d81099af6d10af477bc30272a05919}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!singlestep@{singlestep}}
+\index{singlestep@{singlestep}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{singlestep}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf singlestep}}}
+\label{WL__PLAY_8C_a46d81099af6d10af477bc30272a05919}
+\hypertarget{WL__PLAY_8C_a4af95f8ed94849394a922f8dab8c1dd7}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!songs@{songs}}
+\index{songs@{songs}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{songs}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf songs}\mbox{[}$\,$\mbox{]}}}
+\label{WL__PLAY_8C_a4af95f8ed94849394a922f8dab8c1dd7}
+\hypertarget{WL__PLAY_8C_a4d17a83d6ebae084e33130e818311b0f}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!spotvis@{spotvis}}
+\index{spotvis@{spotvis}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{spotvis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf spotvis}\mbox{[}MAPSIZE\mbox{]}\mbox{[}MAPSIZE\mbox{]}}}
+\label{WL__PLAY_8C_a4d17a83d6ebae084e33130e818311b0f}
+\hypertarget{WL__PLAY_8C_a2b5fccfe4a509a1a5f685bb7b7399997}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!tics@{tics}}
+\index{tics@{tics}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{tics}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf tics}}}
+\label{WL__PLAY_8C_a2b5fccfe4a509a1a5f685bb7b7399997}
+\hypertarget{WL__PLAY_8C_a71276ae4f97677e43033f2f6103b8720}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!tilemap@{tilemap}}
+\index{tilemap@{tilemap}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{tilemap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf tilemap}\mbox{[}MAPSIZE\mbox{]}\mbox{[}MAPSIZE\mbox{]}}}
+\label{WL__PLAY_8C_a71276ae4f97677e43033f2f6103b8720}
+\hypertarget{WL__PLAY_8C_a377ee66e839b90ae7140bb0dbde6c696}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!update@{update}}
+\index{update@{update}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf update}\mbox{[}UPDATESIZE\mbox{]}}}
+\label{WL__PLAY_8C_a377ee66e839b90ae7140bb0dbde6c696}
+\hypertarget{WL__PLAY_8C_a120692504a35218a45eabb70ed0e4fe7}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!updateptr@{updateptr}}
+\index{updateptr@{updateptr}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{updateptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte}$\ast$ {\bf updateptr}}}
+\label{WL__PLAY_8C_a120692504a35218a45eabb70ed0e4fe7}
+\hypertarget{WL__PLAY_8C_af6ce3eaaf641bdbacc8cd7e98eaa90b9}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!uwidthtable@{uwidthtable}}
+\index{uwidthtable@{uwidthtable}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{uwidthtable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf uwidthtable}\mbox{[}UPDATEHIGH\mbox{]}}}
+\label{WL__PLAY_8C_af6ce3eaaf641bdbacc8cd7e98eaa90b9}
+\hypertarget{WL__PLAY_8C_a600cf8c414283a1b5615342c73605284}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!viewsize@{viewsize}}
+\index{viewsize@{viewsize}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{viewsize}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf viewsize}}}
+\label{WL__PLAY_8C_a600cf8c414283a1b5615342c73605284}
+\hypertarget{WL__PLAY_8C_a5b8536a1ac5c83ff0cbe8c01222ccb40}{
+\index{WL\_\-PLAY.C@{WL\_\-PLAY.C}!whiteshifts@{whiteshifts}}
+\index{whiteshifts@{whiteshifts}!WL_PLAY.C@{WL\_\-PLAY.C}}
+\subsubsection[{whiteshifts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf whiteshifts}\mbox{[}NUMREDSHIFTS\mbox{]}\mbox{[}768\mbox{]}}}
+\label{WL__PLAY_8C_a5b8536a1ac5c83ff0cbe8c01222ccb40}

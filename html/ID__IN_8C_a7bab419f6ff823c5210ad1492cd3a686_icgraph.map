@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__IN_8C.html#a58e132d2bd776ef812d95ee30907cbd5" title="IN_SetupJoy" alt="" coords="179,189,277,219"/>
+<area shape="rect" id="node5" href="$WL__MENU_8C.html#ad1faffefd1153f6d40ce3d2eaa598646" title="CalibrateJoystick" alt="" coords="325,163,448,192"/>
+<area shape="rect" id="node33" href="$ID__IN_8C.html#a9b6ff4a88bfe152f44195609081589bc" title="INL_StartJoy" alt="" coords="496,215,595,244"/>
+<area shape="rect" id="node7" href="$WL__MENU_8H.html#a8d89e45be2c67ed682acb9ee0c09cd75" title="CP_Control" alt="" coords="500,161,591,191"/>
+<area shape="rect" id="node9" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="643,161,765,191"/>
+<area shape="rect" id="node11" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="813,99,904,128"/>
+<area shape="rect" id="node17" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1224,112,1309,141"/>
+<area shape="rect" id="node13" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="953,72,1028,101"/>
+<area shape="rect" id="node15" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="1084,5,1169,35"/>
+<area shape="rect" id="node26" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="1085,59,1168,88"/>
+<area shape="rect" id="node29" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="1077,112,1176,141"/>
+<area shape="rect" id="node19" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1357,112,1408,141"/>
+<area shape="rect" id="node21" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1457,112,1545,141"/>
+<area shape="rect" id="node23" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1595,164,1669,193"/>
+<area shape="rect" id="node35" href="$ID__IN_8C.html#a20a23654ead536c7d999b6de31a5168c" title="IN_Startup" alt="" coords="661,215,747,244"/>
+</map>

@@ -1,0 +1,2874 @@
+\hypertarget{WL__MENU_8H}{
+\section{WL\_\-MENU.H File Reference}
+\label{WL__MENU_8H}\index{WL\_\-MENU.H@{WL\_\-MENU.H}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCP__iteminfo}{CP\_\-iteminfo}
+\item 
+struct \hyperlink{structCP__itemtype}{CP\_\-itemtype}
+\item 
+struct \hyperlink{structCustomCtrls}{CustomCtrls}
+\item 
+struct \hyperlink{structLRstruct}{LRstruct}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__MENU_8H_a9f00281077534835a9a522d628ac15d7}{BORDCOLOR}~0x29
+\item 
+\#define \hyperlink{WL__MENU_8H_afaff465652d15eca3b4aa4acde560e75}{BORD2COLOR}~0x23
+\item 
+\#define \hyperlink{WL__MENU_8H_ae038d8a4c8f14127f096f27566ef6e94}{DEACTIVE}~0x2b
+\item 
+\#define \hyperlink{WL__MENU_8H_acdc23edcbef7544ed85ffc9baaf0f58e}{BKGDCOLOR}~0x2d
+\item 
+\#define \hyperlink{WL__MENU_8H_abc0565e3e9d832a18d398bffaa8ef145}{STRIPE}~0x2c
+\item 
+\#define \hyperlink{WL__MENU_8H_af3ead645701acec9699bdc9822840cd8}{MenuFadeOut}()~VL\_\-FadeOut(0,255,43,0,0,10)
+\item 
+\#define \hyperlink{WL__MENU_8H_a9a7d817b9b9913dc74c00eb85f61cbd5}{READCOLOR}~0x4a
+\item 
+\#define \hyperlink{WL__MENU_8H_a30fa6a5c3fd07d3fd008bad2636a2664}{READHCOLOR}~0x47
+\item 
+\#define \hyperlink{WL__MENU_8H_a425bfb32e29bb949cb0b1cb76c99a76e}{VIEWCOLOR}~0x7f
+\item 
+\#define \hyperlink{WL__MENU_8H_a58826078218d8f7c940b9bd33b005179}{TEXTCOLOR}~0x17
+\item 
+\#define \hyperlink{WL__MENU_8H_ab814d2aa388b74d504673d0068cab196}{HIGHLIGHT}~0x13
+\item 
+\#define \hyperlink{WL__MENU_8H_a7abcebe728e405c0e69ef7df884cee84}{MenuFadeIn}()~VL\_\-FadeIn(0,255,\&\hyperlink{WL__PLAY_8C_a72ce00e98a92644d4cbf41fb10a2f7ad}{gamepal},10)
+\item 
+\#define \hyperlink{WL__MENU_8H_af7aa50d0848a57fd37f687618913a738}{MENUSONG}~WONDERIN\_\-MUS
+\item 
+\#define \hyperlink{WL__MENU_8H_aa5ff03f649da3b1c9c160967d615f572}{INTROSONG}~NAZI\_\-NOR\_\-MUS
+\item 
+\#define \hyperlink{WL__MENU_8H_a1df4ff7337c70fd414bdb050e2344649}{SENSITIVE}~60
+\item 
+\#define \hyperlink{WL__MENU_8H_a824fea1f256659e11e6cd8c82cb13338}{CENTER}~SENSITIVE$\ast$2
+\item 
+\#define \hyperlink{WL__MENU_8H_a8dafcd9723e98213f42d0234c20b84a5}{MENU\_\-X}~76
+\item 
+\#define \hyperlink{WL__MENU_8H_ab5f43ff9ab0e3f21e92d4729d84e57ac}{MENU\_\-Y}~55
+\item 
+\#define \hyperlink{WL__MENU_8H_a8ab012c9b505a97138d6f18221340188}{MENU\_\-W}~178
+\item 
+\#define \hyperlink{WL__MENU_8H_a9552ba249c0540ffe9a08a05d1b92504}{MENU\_\-H}~13$\ast$10+6
+\item 
+\#define \hyperlink{WL__MENU_8H_a32546f28fceb0d6cfd271f4e67a960da}{SM\_\-X}~48
+\item 
+\#define \hyperlink{WL__MENU_8H_a98fb002600c4a059117b60e6901c9e4e}{SM\_\-W}~250
+\item 
+\#define \hyperlink{WL__MENU_8H_a91b9840ef31e8ea3213dfde423aa3f7f}{SM\_\-Y1}~20
+\item 
+\#define \hyperlink{WL__MENU_8H_adba6dfabf755e54c84886c57ca504ce7}{SM\_\-H1}~4$\ast$13-\/7
+\item 
+\#define \hyperlink{WL__MENU_8H_a0181ef73bf2f87d1a7165418aca923f2}{SM\_\-Y2}~SM\_\-Y1+5$\ast$13
+\item 
+\#define \hyperlink{WL__MENU_8H_a48d5362cb91bcd83d38c0938355084e1}{SM\_\-H2}~4$\ast$13-\/7
+\item 
+\#define \hyperlink{WL__MENU_8H_a749d1c9729b10cf5a7b8ea1216384d53}{SM\_\-Y3}~SM\_\-Y2+5$\ast$13
+\item 
+\#define \hyperlink{WL__MENU_8H_a1778354e4291b2fbceb434ac96d5dfcd}{SM\_\-H3}~3$\ast$13-\/7
+\item 
+\#define \hyperlink{WL__MENU_8H_af7160a6f16e19b19a4b15e663b88ce67}{CTL\_\-X}~24
+\item 
+\#define \hyperlink{WL__MENU_8H_a5bf6008e2144536043497d7f080fca3c}{CTL\_\-Y}~70
+\item 
+\#define \hyperlink{WL__MENU_8H_a7421711c94aa4c7d682a285b6380b923}{CTL\_\-W}~284
+\item 
+\#define \hyperlink{WL__MENU_8H_af64dcd1621c3f15dd0340ac7c74f8494}{CTL\_\-H}~13$\ast$7-\/7
+\item 
+\#define \hyperlink{WL__MENU_8H_a6b5eb588d722f86b09369b40a4f762e3}{LSM\_\-X}~85
+\item 
+\#define \hyperlink{WL__MENU_8H_a4c59449f0196f3dfa779565be7210291}{LSM\_\-Y}~55
+\item 
+\#define \hyperlink{WL__MENU_8H_a1183e7175b1265d4bdae14d38ee03775}{LSM\_\-W}~175
+\item 
+\#define \hyperlink{WL__MENU_8H_a8cf38e17b7fc1dee592464d3f17c6b26}{LSM\_\-H}~10$\ast$13+10
+\item 
+\#define \hyperlink{WL__MENU_8H_a446f2f83d0e0ce3106bf26ae1e53f860}{NM\_\-X}~50
+\item 
+\#define \hyperlink{WL__MENU_8H_a3b8dafeec7205f4cf6411c1c177f7acc}{NM\_\-Y}~100
+\item 
+\#define \hyperlink{WL__MENU_8H_a42988533be9ee3462e8dd820e852c69e}{NM\_\-W}~225
+\item 
+\#define \hyperlink{WL__MENU_8H_affe12a31ae23e18983089780977546e4}{NM\_\-H}~13$\ast$4+15
+\item 
+\#define \hyperlink{WL__MENU_8H_affb8b54e656a6b139ffc7a8ea9d8621b}{NE\_\-X}~10
+\item 
+\#define \hyperlink{WL__MENU_8H_ace26f50287df4fa928622557b530cfec}{NE\_\-Y}~23
+\item 
+\#define \hyperlink{WL__MENU_8H_ab6ee9aa27ac3d8b20b387e1e5f7e61cc}{NE\_\-W}~320-\/NE\_\-X$\ast$2
+\item 
+\#define \hyperlink{WL__MENU_8H_a40f32b371fcb5d3259aefeaffc947b4a}{NE\_\-H}~200-\/NE\_\-Y$\ast$2
+\item 
+\#define \hyperlink{WL__MENU_8H_ae20f87370554674ccffc172a47836ce8}{CST\_\-X}~20
+\item 
+\#define \hyperlink{WL__MENU_8H_a91fb5cd9f1046d4ed9b6defd46c77604}{CST\_\-Y}~48
+\item 
+\#define \hyperlink{WL__MENU_8H_a750f59be9efaeb9416f671951f66d16d}{CST\_\-START}~60
+\item 
+\#define \hyperlink{WL__MENU_8H_a08b559e4021707910677ba5d7700e354}{CST\_\-SPC}~60
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a6abd13b0a6bf7894c7ceb5ff45ddbc14}{MOUSE}, 
+\hyperlink{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a9cdb4c7b3f2d3cd904160e767d3a4a2c}{JOYSTICK}, 
+\hyperlink{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a6a2b988f19e82c65655964b55ecf322e}{KEYBOARDBTNS}, 
+\hyperlink{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600ac6d3a13ad93e7cad6bf31e5c349fbb9d}{KEYBOARDMOVE}
+ \}
+\item 
+enum \{ \par
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57abfd204677e264646f71160799d5ca0ce}{newgame}, 
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57afba6cb3ce82a267047b32e542ca61fab}{soundmenu}, 
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a5d8add8effb2a9964dbebfd27c9ddd31}{control}, 
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a128d476ac05e495b6339f4b2e068dc9f}{loadgame}, 
+\par
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a2b32c28cb822c23f53849ed6ec6e3197}{savegame}, 
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57ab35853708366be9a53171f82bfa817c5}{changeview}, 
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a3f189de1562f1f36d754428334506c48}{readthis}, 
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a960ceb630d8895150ed6a8453e5e9cee}{viewscores}, 
+\par
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a7ccf5bcc5ed10be3c03204184999932a}{backtodemo}, 
+\hyperlink{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a3b81dce366295e52b47ca4d263ba8335}{quit}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__MENU_8H_a3c358410161fc65eb8b58e7e7e47b409}{SetupControlPanel} (void)
+\item 
+void \hyperlink{WL__MENU_8H_adaff6c2a2e08ddb9a2e1bc122ea0c546}{CleanupControlPanel} (void)
+\item 
+void \hyperlink{WL__MENU_8H_ad7ae5f8d3bfaf8e94d9c3fd004609229}{DrawMenu} (\hyperlink{structCP__iteminfo}{CP\_\-iteminfo} $\ast$item\_\-i, \hyperlink{structCP__itemtype}{CP\_\-itemtype} far $\ast$items)
+\item 
+int \hyperlink{WL__MENU_8H_ad290f8e33560355805666460ffa302b0}{HandleMenu} (\hyperlink{structCP__iteminfo}{CP\_\-iteminfo} $\ast$item\_\-i, \hyperlink{structCP__itemtype}{CP\_\-itemtype} far $\ast$items, void($\ast$routine)(int w))
+\item 
+void \hyperlink{WL__MENU_8H_a7a8e53f3f469cbf79c3f55807761d3bb}{ClearMScreen} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a904e939ab3e905847095245ec694d845}{DrawWindow} (int x, int y, int w, int h, int wcolor)
+\item 
+void \hyperlink{WL__MENU_8H_a932353c4f637452b49ee6e1a4c382bf5}{DrawOutline} (int x, int y, int w, int h, int color1, int color2)
+\item 
+void \hyperlink{WL__MENU_8H_a3434990df52efeb93017e54af5a20860}{WaitKeyUp} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a203c5a4b291ebd6bf7b0fb11b5905e6c}{ReadAnyControl} (\hyperlink{structCursorInfo}{ControlInfo} $\ast$ci)
+\item 
+void \hyperlink{WL__MENU_8H_a4f5f54a27864fe7144f735c2d3529774}{TicDelay} (int count)
+\item 
+void \hyperlink{WL__MENU_8H_a03aae71ea1eb201f2e7e4b0408c1c426}{CacheLump} (int lumpstart, int lumpend)
+\item 
+void \hyperlink{WL__MENU_8H_ae68019294ac4f3a9df949035a4c36cf8}{UnCacheLump} (int lumpstart, int lumpend)
+\item 
+void \hyperlink{WL__MENU_8H_a4f6ff7d7af8823a0cd9a4a7217a151de}{StartCPMusic} (int song)
+\item 
+int \hyperlink{WL__MENU_8H_a03f63a618731c692b7496b92fa2002bd}{Confirm} (char far $\ast$string)
+\item 
+void \hyperlink{WL__MENU_8H_a42108cf0eef44550e9428222e11de2a3}{Message} (char far $\ast$string)
+\item 
+void \hyperlink{WL__MENU_8H_a091147f2346aaad8a89508a27b711c3f}{CheckPause} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a5dd49cf82c780b8d761f20d9af4771e9}{ShootSnd} (void)
+\item 
+void \hyperlink{WL__MENU_8H_adf80f60f97a1eae5b762f0d7234be326}{CheckSecretMissions} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a39a54ce56d7e78076c8a5f6c12355814}{BossKey} (void)
+\item 
+void \hyperlink{WL__MENU_8H_aa2214b22585686a8992038d77d4dbd3c}{DrawGun} (\hyperlink{structCP__iteminfo}{CP\_\-iteminfo} $\ast$item\_\-i, \hyperlink{structCP__itemtype}{CP\_\-itemtype} far $\ast$items, int x, int $\ast$y, int which, int basey, void($\ast$routine)(int w))
+\item 
+void \hyperlink{WL__MENU_8H_ad838539ffa52a66afa3fc9d4ce9bef29}{DrawHalfStep} (int x, int y)
+\item 
+void \hyperlink{WL__MENU_8H_ac0d2328b065d28f9db037264a780fab4}{EraseGun} (\hyperlink{structCP__iteminfo}{CP\_\-iteminfo} $\ast$item\_\-i, \hyperlink{structCP__itemtype}{CP\_\-itemtype} far $\ast$items, int x, int y, int which)
+\item 
+void \hyperlink{WL__MENU_8H_a604ee41d936e798d09c96e1e0895a983}{SetTextColor} (\hyperlink{structCP__itemtype}{CP\_\-itemtype} far $\ast$items, int hlight)
+\item 
+void \hyperlink{WL__MENU_8H_a90a65e74d80272f0305d2537870c10ef}{DrawMenuGun} (\hyperlink{structCP__iteminfo}{CP\_\-iteminfo} $\ast$iteminfo)
+\item 
+void \hyperlink{WL__MENU_8H_a81a9dfc7b2dab1a015d6be0c329e094b}{DrawStripes} (int y)
+\item 
+void \hyperlink{WL__MENU_8H_af9ffcf08793f2da25a6f54f439e15ddf}{DefineMouseBtns} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a0a00df1716b0a174dc25901d829aea93}{DefineJoyBtns} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a6f23a62131fda11af6f0aa3002bdfffb}{DefineKeyBtns} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a666771efec8f7ee7f225adda60c1f5e0}{DefineKeyMove} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a94d0412c951284a8ea98378116c23566}{EnterCtrlData} (int index, \hyperlink{structCustomCtrls}{CustomCtrls} $\ast$cust, void($\ast$DrawRtn)(int), void($\ast$PrintRtn)(int), int \hyperlink{WL__ACT1_8C_ac6913ebc2a188919d185cadc155a48cd}{type})
+\item 
+void \hyperlink{WL__MENU_8H_a37408297ab32e806235fdbc3da553d8d}{DrawMainMenu} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a7ecd6a0fd9c404482ff312f2acd68271}{DrawSoundMenu} (void)
+\item 
+void \hyperlink{WL__MENU_8H_ae1fe464efcd5a1d1f43e8dabc2841832}{DrawLoadSaveScreen} (int loadsave)
+\item 
+void \hyperlink{WL__MENU_8H_a41d17005e1b49c4a62b1506b9d213a12}{DrawNewEpisode} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a4f8733a1d462a92cecf3cff18eb486ba}{DrawNewGame} (void)
+\item 
+void \hyperlink{WL__MENU_8H_ad799719f482b9ac14dab51685b6d635a}{DrawChangeView} (int view)
+\item 
+void \hyperlink{WL__MENU_8H_ac707d72c852bfe2a24938dde3c5397f6}{DrawMouseSens} (void)
+\item 
+void \hyperlink{WL__MENU_8H_adc512396867a80e9e24c51d288b0c828}{DrawCtlScreen} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a2173c3a8943509f99cb5ac01f2a111a6}{DrawCustomScreen} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a70ea63f2a40cfe667ba078830e3071d4}{DrawLSAction} (int which)
+\item 
+void \hyperlink{WL__MENU_8H_a79141a9518504a36ce3c15682aa836ec}{DrawCustMouse} (int hilight)
+\item 
+void \hyperlink{WL__MENU_8H_a91236b82219168a5270605919725ba2c}{DrawCustJoy} (int hilight)
+\item 
+void \hyperlink{WL__MENU_8H_a55ce148269754602b0c814448911b27d}{DrawCustKeybd} (int hilight)
+\item 
+void \hyperlink{WL__MENU_8H_ace6221928d863a720c5674fad34b11fa}{DrawCustKeys} (int hilight)
+\item 
+void \hyperlink{WL__MENU_8H_a997209233b25445a026a6e5ca017dd57}{PrintCustMouse} (int i)
+\item 
+void \hyperlink{WL__MENU_8H_a88eda1a3eb3e81618c3fdd5debf5f8ff}{PrintCustJoy} (int i)
+\item 
+void \hyperlink{WL__MENU_8H_adcd1d339231514422736a0da10f0b92b}{PrintCustKeybd} (int i)
+\item 
+void \hyperlink{WL__MENU_8H_aff9049f7e08b5e6a90e8da5bb81b287a}{PrintCustKeys} (int i)
+\item 
+void \hyperlink{WL__MENU_8H_acaacbb88f7b7d163245141e126592577}{PrintLSEntry} (int w, int color)
+\item 
+void \hyperlink{WL__MENU_8H_ad95aadf50d120f80e53480d55e7a1824}{TrackWhichGame} (int w)
+\item 
+void \hyperlink{WL__MENU_8H_aafd1b4c9e4950fe29a16710ad71376d5}{DrawNewGameDiff} (int w)
+\item 
+void \hyperlink{WL__MENU_8H_a7754ea2238d7a0c2711434bbc6b56379}{FixupCustom} (int w)
+\item 
+void \hyperlink{WL__MENU_8H_a8f189c2d0971b91261fe50e58bc4b64a}{CP\_\-NewGame} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a33c03c428f4fe132d1e5006416422ed4}{CP\_\-Sound} (void)
+\item 
+int \hyperlink{WL__MENU_8H_a2ca12f5b43c80ee49b36a78621ac8ce4}{CP\_\-LoadGame} (int quick)
+\item 
+int \hyperlink{WL__MENU_8H_a62fb7c17655ed1e0031cbeafd182ee31}{CP\_\-SaveGame} (int quick)
+\item 
+void \hyperlink{WL__MENU_8H_a8d89e45be2c67ed682acb9ee0c09cd75}{CP\_\-Control} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a95a4685a2d017477e6a863344b787642}{CP\_\-ChangeView} (void)
+\item 
+void \hyperlink{WL__MENU_8H_aaca709d19705758fef8027de66d132d4}{CP\_\-ExitOptions} (void)
+\item 
+void \hyperlink{WL__MENU_8H_ad29825b90b8a92ca853643f18f868705}{CP\_\-Quit} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a5d2d9c59773600f8b810e6f8a715a21f}{CP\_\-ViewScores} (void)
+\item 
+int \hyperlink{WL__MENU_8H_a36185687b73d760059be35f2c35aaad1}{CP\_\-EndGame} (void)
+\item 
+int \hyperlink{WL__MENU_8H_a95a8089ef599aecc8a81f90ba35032dd}{CP\_\-CheckQuick} (unsigned scancode)
+\item 
+void \hyperlink{WL__MENU_8H_a0631548359f161b2a227317582c6c4a6}{CustomControls} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a8a190d4f3b624a81b86aa5c75d1bd4d1}{MouseSensitivity} (void)
+\item 
+void \hyperlink{WL__MENU_8H_ad57118b3592a6be117bc85d1418bb6b9}{CheckForEpisodes} (void)
+\item 
+void \hyperlink{WL__MENU_8H_a2a840b71aa584f6332da78f4eeec8767}{Write} (int x, int y, char $\ast$string)
+\item 
+void \hyperlink{WL__MENU_8H_aa6b18519250a34e966e6900c6328008b}{NonShareware} (void)
+\item 
+int \hyperlink{WL__MENU_8H_ab99c9ad73f67e91963071c21c3694637}{GetYorN} (int x, int y, int pic)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structCP__itemtype}{CP\_\-itemtype} far \hyperlink{WL__MENU_8H_a6d3982b9d13e9f258a6229f7c6259fd2}{MainMenu} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{structCP__itemtype}{CP\_\-itemtype} far far \hyperlink{WL__MENU_8H_a533b654d50a711383a0d2135cf4bd86a}{NewEMenu} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{structCP__iteminfo}{CP\_\-iteminfo} \hyperlink{WL__MENU_8H_a93c27abff0c41dacc4c91cba6616ebc8}{MainItems}
+\item 
+int \hyperlink{WL__MENU_8H_a7b06c11298b6b799f082f8188c0dbd2c}{SaveGamesAvail} \mbox{[}10\mbox{]}
+\item 
+int \hyperlink{WL__MENU_8H_a15b7f4ec468d94c3291394639f2fe581}{StartGame}
+\item 
+int \hyperlink{WL__MENU_8H_a0564d61a788235ef511758c3922b9927}{SoundStatus}
+\item 
+char \hyperlink{WL__MENU_8H_a676a8d7bb5b64f29ab3ea8fe6a4f3242}{SaveGameNames} \mbox{[}10\mbox{]}\mbox{[}32\mbox{]}
+\item 
+char \hyperlink{WL__MENU_8H_a8501cb4aab0ffc4fca7a7a979ae7728d}{SaveName} \mbox{[}13\mbox{]}
+\item 
+enum  \{ ... \}  \hyperlink{WL__MENU_8H_ae41a615bd5a5e741ff7c27e54c48bbcb}{menuitems}
+\item 
+\hyperlink{structLRstruct}{LRstruct} \hyperlink{WL__MENU_8H_a2445c6731e7a1b5e7b8f3da17525e322}{LevelRatios} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__MENU_8H_acdc23edcbef7544ed85ffc9baaf0f58e}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!BKGDCOLOR@{BKGDCOLOR}}
+\index{BKGDCOLOR@{BKGDCOLOR}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{BKGDCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define BKGDCOLOR~0x2d}}
+\label{WL__MENU_8H_acdc23edcbef7544ed85ffc9baaf0f58e}
+\hypertarget{WL__MENU_8H_afaff465652d15eca3b4aa4acde560e75}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!BORD2COLOR@{BORD2COLOR}}
+\index{BORD2COLOR@{BORD2COLOR}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{BORD2COLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define BORD2COLOR~0x23}}
+\label{WL__MENU_8H_afaff465652d15eca3b4aa4acde560e75}
+\hypertarget{WL__MENU_8H_a9f00281077534835a9a522d628ac15d7}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!BORDCOLOR@{BORDCOLOR}}
+\index{BORDCOLOR@{BORDCOLOR}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{BORDCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define BORDCOLOR~0x29}}
+\label{WL__MENU_8H_a9f00281077534835a9a522d628ac15d7}
+\hypertarget{WL__MENU_8H_a824fea1f256659e11e6cd8c82cb13338}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CENTER@{CENTER}}
+\index{CENTER@{CENTER}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CENTER}]{\setlength{\rightskip}{0pt plus 5cm}\#define CENTER~SENSITIVE$\ast$2}}
+\label{WL__MENU_8H_a824fea1f256659e11e6cd8c82cb13338}
+\hypertarget{WL__MENU_8H_a08b559e4021707910677ba5d7700e354}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CST\_\-SPC@{CST\_\-SPC}}
+\index{CST\_\-SPC@{CST\_\-SPC}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CST\_\-SPC}]{\setlength{\rightskip}{0pt plus 5cm}\#define CST\_\-SPC~60}}
+\label{WL__MENU_8H_a08b559e4021707910677ba5d7700e354}
+\hypertarget{WL__MENU_8H_a750f59be9efaeb9416f671951f66d16d}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CST\_\-START@{CST\_\-START}}
+\index{CST\_\-START@{CST\_\-START}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CST\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define CST\_\-START~60}}
+\label{WL__MENU_8H_a750f59be9efaeb9416f671951f66d16d}
+\hypertarget{WL__MENU_8H_ae20f87370554674ccffc172a47836ce8}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CST\_\-X@{CST\_\-X}}
+\index{CST\_\-X@{CST\_\-X}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CST\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define CST\_\-X~20}}
+\label{WL__MENU_8H_ae20f87370554674ccffc172a47836ce8}
+\hypertarget{WL__MENU_8H_a91fb5cd9f1046d4ed9b6defd46c77604}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CST\_\-Y@{CST\_\-Y}}
+\index{CST\_\-Y@{CST\_\-Y}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CST\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define CST\_\-Y~48}}
+\label{WL__MENU_8H_a91fb5cd9f1046d4ed9b6defd46c77604}
+\hypertarget{WL__MENU_8H_af64dcd1621c3f15dd0340ac7c74f8494}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CTL\_\-H@{CTL\_\-H}}
+\index{CTL\_\-H@{CTL\_\-H}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CTL\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define CTL\_\-H~13$\ast$7-\/7}}
+\label{WL__MENU_8H_af64dcd1621c3f15dd0340ac7c74f8494}
+\hypertarget{WL__MENU_8H_a7421711c94aa4c7d682a285b6380b923}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CTL\_\-W@{CTL\_\-W}}
+\index{CTL\_\-W@{CTL\_\-W}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CTL\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define CTL\_\-W~284}}
+\label{WL__MENU_8H_a7421711c94aa4c7d682a285b6380b923}
+\hypertarget{WL__MENU_8H_af7160a6f16e19b19a4b15e663b88ce67}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CTL\_\-X@{CTL\_\-X}}
+\index{CTL\_\-X@{CTL\_\-X}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CTL\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define CTL\_\-X~24}}
+\label{WL__MENU_8H_af7160a6f16e19b19a4b15e663b88ce67}
+\hypertarget{WL__MENU_8H_a5bf6008e2144536043497d7f080fca3c}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CTL\_\-Y@{CTL\_\-Y}}
+\index{CTL\_\-Y@{CTL\_\-Y}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CTL\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define CTL\_\-Y~70}}
+\label{WL__MENU_8H_a5bf6008e2144536043497d7f080fca3c}
+\hypertarget{WL__MENU_8H_ae038d8a4c8f14127f096f27566ef6e94}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DEACTIVE@{DEACTIVE}}
+\index{DEACTIVE@{DEACTIVE}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DEACTIVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEACTIVE~0x2b}}
+\label{WL__MENU_8H_ae038d8a4c8f14127f096f27566ef6e94}
+\hypertarget{WL__MENU_8H_ab814d2aa388b74d504673d0068cab196}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!HIGHLIGHT@{HIGHLIGHT}}
+\index{HIGHLIGHT@{HIGHLIGHT}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{HIGHLIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define HIGHLIGHT~0x13}}
+\label{WL__MENU_8H_ab814d2aa388b74d504673d0068cab196}
+\hypertarget{WL__MENU_8H_aa5ff03f649da3b1c9c160967d615f572}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!INTROSONG@{INTROSONG}}
+\index{INTROSONG@{INTROSONG}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{INTROSONG}]{\setlength{\rightskip}{0pt plus 5cm}\#define INTROSONG~NAZI\_\-NOR\_\-MUS}}
+\label{WL__MENU_8H_aa5ff03f649da3b1c9c160967d615f572}
+\hypertarget{WL__MENU_8H_a8cf38e17b7fc1dee592464d3f17c6b26}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!LSM\_\-H@{LSM\_\-H}}
+\index{LSM\_\-H@{LSM\_\-H}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{LSM\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define LSM\_\-H~10$\ast$13+10}}
+\label{WL__MENU_8H_a8cf38e17b7fc1dee592464d3f17c6b26}
+\hypertarget{WL__MENU_8H_a1183e7175b1265d4bdae14d38ee03775}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!LSM\_\-W@{LSM\_\-W}}
+\index{LSM\_\-W@{LSM\_\-W}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{LSM\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define LSM\_\-W~175}}
+\label{WL__MENU_8H_a1183e7175b1265d4bdae14d38ee03775}
+\hypertarget{WL__MENU_8H_a6b5eb588d722f86b09369b40a4f762e3}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!LSM\_\-X@{LSM\_\-X}}
+\index{LSM\_\-X@{LSM\_\-X}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{LSM\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define LSM\_\-X~85}}
+\label{WL__MENU_8H_a6b5eb588d722f86b09369b40a4f762e3}
+\hypertarget{WL__MENU_8H_a4c59449f0196f3dfa779565be7210291}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!LSM\_\-Y@{LSM\_\-Y}}
+\index{LSM\_\-Y@{LSM\_\-Y}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{LSM\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define LSM\_\-Y~55}}
+\label{WL__MENU_8H_a4c59449f0196f3dfa779565be7210291}
+\hypertarget{WL__MENU_8H_a9552ba249c0540ffe9a08a05d1b92504}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MENU\_\-H@{MENU\_\-H}}
+\index{MENU\_\-H@{MENU\_\-H}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MENU\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define MENU\_\-H~13$\ast$10+6}}
+\label{WL__MENU_8H_a9552ba249c0540ffe9a08a05d1b92504}
+\hypertarget{WL__MENU_8H_a8ab012c9b505a97138d6f18221340188}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MENU\_\-W@{MENU\_\-W}}
+\index{MENU\_\-W@{MENU\_\-W}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MENU\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define MENU\_\-W~178}}
+\label{WL__MENU_8H_a8ab012c9b505a97138d6f18221340188}
+\hypertarget{WL__MENU_8H_a8dafcd9723e98213f42d0234c20b84a5}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MENU\_\-X@{MENU\_\-X}}
+\index{MENU\_\-X@{MENU\_\-X}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MENU\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define MENU\_\-X~76}}
+\label{WL__MENU_8H_a8dafcd9723e98213f42d0234c20b84a5}
+\hypertarget{WL__MENU_8H_ab5f43ff9ab0e3f21e92d4729d84e57ac}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MENU\_\-Y@{MENU\_\-Y}}
+\index{MENU\_\-Y@{MENU\_\-Y}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MENU\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define MENU\_\-Y~55}}
+\label{WL__MENU_8H_ab5f43ff9ab0e3f21e92d4729d84e57ac}
+\hypertarget{WL__MENU_8H_a7abcebe728e405c0e69ef7df884cee84}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MenuFadeIn@{MenuFadeIn}}
+\index{MenuFadeIn@{MenuFadeIn}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MenuFadeIn}]{\setlength{\rightskip}{0pt plus 5cm}\#define MenuFadeIn(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VL\_\-FadeIn(0,255,\&{\bf gamepal},10)}}
+\label{WL__MENU_8H_a7abcebe728e405c0e69ef7df884cee84}
+\hypertarget{WL__MENU_8H_af3ead645701acec9699bdc9822840cd8}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MenuFadeOut@{MenuFadeOut}}
+\index{MenuFadeOut@{MenuFadeOut}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MenuFadeOut}]{\setlength{\rightskip}{0pt plus 5cm}\#define MenuFadeOut(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VL\_\-FadeOut(0,255,43,0,0,10)}}
+\label{WL__MENU_8H_af3ead645701acec9699bdc9822840cd8}
+\hypertarget{WL__MENU_8H_af7aa50d0848a57fd37f687618913a738}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MENUSONG@{MENUSONG}}
+\index{MENUSONG@{MENUSONG}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MENUSONG}]{\setlength{\rightskip}{0pt plus 5cm}\#define MENUSONG~WONDERIN\_\-MUS}}
+\label{WL__MENU_8H_af7aa50d0848a57fd37f687618913a738}
+\hypertarget{WL__MENU_8H_a40f32b371fcb5d3259aefeaffc947b4a}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NE\_\-H@{NE\_\-H}}
+\index{NE\_\-H@{NE\_\-H}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NE\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define NE\_\-H~200-\/NE\_\-Y$\ast$2}}
+\label{WL__MENU_8H_a40f32b371fcb5d3259aefeaffc947b4a}
+\hypertarget{WL__MENU_8H_ab6ee9aa27ac3d8b20b387e1e5f7e61cc}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NE\_\-W@{NE\_\-W}}
+\index{NE\_\-W@{NE\_\-W}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NE\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define NE\_\-W~320-\/NE\_\-X$\ast$2}}
+\label{WL__MENU_8H_ab6ee9aa27ac3d8b20b387e1e5f7e61cc}
+\hypertarget{WL__MENU_8H_affb8b54e656a6b139ffc7a8ea9d8621b}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NE\_\-X@{NE\_\-X}}
+\index{NE\_\-X@{NE\_\-X}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NE\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define NE\_\-X~10}}
+\label{WL__MENU_8H_affb8b54e656a6b139ffc7a8ea9d8621b}
+\hypertarget{WL__MENU_8H_ace26f50287df4fa928622557b530cfec}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NE\_\-Y@{NE\_\-Y}}
+\index{NE\_\-Y@{NE\_\-Y}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NE\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define NE\_\-Y~23}}
+\label{WL__MENU_8H_ace26f50287df4fa928622557b530cfec}
+\hypertarget{WL__MENU_8H_affe12a31ae23e18983089780977546e4}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NM\_\-H@{NM\_\-H}}
+\index{NM\_\-H@{NM\_\-H}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NM\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define NM\_\-H~13$\ast$4+15}}
+\label{WL__MENU_8H_affe12a31ae23e18983089780977546e4}
+\hypertarget{WL__MENU_8H_a42988533be9ee3462e8dd820e852c69e}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NM\_\-W@{NM\_\-W}}
+\index{NM\_\-W@{NM\_\-W}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NM\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define NM\_\-W~225}}
+\label{WL__MENU_8H_a42988533be9ee3462e8dd820e852c69e}
+\hypertarget{WL__MENU_8H_a446f2f83d0e0ce3106bf26ae1e53f860}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NM\_\-X@{NM\_\-X}}
+\index{NM\_\-X@{NM\_\-X}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NM\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define NM\_\-X~50}}
+\label{WL__MENU_8H_a446f2f83d0e0ce3106bf26ae1e53f860}
+\hypertarget{WL__MENU_8H_a3b8dafeec7205f4cf6411c1c177f7acc}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NM\_\-Y@{NM\_\-Y}}
+\index{NM\_\-Y@{NM\_\-Y}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NM\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define NM\_\-Y~100}}
+\label{WL__MENU_8H_a3b8dafeec7205f4cf6411c1c177f7acc}
+\hypertarget{WL__MENU_8H_a9a7d817b9b9913dc74c00eb85f61cbd5}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!READCOLOR@{READCOLOR}}
+\index{READCOLOR@{READCOLOR}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{READCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define READCOLOR~0x4a}}
+\label{WL__MENU_8H_a9a7d817b9b9913dc74c00eb85f61cbd5}
+\hypertarget{WL__MENU_8H_a30fa6a5c3fd07d3fd008bad2636a2664}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!READHCOLOR@{READHCOLOR}}
+\index{READHCOLOR@{READHCOLOR}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{READHCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define READHCOLOR~0x47}}
+\label{WL__MENU_8H_a30fa6a5c3fd07d3fd008bad2636a2664}
+\hypertarget{WL__MENU_8H_a1df4ff7337c70fd414bdb050e2344649}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SENSITIVE@{SENSITIVE}}
+\index{SENSITIVE@{SENSITIVE}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SENSITIVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SENSITIVE~60}}
+\label{WL__MENU_8H_a1df4ff7337c70fd414bdb050e2344649}
+\hypertarget{WL__MENU_8H_adba6dfabf755e54c84886c57ca504ce7}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-H1@{SM\_\-H1}}
+\index{SM\_\-H1@{SM\_\-H1}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-H1}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-H1~4$\ast$13-\/7}}
+\label{WL__MENU_8H_adba6dfabf755e54c84886c57ca504ce7}
+\hypertarget{WL__MENU_8H_a48d5362cb91bcd83d38c0938355084e1}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-H2@{SM\_\-H2}}
+\index{SM\_\-H2@{SM\_\-H2}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-H2}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-H2~4$\ast$13-\/7}}
+\label{WL__MENU_8H_a48d5362cb91bcd83d38c0938355084e1}
+\hypertarget{WL__MENU_8H_a1778354e4291b2fbceb434ac96d5dfcd}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-H3@{SM\_\-H3}}
+\index{SM\_\-H3@{SM\_\-H3}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-H3}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-H3~3$\ast$13-\/7}}
+\label{WL__MENU_8H_a1778354e4291b2fbceb434ac96d5dfcd}
+\hypertarget{WL__MENU_8H_a98fb002600c4a059117b60e6901c9e4e}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-W@{SM\_\-W}}
+\index{SM\_\-W@{SM\_\-W}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-W~250}}
+\label{WL__MENU_8H_a98fb002600c4a059117b60e6901c9e4e}
+\hypertarget{WL__MENU_8H_a32546f28fceb0d6cfd271f4e67a960da}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-X@{SM\_\-X}}
+\index{SM\_\-X@{SM\_\-X}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-X~48}}
+\label{WL__MENU_8H_a32546f28fceb0d6cfd271f4e67a960da}
+\hypertarget{WL__MENU_8H_a91b9840ef31e8ea3213dfde423aa3f7f}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-Y1@{SM\_\-Y1}}
+\index{SM\_\-Y1@{SM\_\-Y1}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-Y1}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-Y1~20}}
+\label{WL__MENU_8H_a91b9840ef31e8ea3213dfde423aa3f7f}
+\hypertarget{WL__MENU_8H_a0181ef73bf2f87d1a7165418aca923f2}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-Y2@{SM\_\-Y2}}
+\index{SM\_\-Y2@{SM\_\-Y2}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-Y2}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-Y2~SM\_\-Y1+5$\ast$13}}
+\label{WL__MENU_8H_a0181ef73bf2f87d1a7165418aca923f2}
+\hypertarget{WL__MENU_8H_a749d1c9729b10cf5a7b8ea1216384d53}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SM\_\-Y3@{SM\_\-Y3}}
+\index{SM\_\-Y3@{SM\_\-Y3}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SM\_\-Y3}]{\setlength{\rightskip}{0pt plus 5cm}\#define SM\_\-Y3~SM\_\-Y2+5$\ast$13}}
+\label{WL__MENU_8H_a749d1c9729b10cf5a7b8ea1216384d53}
+\hypertarget{WL__MENU_8H_abc0565e3e9d832a18d398bffaa8ef145}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!STRIPE@{STRIPE}}
+\index{STRIPE@{STRIPE}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{STRIPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define STRIPE~0x2c}}
+\label{WL__MENU_8H_abc0565e3e9d832a18d398bffaa8ef145}
+\hypertarget{WL__MENU_8H_a58826078218d8f7c940b9bd33b005179}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!TEXTCOLOR@{TEXTCOLOR}}
+\index{TEXTCOLOR@{TEXTCOLOR}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{TEXTCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define TEXTCOLOR~0x17}}
+\label{WL__MENU_8H_a58826078218d8f7c940b9bd33b005179}
+\hypertarget{WL__MENU_8H_a425bfb32e29bb949cb0b1cb76c99a76e}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!VIEWCOLOR@{VIEWCOLOR}}
+\index{VIEWCOLOR@{VIEWCOLOR}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{VIEWCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIEWCOLOR~0x7f}}
+\label{WL__MENU_8H_a425bfb32e29bb949cb0b1cb76c99a76e}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600}{
+\subsubsection[{"@8}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{MOUSE@{MOUSE}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MOUSE@{MOUSE}}\item[{\em 
+\hypertarget{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a6abd13b0a6bf7894c7ceb5ff45ddbc14}{
+MOUSE}
+\label{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a6abd13b0a6bf7894c7ceb5ff45ddbc14}
+}]\index{JOYSTICK@{JOYSTICK}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!JOYSTICK@{JOYSTICK}}\item[{\em 
+\hypertarget{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a9cdb4c7b3f2d3cd904160e767d3a4a2c}{
+JOYSTICK}
+\label{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a9cdb4c7b3f2d3cd904160e767d3a4a2c}
+}]\index{KEYBOARDBTNS@{KEYBOARDBTNS}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!KEYBOARDBTNS@{KEYBOARDBTNS}}\item[{\em 
+\hypertarget{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a6a2b988f19e82c65655964b55ecf322e}{
+KEYBOARDBTNS}
+\label{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600a6a2b988f19e82c65655964b55ecf322e}
+}]\index{KEYBOARDMOVE@{KEYBOARDMOVE}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!KEYBOARDMOVE@{KEYBOARDMOVE}}\item[{\em 
+\hypertarget{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600ac6d3a13ad93e7cad6bf31e5c349fbb9d}{
+KEYBOARDMOVE}
+\label{WL__MENU_8H_abed82baf7f470b522273a3e37c24c600ac6d3a13ad93e7cad6bf31e5c349fbb9d}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57}{
+\subsubsection[{"@9}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{newgame@{newgame}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!newgame@{newgame}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57abfd204677e264646f71160799d5ca0ce}{
+newgame}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57abfd204677e264646f71160799d5ca0ce}
+}]\index{soundmenu@{soundmenu}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!soundmenu@{soundmenu}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57afba6cb3ce82a267047b32e542ca61fab}{
+soundmenu}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57afba6cb3ce82a267047b32e542ca61fab}
+}]\index{control@{control}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!control@{control}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a5d8add8effb2a9964dbebfd27c9ddd31}{
+control}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a5d8add8effb2a9964dbebfd27c9ddd31}
+}]\index{loadgame@{loadgame}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!loadgame@{loadgame}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a128d476ac05e495b6339f4b2e068dc9f}{
+loadgame}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a128d476ac05e495b6339f4b2e068dc9f}
+}]\index{savegame@{savegame}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!savegame@{savegame}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a2b32c28cb822c23f53849ed6ec6e3197}{
+savegame}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a2b32c28cb822c23f53849ed6ec6e3197}
+}]\index{changeview@{changeview}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!changeview@{changeview}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57ab35853708366be9a53171f82bfa817c5}{
+changeview}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57ab35853708366be9a53171f82bfa817c5}
+}]\index{readthis@{readthis}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!readthis@{readthis}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a3f189de1562f1f36d754428334506c48}{
+readthis}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a3f189de1562f1f36d754428334506c48}
+}]\index{viewscores@{viewscores}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!viewscores@{viewscores}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a960ceb630d8895150ed6a8453e5e9cee}{
+viewscores}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a960ceb630d8895150ed6a8453e5e9cee}
+}]\index{backtodemo@{backtodemo}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!backtodemo@{backtodemo}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a7ccf5bcc5ed10be3c03204184999932a}{
+backtodemo}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a7ccf5bcc5ed10be3c03204184999932a}
+}]\index{quit@{quit}!WL\_\-MENU.H@{WL\_\-MENU.H}}\index{WL\_\-MENU.H@{WL\_\-MENU.H}!quit@{quit}}\item[{\em 
+\hypertarget{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a3b81dce366295e52b47ca4d263ba8335}{
+quit}
+\label{WL__MENU_8H_ab04a0655cd1e3bcac5e8f48c18df1a57a3b81dce366295e52b47ca4d263ba8335}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__MENU_8H_a39a54ce56d7e78076c8a5f6c12355814}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!BossKey@{BossKey}}
+\index{BossKey@{BossKey}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{BossKey}]{\setlength{\rightskip}{0pt plus 5cm}void BossKey (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a39a54ce56d7e78076c8a5f6c12355814}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a39a54ce56d7e78076c8a5f6c12355814_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a03aae71ea1eb201f2e7e4b0408c1c426}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CacheLump@{CacheLump}}
+\index{CacheLump@{CacheLump}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CacheLump}]{\setlength{\rightskip}{0pt plus 5cm}void CacheLump (
+\begin{DoxyParamCaption}
+\item[{int}]{lumpstart, }
+\item[{int}]{lumpend}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a03aae71ea1eb201f2e7e4b0408c1c426}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a03aae71ea1eb201f2e7e4b0408c1c426_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a03aae71ea1eb201f2e7e4b0408c1c426_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ad57118b3592a6be117bc85d1418bb6b9}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CheckForEpisodes@{CheckForEpisodes}}
+\index{CheckForEpisodes@{CheckForEpisodes}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CheckForEpisodes}]{\setlength{\rightskip}{0pt plus 5cm}void CheckForEpisodes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ad57118b3592a6be117bc85d1418bb6b9}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{WL__MENU_8H_ad57118b3592a6be117bc85d1418bb6b9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad57118b3592a6be117bc85d1418bb6b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a091147f2346aaad8a89508a27b711c3f}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CheckPause@{CheckPause}}
+\index{CheckPause@{CheckPause}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CheckPause}]{\setlength{\rightskip}{0pt plus 5cm}void CheckPause (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a091147f2346aaad8a89508a27b711c3f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=370pt]{WL__MENU_8H_a091147f2346aaad8a89508a27b711c3f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a091147f2346aaad8a89508a27b711c3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_adf80f60f97a1eae5b762f0d7234be326}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CheckSecretMissions@{CheckSecretMissions}}
+\index{CheckSecretMissions@{CheckSecretMissions}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CheckSecretMissions}]{\setlength{\rightskip}{0pt plus 5cm}void CheckSecretMissions (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_adf80f60f97a1eae5b762f0d7234be326}
+\hypertarget{WL__MENU_8H_adaff6c2a2e08ddb9a2e1bc122ea0c546}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CleanupControlPanel@{CleanupControlPanel}}
+\index{CleanupControlPanel@{CleanupControlPanel}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CleanupControlPanel}]{\setlength{\rightskip}{0pt plus 5cm}void CleanupControlPanel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_adaff6c2a2e08ddb9a2e1bc122ea0c546}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{WL__MENU_8H_adaff6c2a2e08ddb9a2e1bc122ea0c546_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_adaff6c2a2e08ddb9a2e1bc122ea0c546_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a7a8e53f3f469cbf79c3f55807761d3bb}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!ClearMScreen@{ClearMScreen}}
+\index{ClearMScreen@{ClearMScreen}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{ClearMScreen}]{\setlength{\rightskip}{0pt plus 5cm}void ClearMScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a7a8e53f3f469cbf79c3f55807761d3bb}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a7a8e53f3f469cbf79c3f55807761d3bb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a7a8e53f3f469cbf79c3f55807761d3bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a03f63a618731c692b7496b92fa2002bd}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!Confirm@{Confirm}}
+\index{Confirm@{Confirm}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{Confirm}]{\setlength{\rightskip}{0pt plus 5cm}int Confirm (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a03f63a618731c692b7496b92fa2002bd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a03f63a618731c692b7496b92fa2002bd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a03f63a618731c692b7496b92fa2002bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a95a4685a2d017477e6a863344b787642}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-ChangeView@{CP\_\-ChangeView}}
+\index{CP\_\-ChangeView@{CP\_\-ChangeView}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-ChangeView}]{\setlength{\rightskip}{0pt plus 5cm}void CP\_\-ChangeView (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a95a4685a2d017477e6a863344b787642}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a95a4685a2d017477e6a863344b787642_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a95a4685a2d017477e6a863344b787642_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a95a8089ef599aecc8a81f90ba35032dd}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-CheckQuick@{CP\_\-CheckQuick}}
+\index{CP\_\-CheckQuick@{CP\_\-CheckQuick}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-CheckQuick}]{\setlength{\rightskip}{0pt plus 5cm}int CP\_\-CheckQuick (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{scancode}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a95a8089ef599aecc8a81f90ba35032dd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a95a8089ef599aecc8a81f90ba35032dd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a95a8089ef599aecc8a81f90ba35032dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a8d89e45be2c67ed682acb9ee0c09cd75}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-Control@{CP\_\-Control}}
+\index{CP\_\-Control@{CP\_\-Control}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void CP\_\-Control (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a8d89e45be2c67ed682acb9ee0c09cd75}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MENU_8H_a8d89e45be2c67ed682acb9ee0c09cd75_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a8d89e45be2c67ed682acb9ee0c09cd75_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a36185687b73d760059be35f2c35aaad1}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-EndGame@{CP\_\-EndGame}}
+\index{CP\_\-EndGame@{CP\_\-EndGame}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-EndGame}]{\setlength{\rightskip}{0pt plus 5cm}int CP\_\-EndGame (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a36185687b73d760059be35f2c35aaad1}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a36185687b73d760059be35f2c35aaad1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a36185687b73d760059be35f2c35aaad1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_aaca709d19705758fef8027de66d132d4}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-ExitOptions@{CP\_\-ExitOptions}}
+\index{CP\_\-ExitOptions@{CP\_\-ExitOptions}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-ExitOptions}]{\setlength{\rightskip}{0pt plus 5cm}void CP\_\-ExitOptions (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_aaca709d19705758fef8027de66d132d4}
+\hypertarget{WL__MENU_8H_a2ca12f5b43c80ee49b36a78621ac8ce4}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-LoadGame@{CP\_\-LoadGame}}
+\index{CP\_\-LoadGame@{CP\_\-LoadGame}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-LoadGame}]{\setlength{\rightskip}{0pt plus 5cm}int CP\_\-LoadGame (
+\begin{DoxyParamCaption}
+\item[{int}]{quick}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a2ca12f5b43c80ee49b36a78621ac8ce4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MENU_8H_a2ca12f5b43c80ee49b36a78621ac8ce4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a2ca12f5b43c80ee49b36a78621ac8ce4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a8f189c2d0971b91261fe50e58bc4b64a}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-NewGame@{CP\_\-NewGame}}
+\index{CP\_\-NewGame@{CP\_\-NewGame}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-NewGame}]{\setlength{\rightskip}{0pt plus 5cm}void CP\_\-NewGame (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a8f189c2d0971b91261fe50e58bc4b64a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MENU_8H_a8f189c2d0971b91261fe50e58bc4b64a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ad29825b90b8a92ca853643f18f868705}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-Quit@{CP\_\-Quit}}
+\index{CP\_\-Quit@{CP\_\-Quit}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-Quit}]{\setlength{\rightskip}{0pt plus 5cm}void CP\_\-Quit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ad29825b90b8a92ca853643f18f868705}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad29825b90b8a92ca853643f18f868705_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad29825b90b8a92ca853643f18f868705_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a62fb7c17655ed1e0031cbeafd182ee31}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-SaveGame@{CP\_\-SaveGame}}
+\index{CP\_\-SaveGame@{CP\_\-SaveGame}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-SaveGame}]{\setlength{\rightskip}{0pt plus 5cm}int CP\_\-SaveGame (
+\begin{DoxyParamCaption}
+\item[{int}]{quick}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a62fb7c17655ed1e0031cbeafd182ee31}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MENU_8H_a62fb7c17655ed1e0031cbeafd182ee31_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a62fb7c17655ed1e0031cbeafd182ee31_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a33c03c428f4fe132d1e5006416422ed4}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-Sound@{CP\_\-Sound}}
+\index{CP\_\-Sound@{CP\_\-Sound}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-Sound}]{\setlength{\rightskip}{0pt plus 5cm}void CP\_\-Sound (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a33c03c428f4fe132d1e5006416422ed4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MENU_8H_a33c03c428f4fe132d1e5006416422ed4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a33c03c428f4fe132d1e5006416422ed4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a5d2d9c59773600f8b810e6f8a715a21f}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CP\_\-ViewScores@{CP\_\-ViewScores}}
+\index{CP\_\-ViewScores@{CP\_\-ViewScores}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CP\_\-ViewScores}]{\setlength{\rightskip}{0pt plus 5cm}void CP\_\-ViewScores (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a5d2d9c59773600f8b810e6f8a715a21f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a5d2d9c59773600f8b810e6f8a715a21f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a5d2d9c59773600f8b810e6f8a715a21f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a0631548359f161b2a227317582c6c4a6}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!CustomControls@{CustomControls}}
+\index{CustomControls@{CustomControls}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{CustomControls}]{\setlength{\rightskip}{0pt plus 5cm}void CustomControls (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a0631548359f161b2a227317582c6c4a6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a0631548359f161b2a227317582c6c4a6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a0a00df1716b0a174dc25901d829aea93}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DefineJoyBtns@{DefineJoyBtns}}
+\index{DefineJoyBtns@{DefineJoyBtns}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DefineJoyBtns}]{\setlength{\rightskip}{0pt plus 5cm}void DefineJoyBtns (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a0a00df1716b0a174dc25901d829aea93}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a0a00df1716b0a174dc25901d829aea93_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{WL__MENU_8H_a0a00df1716b0a174dc25901d829aea93_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a6f23a62131fda11af6f0aa3002bdfffb}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DefineKeyBtns@{DefineKeyBtns}}
+\index{DefineKeyBtns@{DefineKeyBtns}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DefineKeyBtns}]{\setlength{\rightskip}{0pt plus 5cm}void DefineKeyBtns (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a6f23a62131fda11af6f0aa3002bdfffb}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a6f23a62131fda11af6f0aa3002bdfffb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{WL__MENU_8H_a6f23a62131fda11af6f0aa3002bdfffb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a666771efec8f7ee7f225adda60c1f5e0}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DefineKeyMove@{DefineKeyMove}}
+\index{DefineKeyMove@{DefineKeyMove}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DefineKeyMove}]{\setlength{\rightskip}{0pt plus 5cm}void DefineKeyMove (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a666771efec8f7ee7f225adda60c1f5e0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a666771efec8f7ee7f225adda60c1f5e0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{WL__MENU_8H_a666771efec8f7ee7f225adda60c1f5e0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_af9ffcf08793f2da25a6f54f439e15ddf}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DefineMouseBtns@{DefineMouseBtns}}
+\index{DefineMouseBtns@{DefineMouseBtns}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DefineMouseBtns}]{\setlength{\rightskip}{0pt plus 5cm}void DefineMouseBtns (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_af9ffcf08793f2da25a6f54f439e15ddf}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_af9ffcf08793f2da25a6f54f439e15ddf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{WL__MENU_8H_af9ffcf08793f2da25a6f54f439e15ddf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ad799719f482b9ac14dab51685b6d635a}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawChangeView@{DrawChangeView}}
+\index{DrawChangeView@{DrawChangeView}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawChangeView}]{\setlength{\rightskip}{0pt plus 5cm}void DrawChangeView (
+\begin{DoxyParamCaption}
+\item[{int}]{view}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ad799719f482b9ac14dab51685b6d635a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad799719f482b9ac14dab51685b6d635a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad799719f482b9ac14dab51685b6d635a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_adc512396867a80e9e24c51d288b0c828}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawCtlScreen@{DrawCtlScreen}}
+\index{DrawCtlScreen@{DrawCtlScreen}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawCtlScreen}]{\setlength{\rightskip}{0pt plus 5cm}void DrawCtlScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_adc512396867a80e9e24c51d288b0c828}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_adc512396867a80e9e24c51d288b0c828_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_adc512396867a80e9e24c51d288b0c828_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a91236b82219168a5270605919725ba2c}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawCustJoy@{DrawCustJoy}}
+\index{DrawCustJoy@{DrawCustJoy}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawCustJoy}]{\setlength{\rightskip}{0pt plus 5cm}void DrawCustJoy (
+\begin{DoxyParamCaption}
+\item[{int}]{hilight}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a91236b82219168a5270605919725ba2c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=360pt]{WL__MENU_8H_a91236b82219168a5270605919725ba2c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a91236b82219168a5270605919725ba2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a55ce148269754602b0c814448911b27d}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawCustKeybd@{DrawCustKeybd}}
+\index{DrawCustKeybd@{DrawCustKeybd}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawCustKeybd}]{\setlength{\rightskip}{0pt plus 5cm}void DrawCustKeybd (
+\begin{DoxyParamCaption}
+\item[{int}]{hilight}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a55ce148269754602b0c814448911b27d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a55ce148269754602b0c814448911b27d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a55ce148269754602b0c814448911b27d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ace6221928d863a720c5674fad34b11fa}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawCustKeys@{DrawCustKeys}}
+\index{DrawCustKeys@{DrawCustKeys}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawCustKeys}]{\setlength{\rightskip}{0pt plus 5cm}void DrawCustKeys (
+\begin{DoxyParamCaption}
+\item[{int}]{hilight}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ace6221928d863a720c5674fad34b11fa}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ace6221928d863a720c5674fad34b11fa_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ace6221928d863a720c5674fad34b11fa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a79141a9518504a36ce3c15682aa836ec}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawCustMouse@{DrawCustMouse}}
+\index{DrawCustMouse@{DrawCustMouse}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawCustMouse}]{\setlength{\rightskip}{0pt plus 5cm}void DrawCustMouse (
+\begin{DoxyParamCaption}
+\item[{int}]{hilight}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a79141a9518504a36ce3c15682aa836ec}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=386pt]{WL__MENU_8H_a79141a9518504a36ce3c15682aa836ec_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a79141a9518504a36ce3c15682aa836ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a2173c3a8943509f99cb5ac01f2a111a6}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawCustomScreen@{DrawCustomScreen}}
+\index{DrawCustomScreen@{DrawCustomScreen}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawCustomScreen}]{\setlength{\rightskip}{0pt plus 5cm}void DrawCustomScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a2173c3a8943509f99cb5ac01f2a111a6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a2173c3a8943509f99cb5ac01f2a111a6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{WL__MENU_8H_a2173c3a8943509f99cb5ac01f2a111a6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_aa2214b22585686a8992038d77d4dbd3c}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawGun@{DrawGun}}
+\index{DrawGun@{DrawGun}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawGun}]{\setlength{\rightskip}{0pt plus 5cm}void DrawGun (
+\begin{DoxyParamCaption}
+\item[{{\bf CP\_\-iteminfo} $\ast$}]{item\_\-i, }
+\item[{{\bf CP\_\-itemtype} far $\ast$}]{items, }
+\item[{int}]{x, }
+\item[{int $\ast$}]{y, }
+\item[{int}]{which, }
+\item[{int}]{basey, }
+\item[{void($\ast$)(int w)}]{routine}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_aa2214b22585686a8992038d77d4dbd3c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_aa2214b22585686a8992038d77d4dbd3c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_aa2214b22585686a8992038d77d4dbd3c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ad838539ffa52a66afa3fc9d4ce9bef29}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawHalfStep@{DrawHalfStep}}
+\index{DrawHalfStep@{DrawHalfStep}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawHalfStep}]{\setlength{\rightskip}{0pt plus 5cm}void DrawHalfStep (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ad838539ffa52a66afa3fc9d4ce9bef29}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad838539ffa52a66afa3fc9d4ce9bef29_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad838539ffa52a66afa3fc9d4ce9bef29_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ae1fe464efcd5a1d1f43e8dabc2841832}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawLoadSaveScreen@{DrawLoadSaveScreen}}
+\index{DrawLoadSaveScreen@{DrawLoadSaveScreen}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawLoadSaveScreen}]{\setlength{\rightskip}{0pt plus 5cm}void DrawLoadSaveScreen (
+\begin{DoxyParamCaption}
+\item[{int}]{loadsave}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ae1fe464efcd5a1d1f43e8dabc2841832}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ae1fe464efcd5a1d1f43e8dabc2841832_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ae1fe464efcd5a1d1f43e8dabc2841832_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a70ea63f2a40cfe667ba078830e3071d4}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawLSAction@{DrawLSAction}}
+\index{DrawLSAction@{DrawLSAction}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawLSAction}]{\setlength{\rightskip}{0pt plus 5cm}void DrawLSAction (
+\begin{DoxyParamCaption}
+\item[{int}]{which}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a70ea63f2a40cfe667ba078830e3071d4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a70ea63f2a40cfe667ba078830e3071d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a70ea63f2a40cfe667ba078830e3071d4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a37408297ab32e806235fdbc3da553d8d}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawMainMenu@{DrawMainMenu}}
+\index{DrawMainMenu@{DrawMainMenu}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawMainMenu}]{\setlength{\rightskip}{0pt plus 5cm}void DrawMainMenu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a37408297ab32e806235fdbc3da553d8d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a37408297ab32e806235fdbc3da553d8d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a37408297ab32e806235fdbc3da553d8d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ad7ae5f8d3bfaf8e94d9c3fd004609229}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawMenu@{DrawMenu}}
+\index{DrawMenu@{DrawMenu}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawMenu}]{\setlength{\rightskip}{0pt plus 5cm}void DrawMenu (
+\begin{DoxyParamCaption}
+\item[{{\bf CP\_\-iteminfo} $\ast$}]{item\_\-i, }
+\item[{{\bf CP\_\-itemtype} far $\ast$}]{items}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ad7ae5f8d3bfaf8e94d9c3fd004609229}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{WL__MENU_8H_ad7ae5f8d3bfaf8e94d9c3fd004609229_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad7ae5f8d3bfaf8e94d9c3fd004609229_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a90a65e74d80272f0305d2537870c10ef}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawMenuGun@{DrawMenuGun}}
+\index{DrawMenuGun@{DrawMenuGun}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawMenuGun}]{\setlength{\rightskip}{0pt plus 5cm}void DrawMenuGun (
+\begin{DoxyParamCaption}
+\item[{{\bf CP\_\-iteminfo} $\ast$}]{iteminfo}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a90a65e74d80272f0305d2537870c10ef}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a90a65e74d80272f0305d2537870c10ef_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a90a65e74d80272f0305d2537870c10ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ac707d72c852bfe2a24938dde3c5397f6}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawMouseSens@{DrawMouseSens}}
+\index{DrawMouseSens@{DrawMouseSens}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawMouseSens}]{\setlength{\rightskip}{0pt plus 5cm}void DrawMouseSens (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ac707d72c852bfe2a24938dde3c5397f6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ac707d72c852bfe2a24938dde3c5397f6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{WL__MENU_8H_ac707d72c852bfe2a24938dde3c5397f6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a41d17005e1b49c4a62b1506b9d213a12}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawNewEpisode@{DrawNewEpisode}}
+\index{DrawNewEpisode@{DrawNewEpisode}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawNewEpisode}]{\setlength{\rightskip}{0pt plus 5cm}void DrawNewEpisode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a41d17005e1b49c4a62b1506b9d213a12}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a41d17005e1b49c4a62b1506b9d213a12_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{WL__MENU_8H_a41d17005e1b49c4a62b1506b9d213a12_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a4f8733a1d462a92cecf3cff18eb486ba}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawNewGame@{DrawNewGame}}
+\index{DrawNewGame@{DrawNewGame}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawNewGame}]{\setlength{\rightskip}{0pt plus 5cm}void DrawNewGame (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a4f8733a1d462a92cecf3cff18eb486ba}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a4f8733a1d462a92cecf3cff18eb486ba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{WL__MENU_8H_a4f8733a1d462a92cecf3cff18eb486ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_aafd1b4c9e4950fe29a16710ad71376d5}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawNewGameDiff@{DrawNewGameDiff}}
+\index{DrawNewGameDiff@{DrawNewGameDiff}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawNewGameDiff}]{\setlength{\rightskip}{0pt plus 5cm}void DrawNewGameDiff (
+\begin{DoxyParamCaption}
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_aafd1b4c9e4950fe29a16710ad71376d5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_aafd1b4c9e4950fe29a16710ad71376d5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_aafd1b4c9e4950fe29a16710ad71376d5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a932353c4f637452b49ee6e1a4c382bf5}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawOutline@{DrawOutline}}
+\index{DrawOutline@{DrawOutline}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawOutline}]{\setlength{\rightskip}{0pt plus 5cm}void DrawOutline (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{color1, }
+\item[{int}]{color2}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a932353c4f637452b49ee6e1a4c382bf5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a932353c4f637452b49ee6e1a4c382bf5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a932353c4f637452b49ee6e1a4c382bf5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a7ecd6a0fd9c404482ff312f2acd68271}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawSoundMenu@{DrawSoundMenu}}
+\index{DrawSoundMenu@{DrawSoundMenu}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawSoundMenu}]{\setlength{\rightskip}{0pt plus 5cm}void DrawSoundMenu (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a7ecd6a0fd9c404482ff312f2acd68271}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a7ecd6a0fd9c404482ff312f2acd68271_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a7ecd6a0fd9c404482ff312f2acd68271_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a81a9dfc7b2dab1a015d6be0c329e094b}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawStripes@{DrawStripes}}
+\index{DrawStripes@{DrawStripes}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawStripes}]{\setlength{\rightskip}{0pt plus 5cm}void DrawStripes (
+\begin{DoxyParamCaption}
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a81a9dfc7b2dab1a015d6be0c329e094b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a81a9dfc7b2dab1a015d6be0c329e094b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a81a9dfc7b2dab1a015d6be0c329e094b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a904e939ab3e905847095245ec694d845}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!DrawWindow@{DrawWindow}}
+\index{DrawWindow@{DrawWindow}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{DrawWindow}]{\setlength{\rightskip}{0pt plus 5cm}void DrawWindow (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{int}]{wcolor}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a904e939ab3e905847095245ec694d845}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a904e939ab3e905847095245ec694d845_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a904e939ab3e905847095245ec694d845_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a94d0412c951284a8ea98378116c23566}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!EnterCtrlData@{EnterCtrlData}}
+\index{EnterCtrlData@{EnterCtrlData}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{EnterCtrlData}]{\setlength{\rightskip}{0pt plus 5cm}void EnterCtrlData (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{{\bf CustomCtrls} $\ast$}]{cust, }
+\item[{void($\ast$)(int)}]{DrawRtn, }
+\item[{void($\ast$)(int)}]{PrintRtn, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a94d0412c951284a8ea98378116c23566}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a94d0412c951284a8ea98378116c23566_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a94d0412c951284a8ea98378116c23566_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ac0d2328b065d28f9db037264a780fab4}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!EraseGun@{EraseGun}}
+\index{EraseGun@{EraseGun}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{EraseGun}]{\setlength{\rightskip}{0pt plus 5cm}void EraseGun (
+\begin{DoxyParamCaption}
+\item[{{\bf CP\_\-iteminfo} $\ast$}]{item\_\-i, }
+\item[{{\bf CP\_\-itemtype} far $\ast$}]{items, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{which}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ac0d2328b065d28f9db037264a780fab4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ac0d2328b065d28f9db037264a780fab4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ac0d2328b065d28f9db037264a780fab4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a7754ea2238d7a0c2711434bbc6b56379}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!FixupCustom@{FixupCustom}}
+\index{FixupCustom@{FixupCustom}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{FixupCustom}]{\setlength{\rightskip}{0pt plus 5cm}void FixupCustom (
+\begin{DoxyParamCaption}
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a7754ea2238d7a0c2711434bbc6b56379}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a7754ea2238d7a0c2711434bbc6b56379_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{WL__MENU_8H_a7754ea2238d7a0c2711434bbc6b56379_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ab99c9ad73f67e91963071c21c3694637}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!GetYorN@{GetYorN}}
+\index{GetYorN@{GetYorN}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{GetYorN}]{\setlength{\rightskip}{0pt plus 5cm}int GetYorN (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{pic}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ab99c9ad73f67e91963071c21c3694637}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ab99c9ad73f67e91963071c21c3694637_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ad290f8e33560355805666460ffa302b0}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!HandleMenu@{HandleMenu}}
+\index{HandleMenu@{HandleMenu}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{HandleMenu}]{\setlength{\rightskip}{0pt plus 5cm}int HandleMenu (
+\begin{DoxyParamCaption}
+\item[{{\bf CP\_\-iteminfo} $\ast$}]{item\_\-i, }
+\item[{{\bf CP\_\-itemtype} far $\ast$}]{items, }
+\item[{void($\ast$)(int w)}]{routine}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ad290f8e33560355805666460ffa302b0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad290f8e33560355805666460ffa302b0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad290f8e33560355805666460ffa302b0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a42108cf0eef44550e9428222e11de2a3}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!Message@{Message}}
+\index{Message@{Message}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{Message}]{\setlength{\rightskip}{0pt plus 5cm}void Message (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a42108cf0eef44550e9428222e11de2a3}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a42108cf0eef44550e9428222e11de2a3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a42108cf0eef44550e9428222e11de2a3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a8a190d4f3b624a81b86aa5c75d1bd4d1}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MouseSensitivity@{MouseSensitivity}}
+\index{MouseSensitivity@{MouseSensitivity}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MouseSensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void MouseSensitivity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a8a190d4f3b624a81b86aa5c75d1bd4d1}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a8a190d4f3b624a81b86aa5c75d1bd4d1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_aa6b18519250a34e966e6900c6328008b}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NonShareware@{NonShareware}}
+\index{NonShareware@{NonShareware}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NonShareware}]{\setlength{\rightskip}{0pt plus 5cm}void NonShareware (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_aa6b18519250a34e966e6900c6328008b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_aa6b18519250a34e966e6900c6328008b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_aa6b18519250a34e966e6900c6328008b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a88eda1a3eb3e81618c3fdd5debf5f8ff}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!PrintCustJoy@{PrintCustJoy}}
+\index{PrintCustJoy@{PrintCustJoy}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{PrintCustJoy}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCustJoy (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a88eda1a3eb3e81618c3fdd5debf5f8ff}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{WL__MENU_8H_a88eda1a3eb3e81618c3fdd5debf5f8ff_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a88eda1a3eb3e81618c3fdd5debf5f8ff_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_adcd1d339231514422736a0da10f0b92b}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!PrintCustKeybd@{PrintCustKeybd}}
+\index{PrintCustKeybd@{PrintCustKeybd}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{PrintCustKeybd}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCustKeybd (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_adcd1d339231514422736a0da10f0b92b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{WL__MENU_8H_adcd1d339231514422736a0da10f0b92b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_adcd1d339231514422736a0da10f0b92b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_aff9049f7e08b5e6a90e8da5bb81b287a}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!PrintCustKeys@{PrintCustKeys}}
+\index{PrintCustKeys@{PrintCustKeys}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{PrintCustKeys}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCustKeys (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_aff9049f7e08b5e6a90e8da5bb81b287a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{WL__MENU_8H_aff9049f7e08b5e6a90e8da5bb81b287a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_aff9049f7e08b5e6a90e8da5bb81b287a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a997209233b25445a026a6e5ca017dd57}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!PrintCustMouse@{PrintCustMouse}}
+\index{PrintCustMouse@{PrintCustMouse}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{PrintCustMouse}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCustMouse (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a997209233b25445a026a6e5ca017dd57}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{WL__MENU_8H_a997209233b25445a026a6e5ca017dd57_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a997209233b25445a026a6e5ca017dd57_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_acaacbb88f7b7d163245141e126592577}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!PrintLSEntry@{PrintLSEntry}}
+\index{PrintLSEntry@{PrintLSEntry}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{PrintLSEntry}]{\setlength{\rightskip}{0pt plus 5cm}void PrintLSEntry (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_acaacbb88f7b7d163245141e126592577}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_acaacbb88f7b7d163245141e126592577_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_acaacbb88f7b7d163245141e126592577_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a203c5a4b291ebd6bf7b0fb11b5905e6c}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!ReadAnyControl@{ReadAnyControl}}
+\index{ReadAnyControl@{ReadAnyControl}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{ReadAnyControl}]{\setlength{\rightskip}{0pt plus 5cm}void ReadAnyControl (
+\begin{DoxyParamCaption}
+\item[{{\bf ControlInfo} $\ast$}]{ci}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a203c5a4b291ebd6bf7b0fb11b5905e6c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a203c5a4b291ebd6bf7b0fb11b5905e6c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a203c5a4b291ebd6bf7b0fb11b5905e6c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a604ee41d936e798d09c96e1e0895a983}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SetTextColor@{SetTextColor}}
+\index{SetTextColor@{SetTextColor}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SetTextColor}]{\setlength{\rightskip}{0pt plus 5cm}void SetTextColor (
+\begin{DoxyParamCaption}
+\item[{{\bf CP\_\-itemtype} far $\ast$}]{items, }
+\item[{int}]{hlight}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a604ee41d936e798d09c96e1e0895a983}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a604ee41d936e798d09c96e1e0895a983_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a3c358410161fc65eb8b58e7e7e47b409}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SetupControlPanel@{SetupControlPanel}}
+\index{SetupControlPanel@{SetupControlPanel}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SetupControlPanel}]{\setlength{\rightskip}{0pt plus 5cm}void SetupControlPanel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a3c358410161fc65eb8b58e7e7e47b409}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a3c358410161fc65eb8b58e7e7e47b409_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a3c358410161fc65eb8b58e7e7e47b409_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a5dd49cf82c780b8d761f20d9af4771e9}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!ShootSnd@{ShootSnd}}
+\index{ShootSnd@{ShootSnd}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{ShootSnd}]{\setlength{\rightskip}{0pt plus 5cm}void ShootSnd (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a5dd49cf82c780b8d761f20d9af4771e9}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a5dd49cf82c780b8d761f20d9af4771e9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a5dd49cf82c780b8d761f20d9af4771e9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a4f6ff7d7af8823a0cd9a4a7217a151de}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!StartCPMusic@{StartCPMusic}}
+\index{StartCPMusic@{StartCPMusic}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{StartCPMusic}]{\setlength{\rightskip}{0pt plus 5cm}void StartCPMusic (
+\begin{DoxyParamCaption}
+\item[{int}]{song}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a4f6ff7d7af8823a0cd9a4a7217a151de}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a4f6ff7d7af8823a0cd9a4a7217a151de_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a4f6ff7d7af8823a0cd9a4a7217a151de_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a4f5f54a27864fe7144f735c2d3529774}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!TicDelay@{TicDelay}}
+\index{TicDelay@{TicDelay}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{TicDelay}]{\setlength{\rightskip}{0pt plus 5cm}void TicDelay (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a4f5f54a27864fe7144f735c2d3529774}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a4f5f54a27864fe7144f735c2d3529774_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a4f5f54a27864fe7144f735c2d3529774_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ad95aadf50d120f80e53480d55e7a1824}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!TrackWhichGame@{TrackWhichGame}}
+\index{TrackWhichGame@{TrackWhichGame}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{TrackWhichGame}]{\setlength{\rightskip}{0pt plus 5cm}void TrackWhichGame (
+\begin{DoxyParamCaption}
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ad95aadf50d120f80e53480d55e7a1824}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad95aadf50d120f80e53480d55e7a1824_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ad95aadf50d120f80e53480d55e7a1824_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_ae68019294ac4f3a9df949035a4c36cf8}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!UnCacheLump@{UnCacheLump}}
+\index{UnCacheLump@{UnCacheLump}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{UnCacheLump}]{\setlength{\rightskip}{0pt plus 5cm}void UnCacheLump (
+\begin{DoxyParamCaption}
+\item[{int}]{lumpstart, }
+\item[{int}]{lumpend}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_ae68019294ac4f3a9df949035a4c36cf8}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_ae68019294ac4f3a9df949035a4c36cf8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a3434990df52efeb93017e54af5a20860}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!WaitKeyUp@{WaitKeyUp}}
+\index{WaitKeyUp@{WaitKeyUp}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{WaitKeyUp}]{\setlength{\rightskip}{0pt plus 5cm}void WaitKeyUp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a3434990df52efeb93017e54af5a20860}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a3434990df52efeb93017e54af5a20860_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a3434990df52efeb93017e54af5a20860_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MENU_8H_a2a840b71aa584f6332da78f4eeec8767}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!Write@{Write}}
+\index{Write@{Write}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Write (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MENU_8H_a2a840b71aa584f6332da78f4eeec8767}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=392pt]{WL__MENU_8H_a2a840b71aa584f6332da78f4eeec8767_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MENU_8H_a2a840b71aa584f6332da78f4eeec8767_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__MENU_8H_a2445c6731e7a1b5e7b8f3da17525e322}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!LevelRatios@{LevelRatios}}
+\index{LevelRatios@{LevelRatios}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{LevelRatios}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LRstruct} {\bf LevelRatios}\mbox{[}$\,$\mbox{]}}}
+\label{WL__MENU_8H_a2445c6731e7a1b5e7b8f3da17525e322}
+\hypertarget{WL__MENU_8H_a93c27abff0c41dacc4c91cba6616ebc8}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MainItems@{MainItems}}
+\index{MainItems@{MainItems}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MainItems}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CP\_\-iteminfo} {\bf MainItems}}}
+\label{WL__MENU_8H_a93c27abff0c41dacc4c91cba6616ebc8}
+\hypertarget{WL__MENU_8H_a6d3982b9d13e9f258a6229f7c6259fd2}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{MainMenu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CP\_\-itemtype} far {\bf MainMenu}\mbox{[}$\,$\mbox{]}}}
+\label{WL__MENU_8H_a6d3982b9d13e9f258a6229f7c6259fd2}
+\hypertarget{WL__MENU_8H_ae41a615bd5a5e741ff7c27e54c48bbcb}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!menuitems@{menuitems}}
+\index{menuitems@{menuitems}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{menuitems}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   {\bf menuitems}}}
+\label{WL__MENU_8H_ae41a615bd5a5e741ff7c27e54c48bbcb}
+\hypertarget{WL__MENU_8H_a533b654d50a711383a0d2135cf4bd86a}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!NewEMenu@{NewEMenu}}
+\index{NewEMenu@{NewEMenu}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{NewEMenu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CP\_\-itemtype} far far {\bf NewEMenu}\mbox{[}$\,$\mbox{]}}}
+\label{WL__MENU_8H_a533b654d50a711383a0d2135cf4bd86a}
+\hypertarget{WL__MENU_8H_a676a8d7bb5b64f29ab3ea8fe6a4f3242}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SaveGameNames@{SaveGameNames}}
+\index{SaveGameNames@{SaveGameNames}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SaveGameNames}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf SaveGameNames}\mbox{[}10\mbox{]}\mbox{[}32\mbox{]}}}
+\label{WL__MENU_8H_a676a8d7bb5b64f29ab3ea8fe6a4f3242}
+\hypertarget{WL__MENU_8H_a7b06c11298b6b799f082f8188c0dbd2c}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SaveGamesAvail@{SaveGamesAvail}}
+\index{SaveGamesAvail@{SaveGamesAvail}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SaveGamesAvail}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf SaveGamesAvail}\mbox{[}10\mbox{]}}}
+\label{WL__MENU_8H_a7b06c11298b6b799f082f8188c0dbd2c}
+\hypertarget{WL__MENU_8H_a8501cb4aab0ffc4fca7a7a979ae7728d}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SaveName@{SaveName}}
+\index{SaveName@{SaveName}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SaveName}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf SaveName}\mbox{[}13\mbox{]}}}
+\label{WL__MENU_8H_a8501cb4aab0ffc4fca7a7a979ae7728d}
+\hypertarget{WL__MENU_8H_a0564d61a788235ef511758c3922b9927}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!SoundStatus@{SoundStatus}}
+\index{SoundStatus@{SoundStatus}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{SoundStatus}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf SoundStatus}}}
+\label{WL__MENU_8H_a0564d61a788235ef511758c3922b9927}
+\hypertarget{WL__MENU_8H_a15b7f4ec468d94c3291394639f2fe581}{
+\index{WL\_\-MENU.H@{WL\_\-MENU.H}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!WL_MENU.H@{WL\_\-MENU.H}}
+\subsubsection[{StartGame}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf StartGame}}}
+\label{WL__MENU_8H_a15b7f4ec468d94c3291394639f2fe581}

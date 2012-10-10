@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__VL_8C.html#a5b35f17b2827ed46e5527e980de6522d" title="VL_FillPalette" alt="" coords="152,5,253,35"/>
+<area shape="rect" id="node5" href="$ID__VL_8C.html#a9bcb5eb78f4668f31cc3ebcaec2d8e1b" title="VL_GetPalette" alt="" coords="149,59,256,88"/>
+<area shape="rect" id="node7" href="$ID__VL_8C.html#ae2508644c57749de78a11a9122a36157" title="VL_SetPalette" alt="" coords="149,112,256,141"/>
+<area shape="rect" id="node9" href="$ID__VL_8C.html#ab76cfea15c66ecd888aa773a7b5ec300" title="VL_WaitVBL" alt="" coords="155,165,251,195"/>
+</map>

@@ -1,0 +1,922 @@
+\hypertarget{ID__VH_8H}{
+\section{ID\_\-VH.H File Reference}
+\label{ID__VH_8H}\index{ID\_\-VH.H@{ID\_\-VH.H}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structspritetabletype}{spritetabletype}
+\item 
+struct \hyperlink{structspritetype}{spritetype}
+\item 
+struct \hyperlink{structpictabletype}{pictabletype}
+\item 
+struct \hyperlink{structfontstruct}{fontstruct}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__VH_8H_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}~15
+\item 
+\#define \hyperlink{ID__VH_8H_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}~0
+\item 
+\#define \hyperlink{ID__VH_8H_a7ee649043831bcc7dc8402909590ab0d}{FIRSTCOLOR}~1
+\item 
+\#define \hyperlink{ID__VH_8H_ae0a44e30cf324589e3ea42da1608d8b7}{SECONDCOLOR}~12
+\item 
+\#define \hyperlink{ID__VH_8H_adef0c268dde9d7141995af9c26650ed8}{F\_\-WHITE}~15
+\item 
+\#define \hyperlink{ID__VH_8H_a3461360dbb2ddad643d0d906fedf900c}{F\_\-BLACK}~0
+\item 
+\#define \hyperlink{ID__VH_8H_aa5e0d04e9fe2f4f099ca5fdf04dc2129}{F\_\-FIRSTCOLOR}~1
+\item 
+\#define \hyperlink{ID__VH_8H_afce016b8339bdc6eee8ff614a30a2e13}{F\_\-SECONDCOLOR}~12
+\item 
+\#define \hyperlink{ID__VH_8H_a61fc4b21f3668efb4e1a4cc2508bccab}{MAXSHIFTS}~1
+\item 
+\#define \hyperlink{ID__VH_8H_ab552693286069f2b8cb256491bed2023}{VW\_\-Startup}~VL\_\-Startup
+\item 
+\#define \hyperlink{ID__VH_8H_a6f6b55b17e7663ca72f0d5ccf2a867e5}{VW\_\-Shutdown}~VL\_\-Shutdown
+\item 
+\#define \hyperlink{ID__VH_8H_ae207cd9a9b77b1e6c04984fdd5b707a1}{VW\_\-SetCRTC}~VL\_\-SetCRTC
+\item 
+\#define \hyperlink{ID__VH_8H_a36b48fa03f839fbf2863a9d6c4699940}{VW\_\-SetScreen}~VL\_\-SetScreen
+\item 
+\#define \hyperlink{ID__VH_8H_a924aa34c6a3cf4efe053305531a0e222}{VW\_\-Bar}~VL\_\-Bar
+\item 
+\#define \hyperlink{ID__VH_8H_aca69acdcdaa8f0173ed5e994537e2154}{VW\_\-Plot}~VL\_\-Plot
+\item 
+\#define \hyperlink{ID__VH_8H_a9e4bfc81697f8b787245b53d54e2fcc8}{VW\_\-Hlin}(x, z, y, \hyperlink{ID__VH_8C_a6a23f31bb58d6a932349aa926c720e47}{c})~VL\_\-Hlin(x,y,(z)-\/(x)+1,\hyperlink{ID__VH_8C_a6a23f31bb58d6a932349aa926c720e47}{c})
+\item 
+\#define \hyperlink{ID__VH_8H_a389584cb4e0f61a5b3bd9cdc48334404}{VW\_\-Vlin}(y, z, x, \hyperlink{ID__VH_8C_a6a23f31bb58d6a932349aa926c720e47}{c})~VL\_\-Vlin(x,y,(z)-\/(y)+1,\hyperlink{ID__VH_8C_a6a23f31bb58d6a932349aa926c720e47}{c})
+\item 
+\#define \hyperlink{ID__VH_8H_a5142a115ac994e1dca6714c1d48189d9}{VW\_\-DrawPic}~VH\_\-DrawPic
+\item 
+\#define \hyperlink{ID__VH_8H_a65007e1b90194be9d47b170f45d52ac5}{VW\_\-SetSplitScreen}~VL\_\-SetSplitScreen
+\item 
+\#define \hyperlink{ID__VH_8H_a98a09505d8a48143499087c1a4394533}{VW\_\-SetLineWidth}~VL\_\-SetLineWidth
+\item 
+\#define \hyperlink{ID__VH_8H_a6f21abd5ade208cc64f9286d26a34bbb}{VW\_\-ColorBorder}~VL\_\-ColorBorder
+\item 
+\#define \hyperlink{ID__VH_8H_addb8bbd36390c7cbe93b5f6979830b17}{VW\_\-WaitVBL}~VL\_\-WaitVBL
+\item 
+\#define \hyperlink{ID__VH_8H_a8840956c3bd0e4bbb84e43370b3c4931}{VW\_\-FadeIn}()~VL\_\-FadeIn(0,255,\&\hyperlink{WL__PLAY_8C_a72ce00e98a92644d4cbf41fb10a2f7ad}{gamepal},30);
+\item 
+\#define \hyperlink{ID__VH_8H_a26f3563413a4e382b800ec86868116d4}{VW\_\-FadeOut}()~VL\_\-FadeOut(0,255,0,0,0,30);
+\item 
+\#define \hyperlink{ID__VH_8H_a1616c0f27ab41adc67c37946ddd9c7ba}{VW\_\-ScreenToScreen}~VL\_\-ScreenToScreen
+\item 
+\#define \hyperlink{ID__VH_8H_a9941159678d27e9d5cecab32190f4b41}{VW\_\-SetDefaultColors}~VH\_\-SetDefaultColors
+\item 
+\#define \hyperlink{ID__VH_8H_a37904690538be00dab461585f3626035}{EGAMAPMASK}(x)~VGAMAPMASK(x)
+\item 
+\#define \hyperlink{ID__VH_8H_a84e603deb67378836be3edebca0e5643}{EGAWRITEMODE}(x)~VGAWRITEMODE(x)
+\item 
+\#define \hyperlink{ID__VH_8H_ad8efcae5e17b4673b60b3f2d46146405}{MS\_\-Quit}~Quit
+\item 
+\#define \hyperlink{ID__VH_8H_a6187d93112dc20d56538043c59274ea5}{LatchDrawChar}(x, y, p)~VL\_\-LatchToScreen(\hyperlink{WL__GAME_8C_adbe64e9f4cdaee2e69ce2b915bd5c9ff}{latchpics}\mbox{[}0\mbox{]}+(p)$\ast$16,2,8,x,y)
+\item 
+\#define \hyperlink{ID__VH_8H_a20ac66827ff4d93b187d39a6d49b658c}{LatchDrawTile}(x, y, p)~VL\_\-LatchToScreen(\hyperlink{WL__GAME_8C_adbe64e9f4cdaee2e69ce2b915bd5c9ff}{latchpics}\mbox{[}1\mbox{]}+(p)$\ast$64,4,16,x,y)
+\item 
+\#define \hyperlink{ID__VH_8H_a58867ea52d9495b87bc4afa660b92e8a}{NUMLATCHPICS}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__VH_8H_a8b0d61bb6d6e1e89daf734e2849ca97f}{VW\_\-InitDoubleBuffer} (void)
+\item 
+int \hyperlink{ID__VH_8H_a989fc2652f729213162c520d378578b3}{VW\_\-MarkUpdateBlock} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{ID__VH_8H_a0968c2c5350fb70b79df6fdc2733e243}{VW\_\-UpdateScreen} (void)
+\item 
+void \hyperlink{ID__VH_8H_a7503d2d58d938b13174536e76796c4c2}{VWB\_\-DrawTile8} (int x, int y, int tile)
+\item 
+void \hyperlink{ID__VH_8H_a1ecd055d301eb59747c8a19756939dfc}{VWB\_\-DrawTile8M} (int x, int y, int tile)
+\item 
+void \hyperlink{ID__VH_8H_a9d022f350ac0a90deae1b0b11df524db}{VWB\_\-DrawTile16} (int x, int y, int tile)
+\item 
+void \hyperlink{ID__VH_8H_a40572b92f43f156193263671c3335e62}{VWB\_\-DrawTile16M} (int x, int y, int tile)
+\item 
+void \hyperlink{ID__VH_8H_a997467dad7e57de584aa100eb9a8c882}{VWB\_\-DrawPic} (int x, int y, int chunknum)
+\item 
+void \hyperlink{ID__VH_8H_ab588a85d316f6a1e0642243f6bceb0c2}{VWB\_\-DrawMPic} (int x, int y, int chunknum)
+\item 
+void \hyperlink{ID__VH_8H_a5496b8df6f9a9de1b3f788ce6951c865}{VWB\_\-Bar} (int x, int y, int width, int height, int color)
+\item 
+void \hyperlink{ID__VH_8H_a8efd746c0d9c5c4e7015b569e4f6bb24}{VWB\_\-DrawPropString} (char far $\ast$string)
+\item 
+void \hyperlink{ID__VH_8H_a8c9c234ef93cdaa903ba3aa34b3cecb9}{VWB\_\-DrawMPropString} (char far $\ast$string)
+\item 
+void \hyperlink{ID__VH_8H_aa064e7b05be7a64d115f3e2d790a5615}{VWB\_\-DrawSprite} (int x, int y, int chunknum)
+\item 
+void \hyperlink{ID__VH_8H_a9ebc1393c381167c87778c7270148f4d}{VWB\_\-Plot} (int x, int y, int color)
+\item 
+void \hyperlink{ID__VH_8H_a5438374e81536560343d6be41205ecf6}{VWB\_\-Hlin} (int x1, int x2, int y, int color)
+\item 
+void \hyperlink{ID__VH_8H_adad5945cddefd75d9c787644201b242f}{VWB\_\-Vlin} (int y1, int y2, int x, int color)
+\item 
+void \hyperlink{ID__VH_8H_ae3b77f5480b8d0c1b9b64ee3a1341517}{VH\_\-SetDefaultColors} (void)
+\item 
+void \hyperlink{ID__VH_8H_a6f83e267adde8f5625ff9d63bde9d19f}{VW\_\-MeasurePropString} (char far $\ast$string, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$width, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$height)
+\item 
+void \hyperlink{ID__VH_8H_a0170b65c8e23e18b960bde1e8908887b}{LatchDrawPic} (unsigned x, unsigned y, unsigned \hyperlink{WL__TEXT_8C_a38ee8916c0c328929ad672895daca6d6}{picnum})
+\item 
+void \hyperlink{ID__VH_8H_a872a52095cf999d5cf5b93deac17193a}{LoadLatchMem} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__VH_8H_ae2893c63915f70a503b1a661d0416421}{FizzleFade} (unsigned source, unsigned dest, unsigned width, unsigned height, unsigned frames, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} abortable)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpictabletype}{pictabletype} \_\-seg $\ast$ \hyperlink{ID__VH_8H_a1ba97b4fa7a2259ee911a1154eda1dc9}{pictable}
+\item 
+\hyperlink{structpictabletype}{pictabletype} \_\-seg $\ast$ \hyperlink{ID__VH_8H_a5888fd9fd64478e98ddbe25d9114a3dd}{picmtable}
+\item 
+\hyperlink{structspritetabletype}{spritetabletype} \_\-seg $\ast$ \hyperlink{ID__VH_8H_ae25f2ed8cf7cf0b3fde08c2c5ef06380}{spritetable}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__VH_8H_a37dfad01117cac8636922fd4d030131b}{fontcolor}
+\item 
+int \hyperlink{ID__VH_8H_a4837949d7c7b2ed1e3f5874b69986fd8}{fontnumber}
+\item 
+int \hyperlink{ID__VH_8H_a6bbc6b7e52b17450c52d8e748d6abae1}{px}
+\item 
+int \hyperlink{ID__VH_8H_aa9511a47fd6271333948489a220e3029}{py}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{ID__VH_8H_a72ce00e98a92644d4cbf41fb10a2f7ad}{gamepal}
+\item 
+unsigned \hyperlink{ID__VH_8H_adbe64e9f4cdaee2e69ce2b915bd5c9ff}{latchpics} \mbox{[}NUMLATCHPICS\mbox{]}
+\item 
+unsigned \hyperlink{ID__VH_8H_a98fdbc277691b144bd2fcbceec9047f9}{freelatch}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__VH_8H_a7b3b25cba33b07c303f3060fe41887f6}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!BLACK@{BLACK}}
+\index{BLACK@{BLACK}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{BLACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define BLACK~0}}
+\label{ID__VH_8H_a7b3b25cba33b07c303f3060fe41887f6}
+\hypertarget{ID__VH_8H_a37904690538be00dab461585f3626035}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!EGAMAPMASK@{EGAMAPMASK}}
+\index{EGAMAPMASK@{EGAMAPMASK}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{EGAMAPMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EGAMAPMASK(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~VGAMAPMASK(x)}}
+\label{ID__VH_8H_a37904690538be00dab461585f3626035}
+\hypertarget{ID__VH_8H_a84e603deb67378836be3edebca0e5643}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!EGAWRITEMODE@{EGAWRITEMODE}}
+\index{EGAWRITEMODE@{EGAWRITEMODE}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{EGAWRITEMODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define EGAWRITEMODE(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~VGAWRITEMODE(x)}}
+\label{ID__VH_8H_a84e603deb67378836be3edebca0e5643}
+\hypertarget{ID__VH_8H_a3461360dbb2ddad643d0d906fedf900c}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!F\_\-BLACK@{F\_\-BLACK}}
+\index{F\_\-BLACK@{F\_\-BLACK}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{F\_\-BLACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\_\-BLACK~0}}
+\label{ID__VH_8H_a3461360dbb2ddad643d0d906fedf900c}
+\hypertarget{ID__VH_8H_aa5e0d04e9fe2f4f099ca5fdf04dc2129}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!F\_\-FIRSTCOLOR@{F\_\-FIRSTCOLOR}}
+\index{F\_\-FIRSTCOLOR@{F\_\-FIRSTCOLOR}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{F\_\-FIRSTCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\_\-FIRSTCOLOR~1}}
+\label{ID__VH_8H_aa5e0d04e9fe2f4f099ca5fdf04dc2129}
+\hypertarget{ID__VH_8H_afce016b8339bdc6eee8ff614a30a2e13}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!F\_\-SECONDCOLOR@{F\_\-SECONDCOLOR}}
+\index{F\_\-SECONDCOLOR@{F\_\-SECONDCOLOR}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{F\_\-SECONDCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\_\-SECONDCOLOR~12}}
+\label{ID__VH_8H_afce016b8339bdc6eee8ff614a30a2e13}
+\hypertarget{ID__VH_8H_adef0c268dde9d7141995af9c26650ed8}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!F\_\-WHITE@{F\_\-WHITE}}
+\index{F\_\-WHITE@{F\_\-WHITE}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{F\_\-WHITE}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\_\-WHITE~15}}
+\label{ID__VH_8H_adef0c268dde9d7141995af9c26650ed8}
+\hypertarget{ID__VH_8H_a7ee649043831bcc7dc8402909590ab0d}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!FIRSTCOLOR@{FIRSTCOLOR}}
+\index{FIRSTCOLOR@{FIRSTCOLOR}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{FIRSTCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FIRSTCOLOR~1}}
+\label{ID__VH_8H_a7ee649043831bcc7dc8402909590ab0d}
+\hypertarget{ID__VH_8H_a6187d93112dc20d56538043c59274ea5}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!LatchDrawChar@{LatchDrawChar}}
+\index{LatchDrawChar@{LatchDrawChar}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{LatchDrawChar}]{\setlength{\rightskip}{0pt plus 5cm}\#define LatchDrawChar(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~VL\_\-LatchToScreen({\bf latchpics}\mbox{[}0\mbox{]}+(p)$\ast$16,2,8,x,y)}}
+\label{ID__VH_8H_a6187d93112dc20d56538043c59274ea5}
+\hypertarget{ID__VH_8H_a20ac66827ff4d93b187d39a6d49b658c}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!LatchDrawTile@{LatchDrawTile}}
+\index{LatchDrawTile@{LatchDrawTile}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{LatchDrawTile}]{\setlength{\rightskip}{0pt plus 5cm}\#define LatchDrawTile(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~VL\_\-LatchToScreen({\bf latchpics}\mbox{[}1\mbox{]}+(p)$\ast$64,4,16,x,y)}}
+\label{ID__VH_8H_a20ac66827ff4d93b187d39a6d49b658c}
+\hypertarget{ID__VH_8H_a61fc4b21f3668efb4e1a4cc2508bccab}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!MAXSHIFTS@{MAXSHIFTS}}
+\index{MAXSHIFTS@{MAXSHIFTS}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{MAXSHIFTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXSHIFTS~1}}
+\label{ID__VH_8H_a61fc4b21f3668efb4e1a4cc2508bccab}
+\hypertarget{ID__VH_8H_ad8efcae5e17b4673b60b3f2d46146405}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!MS\_\-Quit@{MS\_\-Quit}}
+\index{MS\_\-Quit@{MS\_\-Quit}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{MS\_\-Quit}]{\setlength{\rightskip}{0pt plus 5cm}\#define MS\_\-Quit~Quit}}
+\label{ID__VH_8H_ad8efcae5e17b4673b60b3f2d46146405}
+\hypertarget{ID__VH_8H_a58867ea52d9495b87bc4afa660b92e8a}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!NUMLATCHPICS@{NUMLATCHPICS}}
+\index{NUMLATCHPICS@{NUMLATCHPICS}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{NUMLATCHPICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define NUMLATCHPICS~100}}
+\label{ID__VH_8H_a58867ea52d9495b87bc4afa660b92e8a}
+\hypertarget{ID__VH_8H_ae0a44e30cf324589e3ea42da1608d8b7}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!SECONDCOLOR@{SECONDCOLOR}}
+\index{SECONDCOLOR@{SECONDCOLOR}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{SECONDCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SECONDCOLOR~12}}
+\label{ID__VH_8H_ae0a44e30cf324589e3ea42da1608d8b7}
+\hypertarget{ID__VH_8H_a924aa34c6a3cf4efe053305531a0e222}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-Bar@{VW\_\-Bar}}
+\index{VW\_\-Bar@{VW\_\-Bar}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-Bar~VL\_\-Bar}}
+\label{ID__VH_8H_a924aa34c6a3cf4efe053305531a0e222}
+\hypertarget{ID__VH_8H_a6f21abd5ade208cc64f9286d26a34bbb}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-ColorBorder@{VW\_\-ColorBorder}}
+\index{VW\_\-ColorBorder@{VW\_\-ColorBorder}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-ColorBorder}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-ColorBorder~VL\_\-ColorBorder}}
+\label{ID__VH_8H_a6f21abd5ade208cc64f9286d26a34bbb}
+\hypertarget{ID__VH_8H_a5142a115ac994e1dca6714c1d48189d9}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-DrawPic@{VW\_\-DrawPic}}
+\index{VW\_\-DrawPic@{VW\_\-DrawPic}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-DrawPic}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-DrawPic~VH\_\-DrawPic}}
+\label{ID__VH_8H_a5142a115ac994e1dca6714c1d48189d9}
+\hypertarget{ID__VH_8H_a8840956c3bd0e4bbb84e43370b3c4931}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-FadeIn@{VW\_\-FadeIn}}
+\index{VW\_\-FadeIn@{VW\_\-FadeIn}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-FadeIn}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-FadeIn(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VL\_\-FadeIn(0,255,\&{\bf gamepal},30);}}
+\label{ID__VH_8H_a8840956c3bd0e4bbb84e43370b3c4931}
+\hypertarget{ID__VH_8H_a26f3563413a4e382b800ec86868116d4}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-FadeOut@{VW\_\-FadeOut}}
+\index{VW\_\-FadeOut@{VW\_\-FadeOut}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-FadeOut}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-FadeOut(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VL\_\-FadeOut(0,255,0,0,0,30);}}
+\label{ID__VH_8H_a26f3563413a4e382b800ec86868116d4}
+\hypertarget{ID__VH_8H_a9e4bfc81697f8b787245b53d54e2fcc8}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-Hlin@{VW\_\-Hlin}}
+\index{VW\_\-Hlin@{VW\_\-Hlin}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-Hlin}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-Hlin(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{z, }
+\item[{}]{y, }
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~VL\_\-Hlin(x,y,(z)-\/(x)+1,{\bf c})}}
+\label{ID__VH_8H_a9e4bfc81697f8b787245b53d54e2fcc8}
+\hypertarget{ID__VH_8H_aca69acdcdaa8f0173ed5e994537e2154}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-Plot@{VW\_\-Plot}}
+\index{VW\_\-Plot@{VW\_\-Plot}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-Plot}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-Plot~VL\_\-Plot}}
+\label{ID__VH_8H_aca69acdcdaa8f0173ed5e994537e2154}
+\hypertarget{ID__VH_8H_a1616c0f27ab41adc67c37946ddd9c7ba}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-ScreenToScreen@{VW\_\-ScreenToScreen}}
+\index{VW\_\-ScreenToScreen@{VW\_\-ScreenToScreen}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-ScreenToScreen}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-ScreenToScreen~VL\_\-ScreenToScreen}}
+\label{ID__VH_8H_a1616c0f27ab41adc67c37946ddd9c7ba}
+\hypertarget{ID__VH_8H_ae207cd9a9b77b1e6c04984fdd5b707a1}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-SetCRTC@{VW\_\-SetCRTC}}
+\index{VW\_\-SetCRTC@{VW\_\-SetCRTC}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-SetCRTC}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-SetCRTC~VL\_\-SetCRTC}}
+\label{ID__VH_8H_ae207cd9a9b77b1e6c04984fdd5b707a1}
+\hypertarget{ID__VH_8H_a9941159678d27e9d5cecab32190f4b41}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-SetDefaultColors@{VW\_\-SetDefaultColors}}
+\index{VW\_\-SetDefaultColors@{VW\_\-SetDefaultColors}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-SetDefaultColors}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-SetDefaultColors~VH\_\-SetDefaultColors}}
+\label{ID__VH_8H_a9941159678d27e9d5cecab32190f4b41}
+\hypertarget{ID__VH_8H_a98a09505d8a48143499087c1a4394533}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-SetLineWidth@{VW\_\-SetLineWidth}}
+\index{VW\_\-SetLineWidth@{VW\_\-SetLineWidth}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-SetLineWidth}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-SetLineWidth~VL\_\-SetLineWidth}}
+\label{ID__VH_8H_a98a09505d8a48143499087c1a4394533}
+\hypertarget{ID__VH_8H_a36b48fa03f839fbf2863a9d6c4699940}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-SetScreen@{VW\_\-SetScreen}}
+\index{VW\_\-SetScreen@{VW\_\-SetScreen}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-SetScreen}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-SetScreen~VL\_\-SetScreen}}
+\label{ID__VH_8H_a36b48fa03f839fbf2863a9d6c4699940}
+\hypertarget{ID__VH_8H_a65007e1b90194be9d47b170f45d52ac5}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-SetSplitScreen@{VW\_\-SetSplitScreen}}
+\index{VW\_\-SetSplitScreen@{VW\_\-SetSplitScreen}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-SetSplitScreen}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-SetSplitScreen~VL\_\-SetSplitScreen}}
+\label{ID__VH_8H_a65007e1b90194be9d47b170f45d52ac5}
+\hypertarget{ID__VH_8H_a6f6b55b17e7663ca72f0d5ccf2a867e5}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-Shutdown@{VW\_\-Shutdown}}
+\index{VW\_\-Shutdown@{VW\_\-Shutdown}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-Shutdown~VL\_\-Shutdown}}
+\label{ID__VH_8H_a6f6b55b17e7663ca72f0d5ccf2a867e5}
+\hypertarget{ID__VH_8H_ab552693286069f2b8cb256491bed2023}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-Startup@{VW\_\-Startup}}
+\index{VW\_\-Startup@{VW\_\-Startup}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-Startup~VL\_\-Startup}}
+\label{ID__VH_8H_ab552693286069f2b8cb256491bed2023}
+\hypertarget{ID__VH_8H_a389584cb4e0f61a5b3bd9cdc48334404}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-Vlin@{VW\_\-Vlin}}
+\index{VW\_\-Vlin@{VW\_\-Vlin}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-Vlin}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-Vlin(
+\begin{DoxyParamCaption}
+\item[{}]{y, }
+\item[{}]{z, }
+\item[{}]{x, }
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~VL\_\-Vlin(x,y,(z)-\/(y)+1,{\bf c})}}
+\label{ID__VH_8H_a389584cb4e0f61a5b3bd9cdc48334404}
+\hypertarget{ID__VH_8H_addb8bbd36390c7cbe93b5f6979830b17}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-WaitVBL@{VW\_\-WaitVBL}}
+\index{VW\_\-WaitVBL@{VW\_\-WaitVBL}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-WaitVBL}]{\setlength{\rightskip}{0pt plus 5cm}\#define VW\_\-WaitVBL~VL\_\-WaitVBL}}
+\label{ID__VH_8H_addb8bbd36390c7cbe93b5f6979830b17}
+\hypertarget{ID__VH_8H_a87b537f5fa5c109d3c05c13d6b18f382}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!WHITE@{WHITE}}
+\index{WHITE@{WHITE}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{WHITE}]{\setlength{\rightskip}{0pt plus 5cm}\#define WHITE~15}}
+\label{ID__VH_8H_a87b537f5fa5c109d3c05c13d6b18f382}
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__VH_8H_ae2893c63915f70a503b1a661d0416421}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!FizzleFade@{FizzleFade}}
+\index{FizzleFade@{FizzleFade}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{FizzleFade}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} FizzleFade (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{source, }
+\item[{unsigned}]{dest, }
+\item[{unsigned}]{width, }
+\item[{unsigned}]{height, }
+\item[{unsigned}]{frames, }
+\item[{{\bf boolean}}]{abortable}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_ae2893c63915f70a503b1a661d0416421}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_ae2893c63915f70a503b1a661d0416421_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_ae2893c63915f70a503b1a661d0416421_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a0170b65c8e23e18b960bde1e8908887b}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!LatchDrawPic@{LatchDrawPic}}
+\index{LatchDrawPic@{LatchDrawPic}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{LatchDrawPic}]{\setlength{\rightskip}{0pt plus 5cm}void LatchDrawPic (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{x, }
+\item[{unsigned}]{y, }
+\item[{unsigned}]{picnum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a0170b65c8e23e18b960bde1e8908887b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{ID__VH_8H_a0170b65c8e23e18b960bde1e8908887b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_a0170b65c8e23e18b960bde1e8908887b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a872a52095cf999d5cf5b93deac17193a}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!LoadLatchMem@{LoadLatchMem}}
+\index{LoadLatchMem@{LoadLatchMem}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{LoadLatchMem}]{\setlength{\rightskip}{0pt plus 5cm}void LoadLatchMem (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a872a52095cf999d5cf5b93deac17193a}
+\hypertarget{ID__VH_8H_ae3b77f5480b8d0c1b9b64ee3a1341517}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VH\_\-SetDefaultColors@{VH\_\-SetDefaultColors}}
+\index{VH\_\-SetDefaultColors@{VH\_\-SetDefaultColors}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VH\_\-SetDefaultColors}]{\setlength{\rightskip}{0pt plus 5cm}void VH\_\-SetDefaultColors (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_ae3b77f5480b8d0c1b9b64ee3a1341517}
+\hypertarget{ID__VH_8H_a8b0d61bb6d6e1e89daf734e2849ca97f}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-InitDoubleBuffer@{VW\_\-InitDoubleBuffer}}
+\index{VW\_\-InitDoubleBuffer@{VW\_\-InitDoubleBuffer}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-InitDoubleBuffer}]{\setlength{\rightskip}{0pt plus 5cm}void VW\_\-InitDoubleBuffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a8b0d61bb6d6e1e89daf734e2849ca97f}
+\hypertarget{ID__VH_8H_a989fc2652f729213162c520d378578b3}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-MarkUpdateBlock@{VW\_\-MarkUpdateBlock}}
+\index{VW\_\-MarkUpdateBlock@{VW\_\-MarkUpdateBlock}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-MarkUpdateBlock}]{\setlength{\rightskip}{0pt plus 5cm}int VW\_\-MarkUpdateBlock (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a989fc2652f729213162c520d378578b3}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__VH_8H_a989fc2652f729213162c520d378578b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a6f83e267adde8f5625ff9d63bde9d19f}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-MeasurePropString@{VW\_\-MeasurePropString}}
+\index{VW\_\-MeasurePropString@{VW\_\-MeasurePropString}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-MeasurePropString}]{\setlength{\rightskip}{0pt plus 5cm}void VW\_\-MeasurePropString (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{string, }
+\item[{{\bf word} $\ast$}]{width, }
+\item[{{\bf word} $\ast$}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a6f83e267adde8f5625ff9d63bde9d19f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{ID__VH_8H_a6f83e267adde8f5625ff9d63bde9d19f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_a6f83e267adde8f5625ff9d63bde9d19f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a0968c2c5350fb70b79df6fdc2733e243}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VW\_\-UpdateScreen@{VW\_\-UpdateScreen}}
+\index{VW\_\-UpdateScreen@{VW\_\-UpdateScreen}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VW\_\-UpdateScreen}]{\setlength{\rightskip}{0pt plus 5cm}void VW\_\-UpdateScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a0968c2c5350fb70b79df6fdc2733e243}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__VH_8H_a0968c2c5350fb70b79df6fdc2733e243_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a5496b8df6f9a9de1b3f788ce6951c865}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-Bar@{VWB\_\-Bar}}
+\index{VWB\_\-Bar@{VWB\_\-Bar}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-Bar (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a5496b8df6f9a9de1b3f788ce6951c865}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{ID__VH_8H_a5496b8df6f9a9de1b3f788ce6951c865_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__VH_8H_a5496b8df6f9a9de1b3f788ce6951c865_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_ab588a85d316f6a1e0642243f6bceb0c2}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawMPic@{VWB\_\-DrawMPic}}
+\index{VWB\_\-DrawMPic@{VWB\_\-DrawMPic}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawMPic}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawMPic (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{chunknum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_ab588a85d316f6a1e0642243f6bceb0c2}
+\hypertarget{ID__VH_8H_a8c9c234ef93cdaa903ba3aa34b3cecb9}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawMPropString@{VWB\_\-DrawMPropString}}
+\index{VWB\_\-DrawMPropString@{VWB\_\-DrawMPropString}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawMPropString}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawMPropString (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a8c9c234ef93cdaa903ba3aa34b3cecb9}
+\hypertarget{ID__VH_8H_a997467dad7e57de584aa100eb9a8c882}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawPic@{VWB\_\-DrawPic}}
+\index{VWB\_\-DrawPic@{VWB\_\-DrawPic}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawPic}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawPic (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{chunknum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a997467dad7e57de584aa100eb9a8c882}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{ID__VH_8H_a997467dad7e57de584aa100eb9a8c882_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_a997467dad7e57de584aa100eb9a8c882_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a8efd746c0d9c5c4e7015b569e4f6bb24}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawPropString@{VWB\_\-DrawPropString}}
+\index{VWB\_\-DrawPropString@{VWB\_\-DrawPropString}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawPropString}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawPropString (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a8efd746c0d9c5c4e7015b569e4f6bb24}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{ID__VH_8H_a8efd746c0d9c5c4e7015b569e4f6bb24_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_a8efd746c0d9c5c4e7015b569e4f6bb24_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_aa064e7b05be7a64d115f3e2d790a5615}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawSprite@{VWB\_\-DrawSprite}}
+\index{VWB\_\-DrawSprite@{VWB\_\-DrawSprite}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawSprite}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawSprite (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{chunknum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_aa064e7b05be7a64d115f3e2d790a5615}
+\hypertarget{ID__VH_8H_a9d022f350ac0a90deae1b0b11df524db}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawTile16@{VWB\_\-DrawTile16}}
+\index{VWB\_\-DrawTile16@{VWB\_\-DrawTile16}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawTile16}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawTile16 (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{tile}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a9d022f350ac0a90deae1b0b11df524db}
+\hypertarget{ID__VH_8H_a40572b92f43f156193263671c3335e62}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawTile16M@{VWB\_\-DrawTile16M}}
+\index{VWB\_\-DrawTile16M@{VWB\_\-DrawTile16M}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawTile16M}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawTile16M (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{tile}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a40572b92f43f156193263671c3335e62}
+\hypertarget{ID__VH_8H_a7503d2d58d938b13174536e76796c4c2}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawTile8@{VWB\_\-DrawTile8}}
+\index{VWB\_\-DrawTile8@{VWB\_\-DrawTile8}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawTile8}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawTile8 (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{tile}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a7503d2d58d938b13174536e76796c4c2}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{ID__VH_8H_a7503d2d58d938b13174536e76796c4c2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{ID__VH_8H_a7503d2d58d938b13174536e76796c4c2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a1ecd055d301eb59747c8a19756939dfc}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-DrawTile8M@{VWB\_\-DrawTile8M}}
+\index{VWB\_\-DrawTile8M@{VWB\_\-DrawTile8M}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-DrawTile8M}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-DrawTile8M (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{tile}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a1ecd055d301eb59747c8a19756939dfc}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{ID__VH_8H_a1ecd055d301eb59747c8a19756939dfc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a5438374e81536560343d6be41205ecf6}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-Hlin@{VWB\_\-Hlin}}
+\index{VWB\_\-Hlin@{VWB\_\-Hlin}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-Hlin}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-Hlin (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{x2, }
+\item[{int}]{y, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a5438374e81536560343d6be41205ecf6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{ID__VH_8H_a5438374e81536560343d6be41205ecf6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_a5438374e81536560343d6be41205ecf6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_a9ebc1393c381167c87778c7270148f4d}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-Plot@{VWB\_\-Plot}}
+\index{VWB\_\-Plot@{VWB\_\-Plot}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-Plot}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-Plot (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_a9ebc1393c381167c87778c7270148f4d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{ID__VH_8H_a9ebc1393c381167c87778c7270148f4d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_a9ebc1393c381167c87778c7270148f4d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VH_8H_adad5945cddefd75d9c787644201b242f}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!VWB\_\-Vlin@{VWB\_\-Vlin}}
+\index{VWB\_\-Vlin@{VWB\_\-Vlin}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{VWB\_\-Vlin}]{\setlength{\rightskip}{0pt plus 5cm}void VWB\_\-Vlin (
+\begin{DoxyParamCaption}
+\item[{int}]{y1, }
+\item[{int}]{y2, }
+\item[{int}]{x, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VH_8H_adad5945cddefd75d9c787644201b242f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{ID__VH_8H_adad5945cddefd75d9c787644201b242f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VH_8H_adad5945cddefd75d9c787644201b242f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__VH_8H_a37dfad01117cac8636922fd4d030131b}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!fontcolor@{fontcolor}}
+\index{fontcolor@{fontcolor}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{fontcolor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf fontcolor}}}
+\label{ID__VH_8H_a37dfad01117cac8636922fd4d030131b}
+\hypertarget{ID__VH_8H_a4837949d7c7b2ed1e3f5874b69986fd8}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!fontnumber@{fontnumber}}
+\index{fontnumber@{fontnumber}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{fontnumber}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf fontnumber}}}
+\label{ID__VH_8H_a4837949d7c7b2ed1e3f5874b69986fd8}
+\hypertarget{ID__VH_8H_a98fdbc277691b144bd2fcbceec9047f9}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!freelatch@{freelatch}}
+\index{freelatch@{freelatch}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{freelatch}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf freelatch}}}
+\label{ID__VH_8H_a98fdbc277691b144bd2fcbceec9047f9}
+\hypertarget{ID__VH_8H_a72ce00e98a92644d4cbf41fb10a2f7ad}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!gamepal@{gamepal}}
+\index{gamepal@{gamepal}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{gamepal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf gamepal}}}
+\label{ID__VH_8H_a72ce00e98a92644d4cbf41fb10a2f7ad}
+\hypertarget{ID__VH_8H_adbe64e9f4cdaee2e69ce2b915bd5c9ff}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!latchpics@{latchpics}}
+\index{latchpics@{latchpics}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{latchpics}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf latchpics}\mbox{[}NUMLATCHPICS\mbox{]}}}
+\label{ID__VH_8H_adbe64e9f4cdaee2e69ce2b915bd5c9ff}
+\hypertarget{ID__VH_8H_a5888fd9fd64478e98ddbe25d9114a3dd}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!picmtable@{picmtable}}
+\index{picmtable@{picmtable}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{picmtable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pictabletype} \_\-seg$\ast$ {\bf picmtable}}}
+\label{ID__VH_8H_a5888fd9fd64478e98ddbe25d9114a3dd}
+\hypertarget{ID__VH_8H_a1ba97b4fa7a2259ee911a1154eda1dc9}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!pictable@{pictable}}
+\index{pictable@{pictable}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{pictable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pictabletype} \_\-seg$\ast$ {\bf pictable}}}
+\label{ID__VH_8H_a1ba97b4fa7a2259ee911a1154eda1dc9}
+\hypertarget{ID__VH_8H_a6bbc6b7e52b17450c52d8e748d6abae1}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!px@{px}}
+\index{px@{px}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{px}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf px}}}
+\label{ID__VH_8H_a6bbc6b7e52b17450c52d8e748d6abae1}
+\hypertarget{ID__VH_8H_aa9511a47fd6271333948489a220e3029}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!py@{py}}
+\index{py@{py}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{py}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf py}}}
+\label{ID__VH_8H_aa9511a47fd6271333948489a220e3029}
+\hypertarget{ID__VH_8H_ae25f2ed8cf7cf0b3fde08c2c5ef06380}{
+\index{ID\_\-VH.H@{ID\_\-VH.H}!spritetable@{spritetable}}
+\index{spritetable@{spritetable}!ID_VH.H@{ID\_\-VH.H}}
+\subsubsection[{spritetable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf spritetabletype} \_\-seg$\ast$ {\bf spritetable}}}
+\label{ID__VH_8H_ae25f2ed8cf7cf0b3fde08c2c5ef06380}

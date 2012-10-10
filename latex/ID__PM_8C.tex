@@ -1,0 +1,1250 @@
+\hypertarget{ID__PM_8C}{
+\section{ID\_\-PM.C File Reference}
+\label{ID__PM_8C}\index{ID\_\-PM.C@{ID\_\-PM.C}}
+}
+{\ttfamily \#include \char`\"{}ID\_\-HEADS.H\char`\"{}}\par
+Include dependency graph for ID\_\-PM.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__PM_8C_ae786623d35b6f789a1e6ddc4b43da346}{PML\_\-CopyToXMS}(s, t, l)~PML\_\-XMSCopy(true,(s),(t),(l))
+\item 
+\#define \hyperlink{ID__PM_8C_a902ce8cb3f1c419695a053f1c8c3b223}{PML\_\-CopyFromXMS}(t, s, l)~PML\_\-XMSCopy(false,(t),(s),(l))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__PM_8C_ab2f720eba0924c15d0a7c6a487fc0626}{PML\_\-MapEMS} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} logical, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} physical)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_a6085844cd57a807307a56cd8246e2bd2}{PML\_\-StartupEMS} (void)
+\item 
+void \hyperlink{ID__PM_8C_aadca17cdf940e28b8da2e6d1f19fd791}{PML\_\-ShutdownEMS} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_ab211699b43c5415d19e7c2ff618bcbb7}{PML\_\-StartupXMS} (void)
+\item 
+void \hyperlink{ID__PM_8C_adbf449e02e6c97248f39c51e8ced3238}{PML\_\-XMSCopy} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} toxms, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$addr, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} xmspage, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} length)
+\item 
+void \hyperlink{ID__PM_8C_a363e2f98515f8d1e08746e89465d2e24}{PML\_\-ShutdownXMS} (void)
+\item 
+void \hyperlink{ID__PM_8C_a5182c3fcfa8dd2f64fa5e9b8254dc991}{PM\_\-SetMainMemPurge} (int level)
+\item 
+void \hyperlink{ID__PM_8C_a2a4e1e1198255c4890972680f9fb5a15}{PM\_\-CheckMainMem} (void)
+\item 
+void \hyperlink{ID__PM_8C_a8cecebd101b586366e04355a3914427b}{PML\_\-StartupMainMem} (void)
+\item 
+void \hyperlink{ID__PM_8C_a788c597ebc679e6114cafede80c05388}{PML\_\-ShutdownMainMem} (void)
+\item 
+void \hyperlink{ID__PM_8C_a3e8875fd1618f89f3e98f9d2ae4f0945}{PML\_\-ReadFromFile} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$buf, long offset, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} length)
+\item 
+void \hyperlink{ID__PM_8C_a64c6a16ef9e07fadf7fbde9b90565e4e}{PML\_\-OpenPageFile} (void)
+\item 
+void \hyperlink{ID__PM_8C_a5a2578fa944d0908a0d43e7f362036cb}{PML\_\-ClosePageFile} (void)
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8C_aa4215b4363055b96b571bedb294d39a2}{PML\_\-GetEMSAddress} (int page, \hyperlink{ID__PM_8H_a470960f2645467be319a542ef1f65851}{PMLockType} lock)
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8C_a6d8376b84fdfd88c991b82d9d9cebcfd}{PM\_\-GetPageAddress} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum})
+\item 
+int \hyperlink{ID__PM_8C_a1a23d717675f8d14bd6e07bb7bcbd4b4}{PML\_\-GiveLRUPage} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} mainonly)
+\item 
+int \hyperlink{ID__PM_8C_aa3210f7fc8e7367f2349cd17cbec0c67}{PML\_\-GiveLRUXMSPage} (void)
+\item 
+void \hyperlink{ID__PM_8C_a0b6f9ec457913559bcff1d9258a15552}{PML\_\-PutPageInXMS} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum})
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8C_aa2abd895c0ac117de4d033b6850a9a07}{PML\_\-TransferPageSpace} (int orig, int \hyperlink{WL__PLAY_8C_aeef0824257f536812a114a0e932b654f}{new})
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$ \hyperlink{ID__PM_8C_a4694a0931f68c73c15c7cdd4b6a4cb61}{PML\_\-GetAPageBuffer} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum}, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} mainonly)
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8C_a15cc7513b41c134b24cd20536a63f892}{PML\_\-GetPageFromXMS} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum}, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} mainonly)
+\item 
+void \hyperlink{ID__PM_8C_a14156f3e9e18532f92f4c00e761fa0b7}{PML\_\-LoadPage} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum}, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} mainonly)
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8C_a80f33d5bd3e0a9a388063a78edf53329}{PM\_\-GetPage} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum})
+\item 
+void \hyperlink{ID__PM_8C_a1e7da5d85fc01341f8f9a893ddc87cfc}{PM\_\-SetPageLock} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum}, \hyperlink{ID__PM_8H_a470960f2645467be319a542ef1f65851}{PMLockType} lock)
+\item 
+void \hyperlink{ID__PM_8C_ab97049dc4c67f252768239ca432f4204}{PM\_\-Preload} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean}($\ast$\hyperlink{WL__PLAY_8C_a377ee66e839b90ae7140bb0dbde6c696}{update})(\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} current, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} total))
+\item 
+void \hyperlink{ID__PM_8C_a18e14139add000a914aa1c385ad33f34}{PM\_\-NextFrame} (void)
+\item 
+void \hyperlink{ID__PM_8C_a25eb3f2f08365f6707cb60a298b2366e}{PM\_\-Reset} (void)
+\item 
+void \hyperlink{ID__PM_8C_a5e5ef876a9184793502a2a5b6884e2d0}{PM\_\-Startup} (void)
+\item 
+void \hyperlink{ID__PM_8C_a4c8f2bd44f288cb9d7d9c4abe52ffa8c}{PM\_\-Shutdown} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_a023d72d7c20dc97648a2403f2e3ae0dc}{MainPresent}
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8C_a2a4448d32405a8771e6cdbc9111eec4f}{MainMemPages} \mbox{[}PMMaxMainMem\mbox{]}
+\item 
+\hyperlink{ID__PM_8H_a061921eacd832e8d25698aed67818b5b}{PMBlockAttr} \hyperlink{ID__PM_8C_ac948cb22aa3829c8a38da5f20c30b9cb}{MainMemUsed} \mbox{[}PMMaxMainMem\mbox{]}
+\item 
+int \hyperlink{ID__PM_8C_aea208d1585f4e840a3bd9f2dc79febdb}{MainPagesAvail}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_ab35be0811b0150bb1a52eaad6d3d6340}{EMSPresent}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a070c70008059f6ed164c4baa34d84f2a}{EMSAvail}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a0b3caaa008ec8ab4b8486880a825bad0}{EMSPagesAvail}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a99b4bb7b9ffe9727ddd4bd4d7a586e0a}{EMSHandle}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a41433c74e5213d6e6dc1fe8713688c3a}{EMSPageFrame}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_ab76b57d416cd9763e7ea45974bf6ee0d}{EMSPhysicalPage}
+\item 
+\hyperlink{structEMSListStruct}{EMSListStruct} \hyperlink{ID__PM_8C_a045a2fcf98833b9fee5b21fa2de99e73}{EMSList} \mbox{[}EMSFrameCount\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_a5f57a31d9e6a665cbebbb452d757de61}{XMSPresent}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_afa7725d210182d66b1cbf507e491cf3f}{XMSAvail}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_ac00fcb63e290e188116ecc3f43ec3f93}{XMSPagesAvail}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a091a2f0e24a80ebc24869f64bcf99182}{XMSHandle}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__PM_8C_aefba3ee02ef1b767db68787510867859}{XMSDriver}
+\item 
+int \hyperlink{ID__PM_8C_a591ec8badf330c29bff6aed5cf4d0b2f}{XMSProtectPage} = -\/1
+\item 
+char \hyperlink{ID__PM_8C_a3d2a1c78f3a8c484f8b2ed0cbe566453}{PageFileName} \mbox{[}13\mbox{]} = \{\char`\"{}VSWAP.\char`\"{}\}
+\item 
+int \hyperlink{ID__PM_8C_a546fb248e72f20f38e68c4a913206f25}{PageFile} = -\/1
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_af385634b054d3e3d81d85865b3d7e71e}{ChunksInFile}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_ac15156742487c3e546be66ffc29b4473}{PMSpriteStart}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a4274c51cf3dd5e7fd0c4562376e91d3b}{PMSoundStart}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_a3bdbaa7efb77df38888d8e0dd19a0bf2}{PMStarted}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_af388af9d50f174974a23868c2284f59e}{PMPanicMode}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8C_a884dd0e6012652c6ecbd41f8b069fe4b}{PMThrashing}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a237331007a52aca910a5f97d3be50266}{XMSPagesUsed}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_ab8637fe892c50d2bc1a0766d23ec3759}{EMSPagesUsed}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a29f989d2023364e9b053ae3406d714e0}{MainPagesUsed}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8C_a284592ad8b98c33e06c6e37f312b443e}{PMNumBlocks}
+\item 
+long \hyperlink{ID__PM_8C_ab8c38b967702c00419fc3c6b3bcb54af}{PMFrameCount}
+\item 
+\hyperlink{structPageListStruct}{PageListStruct} far $\ast$ \hyperlink{ID__PM_8C_aac6e5bfd3ae3497c8b721679578d73f1}{PMPages}
+\item 
+\hyperlink{structPageListStruct}{PageListStruct} far \_\-seg $\ast$ \hyperlink{ID__PM_8C_ada3aca92d9c7713b52e30b375132ed6e}{PMSegPages}
+\item 
+static char $\ast$ \hyperlink{ID__PM_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{ParmStrings} \mbox{[}$\,$\mbox{]} = \{\char`\"{}nomain\char`\"{},\char`\"{}noems\char`\"{},\char`\"{}noxms\char`\"{},nil\}
+\item 
+char \hyperlink{ID__PM_8C_a6afdcc6dd0066167eb94a8109a9940b1}{EMMDriverName} \mbox{[}9\mbox{]} = \char`\"{}EMMXXXX0\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__PM_8C_a902ce8cb3f1c419695a053f1c8c3b223}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-CopyFromXMS@{PML\_\-CopyFromXMS}}
+\index{PML\_\-CopyFromXMS@{PML\_\-CopyFromXMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-CopyFromXMS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PML\_\-CopyFromXMS(
+\begin{DoxyParamCaption}
+\item[{}]{t, }
+\item[{}]{s, }
+\item[{}]{l}
+\end{DoxyParamCaption}
+)~PML\_\-XMSCopy(false,(t),(s),(l))}}
+\label{ID__PM_8C_a902ce8cb3f1c419695a053f1c8c3b223}
+\hypertarget{ID__PM_8C_ae786623d35b6f789a1e6ddc4b43da346}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-CopyToXMS@{PML\_\-CopyToXMS}}
+\index{PML\_\-CopyToXMS@{PML\_\-CopyToXMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-CopyToXMS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PML\_\-CopyToXMS(
+\begin{DoxyParamCaption}
+\item[{}]{s, }
+\item[{}]{t, }
+\item[{}]{l}
+\end{DoxyParamCaption}
+)~PML\_\-XMSCopy(true,(s),(t),(l))}}
+\label{ID__PM_8C_ae786623d35b6f789a1e6ddc4b43da346}
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__PM_8C_a2a4e1e1198255c4890972680f9fb5a15}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-CheckMainMem@{PM\_\-CheckMainMem}}
+\index{PM\_\-CheckMainMem@{PM\_\-CheckMainMem}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-CheckMainMem}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-CheckMainMem (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a2a4e1e1198255c4890972680f9fb5a15}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a2a4e1e1198255c4890972680f9fb5a15_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a2a4e1e1198255c4890972680f9fb5a15_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a80f33d5bd3e0a9a388063a78edf53329}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-GetPage@{PM\_\-GetPage}}
+\index{PM\_\-GetPage@{PM\_\-GetPage}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-GetPage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} PM\_\-GetPage (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a80f33d5bd3e0a9a388063a78edf53329}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a80f33d5bd3e0a9a388063a78edf53329_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a80f33d5bd3e0a9a388063a78edf53329_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a6d8376b84fdfd88c991b82d9d9cebcfd}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-GetPageAddress@{PM\_\-GetPageAddress}}
+\index{PM\_\-GetPageAddress@{PM\_\-GetPageAddress}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-GetPageAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} PM\_\-GetPageAddress (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a6d8376b84fdfd88c991b82d9d9cebcfd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a6d8376b84fdfd88c991b82d9d9cebcfd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a6d8376b84fdfd88c991b82d9d9cebcfd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a18e14139add000a914aa1c385ad33f34}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-NextFrame@{PM\_\-NextFrame}}
+\index{PM\_\-NextFrame@{PM\_\-NextFrame}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-NextFrame}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-NextFrame (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a18e14139add000a914aa1c385ad33f34}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{ID__PM_8C_a18e14139add000a914aa1c385ad33f34_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a18e14139add000a914aa1c385ad33f34_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_ab97049dc4c67f252768239ca432f4204}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-Preload@{PM\_\-Preload}}
+\index{PM\_\-Preload@{PM\_\-Preload}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-Preload}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Preload (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)({\bf word} current, {\bf word} total)}]{update}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_ab97049dc4c67f252768239ca432f4204}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_ab97049dc4c67f252768239ca432f4204_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_ab97049dc4c67f252768239ca432f4204_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a25eb3f2f08365f6707cb60a298b2366e}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-Reset@{PM\_\-Reset}}
+\index{PM\_\-Reset@{PM\_\-Reset}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a25eb3f2f08365f6707cb60a298b2366e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a25eb3f2f08365f6707cb60a298b2366e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a5182c3fcfa8dd2f64fa5e9b8254dc991}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-SetMainMemPurge@{PM\_\-SetMainMemPurge}}
+\index{PM\_\-SetMainMemPurge@{PM\_\-SetMainMemPurge}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-SetMainMemPurge}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-SetMainMemPurge (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a5182c3fcfa8dd2f64fa5e9b8254dc991}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{ID__PM_8C_a5182c3fcfa8dd2f64fa5e9b8254dc991_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a1e7da5d85fc01341f8f9a893ddc87cfc}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-SetPageLock@{PM\_\-SetPageLock}}
+\index{PM\_\-SetPageLock@{PM\_\-SetPageLock}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-SetPageLock}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-SetPageLock (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum, }
+\item[{{\bf PMLockType}}]{lock}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a1e7da5d85fc01341f8f9a893ddc87cfc}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{ID__PM_8C_a1e7da5d85fc01341f8f9a893ddc87cfc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a1e7da5d85fc01341f8f9a893ddc87cfc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a4c8f2bd44f288cb9d7d9c4abe52ffa8c}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-Shutdown@{PM\_\-Shutdown}}
+\index{PM\_\-Shutdown@{PM\_\-Shutdown}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a4c8f2bd44f288cb9d7d9c4abe52ffa8c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a4c8f2bd44f288cb9d7d9c4abe52ffa8c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__PM_8C_a4c8f2bd44f288cb9d7d9c4abe52ffa8c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a5e5ef876a9184793502a2a5b6884e2d0}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PM\_\-Startup@{PM\_\-Startup}}
+\index{PM\_\-Startup@{PM\_\-Startup}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PM\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a5e5ef876a9184793502a2a5b6884e2d0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a5e5ef876a9184793502a2a5b6884e2d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a5e5ef876a9184793502a2a5b6884e2d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a5a2578fa944d0908a0d43e7f362036cb}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-ClosePageFile@{PML\_\-ClosePageFile}}
+\index{PML\_\-ClosePageFile@{PML\_\-ClosePageFile}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-ClosePageFile}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-ClosePageFile (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a5a2578fa944d0908a0d43e7f362036cb}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=368pt]{ID__PM_8C_a5a2578fa944d0908a0d43e7f362036cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a5a2578fa944d0908a0d43e7f362036cb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a4694a0931f68c73c15c7cdd4b6a4cb61}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-GetAPageBuffer@{PML\_\-GetAPageBuffer}}
+\index{PML\_\-GetAPageBuffer@{PML\_\-GetAPageBuffer}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-GetAPageBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far$\ast$ PML\_\-GetAPageBuffer (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum, }
+\item[{{\bf boolean}}]{mainonly}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a4694a0931f68c73c15c7cdd4b6a4cb61}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a4694a0931f68c73c15c7cdd4b6a4cb61_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a4694a0931f68c73c15c7cdd4b6a4cb61_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_aa4215b4363055b96b571bedb294d39a2}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-GetEMSAddress@{PML\_\-GetEMSAddress}}
+\index{PML\_\-GetEMSAddress@{PML\_\-GetEMSAddress}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-GetEMSAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} PML\_\-GetEMSAddress (
+\begin{DoxyParamCaption}
+\item[{int}]{page, }
+\item[{{\bf PMLockType}}]{lock}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_aa4215b4363055b96b571bedb294d39a2}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{ID__PM_8C_aa4215b4363055b96b571bedb294d39a2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_aa4215b4363055b96b571bedb294d39a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a15cc7513b41c134b24cd20536a63f892}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-GetPageFromXMS@{PML\_\-GetPageFromXMS}}
+\index{PML\_\-GetPageFromXMS@{PML\_\-GetPageFromXMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-GetPageFromXMS}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} PML\_\-GetPageFromXMS (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum, }
+\item[{{\bf boolean}}]{mainonly}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a15cc7513b41c134b24cd20536a63f892}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a15cc7513b41c134b24cd20536a63f892_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a15cc7513b41c134b24cd20536a63f892_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a1a23d717675f8d14bd6e07bb7bcbd4b4}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-GiveLRUPage@{PML\_\-GiveLRUPage}}
+\index{PML\_\-GiveLRUPage@{PML\_\-GiveLRUPage}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-GiveLRUPage}]{\setlength{\rightskip}{0pt plus 5cm}int PML\_\-GiveLRUPage (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{mainonly}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a1a23d717675f8d14bd6e07bb7bcbd4b4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ID__PM_8C_a1a23d717675f8d14bd6e07bb7bcbd4b4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a1a23d717675f8d14bd6e07bb7bcbd4b4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_aa3210f7fc8e7367f2349cd17cbec0c67}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-GiveLRUXMSPage@{PML\_\-GiveLRUXMSPage}}
+\index{PML\_\-GiveLRUXMSPage@{PML\_\-GiveLRUXMSPage}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-GiveLRUXMSPage}]{\setlength{\rightskip}{0pt plus 5cm}int PML\_\-GiveLRUXMSPage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_aa3210f7fc8e7367f2349cd17cbec0c67}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_aa3210f7fc8e7367f2349cd17cbec0c67_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a14156f3e9e18532f92f4c00e761fa0b7}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-LoadPage@{PML\_\-LoadPage}}
+\index{PML\_\-LoadPage@{PML\_\-LoadPage}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-LoadPage}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-LoadPage (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum, }
+\item[{{\bf boolean}}]{mainonly}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a14156f3e9e18532f92f4c00e761fa0b7}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a14156f3e9e18532f92f4c00e761fa0b7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a14156f3e9e18532f92f4c00e761fa0b7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_ab2f720eba0924c15d0a7c6a487fc0626}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-MapEMS@{PML\_\-MapEMS}}
+\index{PML\_\-MapEMS@{PML\_\-MapEMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-MapEMS}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-MapEMS (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{logical, }
+\item[{{\bf word}}]{physical}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_ab2f720eba0924c15d0a7c6a487fc0626}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{ID__PM_8C_ab2f720eba0924c15d0a7c6a487fc0626_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_ab2f720eba0924c15d0a7c6a487fc0626_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a64c6a16ef9e07fadf7fbde9b90565e4e}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-OpenPageFile@{PML\_\-OpenPageFile}}
+\index{PML\_\-OpenPageFile@{PML\_\-OpenPageFile}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-OpenPageFile}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-OpenPageFile (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a64c6a16ef9e07fadf7fbde9b90565e4e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a64c6a16ef9e07fadf7fbde9b90565e4e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a64c6a16ef9e07fadf7fbde9b90565e4e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a0b6f9ec457913559bcff1d9258a15552}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-PutPageInXMS@{PML\_\-PutPageInXMS}}
+\index{PML\_\-PutPageInXMS@{PML\_\-PutPageInXMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-PutPageInXMS}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-PutPageInXMS (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a0b6f9ec457913559bcff1d9258a15552}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a0b6f9ec457913559bcff1d9258a15552_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a0b6f9ec457913559bcff1d9258a15552_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a3e8875fd1618f89f3e98f9d2ae4f0945}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-ReadFromFile@{PML\_\-ReadFromFile}}
+\index{PML\_\-ReadFromFile@{PML\_\-ReadFromFile}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-ReadFromFile}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-ReadFromFile (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} far $\ast$}]{buf, }
+\item[{long}]{offset, }
+\item[{{\bf word}}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a3e8875fd1618f89f3e98f9d2ae4f0945}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=366pt]{ID__PM_8C_a3e8875fd1618f89f3e98f9d2ae4f0945_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a3e8875fd1618f89f3e98f9d2ae4f0945_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_aadca17cdf940e28b8da2e6d1f19fd791}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-ShutdownEMS@{PML\_\-ShutdownEMS}}
+\index{PML\_\-ShutdownEMS@{PML\_\-ShutdownEMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-ShutdownEMS}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-ShutdownEMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_aadca17cdf940e28b8da2e6d1f19fd791}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{ID__PM_8C_aadca17cdf940e28b8da2e6d1f19fd791_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_aadca17cdf940e28b8da2e6d1f19fd791_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a788c597ebc679e6114cafede80c05388}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-ShutdownMainMem@{PML\_\-ShutdownMainMem}}
+\index{PML\_\-ShutdownMainMem@{PML\_\-ShutdownMainMem}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-ShutdownMainMem}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-ShutdownMainMem (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a788c597ebc679e6114cafede80c05388}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{ID__PM_8C_a788c597ebc679e6114cafede80c05388_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a788c597ebc679e6114cafede80c05388_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a363e2f98515f8d1e08746e89465d2e24}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-ShutdownXMS@{PML\_\-ShutdownXMS}}
+\index{PML\_\-ShutdownXMS@{PML\_\-ShutdownXMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-ShutdownXMS}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-ShutdownXMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a363e2f98515f8d1e08746e89465d2e24}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{ID__PM_8C_a363e2f98515f8d1e08746e89465d2e24_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a363e2f98515f8d1e08746e89465d2e24_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a6085844cd57a807307a56cd8246e2bd2}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-StartupEMS@{PML\_\-StartupEMS}}
+\index{PML\_\-StartupEMS@{PML\_\-StartupEMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-StartupEMS}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} PML\_\-StartupEMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a6085844cd57a807307a56cd8246e2bd2}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a6085844cd57a807307a56cd8246e2bd2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_a8cecebd101b586366e04355a3914427b}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-StartupMainMem@{PML\_\-StartupMainMem}}
+\index{PML\_\-StartupMainMem@{PML\_\-StartupMainMem}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-StartupMainMem}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-StartupMainMem (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_a8cecebd101b586366e04355a3914427b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a8cecebd101b586366e04355a3914427b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_a8cecebd101b586366e04355a3914427b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_ab211699b43c5415d19e7c2ff618bcbb7}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-StartupXMS@{PML\_\-StartupXMS}}
+\index{PML\_\-StartupXMS@{PML\_\-StartupXMS}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-StartupXMS}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} PML\_\-StartupXMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_ab211699b43c5415d19e7c2ff618bcbb7}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_ab211699b43c5415d19e7c2ff618bcbb7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_aa2abd895c0ac117de4d033b6850a9a07}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-TransferPageSpace@{PML\_\-TransferPageSpace}}
+\index{PML\_\-TransferPageSpace@{PML\_\-TransferPageSpace}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-TransferPageSpace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} PML\_\-TransferPageSpace (
+\begin{DoxyParamCaption}
+\item[{int}]{orig, }
+\item[{int}]{new}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_aa2abd895c0ac117de4d033b6850a9a07}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_aa2abd895c0ac117de4d033b6850a9a07_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8C_aa2abd895c0ac117de4d033b6850a9a07_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8C_adbf449e02e6c97248f39c51e8ced3238}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PML\_\-XMSCopy@{PML\_\-XMSCopy}}
+\index{PML\_\-XMSCopy@{PML\_\-XMSCopy}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PML\_\-XMSCopy}]{\setlength{\rightskip}{0pt plus 5cm}void PML\_\-XMSCopy (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{toxms, }
+\item[{{\bf byte} far $\ast$}]{addr, }
+\item[{{\bf word}}]{xmspage, }
+\item[{{\bf word}}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8C_adbf449e02e6c97248f39c51e8ced3238}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{ID__PM_8C_adbf449e02e6c97248f39c51e8ced3238_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__PM_8C_af385634b054d3e3d81d85865b3d7e71e}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!ChunksInFile@{ChunksInFile}}
+\index{ChunksInFile@{ChunksInFile}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{ChunksInFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf ChunksInFile}}}
+\label{ID__PM_8C_af385634b054d3e3d81d85865b3d7e71e}
+\hypertarget{ID__PM_8C_a6afdcc6dd0066167eb94a8109a9940b1}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMMDriverName@{EMMDriverName}}
+\index{EMMDriverName@{EMMDriverName}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMMDriverName}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf EMMDriverName}\mbox{[}9\mbox{]} = \char`\"{}EMMXXXX0\char`\"{}}}
+\label{ID__PM_8C_a6afdcc6dd0066167eb94a8109a9940b1}
+\hypertarget{ID__PM_8C_a070c70008059f6ed164c4baa34d84f2a}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSAvail@{EMSAvail}}
+\index{EMSAvail@{EMSAvail}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSAvail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf EMSAvail}}}
+\label{ID__PM_8C_a070c70008059f6ed164c4baa34d84f2a}
+\hypertarget{ID__PM_8C_a99b4bb7b9ffe9727ddd4bd4d7a586e0a}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSHandle@{EMSHandle}}
+\index{EMSHandle@{EMSHandle}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSHandle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf EMSHandle}}}
+\label{ID__PM_8C_a99b4bb7b9ffe9727ddd4bd4d7a586e0a}
+\hypertarget{ID__PM_8C_a045a2fcf98833b9fee5b21fa2de99e73}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSList@{EMSList}}
+\index{EMSList@{EMSList}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EMSListStruct} {\bf EMSList}\mbox{[}EMSFrameCount\mbox{]}}}
+\label{ID__PM_8C_a045a2fcf98833b9fee5b21fa2de99e73}
+\hypertarget{ID__PM_8C_a41433c74e5213d6e6dc1fe8713688c3a}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSPageFrame@{EMSPageFrame}}
+\index{EMSPageFrame@{EMSPageFrame}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSPageFrame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf EMSPageFrame}}}
+\label{ID__PM_8C_a41433c74e5213d6e6dc1fe8713688c3a}
+\hypertarget{ID__PM_8C_a0b3caaa008ec8ab4b8486880a825bad0}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSPagesAvail@{EMSPagesAvail}}
+\index{EMSPagesAvail@{EMSPagesAvail}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSPagesAvail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf EMSPagesAvail}}}
+\label{ID__PM_8C_a0b3caaa008ec8ab4b8486880a825bad0}
+\hypertarget{ID__PM_8C_ab8637fe892c50d2bc1a0766d23ec3759}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSPagesUsed@{EMSPagesUsed}}
+\index{EMSPagesUsed@{EMSPagesUsed}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSPagesUsed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf EMSPagesUsed}}}
+\label{ID__PM_8C_ab8637fe892c50d2bc1a0766d23ec3759}
+\hypertarget{ID__PM_8C_ab76b57d416cd9763e7ea45974bf6ee0d}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSPhysicalPage@{EMSPhysicalPage}}
+\index{EMSPhysicalPage@{EMSPhysicalPage}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSPhysicalPage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf EMSPhysicalPage}}}
+\label{ID__PM_8C_ab76b57d416cd9763e7ea45974bf6ee0d}
+\hypertarget{ID__PM_8C_ab35be0811b0150bb1a52eaad6d3d6340}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!EMSPresent@{EMSPresent}}
+\index{EMSPresent@{EMSPresent}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{EMSPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf EMSPresent}}}
+\label{ID__PM_8C_ab35be0811b0150bb1a52eaad6d3d6340}
+\hypertarget{ID__PM_8C_a2a4448d32405a8771e6cdbc9111eec4f}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!MainMemPages@{MainMemPages}}
+\index{MainMemPages@{MainMemPages}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{MainMemPages}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} {\bf MainMemPages}\mbox{[}PMMaxMainMem\mbox{]}}}
+\label{ID__PM_8C_a2a4448d32405a8771e6cdbc9111eec4f}
+\hypertarget{ID__PM_8C_ac948cb22aa3829c8a38da5f20c30b9cb}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!MainMemUsed@{MainMemUsed}}
+\index{MainMemUsed@{MainMemUsed}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{MainMemUsed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PMBlockAttr} {\bf MainMemUsed}\mbox{[}PMMaxMainMem\mbox{]}}}
+\label{ID__PM_8C_ac948cb22aa3829c8a38da5f20c30b9cb}
+\hypertarget{ID__PM_8C_aea208d1585f4e840a3bd9f2dc79febdb}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!MainPagesAvail@{MainPagesAvail}}
+\index{MainPagesAvail@{MainPagesAvail}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{MainPagesAvail}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MainPagesAvail}}}
+\label{ID__PM_8C_aea208d1585f4e840a3bd9f2dc79febdb}
+\hypertarget{ID__PM_8C_a29f989d2023364e9b053ae3406d714e0}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!MainPagesUsed@{MainPagesUsed}}
+\index{MainPagesUsed@{MainPagesUsed}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{MainPagesUsed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf MainPagesUsed}}}
+\label{ID__PM_8C_a29f989d2023364e9b053ae3406d714e0}
+\hypertarget{ID__PM_8C_a023d72d7c20dc97648a2403f2e3ae0dc}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!MainPresent@{MainPresent}}
+\index{MainPresent@{MainPresent}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{MainPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf MainPresent}}}
+\label{ID__PM_8C_a023d72d7c20dc97648a2403f2e3ae0dc}
+\hypertarget{ID__PM_8C_a546fb248e72f20f38e68c4a913206f25}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PageFile@{PageFile}}
+\index{PageFile@{PageFile}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PageFile}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf PageFile} = -\/1}}
+\label{ID__PM_8C_a546fb248e72f20f38e68c4a913206f25}
+\hypertarget{ID__PM_8C_a3d2a1c78f3a8c484f8b2ed0cbe566453}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PageFileName@{PageFileName}}
+\index{PageFileName@{PageFileName}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PageFileName}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf PageFileName}\mbox{[}13\mbox{]} = \{\char`\"{}VSWAP.\char`\"{}\}}}
+\label{ID__PM_8C_a3d2a1c78f3a8c484f8b2ed0cbe566453}
+\hypertarget{ID__PM_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!ParmStrings@{ParmStrings}}
+\index{ParmStrings@{ParmStrings}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{ParmStrings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf ParmStrings}\mbox{[}$\,$\mbox{]} = \{\char`\"{}nomain\char`\"{},\char`\"{}noems\char`\"{},\char`\"{}noxms\char`\"{},nil\}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__PM_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}
+\hypertarget{ID__PM_8C_ab8c38b967702c00419fc3c6b3bcb54af}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMFrameCount@{PMFrameCount}}
+\index{PMFrameCount@{PMFrameCount}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMFrameCount}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf PMFrameCount}}}
+\label{ID__PM_8C_ab8c38b967702c00419fc3c6b3bcb54af}
+\hypertarget{ID__PM_8C_a284592ad8b98c33e06c6e37f312b443e}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMNumBlocks@{PMNumBlocks}}
+\index{PMNumBlocks@{PMNumBlocks}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMNumBlocks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PMNumBlocks}}}
+\label{ID__PM_8C_a284592ad8b98c33e06c6e37f312b443e}
+\hypertarget{ID__PM_8C_aac6e5bfd3ae3497c8b721679578d73f1}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMPages@{PMPages}}
+\index{PMPages@{PMPages}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMPages}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PageListStruct} far$\ast$ {\bf PMPages}}}
+\label{ID__PM_8C_aac6e5bfd3ae3497c8b721679578d73f1}
+\hypertarget{ID__PM_8C_af388af9d50f174974a23868c2284f59e}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMPanicMode@{PMPanicMode}}
+\index{PMPanicMode@{PMPanicMode}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMPanicMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf PMPanicMode}}}
+\label{ID__PM_8C_af388af9d50f174974a23868c2284f59e}
+\hypertarget{ID__PM_8C_ada3aca92d9c7713b52e30b375132ed6e}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMSegPages@{PMSegPages}}
+\index{PMSegPages@{PMSegPages}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMSegPages}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PageListStruct} far \_\-seg$\ast$ {\bf PMSegPages}}}
+\label{ID__PM_8C_ada3aca92d9c7713b52e30b375132ed6e}
+\hypertarget{ID__PM_8C_a4274c51cf3dd5e7fd0c4562376e91d3b}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMSoundStart@{PMSoundStart}}
+\index{PMSoundStart@{PMSoundStart}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMSoundStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PMSoundStart}}}
+\label{ID__PM_8C_a4274c51cf3dd5e7fd0c4562376e91d3b}
+\hypertarget{ID__PM_8C_ac15156742487c3e546be66ffc29b4473}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMSpriteStart@{PMSpriteStart}}
+\index{PMSpriteStart@{PMSpriteStart}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMSpriteStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PMSpriteStart}}}
+\label{ID__PM_8C_ac15156742487c3e546be66ffc29b4473}
+\hypertarget{ID__PM_8C_a3bdbaa7efb77df38888d8e0dd19a0bf2}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMStarted@{PMStarted}}
+\index{PMStarted@{PMStarted}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMStarted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf PMStarted}}}
+\label{ID__PM_8C_a3bdbaa7efb77df38888d8e0dd19a0bf2}
+\hypertarget{ID__PM_8C_a884dd0e6012652c6ecbd41f8b069fe4b}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!PMThrashing@{PMThrashing}}
+\index{PMThrashing@{PMThrashing}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{PMThrashing}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf PMThrashing}}}
+\label{ID__PM_8C_a884dd0e6012652c6ecbd41f8b069fe4b}
+\hypertarget{ID__PM_8C_afa7725d210182d66b1cbf507e491cf3f}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!XMSAvail@{XMSAvail}}
+\index{XMSAvail@{XMSAvail}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{XMSAvail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf XMSAvail}}}
+\label{ID__PM_8C_afa7725d210182d66b1cbf507e491cf3f}
+\hypertarget{ID__PM_8C_aefba3ee02ef1b767db68787510867859}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!XMSDriver@{XMSDriver}}
+\index{XMSDriver@{XMSDriver}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{XMSDriver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf XMSDriver}}}
+\label{ID__PM_8C_aefba3ee02ef1b767db68787510867859}
+\hypertarget{ID__PM_8C_a091a2f0e24a80ebc24869f64bcf99182}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!XMSHandle@{XMSHandle}}
+\index{XMSHandle@{XMSHandle}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{XMSHandle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf XMSHandle}}}
+\label{ID__PM_8C_a091a2f0e24a80ebc24869f64bcf99182}
+\hypertarget{ID__PM_8C_ac00fcb63e290e188116ecc3f43ec3f93}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!XMSPagesAvail@{XMSPagesAvail}}
+\index{XMSPagesAvail@{XMSPagesAvail}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{XMSPagesAvail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf XMSPagesAvail}}}
+\label{ID__PM_8C_ac00fcb63e290e188116ecc3f43ec3f93}
+\hypertarget{ID__PM_8C_a237331007a52aca910a5f97d3be50266}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!XMSPagesUsed@{XMSPagesUsed}}
+\index{XMSPagesUsed@{XMSPagesUsed}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{XMSPagesUsed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf XMSPagesUsed}}}
+\label{ID__PM_8C_a237331007a52aca910a5f97d3be50266}
+\hypertarget{ID__PM_8C_a5f57a31d9e6a665cbebbb452d757de61}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!XMSPresent@{XMSPresent}}
+\index{XMSPresent@{XMSPresent}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{XMSPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf XMSPresent}}}
+\label{ID__PM_8C_a5f57a31d9e6a665cbebbb452d757de61}
+\hypertarget{ID__PM_8C_a591ec8badf330c29bff6aed5cf4d0b2f}{
+\index{ID\_\-PM.C@{ID\_\-PM.C}!XMSProtectPage@{XMSProtectPage}}
+\index{XMSProtectPage@{XMSProtectPage}!ID_PM.C@{ID\_\-PM.C}}
+\subsubsection[{XMSProtectPage}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf XMSProtectPage} = -\/1}}
+\label{ID__PM_8C_a591ec8badf330c29bff6aed5cf4d0b2f}

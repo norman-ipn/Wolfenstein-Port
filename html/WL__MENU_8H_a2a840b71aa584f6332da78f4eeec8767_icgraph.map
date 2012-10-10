@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__ACT2_8C.html#a79dd40f11ba56398bf7617f7d05d3967" title="A_StartDeathCam" alt="" coords="108,5,236,35"/>
+<area shape="rect" id="node5" href="$WL__INTER_8C.html#ab396c53c02f20e288d2d718c0ee64728" title="LevelCompleted" alt="" coords="115,59,229,88"/>
+<area shape="rect" id="node18" href="$WL__INTER_8C.html#aaa41fd21f2b55e23622375ac43624b99" title="Victory" alt="" coords="141,112,203,141"/>
+<area shape="rect" id="node7" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="285,85,371,115"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="419,85,504,115"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="552,85,603,115"/>
+<area shape="rect" id="node13" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="652,59,740,88"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="789,85,864,115"/>
+</map>

@@ -1,0 +1,697 @@
+\hypertarget{WL__TEXT_8C}{
+\section{WL\_\-TEXT.C File Reference}
+\label{WL__TEXT_8C}\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WL\_\-TEXT.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__TEXT_8C_ad71a9c1dfce508755e2d04d2cdef41e0}{BACKCOLOR}~0x11
+\item 
+\#define \hyperlink{WL__TEXT_8C_af6ee0ad89f70fda13767c2925b5d831f}{WORDLIMIT}~80
+\item 
+\#define \hyperlink{WL__TEXT_8C_afb76020ea3a049e31eef16a4bf89bdd1}{FONTHEIGHT}~10
+\item 
+\#define \hyperlink{WL__TEXT_8C_a750781fb573476126fd36fea5ebd3e56}{TOPMARGIN}~16
+\item 
+\#define \hyperlink{WL__TEXT_8C_a577fa4f3a64146902fa2a7ecaed71c28}{BOTTOMMARGIN}~32
+\item 
+\#define \hyperlink{WL__TEXT_8C_afb683e4c7e8d160620e6f7304c30419e}{LEFTMARGIN}~16
+\item 
+\#define \hyperlink{WL__TEXT_8C_ab9c51858681a43e5c47aa4c3c6b384ac}{RIGHTMARGIN}~16
+\item 
+\#define \hyperlink{WL__TEXT_8C_a8dbc8ce36d68d66d75e1c5667b7e5def}{PICMARGIN}~8
+\item 
+\#define \hyperlink{WL__TEXT_8C_a7338d62a66f372c5a177134cbd9e198a}{TEXTROWS}~((200-\/TOPMARGIN-\/BOTTOMMARGIN)/FONTHEIGHT)
+\item 
+\#define \hyperlink{WL__TEXT_8C_adc11e3b6b1c6fb65d8bade01c0255a3c}{SPACEWIDTH}~7
+\item 
+\#define \hyperlink{WL__TEXT_8C_a409c2c5ee4972d60b10fb2a716d9241e}{SCREENPIXWIDTH}~320
+\item 
+\#define \hyperlink{WL__TEXT_8C_ad8da423c66adb10fef50e7aedcafb4bc}{SCREENMID}~(SCREENPIXWIDTH/2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__TEXT_8C_a4ce1d6ef4ea4445f18f5d7c2dcce817e}{RipToEOL} (void)
+\item 
+int \hyperlink{WL__TEXT_8C_a2cb5d5c64873238c927112cfa403455a}{ParseNumber} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_a54fc6ee9755689f998d8e81754867234}{ParsePicCommand} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_ab37df8a0a1c922da15b4ed950eaa3f0d}{ParseTimedCommand} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_abbecf5fd92e248b4fe47a58f359af86b}{TimedPicCommand} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_afeea8bf562580ae8e7253ce5aa13dc80}{HandleCommand} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_a453cb4123eb9c983999067d525dc5fe8}{NewLine} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_a2b9c23c846067c4729e5d5ff74e681f9}{HandleCtrls} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_ae12bb704b23473d941dd7d0826ca1aba}{HandleWord} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_a3224c47d778c20c9616a4483f48b0ee6}{PageLayout} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} shownumber)
+\item 
+void \hyperlink{WL__TEXT_8C_a5fb67f5c480e8bb2b99eb0b46fc840f3}{BackPage} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_a646557f2e9c30f23c90632bcdfc8caa2}{CacheLayoutGraphics} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_ab5697774e1a05a1e3e51b02688f1561f}{ShowArticle} (char far $\ast$article)
+\item 
+void \hyperlink{WL__TEXT_8C_a7dfe666305b63dcb0a03ee9960b74d01}{HelpScreens} (void)
+\item 
+void \hyperlink{WL__TEXT_8C_a11ef38288d701a8921caf515d527cd58}{EndText} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum}
+\item 
+int \hyperlink{WL__TEXT_8C_a0d1c5e1299956c2f925c50afdcfd1c8c}{numpages}
+\item 
+unsigned \hyperlink{WL__TEXT_8C_a06fc12df6d11c1860bf3560e797f6a86}{leftmargin} \mbox{[}TEXTROWS\mbox{]}
+\item 
+unsigned \hyperlink{WL__TEXT_8C_af36828bfab1f6f383fd7fd82cbe4b1e4}{rightmargin} \mbox{[}TEXTROWS\mbox{]}
+\item 
+char far $\ast$ \hyperlink{WL__TEXT_8C_ae039e40005934b01c31fe5287625b253}{text}
+\item 
+unsigned \hyperlink{WL__TEXT_8C_ab98c4cafb5050f009ae5718c341753a0}{rowon}
+\item 
+int \hyperlink{WL__TEXT_8C_ad8c58e10d111b4a969c99d5ecfc3868f}{picx}
+\item 
+int \hyperlink{WL__TEXT_8C_a73b2a6aa834bbf7c38e798be716d1ea0}{picy}
+\item 
+int \hyperlink{WL__TEXT_8C_a38ee8916c0c328929ad672895daca6d6}{picnum}
+\item 
+int \hyperlink{WL__TEXT_8C_ab04a2daab21fa7d886fb269432a2af29}{picdelay}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__TEXT_8C_a0755a01e7d94b21d0d57168ac818089e}{layoutdone}
+\item 
+int \hyperlink{WL__TEXT_8C_a9414485b9ffb5157a3d3469d1588fd2a}{endextern} = T\_\-ENDART1
+\item 
+int \hyperlink{WL__TEXT_8C_a910c7d3090fe5a0e86c16a2baddcb1c8}{helpextern} = T\_\-HELPART
+\item 
+char \hyperlink{WL__TEXT_8C_a305be2d1fe1747006daab18fa395fdae}{helpfilename} \mbox{[}13\mbox{]} = \char`\"{}HELPART.\char`\"{}
+\item 
+char \hyperlink{WL__TEXT_8C_ab0714dbebe80dcbdefd80f2f20800171}{endfilename} \mbox{[}13\mbox{]} = \char`\"{}ENDART1.\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__TEXT_8C_ad71a9c1dfce508755e2d04d2cdef41e0}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!BACKCOLOR@{BACKCOLOR}}
+\index{BACKCOLOR@{BACKCOLOR}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{BACKCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define BACKCOLOR~0x11}}
+\label{WL__TEXT_8C_ad71a9c1dfce508755e2d04d2cdef41e0}
+\hypertarget{WL__TEXT_8C_a577fa4f3a64146902fa2a7ecaed71c28}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!BOTTOMMARGIN@{BOTTOMMARGIN}}
+\index{BOTTOMMARGIN@{BOTTOMMARGIN}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{BOTTOMMARGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOTTOMMARGIN~32}}
+\label{WL__TEXT_8C_a577fa4f3a64146902fa2a7ecaed71c28}
+\hypertarget{WL__TEXT_8C_afb76020ea3a049e31eef16a4bf89bdd1}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!FONTHEIGHT@{FONTHEIGHT}}
+\index{FONTHEIGHT@{FONTHEIGHT}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{FONTHEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define FONTHEIGHT~10}}
+\label{WL__TEXT_8C_afb76020ea3a049e31eef16a4bf89bdd1}
+\hypertarget{WL__TEXT_8C_afb683e4c7e8d160620e6f7304c30419e}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!LEFTMARGIN@{LEFTMARGIN}}
+\index{LEFTMARGIN@{LEFTMARGIN}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{LEFTMARGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define LEFTMARGIN~16}}
+\label{WL__TEXT_8C_afb683e4c7e8d160620e6f7304c30419e}
+\hypertarget{WL__TEXT_8C_a8dbc8ce36d68d66d75e1c5667b7e5def}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!PICMARGIN@{PICMARGIN}}
+\index{PICMARGIN@{PICMARGIN}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{PICMARGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define PICMARGIN~8}}
+\label{WL__TEXT_8C_a8dbc8ce36d68d66d75e1c5667b7e5def}
+\hypertarget{WL__TEXT_8C_ab9c51858681a43e5c47aa4c3c6b384ac}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!RIGHTMARGIN@{RIGHTMARGIN}}
+\index{RIGHTMARGIN@{RIGHTMARGIN}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{RIGHTMARGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define RIGHTMARGIN~16}}
+\label{WL__TEXT_8C_ab9c51858681a43e5c47aa4c3c6b384ac}
+\hypertarget{WL__TEXT_8C_ad8da423c66adb10fef50e7aedcafb4bc}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!SCREENMID@{SCREENMID}}
+\index{SCREENMID@{SCREENMID}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{SCREENMID}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCREENMID~(SCREENPIXWIDTH/2)}}
+\label{WL__TEXT_8C_ad8da423c66adb10fef50e7aedcafb4bc}
+\hypertarget{WL__TEXT_8C_a409c2c5ee4972d60b10fb2a716d9241e}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!SCREENPIXWIDTH@{SCREENPIXWIDTH}}
+\index{SCREENPIXWIDTH@{SCREENPIXWIDTH}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{SCREENPIXWIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCREENPIXWIDTH~320}}
+\label{WL__TEXT_8C_a409c2c5ee4972d60b10fb2a716d9241e}
+\hypertarget{WL__TEXT_8C_adc11e3b6b1c6fb65d8bade01c0255a3c}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!SPACEWIDTH@{SPACEWIDTH}}
+\index{SPACEWIDTH@{SPACEWIDTH}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{SPACEWIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPACEWIDTH~7}}
+\label{WL__TEXT_8C_adc11e3b6b1c6fb65d8bade01c0255a3c}
+\hypertarget{WL__TEXT_8C_a7338d62a66f372c5a177134cbd9e198a}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!TEXTROWS@{TEXTROWS}}
+\index{TEXTROWS@{TEXTROWS}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{TEXTROWS}]{\setlength{\rightskip}{0pt plus 5cm}\#define TEXTROWS~((200-\/TOPMARGIN-\/BOTTOMMARGIN)/FONTHEIGHT)}}
+\label{WL__TEXT_8C_a7338d62a66f372c5a177134cbd9e198a}
+\hypertarget{WL__TEXT_8C_a750781fb573476126fd36fea5ebd3e56}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!TOPMARGIN@{TOPMARGIN}}
+\index{TOPMARGIN@{TOPMARGIN}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{TOPMARGIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define TOPMARGIN~16}}
+\label{WL__TEXT_8C_a750781fb573476126fd36fea5ebd3e56}
+\hypertarget{WL__TEXT_8C_af6ee0ad89f70fda13767c2925b5d831f}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!WORDLIMIT@{WORDLIMIT}}
+\index{WORDLIMIT@{WORDLIMIT}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{WORDLIMIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORDLIMIT~80}}
+\label{WL__TEXT_8C_af6ee0ad89f70fda13767c2925b5d831f}
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__TEXT_8C_a5fb67f5c480e8bb2b99eb0b46fc840f3}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!BackPage@{BackPage}}
+\index{BackPage@{BackPage}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{BackPage}]{\setlength{\rightskip}{0pt plus 5cm}void BackPage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a5fb67f5c480e8bb2b99eb0b46fc840f3}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a5fb67f5c480e8bb2b99eb0b46fc840f3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a646557f2e9c30f23c90632bcdfc8caa2}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!CacheLayoutGraphics@{CacheLayoutGraphics}}
+\index{CacheLayoutGraphics@{CacheLayoutGraphics}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{CacheLayoutGraphics}]{\setlength{\rightskip}{0pt plus 5cm}void CacheLayoutGraphics (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a646557f2e9c30f23c90632bcdfc8caa2}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a646557f2e9c30f23c90632bcdfc8caa2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a646557f2e9c30f23c90632bcdfc8caa2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a11ef38288d701a8921caf515d527cd58}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!EndText@{EndText}}
+\index{EndText@{EndText}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{EndText}]{\setlength{\rightskip}{0pt plus 5cm}void EndText (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a11ef38288d701a8921caf515d527cd58}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a11ef38288d701a8921caf515d527cd58_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a11ef38288d701a8921caf515d527cd58_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_afeea8bf562580ae8e7253ce5aa13dc80}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!HandleCommand@{HandleCommand}}
+\index{HandleCommand@{HandleCommand}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{HandleCommand}]{\setlength{\rightskip}{0pt plus 5cm}void HandleCommand (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_afeea8bf562580ae8e7253ce5aa13dc80}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_afeea8bf562580ae8e7253ce5aa13dc80_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_afeea8bf562580ae8e7253ce5aa13dc80_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a2b9c23c846067c4729e5d5ff74e681f9}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!HandleCtrls@{HandleCtrls}}
+\index{HandleCtrls@{HandleCtrls}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{HandleCtrls}]{\setlength{\rightskip}{0pt plus 5cm}void HandleCtrls (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a2b9c23c846067c4729e5d5ff74e681f9}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{WL__TEXT_8C_a2b9c23c846067c4729e5d5ff74e681f9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a2b9c23c846067c4729e5d5ff74e681f9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_ae12bb704b23473d941dd7d0826ca1aba}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!HandleWord@{HandleWord}}
+\index{HandleWord@{HandleWord}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{HandleWord}]{\setlength{\rightskip}{0pt plus 5cm}void HandleWord (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_ae12bb704b23473d941dd7d0826ca1aba}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_ae12bb704b23473d941dd7d0826ca1aba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_ae12bb704b23473d941dd7d0826ca1aba_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a7dfe666305b63dcb0a03ee9960b74d01}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!HelpScreens@{HelpScreens}}
+\index{HelpScreens@{HelpScreens}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{HelpScreens}]{\setlength{\rightskip}{0pt plus 5cm}void HelpScreens (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a7dfe666305b63dcb0a03ee9960b74d01}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a7dfe666305b63dcb0a03ee9960b74d01_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a7dfe666305b63dcb0a03ee9960b74d01_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a453cb4123eb9c983999067d525dc5fe8}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!NewLine@{NewLine}}
+\index{NewLine@{NewLine}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{NewLine}]{\setlength{\rightskip}{0pt plus 5cm}void NewLine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a453cb4123eb9c983999067d525dc5fe8}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a453cb4123eb9c983999067d525dc5fe8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a3224c47d778c20c9616a4483f48b0ee6}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!PageLayout@{PageLayout}}
+\index{PageLayout@{PageLayout}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{PageLayout}]{\setlength{\rightskip}{0pt plus 5cm}void PageLayout (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{shownumber}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a3224c47d778c20c9616a4483f48b0ee6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a3224c47d778c20c9616a4483f48b0ee6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a3224c47d778c20c9616a4483f48b0ee6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a2cb5d5c64873238c927112cfa403455a}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!ParseNumber@{ParseNumber}}
+\index{ParseNumber@{ParseNumber}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{ParseNumber}]{\setlength{\rightskip}{0pt plus 5cm}int ParseNumber (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a2cb5d5c64873238c927112cfa403455a}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a2cb5d5c64873238c927112cfa403455a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a54fc6ee9755689f998d8e81754867234}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!ParsePicCommand@{ParsePicCommand}}
+\index{ParsePicCommand@{ParsePicCommand}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{ParsePicCommand}]{\setlength{\rightskip}{0pt plus 5cm}void ParsePicCommand (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a54fc6ee9755689f998d8e81754867234}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{WL__TEXT_8C_a54fc6ee9755689f998d8e81754867234_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a54fc6ee9755689f998d8e81754867234_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_ab37df8a0a1c922da15b4ed950eaa3f0d}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!ParseTimedCommand@{ParseTimedCommand}}
+\index{ParseTimedCommand@{ParseTimedCommand}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{ParseTimedCommand}]{\setlength{\rightskip}{0pt plus 5cm}void ParseTimedCommand (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_ab37df8a0a1c922da15b4ed950eaa3f0d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{WL__TEXT_8C_ab37df8a0a1c922da15b4ed950eaa3f0d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_ab37df8a0a1c922da15b4ed950eaa3f0d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_a4ce1d6ef4ea4445f18f5d7c2dcce817e}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!RipToEOL@{RipToEOL}}
+\index{RipToEOL@{RipToEOL}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{RipToEOL}]{\setlength{\rightskip}{0pt plus 5cm}void RipToEOL (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_a4ce1d6ef4ea4445f18f5d7c2dcce817e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_a4ce1d6ef4ea4445f18f5d7c2dcce817e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_ab5697774e1a05a1e3e51b02688f1561f}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!ShowArticle@{ShowArticle}}
+\index{ShowArticle@{ShowArticle}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{ShowArticle}]{\setlength{\rightskip}{0pt plus 5cm}void ShowArticle (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{article}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_ab5697774e1a05a1e3e51b02688f1561f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_ab5697774e1a05a1e3e51b02688f1561f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_ab5697774e1a05a1e3e51b02688f1561f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__TEXT_8C_abbecf5fd92e248b4fe47a58f359af86b}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!TimedPicCommand@{TimedPicCommand}}
+\index{TimedPicCommand@{TimedPicCommand}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{TimedPicCommand}]{\setlength{\rightskip}{0pt plus 5cm}void TimedPicCommand (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__TEXT_8C_abbecf5fd92e248b4fe47a58f359af86b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_abbecf5fd92e248b4fe47a58f359af86b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__TEXT_8C_abbecf5fd92e248b4fe47a58f359af86b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__TEXT_8C_a9414485b9ffb5157a3d3469d1588fd2a}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!endextern@{endextern}}
+\index{endextern@{endextern}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{endextern}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf endextern} = T\_\-ENDART1}}
+\label{WL__TEXT_8C_a9414485b9ffb5157a3d3469d1588fd2a}
+\hypertarget{WL__TEXT_8C_ab0714dbebe80dcbdefd80f2f20800171}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!endfilename@{endfilename}}
+\index{endfilename@{endfilename}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{endfilename}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf endfilename}\mbox{[}13\mbox{]} = \char`\"{}ENDART1.\char`\"{}}}
+\label{WL__TEXT_8C_ab0714dbebe80dcbdefd80f2f20800171}
+\hypertarget{WL__TEXT_8C_a910c7d3090fe5a0e86c16a2baddcb1c8}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!helpextern@{helpextern}}
+\index{helpextern@{helpextern}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{helpextern}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf helpextern} = T\_\-HELPART}}
+\label{WL__TEXT_8C_a910c7d3090fe5a0e86c16a2baddcb1c8}
+\hypertarget{WL__TEXT_8C_a305be2d1fe1747006daab18fa395fdae}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!helpfilename@{helpfilename}}
+\index{helpfilename@{helpfilename}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{helpfilename}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf helpfilename}\mbox{[}13\mbox{]} = \char`\"{}HELPART.\char`\"{}}}
+\label{WL__TEXT_8C_a305be2d1fe1747006daab18fa395fdae}
+\hypertarget{WL__TEXT_8C_a0755a01e7d94b21d0d57168ac818089e}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!layoutdone@{layoutdone}}
+\index{layoutdone@{layoutdone}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{layoutdone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf layoutdone}}}
+\label{WL__TEXT_8C_a0755a01e7d94b21d0d57168ac818089e}
+\hypertarget{WL__TEXT_8C_a06fc12df6d11c1860bf3560e797f6a86}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!leftmargin@{leftmargin}}
+\index{leftmargin@{leftmargin}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{leftmargin}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf leftmargin}\mbox{[}TEXTROWS\mbox{]}}}
+\label{WL__TEXT_8C_a06fc12df6d11c1860bf3560e797f6a86}
+\hypertarget{WL__TEXT_8C_a0d1c5e1299956c2f925c50afdcfd1c8c}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!numpages@{numpages}}
+\index{numpages@{numpages}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{numpages}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf numpages}}}
+\label{WL__TEXT_8C_a0d1c5e1299956c2f925c50afdcfd1c8c}
+\hypertarget{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!pagenum@{pagenum}}
+\index{pagenum@{pagenum}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{pagenum}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf pagenum}}}
+\label{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}
+\hypertarget{WL__TEXT_8C_ab04a2daab21fa7d886fb269432a2af29}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!picdelay@{picdelay}}
+\index{picdelay@{picdelay}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{picdelay}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf picdelay}}}
+\label{WL__TEXT_8C_ab04a2daab21fa7d886fb269432a2af29}
+\hypertarget{WL__TEXT_8C_a38ee8916c0c328929ad672895daca6d6}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!picnum@{picnum}}
+\index{picnum@{picnum}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{picnum}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf picnum}}}
+\label{WL__TEXT_8C_a38ee8916c0c328929ad672895daca6d6}
+\hypertarget{WL__TEXT_8C_ad8c58e10d111b4a969c99d5ecfc3868f}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!picx@{picx}}
+\index{picx@{picx}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{picx}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf picx}}}
+\label{WL__TEXT_8C_ad8c58e10d111b4a969c99d5ecfc3868f}
+\hypertarget{WL__TEXT_8C_a73b2a6aa834bbf7c38e798be716d1ea0}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!picy@{picy}}
+\index{picy@{picy}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{picy}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf picy}}}
+\label{WL__TEXT_8C_a73b2a6aa834bbf7c38e798be716d1ea0}
+\hypertarget{WL__TEXT_8C_af36828bfab1f6f383fd7fd82cbe4b1e4}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!rightmargin@{rightmargin}}
+\index{rightmargin@{rightmargin}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{rightmargin}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf rightmargin}\mbox{[}TEXTROWS\mbox{]}}}
+\label{WL__TEXT_8C_af36828bfab1f6f383fd7fd82cbe4b1e4}
+\hypertarget{WL__TEXT_8C_ab98c4cafb5050f009ae5718c341753a0}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!rowon@{rowon}}
+\index{rowon@{rowon}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{rowon}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf rowon}}}
+\label{WL__TEXT_8C_ab98c4cafb5050f009ae5718c341753a0}
+\hypertarget{WL__TEXT_8C_ae039e40005934b01c31fe5287625b253}{
+\index{WL\_\-TEXT.C@{WL\_\-TEXT.C}!text@{text}}
+\index{text@{text}!WL_TEXT.C@{WL\_\-TEXT.C}}
+\subsubsection[{text}]{\setlength{\rightskip}{0pt plus 5cm}char far$\ast$ {\bf text}}}
+\label{WL__TEXT_8C_ae039e40005934b01c31fe5287625b253}

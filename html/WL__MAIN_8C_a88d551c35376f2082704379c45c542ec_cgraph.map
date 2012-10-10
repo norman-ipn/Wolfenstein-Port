@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__MM_8C.html#abf7ebac49c519babe994fbe8bb070d04" title="MML_UseSpace" alt="" coords="179,5,296,35"/>
+<area shape="rect" id="node7" href="$ID__VL_8C.html#a9395a541fc6c21a2d7e7d8b4932d134e" title="VL_MemToScreen" alt="" coords="172,59,303,88"/>
+<area shape="rect" id="node9" href="$ID__VH_8C.html#a3d96886ea2eea0773d12d9c494ecd8dc" title="VL_MungePic" alt="" coords="187,112,288,141"/>
+<area shape="rect" id="node11" href="$ID__VL_8C.html#ae2508644c57749de78a11a9122a36157" title="VL_SetPalette" alt="" coords="373,219,480,248"/>
+<area shape="rect" id="node13" href="$ID__VL_8C.html#a49a6717be931b39c40a299c8e6383d82" title="VL_SetVGAPlaneMode" alt="" coords="159,165,316,195"/>
+<area shape="rect" id="node21" href="$ID__VL_8C.html#a29a9e236524d106d97e319b43ade47fa" title="VL_TestPaletteSet" alt="" coords="172,269,303,299"/>
+<area shape="rect" id="node5" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="404,5,449,35"/>
+<area shape="rect" id="node15" href="$ID__VL_8C.html#a324bc865f0f44dda58c10ada4eae8bb5" title="VL_DePlaneVGA" alt="" coords="365,112,488,141"/>
+<area shape="rect" id="node19" href="$ID__VL_8C.html#ae6999c2347a63aecb0d5b773727233e4" title="VL_SetLineWidth" alt="" coords="365,165,488,195"/>
+<area shape="rect" id="node17" href="$ID__VL_8C.html#a82e5109ec5af48b755563a47b8760160" title="VL_ClearVideo" alt="" coords="536,112,645,141"/>
+<area shape="rect" id="node23" href="$ID__VL_8C.html#a9bcb5eb78f4668f31cc3ebcaec2d8e1b" title="VL_GetPalette" alt="" coords="373,272,480,301"/>
+</map>

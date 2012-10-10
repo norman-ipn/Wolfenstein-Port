@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__SD_8C.html#af508ee24c35bb22fae070def8e7c80ac" title="SD_StopDigitized" alt="" coords="172,112,297,141"/>
+<area shape="rect" id="node17" href="$ID__SD_8C.html#ac4a243a2df697871871f0d62df9248db" title="SDL_ALStopSound" alt="" coords="168,192,301,221"/>
+<area shape="rect" id="node21" href="$ID__SD_8C.html#a8fdd4a72618197048986b80ee715e96f" title="SDL_PCStopSound" alt="" coords="165,245,304,275"/>
+<area shape="rect" id="node5" href="$ID__PM_8C.html#a1e7da5d85fc01341f8f9a893ddc87cfc" title="PM_SetPageLock" alt="" coords="363,5,488,35"/>
+<area shape="rect" id="node9" href="$ID__SD_8C.html#a6cca2dc7a94fe6d4e6a69b7f320b452a" title="SDL_PCStopSample" alt="" coords="353,59,497,88"/>
+<area shape="rect" id="node13" href="$ID__SD_8C.html#ad0bed6aae151cee1ce9b468e83a16c57" title="SDL_SBStopSample" alt="" coords="353,112,497,141"/>
+<area shape="rect" id="node15" href="$ID__SD_8C.html#a4b4cb4383cfa055401dc7ff4ff6f0104" title="SDL_SSStopSample" alt="" coords="353,165,497,195"/>
+<area shape="rect" id="node7" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="584,5,629,35"/>
+<area shape="rect" id="node11" href="$ID__SD_8C.html#a6e015404fba7543853cacd8420353315" title="SDL_IndicatePC" alt="" coords="547,59,667,88"/>
+<area shape="rect" id="node19" href="$ID__SD_8C.html#a022c0a65b79644cb7ea86a2ce77b3c42" title="alOut" alt="" coords="399,219,452,248"/>
+</map>

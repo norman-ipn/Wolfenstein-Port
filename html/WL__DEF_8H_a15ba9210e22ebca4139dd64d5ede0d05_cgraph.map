@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DEF_8H.html#af0ec8fc59f12a59ce2ed1c270150bdb0" title="CalcTics" alt="" coords="181,5,256,35"/>
+<area shape="rect" id="node5" href="$WL__PLAY_8C.html#aa7748b3251e7e3ada1602178da175b5a" title="PollJoystickButtons" alt="" coords="149,59,288,88"/>
+<area shape="rect" id="node9" href="$WL__PLAY_8C.html#a81edd19fd047b993a9e690f9414b3eff" title="PollJoystickMove" alt="" coords="156,112,281,141"/>
+<area shape="rect" id="node15" href="$WL__PLAY_8C.html#a22fdcf55958dec2af2a4cadf2527132b" title="PollKeyboardButtons" alt="" coords="147,165,291,195"/>
+<area shape="rect" id="node17" href="$WL__PLAY_8C.html#a2421aa5bd193c7bde69471bb17874e18" title="PollKeyboardMove" alt="" coords="153,219,284,248"/>
+<area shape="rect" id="node19" href="$WL__PLAY_8C.html#ab275bee53ffe48bfc6c7872c69bd2005" title="PollMouseButtons" alt="" coords="155,272,283,301"/>
+<area shape="rect" id="node23" href="$WL__PLAY_8C.html#a9a5a5d7e7fb47d410c066dc8f62b62b0" title="PollMouseMove" alt="" coords="161,325,276,355"/>
+<area shape="rect" id="node25" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="196,379,241,408"/>
+<area shape="rect" id="node7" href="$ID__IN_8C.html#abc6dd93d0e7777cd67e20f61361f353d" title="IN_JoyButtons" alt="" coords="348,59,457,88"/>
+<area shape="rect" id="node11" href="$ID__IN_8C.html#ad02d54392fab25e9c6e4208ba8c8baab" title="INL_GetJoyDelta" alt="" coords="341,112,464,141"/>
+<area shape="rect" id="node13" href="$ID__IN_8C.html#aa9699bbe72cdd2c7a2f8d5f291ec1e76" title="IN_GetJoyAbs" alt="" coords="516,112,623,141"/>
+<area shape="rect" id="node21" href="$ID__IN_8C.html#a1dc32dd9a62a416001a9954a70dc4563" title="IN_MouseButtons" alt="" coords="340,272,465,301"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__MM_8H.html#aba99c48e5510e09666eee49955206aad" title="MM_Startup" alt="" coords="188,5,281,35"/>
+<area shape="rect" id="node12" href="$ID__MM_8C.html#a942a00587dd60a98e4b34a244edb2ca2" title="MML_SetupXMS" alt="" coords="175,59,295,88"/>
+<area shape="rect" id="node14" href="$WL__MAIN_8C.html#a88d551c35376f2082704379c45c542ec" title="SignonScreen" alt="" coords="184,112,285,141"/>
+<area shape="rect" id="node5" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="344,59,419,88"/>
+<area shape="rect" id="node7" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="467,32,517,61"/>
+<area shape="rect" id="node9" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="567,59,655,88"/>
+</map>

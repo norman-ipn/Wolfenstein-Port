@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__SD_8C.html#afa09f503f31c9e9c4d77cf6dc8a0932f" title="SD_FadeOutMusic" alt="" coords="196,5,329,35"/>
+<area shape="rect" id="node9" href="$ID__SD_8C.html#aa097386a2a5ed395cef780871ba74a85" title="SD_MusicPlaying" alt="" coords="200,59,325,88"/>
+<area shape="rect" id="node11" href="$ID__SD_8C.html#a51f0387c80c08ae6998f221ee1d6f708" title="SDL_SetTimerSpeed" alt="" coords="191,112,335,141"/>
+<area shape="rect" id="node5" href="$ID__SD_8C.html#ae8e46be37d6285a8cc13d7a68c9f1a0e" title="SD_MusicOff" alt="" coords="427,5,528,35"/>
+<area shape="rect" id="node7" href="$ID__SD_8C.html#a022c0a65b79644cb7ea86a2ce77b3c42" title="alOut" alt="" coords="649,5,703,35"/>
+<area shape="rect" id="node13" href="$ID__SD_8C.html#a70d1b72a654197d7c8c8c3ffbc22760c" title="SDL_SetIntsPerSec" alt="" coords="408,59,547,88"/>
+<area shape="rect" id="node17" href="$ID__SD_8C.html#a310e24eb0bb48c6c4417eab2a7841e15" title="SDL_t0ExtremeAsmService" alt="" coords="384,112,571,141"/>
+<area shape="rect" id="node19" href="$ID__SD_8C.html#ab2123ddce52686655810e1b5ff3c2cc9" title="SDL_t0FastAsmService" alt="" coords="396,165,559,195"/>
+<area shape="rect" id="node21" href="$ID__SD_8C.html#aee695286ef3f3f5f5c4e2d14c88b5e2f" title="SDL_t0SlowAsmService" alt="" coords="395,219,560,248"/>
+<area shape="rect" id="node15" href="$ID__SD_8C.html#a4bc3d9ad81cb035c1487a23854c9ccbe" title="SDL_SetTimer0" alt="" coords="619,59,733,88"/>
+</map>

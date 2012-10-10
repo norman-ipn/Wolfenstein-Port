@@ -1,0 +1,29 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__ACT1_8C.html#a4b20a2c190ff470c5151e1bf5ccc7991" title="DoorClosing" alt="" coords="137,89,231,119"/>
+<area shape="rect" id="node26" href="$WL__DEF_8H.html#a0169afc52fe92fa36608b9e37b56359c" title="OperateDoor" alt="" coords="136,144,232,173"/>
+<area shape="rect" id="node32" href="$WL__ACT2_8C.html#a2d2e0445a6661b21ec497072f261b2c0" title="T_Chase" alt="" coords="455,272,529,301"/>
+<area shape="rect" id="node34" href="$WL__ACT2_8C.html#a7ef997abd87b43b1e1fd675f6aefb5e8" title="T_Fat" alt="" coords="464,325,520,355"/>
+<area shape="rect" id="node36" href="$WL__ACT2_8C.html#aa143ff701cf1be118333ca0bb097bc72" title="T_Gift" alt="" coords="463,485,521,515"/>
+<area shape="rect" id="node38" href="$WL__ACT2_8C.html#a297fbc8b826bdbe6e04f2fe6a0c2a128" title="T_Path" alt="" coords="460,615,524,644"/>
+<area shape="rect" id="node40" href="$WL__ACT2_8C.html#ab666f1455bb55512f01418413679962a" title="T_Schabb" alt="" coords="452,432,532,461"/>
+<area shape="rect" id="node42" href="$WL__STATE_8C.html#afc2aee564bbde3329ca837f177130917" title="TryWalk" alt="" coords="149,355,219,384"/>
+<area shape="rect" id="node5" href="$WL__DEF_8H.html#a1dc87c7ff6adc5fc586c9abe07ddf5c8" title="MoveDoors" alt="" coords="293,84,381,113"/>
+<area shape="rect" id="node7" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="455,59,529,88"/>
+<area shape="rect" id="node9" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="596,5,681,35"/>
+<area shape="rect" id="node20" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="597,59,680,88"/>
+<area shape="rect" id="node23" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="589,112,688,141"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="736,59,821,88"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="869,59,920,88"/>
+<area shape="rect" id="node15" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="969,32,1057,61"/>
+<area shape="rect" id="node17" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1107,59,1181,88"/>
+<area shape="rect" id="node28" href="$WL__AGENT_8C.html#aebccb5f10d715a9d66e9045fc2d372a0" title="Cmd_Use" alt="" coords="297,140,377,169"/>
+<area shape="rect" id="node30" href="$WL__AGENT_8C.html#a146c62d526ddb53a04fe11af48e91c96" title="T_Player" alt="" coords="455,112,529,141"/>
+<area shape="rect" id="node44" href="$WL__STATE_8C.html#aaa5f3bd33e28df6ee38db0b950fb1b45" title="SelectChaseDir" alt="" coords="280,355,395,384"/>
+<area shape="rect" id="node52" href="$WL__STATE_8C.html#abf00c4afcd01d66f8b6ba4d9b308ce6f" title="SelectDodgeDir" alt="" coords="280,301,395,331"/>
+<area shape="rect" id="node62" href="$WL__ACT2_8C.html#a775ddb0e17130c10acd55e069c04e929" title="SelectPathDir" alt="" coords="287,563,388,592"/>
+<area shape="rect" id="node67" href="$WL__STATE_8C.html#a160d81dd6ea23ee5cee5cd31d6b9c627" title="SelectRunDir" alt="" coords="288,408,387,437"/>
+<area shape="rect" id="node48" href="$WL__ACT2_8C.html#a6bde7f5f6c9bef2510fd97adacbfd707" title="T_Ghosts" alt="" coords="453,379,531,408"/>
+<area shape="rect" id="node55" href="$WL__ACT2_8C.html#a1723fcb57e315538ff5dbe4f9b5f28a0" title="T_DogChase" alt="" coords="443,165,541,195"/>
+<area shape="rect" id="node57" href="$WL__ACT2_8C.html#a5f8b7b86236c7cc444781f34eba13965" title="T_Fake" alt="" coords="459,219,525,248"/>
+<area shape="rect" id="node64" href="$WL__ACT2_8C.html#a7a0e7fd0cd65af1f29fb483e7690e46e" title="T_BJRun" alt="" coords="453,561,531,591"/>
+</map>

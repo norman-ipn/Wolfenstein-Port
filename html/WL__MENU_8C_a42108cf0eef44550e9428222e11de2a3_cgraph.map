@@ -1,0 +1,36 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__CA_8C.html#a33faa9e016da5c7e605f67f5c7ecf2a0" title="CA_CacheGrChunk" alt="" coords="128,343,267,372"/>
+<area shape="rect" id="node63" href="$WL__MENU_8C.html#a932353c4f637452b49ee6e1a4c382bf5" title="DrawOutline" alt="" coords="344,591,437,620"/>
+<area shape="rect" id="node72" href="$WL__MENU_8C.html#a904e939ab3e905847095245ec694d845" title="DrawWindow" alt="" coords="148,616,247,645"/>
+<area shape="rect" id="node78" href="$ID__US_8H.html#ae158b4a99ff8fe4bca4517925b6b429c" title="US_Print" alt="" coords="160,669,235,699"/>
+<area shape="rect" id="node80" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="131,723,264,752"/>
+<area shape="rect" id="node5" href="$ID__CA_8C.html#a9d7ef0e3d4f10f25abd940094a4db437" title="CA_FarRead" alt="" coords="716,93,815,123"/>
+<area shape="rect" id="node9" href="$ID__CA_8C.html#a34eb9535940d7725a97dc903e19fb4c0" title="CAL_ExpandGrChunk" alt="" coords="316,368,465,397"/>
+<area shape="rect" id="node13" href="$ID__MM_8C.html#ab70f353278bae916507eb350c39f4ebb" title="MM_GetPtr" alt="" coords="533,316,621,345"/>
+<area shape="rect" id="node17" href="$ID__MM_8C.html#acbec6e3295a580e1067bbd69ea89d275" title="MM_SetLock" alt="" coords="907,461,1005,491"/>
+<area shape="rect" id="node53" href="$ID__CA_8C.html#a8568e471bb25a89e1bc53f8ca0a629c2" title="GRFILEPOS" alt="" coords="341,212,440,241"/>
+<area shape="rect" id="node55" href="$ID__MM_8C.html#a9464693cb68e9a8ed7586855952f197a" title="MM_FreePtr" alt="" coords="1092,619,1185,648"/>
+<area shape="rect" id="node60" href="$ID__MM_8C.html#a114de4a52bcc47e8d668ab78a7c702c9" title="MM_SetPurge" alt="" coords="525,29,629,59"/>
+<area shape="rect" id="node7" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1488,249,1533,279"/>
+<area shape="rect" id="node11" href="$ID__CA_8C.html#ad528d2babf088de313edb739e0c1dcf5" title="CAL_HuffExpand" alt="" coords="516,369,639,399"/>
+<area shape="rect" id="node15" href="$ID__MM_8C.html#a1ab3355666068dc56c6d591354b17a3e" title="MM_SortMem" alt="" coords="713,368,817,397"/>
+<area shape="rect" id="node44" href="$WL__DEF_8H.html#af74ea12ed1f33b5eb32cee5062ea034c" title="SetViewSize" alt="" coords="717,199,813,228"/>
+<area shape="rect" id="node20" href="$ID__SD_8C.html#a32826e61458fce0f5667e3e1f4db95f4" title="SD_SoundPlaying" alt="" coords="892,408,1020,437"/>
+<area shape="rect" id="node22" href="$ID__SD_8C.html#ac98e41e0645d624d0645219c8eca9615" title="SD_StopSound" alt="" coords="900,355,1012,384"/>
+<area shape="rect" id="node24" href="$ID__SD_8C.html#af508ee24c35bb22fae070def8e7c80ac" title="SD_StopDigitized" alt="" coords="1076,355,1201,384"/>
+<area shape="rect" id="node37" href="$ID__SD_8C.html#ac4a243a2df697871871f0d62df9248db" title="SDL_ALStopSound" alt="" coords="1072,408,1205,437"/>
+<area shape="rect" id="node41" href="$ID__SD_8C.html#a8fdd4a72618197048986b80ee715e96f" title="SDL_PCStopSound" alt="" coords="1069,461,1208,491"/>
+<area shape="rect" id="node26" href="$ID__PM_8C.html#a1e7da5d85fc01341f8f9a893ddc87cfc" title="PM_SetPageLock" alt="" coords="1267,461,1392,491"/>
+<area shape="rect" id="node29" href="$ID__SD_8C.html#a6cca2dc7a94fe6d4e6a69b7f320b452a" title="SDL_PCStopSample" alt="" coords="1257,301,1401,331"/>
+<area shape="rect" id="node33" href="$ID__SD_8C.html#ad0bed6aae151cee1ce9b468e83a16c57" title="SDL_SBStopSample" alt="" coords="1257,355,1401,384"/>
+<area shape="rect" id="node35" href="$ID__SD_8C.html#a4b4cb4383cfa055401dc7ff4ff6f0104" title="SDL_SSStopSample" alt="" coords="1257,408,1401,437"/>
+<area shape="rect" id="node31" href="$ID__SD_8C.html#a6e015404fba7543853cacd8420353315" title="SDL_IndicatePC" alt="" coords="1451,303,1571,332"/>
+<area shape="rect" id="node39" href="$ID__SD_8C.html#a022c0a65b79644cb7ea86a2ce77b3c42" title="alOut" alt="" coords="1303,515,1356,544"/>
+<area shape="rect" id="node46" href="$WL__DEF_8H.html#a82156c01cf0c6b616ccb2bc2dff569a6" title="CalcProjection" alt="" coords="903,93,1009,123"/>
+<area shape="rect" id="node48" href="$ID__MM_8C.html#aec67dba21150a6028caa41540d8575ca" title="MM_BombOnError" alt="" coords="891,147,1021,176"/>
+<area shape="rect" id="node51" href="$CONTIGSC_8C.html#aaba41b509b2c39129abfed4d8e0e4255" title="SetupScaling" alt="" coords="907,251,1005,280"/>
+<area shape="rect" id="node65" href="$ID__VH_8C.html#a5438374e81536560343d6be41205ecf6" title="VWB_Hlin" alt="" coords="536,619,619,648"/>
+<area shape="rect" id="node69" href="$ID__VH_8C.html#adad5945cddefd75d9c787644201b242f" title="VWB_Vlin" alt="" coords="536,565,619,595"/>
+<area shape="rect" id="node67" href="$ID__VH_8C.html#a989fc2652f729213162c520d378578b3" title="VW_MarkUpdateBlock" alt="" coords="688,619,843,648"/>
+<area shape="rect" id="node75" href="$ID__VH_8C.html#a5496b8df6f9a9de1b3f788ce6951c865" title="VWB_Bar" alt="" coords="351,657,431,687"/>
+</map>

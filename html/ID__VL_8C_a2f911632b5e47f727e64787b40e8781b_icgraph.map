@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1008,98,1093,128"/>
+<area shape="rect" id="node12" href="$WL__TEXT_8C.html#ab5697774e1a05a1e3e51b02688f1561f" title="ShowArticle" alt="" coords="140,98,231,128"/>
+<area shape="rect" id="node25" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="427,150,549,180"/>
+<area shape="rect" id="node5" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1141,98,1192,128"/>
+<area shape="rect" id="node7" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1241,72,1329,101"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1379,98,1453,128"/>
+<area shape="rect" id="node14" href="$WL__TEXT_8C.html#a11ef38288d701a8921caf515d527cd58" title="EndText" alt="" coords="295,45,364,74"/>
+<area shape="rect" id="node21" href="$WL__TEXT_8C.html#a7dfe666305b63dcb0a03ee9960b74d01" title="HelpScreens" alt="" coords="281,98,377,128"/>
+<area shape="rect" id="node16" href="$WL__INTER_8C.html#aaa41fd21f2b55e23622375ac43624b99" title="Victory" alt="" coords="612,45,673,74"/>
+<area shape="rect" id="node18" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="868,45,953,74"/>
+<area shape="rect" id="node23" href="$WL__MENU_8C.html#a20363b80c8caa7c6be4a2fee67a2d250" title="CP_ReadThis" alt="" coords="436,97,540,126"/>
+<area shape="rect" id="node27" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="597,125,688,154"/>
+<area shape="rect" id="node29" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="737,112,812,141"/>
+<area shape="rect" id="node32" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="869,152,952,181"/>
+<area shape="rect" id="node35" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="861,98,960,128"/>
+</map>

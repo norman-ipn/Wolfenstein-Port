@@ -1,0 +1,679 @@
+\hypertarget{WL__ACT1_8C}{
+\section{WL\_\-ACT1.C File Reference}
+\label{WL__ACT1_8C}\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WL\_\-ACT1.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__ACT1_8C_a0be4d8ba688f6749942e278bdf5f8888}{DOORWIDTH}~0x7800
+\item 
+\#define \hyperlink{WL__ACT1_8C_ac93b07f61f56e62e83d34faf9f32ec28}{OPENTICS}~300
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__ACT1_8C_a94a48438cf3ce2f07949db5b643a5c14}{InitStaticList} (void)
+\item 
+void \hyperlink{WL__ACT1_8C_ac133172594077a3babdc842789685053}{SpawnStatic} (int tilex, int tiley, int \hyperlink{WL__ACT1_8C_ac6913ebc2a188919d185cadc155a48cd}{type})
+\item 
+void \hyperlink{WL__ACT1_8C_ab8961c07d2e3d33e51fc815f44e47e92}{PlaceItemType} (int itemtype, int tilex, int tiley)
+\item 
+void \hyperlink{WL__ACT1_8C_ab91c120f7fb57742287620079e89b80f}{RecursiveConnect} (int areanumber)
+\item 
+void \hyperlink{WL__ACT1_8C_a853e08042a8fb9f8d92a48441c9bd86a}{ConnectAreas} (void)
+\item 
+void \hyperlink{WL__ACT1_8C_aac1c645485078958d366828ec6b24cad}{InitAreas} (void)
+\item 
+void \hyperlink{WL__ACT1_8C_a7cafaabc4f28713aed54140af4bf7821}{InitDoorList} (void)
+\item 
+void \hyperlink{WL__ACT1_8C_a885eeed9c39cfff1e74bcde145baf296}{SpawnDoor} (int tilex, int tiley, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} vertical, int lock)
+\item 
+void \hyperlink{WL__ACT1_8C_a630648edf8f675df38eb0b5b8abc6a9f}{OpenDoor} (int door)
+\item 
+void \hyperlink{WL__ACT1_8C_ae375a4f63040681bde68e570e88b92ae}{CloseDoor} (int door)
+\item 
+void \hyperlink{WL__ACT1_8C_a0169afc52fe92fa36608b9e37b56359c}{OperateDoor} (int door)
+\item 
+void \hyperlink{WL__ACT1_8C_aa95642b9bb56e3ff983d8ea0d25bb935}{DoorOpen} (int door)
+\item 
+void \hyperlink{WL__ACT1_8C_a02de8f944b6fc21749726c47929adcfe}{DoorOpening} (int door)
+\item 
+void \hyperlink{WL__ACT1_8C_a4b20a2c190ff470c5151e1bf5ccc7991}{DoorClosing} (int door)
+\item 
+void \hyperlink{WL__ACT1_8C_a1dc87c7ff6adc5fc586c9abe07ddf5c8}{MoveDoors} (void)
+\item 
+void \hyperlink{WL__ACT1_8C_abb884a307f2d10f6e1fc390ae66157bc}{PushWall} (int checkx, int checky, int dir)
+\item 
+void \hyperlink{WL__ACT1_8C_ab2085ab9cc836de93ca4c35fc4d0e677}{MovePWalls} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structstatstruct}{statobj\_\-t} \hyperlink{WL__ACT1_8C_a64d166fbf5120795eaf1881a692b6360}{statobjlist} \mbox{[}MAXSTATS\mbox{]}
+\item 
+\hyperlink{structstatstruct}{statobj\_\-t} $\ast$ \hyperlink{WL__ACT1_8C_a6797183a5cacdaf405abbbcb02881132}{laststatobj}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>int \hyperlink{WL__ACT1_8C_a38ee8916c0c328929ad672895daca6d6}{picnum}\\
+\>\hyperlink{WL__DEF_8H_aba6727854ac6a393ef9918fe0c42500f}{stat\_t} \hyperlink{WL__ACT1_8C_ac6913ebc2a188919d185cadc155a48cd}{type}\\
+\} \hyperlink{WL__ACT1_8C_afb2ad9ecec71ef6c2ac2df5b4e3326bf}{statinfo} \mbox{[}$\,$\mbox{]}\\
+
+\end{tabbing}\item 
+\hyperlink{structdoorstruct}{doorobj\_\-t} \hyperlink{WL__ACT1_8C_a1db92e07e7d240d5f227fa9125a7a607}{doorobjlist} \mbox{[}MAXDOORS\mbox{]}
+\item 
+\hyperlink{structdoorstruct}{doorobj\_\-t} $\ast$ \hyperlink{WL__ACT1_8C_a21442011799a426226eec3654541de23}{lastdoorobj}
+\item 
+int \hyperlink{WL__ACT1_8C_a270ac0143523da1acaf3ad63e7c9f103}{doornum}
+\item 
+unsigned \hyperlink{WL__ACT1_8C_a40e94301053d665ef509efdce52da5cb}{doorposition} \mbox{[}MAXDOORS\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{WL__ACT1_8C_a508c3e1ce5df30e83a5b0d8711d6422b}{areaconnect} \mbox{[}NUMAREAS\mbox{]}\mbox{[}NUMAREAS\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__ACT1_8C_a59682b519d59a900dd195516111d7cc4}{areabyplayer} \mbox{[}NUMAREAS\mbox{]}
+\item 
+unsigned \hyperlink{WL__ACT1_8C_aeaaf2c9c46920d834ddd1b3f22b51378}{pwallstate}
+\item 
+unsigned \hyperlink{WL__ACT1_8C_a02920979fad1fa03663ac63efaabc2a5}{pwallpos}
+\item 
+unsigned \hyperlink{WL__ACT1_8C_af83d84af47696a055efab255b82e0b41}{pwallx}
+\item 
+unsigned \hyperlink{WL__ACT1_8C_aceefed33cfcf3369c2b94d0ea3f5f129}{pwally}
+\item 
+int \hyperlink{WL__ACT1_8C_a0bb9addf1c68a7920598824991a4a290}{pwalldir}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__ACT1_8C_a0be4d8ba688f6749942e278bdf5f8888}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!DOORWIDTH@{DOORWIDTH}}
+\index{DOORWIDTH@{DOORWIDTH}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{DOORWIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define DOORWIDTH~0x7800}}
+\label{WL__ACT1_8C_a0be4d8ba688f6749942e278bdf5f8888}
+\hypertarget{WL__ACT1_8C_ac93b07f61f56e62e83d34faf9f32ec28}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!OPENTICS@{OPENTICS}}
+\index{OPENTICS@{OPENTICS}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{OPENTICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define OPENTICS~300}}
+\label{WL__ACT1_8C_ac93b07f61f56e62e83d34faf9f32ec28}
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__ACT1_8C_ae375a4f63040681bde68e570e88b92ae}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!CloseDoor@{CloseDoor}}
+\index{CloseDoor@{CloseDoor}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{CloseDoor}]{\setlength{\rightskip}{0pt plus 5cm}void CloseDoor (
+\begin{DoxyParamCaption}
+\item[{int}]{door}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_ae375a4f63040681bde68e570e88b92ae}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_ae375a4f63040681bde68e570e88b92ae_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a853e08042a8fb9f8d92a48441c9bd86a}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!ConnectAreas@{ConnectAreas}}
+\index{ConnectAreas@{ConnectAreas}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{ConnectAreas}]{\setlength{\rightskip}{0pt plus 5cm}void ConnectAreas (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a853e08042a8fb9f8d92a48441c9bd86a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{WL__ACT1_8C_a853e08042a8fb9f8d92a48441c9bd86a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a853e08042a8fb9f8d92a48441c9bd86a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a4b20a2c190ff470c5151e1bf5ccc7991}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!DoorClosing@{DoorClosing}}
+\index{DoorClosing@{DoorClosing}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{DoorClosing}]{\setlength{\rightskip}{0pt plus 5cm}void DoorClosing (
+\begin{DoxyParamCaption}
+\item[{int}]{door}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a4b20a2c190ff470c5151e1bf5ccc7991}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a4b20a2c190ff470c5151e1bf5ccc7991_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a4b20a2c190ff470c5151e1bf5ccc7991_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_aa95642b9bb56e3ff983d8ea0d25bb935}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!DoorOpen@{DoorOpen}}
+\index{DoorOpen@{DoorOpen}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{DoorOpen}]{\setlength{\rightskip}{0pt plus 5cm}void DoorOpen (
+\begin{DoxyParamCaption}
+\item[{int}]{door}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_aa95642b9bb56e3ff983d8ea0d25bb935}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{WL__ACT1_8C_aa95642b9bb56e3ff983d8ea0d25bb935_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_aa95642b9bb56e3ff983d8ea0d25bb935_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a02de8f944b6fc21749726c47929adcfe}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!DoorOpening@{DoorOpening}}
+\index{DoorOpening@{DoorOpening}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{DoorOpening}]{\setlength{\rightskip}{0pt plus 5cm}void DoorOpening (
+\begin{DoxyParamCaption}
+\item[{int}]{door}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a02de8f944b6fc21749726c47929adcfe}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a02de8f944b6fc21749726c47929adcfe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a02de8f944b6fc21749726c47929adcfe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_aac1c645485078958d366828ec6b24cad}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!InitAreas@{InitAreas}}
+\index{InitAreas@{InitAreas}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{InitAreas}]{\setlength{\rightskip}{0pt plus 5cm}void InitAreas (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_aac1c645485078958d366828ec6b24cad}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_aac1c645485078958d366828ec6b24cad_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a7cafaabc4f28713aed54140af4bf7821}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!InitDoorList@{InitDoorList}}
+\index{InitDoorList@{InitDoorList}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{InitDoorList}]{\setlength{\rightskip}{0pt plus 5cm}void InitDoorList (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a7cafaabc4f28713aed54140af4bf7821}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a7cafaabc4f28713aed54140af4bf7821_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a94a48438cf3ce2f07949db5b643a5c14}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!InitStaticList@{InitStaticList}}
+\index{InitStaticList@{InitStaticList}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{InitStaticList}]{\setlength{\rightskip}{0pt plus 5cm}void InitStaticList (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a94a48438cf3ce2f07949db5b643a5c14}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a94a48438cf3ce2f07949db5b643a5c14_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a1dc87c7ff6adc5fc586c9abe07ddf5c8}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!MoveDoors@{MoveDoors}}
+\index{MoveDoors@{MoveDoors}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{MoveDoors}]{\setlength{\rightskip}{0pt plus 5cm}void MoveDoors (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a1dc87c7ff6adc5fc586c9abe07ddf5c8}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a1dc87c7ff6adc5fc586c9abe07ddf5c8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a1dc87c7ff6adc5fc586c9abe07ddf5c8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_ab2085ab9cc836de93ca4c35fc4d0e677}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!MovePWalls@{MovePWalls}}
+\index{MovePWalls@{MovePWalls}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{MovePWalls}]{\setlength{\rightskip}{0pt plus 5cm}void MovePWalls (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_ab2085ab9cc836de93ca4c35fc4d0e677}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_ab2085ab9cc836de93ca4c35fc4d0e677_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a630648edf8f675df38eb0b5b8abc6a9f}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!OpenDoor@{OpenDoor}}
+\index{OpenDoor@{OpenDoor}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{OpenDoor}]{\setlength{\rightskip}{0pt plus 5cm}void OpenDoor (
+\begin{DoxyParamCaption}
+\item[{int}]{door}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a630648edf8f675df38eb0b5b8abc6a9f}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a630648edf8f675df38eb0b5b8abc6a9f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a0169afc52fe92fa36608b9e37b56359c}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!OperateDoor@{OperateDoor}}
+\index{OperateDoor@{OperateDoor}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{OperateDoor}]{\setlength{\rightskip}{0pt plus 5cm}void OperateDoor (
+\begin{DoxyParamCaption}
+\item[{int}]{door}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a0169afc52fe92fa36608b9e37b56359c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a0169afc52fe92fa36608b9e37b56359c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{WL__ACT1_8C_a0169afc52fe92fa36608b9e37b56359c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_ab8961c07d2e3d33e51fc815f44e47e92}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!PlaceItemType@{PlaceItemType}}
+\index{PlaceItemType@{PlaceItemType}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{PlaceItemType}]{\setlength{\rightskip}{0pt plus 5cm}void PlaceItemType (
+\begin{DoxyParamCaption}
+\item[{int}]{itemtype, }
+\item[{int}]{tilex, }
+\item[{int}]{tiley}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_ab8961c07d2e3d33e51fc815f44e47e92}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{WL__ACT1_8C_ab8961c07d2e3d33e51fc815f44e47e92_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_ab8961c07d2e3d33e51fc815f44e47e92_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_abb884a307f2d10f6e1fc390ae66157bc}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!PushWall@{PushWall}}
+\index{PushWall@{PushWall}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{PushWall}]{\setlength{\rightskip}{0pt plus 5cm}void PushWall (
+\begin{DoxyParamCaption}
+\item[{int}]{checkx, }
+\item[{int}]{checky, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_abb884a307f2d10f6e1fc390ae66157bc}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_abb884a307f2d10f6e1fc390ae66157bc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{WL__ACT1_8C_abb884a307f2d10f6e1fc390ae66157bc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_ab91c120f7fb57742287620079e89b80f}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!RecursiveConnect@{RecursiveConnect}}
+\index{RecursiveConnect@{RecursiveConnect}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{RecursiveConnect}]{\setlength{\rightskip}{0pt plus 5cm}void RecursiveConnect (
+\begin{DoxyParamCaption}
+\item[{int}]{areanumber}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_ab91c120f7fb57742287620079e89b80f}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_ab91c120f7fb57742287620079e89b80f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_a885eeed9c39cfff1e74bcde145baf296}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!SpawnDoor@{SpawnDoor}}
+\index{SpawnDoor@{SpawnDoor}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{SpawnDoor}]{\setlength{\rightskip}{0pt plus 5cm}void SpawnDoor (
+\begin{DoxyParamCaption}
+\item[{int}]{tilex, }
+\item[{int}]{tiley, }
+\item[{{\bf boolean}}]{vertical, }
+\item[{int}]{lock}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_a885eeed9c39cfff1e74bcde145baf296}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{WL__ACT1_8C_a885eeed9c39cfff1e74bcde145baf296_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_a885eeed9c39cfff1e74bcde145baf296_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__ACT1_8C_ac133172594077a3babdc842789685053}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!SpawnStatic@{SpawnStatic}}
+\index{SpawnStatic@{SpawnStatic}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{SpawnStatic}]{\setlength{\rightskip}{0pt plus 5cm}void SpawnStatic (
+\begin{DoxyParamCaption}
+\item[{int}]{tilex, }
+\item[{int}]{tiley, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{WL__ACT1_8C_ac133172594077a3babdc842789685053}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{WL__ACT1_8C_ac133172594077a3babdc842789685053_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__ACT1_8C_ac133172594077a3babdc842789685053_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__ACT1_8C_a59682b519d59a900dd195516111d7cc4}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!areabyplayer@{areabyplayer}}
+\index{areabyplayer@{areabyplayer}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{areabyplayer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf areabyplayer}\mbox{[}NUMAREAS\mbox{]}}}
+\label{WL__ACT1_8C_a59682b519d59a900dd195516111d7cc4}
+\hypertarget{WL__ACT1_8C_a508c3e1ce5df30e83a5b0d8711d6422b}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!areaconnect@{areaconnect}}
+\index{areaconnect@{areaconnect}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{areaconnect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf areaconnect}\mbox{[}NUMAREAS\mbox{]}\mbox{[}NUMAREAS\mbox{]}}}
+\label{WL__ACT1_8C_a508c3e1ce5df30e83a5b0d8711d6422b}
+\hypertarget{WL__ACT1_8C_a270ac0143523da1acaf3ad63e7c9f103}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!doornum@{doornum}}
+\index{doornum@{doornum}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{doornum}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf doornum}}}
+\label{WL__ACT1_8C_a270ac0143523da1acaf3ad63e7c9f103}
+\hypertarget{WL__ACT1_8C_a1db92e07e7d240d5f227fa9125a7a607}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!doorobjlist@{doorobjlist}}
+\index{doorobjlist@{doorobjlist}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{doorobjlist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf doorobj\_\-t} {\bf doorobjlist}}}
+\label{WL__ACT1_8C_a1db92e07e7d240d5f227fa9125a7a607}
+\hypertarget{WL__ACT1_8C_a40e94301053d665ef509efdce52da5cb}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!doorposition@{doorposition}}
+\index{doorposition@{doorposition}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{doorposition}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf doorposition}\mbox{[}MAXDOORS\mbox{]}}}
+\label{WL__ACT1_8C_a40e94301053d665ef509efdce52da5cb}
+\hypertarget{WL__ACT1_8C_a21442011799a426226eec3654541de23}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!lastdoorobj@{lastdoorobj}}
+\index{lastdoorobj@{lastdoorobj}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{lastdoorobj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf doorobj\_\-t} $\ast$ {\bf lastdoorobj}}}
+\label{WL__ACT1_8C_a21442011799a426226eec3654541de23}
+\hypertarget{WL__ACT1_8C_a6797183a5cacdaf405abbbcb02881132}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!laststatobj@{laststatobj}}
+\index{laststatobj@{laststatobj}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{laststatobj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statobj\_\-t} $\ast$ {\bf laststatobj}}}
+\label{WL__ACT1_8C_a6797183a5cacdaf405abbbcb02881132}
+\hypertarget{WL__ACT1_8C_a38ee8916c0c328929ad672895daca6d6}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!picnum@{picnum}}
+\index{picnum@{picnum}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{picnum}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf picnum}}}
+\label{WL__ACT1_8C_a38ee8916c0c328929ad672895daca6d6}
+\hypertarget{WL__ACT1_8C_a0bb9addf1c68a7920598824991a4a290}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!pwalldir@{pwalldir}}
+\index{pwalldir@{pwalldir}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{pwalldir}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf pwalldir}}}
+\label{WL__ACT1_8C_a0bb9addf1c68a7920598824991a4a290}
+\hypertarget{WL__ACT1_8C_a02920979fad1fa03663ac63efaabc2a5}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!pwallpos@{pwallpos}}
+\index{pwallpos@{pwallpos}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{pwallpos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf pwallpos}}}
+\label{WL__ACT1_8C_a02920979fad1fa03663ac63efaabc2a5}
+\hypertarget{WL__ACT1_8C_aeaaf2c9c46920d834ddd1b3f22b51378}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!pwallstate@{pwallstate}}
+\index{pwallstate@{pwallstate}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{pwallstate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf pwallstate}}}
+\label{WL__ACT1_8C_aeaaf2c9c46920d834ddd1b3f22b51378}
+\hypertarget{WL__ACT1_8C_af83d84af47696a055efab255b82e0b41}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!pwallx@{pwallx}}
+\index{pwallx@{pwallx}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{pwallx}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf pwallx}}}
+\label{WL__ACT1_8C_af83d84af47696a055efab255b82e0b41}
+\hypertarget{WL__ACT1_8C_aceefed33cfcf3369c2b94d0ea3f5f129}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!pwally@{pwally}}
+\index{pwally@{pwally}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{pwally}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf pwally}}}
+\label{WL__ACT1_8C_aceefed33cfcf3369c2b94d0ea3f5f129}
+\hypertarget{WL__ACT1_8C_afb2ad9ecec71ef6c2ac2df5b4e3326bf}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!statinfo@{statinfo}}
+\index{statinfo@{statinfo}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{statinfo}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf statinfo}\mbox{[}$\,$\mbox{]}}}
+\label{WL__ACT1_8C_afb2ad9ecec71ef6c2ac2df5b4e3326bf}
+\hypertarget{WL__ACT1_8C_a64d166fbf5120795eaf1881a692b6360}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!statobjlist@{statobjlist}}
+\index{statobjlist@{statobjlist}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{statobjlist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statobj\_\-t} {\bf statobjlist}\mbox{[}MAXSTATS\mbox{]}}}
+\label{WL__ACT1_8C_a64d166fbf5120795eaf1881a692b6360}
+\hypertarget{WL__ACT1_8C_ac6913ebc2a188919d185cadc155a48cd}{
+\index{WL\_\-ACT1.C@{WL\_\-ACT1.C}!type@{type}}
+\index{type@{type}!WL_ACT1.C@{WL\_\-ACT1.C}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stat\_\-t} {\bf type}}}
+\label{WL__ACT1_8C_ac6913ebc2a188919d185cadc155a48cd}

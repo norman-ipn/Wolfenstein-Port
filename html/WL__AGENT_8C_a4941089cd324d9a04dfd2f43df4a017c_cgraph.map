@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__AGENT_8C.html#a0b198c7d98710fffb49091dae4fc6122" title="DrawWeapon" alt="" coords="208,5,309,35"/>
+<area shape="rect" id="node5" href="$WL__AGENT_8C.html#adc83960f6d18ebc42df7465f6bbc0e75" title="StatusDrawPic" alt="" coords="359,5,468,35"/>
+<area shape="rect" id="node7" href="$ID__VH_8C.html#a0170b65c8e23e18b960bde1e8908887b" title="LatchDrawPic" alt="" coords="517,5,621,35"/>
+<area shape="rect" id="node9" href="$ID__VL_8C.html#a80443116a2a895fc294adfe9b2220819" title="VL_LatchToScreen" alt="" coords="669,5,803,35"/>
+</map>

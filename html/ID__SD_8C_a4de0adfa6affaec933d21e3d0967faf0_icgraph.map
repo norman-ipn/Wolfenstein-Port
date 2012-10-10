@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__SD_8C.html#ae4006462bf5e2e456f22aed3a75fd07e" title="SDL_SBService" alt="" coords="192,32,309,61"/>
+<area shape="rect" id="node16" href="$ID__SD_8C.html#a3de2826da55134038984872d4df10fa6" title="SDL_SSService" alt="" coords="192,85,309,115"/>
+<area shape="rect" id="node5" href="$ID__SD_8C.html#ac8739ef15d834d9509ba1c34998c4e69" title="SDL_StartSB" alt="" coords="357,32,459,61"/>
+<area shape="rect" id="node7" href="$ID__SD_8C.html#a9e273885efbb6410be25e887f5ac6bdd" title="SD_Startup" alt="" coords="507,32,597,61"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="645,32,720,61"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="768,5,819,35"/>
+<area shape="rect" id="node13" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="868,32,956,61"/>
+</map>

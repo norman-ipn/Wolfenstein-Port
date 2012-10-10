@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DEF_8H.html#a673946129c833c78df674cf8b38fdd61" title="CenterWindow" alt="" coords="172,59,279,88"/>
+<area shape="rect" id="node9" href="$ID__IN_8C.html#af72058fb29d783ff37069492273ff6d7" title="IN_Ack" alt="" coords="192,112,259,141"/>
+<area shape="rect" id="node23" href="$ID__US_8H.html#ae158b4a99ff8fe4bca4517925b6b429c" title="US_Print" alt="" coords="188,165,263,195"/>
+<area shape="rect" id="node25" href="$ID__US_8H.html#aaaf7bf10a561ab0338f8b3742c408b86" title="US_PrintUnsigned" alt="" coords="160,219,291,248"/>
+<area shape="rect" id="node27" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="159,272,292,301"/>
+<area shape="rect" id="node5" href="$WL__DEF_8H.html#a31ead32276ab38dbf2991c82ee38ea7c" title="FixOfs" alt="" coords="375,5,436,35"/>
+<area shape="rect" id="node7" href="$ID__US_8H.html#a06cee19903ed682701ef040c7f1b1ffa" title="US_DrawWindow" alt="" coords="343,59,468,88"/>
+<area shape="rect" id="node11" href="$ID__IN_8C.html#a50a122900022f7051ec64d5c4613ebcf" title="IN_CheckAck" alt="" coords="353,112,457,141"/>
+<area shape="rect" id="node17" href="$ID__IN_8C.html#ac666b84a87364ddab589ceb0daaa129a" title="IN_StartAck" alt="" coords="359,165,452,195"/>
+<area shape="rect" id="node13" href="$ID__IN_8C.html#abc6dd93d0e7777cd67e20f61361f353d" title="IN_JoyButtons" alt="" coords="532,165,641,195"/>
+<area shape="rect" id="node15" href="$ID__IN_8C.html#a1dc32dd9a62a416001a9954a70dc4563" title="IN_MouseButtons" alt="" coords="524,112,649,141"/>
+<area shape="rect" id="node19" href="$ID__IN_8C.html#a20251e701cb941d1b39665a9afa51f23" title="IN_ClearKeysDown" alt="" coords="517,219,656,248"/>
+</map>

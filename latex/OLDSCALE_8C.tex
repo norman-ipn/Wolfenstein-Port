@@ -1,0 +1,338 @@
+\hypertarget{OLDSCALE_8C}{
+\section{OLDSCALE.C File Reference}
+\label{OLDSCALE_8C}\index{OLDSCALE.C@{OLDSCALE.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for OLDSCALE.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{OLDSCALE_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{OLDSCALE_8C_ac074f674fb85687a1a619fffb702967b}{OP\_\-RETF}~0xcb
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{OLDSCALE_8C_a3cccf90eaebbbbcd63aeabcbb3e7d8d5}{BuildCompScale} (int height, \hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} $\ast$finalspot)
+\item 
+void far \hyperlink{OLDSCALE_8C_a1d7dcb4682fb94ac602a78018af0b729}{BadScale} (void)
+\item 
+void \hyperlink{OLDSCALE_8C_a4604aaa0f82797a8a88e59394a3bef9e}{SetupScaling} (int maxscaleheight)
+\item 
+void near \hyperlink{OLDSCALE_8C_a9880cdbf8e6e563356f0c5e27b038136}{ScaleLine} (void)
+\item 
+void \hyperlink{OLDSCALE_8C_ac4e07b4cd66c3fa71e9f675325f5e8ca}{ScaleShape} (int xcenter, int shapenum, unsigned height)
+\item 
+void \hyperlink{OLDSCALE_8C_a11d04052928f61aec9102f6cce71fadb}{SimpleScaleShape} (int xcenter, int shapenum, unsigned height)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structt__compscale}{t\_\-compscale} \_\-seg $\ast$ \hyperlink{OLDSCALE_8C_a79aa20f0658411ee8fe8706f15753026}{scaledirectory} \mbox{[}MAXSCALEHEIGHT+1\mbox{]}
+\item 
+long \hyperlink{OLDSCALE_8C_a4b3db832e1c51c7a13e5e973de3115b3}{fullscalefarcall} \mbox{[}MAXSCALEHEIGHT+1\mbox{]}
+\item 
+int \hyperlink{OLDSCALE_8C_a4531e3adda9a00231c5fc8b7a4644398}{maxscale}
+\item 
+int \hyperlink{OLDSCALE_8C_ac10b61c2a588ba00d9ecda54429e0a9d}{maxscaleshl2}
+\item 
+\hyperlink{structt__compscale}{t\_\-compscale} \_\-seg $\ast$ \hyperlink{OLDSCALE_8C_a163511d4eb7f7ce00c635dc774a864c6}{work}
+\item 
+int \hyperlink{OLDSCALE_8C_aa80a217b0adae9ee21e078108c9ef3c5}{stepbytwo}
+\item 
+int \hyperlink{OLDSCALE_8C_aaec68c7e7f5e78b99df5b9ed716b35d2}{slinex}
+\item 
+int \hyperlink{OLDSCALE_8C_abd65d74dcd32e5501a3ecec638d65b0e}{slinewidth}
+\item 
+unsigned far $\ast$ \hyperlink{OLDSCALE_8C_aa68026c177907246bf15db85bc76f61c}{linecmds}
+\item 
+long \hyperlink{OLDSCALE_8C_ab632e78b4009b275cfa1629ac26b4be1}{linescale}
+\item 
+unsigned \hyperlink{OLDSCALE_8C_a6ccb606fa584e073646279771b40a0ee}{maskword}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{OLDSCALE_8C_a522ae19258cf30475ed90bb76819efb1}{mask1}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{OLDSCALE_8C_adadec9ebf5f6fe80150d567aa14fb9df}{mask2}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{OLDSCALE_8C_a2cf11bafb2cecc45d9388a79b54483b7}{mask3}
+\item 
+static long \hyperlink{OLDSCALE_8C_ab21e1dd6476595095fa335682b93094e}{longtemp}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{OLDSCALE_8C_ac94f1a50e42c5f020505d6c1b77c4f5e}{mapmasks1} \mbox{[}4\mbox{]}\mbox{[}8\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{OLDSCALE_8C_a41f7ecdc70d7ae35ee9d6594f950d37c}{mapmasks2} \mbox{[}4\mbox{]}\mbox{[}8\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{OLDSCALE_8C_ab39851371b2e506e131e50d79d8550d8}{mapmasks3} \mbox{[}4\mbox{]}\mbox{[}8\mbox{]}
+\item 
+unsigned \hyperlink{OLDSCALE_8C_a1c8053b1c5185cc1701015d26ca61eb0}{wordmasks} \mbox{[}8\mbox{]}\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{OLDSCALE_8C_ac074f674fb85687a1a619fffb702967b}{
+\index{OLDSCALE.C@{OLDSCALE.C}!OP\_\-RETF@{OP\_\-RETF}}
+\index{OP\_\-RETF@{OP\_\-RETF}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{OP\_\-RETF}]{\setlength{\rightskip}{0pt plus 5cm}\#define OP\_\-RETF~0xcb}}
+\label{OLDSCALE_8C_ac074f674fb85687a1a619fffb702967b}
+
+
+\subsection{Function Documentation}
+\hypertarget{OLDSCALE_8C_a1d7dcb4682fb94ac602a78018af0b729}{
+\index{OLDSCALE.C@{OLDSCALE.C}!BadScale@{BadScale}}
+\index{BadScale@{BadScale}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{BadScale}]{\setlength{\rightskip}{0pt plus 5cm}void far BadScale (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{OLDSCALE_8C_a1d7dcb4682fb94ac602a78018af0b729}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{OLDSCALE_8C_a1d7dcb4682fb94ac602a78018af0b729_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{OLDSCALE_8C_a3cccf90eaebbbbcd63aeabcbb3e7d8d5}{
+\index{OLDSCALE.C@{OLDSCALE.C}!BuildCompScale@{BuildCompScale}}
+\index{BuildCompScale@{BuildCompScale}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{BuildCompScale}]{\setlength{\rightskip}{0pt plus 5cm}unsigned BuildCompScale (
+\begin{DoxyParamCaption}
+\item[{int}]{height, }
+\item[{{\bf memptr} $\ast$}]{finalspot}
+\end{DoxyParamCaption}
+)}}
+\label{OLDSCALE_8C_a3cccf90eaebbbbcd63aeabcbb3e7d8d5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{OLDSCALE_8C_a3cccf90eaebbbbcd63aeabcbb3e7d8d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{OLDSCALE_8C_a9880cdbf8e6e563356f0c5e27b038136}{
+\index{OLDSCALE.C@{OLDSCALE.C}!ScaleLine@{ScaleLine}}
+\index{ScaleLine@{ScaleLine}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{ScaleLine}]{\setlength{\rightskip}{0pt plus 5cm}void near ScaleLine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{OLDSCALE_8C_a9880cdbf8e6e563356f0c5e27b038136}
+\hypertarget{OLDSCALE_8C_ac4e07b4cd66c3fa71e9f675325f5e8ca}{
+\index{OLDSCALE.C@{OLDSCALE.C}!ScaleShape@{ScaleShape}}
+\index{ScaleShape@{ScaleShape}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{ScaleShape}]{\setlength{\rightskip}{0pt plus 5cm}void ScaleShape (
+\begin{DoxyParamCaption}
+\item[{int}]{xcenter, }
+\item[{int}]{shapenum, }
+\item[{unsigned}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{OLDSCALE_8C_ac4e07b4cd66c3fa71e9f675325f5e8ca}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{OLDSCALE_8C_ac4e07b4cd66c3fa71e9f675325f5e8ca_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{OLDSCALE_8C_a4604aaa0f82797a8a88e59394a3bef9e}{
+\index{OLDSCALE.C@{OLDSCALE.C}!SetupScaling@{SetupScaling}}
+\index{SetupScaling@{SetupScaling}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{SetupScaling}]{\setlength{\rightskip}{0pt plus 5cm}void SetupScaling (
+\begin{DoxyParamCaption}
+\item[{int}]{maxscaleheight}
+\end{DoxyParamCaption}
+)}}
+\label{OLDSCALE_8C_a4604aaa0f82797a8a88e59394a3bef9e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{OLDSCALE_8C_a4604aaa0f82797a8a88e59394a3bef9e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{OLDSCALE_8C_a11d04052928f61aec9102f6cce71fadb}{
+\index{OLDSCALE.C@{OLDSCALE.C}!SimpleScaleShape@{SimpleScaleShape}}
+\index{SimpleScaleShape@{SimpleScaleShape}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{SimpleScaleShape}]{\setlength{\rightskip}{0pt plus 5cm}void SimpleScaleShape (
+\begin{DoxyParamCaption}
+\item[{int}]{xcenter, }
+\item[{int}]{shapenum, }
+\item[{unsigned}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{OLDSCALE_8C_a11d04052928f61aec9102f6cce71fadb}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{OLDSCALE_8C_a11d04052928f61aec9102f6cce71fadb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{OLDSCALE_8C_a4b3db832e1c51c7a13e5e973de3115b3}{
+\index{OLDSCALE.C@{OLDSCALE.C}!fullscalefarcall@{fullscalefarcall}}
+\index{fullscalefarcall@{fullscalefarcall}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{fullscalefarcall}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf fullscalefarcall}\mbox{[}MAXSCALEHEIGHT+1\mbox{]}}}
+\label{OLDSCALE_8C_a4b3db832e1c51c7a13e5e973de3115b3}
+\hypertarget{OLDSCALE_8C_aa68026c177907246bf15db85bc76f61c}{
+\index{OLDSCALE.C@{OLDSCALE.C}!linecmds@{linecmds}}
+\index{linecmds@{linecmds}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{linecmds}]{\setlength{\rightskip}{0pt plus 5cm}unsigned far$\ast$ {\bf linecmds}}}
+\label{OLDSCALE_8C_aa68026c177907246bf15db85bc76f61c}
+\hypertarget{OLDSCALE_8C_ab632e78b4009b275cfa1629ac26b4be1}{
+\index{OLDSCALE.C@{OLDSCALE.C}!linescale@{linescale}}
+\index{linescale@{linescale}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{linescale}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf linescale}}}
+\label{OLDSCALE_8C_ab632e78b4009b275cfa1629ac26b4be1}
+\hypertarget{OLDSCALE_8C_ab21e1dd6476595095fa335682b93094e}{
+\index{OLDSCALE.C@{OLDSCALE.C}!longtemp@{longtemp}}
+\index{longtemp@{longtemp}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{longtemp}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf longtemp}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{OLDSCALE_8C_ab21e1dd6476595095fa335682b93094e}
+\hypertarget{OLDSCALE_8C_ac94f1a50e42c5f020505d6c1b77c4f5e}{
+\index{OLDSCALE.C@{OLDSCALE.C}!mapmasks1@{mapmasks1}}
+\index{mapmasks1@{mapmasks1}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{mapmasks1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf mapmasks1}\mbox{[}4\mbox{]}\mbox{[}8\mbox{]}}}
+\label{OLDSCALE_8C_ac94f1a50e42c5f020505d6c1b77c4f5e}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+{1 ,3 ,7 ,15,15,15,15,15},
+{2 ,6 ,14,14,14,14,14,14},
+{4 ,12,12,12,12,12,12,12},
+{8 ,8 ,8 ,8 ,8 ,8 ,8 ,8} }
+\end{DoxyCode}
+\hypertarget{OLDSCALE_8C_a41f7ecdc70d7ae35ee9d6594f950d37c}{
+\index{OLDSCALE.C@{OLDSCALE.C}!mapmasks2@{mapmasks2}}
+\index{mapmasks2@{mapmasks2}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{mapmasks2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf mapmasks2}\mbox{[}4\mbox{]}\mbox{[}8\mbox{]}}}
+\label{OLDSCALE_8C_a41f7ecdc70d7ae35ee9d6594f950d37c}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+{0 ,0 ,0 ,0 ,1 ,3 ,7 ,15},
+{0 ,0 ,0 ,1 ,3 ,7 ,15,15},
+{0 ,0 ,1 ,3 ,7 ,15,15,15},
+{0 ,1 ,3 ,7 ,15,15,15,15} }
+\end{DoxyCode}
+\hypertarget{OLDSCALE_8C_ab39851371b2e506e131e50d79d8550d8}{
+\index{OLDSCALE.C@{OLDSCALE.C}!mapmasks3@{mapmasks3}}
+\index{mapmasks3@{mapmasks3}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{mapmasks3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf mapmasks3}\mbox{[}4\mbox{]}\mbox{[}8\mbox{]}}}
+\label{OLDSCALE_8C_ab39851371b2e506e131e50d79d8550d8}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+{0 ,0 ,0 ,0 ,0 ,0 ,0 ,0},
+{0 ,0 ,0 ,0 ,0 ,0 ,0 ,1},
+{0 ,0 ,0 ,0 ,0 ,0 ,1 ,3},
+{0 ,0 ,0 ,0 ,0 ,1 ,3 ,7} }
+\end{DoxyCode}
+\hypertarget{OLDSCALE_8C_a522ae19258cf30475ed90bb76819efb1}{
+\index{OLDSCALE.C@{OLDSCALE.C}!mask1@{mask1}}
+\index{mask1@{mask1}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{mask1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf mask1}}}
+\label{OLDSCALE_8C_a522ae19258cf30475ed90bb76819efb1}
+\hypertarget{OLDSCALE_8C_adadec9ebf5f6fe80150d567aa14fb9df}{
+\index{OLDSCALE.C@{OLDSCALE.C}!mask2@{mask2}}
+\index{mask2@{mask2}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{mask2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf mask2}}}
+\label{OLDSCALE_8C_adadec9ebf5f6fe80150d567aa14fb9df}
+\hypertarget{OLDSCALE_8C_a2cf11bafb2cecc45d9388a79b54483b7}{
+\index{OLDSCALE.C@{OLDSCALE.C}!mask3@{mask3}}
+\index{mask3@{mask3}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{mask3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf mask3}}}
+\label{OLDSCALE_8C_a2cf11bafb2cecc45d9388a79b54483b7}
+\hypertarget{OLDSCALE_8C_a6ccb606fa584e073646279771b40a0ee}{
+\index{OLDSCALE.C@{OLDSCALE.C}!maskword@{maskword}}
+\index{maskword@{maskword}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{maskword}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf maskword}}}
+\label{OLDSCALE_8C_a6ccb606fa584e073646279771b40a0ee}
+\hypertarget{OLDSCALE_8C_a4531e3adda9a00231c5fc8b7a4644398}{
+\index{OLDSCALE.C@{OLDSCALE.C}!maxscale@{maxscale}}
+\index{maxscale@{maxscale}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{maxscale}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf maxscale}}}
+\label{OLDSCALE_8C_a4531e3adda9a00231c5fc8b7a4644398}
+\hypertarget{OLDSCALE_8C_ac10b61c2a588ba00d9ecda54429e0a9d}{
+\index{OLDSCALE.C@{OLDSCALE.C}!maxscaleshl2@{maxscaleshl2}}
+\index{maxscaleshl2@{maxscaleshl2}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{maxscaleshl2}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf maxscaleshl2}}}
+\label{OLDSCALE_8C_ac10b61c2a588ba00d9ecda54429e0a9d}
+\hypertarget{OLDSCALE_8C_a79aa20f0658411ee8fe8706f15753026}{
+\index{OLDSCALE.C@{OLDSCALE.C}!scaledirectory@{scaledirectory}}
+\index{scaledirectory@{scaledirectory}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{scaledirectory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\_\-compscale} \_\-seg$\ast$ {\bf scaledirectory}\mbox{[}MAXSCALEHEIGHT+1\mbox{]}}}
+\label{OLDSCALE_8C_a79aa20f0658411ee8fe8706f15753026}
+\hypertarget{OLDSCALE_8C_abd65d74dcd32e5501a3ecec638d65b0e}{
+\index{OLDSCALE.C@{OLDSCALE.C}!slinewidth@{slinewidth}}
+\index{slinewidth@{slinewidth}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{slinewidth}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf slinewidth}}}
+\label{OLDSCALE_8C_abd65d74dcd32e5501a3ecec638d65b0e}
+\hypertarget{OLDSCALE_8C_aaec68c7e7f5e78b99df5b9ed716b35d2}{
+\index{OLDSCALE.C@{OLDSCALE.C}!slinex@{slinex}}
+\index{slinex@{slinex}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{slinex}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf slinex}}}
+\label{OLDSCALE_8C_aaec68c7e7f5e78b99df5b9ed716b35d2}
+\hypertarget{OLDSCALE_8C_aa80a217b0adae9ee21e078108c9ef3c5}{
+\index{OLDSCALE.C@{OLDSCALE.C}!stepbytwo@{stepbytwo}}
+\index{stepbytwo@{stepbytwo}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{stepbytwo}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf stepbytwo}}}
+\label{OLDSCALE_8C_aa80a217b0adae9ee21e078108c9ef3c5}
+\hypertarget{OLDSCALE_8C_a1c8053b1c5185cc1701015d26ca61eb0}{
+\index{OLDSCALE.C@{OLDSCALE.C}!wordmasks@{wordmasks}}
+\index{wordmasks@{wordmasks}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{wordmasks}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf wordmasks}\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}}}
+\label{OLDSCALE_8C_a1c8053b1c5185cc1701015d26ca61eb0}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+{0x0080,0x00c0,0x00e0,0x00f0,0x00f8,0x00fc,0x00fe,0x00ff},
+{0x0040,0x0060,0x0070,0x0078,0x007c,0x007e,0x007f,0x807f},
+{0x0020,0x0030,0x0038,0x003c,0x003e,0x003f,0x803f,0xc03f},
+{0x0010,0x0018,0x001c,0x001e,0x001f,0x801f,0xc01f,0xe01f},
+{0x0008,0x000c,0x000e,0x000f,0x800f,0xc00f,0xe00f,0xf00f},
+{0x0004,0x0006,0x0007,0x8007,0xc007,0xe007,0xf007,0xf807},
+{0x0002,0x0003,0x8003,0xc003,0xe003,0xf003,0xf803,0xfc03},
+{0x0001,0x8001,0xc001,0xe001,0xf001,0xf801,0xfc01,0xfe01} }
+\end{DoxyCode}
+\hypertarget{OLDSCALE_8C_a163511d4eb7f7ce00c635dc774a864c6}{
+\index{OLDSCALE.C@{OLDSCALE.C}!work@{work}}
+\index{work@{work}!OLDSCALE.C@{OLDSCALE.C}}
+\subsubsection[{work}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\_\-compscale} \_\-seg$\ast$ {\bf work}}}
+\label{OLDSCALE_8C_a163511d4eb7f7ce00c635dc774a864c6}

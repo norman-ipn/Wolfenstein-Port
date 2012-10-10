@@ -1,0 +1,23 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DEF_8H.html#ae541a99035c0697e4b819dbe96f16a6a" title="GetBonus" alt="" coords="301,8,381,37"/>
+<area shape="rect" id="node31" href="$WL__DEF_8H.html#aced31f0edae6f9496d6d56942f318aba" title="GivePoints" alt="" coords="161,60,247,89"/>
+<area shape="rect" id="node5" href="$WL__DRAW_8C.html#a3f31beef974ac9e631c4b634d91ba701" title="DrawScaleds" alt="" coords="444,5,543,35"/>
+<area shape="rect" id="node7" href="$WL__DRAW_8C.html#abde2aab3bb185f39bd50f4574444a034" title="ThreeDRefresh" alt="" coords="601,7,711,36"/>
+<area shape="rect" id="node9" href="$WL__GAME_8C.html#a27540b39d401cbea76d1dc2d5d701736" title="Died" alt="" coords="775,7,823,36"/>
+<area shape="rect" id="node22" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="761,111,836,140"/>
+<area shape="rect" id="node11" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="892,57,977,87"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1032,111,1117,140"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1165,111,1216,140"/>
+<area shape="rect" id="node17" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1265,84,1353,113"/>
+<area shape="rect" id="node19" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1403,111,1477,140"/>
+<area shape="rect" id="node25" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="893,111,976,140"/>
+<area shape="rect" id="node28" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="885,164,984,193"/>
+<area shape="rect" id="node33" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="296,112,387,141"/>
+<area shape="rect" id="node39" href="$WL__STATE_8C.html#ab414c5cb884ce9d89439a787a5b8c8de" title="KillActor" alt="" coords="307,165,376,195"/>
+<area shape="rect" id="node50" href="$WL__INTER_8C.html#ab396c53c02f20e288d2d718c0ee64728" title="LevelCompleted" alt="" coords="436,59,551,88"/>
+<area shape="rect" id="node35" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="448,112,539,141"/>
+<area shape="rect" id="node41" href="$WL__STATE_8C.html#a0dd7c0f5423efb70928fd80fa08e013a" title="DamageActor" alt="" coords="443,165,544,195"/>
+<area shape="rect" id="node43" href="$WL__AGENT_8C.html#a1afb01b78673abfdfaddceee3a198eb5" title="GunAttack" alt="" coords="615,217,697,247"/>
+<area shape="rect" id="node47" href="$WL__AGENT_8C.html#afd37f9f9ac8d36180f9348c67195a4db" title="KnifeAttack" alt="" coords="611,164,701,193"/>
+<area shape="rect" id="node45" href="$WL__AGENT_8C.html#a0cce1c4b64372c27c6ff79e6fb397772" title="T_Attack" alt="" coords="761,192,836,221"/>
+</map>

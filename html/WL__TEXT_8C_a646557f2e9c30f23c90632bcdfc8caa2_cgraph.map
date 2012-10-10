@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__CA_8C.html#a258ef34640d9cb05e8a1e6c4e2f8eb5b" title="CA_CacheMarks" alt="" coords="220,224,343,253"/>
+<area shape="rect" id="node7" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1528,248,1573,277"/>
+<area shape="rect" id="node63" href="$WL__TEXT_8C.html#a54fc6ee9755689f998d8e81754867234" title="ParsePicCommand" alt="" coords="215,377,348,407"/>
+<area shape="rect" id="node69" href="$WL__TEXT_8C.html#ab37df8a0a1c922da15b4ed950eaa3f0d" title="ParseTimedCommand" alt="" coords="205,431,357,460"/>
+<area shape="rect" id="node5" href="$ID__CA_8C.html#a9d7ef0e3d4f10f25abd940094a4db437" title="CA_FarRead" alt="" coords="619,487,717,516"/>
+<area shape="rect" id="node9" href="$ID__CA_8C.html#a34eb9535940d7725a97dc903e19fb4c0" title="CAL_ExpandGrChunk" alt="" coords="407,249,556,279"/>
+<area shape="rect" id="node13" href="$ID__MM_8C.html#ab70f353278bae916507eb350c39f4ebb" title="MM_GetPtr" alt="" coords="624,304,712,333"/>
+<area shape="rect" id="node17" href="$ID__MM_8C.html#acbec6e3295a580e1067bbd69ea89d275" title="MM_SetLock" alt="" coords="947,144,1045,173"/>
+<area shape="rect" id="node53" href="$ID__CA_8C.html#a8568e471bb25a89e1bc53f8ca0a629c2" title="GRFILEPOS" alt="" coords="432,43,531,72"/>
+<area shape="rect" id="node55" href="$ID__MM_8C.html#a9464693cb68e9a8ed7586855952f197a" title="MM_FreePtr" alt="" coords="784,92,877,121"/>
+<area shape="rect" id="node60" href="$ID__MM_8C.html#a114de4a52bcc47e8d668ab78a7c702c9" title="MM_SetPurge" alt="" coords="616,197,720,227"/>
+<area shape="rect" id="node11" href="$ID__CA_8C.html#ad528d2babf088de313edb739e0c1dcf5" title="CAL_HuffExpand" alt="" coords="607,251,729,280"/>
+<area shape="rect" id="node15" href="$ID__MM_8C.html#a1ab3355666068dc56c6d591354b17a3e" title="MM_SortMem" alt="" coords="779,275,883,304"/>
+<area shape="rect" id="node44" href="$WL__DEF_8H.html#af74ea12ed1f33b5eb32cee5062ea034c" title="SetViewSize" alt="" coords="783,405,879,435"/>
+<area shape="rect" id="node20" href="$ID__SD_8C.html#a32826e61458fce0f5667e3e1f4db95f4" title="SD_SoundPlaying" alt="" coords="932,248,1060,277"/>
+<area shape="rect" id="node22" href="$ID__SD_8C.html#ac98e41e0645d624d0645219c8eca9615" title="SD_StopSound" alt="" coords="940,301,1052,331"/>
+<area shape="rect" id="node24" href="$ID__SD_8C.html#af508ee24c35bb22fae070def8e7c80ac" title="SD_StopDigitized" alt="" coords="1116,355,1241,384"/>
+<area shape="rect" id="node37" href="$ID__SD_8C.html#ac4a243a2df697871871f0d62df9248db" title="SDL_ALStopSound" alt="" coords="1112,248,1245,277"/>
+<area shape="rect" id="node41" href="$ID__SD_8C.html#a8fdd4a72618197048986b80ee715e96f" title="SDL_PCStopSound" alt="" coords="1109,301,1248,331"/>
+<area shape="rect" id="node26" href="$ID__PM_8C.html#a1e7da5d85fc01341f8f9a893ddc87cfc" title="PM_SetPageLock" alt="" coords="1307,300,1432,329"/>
+<area shape="rect" id="node29" href="$ID__SD_8C.html#a6cca2dc7a94fe6d4e6a69b7f320b452a" title="SDL_PCStopSample" alt="" coords="1297,460,1441,489"/>
+<area shape="rect" id="node33" href="$ID__SD_8C.html#ad0bed6aae151cee1ce9b468e83a16c57" title="SDL_SBStopSample" alt="" coords="1297,407,1441,436"/>
+<area shape="rect" id="node35" href="$ID__SD_8C.html#a4b4cb4383cfa055401dc7ff4ff6f0104" title="SDL_SSStopSample" alt="" coords="1297,353,1441,383"/>
+<area shape="rect" id="node31" href="$ID__SD_8C.html#a6e015404fba7543853cacd8420353315" title="SDL_IndicatePC" alt="" coords="1491,460,1611,489"/>
+<area shape="rect" id="node39" href="$ID__SD_8C.html#a022c0a65b79644cb7ea86a2ce77b3c42" title="alOut" alt="" coords="1343,247,1396,276"/>
+<area shape="rect" id="node46" href="$WL__DEF_8H.html#a82156c01cf0c6b616ccb2bc2dff569a6" title="CalcProjection" alt="" coords="943,459,1049,488"/>
+<area shape="rect" id="node48" href="$ID__MM_8C.html#aec67dba21150a6028caa41540d8575ca" title="MM_BombOnError" alt="" coords="931,512,1061,541"/>
+<area shape="rect" id="node51" href="$CONTIGSC_8C.html#aaba41b509b2c39129abfed4d8e0e4255" title="SetupScaling" alt="" coords="947,405,1045,435"/>
+<area shape="rect" id="node65" href="$WL__TEXT_8C.html#a2cb5d5c64873238c927112cfa403455a" title="ParseNumber" alt="" coords="431,404,532,433"/>
+<area shape="rect" id="node67" href="$WL__TEXT_8C.html#a4ce1d6ef4ea4445f18f5d7c2dcce817e" title="RipToEOL" alt="" coords="440,457,523,487"/>
+</map>

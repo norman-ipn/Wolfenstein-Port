@@ -1,0 +1,620 @@
+\hypertarget{ID__US__1_8C}{
+\section{ID\_\-US\_\-1.C File Reference}
+\label{ID__US__1_8C}\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}}
+}
+{\ttfamily \#include \char`\"{}ID\_\-HEADS.H\char`\"{}}\par
+Include dependency graph for ID\_\-US\_\-1.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US__1_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__US__1_8C_a473875c3ba4fabb07f31ce8b2e529310}{ConfigVersion}~1
+\item 
+\#define \hyperlink{ID__US__1_8C_aabed7f7d1400564ec843acd4dfb72e59}{IGNORE}~0
+\item 
+\#define \hyperlink{ID__US__1_8C_ab56f9f937902b77e7d2b1e52e004ce84}{RETRY}~1
+\item 
+\#define \hyperlink{ID__US__1_8C_a5376571bbf4cdc9782683635f366f89a}{ABORT}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ID__US__1_8C_a326264bdc562d493badf85dfba63a495}{USL\_\-HardError} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} errval, int ax, int bp, int si)
+\item 
+void \hyperlink{ID__US__1_8C_a25cccf3faa98e384b1f88c33a0a4e09f}{US\_\-Startup} (void)
+\item 
+void \hyperlink{ID__US__1_8C_aea2712f28a63f8aca70c66df1f532ecc}{US\_\-Shutdown} (void)
+\item 
+int \hyperlink{ID__US__1_8C_ab779824eaa9432170162847f92aff6f9}{US\_\-CheckParm} (char $\ast$parm, char $\ast$$\ast$strings)
+\item 
+void \hyperlink{ID__US__1_8C_aed7467cd936e319d9378cf958bd02236}{US\_\-SetPrintRoutines} (void($\ast$measure)(char far $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$), void($\ast$print)(char far $\ast$))
+\item 
+void \hyperlink{ID__US__1_8C_ae158b4a99ff8fe4bca4517925b6b429c}{US\_\-Print} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US__1_8C_aaaf7bf10a561ab0338f8b3742c408b86}{US\_\-PrintUnsigned} (\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} n)
+\item 
+void \hyperlink{ID__US__1_8C_adcea441d26d8338b8eb2cd44c3c4a105}{US\_\-PrintSigned} (long n)
+\item 
+void \hyperlink{ID__US__1_8C_abd887f54352061deb6deb73c7ff9399e}{USL\_\-PrintInCenter} (char far $\ast$s, \hyperlink{structRect}{Rect} r)
+\item 
+void \hyperlink{ID__US__1_8C_a524fd911a8a3ceedd0a3efe9b5f76830}{US\_\-PrintCentered} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US__1_8C_ad8fa7aed3bed622bff4925586de5e0dd}{US\_\-CPrintLine} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US__1_8C_a45d1b7ebde4b4cbfd5a34b3b0134ee8b}{US\_\-CPrint} (char far $\ast$s)
+\item 
+void \hyperlink{ID__US__1_8C_a9987548b83195953febc41d3a3bc86f2}{US\_\-ClearWindow} (void)
+\item 
+void \hyperlink{ID__US__1_8C_a06cee19903ed682701ef040c7f1b1ffa}{US\_\-DrawWindow} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} x, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} y, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} w, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} h)
+\item 
+void \hyperlink{ID__US__1_8C_adc484a74665d923f94e6a8fb7ae6ece1}{US\_\-CenterWindow} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} w, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} h)
+\item 
+void \hyperlink{ID__US__1_8C_ae18de9eca3bc3460904860a60bf6108e}{US\_\-SaveWindow} (\hyperlink{structWindowRec}{WindowRec} $\ast$win)
+\item 
+void \hyperlink{ID__US__1_8C_a0e39c60fcd5edda420d1caf8ebeb3c35}{US\_\-RestoreWindow} (\hyperlink{structWindowRec}{WindowRec} $\ast$win)
+\item 
+static void \hyperlink{ID__US__1_8C_a1b801715334a6be3455ebe13aab975ff}{USL\_\-XORICursor} (int x, int y, char $\ast$s, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} cursor)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US__1_8C_a8b8c9a7afe469e4c90c2540c9158ea94}{US\_\-LineInput} (int x, int y, char $\ast$buf, char $\ast$def, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} escok, int maxchars, int maxwidth)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ID__US__1_8C_a4af009c4eb68eb1aaa0a93c8bffb3512}{abortprogram}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US__1_8C_aac051dcdf0618ac25f7661d8c6ddd82c}{NoWait}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US__1_8C_af88ed0e04fa671a4e672334f1e0c4828}{PrintX}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US__1_8C_a9ba4b756f739163c3d3d5736cba818a4}{PrintY}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US__1_8C_a961df5c1b62bed0978a9e2948458a05c}{WindowX}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US__1_8C_a8bde891542c367fab8f3a9dfb9d2250e}{WindowY}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US__1_8C_a417e7f10e3b946e0ce329aff1b619c3f}{WindowW}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__US__1_8C_aaeba48e7e4c3c27582d73da5718a0c0c}{WindowH}
+\item 
+static char $\ast$ \hyperlink{ID__US__1_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{ParmStrings} \mbox{[}$\,$\mbox{]} = \{\char`\"{}TEDLEVEL\char`\"{},\char`\"{}NOWAIT\char`\"{}\}
+\item 
+static char $\ast$ \hyperlink{ID__US__1_8C_ad4497d0cefc587c9101b54729d150f1c}{ParmStrings2} \mbox{[}$\,$\mbox{]} = \{\char`\"{}COMP\char`\"{},\char`\"{}NOCOMP\char`\"{}\}
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US__1_8C_a587d3155d7e2c62fe813cffece29ca13}{US\_\-Started}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US__1_8C_a7fa08780907017f971b2dc0909bd77fd}{Button0}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US__1_8C_aca6b2fe999220340d0569ece03a0026d}{Button1}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__US__1_8C_abf5358251c5b519d71e3d8bca8256510}{CursorBad}
+\item 
+int \hyperlink{ID__US__1_8C_af51730b2758fe5daa55ca8445a8f7c3b}{CursorX}
+\item 
+int \hyperlink{ID__US__1_8C_a7f5c998973d0526fcb8d52f37e5547da}{CursorY}
+\item 
+void($\ast$ \hyperlink{ID__US__1_8C_ac392829f8abc2e03447a6abf023352b1}{USL\_\-MeasureString} )(char far $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$) = VW\_\-MeasurePropString
+\item 
+void($\ast$)($\ast$) \hyperlink{ID__US__1_8C_a49825cde2ac607e0d17407fb33f14a00}{USL\_\-DrawString} (char far $\ast$) = VWB\_\-DrawPropString
+\item 
+\hyperlink{structSaveGame}{SaveGame} \hyperlink{ID__US__1_8C_a155f9931f0842c8f97f962eef9cd22f7}{Games} \mbox{[}MaxSaveGames\mbox{]}
+\item 
+\hyperlink{structHighScore}{HighScore} \hyperlink{ID__US__1_8C_a21091ead46c77ab22e506731e48c8d5e}{Scores} \mbox{[}MaxScores\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__US__1_8C_a5376571bbf4cdc9782683635f366f89a}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!ABORT@{ABORT}}
+\index{ABORT@{ABORT}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{ABORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ABORT~2}}
+\label{ID__US__1_8C_a5376571bbf4cdc9782683635f366f89a}
+\hypertarget{ID__US__1_8C_a473875c3ba4fabb07f31ce8b2e529310}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!ConfigVersion@{ConfigVersion}}
+\index{ConfigVersion@{ConfigVersion}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{ConfigVersion}]{\setlength{\rightskip}{0pt plus 5cm}\#define ConfigVersion~1}}
+\label{ID__US__1_8C_a473875c3ba4fabb07f31ce8b2e529310}
+\hypertarget{ID__US__1_8C_aabed7f7d1400564ec843acd4dfb72e59}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!IGNORE@{IGNORE}}
+\index{IGNORE@{IGNORE}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{IGNORE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IGNORE~0}}
+\label{ID__US__1_8C_aabed7f7d1400564ec843acd4dfb72e59}
+\hypertarget{ID__US__1_8C_ab56f9f937902b77e7d2b1e52e004ce84}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!RETRY@{RETRY}}
+\index{RETRY@{RETRY}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{RETRY}]{\setlength{\rightskip}{0pt plus 5cm}\#define RETRY~1}}
+\label{ID__US__1_8C_ab56f9f937902b77e7d2b1e52e004ce84}
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__US__1_8C_adc484a74665d923f94e6a8fb7ae6ece1}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-CenterWindow@{US\_\-CenterWindow}}
+\index{US\_\-CenterWindow@{US\_\-CenterWindow}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-CenterWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-CenterWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{w, }
+\item[{{\bf word}}]{h}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_adc484a74665d923f94e6a8fb7ae6ece1}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{ID__US__1_8C_adc484a74665d923f94e6a8fb7ae6ece1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_ab779824eaa9432170162847f92aff6f9}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-CheckParm@{US\_\-CheckParm}}
+\index{US\_\-CheckParm@{US\_\-CheckParm}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-CheckParm}]{\setlength{\rightskip}{0pt plus 5cm}int US\_\-CheckParm (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{parm, }
+\item[{char $\ast$$\ast$}]{strings}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_ab779824eaa9432170162847f92aff6f9}
+\hypertarget{ID__US__1_8C_a9987548b83195953febc41d3a3bc86f2}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-ClearWindow@{US\_\-ClearWindow}}
+\index{US\_\-ClearWindow@{US\_\-ClearWindow}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-ClearWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-ClearWindow (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a9987548b83195953febc41d3a3bc86f2}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US__1_8C_a9987548b83195953febc41d3a3bc86f2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_a45d1b7ebde4b4cbfd5a34b3b0134ee8b}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-CPrint@{US\_\-CPrint}}
+\index{US\_\-CPrint@{US\_\-CPrint}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-CPrint}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-CPrint (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a45d1b7ebde4b4cbfd5a34b3b0134ee8b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{ID__US__1_8C_a45d1b7ebde4b4cbfd5a34b3b0134ee8b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_ad8fa7aed3bed622bff4925586de5e0dd}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-CPrintLine@{US\_\-CPrintLine}}
+\index{US\_\-CPrintLine@{US\_\-CPrintLine}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-CPrintLine}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-CPrintLine (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_ad8fa7aed3bed622bff4925586de5e0dd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{ID__US__1_8C_ad8fa7aed3bed622bff4925586de5e0dd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_a06cee19903ed682701ef040c7f1b1ffa}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-DrawWindow@{US\_\-DrawWindow}}
+\index{US\_\-DrawWindow@{US\_\-DrawWindow}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-DrawWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-DrawWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{x, }
+\item[{{\bf word}}]{y, }
+\item[{{\bf word}}]{w, }
+\item[{{\bf word}}]{h}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a06cee19903ed682701ef040c7f1b1ffa}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US__1_8C_a06cee19903ed682701ef040c7f1b1ffa_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_a8b8c9a7afe469e4c90c2540c9158ea94}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-LineInput@{US\_\-LineInput}}
+\index{US\_\-LineInput@{US\_\-LineInput}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-LineInput}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} US\_\-LineInput (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char $\ast$}]{buf, }
+\item[{char $\ast$}]{def, }
+\item[{{\bf boolean}}]{escok, }
+\item[{int}]{maxchars, }
+\item[{int}]{maxwidth}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a8b8c9a7afe469e4c90c2540c9158ea94}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{ID__US__1_8C_a8b8c9a7afe469e4c90c2540c9158ea94_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US__1_8C_a8b8c9a7afe469e4c90c2540c9158ea94_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_ae158b4a99ff8fe4bca4517925b6b429c}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-Print@{US\_\-Print}}
+\index{US\_\-Print@{US\_\-Print}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-Print}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-Print (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_ae158b4a99ff8fe4bca4517925b6b429c}
+\hypertarget{ID__US__1_8C_a524fd911a8a3ceedd0a3efe9b5f76830}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-PrintCentered@{US\_\-PrintCentered}}
+\index{US\_\-PrintCentered@{US\_\-PrintCentered}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-PrintCentered}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-PrintCentered (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a524fd911a8a3ceedd0a3efe9b5f76830}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{ID__US__1_8C_a524fd911a8a3ceedd0a3efe9b5f76830_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_adcea441d26d8338b8eb2cd44c3c4a105}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-PrintSigned@{US\_\-PrintSigned}}
+\index{US\_\-PrintSigned@{US\_\-PrintSigned}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-PrintSigned}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-PrintSigned (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_adcea441d26d8338b8eb2cd44c3c4a105}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ID__US__1_8C_adcea441d26d8338b8eb2cd44c3c4a105_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_aaaf7bf10a561ab0338f8b3742c408b86}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-PrintUnsigned@{US\_\-PrintUnsigned}}
+\index{US\_\-PrintUnsigned@{US\_\-PrintUnsigned}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-PrintUnsigned}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-PrintUnsigned (
+\begin{DoxyParamCaption}
+\item[{{\bf longword}}]{n}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_aaaf7bf10a561ab0338f8b3742c408b86}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{ID__US__1_8C_aaaf7bf10a561ab0338f8b3742c408b86_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_a0e39c60fcd5edda420d1caf8ebeb3c35}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-RestoreWindow@{US\_\-RestoreWindow}}
+\index{US\_\-RestoreWindow@{US\_\-RestoreWindow}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-RestoreWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-RestoreWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf WindowRec} $\ast$}]{win}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a0e39c60fcd5edda420d1caf8ebeb3c35}
+\hypertarget{ID__US__1_8C_ae18de9eca3bc3460904860a60bf6108e}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-SaveWindow@{US\_\-SaveWindow}}
+\index{US\_\-SaveWindow@{US\_\-SaveWindow}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-SaveWindow}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-SaveWindow (
+\begin{DoxyParamCaption}
+\item[{{\bf WindowRec} $\ast$}]{win}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_ae18de9eca3bc3460904860a60bf6108e}
+\hypertarget{ID__US__1_8C_aed7467cd936e319d9378cf958bd02236}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-SetPrintRoutines@{US\_\-SetPrintRoutines}}
+\index{US\_\-SetPrintRoutines@{US\_\-SetPrintRoutines}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-SetPrintRoutines}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-SetPrintRoutines (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(char far $\ast$, {\bf word} $\ast$, {\bf word} $\ast$)}]{measure, }
+\item[{void($\ast$)(char far $\ast$)}]{print}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_aed7467cd936e319d9378cf958bd02236}
+\hypertarget{ID__US__1_8C_aea2712f28a63f8aca70c66df1f532ecc}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-Shutdown@{US\_\-Shutdown}}
+\index{US\_\-Shutdown@{US\_\-Shutdown}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_aea2712f28a63f8aca70c66df1f532ecc}
+\hypertarget{ID__US__1_8C_a25cccf3faa98e384b1f88c33a0a4e09f}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-Startup@{US\_\-Startup}}
+\index{US\_\-Startup@{US\_\-Startup}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void US\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a25cccf3faa98e384b1f88c33a0a4e09f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US__1_8C_a25cccf3faa98e384b1f88c33a0a4e09f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_a326264bdc562d493badf85dfba63a495}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!USL\_\-HardError@{USL\_\-HardError}}
+\index{USL\_\-HardError@{USL\_\-HardError}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{USL\_\-HardError}]{\setlength{\rightskip}{0pt plus 5cm}int USL\_\-HardError (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{errval, }
+\item[{int}]{ax, }
+\item[{int}]{bp, }
+\item[{int}]{si}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_a326264bdc562d493badf85dfba63a495}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US__1_8C_a326264bdc562d493badf85dfba63a495_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{ID__US__1_8C_a326264bdc562d493badf85dfba63a495_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_abd887f54352061deb6deb73c7ff9399e}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!USL\_\-PrintInCenter@{USL\_\-PrintInCenter}}
+\index{USL\_\-PrintInCenter@{USL\_\-PrintInCenter}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{USL\_\-PrintInCenter}]{\setlength{\rightskip}{0pt plus 5cm}void USL\_\-PrintInCenter (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{s, }
+\item[{{\bf Rect}}]{r}
+\end{DoxyParamCaption}
+)}}
+\label{ID__US__1_8C_abd887f54352061deb6deb73c7ff9399e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{ID__US__1_8C_abd887f54352061deb6deb73c7ff9399e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__US__1_8C_a1b801715334a6be3455ebe13aab975ff}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!USL\_\-XORICursor@{USL\_\-XORICursor}}
+\index{USL\_\-XORICursor@{USL\_\-XORICursor}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{USL\_\-XORICursor}]{\setlength{\rightskip}{0pt plus 5cm}static void USL\_\-XORICursor (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char $\ast$}]{s, }
+\item[{{\bf word}}]{cursor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__US__1_8C_a1b801715334a6be3455ebe13aab975ff}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__US__1_8C_a1b801715334a6be3455ebe13aab975ff_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__US__1_8C_a4af009c4eb68eb1aaa0a93c8bffb3512}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!abortprogram@{abortprogram}}
+\index{abortprogram@{abortprogram}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{abortprogram}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf abortprogram}}}
+\label{ID__US__1_8C_a4af009c4eb68eb1aaa0a93c8bffb3512}
+\hypertarget{ID__US__1_8C_a7fa08780907017f971b2dc0909bd77fd}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!Button0@{Button0}}
+\index{Button0@{Button0}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{Button0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf Button0}}}
+\label{ID__US__1_8C_a7fa08780907017f971b2dc0909bd77fd}
+\hypertarget{ID__US__1_8C_aca6b2fe999220340d0569ece03a0026d}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!Button1@{Button1}}
+\index{Button1@{Button1}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{Button1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf Button1}}}
+\label{ID__US__1_8C_aca6b2fe999220340d0569ece03a0026d}
+\hypertarget{ID__US__1_8C_abf5358251c5b519d71e3d8bca8256510}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!CursorBad@{CursorBad}}
+\index{CursorBad@{CursorBad}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{CursorBad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf CursorBad}}}
+\label{ID__US__1_8C_abf5358251c5b519d71e3d8bca8256510}
+\hypertarget{ID__US__1_8C_af51730b2758fe5daa55ca8445a8f7c3b}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!CursorX@{CursorX}}
+\index{CursorX@{CursorX}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{CursorX}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf CursorX}}}
+\label{ID__US__1_8C_af51730b2758fe5daa55ca8445a8f7c3b}
+\hypertarget{ID__US__1_8C_a7f5c998973d0526fcb8d52f37e5547da}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!CursorY@{CursorY}}
+\index{CursorY@{CursorY}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{CursorY}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf CursorY}}}
+\label{ID__US__1_8C_a7f5c998973d0526fcb8d52f37e5547da}
+\hypertarget{ID__US__1_8C_a155f9931f0842c8f97f962eef9cd22f7}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!Games@{Games}}
+\index{Games@{Games}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{Games}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SaveGame} {\bf Games}\mbox{[}MaxSaveGames\mbox{]}}}
+\label{ID__US__1_8C_a155f9931f0842c8f97f962eef9cd22f7}
+\hypertarget{ID__US__1_8C_aac051dcdf0618ac25f7661d8c6ddd82c}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!NoWait@{NoWait}}
+\index{NoWait@{NoWait}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{NoWait}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf NoWait}}}
+\label{ID__US__1_8C_aac051dcdf0618ac25f7661d8c6ddd82c}
+\hypertarget{ID__US__1_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!ParmStrings@{ParmStrings}}
+\index{ParmStrings@{ParmStrings}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{ParmStrings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf ParmStrings}\mbox{[}$\,$\mbox{]} = \{\char`\"{}TEDLEVEL\char`\"{},\char`\"{}NOWAIT\char`\"{}\}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__US__1_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}
+\hypertarget{ID__US__1_8C_ad4497d0cefc587c9101b54729d150f1c}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!ParmStrings2@{ParmStrings2}}
+\index{ParmStrings2@{ParmStrings2}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{ParmStrings2}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ {\bf ParmStrings2}\mbox{[}$\,$\mbox{]} = \{\char`\"{}COMP\char`\"{},\char`\"{}NOCOMP\char`\"{}\}}}
+\label{ID__US__1_8C_ad4497d0cefc587c9101b54729d150f1c}
+\hypertarget{ID__US__1_8C_af88ed0e04fa671a4e672334f1e0c4828}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!PrintX@{PrintX}}
+\index{PrintX@{PrintX}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{PrintX}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PrintX}}}
+\label{ID__US__1_8C_af88ed0e04fa671a4e672334f1e0c4828}
+\hypertarget{ID__US__1_8C_a9ba4b756f739163c3d3d5736cba818a4}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!PrintY@{PrintY}}
+\index{PrintY@{PrintY}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{PrintY}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PrintY}}}
+\label{ID__US__1_8C_a9ba4b756f739163c3d3d5736cba818a4}
+\hypertarget{ID__US__1_8C_a21091ead46c77ab22e506731e48c8d5e}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!Scores@{Scores}}
+\index{Scores@{Scores}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{Scores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HighScore} {\bf Scores}\mbox{[}MaxScores\mbox{]}}}
+\label{ID__US__1_8C_a21091ead46c77ab22e506731e48c8d5e}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+                                        {
+                                                {"id software-'92",10000,1},
+                                                {"Adrian Carmack",10000,1},
+                                                {"John Carmack",10000,1},
+                                                {"Kevin Cloud",10000,1},
+                                                {"Tom Hall",10000,1},
+                                                {"John Romero",10000,1},
+                                                {"Jay Wilbur",10000,1},
+                                        }
+\end{DoxyCode}
+\hypertarget{ID__US__1_8C_a587d3155d7e2c62fe813cffece29ca13}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!US\_\-Started@{US\_\-Started}}
+\index{US\_\-Started@{US\_\-Started}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{US\_\-Started}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf US\_\-Started}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__US__1_8C_a587d3155d7e2c62fe813cffece29ca13}
+\hypertarget{ID__US__1_8C_a49825cde2ac607e0d17407fb33f14a00}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!USL\_\-DrawString@{USL\_\-DrawString}}
+\index{USL\_\-DrawString@{USL\_\-DrawString}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{USL\_\-DrawString}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$)($\ast$) {\bf USL\_\-DrawString}(char far $\ast$) = VWB\_\-DrawPropString}}
+\label{ID__US__1_8C_a49825cde2ac607e0d17407fb33f14a00}
+\hypertarget{ID__US__1_8C_ac392829f8abc2e03447a6abf023352b1}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!USL\_\-MeasureString@{USL\_\-MeasureString}}
+\index{USL\_\-MeasureString@{USL\_\-MeasureString}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{USL\_\-MeasureString}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf USL\_\-MeasureString})(char far $\ast$, {\bf word} $\ast$, {\bf word} $\ast$) = VW\_\-MeasurePropString}}
+\label{ID__US__1_8C_ac392829f8abc2e03447a6abf023352b1}
+\hypertarget{ID__US__1_8C_aaeba48e7e4c3c27582d73da5718a0c0c}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!WindowH@{WindowH}}
+\index{WindowH@{WindowH}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{WindowH}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowH}}}
+\label{ID__US__1_8C_aaeba48e7e4c3c27582d73da5718a0c0c}
+\hypertarget{ID__US__1_8C_a417e7f10e3b946e0ce329aff1b619c3f}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!WindowW@{WindowW}}
+\index{WindowW@{WindowW}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{WindowW}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowW}}}
+\label{ID__US__1_8C_a417e7f10e3b946e0ce329aff1b619c3f}
+\hypertarget{ID__US__1_8C_a961df5c1b62bed0978a9e2948458a05c}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!WindowX@{WindowX}}
+\index{WindowX@{WindowX}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{WindowX}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowX}}}
+\label{ID__US__1_8C_a961df5c1b62bed0978a9e2948458a05c}
+\hypertarget{ID__US__1_8C_a8bde891542c367fab8f3a9dfb9d2250e}{
+\index{ID\_\-US\_\-1.C@{ID\_\-US\_\-1.C}!WindowY@{WindowY}}
+\index{WindowY@{WindowY}!ID_US_1.C@{ID\_\-US\_\-1.C}}
+\subsubsection[{WindowY}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf WindowY}}}
+\label{ID__US__1_8C_a8bde891542c367fab8f3a9dfb9d2250e}

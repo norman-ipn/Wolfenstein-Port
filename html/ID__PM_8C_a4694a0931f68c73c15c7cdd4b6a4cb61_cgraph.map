@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__PM_8C.html#aa4215b4363055b96b571bedb294d39a2" title="PML_GetEMSAddress" alt="" coords="837,93,992,123"/>
+<area shape="rect" id="node7" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1201,172,1247,201"/>
+<area shape="rect" id="node10" href="$ID__PM_8C.html#a1a23d717675f8d14bd6e07bb7bcbd4b4" title="PML_GiveLRUPage" alt="" coords="428,301,567,331"/>
+<area shape="rect" id="node13" href="$ID__PM_8C.html#aa2abd895c0ac117de4d033b6850a9a07" title="PML_TransferPageSpace" alt="" coords="205,120,376,149"/>
+<area shape="rect" id="node5" href="$ID__PM_8C.html#ab2f720eba0924c15d0a7c6a487fc0626" title="PML_MapEMS" alt="" coords="1041,145,1151,175"/>
+<area shape="rect" id="node15" href="$ID__PM_8C.html#a6d8376b84fdfd88c991b82d9d9cebcfd" title="PM_GetPageAddress" alt="" coords="631,93,777,123"/>
+<area shape="rect" id="node18" href="$ID__PM_8C.html#a0b6f9ec457913559bcff1d9258a15552" title="PML_PutPageInXMS" alt="" coords="424,145,571,175"/>
+<area shape="rect" id="node21" href="$ID__PM_8C.html#aa3210f7fc8e7367f2349cd17cbec0c67" title="PML_GiveLRUXMSPage" alt="" coords="620,147,788,176"/>
+</map>

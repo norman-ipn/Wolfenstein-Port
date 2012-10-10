@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__IN_8C.html#a9b6ff4a88bfe152f44195609081589bc" title="INL_StartJoy" alt="" coords="148,59,247,88"/>
+<area shape="rect" id="node11" href="$ID__IN_8C.html#a449a040feca2ce4fb434d6e04dc2f7c4" title="INL_StartKbd" alt="" coords="147,112,248,141"/>
+<area shape="rect" id="node17" href="$ID__IN_8C.html#a7910b162b75d142f547743f0b42498ae" title="INL_StartMouse" alt="" coords="139,165,256,195"/>
+<area shape="rect" id="node19" href="$ID__US_8H.html#ab779824eaa9432170162847f92aff6f9" title="US_CheckParm" alt="" coords="139,219,256,248"/>
+<area shape="rect" id="node5" href="$ID__IN_8C.html#aa9699bbe72cdd2c7a2f8d5f291ec1e76" title="IN_GetJoyAbs" alt="" coords="320,5,427,35"/>
+<area shape="rect" id="node7" href="$ID__IN_8C.html#a58e132d2bd776ef812d95ee30907cbd5" title="IN_SetupJoy" alt="" coords="324,59,423,88"/>
+<area shape="rect" id="node9" href="$ID__IN_8C.html#a7bab419f6ff823c5210ad1492cd3a686" title="INL_SetJoyScale" alt="" coords="492,59,615,88"/>
+<area shape="rect" id="node13" href="$ID__IN_8C.html#a20251e701cb941d1b39665a9afa51f23" title="IN_ClearKeysDown" alt="" coords="304,112,443,141"/>
+<area shape="rect" id="node15" href="$ID__IN_8C.html#a5a8ff6b26176707dda1b18ae13602429" title="INL_KeyService" alt="" coords="315,165,432,195"/>
+</map>

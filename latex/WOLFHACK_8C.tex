@@ -1,0 +1,269 @@
+\hypertarget{WOLFHACK_8C}{
+\section{WOLFHACK.C File Reference}
+\label{WOLFHACK_8C}\index{WOLFHACK.C@{WOLFHACK.C}}
+}
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WOLFHACK.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WOLFHACK_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WOLFHACK_8C_ad87c27b3116bdb01a5163f8c4c3923aa}{MAXVIEWHEIGHT}~200
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WOLFHACK_8C_abfc050cf3ca8d5863a10f7a95b87b9f2}{FixedMul} (\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} a, \hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} b)
+\item 
+void \hyperlink{WOLFHACK_8C_a74fe032af0daeb2b94e5313e32ee378c}{DrawSpans} (int x1, int x2, int height)
+\item 
+void \hyperlink{WOLFHACK_8C_a522f0e08c31d2c568ff188e825cfe9c4}{SetPlaneViewSize} (void)
+\item 
+void \hyperlink{WOLFHACK_8C_a6ad59c546e9b7bad6c682670b884ba1e}{DrawPlanes} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{WOLFHACK_8C_a4c8e4e6767346701059a389a561eab09}{spanstart} \mbox{[}MAXVIEWHEIGHT/2\mbox{]}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WOLFHACK_8C_aee3e1fe06a4bbdaec4efa03285418bd5}{stepscale} \mbox{[}MAXVIEWHEIGHT/2\mbox{]}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WOLFHACK_8C_a438b5b45fb7e4e8f4038de91c545a1de}{basedist} \mbox{[}MAXVIEWHEIGHT/2\mbox{]}
+\item 
+char far \hyperlink{WOLFHACK_8C_ace6436dbd4081ecd213b7715ec40c0d8}{planepics} \mbox{[}8192\mbox{]}
+\item 
+int \hyperlink{WOLFHACK_8C_a786e4a310fcb61bcadec564b0d88287c}{halfheight} = 0
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$ \hyperlink{WOLFHACK_8C_ad771d208226d5fd2ca351064a640ac2f}{planeylookup} \mbox{[}MAXVIEWHEIGHT/2\mbox{]}
+\item 
+unsigned \hyperlink{WOLFHACK_8C_a8d66d6359b69e9e7c5c7490437e38a5b}{mirrorofs} \mbox{[}MAXVIEWHEIGHT/2\mbox{]}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WOLFHACK_8C_a3f4072476e9a69dd0c2718e588fe1b4c}{psin}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WOLFHACK_8C_a7b1009cc68ef81a4eaa5e08eea2ccb74}{pcos}
+\item 
+int \hyperlink{WOLFHACK_8C_a74f476a5a310e2a6a1d59a877c4707b8}{mr\_\-rowofs}
+\item 
+int \hyperlink{WOLFHACK_8C_a879f6513ad9724ee834b04562c9d47f9}{mr\_\-count}
+\item 
+int \hyperlink{WOLFHACK_8C_a5e1dcb6057300dde0c075bf1dbf424bf}{mr\_\-xstep}
+\item 
+int \hyperlink{WOLFHACK_8C_abfe86fc5a57e574112c2264f95ab22c0}{mr\_\-ystep}
+\item 
+int \hyperlink{WOLFHACK_8C_a39d192d4ed93f79d568c9ab323b4b400}{mr\_\-xfrac}
+\item 
+int \hyperlink{WOLFHACK_8C_a099e4c6b679dc697b2e7758f15d42fa5}{mr\_\-yfrac}
+\item 
+int \hyperlink{WOLFHACK_8C_a6c335719beda6e730be77c1a0d1ae3ce}{mr\_\-dest}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WOLFHACK_8C_ad87c27b3116bdb01a5163f8c4c3923aa}{
+\index{WOLFHACK.C@{WOLFHACK.C}!MAXVIEWHEIGHT@{MAXVIEWHEIGHT}}
+\index{MAXVIEWHEIGHT@{MAXVIEWHEIGHT}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{MAXVIEWHEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXVIEWHEIGHT~200}}
+\label{WOLFHACK_8C_ad87c27b3116bdb01a5163f8c4c3923aa}
+
+
+\subsection{Function Documentation}
+\hypertarget{WOLFHACK_8C_a6ad59c546e9b7bad6c682670b884ba1e}{
+\index{WOLFHACK.C@{WOLFHACK.C}!DrawPlanes@{DrawPlanes}}
+\index{DrawPlanes@{DrawPlanes}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{DrawPlanes}]{\setlength{\rightskip}{0pt plus 5cm}void DrawPlanes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WOLFHACK_8C_a6ad59c546e9b7bad6c682670b884ba1e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WOLFHACK_8C_a6ad59c546e9b7bad6c682670b884ba1e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WOLFHACK_8C_a74fe032af0daeb2b94e5313e32ee378c}{
+\index{WOLFHACK.C@{WOLFHACK.C}!DrawSpans@{DrawSpans}}
+\index{DrawSpans@{DrawSpans}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{DrawSpans}]{\setlength{\rightskip}{0pt plus 5cm}void DrawSpans (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{x2, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{WOLFHACK_8C_a74fe032af0daeb2b94e5313e32ee378c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{WOLFHACK_8C_a74fe032af0daeb2b94e5313e32ee378c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{WOLFHACK_8C_a74fe032af0daeb2b94e5313e32ee378c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WOLFHACK_8C_abfc050cf3ca8d5863a10f7a95b87b9f2}{
+\index{WOLFHACK.C@{WOLFHACK.C}!FixedMul@{FixedMul}}
+\index{FixedMul@{FixedMul}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{FixedMul}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} FixedMul (
+\begin{DoxyParamCaption}
+\item[{{\bf fixed}}]{a, }
+\item[{{\bf fixed}}]{b}
+\end{DoxyParamCaption}
+)}}
+\label{WOLFHACK_8C_abfc050cf3ca8d5863a10f7a95b87b9f2}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{WOLFHACK_8C_abfc050cf3ca8d5863a10f7a95b87b9f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WOLFHACK_8C_a522f0e08c31d2c568ff188e825cfe9c4}{
+\index{WOLFHACK.C@{WOLFHACK.C}!SetPlaneViewSize@{SetPlaneViewSize}}
+\index{SetPlaneViewSize@{SetPlaneViewSize}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{SetPlaneViewSize}]{\setlength{\rightskip}{0pt plus 5cm}void SetPlaneViewSize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WOLFHACK_8C_a522f0e08c31d2c568ff188e825cfe9c4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WOLFHACK_8C_a522f0e08c31d2c568ff188e825cfe9c4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{WOLFHACK_8C_a522f0e08c31d2c568ff188e825cfe9c4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WOLFHACK_8C_a438b5b45fb7e4e8f4038de91c545a1de}{
+\index{WOLFHACK.C@{WOLFHACK.C}!basedist@{basedist}}
+\index{basedist@{basedist}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{basedist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} {\bf basedist}\mbox{[}MAXVIEWHEIGHT/2\mbox{]}}}
+\label{WOLFHACK_8C_a438b5b45fb7e4e8f4038de91c545a1de}
+\hypertarget{WOLFHACK_8C_a786e4a310fcb61bcadec564b0d88287c}{
+\index{WOLFHACK.C@{WOLFHACK.C}!halfheight@{halfheight}}
+\index{halfheight@{halfheight}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{halfheight}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf halfheight} = 0}}
+\label{WOLFHACK_8C_a786e4a310fcb61bcadec564b0d88287c}
+\hypertarget{WOLFHACK_8C_a8d66d6359b69e9e7c5c7490437e38a5b}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mirrorofs@{mirrorofs}}
+\index{mirrorofs@{mirrorofs}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mirrorofs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf mirrorofs}\mbox{[}MAXVIEWHEIGHT/2\mbox{]}}}
+\label{WOLFHACK_8C_a8d66d6359b69e9e7c5c7490437e38a5b}
+\hypertarget{WOLFHACK_8C_a879f6513ad9724ee834b04562c9d47f9}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mr\_\-count@{mr\_\-count}}
+\index{mr\_\-count@{mr\_\-count}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mr\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mr\_\-count}}}
+\label{WOLFHACK_8C_a879f6513ad9724ee834b04562c9d47f9}
+\hypertarget{WOLFHACK_8C_a6c335719beda6e730be77c1a0d1ae3ce}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mr\_\-dest@{mr\_\-dest}}
+\index{mr\_\-dest@{mr\_\-dest}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mr\_\-dest}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mr\_\-dest}}}
+\label{WOLFHACK_8C_a6c335719beda6e730be77c1a0d1ae3ce}
+\hypertarget{WOLFHACK_8C_a74f476a5a310e2a6a1d59a877c4707b8}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mr\_\-rowofs@{mr\_\-rowofs}}
+\index{mr\_\-rowofs@{mr\_\-rowofs}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mr\_\-rowofs}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mr\_\-rowofs}}}
+\label{WOLFHACK_8C_a74f476a5a310e2a6a1d59a877c4707b8}
+\hypertarget{WOLFHACK_8C_a39d192d4ed93f79d568c9ab323b4b400}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mr\_\-xfrac@{mr\_\-xfrac}}
+\index{mr\_\-xfrac@{mr\_\-xfrac}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mr\_\-xfrac}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mr\_\-xfrac}}}
+\label{WOLFHACK_8C_a39d192d4ed93f79d568c9ab323b4b400}
+\hypertarget{WOLFHACK_8C_a5e1dcb6057300dde0c075bf1dbf424bf}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mr\_\-xstep@{mr\_\-xstep}}
+\index{mr\_\-xstep@{mr\_\-xstep}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mr\_\-xstep}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mr\_\-xstep}}}
+\label{WOLFHACK_8C_a5e1dcb6057300dde0c075bf1dbf424bf}
+\hypertarget{WOLFHACK_8C_a099e4c6b679dc697b2e7758f15d42fa5}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mr\_\-yfrac@{mr\_\-yfrac}}
+\index{mr\_\-yfrac@{mr\_\-yfrac}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mr\_\-yfrac}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mr\_\-yfrac}}}
+\label{WOLFHACK_8C_a099e4c6b679dc697b2e7758f15d42fa5}
+\hypertarget{WOLFHACK_8C_abfe86fc5a57e574112c2264f95ab22c0}{
+\index{WOLFHACK.C@{WOLFHACK.C}!mr\_\-ystep@{mr\_\-ystep}}
+\index{mr\_\-ystep@{mr\_\-ystep}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{mr\_\-ystep}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mr\_\-ystep}}}
+\label{WOLFHACK_8C_abfe86fc5a57e574112c2264f95ab22c0}
+\hypertarget{WOLFHACK_8C_a7b1009cc68ef81a4eaa5e08eea2ccb74}{
+\index{WOLFHACK.C@{WOLFHACK.C}!pcos@{pcos}}
+\index{pcos@{pcos}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{pcos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} {\bf pcos}}}
+\label{WOLFHACK_8C_a7b1009cc68ef81a4eaa5e08eea2ccb74}
+\hypertarget{WOLFHACK_8C_ace6436dbd4081ecd213b7715ec40c0d8}{
+\index{WOLFHACK.C@{WOLFHACK.C}!planepics@{planepics}}
+\index{planepics@{planepics}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{planepics}]{\setlength{\rightskip}{0pt plus 5cm}char far {\bf planepics}\mbox{[}8192\mbox{]}}}
+\label{WOLFHACK_8C_ace6436dbd4081ecd213b7715ec40c0d8}
+\hypertarget{WOLFHACK_8C_ad771d208226d5fd2ca351064a640ac2f}{
+\index{WOLFHACK.C@{WOLFHACK.C}!planeylookup@{planeylookup}}
+\index{planeylookup@{planeylookup}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{planeylookup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far$\ast$ {\bf planeylookup}\mbox{[}MAXVIEWHEIGHT/2\mbox{]}}}
+\label{WOLFHACK_8C_ad771d208226d5fd2ca351064a640ac2f}
+\hypertarget{WOLFHACK_8C_a3f4072476e9a69dd0c2718e588fe1b4c}{
+\index{WOLFHACK.C@{WOLFHACK.C}!psin@{psin}}
+\index{psin@{psin}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{psin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} {\bf psin}}}
+\label{WOLFHACK_8C_a3f4072476e9a69dd0c2718e588fe1b4c}
+\hypertarget{WOLFHACK_8C_a4c8e4e6767346701059a389a561eab09}{
+\index{WOLFHACK.C@{WOLFHACK.C}!spanstart@{spanstart}}
+\index{spanstart@{spanstart}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{spanstart}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf spanstart}\mbox{[}MAXVIEWHEIGHT/2\mbox{]}}}
+\label{WOLFHACK_8C_a4c8e4e6767346701059a389a561eab09}
+\hypertarget{WOLFHACK_8C_aee3e1fe06a4bbdaec4efa03285418bd5}{
+\index{WOLFHACK.C@{WOLFHACK.C}!stepscale@{stepscale}}
+\index{stepscale@{stepscale}!WOLFHACK.C@{WOLFHACK.C}}
+\subsubsection[{stepscale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} {\bf stepscale}\mbox{[}MAXVIEWHEIGHT/2\mbox{]}}}
+\label{WOLFHACK_8C_aee3e1fe06a4bbdaec4efa03285418bd5}

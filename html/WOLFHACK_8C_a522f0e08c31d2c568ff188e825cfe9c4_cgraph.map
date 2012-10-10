@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__PM_8C.html#a80f33d5bd3e0a9a388063a78edf53329" title="PM_GetPage" alt="" coords="185,172,284,202"/>
+<area shape="rect" id="node5" href="$ID__PM_8C.html#a6d8376b84fdfd88c991b82d9d9cebcfd" title="PM_GetPageAddress" alt="" coords="1175,354,1321,383"/>
+<area shape="rect" id="node11" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1745,274,1791,303"/>
+<area shape="rect" id="node14" href="$ID__PM_8C.html#a15cc7513b41c134b24cd20536a63f892" title="PML_GetPageFromXMS" alt="" coords="335,146,500,175"/>
+<area shape="rect" id="node34" href="$ID__PM_8C.html#a14156f3e9e18532f92f4c00e761fa0b7" title="PML_LoadPage" alt="" coords="360,199,475,228"/>
+<area shape="rect" id="node7" href="$ID__PM_8C.html#aa4215b4363055b96b571bedb294d39a2" title="PML_GetEMSAddress" alt="" coords="1381,326,1536,355"/>
+<area shape="rect" id="node9" href="$ID__PM_8C.html#ab2f720eba0924c15d0a7c6a487fc0626" title="PML_MapEMS" alt="" coords="1585,351,1695,380"/>
+<area shape="rect" id="node16" href="$ID__PM_8C.html#a4694a0931f68c73c15c7cdd4b6a4cb61" title="PML_GetAPageBuffer" alt="" coords="551,172,700,202"/>
+<area shape="rect" id="node19" href="$ID__PM_8C.html#a1a23d717675f8d14bd6e07bb7bcbd4b4" title="PML_GiveLRUPage" alt="" coords="972,95,1111,124"/>
+<area shape="rect" id="node22" href="$ID__PM_8C.html#aa2abd895c0ac117de4d033b6850a9a07" title="PML_TransferPageSpace" alt="" coords="749,327,920,356"/>
+<area shape="rect" id="node25" href="$ID__PM_8C.html#a0b6f9ec457913559bcff1d9258a15552" title="PML_PutPageInXMS" alt="" coords="968,300,1115,330"/>
+<area shape="rect" id="node28" href="$ID__PM_8C.html#aa3210f7fc8e7367f2349cd17cbec0c67" title="PML_GiveLRUXMSPage" alt="" coords="1164,300,1332,330"/>
+<area shape="rect" id="node37" href="$ID__PM_8C.html#a3e8875fd1618f89f3e98f9d2ae4f0945" title="PML_ReadFromFile" alt="" coords="1389,456,1528,486"/>
+<area shape="rect" id="node39" href="$ID__CA_8C.html#a9d7ef0e3d4f10f25abd940094a4db437" title="CA_FarRead" alt="" coords="1591,507,1689,536"/>
+</map>

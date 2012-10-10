@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$CONTIGSC_8C.html" title="CONTIGSC.C" alt="" coords="5,83,112,112"/>
+<area shape="rect" id="node5" href="$OLDSCALE_8C.html" title="OLDSCALE.C" alt="" coords="136,83,243,112"/>
+<area shape="rect" id="node7" href="$WL__ACT1_8C.html" title="WL_ACT1.C" alt="" coords="267,83,363,112"/>
+<area shape="rect" id="node9" href="$WL__ACT2_8C.html" title="WL_ACT2.C" alt="" coords="387,83,483,112"/>
+<area shape="rect" id="node11" href="$WL__AGENT_8C.html" title="WL_AGENT.C" alt="" coords="507,83,616,112"/>
+<area shape="rect" id="node13" href="$WL__DEBUG_8C.html" title="WL_DEBUG.C" alt="" coords="640,83,749,112"/>
+<area shape="rect" id="node15" href="$WL__DRAW_8C.html" title="WL_DRAW.C" alt="" coords="773,83,877,112"/>
+<area shape="rect" id="node17" href="$WL__GAME_8C.html" title="WL_GAME.C" alt="" coords="901,83,1003,112"/>
+<area shape="rect" id="node19" href="$WL__INTER_8C.html" title="WL_INTER.C" alt="" coords="1027,83,1131,112"/>
+<area shape="rect" id="node21" href="$WL__MAIN_8C.html" title="WL_MAIN.C" alt="" coords="1155,83,1251,112"/>
+<area shape="rect" id="node23" href="$WL__PLAY_8C.html" title="WL_PLAY.C" alt="" coords="1275,83,1371,112"/>
+<area shape="rect" id="node25" href="$WL__SCALE_8C.html" title="WL_SCALE.C" alt="" coords="1395,83,1501,112"/>
+<area shape="rect" id="node27" href="$WL__STATE_8C.html" title="WL_STATE.C" alt="" coords="1525,83,1632,112"/>
+<area shape="rect" id="node29" href="$WL__TEXT_8C.html" title="WL_TEXT.C" alt="" coords="1656,83,1752,112"/>
+<area shape="rect" id="node31" href="$WOLFHACK_8C.html" title="WOLFHACK.C" alt="" coords="1776,83,1888,112"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DEF_8H.html#a673946129c833c78df674cf8b38fdd61" title="CenterWindow" alt="" coords="179,59,285,88"/>
+<area shape="rect" id="node9" href="$ID__IN_8C.html#af72058fb29d783ff37069492273ff6d7" title="IN_Ack" alt="" coords="199,112,265,141"/>
+<area shape="rect" id="node23" href="$ID__MM_8C.html#a50561a6be4f4de9e6c017fc231d3e2a9" title="MM_TotalFree" alt="" coords="179,165,285,195"/>
+<area shape="rect" id="node25" href="$ID__MM_8C.html#aa26a7b3f7516bf637f814c67b4791800" title="MM_UnusedMemory" alt="" coords="161,219,303,248"/>
+<area shape="rect" id="node27" href="$ID__US_8H.html#a45d1b7ebde4b4cbfd5a34b3b0134ee8b" title="US_CPrint" alt="" coords="189,272,275,301"/>
+<area shape="rect" id="node29" href="$ID__US_8H.html#ae158b4a99ff8fe4bca4517925b6b429c" title="US_Print" alt="" coords="195,325,269,355"/>
+<area shape="rect" id="node31" href="$ID__US_8H.html#aaaf7bf10a561ab0338f8b3742c408b86" title="US_PrintUnsigned" alt="" coords="167,379,297,408"/>
+<area shape="rect" id="node33" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="165,432,299,461"/>
+<area shape="rect" id="node5" href="$WL__DEF_8H.html#a31ead32276ab38dbf2991c82ee38ea7c" title="FixOfs" alt="" coords="385,5,447,35"/>
+<area shape="rect" id="node7" href="$ID__US_8H.html#a06cee19903ed682701ef040c7f1b1ffa" title="US_DrawWindow" alt="" coords="353,59,479,88"/>
+<area shape="rect" id="node11" href="$ID__IN_8C.html#a50a122900022f7051ec64d5c4613ebcf" title="IN_CheckAck" alt="" coords="364,112,468,141"/>
+<area shape="rect" id="node17" href="$ID__IN_8C.html#ac666b84a87364ddab589ceb0daaa129a" title="IN_StartAck" alt="" coords="369,165,463,195"/>
+<area shape="rect" id="node13" href="$ID__IN_8C.html#abc6dd93d0e7777cd67e20f61361f353d" title="IN_JoyButtons" alt="" coords="543,165,652,195"/>
+<area shape="rect" id="node15" href="$ID__IN_8C.html#a1dc32dd9a62a416001a9954a70dc4563" title="IN_MouseButtons" alt="" coords="535,112,660,141"/>
+<area shape="rect" id="node19" href="$ID__IN_8C.html#a20251e701cb941d1b39665a9afa51f23" title="IN_ClearKeysDown" alt="" coords="528,219,667,248"/>
+</map>

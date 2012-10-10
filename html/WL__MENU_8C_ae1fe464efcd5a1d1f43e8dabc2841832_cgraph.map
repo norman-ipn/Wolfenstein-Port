@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MENU_8C.html#a7a8e53f3f469cbf79c3f55807761d3bb" title="ClearMScreen" alt="" coords="221,81,325,110"/>
+<area shape="rect" id="node9" href="$ID__VH_8C.html#a997467dad7e57de584aa100eb9a8c882" title="VWB_DrawPic" alt="" coords="395,30,504,60"/>
+<area shape="rect" id="node14" href="$WL__MENU_8C.html#ad7ae5f8d3bfaf8e94d9c3fd004609229" title="DrawMenu" alt="" coords="231,294,316,324"/>
+<area shape="rect" id="node20" href="$WL__MENU_8C.html#a81a9dfc7b2dab1a015d6be0c329e094b" title="DrawStripes" alt="" coords="227,134,320,164"/>
+<area shape="rect" id="node26" href="$WL__MENU_8C.html#a904e939ab3e905847095245ec694d845" title="DrawWindow" alt="" coords="224,188,323,217"/>
+<area shape="rect" id="node35" href="$WL__MENU_8C.html#acaacbb88f7b7d163245141e126592577" title="PrintLSEntry" alt="" coords="225,241,321,270"/>
+<area shape="rect" id="node39" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="207,348,340,377"/>
+<area shape="rect" id="node42" href="$WL__MENU_8C.html#a3434990df52efeb93017e54af5a20860" title="WaitKeyUp" alt="" coords="229,401,317,430"/>
+<area shape="rect" id="node5" href="$ID__VH_8C.html#a5496b8df6f9a9de1b3f788ce6951c865" title="VWB_Bar" alt="" coords="409,84,489,113"/>
+<area shape="rect" id="node7" href="$ID__VH_8C.html#a989fc2652f729213162c520d378578b3" title="VW_MarkUpdateBlock" alt="" coords="736,136,891,165"/>
+<area shape="rect" id="node11" href="$ID__VL_8C.html#a9395a541fc6c21a2d7e7d8b4932d134e" title="VL_MemToScreen" alt="" coords="557,32,688,61"/>
+<area shape="rect" id="node16" href="$WL__MENU_8C.html#a604ee41d936e798d09c96e1e0895a983" title="SetTextColor" alt="" coords="400,294,499,324"/>
+<area shape="rect" id="node18" href="$ID__US_8H.html#ae158b4a99ff8fe4bca4517925b6b429c" title="US_Print" alt="" coords="412,241,487,270"/>
+<area shape="rect" id="node23" href="$ID__VH_8C.html#a5438374e81536560343d6be41205ecf6" title="VWB_Hlin" alt="" coords="581,136,664,165"/>
+<area shape="rect" id="node28" href="$WL__MENU_8C.html#a932353c4f637452b49ee6e1a4c382bf5" title="DrawOutline" alt="" coords="403,188,496,217"/>
+<area shape="rect" id="node31" href="$ID__VH_8C.html#adad5945cddefd75d9c787644201b242f" title="VWB_Vlin" alt="" coords="581,189,664,218"/>
+<area shape="rect" id="node44" href="$WL__MENU_8C.html#a203c5a4b291ebd6bf7b0fb11b5905e6c" title="ReadAnyControl" alt="" coords="391,401,508,430"/>
+<area shape="rect" id="node46" href="$ID__IN_8C.html#abc6dd93d0e7777cd67e20f61361f353d" title="IN_JoyButtons" alt="" coords="568,348,677,377"/>
+<area shape="rect" id="node48" href="$ID__IN_8C.html#a1dc32dd9a62a416001a9954a70dc4563" title="IN_MouseButtons" alt="" coords="560,401,685,430"/>
+<area shape="rect" id="node50" href="$ID__IN_8C.html#ae921141c5b424cfe4cec9d47f13bd2ca" title="IN_ReadControl" alt="" coords="565,294,680,324"/>
+<area shape="rect" id="node54" href="$ID__IN_8C.html#ad02d54392fab25e9c6e4208ba8c8baab" title="INL_GetJoyDelta" alt="" coords="752,440,875,469"/>
+<area shape="rect" id="node52" href="$ID__IN_8C.html#a15454e5c5f20b31d906b8f49c34ae67b" title="INL_GetJoyButtons" alt="" coords="745,254,881,284"/>
+<area shape="rect" id="node58" href="$ID__IN_8C.html#a4eb848df1ba13e0b61452d4b69b54b0c" title="INL_GetMouseButtons" alt="" coords="736,308,891,337"/>
+<area shape="rect" id="node60" href="$ID__IN_8C.html#a8fc59bb3511dd04107773f88b3063763" title="INL_GetMouseDelta" alt="" coords="743,361,884,390"/>
+<area shape="rect" id="node62" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="791,201,836,230"/>
+<area shape="rect" id="node56" href="$ID__IN_8C.html#aa9699bbe72cdd2c7a2f8d5f291ec1e76" title="IN_GetJoyAbs" alt="" coords="940,440,1047,469"/>
+</map>

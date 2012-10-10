@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="173,5,259,35"/>
+<area shape="rect" id="node12" href="$ID__IN_8C.html#a20a23654ead536c7d999b6de31a5168c" title="IN_Startup" alt="" coords="312,109,397,139"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#a5e78460b9244f183fd88b4549a6cf34d" title="Patch386" alt="" coords="177,59,255,88"/>
+<area shape="rect" id="node18" href="$ID__PM_8C.html#a5e5ef876a9184793502a2a5b6884e2d0" title="PM_Startup" alt="" coords="448,161,539,191"/>
+<area shape="rect" id="node21" href="$ID__SD_8C.html#a9e273885efbb6410be25e887f5ac6bdd" title="SD_Startup" alt="" coords="309,213,400,243"/>
+<area shape="rect" id="node24" href="$ID__US__1_8C.html#a25cccf3faa98e384b1f88c33a0a4e09f" title="US_Startup" alt="" coords="171,264,261,293"/>
+<area shape="rect" id="node26" href="$ID__VL_8H.html#aa10dcb97ab8ddbe00ceff643af423bef" title="VL_Startup" alt="" coords="173,317,259,347"/>
+<area shape="rect" id="node5" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="329,32,380,61"/>
+<area shape="rect" id="node7" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="449,7,537,36"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="587,109,661,139"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DRAW_8C.html#a5d1512cb6cadbf0425a0592969b0b3ad" title="HitHorizDoor" alt="" coords="145,5,244,35"/>
+<area shape="rect" id="node5" href="$WL__DRAW_8C.html#ad40f149ac1d729c05048070e5e44222c" title="HitHorizPWall" alt="" coords="143,59,247,88"/>
+<area shape="rect" id="node7" href="$WL__DRAW_8C.html#a489668c5f832e695224cb9b1022f3448" title="HitHorizWall" alt="" coords="147,112,243,141"/>
+<area shape="rect" id="node9" href="$WL__DRAW_8C.html#aae630232d435e6ac2f55605b02234738" title="HitVertDoor" alt="" coords="149,165,240,195"/>
+<area shape="rect" id="node11" href="$WL__DRAW_8C.html#a29679cfe78e8257f4b05113f66b6c1a0" title="HitVertPWall" alt="" coords="145,219,244,248"/>
+<area shape="rect" id="node13" href="$WL__DRAW_8C.html#ad2e8beb940ef03b1bbb0672123ededaf" title="HitVertWall" alt="" coords="151,272,239,301"/>
+</map>

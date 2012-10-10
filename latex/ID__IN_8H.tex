@@ -1,0 +1,1419 @@
+\hypertarget{ID__IN_8H}{
+\section{ID\_\-IN.H File Reference}
+\label{ID__IN_8H}\index{ID\_\-IN.H@{ID\_\-IN.H}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCursorInfo}{CursorInfo}
+\item 
+struct \hyperlink{structKeyboardDef}{KeyboardDef}
+\item 
+struct \hyperlink{structJoystickDef}{JoystickDef}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__IN_8H_ad59b3107f72d926085f8762305e6c030}{MaxPlayers}~4
+\item 
+\#define \hyperlink{ID__IN_8H_a557ca9fbb043bb6f6d8cc8492321ce2f}{MaxKbds}~2
+\item 
+\#define \hyperlink{ID__IN_8H_a46db284a6cc158d0ccac9ef0151ed312}{MaxJoys}~2
+\item 
+\#define \hyperlink{ID__IN_8H_a2e55fe4ebe3e35fad09ea1c57a710129}{NumCodes}~128
+\item 
+\#define \hyperlink{ID__IN_8H_a786273284de615882c837b331eb1f317}{sc\_\-None}~0
+\item 
+\#define \hyperlink{ID__IN_8H_adee51c7c4fb0dd57ca0aec24d2756266}{sc\_\-Bad}~0xff
+\item 
+\#define \hyperlink{ID__IN_8H_a44015ffcf3b9ee4fc15c29edab389531}{sc\_\-Return}~0x1c
+\item 
+\#define \hyperlink{ID__IN_8H_a3e9ec0b8613dc9dcd7e983afa3c6b412}{sc\_\-Enter}~sc\_\-Return
+\item 
+\#define \hyperlink{ID__IN_8H_a69d61eb9fda6c28c8ddaf7c9cde5367d}{sc\_\-Escape}~0x01
+\item 
+\#define \hyperlink{ID__IN_8H_ab8b6385289dfdf8e27d8f3b39464d44f}{sc\_\-Space}~0x39
+\item 
+\#define \hyperlink{ID__IN_8H_ad406a304cdd237856975f5c911e71049}{sc\_\-BackSpace}~0x0e
+\item 
+\#define \hyperlink{ID__IN_8H_a6e5fd91b91e78919dfab2bcd3b7eede1}{sc\_\-Tab}~0x0f
+\item 
+\#define \hyperlink{ID__IN_8H_a166a227bde5c686bb85c1006d87b6f05}{sc\_\-Alt}~0x38
+\item 
+\#define \hyperlink{ID__IN_8H_a668e8e3177eeb838288f0bac32a0ea09}{sc\_\-Control}~0x1d
+\item 
+\#define \hyperlink{ID__IN_8H_a9f53546ac824999f93f97565c18a8da2}{sc\_\-CapsLock}~0x3a
+\item 
+\#define \hyperlink{ID__IN_8H_a52b1add06e41f56bfb1d5b4fc02c604c}{sc\_\-LShift}~0x2a
+\item 
+\#define \hyperlink{ID__IN_8H_a575cec6fde53c83e88fda93c450ac1ba}{sc\_\-RShift}~0x36
+\item 
+\#define \hyperlink{ID__IN_8H_a69f1f47658ef3ebb061bd66d83db9f06}{sc\_\-UpArrow}~0x48
+\item 
+\#define \hyperlink{ID__IN_8H_a320e4ea4abace929b427c926f745656a}{sc\_\-DownArrow}~0x50
+\item 
+\#define \hyperlink{ID__IN_8H_a74e3784c1e7589bfafb369e9292ae91e}{sc\_\-LeftArrow}~0x4b
+\item 
+\#define \hyperlink{ID__IN_8H_aefaebf0fb21b649651db9d6153f7475f}{sc\_\-RightArrow}~0x4d
+\item 
+\#define \hyperlink{ID__IN_8H_a02d399ecf02ee6c65c7b28bf1a8a3169}{sc\_\-Insert}~0x52
+\item 
+\#define \hyperlink{ID__IN_8H_a4587be95c57ce0585b4280f0c435d23e}{sc\_\-Delete}~0x53
+\item 
+\#define \hyperlink{ID__IN_8H_ae53371001dcac7b98f7758a5c18dc6e4}{sc\_\-Home}~0x47
+\item 
+\#define \hyperlink{ID__IN_8H_a3ff1b08c7be9bd962d61b3a6f009500c}{sc\_\-End}~0x4f
+\item 
+\#define \hyperlink{ID__IN_8H_a9e0c0ed774b3c1f0f59cd6fbc7e8a0df}{sc\_\-PgUp}~0x49
+\item 
+\#define \hyperlink{ID__IN_8H_a1259ccb459ccbaf01d9a4aa687326a22}{sc\_\-PgDn}~0x51
+\item 
+\#define \hyperlink{ID__IN_8H_a1998ed6d0557a5e4b04535b8945a187d}{sc\_\-F1}~0x3b
+\item 
+\#define \hyperlink{ID__IN_8H_afe3854787b4428571ad3de3e60415ad6}{sc\_\-F2}~0x3c
+\item 
+\#define \hyperlink{ID__IN_8H_a7d11d0a13e0753f9c9e4bf1754c9f3a8}{sc\_\-F3}~0x3d
+\item 
+\#define \hyperlink{ID__IN_8H_ada6f7e998fc1a7dc0575fc68e5442f9c}{sc\_\-F4}~0x3e
+\item 
+\#define \hyperlink{ID__IN_8H_ad3b51bd6dcd08dd5aa0ec2d5d06a9444}{sc\_\-F5}~0x3f
+\item 
+\#define \hyperlink{ID__IN_8H_a54f2d7b6be8087dc128f4ef9429cc572}{sc\_\-F6}~0x40
+\item 
+\#define \hyperlink{ID__IN_8H_ac17d8aab883572e596a2ee801638eea5}{sc\_\-F7}~0x41
+\item 
+\#define \hyperlink{ID__IN_8H_a9c31980d7239e354bad109237b128aa1}{sc\_\-F8}~0x42
+\item 
+\#define \hyperlink{ID__IN_8H_a5e03be4a19077641a3ec370e6c3dd54e}{sc\_\-F9}~0x43
+\item 
+\#define \hyperlink{ID__IN_8H_a6dc0b8f45e2ceaa377f8579bdef6df44}{sc\_\-F10}~0x44
+\item 
+\#define \hyperlink{ID__IN_8H_a47f8c9ced16fd828e53f8be1780a7435}{sc\_\-F11}~0x57
+\item 
+\#define \hyperlink{ID__IN_8H_a87d09c57d7520ea6f803e8b24c2b3405}{sc\_\-F12}~0x59
+\item 
+\#define \hyperlink{ID__IN_8H_afd02d044421666cafb6f9a72d07c75ee}{sc\_\-1}~0x02
+\item 
+\#define \hyperlink{ID__IN_8H_a2e291e92f53a876e1e3ebbeec7a86301}{sc\_\-2}~0x03
+\item 
+\#define \hyperlink{ID__IN_8H_af5664e220c9ca85588b328d6a42c4e95}{sc\_\-3}~0x04
+\item 
+\#define \hyperlink{ID__IN_8H_a48838fea402657d481d0d809d087a928}{sc\_\-4}~0x05
+\item 
+\#define \hyperlink{ID__IN_8H_aafbcb8cc603d2dbcc8893f38cb8f9cae}{sc\_\-5}~0x06
+\item 
+\#define \hyperlink{ID__IN_8H_accf5de03a8bf46eb0bd3881a69f575c1}{sc\_\-6}~0x07
+\item 
+\#define \hyperlink{ID__IN_8H_abff31b74c899a6ccd633d6853691210d}{sc\_\-7}~0x08
+\item 
+\#define \hyperlink{ID__IN_8H_a1ae0d70550193a93d0e62534b320fe0f}{sc\_\-8}~0x09
+\item 
+\#define \hyperlink{ID__IN_8H_afc1da098d63c9780125b3488ed35960a}{sc\_\-9}~0x0a
+\item 
+\#define \hyperlink{ID__IN_8H_a927e5c1be2dd2f87e6dc52dbee69e18c}{sc\_\-0}~0x0b
+\item 
+\#define \hyperlink{ID__IN_8H_ac53fd1d19e529144ae928149a722a2cd}{sc\_\-A}~0x1e
+\item 
+\#define \hyperlink{ID__IN_8H_a3063b7d84ff3ac915dd3f9144e437ae0}{sc\_\-B}~0x30
+\item 
+\#define \hyperlink{ID__IN_8H_a297ea773ebb8336e3d5450f90088163e}{sc\_\-C}~0x2e
+\item 
+\#define \hyperlink{ID__IN_8H_ae1822418241e62021e2e36ac8a30534e}{sc\_\-D}~0x20
+\item 
+\#define \hyperlink{ID__IN_8H_a3afca48247d40ce41e80af6ffbb1f188}{sc\_\-E}~0x12
+\item 
+\#define \hyperlink{ID__IN_8H_a53b8ae1a17202d91380d319683507494}{sc\_\-F}~0x21
+\item 
+\#define \hyperlink{ID__IN_8H_a63672572d9ce8c31a962508ebdffa5ad}{sc\_\-G}~0x22
+\item 
+\#define \hyperlink{ID__IN_8H_a526628832b4771cbc27882ffd5eab1b5}{sc\_\-H}~0x23
+\item 
+\#define \hyperlink{ID__IN_8H_a6adbcf0026a4316804caca7fc279de19}{sc\_\-I}~0x17
+\item 
+\#define \hyperlink{ID__IN_8H_a13a73278e8e8ab44c44da1ec4d98b680}{sc\_\-J}~0x24
+\item 
+\#define \hyperlink{ID__IN_8H_a393e96e67168815b72d24c72e29efe8e}{sc\_\-K}~0x25
+\item 
+\#define \hyperlink{ID__IN_8H_a725a7d6e5a62e1f49ecded96bc981ff0}{sc\_\-L}~0x26
+\item 
+\#define \hyperlink{ID__IN_8H_aa6807813ed691797c580a7388fe48ad5}{sc\_\-M}~0x32
+\item 
+\#define \hyperlink{ID__IN_8H_abd1526274fbcd0c55e47ffd865d94b18}{sc\_\-N}~0x31
+\item 
+\#define \hyperlink{ID__IN_8H_aa7e3a3caf36149fa839a60e18db142cc}{sc\_\-O}~0x18
+\item 
+\#define \hyperlink{ID__IN_8H_a1ce3a97277ff763aa0fbe0979d33be3c}{sc\_\-P}~0x19
+\item 
+\#define \hyperlink{ID__IN_8H_afe8214378d1239fb0eba7179bebf0e55}{sc\_\-Q}~0x10
+\item 
+\#define \hyperlink{ID__IN_8H_ab40938804ab9ce2755e8551b614aa86c}{sc\_\-R}~0x13
+\item 
+\#define \hyperlink{ID__IN_8H_a2962342701a1ab8dea2d702a4e3fb83d}{sc\_\-S}~0x1f
+\item 
+\#define \hyperlink{ID__IN_8H_a2defbfc4fff952b6856ec514e69170de}{sc\_\-T}~0x14
+\item 
+\#define \hyperlink{ID__IN_8H_ac26b829a509ce15f5fefa467620a9203}{sc\_\-U}~0x16
+\item 
+\#define \hyperlink{ID__IN_8H_ad8b27b1f0ed25cfa5034c871792d2108}{sc\_\-V}~0x2f
+\item 
+\#define \hyperlink{ID__IN_8H_ab01e4344a9484900a9eda32396636daf}{sc\_\-W}~0x11
+\item 
+\#define \hyperlink{ID__IN_8H_a304f258a8d166ad1d2209daf57fc4db3}{sc\_\-X}~0x2d
+\item 
+\#define \hyperlink{ID__IN_8H_a5f6c1e65d11139cad55c9235f7cc3825}{sc\_\-Y}~0x15
+\item 
+\#define \hyperlink{ID__IN_8H_abdfe2ea5cfd62dcfa591abdcaed59e6d}{sc\_\-Z}~0x2c
+\item 
+\#define \hyperlink{ID__IN_8H_a2b293229b86d509ca82f666e4fbccc7f}{key\_\-None}~0
+\item 
+\#define \hyperlink{ID__IN_8H_a138fecd408e102336ae02a971deed204}{key\_\-Return}~0x0d
+\item 
+\#define \hyperlink{ID__IN_8H_ac8d873cb1ee36ecc9a9f70124a0a6a92}{key\_\-Enter}~key\_\-Return
+\item 
+\#define \hyperlink{ID__IN_8H_a03c35e01517200de0899687b60766da6}{key\_\-Escape}~0x1b
+\item 
+\#define \hyperlink{ID__IN_8H_a87760aed21de5eed43b8144a68b43a18}{key\_\-Space}~0x20
+\item 
+\#define \hyperlink{ID__IN_8H_aa0a90f5d75fce7c8beb013538da152d1}{key\_\-BackSpace}~0x08
+\item 
+\#define \hyperlink{ID__IN_8H_a0f954c97c2dae0ddda74cb4ecdf3c5c9}{key\_\-Tab}~0x09
+\item 
+\#define \hyperlink{ID__IN_8H_a9d13b689c474bd57a0ca1f0624d042d6}{key\_\-Delete}~0x7f
+\item 
+\#define \hyperlink{ID__IN_8H_a57b4d6b42abb5abac156b4e28a5fcfdf}{MReset}~0
+\item 
+\#define \hyperlink{ID__IN_8H_ab05e3da4f514a6b22b5752a361169045}{MButtons}~3
+\item 
+\#define \hyperlink{ID__IN_8H_a1795ad7e960197e84346c3cb2e33614b}{MDelta}~11
+\item 
+\#define \hyperlink{ID__IN_8H_a527075b2ecdd528854c72a142e60c2d8}{MouseInt}~0x33
+\item 
+\#define \hyperlink{ID__IN_8H_a8b9b10ab48f8d5b6f3e6e083e5e524a7}{Mouse}(x)~\_\-AX = x,geninterrupt(MouseInt)
+\item 
+\#define \hyperlink{ID__IN_8H_a5ce54ae44f15769cfd7bf96e89620006}{IN\_\-KeyDown}(code)~(\hyperlink{ID__IN_8H_a738773813b02543208fabb69caadefd9}{Keyboard}\mbox{[}(code)\mbox{]})
+\item 
+\#define \hyperlink{ID__IN_8H_a21bc511a0de7eb91f7e6f16af7a75ffc}{IN\_\-ClearKey}(code)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__IN_8H_a92ee9291fc7e992c1662c4e195242f2d}{ScanCode}
+\item 
+typedef \hyperlink{structCursorInfo}{CursorInfo} \hyperlink{ID__IN_8H_ae2fe25e28b168383aaa3ab117709fd1c}{ControlInfo}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763}{Demo} \{ \hyperlink{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763a33868868f757093b473da2b9472f75b7}{demo\_\-Off}, 
+\hyperlink{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763ab8c258a346905112a50edaeacbd25401}{demo\_\-Record}, 
+\hyperlink{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763ae48ed66d8035f7de561108fc995d2dd7}{demo\_\-Playback}, 
+\hyperlink{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763a8ab547b50354308aeac210ca8fecd388}{demo\_\-PlayDone}
+ \}
+\item 
+enum \hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4}{ControlType} \{ \par
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4ce00b3f21d95d49eba5f6137ab093f1}{ctrl\_\-Keyboard}, 
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4efed8eec2386a8e7b8ab602a8d8e395}{ctrl\_\-Keyboard1} =  ctrl\_\-Keyboard, 
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a63749704cb81bb1c7d3cabc33263bd69}{ctrl\_\-Keyboard2}, 
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4ada84bc48f9403d84b99ddf0c65088d1c}{ctrl\_\-Joystick}, 
+\par
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4ae8889b658a4cd38d98ddcd5412393ee7}{ctrl\_\-Joystick1} =  ctrl\_\-Joystick, 
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4462fe4a7d3a42afef571377721584c9}{ctrl\_\-Joystick2}, 
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a1c0bd3d324b0cc0f509a2e0da76dcd4f}{ctrl\_\-Mouse}
+ \}
+\item 
+enum \hyperlink{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6}{Motion} \{ \par
+\hyperlink{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a9bc2a699c2be52a362f34d2fcc79455b}{motion\_\-Left} =  -\/1, 
+\hyperlink{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6abd2b9c9822b53de5a5067f90622c1854}{motion\_\-Up} =  -\/1, 
+\hyperlink{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6afc6e40c5d456de76089cbda98167bd78}{motion\_\-None} =  0, 
+\hyperlink{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a379dc3d7c1df68c3a4255424780fbcd2}{motion\_\-Right} =  1, 
+\par
+\hyperlink{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a2342cac7c38e7a18a963891b52e3e877}{motion\_\-Down} =  1
+ \}
+\item 
+enum \hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \{ \par
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaad6ae5d304f07c18ef62e9b088882bf7f}{dir\_\-North}, 
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa9c1ab616e08047da67f32f68f480608e}{dir\_\-NorthEast}, 
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaab0019db88c28532561d21f45042f42b8}{dir\_\-East}, 
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaad6f21e4fc7c0979b73e373e17ec7ea06}{dir\_\-SouthEast}, 
+\par
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa239b882ef6d3d23b39862c5921ca7cf1}{dir\_\-South}, 
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaae76e8a7e76ec8d11cc2ed9d1cf1ba787}{dir\_\-SouthWest}, 
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa37a8757dee33a555977816881c75c104}{dir\_\-West}, 
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa7ef026d3310982b5ef4dd846a26bb3ee}{dir\_\-NorthWest}, 
+\par
+\hyperlink{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa13350289a9df00286ef6f0fc8b3a3ecb}{dir\_\-None}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__IN_8H_a20a23654ead536c7d999b6de31a5168c}{IN\_\-Startup} (void)
+\item 
+void \hyperlink{ID__IN_8H_a781003199e06bab03bde6ff7051bdcbe}{IN\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__IN_8H_ae6921738c0736bb24d7ff5c57f3d676a}{IN\_\-Default} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} gotit, \hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4}{ControlType} in)
+\item 
+void \hyperlink{ID__IN_8H_a866bf98a85fa3cee96cb3561abad536c}{IN\_\-SetKeyHook} (void($\ast$)())
+\item 
+void \hyperlink{ID__IN_8H_a20251e701cb941d1b39665a9afa51f23}{IN\_\-ClearKeysDown} (void)
+\item 
+void \hyperlink{ID__IN_8H_a9e4c0dab67f1eff25f44424ac08368dc}{IN\_\-ReadCursor} (\hyperlink{structCursorInfo}{CursorInfo} $\ast$)
+\item 
+void \hyperlink{ID__IN_8H_a4ea8fe68e3dd735f35b4113ff1620569}{IN\_\-ReadControl} (int, \hyperlink{structCursorInfo}{ControlInfo} $\ast$)
+\item 
+void \hyperlink{ID__IN_8H_a94ada136e78d9da0c4ce6f1f70cd2ce0}{IN\_\-SetControlType} (int, \hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4}{ControlType})
+\item 
+void \hyperlink{ID__IN_8H_aa9699bbe72cdd2c7a2f8d5f291ec1e76}{IN\_\-GetJoyAbs} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} joy, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$xp, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$yp)
+\item 
+void \hyperlink{ID__IN_8H_a58e132d2bd776ef812d95ee30907cbd5}{IN\_\-SetupJoy} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} joy, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} minx, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} maxx, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} miny, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} maxy)
+\item 
+void \hyperlink{ID__IN_8H_a535183b8984ee1979db6fe38a099ea7a}{IN\_\-StopDemo} (void)
+\item 
+void \hyperlink{ID__IN_8H_a2a8e23cfe91ef95b904e904df0bc9e11}{IN\_\-FreeDemoBuffer} (void)
+\item 
+void \hyperlink{ID__IN_8H_af72058fb29d783ff37069492273ff6d7}{IN\_\-Ack} (void)
+\item 
+void \hyperlink{ID__IN_8H_a81e23c614cbee763093d133f16e59ff7}{IN\_\-AckBack} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__IN_8H_a9f2f68f5b727261b95762dcef168de14}{IN\_\-UserInput} (\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} delay)
+\item 
+char \hyperlink{ID__IN_8H_a6a8f9f185576515a4d238258440181a7}{IN\_\-WaitForASCII} (void)
+\item 
+\hyperlink{ID__IN_8H_a92ee9291fc7e992c1662c4e195242f2d}{ScanCode} \hyperlink{ID__IN_8H_a311d56c00631eb35b523f6c934900a7d}{IN\_\-WaitForKey} (void)
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__IN_8H_a18fd13dd18fda00b1415818795f117b4}{IN\_\-GetJoyButtonsDB} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} joy)
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$ \hyperlink{ID__IN_8H_a730756d76f67179d94d1a8ee90495a29}{IN\_\-GetScanName} (\hyperlink{ID__IN_8H_a92ee9291fc7e992c1662c4e195242f2d}{ScanCode})
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__IN_8H_a1dc32dd9a62a416001a9954a70dc4563}{IN\_\-MouseButtons} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__IN_8H_abc6dd93d0e7777cd67e20f61361f353d}{IN\_\-JoyButtons} (void)
+\item 
+void \hyperlink{ID__IN_8H_ad02d54392fab25e9c6e4208ba8c8baab}{INL\_\-GetJoyDelta} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} joy, int $\ast$dx, int $\ast$dy)
+\item 
+void \hyperlink{ID__IN_8H_ac666b84a87364ddab589ceb0daaa129a}{IN\_\-StartAck} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__IN_8H_a50a122900022f7051ec64d5c4613ebcf}{IN\_\-CheckAck} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__IN_8H_a738773813b02543208fabb69caadefd9}{Keyboard} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__IN_8H_acfbb4437bdf4555f53ac0b13925b6d32}{MousePresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__IN_8H_aff444f013e2394c2c15c5e46ab24d585}{JoysPresent} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__IN_8H_a8bb9401d8f4d8323faee50f94a4be7b5}{Paused}
+\item 
+char \hyperlink{ID__IN_8H_ae0bac1d5b862fc73354b6992e25e9207}{LastASCII}
+\item 
+\hyperlink{ID__IN_8H_a92ee9291fc7e992c1662c4e195242f2d}{ScanCode} \hyperlink{ID__IN_8H_a294d54f35598c13b2caa8bee664743a4}{LastScan}
+\item 
+\hyperlink{structKeyboardDef}{KeyboardDef} \hyperlink{ID__IN_8H_a27c5715e087f17739848d747929a11ae}{KbdDefs}
+\item 
+\hyperlink{structJoystickDef}{JoystickDef} \hyperlink{ID__IN_8H_ae9a67b60e05d6d05152b6e9d21f75529}{JoyDefs} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4}{ControlType} \hyperlink{ID__IN_8H_a9cf23a083833e7437416b3a0fedae789}{Controls} \mbox{[}MaxPlayers\mbox{]}
+\item 
+\hyperlink{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763}{Demo} \hyperlink{ID__IN_8H_a3f08b9ae9c5b54f2990ec177babb74ef}{DemoMode}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \_\-seg $\ast$ \hyperlink{ID__IN_8H_ab667a009823ca43974aa23e0ed2e2d33}{DemoBuffer}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__IN_8H_a0e890514eba321a0ca518018964e3a63}{DemoOffset}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__IN_8H_a8486d18dcabfa7a32dc114edc70ae0c6}{DemoSize}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__IN_8H_a21bc511a0de7eb91f7e6f16af7a75ffc}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-ClearKey@{IN\_\-ClearKey}}
+\index{IN\_\-ClearKey@{IN\_\-ClearKey}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-ClearKey}]{\setlength{\rightskip}{0pt plus 5cm}\#define IN\_\-ClearKey(
+\begin{DoxyParamCaption}
+\item[{}]{code}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a21bc511a0de7eb91f7e6f16af7a75ffc}
+{\bfseries Value:}
+\begin{DoxyCode}
+{Keyboard[code] = false;\
+                                                        if (code == LastScan) 
+      LastScan = sc_None;}
+\end{DoxyCode}
+\hypertarget{ID__IN_8H_a5ce54ae44f15769cfd7bf96e89620006}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-KeyDown@{IN\_\-KeyDown}}
+\index{IN\_\-KeyDown@{IN\_\-KeyDown}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-KeyDown}]{\setlength{\rightskip}{0pt plus 5cm}\#define IN\_\-KeyDown(
+\begin{DoxyParamCaption}
+\item[{}]{code}
+\end{DoxyParamCaption}
+)~({\bf Keyboard}\mbox{[}(code)\mbox{]})}}
+\label{ID__IN_8H_a5ce54ae44f15769cfd7bf96e89620006}
+\hypertarget{ID__IN_8H_aa0a90f5d75fce7c8beb013538da152d1}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-BackSpace@{key\_\-BackSpace}}
+\index{key\_\-BackSpace@{key\_\-BackSpace}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-BackSpace}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-BackSpace~0x08}}
+\label{ID__IN_8H_aa0a90f5d75fce7c8beb013538da152d1}
+\hypertarget{ID__IN_8H_a9d13b689c474bd57a0ca1f0624d042d6}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-Delete@{key\_\-Delete}}
+\index{key\_\-Delete@{key\_\-Delete}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-Delete}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-Delete~0x7f}}
+\label{ID__IN_8H_a9d13b689c474bd57a0ca1f0624d042d6}
+\hypertarget{ID__IN_8H_ac8d873cb1ee36ecc9a9f70124a0a6a92}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-Enter@{key\_\-Enter}}
+\index{key\_\-Enter@{key\_\-Enter}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-Enter}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-Enter~key\_\-Return}}
+\label{ID__IN_8H_ac8d873cb1ee36ecc9a9f70124a0a6a92}
+\hypertarget{ID__IN_8H_a03c35e01517200de0899687b60766da6}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-Escape@{key\_\-Escape}}
+\index{key\_\-Escape@{key\_\-Escape}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-Escape}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-Escape~0x1b}}
+\label{ID__IN_8H_a03c35e01517200de0899687b60766da6}
+\hypertarget{ID__IN_8H_a2b293229b86d509ca82f666e4fbccc7f}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-None@{key\_\-None}}
+\index{key\_\-None@{key\_\-None}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-None}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-None~0}}
+\label{ID__IN_8H_a2b293229b86d509ca82f666e4fbccc7f}
+\hypertarget{ID__IN_8H_a138fecd408e102336ae02a971deed204}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-Return@{key\_\-Return}}
+\index{key\_\-Return@{key\_\-Return}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-Return}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-Return~0x0d}}
+\label{ID__IN_8H_a138fecd408e102336ae02a971deed204}
+\hypertarget{ID__IN_8H_a87760aed21de5eed43b8144a68b43a18}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-Space@{key\_\-Space}}
+\index{key\_\-Space@{key\_\-Space}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-Space}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-Space~0x20}}
+\label{ID__IN_8H_a87760aed21de5eed43b8144a68b43a18}
+\hypertarget{ID__IN_8H_a0f954c97c2dae0ddda74cb4ecdf3c5c9}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!key\_\-Tab@{key\_\-Tab}}
+\index{key\_\-Tab@{key\_\-Tab}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{key\_\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}\#define key\_\-Tab~0x09}}
+\label{ID__IN_8H_a0f954c97c2dae0ddda74cb4ecdf3c5c9}
+\hypertarget{ID__IN_8H_a46db284a6cc158d0ccac9ef0151ed312}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MaxJoys@{MaxJoys}}
+\index{MaxJoys@{MaxJoys}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MaxJoys}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxJoys~2}}
+\label{ID__IN_8H_a46db284a6cc158d0ccac9ef0151ed312}
+\hypertarget{ID__IN_8H_a557ca9fbb043bb6f6d8cc8492321ce2f}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MaxKbds@{MaxKbds}}
+\index{MaxKbds@{MaxKbds}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MaxKbds}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxKbds~2}}
+\label{ID__IN_8H_a557ca9fbb043bb6f6d8cc8492321ce2f}
+\hypertarget{ID__IN_8H_ad59b3107f72d926085f8762305e6c030}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MaxPlayers@{MaxPlayers}}
+\index{MaxPlayers@{MaxPlayers}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MaxPlayers}]{\setlength{\rightskip}{0pt plus 5cm}\#define MaxPlayers~4}}
+\label{ID__IN_8H_ad59b3107f72d926085f8762305e6c030}
+\hypertarget{ID__IN_8H_ab05e3da4f514a6b22b5752a361169045}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MButtons@{MButtons}}
+\index{MButtons@{MButtons}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MButtons}]{\setlength{\rightskip}{0pt plus 5cm}\#define MButtons~3}}
+\label{ID__IN_8H_ab05e3da4f514a6b22b5752a361169045}
+\hypertarget{ID__IN_8H_a1795ad7e960197e84346c3cb2e33614b}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MDelta@{MDelta}}
+\index{MDelta@{MDelta}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MDelta}]{\setlength{\rightskip}{0pt plus 5cm}\#define MDelta~11}}
+\label{ID__IN_8H_a1795ad7e960197e84346c3cb2e33614b}
+\hypertarget{ID__IN_8H_a8b9b10ab48f8d5b6f3e6e083e5e524a7}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!Mouse@{Mouse}}
+\index{Mouse@{Mouse}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{Mouse}]{\setlength{\rightskip}{0pt plus 5cm}\#define Mouse(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\_\-AX = x,geninterrupt(MouseInt)}}
+\label{ID__IN_8H_a8b9b10ab48f8d5b6f3e6e083e5e524a7}
+\hypertarget{ID__IN_8H_a527075b2ecdd528854c72a142e60c2d8}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MouseInt@{MouseInt}}
+\index{MouseInt@{MouseInt}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MouseInt}]{\setlength{\rightskip}{0pt plus 5cm}\#define MouseInt~0x33}}
+\label{ID__IN_8H_a527075b2ecdd528854c72a142e60c2d8}
+\hypertarget{ID__IN_8H_a57b4d6b42abb5abac156b4e28a5fcfdf}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MReset@{MReset}}
+\index{MReset@{MReset}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MReset}]{\setlength{\rightskip}{0pt plus 5cm}\#define MReset~0}}
+\label{ID__IN_8H_a57b4d6b42abb5abac156b4e28a5fcfdf}
+\hypertarget{ID__IN_8H_a2e55fe4ebe3e35fad09ea1c57a710129}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!NumCodes@{NumCodes}}
+\index{NumCodes@{NumCodes}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{NumCodes}]{\setlength{\rightskip}{0pt plus 5cm}\#define NumCodes~128}}
+\label{ID__IN_8H_a2e55fe4ebe3e35fad09ea1c57a710129}
+\hypertarget{ID__IN_8H_a927e5c1be2dd2f87e6dc52dbee69e18c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-0@{sc\_\-0}}
+\index{sc\_\-0@{sc\_\-0}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-0~0x0b}}
+\label{ID__IN_8H_a927e5c1be2dd2f87e6dc52dbee69e18c}
+\hypertarget{ID__IN_8H_afd02d044421666cafb6f9a72d07c75ee}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-1@{sc\_\-1}}
+\index{sc\_\-1@{sc\_\-1}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-1~0x02}}
+\label{ID__IN_8H_afd02d044421666cafb6f9a72d07c75ee}
+\hypertarget{ID__IN_8H_a2e291e92f53a876e1e3ebbeec7a86301}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-2@{sc\_\-2}}
+\index{sc\_\-2@{sc\_\-2}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-2~0x03}}
+\label{ID__IN_8H_a2e291e92f53a876e1e3ebbeec7a86301}
+\hypertarget{ID__IN_8H_af5664e220c9ca85588b328d6a42c4e95}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-3@{sc\_\-3}}
+\index{sc\_\-3@{sc\_\-3}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-3~0x04}}
+\label{ID__IN_8H_af5664e220c9ca85588b328d6a42c4e95}
+\hypertarget{ID__IN_8H_a48838fea402657d481d0d809d087a928}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-4@{sc\_\-4}}
+\index{sc\_\-4@{sc\_\-4}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-4~0x05}}
+\label{ID__IN_8H_a48838fea402657d481d0d809d087a928}
+\hypertarget{ID__IN_8H_aafbcb8cc603d2dbcc8893f38cb8f9cae}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-5@{sc\_\-5}}
+\index{sc\_\-5@{sc\_\-5}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-5~0x06}}
+\label{ID__IN_8H_aafbcb8cc603d2dbcc8893f38cb8f9cae}
+\hypertarget{ID__IN_8H_accf5de03a8bf46eb0bd3881a69f575c1}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-6@{sc\_\-6}}
+\index{sc\_\-6@{sc\_\-6}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-6~0x07}}
+\label{ID__IN_8H_accf5de03a8bf46eb0bd3881a69f575c1}
+\hypertarget{ID__IN_8H_abff31b74c899a6ccd633d6853691210d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-7@{sc\_\-7}}
+\index{sc\_\-7@{sc\_\-7}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-7~0x08}}
+\label{ID__IN_8H_abff31b74c899a6ccd633d6853691210d}
+\hypertarget{ID__IN_8H_a1ae0d70550193a93d0e62534b320fe0f}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-8@{sc\_\-8}}
+\index{sc\_\-8@{sc\_\-8}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-8~0x09}}
+\label{ID__IN_8H_a1ae0d70550193a93d0e62534b320fe0f}
+\hypertarget{ID__IN_8H_afc1da098d63c9780125b3488ed35960a}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-9@{sc\_\-9}}
+\index{sc\_\-9@{sc\_\-9}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-9}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-9~0x0a}}
+\label{ID__IN_8H_afc1da098d63c9780125b3488ed35960a}
+\hypertarget{ID__IN_8H_ac53fd1d19e529144ae928149a722a2cd}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-A@{sc\_\-A}}
+\index{sc\_\-A@{sc\_\-A}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-A~0x1e}}
+\label{ID__IN_8H_ac53fd1d19e529144ae928149a722a2cd}
+\hypertarget{ID__IN_8H_a166a227bde5c686bb85c1006d87b6f05}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Alt@{sc\_\-Alt}}
+\index{sc\_\-Alt@{sc\_\-Alt}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Alt}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Alt~0x38}}
+\label{ID__IN_8H_a166a227bde5c686bb85c1006d87b6f05}
+\hypertarget{ID__IN_8H_a3063b7d84ff3ac915dd3f9144e437ae0}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-B@{sc\_\-B}}
+\index{sc\_\-B@{sc\_\-B}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-B~0x30}}
+\label{ID__IN_8H_a3063b7d84ff3ac915dd3f9144e437ae0}
+\hypertarget{ID__IN_8H_ad406a304cdd237856975f5c911e71049}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-BackSpace@{sc\_\-BackSpace}}
+\index{sc\_\-BackSpace@{sc\_\-BackSpace}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-BackSpace}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-BackSpace~0x0e}}
+\label{ID__IN_8H_ad406a304cdd237856975f5c911e71049}
+\hypertarget{ID__IN_8H_adee51c7c4fb0dd57ca0aec24d2756266}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Bad@{sc\_\-Bad}}
+\index{sc\_\-Bad@{sc\_\-Bad}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Bad}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Bad~0xff}}
+\label{ID__IN_8H_adee51c7c4fb0dd57ca0aec24d2756266}
+\hypertarget{ID__IN_8H_a297ea773ebb8336e3d5450f90088163e}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-C@{sc\_\-C}}
+\index{sc\_\-C@{sc\_\-C}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-C~0x2e}}
+\label{ID__IN_8H_a297ea773ebb8336e3d5450f90088163e}
+\hypertarget{ID__IN_8H_a9f53546ac824999f93f97565c18a8da2}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-CapsLock@{sc\_\-CapsLock}}
+\index{sc\_\-CapsLock@{sc\_\-CapsLock}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-CapsLock}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-CapsLock~0x3a}}
+\label{ID__IN_8H_a9f53546ac824999f93f97565c18a8da2}
+\hypertarget{ID__IN_8H_a668e8e3177eeb838288f0bac32a0ea09}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Control@{sc\_\-Control}}
+\index{sc\_\-Control@{sc\_\-Control}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Control~0x1d}}
+\label{ID__IN_8H_a668e8e3177eeb838288f0bac32a0ea09}
+\hypertarget{ID__IN_8H_ae1822418241e62021e2e36ac8a30534e}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-D@{sc\_\-D}}
+\index{sc\_\-D@{sc\_\-D}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-D~0x20}}
+\label{ID__IN_8H_ae1822418241e62021e2e36ac8a30534e}
+\hypertarget{ID__IN_8H_a4587be95c57ce0585b4280f0c435d23e}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Delete@{sc\_\-Delete}}
+\index{sc\_\-Delete@{sc\_\-Delete}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Delete}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Delete~0x53}}
+\label{ID__IN_8H_a4587be95c57ce0585b4280f0c435d23e}
+\hypertarget{ID__IN_8H_a320e4ea4abace929b427c926f745656a}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-DownArrow@{sc\_\-DownArrow}}
+\index{sc\_\-DownArrow@{sc\_\-DownArrow}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-DownArrow}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-DownArrow~0x50}}
+\label{ID__IN_8H_a320e4ea4abace929b427c926f745656a}
+\hypertarget{ID__IN_8H_a3afca48247d40ce41e80af6ffbb1f188}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-E@{sc\_\-E}}
+\index{sc\_\-E@{sc\_\-E}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-E~0x12}}
+\label{ID__IN_8H_a3afca48247d40ce41e80af6ffbb1f188}
+\hypertarget{ID__IN_8H_a3ff1b08c7be9bd962d61b3a6f009500c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-End@{sc\_\-End}}
+\index{sc\_\-End@{sc\_\-End}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-End}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-End~0x4f}}
+\label{ID__IN_8H_a3ff1b08c7be9bd962d61b3a6f009500c}
+\hypertarget{ID__IN_8H_a3e9ec0b8613dc9dcd7e983afa3c6b412}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Enter@{sc\_\-Enter}}
+\index{sc\_\-Enter@{sc\_\-Enter}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Enter}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Enter~sc\_\-Return}}
+\label{ID__IN_8H_a3e9ec0b8613dc9dcd7e983afa3c6b412}
+\hypertarget{ID__IN_8H_a69d61eb9fda6c28c8ddaf7c9cde5367d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Escape@{sc\_\-Escape}}
+\index{sc\_\-Escape@{sc\_\-Escape}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Escape}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Escape~0x01}}
+\label{ID__IN_8H_a69d61eb9fda6c28c8ddaf7c9cde5367d}
+\hypertarget{ID__IN_8H_a53b8ae1a17202d91380d319683507494}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F@{sc\_\-F}}
+\index{sc\_\-F@{sc\_\-F}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F~0x21}}
+\label{ID__IN_8H_a53b8ae1a17202d91380d319683507494}
+\hypertarget{ID__IN_8H_a1998ed6d0557a5e4b04535b8945a187d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F1@{sc\_\-F1}}
+\index{sc\_\-F1@{sc\_\-F1}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F1}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F1~0x3b}}
+\label{ID__IN_8H_a1998ed6d0557a5e4b04535b8945a187d}
+\hypertarget{ID__IN_8H_a6dc0b8f45e2ceaa377f8579bdef6df44}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F10@{sc\_\-F10}}
+\index{sc\_\-F10@{sc\_\-F10}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F10}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F10~0x44}}
+\label{ID__IN_8H_a6dc0b8f45e2ceaa377f8579bdef6df44}
+\hypertarget{ID__IN_8H_a47f8c9ced16fd828e53f8be1780a7435}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F11@{sc\_\-F11}}
+\index{sc\_\-F11@{sc\_\-F11}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F11}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F11~0x57}}
+\label{ID__IN_8H_a47f8c9ced16fd828e53f8be1780a7435}
+\hypertarget{ID__IN_8H_a87d09c57d7520ea6f803e8b24c2b3405}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F12@{sc\_\-F12}}
+\index{sc\_\-F12@{sc\_\-F12}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F12}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F12~0x59}}
+\label{ID__IN_8H_a87d09c57d7520ea6f803e8b24c2b3405}
+\hypertarget{ID__IN_8H_afe3854787b4428571ad3de3e60415ad6}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F2@{sc\_\-F2}}
+\index{sc\_\-F2@{sc\_\-F2}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F2}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F2~0x3c}}
+\label{ID__IN_8H_afe3854787b4428571ad3de3e60415ad6}
+\hypertarget{ID__IN_8H_a7d11d0a13e0753f9c9e4bf1754c9f3a8}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F3@{sc\_\-F3}}
+\index{sc\_\-F3@{sc\_\-F3}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F3}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F3~0x3d}}
+\label{ID__IN_8H_a7d11d0a13e0753f9c9e4bf1754c9f3a8}
+\hypertarget{ID__IN_8H_ada6f7e998fc1a7dc0575fc68e5442f9c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F4@{sc\_\-F4}}
+\index{sc\_\-F4@{sc\_\-F4}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F4}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F4~0x3e}}
+\label{ID__IN_8H_ada6f7e998fc1a7dc0575fc68e5442f9c}
+\hypertarget{ID__IN_8H_ad3b51bd6dcd08dd5aa0ec2d5d06a9444}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F5@{sc\_\-F5}}
+\index{sc\_\-F5@{sc\_\-F5}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F5}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F5~0x3f}}
+\label{ID__IN_8H_ad3b51bd6dcd08dd5aa0ec2d5d06a9444}
+\hypertarget{ID__IN_8H_a54f2d7b6be8087dc128f4ef9429cc572}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F6@{sc\_\-F6}}
+\index{sc\_\-F6@{sc\_\-F6}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F6}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F6~0x40}}
+\label{ID__IN_8H_a54f2d7b6be8087dc128f4ef9429cc572}
+\hypertarget{ID__IN_8H_ac17d8aab883572e596a2ee801638eea5}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F7@{sc\_\-F7}}
+\index{sc\_\-F7@{sc\_\-F7}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F7}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F7~0x41}}
+\label{ID__IN_8H_ac17d8aab883572e596a2ee801638eea5}
+\hypertarget{ID__IN_8H_a9c31980d7239e354bad109237b128aa1}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F8@{sc\_\-F8}}
+\index{sc\_\-F8@{sc\_\-F8}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F8}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F8~0x42}}
+\label{ID__IN_8H_a9c31980d7239e354bad109237b128aa1}
+\hypertarget{ID__IN_8H_a5e03be4a19077641a3ec370e6c3dd54e}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-F9@{sc\_\-F9}}
+\index{sc\_\-F9@{sc\_\-F9}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-F9}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-F9~0x43}}
+\label{ID__IN_8H_a5e03be4a19077641a3ec370e6c3dd54e}
+\hypertarget{ID__IN_8H_a63672572d9ce8c31a962508ebdffa5ad}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-G@{sc\_\-G}}
+\index{sc\_\-G@{sc\_\-G}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-G~0x22}}
+\label{ID__IN_8H_a63672572d9ce8c31a962508ebdffa5ad}
+\hypertarget{ID__IN_8H_a526628832b4771cbc27882ffd5eab1b5}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-H@{sc\_\-H}}
+\index{sc\_\-H@{sc\_\-H}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-H~0x23}}
+\label{ID__IN_8H_a526628832b4771cbc27882ffd5eab1b5}
+\hypertarget{ID__IN_8H_ae53371001dcac7b98f7758a5c18dc6e4}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Home@{sc\_\-Home}}
+\index{sc\_\-Home@{sc\_\-Home}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Home}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Home~0x47}}
+\label{ID__IN_8H_ae53371001dcac7b98f7758a5c18dc6e4}
+\hypertarget{ID__IN_8H_a6adbcf0026a4316804caca7fc279de19}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-I@{sc\_\-I}}
+\index{sc\_\-I@{sc\_\-I}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-I~0x17}}
+\label{ID__IN_8H_a6adbcf0026a4316804caca7fc279de19}
+\hypertarget{ID__IN_8H_a02d399ecf02ee6c65c7b28bf1a8a3169}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Insert@{sc\_\-Insert}}
+\index{sc\_\-Insert@{sc\_\-Insert}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Insert}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Insert~0x52}}
+\label{ID__IN_8H_a02d399ecf02ee6c65c7b28bf1a8a3169}
+\hypertarget{ID__IN_8H_a13a73278e8e8ab44c44da1ec4d98b680}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-J@{sc\_\-J}}
+\index{sc\_\-J@{sc\_\-J}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-J}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-J~0x24}}
+\label{ID__IN_8H_a13a73278e8e8ab44c44da1ec4d98b680}
+\hypertarget{ID__IN_8H_a393e96e67168815b72d24c72e29efe8e}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-K@{sc\_\-K}}
+\index{sc\_\-K@{sc\_\-K}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-K~0x25}}
+\label{ID__IN_8H_a393e96e67168815b72d24c72e29efe8e}
+\hypertarget{ID__IN_8H_a725a7d6e5a62e1f49ecded96bc981ff0}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-L@{sc\_\-L}}
+\index{sc\_\-L@{sc\_\-L}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-L~0x26}}
+\label{ID__IN_8H_a725a7d6e5a62e1f49ecded96bc981ff0}
+\hypertarget{ID__IN_8H_a74e3784c1e7589bfafb369e9292ae91e}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-LeftArrow@{sc\_\-LeftArrow}}
+\index{sc\_\-LeftArrow@{sc\_\-LeftArrow}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-LeftArrow}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-LeftArrow~0x4b}}
+\label{ID__IN_8H_a74e3784c1e7589bfafb369e9292ae91e}
+\hypertarget{ID__IN_8H_a52b1add06e41f56bfb1d5b4fc02c604c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-LShift@{sc\_\-LShift}}
+\index{sc\_\-LShift@{sc\_\-LShift}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-LShift}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-LShift~0x2a}}
+\label{ID__IN_8H_a52b1add06e41f56bfb1d5b4fc02c604c}
+\hypertarget{ID__IN_8H_aa6807813ed691797c580a7388fe48ad5}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-M@{sc\_\-M}}
+\index{sc\_\-M@{sc\_\-M}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-M~0x32}}
+\label{ID__IN_8H_aa6807813ed691797c580a7388fe48ad5}
+\hypertarget{ID__IN_8H_abd1526274fbcd0c55e47ffd865d94b18}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-N@{sc\_\-N}}
+\index{sc\_\-N@{sc\_\-N}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-N~0x31}}
+\label{ID__IN_8H_abd1526274fbcd0c55e47ffd865d94b18}
+\hypertarget{ID__IN_8H_a786273284de615882c837b331eb1f317}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-None@{sc\_\-None}}
+\index{sc\_\-None@{sc\_\-None}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-None}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-None~0}}
+\label{ID__IN_8H_a786273284de615882c837b331eb1f317}
+\hypertarget{ID__IN_8H_aa7e3a3caf36149fa839a60e18db142cc}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-O@{sc\_\-O}}
+\index{sc\_\-O@{sc\_\-O}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-O~0x18}}
+\label{ID__IN_8H_aa7e3a3caf36149fa839a60e18db142cc}
+\hypertarget{ID__IN_8H_a1ce3a97277ff763aa0fbe0979d33be3c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-P@{sc\_\-P}}
+\index{sc\_\-P@{sc\_\-P}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-P~0x19}}
+\label{ID__IN_8H_a1ce3a97277ff763aa0fbe0979d33be3c}
+\hypertarget{ID__IN_8H_a1259ccb459ccbaf01d9a4aa687326a22}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-PgDn@{sc\_\-PgDn}}
+\index{sc\_\-PgDn@{sc\_\-PgDn}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-PgDn}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-PgDn~0x51}}
+\label{ID__IN_8H_a1259ccb459ccbaf01d9a4aa687326a22}
+\hypertarget{ID__IN_8H_a9e0c0ed774b3c1f0f59cd6fbc7e8a0df}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-PgUp@{sc\_\-PgUp}}
+\index{sc\_\-PgUp@{sc\_\-PgUp}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-PgUp}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-PgUp~0x49}}
+\label{ID__IN_8H_a9e0c0ed774b3c1f0f59cd6fbc7e8a0df}
+\hypertarget{ID__IN_8H_afe8214378d1239fb0eba7179bebf0e55}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Q@{sc\_\-Q}}
+\index{sc\_\-Q@{sc\_\-Q}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Q~0x10}}
+\label{ID__IN_8H_afe8214378d1239fb0eba7179bebf0e55}
+\hypertarget{ID__IN_8H_ab40938804ab9ce2755e8551b614aa86c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-R@{sc\_\-R}}
+\index{sc\_\-R@{sc\_\-R}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-R~0x13}}
+\label{ID__IN_8H_ab40938804ab9ce2755e8551b614aa86c}
+\hypertarget{ID__IN_8H_a44015ffcf3b9ee4fc15c29edab389531}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Return@{sc\_\-Return}}
+\index{sc\_\-Return@{sc\_\-Return}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Return}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Return~0x1c}}
+\label{ID__IN_8H_a44015ffcf3b9ee4fc15c29edab389531}
+\hypertarget{ID__IN_8H_aefaebf0fb21b649651db9d6153f7475f}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-RightArrow@{sc\_\-RightArrow}}
+\index{sc\_\-RightArrow@{sc\_\-RightArrow}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-RightArrow}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-RightArrow~0x4d}}
+\label{ID__IN_8H_aefaebf0fb21b649651db9d6153f7475f}
+\hypertarget{ID__IN_8H_a575cec6fde53c83e88fda93c450ac1ba}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-RShift@{sc\_\-RShift}}
+\index{sc\_\-RShift@{sc\_\-RShift}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-RShift}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-RShift~0x36}}
+\label{ID__IN_8H_a575cec6fde53c83e88fda93c450ac1ba}
+\hypertarget{ID__IN_8H_a2962342701a1ab8dea2d702a4e3fb83d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-S@{sc\_\-S}}
+\index{sc\_\-S@{sc\_\-S}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-S~0x1f}}
+\label{ID__IN_8H_a2962342701a1ab8dea2d702a4e3fb83d}
+\hypertarget{ID__IN_8H_ab8b6385289dfdf8e27d8f3b39464d44f}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Space@{sc\_\-Space}}
+\index{sc\_\-Space@{sc\_\-Space}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Space}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Space~0x39}}
+\label{ID__IN_8H_ab8b6385289dfdf8e27d8f3b39464d44f}
+\hypertarget{ID__IN_8H_a2defbfc4fff952b6856ec514e69170de}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-T@{sc\_\-T}}
+\index{sc\_\-T@{sc\_\-T}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-T~0x14}}
+\label{ID__IN_8H_a2defbfc4fff952b6856ec514e69170de}
+\hypertarget{ID__IN_8H_a6e5fd91b91e78919dfab2bcd3b7eede1}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Tab@{sc\_\-Tab}}
+\index{sc\_\-Tab@{sc\_\-Tab}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Tab~0x0f}}
+\label{ID__IN_8H_a6e5fd91b91e78919dfab2bcd3b7eede1}
+\hypertarget{ID__IN_8H_ac26b829a509ce15f5fefa467620a9203}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-U@{sc\_\-U}}
+\index{sc\_\-U@{sc\_\-U}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-U~0x16}}
+\label{ID__IN_8H_ac26b829a509ce15f5fefa467620a9203}
+\hypertarget{ID__IN_8H_a69f1f47658ef3ebb061bd66d83db9f06}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-UpArrow@{sc\_\-UpArrow}}
+\index{sc\_\-UpArrow@{sc\_\-UpArrow}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-UpArrow}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-UpArrow~0x48}}
+\label{ID__IN_8H_a69f1f47658ef3ebb061bd66d83db9f06}
+\hypertarget{ID__IN_8H_ad8b27b1f0ed25cfa5034c871792d2108}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-V@{sc\_\-V}}
+\index{sc\_\-V@{sc\_\-V}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-V~0x2f}}
+\label{ID__IN_8H_ad8b27b1f0ed25cfa5034c871792d2108}
+\hypertarget{ID__IN_8H_ab01e4344a9484900a9eda32396636daf}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-W@{sc\_\-W}}
+\index{sc\_\-W@{sc\_\-W}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-W~0x11}}
+\label{ID__IN_8H_ab01e4344a9484900a9eda32396636daf}
+\hypertarget{ID__IN_8H_a304f258a8d166ad1d2209daf57fc4db3}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-X@{sc\_\-X}}
+\index{sc\_\-X@{sc\_\-X}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-X~0x2d}}
+\label{ID__IN_8H_a304f258a8d166ad1d2209daf57fc4db3}
+\hypertarget{ID__IN_8H_a5f6c1e65d11139cad55c9235f7cc3825}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Y@{sc\_\-Y}}
+\index{sc\_\-Y@{sc\_\-Y}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Y~0x15}}
+\label{ID__IN_8H_a5f6c1e65d11139cad55c9235f7cc3825}
+\hypertarget{ID__IN_8H_abdfe2ea5cfd62dcfa591abdcaed59e6d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!sc\_\-Z@{sc\_\-Z}}
+\index{sc\_\-Z@{sc\_\-Z}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{sc\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define sc\_\-Z~0x2c}}
+\label{ID__IN_8H_abdfe2ea5cfd62dcfa591abdcaed59e6d}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{ID__IN_8H_ae2fe25e28b168383aaa3ab117709fd1c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!ControlInfo@{ControlInfo}}
+\index{ControlInfo@{ControlInfo}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{ControlInfo}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf CursorInfo} {\bf ControlInfo}}}
+\label{ID__IN_8H_ae2fe25e28b168383aaa3ab117709fd1c}
+\hypertarget{ID__IN_8H_a92ee9291fc7e992c1662c4e195242f2d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!ScanCode@{ScanCode}}
+\index{ScanCode@{ScanCode}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{ScanCode}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf byte} {\bf ScanCode}}}
+\label{ID__IN_8H_a92ee9291fc7e992c1662c4e195242f2d}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!ControlType@{ControlType}}
+\index{ControlType@{ControlType}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{ControlType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ControlType}}}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ctrl\_\-Keyboard@{ctrl\_\-Keyboard}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!ctrl\_\-Keyboard@{ctrl\_\-Keyboard}}\item[{\em 
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4ce00b3f21d95d49eba5f6137ab093f1}{
+ctrl\_\-Keyboard}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4ce00b3f21d95d49eba5f6137ab093f1}
+}]\index{ctrl\_\-Keyboard1@{ctrl\_\-Keyboard1}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!ctrl\_\-Keyboard1@{ctrl\_\-Keyboard1}}\item[{\em 
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4efed8eec2386a8e7b8ab602a8d8e395}{
+ctrl\_\-Keyboard1}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4efed8eec2386a8e7b8ab602a8d8e395}
+}]\index{ctrl\_\-Keyboard2@{ctrl\_\-Keyboard2}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!ctrl\_\-Keyboard2@{ctrl\_\-Keyboard2}}\item[{\em 
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a63749704cb81bb1c7d3cabc33263bd69}{
+ctrl\_\-Keyboard2}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a63749704cb81bb1c7d3cabc33263bd69}
+}]\index{ctrl\_\-Joystick@{ctrl\_\-Joystick}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!ctrl\_\-Joystick@{ctrl\_\-Joystick}}\item[{\em 
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4ada84bc48f9403d84b99ddf0c65088d1c}{
+ctrl\_\-Joystick}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4ada84bc48f9403d84b99ddf0c65088d1c}
+}]\index{ctrl\_\-Joystick1@{ctrl\_\-Joystick1}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!ctrl\_\-Joystick1@{ctrl\_\-Joystick1}}\item[{\em 
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4ae8889b658a4cd38d98ddcd5412393ee7}{
+ctrl\_\-Joystick1}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4ae8889b658a4cd38d98ddcd5412393ee7}
+}]\index{ctrl\_\-Joystick2@{ctrl\_\-Joystick2}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!ctrl\_\-Joystick2@{ctrl\_\-Joystick2}}\item[{\em 
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4462fe4a7d3a42afef571377721584c9}{
+ctrl\_\-Joystick2}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a4462fe4a7d3a42afef571377721584c9}
+}]\index{ctrl\_\-Mouse@{ctrl\_\-Mouse}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!ctrl\_\-Mouse@{ctrl\_\-Mouse}}\item[{\em 
+\hypertarget{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a1c0bd3d324b0cc0f509a2e0da76dcd4f}{
+ctrl\_\-Mouse}
+\label{ID__IN_8H_a8005f1f182fd0248a710ca64f72508d4a1c0bd3d324b0cc0f509a2e0da76dcd4f}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!Demo@{Demo}}
+\index{Demo@{Demo}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{Demo}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Demo}}}
+\label{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{demo\_\-Off@{demo\_\-Off}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!demo\_\-Off@{demo\_\-Off}}\item[{\em 
+\hypertarget{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763a33868868f757093b473da2b9472f75b7}{
+demo\_\-Off}
+\label{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763a33868868f757093b473da2b9472f75b7}
+}]\index{demo\_\-Record@{demo\_\-Record}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!demo\_\-Record@{demo\_\-Record}}\item[{\em 
+\hypertarget{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763ab8c258a346905112a50edaeacbd25401}{
+demo\_\-Record}
+\label{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763ab8c258a346905112a50edaeacbd25401}
+}]\index{demo\_\-Playback@{demo\_\-Playback}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!demo\_\-Playback@{demo\_\-Playback}}\item[{\em 
+\hypertarget{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763ae48ed66d8035f7de561108fc995d2dd7}{
+demo\_\-Playback}
+\label{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763ae48ed66d8035f7de561108fc995d2dd7}
+}]\index{demo\_\-PlayDone@{demo\_\-PlayDone}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!demo\_\-PlayDone@{demo\_\-PlayDone}}\item[{\em 
+\hypertarget{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763a8ab547b50354308aeac210ca8fecd388}{
+demo\_\-PlayDone}
+\label{ID__IN_8H_aee6aa8565f29397f3cdc22bf15ba6763a8ab547b50354308aeac210ca8fecd388}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aa}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!Direction@{Direction}}
+\index{Direction@{Direction}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Direction}}}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aa}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{dir\_\-North@{dir\_\-North}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-North@{dir\_\-North}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaad6ae5d304f07c18ef62e9b088882bf7f}{
+dir\_\-North}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaad6ae5d304f07c18ef62e9b088882bf7f}
+}]\index{dir\_\-NorthEast@{dir\_\-NorthEast}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-NorthEast@{dir\_\-NorthEast}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa9c1ab616e08047da67f32f68f480608e}{
+dir\_\-NorthEast}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa9c1ab616e08047da67f32f68f480608e}
+}]\index{dir\_\-East@{dir\_\-East}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-East@{dir\_\-East}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaab0019db88c28532561d21f45042f42b8}{
+dir\_\-East}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaab0019db88c28532561d21f45042f42b8}
+}]\index{dir\_\-SouthEast@{dir\_\-SouthEast}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-SouthEast@{dir\_\-SouthEast}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaad6f21e4fc7c0979b73e373e17ec7ea06}{
+dir\_\-SouthEast}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaad6f21e4fc7c0979b73e373e17ec7ea06}
+}]\index{dir\_\-South@{dir\_\-South}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-South@{dir\_\-South}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa239b882ef6d3d23b39862c5921ca7cf1}{
+dir\_\-South}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa239b882ef6d3d23b39862c5921ca7cf1}
+}]\index{dir\_\-SouthWest@{dir\_\-SouthWest}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-SouthWest@{dir\_\-SouthWest}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaae76e8a7e76ec8d11cc2ed9d1cf1ba787}{
+dir\_\-SouthWest}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaae76e8a7e76ec8d11cc2ed9d1cf1ba787}
+}]\index{dir\_\-West@{dir\_\-West}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-West@{dir\_\-West}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa37a8757dee33a555977816881c75c104}{
+dir\_\-West}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa37a8757dee33a555977816881c75c104}
+}]\index{dir\_\-NorthWest@{dir\_\-NorthWest}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-NorthWest@{dir\_\-NorthWest}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa7ef026d3310982b5ef4dd846a26bb3ee}{
+dir\_\-NorthWest}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa7ef026d3310982b5ef4dd846a26bb3ee}
+}]\index{dir\_\-None@{dir\_\-None}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!dir\_\-None@{dir\_\-None}}\item[{\em 
+\hypertarget{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa13350289a9df00286ef6f0fc8b3a3ecb}{
+dir\_\-None}
+\label{ID__IN_8H_a224b9163917ac32fc95a60d8c1eec3aaa13350289a9df00286ef6f0fc8b3a3ecb}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!Motion@{Motion}}
+\index{Motion@{Motion}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{Motion}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Motion}}}
+\label{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{motion\_\-Left@{motion\_\-Left}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!motion\_\-Left@{motion\_\-Left}}\item[{\em 
+\hypertarget{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a9bc2a699c2be52a362f34d2fcc79455b}{
+motion\_\-Left}
+\label{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a9bc2a699c2be52a362f34d2fcc79455b}
+}]\index{motion\_\-Up@{motion\_\-Up}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!motion\_\-Up@{motion\_\-Up}}\item[{\em 
+\hypertarget{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6abd2b9c9822b53de5a5067f90622c1854}{
+motion\_\-Up}
+\label{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6abd2b9c9822b53de5a5067f90622c1854}
+}]\index{motion\_\-None@{motion\_\-None}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!motion\_\-None@{motion\_\-None}}\item[{\em 
+\hypertarget{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6afc6e40c5d456de76089cbda98167bd78}{
+motion\_\-None}
+\label{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6afc6e40c5d456de76089cbda98167bd78}
+}]\index{motion\_\-Right@{motion\_\-Right}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!motion\_\-Right@{motion\_\-Right}}\item[{\em 
+\hypertarget{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a379dc3d7c1df68c3a4255424780fbcd2}{
+motion\_\-Right}
+\label{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a379dc3d7c1df68c3a4255424780fbcd2}
+}]\index{motion\_\-Down@{motion\_\-Down}!ID\_\-IN.H@{ID\_\-IN.H}}\index{ID\_\-IN.H@{ID\_\-IN.H}!motion\_\-Down@{motion\_\-Down}}\item[{\em 
+\hypertarget{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a2342cac7c38e7a18a963891b52e3e877}{
+motion\_\-Down}
+\label{ID__IN_8H_a099c889d2b948b264c7a665b66e3a9b6a2342cac7c38e7a18a963891b52e3e877}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__IN_8H_af72058fb29d783ff37069492273ff6d7}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-Ack@{IN\_\-Ack}}
+\index{IN\_\-Ack@{IN\_\-Ack}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-Ack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_af72058fb29d783ff37069492273ff6d7}
+\hypertarget{ID__IN_8H_a81e23c614cbee763093d133f16e59ff7}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-AckBack@{IN\_\-AckBack}}
+\index{IN\_\-AckBack@{IN\_\-AckBack}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-AckBack}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-AckBack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a81e23c614cbee763093d133f16e59ff7}
+\hypertarget{ID__IN_8H_a50a122900022f7051ec64d5c4613ebcf}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-CheckAck@{IN\_\-CheckAck}}
+\index{IN\_\-CheckAck@{IN\_\-CheckAck}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-CheckAck}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} IN\_\-CheckAck (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a50a122900022f7051ec64d5c4613ebcf}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{ID__IN_8H_a50a122900022f7051ec64d5c4613ebcf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_a50a122900022f7051ec64d5c4613ebcf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_a20251e701cb941d1b39665a9afa51f23}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-ClearKeysDown@{IN\_\-ClearKeysDown}}
+\index{IN\_\-ClearKeysDown@{IN\_\-ClearKeysDown}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-ClearKeysDown}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-ClearKeysDown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a20251e701cb941d1b39665a9afa51f23}
+\hypertarget{ID__IN_8H_ae6921738c0736bb24d7ff5c57f3d676a}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-Default@{IN\_\-Default}}
+\index{IN\_\-Default@{IN\_\-Default}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-Default (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{gotit, }
+\item[{{\bf ControlType}}]{in}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_ae6921738c0736bb24d7ff5c57f3d676a}
+\hypertarget{ID__IN_8H_a2a8e23cfe91ef95b904e904df0bc9e11}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-FreeDemoBuffer@{IN\_\-FreeDemoBuffer}}
+\index{IN\_\-FreeDemoBuffer@{IN\_\-FreeDemoBuffer}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-FreeDemoBuffer}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-FreeDemoBuffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a2a8e23cfe91ef95b904e904df0bc9e11}
+\hypertarget{ID__IN_8H_aa9699bbe72cdd2c7a2f8d5f291ec1e76}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-GetJoyAbs@{IN\_\-GetJoyAbs}}
+\index{IN\_\-GetJoyAbs@{IN\_\-GetJoyAbs}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-GetJoyAbs}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-GetJoyAbs (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{joy, }
+\item[{{\bf word} $\ast$}]{xp, }
+\item[{{\bf word} $\ast$}]{yp}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_aa9699bbe72cdd2c7a2f8d5f291ec1e76}
+\hypertarget{ID__IN_8H_a18fd13dd18fda00b1415818795f117b4}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-GetJoyButtonsDB@{IN\_\-GetJoyButtonsDB}}
+\index{IN\_\-GetJoyButtonsDB@{IN\_\-GetJoyButtonsDB}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-GetJoyButtonsDB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} IN\_\-GetJoyButtonsDB (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{joy}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a18fd13dd18fda00b1415818795f117b4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{ID__IN_8H_a18fd13dd18fda00b1415818795f117b4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_a730756d76f67179d94d1a8ee90495a29}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-GetScanName@{IN\_\-GetScanName}}
+\index{IN\_\-GetScanName@{IN\_\-GetScanName}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-GetScanName}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte}$\ast$ IN\_\-GetScanName (
+\begin{DoxyParamCaption}
+\item[{{\bf ScanCode}}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a730756d76f67179d94d1a8ee90495a29}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_a730756d76f67179d94d1a8ee90495a29_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_abc6dd93d0e7777cd67e20f61361f353d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-JoyButtons@{IN\_\-JoyButtons}}
+\index{IN\_\-JoyButtons@{IN\_\-JoyButtons}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-JoyButtons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} IN\_\-JoyButtons (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_abc6dd93d0e7777cd67e20f61361f353d}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_abc6dd93d0e7777cd67e20f61361f353d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_a1dc32dd9a62a416001a9954a70dc4563}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-MouseButtons@{IN\_\-MouseButtons}}
+\index{IN\_\-MouseButtons@{IN\_\-MouseButtons}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-MouseButtons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} IN\_\-MouseButtons (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a1dc32dd9a62a416001a9954a70dc4563}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_a1dc32dd9a62a416001a9954a70dc4563_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_a4ea8fe68e3dd735f35b4113ff1620569}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-ReadControl@{IN\_\-ReadControl}}
+\index{IN\_\-ReadControl@{IN\_\-ReadControl}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-ReadControl}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-ReadControl (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf ControlInfo} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a4ea8fe68e3dd735f35b4113ff1620569}
+\hypertarget{ID__IN_8H_a9e4c0dab67f1eff25f44424ac08368dc}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-ReadCursor@{IN\_\-ReadCursor}}
+\index{IN\_\-ReadCursor@{IN\_\-ReadCursor}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-ReadCursor}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-ReadCursor (
+\begin{DoxyParamCaption}
+\item[{{\bf CursorInfo} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a9e4c0dab67f1eff25f44424ac08368dc}
+\hypertarget{ID__IN_8H_a94ada136e78d9da0c4ce6f1f70cd2ce0}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-SetControlType@{IN\_\-SetControlType}}
+\index{IN\_\-SetControlType@{IN\_\-SetControlType}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-SetControlType}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-SetControlType (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf ControlType}}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a94ada136e78d9da0c4ce6f1f70cd2ce0}
+\hypertarget{ID__IN_8H_a866bf98a85fa3cee96cb3561abad536c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-SetKeyHook@{IN\_\-SetKeyHook}}
+\index{IN\_\-SetKeyHook@{IN\_\-SetKeyHook}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-SetKeyHook}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-SetKeyHook (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)()}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a866bf98a85fa3cee96cb3561abad536c}
+\hypertarget{ID__IN_8H_a58e132d2bd776ef812d95ee30907cbd5}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-SetupJoy@{IN\_\-SetupJoy}}
+\index{IN\_\-SetupJoy@{IN\_\-SetupJoy}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-SetupJoy}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-SetupJoy (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{joy, }
+\item[{{\bf word}}]{minx, }
+\item[{{\bf word}}]{maxx, }
+\item[{{\bf word}}]{miny, }
+\item[{{\bf word}}]{maxy}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a58e132d2bd776ef812d95ee30907cbd5}
+\hypertarget{ID__IN_8H_a781003199e06bab03bde6ff7051bdcbe}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-Shutdown@{IN\_\-Shutdown}}
+\index{IN\_\-Shutdown@{IN\_\-Shutdown}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a781003199e06bab03bde6ff7051bdcbe}
+\hypertarget{ID__IN_8H_ac666b84a87364ddab589ceb0daaa129a}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-StartAck@{IN\_\-StartAck}}
+\index{IN\_\-StartAck@{IN\_\-StartAck}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-StartAck}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-StartAck (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_ac666b84a87364ddab589ceb0daaa129a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{ID__IN_8H_ac666b84a87364ddab589ceb0daaa129a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_ac666b84a87364ddab589ceb0daaa129a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_a20a23654ead536c7d999b6de31a5168c}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-Startup@{IN\_\-Startup}}
+\index{IN\_\-Startup@{IN\_\-Startup}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a20a23654ead536c7d999b6de31a5168c}
+\hypertarget{ID__IN_8H_a535183b8984ee1979db6fe38a099ea7a}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-StopDemo@{IN\_\-StopDemo}}
+\index{IN\_\-StopDemo@{IN\_\-StopDemo}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-StopDemo}]{\setlength{\rightskip}{0pt plus 5cm}void IN\_\-StopDemo (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a535183b8984ee1979db6fe38a099ea7a}
+\hypertarget{ID__IN_8H_a9f2f68f5b727261b95762dcef168de14}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-UserInput@{IN\_\-UserInput}}
+\index{IN\_\-UserInput@{IN\_\-UserInput}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-UserInput}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} IN\_\-UserInput (
+\begin{DoxyParamCaption}
+\item[{{\bf longword}}]{delay}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a9f2f68f5b727261b95762dcef168de14}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_a9f2f68f5b727261b95762dcef168de14_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_a9f2f68f5b727261b95762dcef168de14_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_a6a8f9f185576515a4d238258440181a7}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-WaitForASCII@{IN\_\-WaitForASCII}}
+\index{IN\_\-WaitForASCII@{IN\_\-WaitForASCII}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-WaitForASCII}]{\setlength{\rightskip}{0pt plus 5cm}char IN\_\-WaitForASCII (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a6a8f9f185576515a4d238258440181a7}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=398pt]{ID__IN_8H_a6a8f9f185576515a4d238258440181a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__IN_8H_a311d56c00631eb35b523f6c934900a7d}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!IN\_\-WaitForKey@{IN\_\-WaitForKey}}
+\index{IN\_\-WaitForKey@{IN\_\-WaitForKey}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{IN\_\-WaitForKey}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ScanCode} IN\_\-WaitForKey (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_a311d56c00631eb35b523f6c934900a7d}
+\hypertarget{ID__IN_8H_ad02d54392fab25e9c6e4208ba8c8baab}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!INL\_\-GetJoyDelta@{INL\_\-GetJoyDelta}}
+\index{INL\_\-GetJoyDelta@{INL\_\-GetJoyDelta}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{INL\_\-GetJoyDelta}]{\setlength{\rightskip}{0pt plus 5cm}void INL\_\-GetJoyDelta (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{joy, }
+\item[{int $\ast$}]{dx, }
+\item[{int $\ast$}]{dy}
+\end{DoxyParamCaption}
+)}}
+\label{ID__IN_8H_ad02d54392fab25e9c6e4208ba8c8baab}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{ID__IN_8H_ad02d54392fab25e9c6e4208ba8c8baab_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__IN_8H_ad02d54392fab25e9c6e4208ba8c8baab_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__IN_8H_a9cf23a083833e7437416b3a0fedae789}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!Controls@{Controls}}
+\index{Controls@{Controls}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{Controls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ControlType} {\bf Controls}\mbox{[}MaxPlayers\mbox{]}}}
+\label{ID__IN_8H_a9cf23a083833e7437416b3a0fedae789}
+\hypertarget{ID__IN_8H_ab667a009823ca43974aa23e0ed2e2d33}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!DemoBuffer@{DemoBuffer}}
+\index{DemoBuffer@{DemoBuffer}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{DemoBuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} \_\-seg$\ast$ {\bf DemoBuffer}}}
+\label{ID__IN_8H_ab667a009823ca43974aa23e0ed2e2d33}
+\hypertarget{ID__IN_8H_a3f08b9ae9c5b54f2990ec177babb74ef}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!DemoMode@{DemoMode}}
+\index{DemoMode@{DemoMode}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{DemoMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demo} {\bf DemoMode}}}
+\label{ID__IN_8H_a3f08b9ae9c5b54f2990ec177babb74ef}
+\hypertarget{ID__IN_8H_a0e890514eba321a0ca518018964e3a63}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!DemoOffset@{DemoOffset}}
+\index{DemoOffset@{DemoOffset}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{DemoOffset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DemoOffset}}}
+\label{ID__IN_8H_a0e890514eba321a0ca518018964e3a63}
+\hypertarget{ID__IN_8H_a8486d18dcabfa7a32dc114edc70ae0c6}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!DemoSize@{DemoSize}}
+\index{DemoSize@{DemoSize}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{DemoSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DemoSize}}}
+\label{ID__IN_8H_a8486d18dcabfa7a32dc114edc70ae0c6}
+\hypertarget{ID__IN_8H_ae9a67b60e05d6d05152b6e9d21f75529}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!JoyDefs@{JoyDefs}}
+\index{JoyDefs@{JoyDefs}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{JoyDefs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf JoystickDef} {\bf JoyDefs}\mbox{[}$\,$\mbox{]}}}
+\label{ID__IN_8H_ae9a67b60e05d6d05152b6e9d21f75529}
+\hypertarget{ID__IN_8H_aff444f013e2394c2c15c5e46ab24d585}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!JoysPresent@{JoysPresent}}
+\index{JoysPresent@{JoysPresent}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{JoysPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf JoysPresent}\mbox{[}$\,$\mbox{]}}}
+\label{ID__IN_8H_aff444f013e2394c2c15c5e46ab24d585}
+\hypertarget{ID__IN_8H_a27c5715e087f17739848d747929a11ae}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!KbdDefs@{KbdDefs}}
+\index{KbdDefs@{KbdDefs}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{KbdDefs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf KeyboardDef} {\bf KbdDefs}}}
+\label{ID__IN_8H_a27c5715e087f17739848d747929a11ae}
+\hypertarget{ID__IN_8H_a738773813b02543208fabb69caadefd9}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!Keyboard@{Keyboard}}
+\index{Keyboard@{Keyboard}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{Keyboard}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf Keyboard}\mbox{[}$\,$\mbox{]}}}
+\label{ID__IN_8H_a738773813b02543208fabb69caadefd9}
+\hypertarget{ID__IN_8H_ae0bac1d5b862fc73354b6992e25e9207}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!LastASCII@{LastASCII}}
+\index{LastASCII@{LastASCII}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{LastASCII}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf LastASCII}}}
+\label{ID__IN_8H_ae0bac1d5b862fc73354b6992e25e9207}
+\hypertarget{ID__IN_8H_a294d54f35598c13b2caa8bee664743a4}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!LastScan@{LastScan}}
+\index{LastScan@{LastScan}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{LastScan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ScanCode} {\bf LastScan}}}
+\label{ID__IN_8H_a294d54f35598c13b2caa8bee664743a4}
+\hypertarget{ID__IN_8H_acfbb4437bdf4555f53ac0b13925b6d32}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!MousePresent@{MousePresent}}
+\index{MousePresent@{MousePresent}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{MousePresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf MousePresent}}}
+\label{ID__IN_8H_acfbb4437bdf4555f53ac0b13925b6d32}
+\hypertarget{ID__IN_8H_a8bb9401d8f4d8323faee50f94a4be7b5}{
+\index{ID\_\-IN.H@{ID\_\-IN.H}!Paused@{Paused}}
+\index{Paused@{Paused}!ID_IN.H@{ID\_\-IN.H}}
+\subsubsection[{Paused}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf Paused}}}
+\label{ID__IN_8H_a8bb9401d8f4d8323faee50f94a4be7b5}

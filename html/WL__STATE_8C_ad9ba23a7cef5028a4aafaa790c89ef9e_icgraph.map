@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__STATE_8C.html#a78d1b5b5a62255da160d304dedbe2eae" title="CheckSight" alt="" coords="139,32,229,61"/>
+<area shape="rect" id="node11" href="$WL__AGENT_8C.html#a1afb01b78673abfdfaddceee3a198eb5" title="GunAttack" alt="" coords="143,85,225,115"/>
+<area shape="rect" id="node15" href="$WL__ACT2_8C.html#a2d2e0445a6661b21ec497072f261b2c0" title="T_Chase" alt="" coords="147,139,221,168"/>
+<area shape="rect" id="node17" href="$WL__ACT2_8C.html#a5f8b7b86236c7cc444781f34eba13965" title="T_Fake" alt="" coords="151,192,217,221"/>
+<area shape="rect" id="node19" href="$WL__ACT2_8C.html#a7ef997abd87b43b1e1fd675f6aefb5e8" title="T_Fat" alt="" coords="156,245,212,275"/>
+<area shape="rect" id="node21" href="$WL__ACT2_8C.html#aa143ff701cf1be118333ca0bb097bc72" title="T_Gift" alt="" coords="155,299,213,328"/>
+<area shape="rect" id="node23" href="$WL__ACT2_8C.html#ab666f1455bb55512f01418413679962a" title="T_Schabb" alt="" coords="144,352,224,381"/>
+<area shape="rect" id="node25" href="$WL__ACT2_8C.html#aef356ee8bcc0d70959cad379dc991266" title="T_Shoot" alt="" coords="149,405,219,435"/>
+<area shape="rect" id="node5" href="$WL__STATE_8C.html#a3a43f9647b8793707a682d5507017ecd" title="SightPlayer" alt="" coords="279,32,367,61"/>
+<area shape="rect" id="node7" href="$WL__ACT2_8C.html#a297fbc8b826bdbe6e04f2fe6a0c2a128" title="T_Path" alt="" coords="420,5,484,35"/>
+<area shape="rect" id="node9" href="$WL__ACT2_8C.html#ad1603fe2f1e9a66f94be47e11cfe4ba8" title="T_Stand" alt="" coords="417,59,487,88"/>
+<area shape="rect" id="node13" href="$WL__AGENT_8C.html#a0cce1c4b64372c27c6ff79e6fb397772" title="T_Attack" alt="" coords="285,85,360,115"/>
+</map>

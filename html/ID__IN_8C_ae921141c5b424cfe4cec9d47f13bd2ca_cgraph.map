@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__IN_8C.html#a15454e5c5f20b31d906b8f49c34ae67b" title="INL_GetJoyButtons" alt="" coords="180,5,316,35"/>
+<area shape="rect" id="node5" href="$ID__IN_8C.html#ad02d54392fab25e9c6e4208ba8c8baab" title="INL_GetJoyDelta" alt="" coords="187,59,309,88"/>
+<area shape="rect" id="node9" href="$ID__IN_8C.html#a4eb848df1ba13e0b61452d4b69b54b0c" title="INL_GetMouseButtons" alt="" coords="171,112,325,141"/>
+<area shape="rect" id="node11" href="$ID__IN_8C.html#a8fc59bb3511dd04107773f88b3063763" title="INL_GetMouseDelta" alt="" coords="177,165,319,195"/>
+<area shape="rect" id="node13" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="225,219,271,248"/>
+<area shape="rect" id="node7" href="$ID__IN_8C.html#aa9699bbe72cdd2c7a2f8d5f291ec1e76" title="IN_GetJoyAbs" alt="" coords="375,59,481,88"/>
+</map>

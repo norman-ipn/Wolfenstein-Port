@@ -1,0 +1,723 @@
+\hypertarget{ID__MM_8C}{
+\section{ID\_\-MM.C File Reference}
+\label{ID__MM_8C}\index{ID\_\-MM.C@{ID\_\-MM.C}}
+}
+{\ttfamily \#include \char`\"{}ID\_\-HEADS.H\char`\"{}}\par
+Include dependency graph for ID\_\-MM.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmmblockstruct}{mmblockstruct}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__MM_8C_aabc3e2420aaa1894ef93db2e79d46190}{LOCKBIT}~0x80
+\item 
+\#define \hyperlink{ID__MM_8C_a15d145cd64571b57c71e4d6febbad2b1}{PURGEBITS}~3
+\item 
+\#define \hyperlink{ID__MM_8C_a33789ff93c545544d0fbc18b9ee5af46}{PURGEMASK}~0xfffc
+\item 
+\#define \hyperlink{ID__MM_8C_ac89d2b87b2f92d28a64ede5b5d54de53}{BASEATTRIBUTES}~0
+\item 
+\#define \hyperlink{ID__MM_8C_a34224dc207eab1f973bca289f2929b2c}{MAXUMBS}~10
+\item 
+\#define \hyperlink{ID__MM_8C_ab83743123fce30a521eb7f46dec877d7}{GETNEWBLOCK}~\{if(!\hyperlink{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{mmfree})MML\_\-ClearBlock();\hyperlink{ID__MM_8C_ae7f89fec09993591be9e423abd165413}{mmnew}=\hyperlink{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{mmfree};\hyperlink{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{mmfree}=\hyperlink{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{mmfree}-\/$>$next;\}
+\item 
+\#define \hyperlink{ID__MM_8C_aa6e39e23784d140eccabf75ee388335e}{FREEBLOCK}(x)~\{$\ast$x-\/$>$useptr=NULL;x-\/$>$next=\hyperlink{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{mmfree};\hyperlink{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{mmfree}=x;\}
+\item 
+\#define \hyperlink{ID__MM_8C_a44c330a526c90af7338c21adcc69fa63}{HEIGHTRATIO}~0.50
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structmmblockstruct}{mmblockstruct} \hyperlink{ID__MM_8C_aba8d0fc620c14641ef8c8087c2b3f154}{mmblocktype}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__MM_8C_a3d0cc007e353ee4e2524ce8130f88a04}{MML\_\-CheckForEMS} (void)
+\item 
+void \hyperlink{ID__MM_8C_a90282750bde00d338d4b0c2e68afc907}{MML\_\-ShutdownEMS} (void)
+\item 
+void \hyperlink{ID__MM_8C_a20e7b852401a185c1f4fca0efbb3758d}{MM\_\-MapEMS} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__MM_8C_ab77139f5a70f190511309c251f116a5b}{MML\_\-CheckForXMS} (void)
+\item 
+void \hyperlink{ID__MM_8C_ab34f4240c62f16e618c5827c9696c5d5}{MML\_\-ShutdownXMS} (void)
+\item 
+void \hyperlink{ID__MM_8C_abf7ebac49c519babe994fbe8bb070d04}{MML\_\-UseSpace} (unsigned segstart, unsigned seglength)
+\item 
+void \hyperlink{ID__MM_8C_a5a89f418ab9c8e24a72f2bd014f042bc}{MML\_\-ClearBlock} (void)
+\item 
+void \hyperlink{ID__MM_8C_a942a00587dd60a98e4b34a244edb2ca2}{MML\_\-SetupXMS} (void)
+\item 
+void \hyperlink{ID__MM_8C_aba99c48e5510e09666eee49955206aad}{MM\_\-Startup} (void)
+\item 
+void \hyperlink{ID__MM_8C_a11098a9c2f07a2b9ebda237a659b0ef3}{MM\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__MM_8C_ab70f353278bae916507eb350c39f4ebb}{MM\_\-GetPtr} (\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} $\ast$baseptr, unsigned long size)
+\item 
+void \hyperlink{ID__MM_8C_a9464693cb68e9a8ed7586855952f197a}{MM\_\-FreePtr} (\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} $\ast$baseptr)
+\item 
+void \hyperlink{ID__MM_8C_a114de4a52bcc47e8d668ab78a7c702c9}{MM\_\-SetPurge} (\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} $\ast$baseptr, int purge)
+\item 
+void \hyperlink{ID__MM_8C_acbec6e3295a580e1067bbd69ea89d275}{MM\_\-SetLock} (\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} $\ast$baseptr, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} locked)
+\item 
+void \hyperlink{ID__MM_8C_a1ab3355666068dc56c6d591354b17a3e}{MM\_\-SortMem} (void)
+\item 
+void \hyperlink{ID__MM_8C_ac00e670ca581737e0e534b94959b5dbf}{MM\_\-ShowMemory} (void)
+\item 
+void \hyperlink{ID__MM_8C_a5bcc193971082edd803319a5e107b54c}{MM\_\-DumpData} (void)
+\item 
+long \hyperlink{ID__MM_8C_aa26a7b3f7516bf637f814c67b4791800}{MM\_\-UnusedMemory} (void)
+\item 
+long \hyperlink{ID__MM_8C_a50561a6be4f4de9e6c017fc231d3e2a9}{MM\_\-TotalFree} (void)
+\item 
+void \hyperlink{ID__MM_8C_aec67dba21150a6028caa41540d8575ca}{MM\_\-BombOnError} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} bomb)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structmminfotype}{mminfotype} \hyperlink{ID__MM_8C_ac3be51de4543720a019084a1445fe497}{mminfo}
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__MM_8C_a08b9369ae972be8f272065cdf755c4f7}{bufferseg}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__MM_8C_ae7aac7996350e0ba6ec288d45c450b68}{mmerror}
+\item 
+void($\ast$ \hyperlink{ID__MM_8C_a615c8b50b8f67f423250c0ac676a9809}{beforesort} )(void)
+\item 
+void($\ast$ \hyperlink{ID__MM_8C_ae0417d5723e6713c09a179a9c89b1f14}{aftersort} )(void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__MM_8C_ad8f4bbba342cb366093cbf387ee765e0}{mmstarted}
+\item 
+void far $\ast$ \hyperlink{ID__MM_8C_af6225e828577deb78408396b668247b3}{farheap}
+\item 
+void $\ast$ \hyperlink{ID__MM_8C_ac7faf2fe2aacd6309c7ccc8c000fd384}{nearheap}
+\item 
+\hyperlink{structmmblockstruct}{mmblocktype} far \hyperlink{ID__MM_8C_ab30f9819af4fc84362a9a65dc7e75c92}{mmblocks} \mbox{[}MAXBLOCKS\mbox{]}
+\item 
+\hyperlink{structmmblockstruct}{mmblocktype} far far $\ast$ \hyperlink{ID__MM_8C_a333674074ebb771f34d9bb3386fc6ce2}{mmhead}
+\item 
+\hyperlink{structmmblockstruct}{mmblocktype} far far far $\ast$ \hyperlink{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{mmfree}
+\item 
+\hyperlink{structmmblockstruct}{mmblocktype} far far far far $\ast$ \hyperlink{ID__MM_8C_aca288c079a7723294af053529cd35cfb}{mmrover}
+\item 
+\hyperlink{structmmblockstruct}{mmblocktype} far far far far far $\ast$ \hyperlink{ID__MM_8C_ae7f89fec09993591be9e423abd165413}{mmnew}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__MM_8C_aa0256f88979feb018bba721a5fcf118e}{bombonerror}
+\item 
+void($\ast$ \hyperlink{ID__MM_8C_a2930e4b216dbf278c4e5240d6a91838a}{XMSaddr} )(void)
+\item 
+unsigned \hyperlink{ID__MM_8C_a43127bf93728af9cfda3afb6ab3def5d}{numUMBs}
+\item 
+unsigned \hyperlink{ID__MM_8C_a81cb635daffbf2fe86d9a814a0e98de1}{UMBbase} \mbox{[}MAXUMBS\mbox{]}
+\item 
+static char $\ast$ \hyperlink{ID__MM_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{ParmStrings} \mbox{[}$\,$\mbox{]} = \{\char`\"{}noems\char`\"{},\char`\"{}noxms\char`\"{},\char`\"{}\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__MM_8C_ac89d2b87b2f92d28a64ede5b5d54de53}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!BASEATTRIBUTES@{BASEATTRIBUTES}}
+\index{BASEATTRIBUTES@{BASEATTRIBUTES}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{BASEATTRIBUTES}]{\setlength{\rightskip}{0pt plus 5cm}\#define BASEATTRIBUTES~0}}
+\label{ID__MM_8C_ac89d2b87b2f92d28a64ede5b5d54de53}
+\hypertarget{ID__MM_8C_aa6e39e23784d140eccabf75ee388335e}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!FREEBLOCK@{FREEBLOCK}}
+\index{FREEBLOCK@{FREEBLOCK}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{FREEBLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define FREEBLOCK(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{$\ast$x-\/$>$useptr=NULL;x-\/$>$next={\bf mmfree};{\bf mmfree}=x;\}}}
+\label{ID__MM_8C_aa6e39e23784d140eccabf75ee388335e}
+\hypertarget{ID__MM_8C_ab83743123fce30a521eb7f46dec877d7}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!GETNEWBLOCK@{GETNEWBLOCK}}
+\index{GETNEWBLOCK@{GETNEWBLOCK}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{GETNEWBLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define GETNEWBLOCK~\{if(!{\bf mmfree})MML\_\-ClearBlock();{\bf mmnew}={\bf mmfree};{\bf mmfree}={\bf mmfree}-\/$>$next;\}}}
+\label{ID__MM_8C_ab83743123fce30a521eb7f46dec877d7}
+\hypertarget{ID__MM_8C_a44c330a526c90af7338c21adcc69fa63}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!HEIGHTRATIO@{HEIGHTRATIO}}
+\index{HEIGHTRATIO@{HEIGHTRATIO}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{HEIGHTRATIO}]{\setlength{\rightskip}{0pt plus 5cm}\#define HEIGHTRATIO~0.50}}
+\label{ID__MM_8C_a44c330a526c90af7338c21adcc69fa63}
+\hypertarget{ID__MM_8C_aabc3e2420aaa1894ef93db2e79d46190}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!LOCKBIT@{LOCKBIT}}
+\index{LOCKBIT@{LOCKBIT}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{LOCKBIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOCKBIT~0x80}}
+\label{ID__MM_8C_aabc3e2420aaa1894ef93db2e79d46190}
+\hypertarget{ID__MM_8C_a34224dc207eab1f973bca289f2929b2c}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MAXUMBS@{MAXUMBS}}
+\index{MAXUMBS@{MAXUMBS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MAXUMBS}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXUMBS~10}}
+\label{ID__MM_8C_a34224dc207eab1f973bca289f2929b2c}
+\hypertarget{ID__MM_8C_a15d145cd64571b57c71e4d6febbad2b1}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!PURGEBITS@{PURGEBITS}}
+\index{PURGEBITS@{PURGEBITS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{PURGEBITS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PURGEBITS~3}}
+\label{ID__MM_8C_a15d145cd64571b57c71e4d6febbad2b1}
+\hypertarget{ID__MM_8C_a33789ff93c545544d0fbc18b9ee5af46}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!PURGEMASK@{PURGEMASK}}
+\index{PURGEMASK@{PURGEMASK}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{PURGEMASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PURGEMASK~0xfffc}}
+\label{ID__MM_8C_a33789ff93c545544d0fbc18b9ee5af46}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{ID__MM_8C_aba8d0fc620c14641ef8c8087c2b3f154}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmblocktype@{mmblocktype}}
+\index{mmblocktype@{mmblocktype}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmblocktype}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf mmblockstruct}  {\bf mmblocktype}}}
+\label{ID__MM_8C_aba8d0fc620c14641ef8c8087c2b3f154}
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__MM_8C_aec67dba21150a6028caa41540d8575ca}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-BombOnError@{MM\_\-BombOnError}}
+\index{MM\_\-BombOnError@{MM\_\-BombOnError}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-BombOnError}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-BombOnError (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{bomb}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_aec67dba21150a6028caa41540d8575ca}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_aec67dba21150a6028caa41540d8575ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a5bcc193971082edd803319a5e107b54c}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-DumpData@{MM\_\-DumpData}}
+\index{MM\_\-DumpData@{MM\_\-DumpData}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-DumpData}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-DumpData (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a5bcc193971082edd803319a5e107b54c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{ID__MM_8C_a5bcc193971082edd803319a5e107b54c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a9464693cb68e9a8ed7586855952f197a}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-FreePtr@{MM\_\-FreePtr}}
+\index{MM\_\-FreePtr@{MM\_\-FreePtr}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-FreePtr}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-FreePtr (
+\begin{DoxyParamCaption}
+\item[{{\bf memptr} $\ast$}]{baseptr}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a9464693cb68e9a8ed7586855952f197a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{ID__MM_8C_a9464693cb68e9a8ed7586855952f197a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__MM_8C_a9464693cb68e9a8ed7586855952f197a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_ab70f353278bae916507eb350c39f4ebb}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-GetPtr@{MM\_\-GetPtr}}
+\index{MM\_\-GetPtr@{MM\_\-GetPtr}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-GetPtr}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-GetPtr (
+\begin{DoxyParamCaption}
+\item[{{\bf memptr} $\ast$}]{baseptr, }
+\item[{unsigned long}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_ab70f353278bae916507eb350c39f4ebb}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_ab70f353278bae916507eb350c39f4ebb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__MM_8C_ab70f353278bae916507eb350c39f4ebb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a20e7b852401a185c1f4fca0efbb3758d}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-MapEMS@{MM\_\-MapEMS}}
+\index{MM\_\-MapEMS@{MM\_\-MapEMS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-MapEMS}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-MapEMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a20e7b852401a185c1f4fca0efbb3758d}
+\hypertarget{ID__MM_8C_acbec6e3295a580e1067bbd69ea89d275}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-SetLock@{MM\_\-SetLock}}
+\index{MM\_\-SetLock@{MM\_\-SetLock}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-SetLock}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-SetLock (
+\begin{DoxyParamCaption}
+\item[{{\bf memptr} $\ast$}]{baseptr, }
+\item[{{\bf boolean}}]{locked}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_acbec6e3295a580e1067bbd69ea89d275}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{ID__MM_8C_acbec6e3295a580e1067bbd69ea89d275_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__MM_8C_acbec6e3295a580e1067bbd69ea89d275_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a114de4a52bcc47e8d668ab78a7c702c9}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-SetPurge@{MM\_\-SetPurge}}
+\index{MM\_\-SetPurge@{MM\_\-SetPurge}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-SetPurge}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-SetPurge (
+\begin{DoxyParamCaption}
+\item[{{\bf memptr} $\ast$}]{baseptr, }
+\item[{int}]{purge}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a114de4a52bcc47e8d668ab78a7c702c9}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{ID__MM_8C_a114de4a52bcc47e8d668ab78a7c702c9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_a114de4a52bcc47e8d668ab78a7c702c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_ac00e670ca581737e0e534b94959b5dbf}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-ShowMemory@{MM\_\-ShowMemory}}
+\index{MM\_\-ShowMemory@{MM\_\-ShowMemory}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-ShowMemory}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-ShowMemory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_ac00e670ca581737e0e534b94959b5dbf}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_ac00e670ca581737e0e534b94959b5dbf_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a11098a9c2f07a2b9ebda237a659b0ef3}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-Shutdown@{MM\_\-Shutdown}}
+\index{MM\_\-Shutdown@{MM\_\-Shutdown}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a11098a9c2f07a2b9ebda237a659b0ef3}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__MM_8C_a11098a9c2f07a2b9ebda237a659b0ef3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a1ab3355666068dc56c6d591354b17a3e}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-SortMem@{MM\_\-SortMem}}
+\index{MM\_\-SortMem@{MM\_\-SortMem}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-SortMem}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-SortMem (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a1ab3355666068dc56c6d591354b17a3e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_a1ab3355666068dc56c6d591354b17a3e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_a1ab3355666068dc56c6d591354b17a3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_aba99c48e5510e09666eee49955206aad}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-Startup@{MM\_\-Startup}}
+\index{MM\_\-Startup@{MM\_\-Startup}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void MM\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_aba99c48e5510e09666eee49955206aad}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_aba99c48e5510e09666eee49955206aad_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_aba99c48e5510e09666eee49955206aad_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a50561a6be4f4de9e6c017fc231d3e2a9}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-TotalFree@{MM\_\-TotalFree}}
+\index{MM\_\-TotalFree@{MM\_\-TotalFree}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-TotalFree}]{\setlength{\rightskip}{0pt plus 5cm}long MM\_\-TotalFree (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a50561a6be4f4de9e6c017fc231d3e2a9}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_a50561a6be4f4de9e6c017fc231d3e2a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_aa26a7b3f7516bf637f814c67b4791800}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MM\_\-UnusedMemory@{MM\_\-UnusedMemory}}
+\index{MM\_\-UnusedMemory@{MM\_\-UnusedMemory}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MM\_\-UnusedMemory}]{\setlength{\rightskip}{0pt plus 5cm}long MM\_\-UnusedMemory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_aa26a7b3f7516bf637f814c67b4791800}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_aa26a7b3f7516bf637f814c67b4791800_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a3d0cc007e353ee4e2524ce8130f88a04}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MML\_\-CheckForEMS@{MML\_\-CheckForEMS}}
+\index{MML\_\-CheckForEMS@{MML\_\-CheckForEMS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MML\_\-CheckForEMS}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} MML\_\-CheckForEMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a3d0cc007e353ee4e2524ce8130f88a04}
+\hypertarget{ID__MM_8C_ab77139f5a70f190511309c251f116a5b}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MML\_\-CheckForXMS@{MML\_\-CheckForXMS}}
+\index{MML\_\-CheckForXMS@{MML\_\-CheckForXMS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MML\_\-CheckForXMS}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} MML\_\-CheckForXMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_ab77139f5a70f190511309c251f116a5b}
+\hypertarget{ID__MM_8C_a5a89f418ab9c8e24a72f2bd014f042bc}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MML\_\-ClearBlock@{MML\_\-ClearBlock}}
+\index{MML\_\-ClearBlock@{MML\_\-ClearBlock}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MML\_\-ClearBlock}]{\setlength{\rightskip}{0pt plus 5cm}void MML\_\-ClearBlock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a5a89f418ab9c8e24a72f2bd014f042bc}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=352pt]{ID__MM_8C_a5a89f418ab9c8e24a72f2bd014f042bc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a942a00587dd60a98e4b34a244edb2ca2}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MML\_\-SetupXMS@{MML\_\-SetupXMS}}
+\index{MML\_\-SetupXMS@{MML\_\-SetupXMS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MML\_\-SetupXMS}]{\setlength{\rightskip}{0pt plus 5cm}void MML\_\-SetupXMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a942a00587dd60a98e4b34a244edb2ca2}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=370pt]{ID__MM_8C_a942a00587dd60a98e4b34a244edb2ca2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__MM_8C_a90282750bde00d338d4b0c2e68afc907}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MML\_\-ShutdownEMS@{MML\_\-ShutdownEMS}}
+\index{MML\_\-ShutdownEMS@{MML\_\-ShutdownEMS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MML\_\-ShutdownEMS}]{\setlength{\rightskip}{0pt plus 5cm}void MML\_\-ShutdownEMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_a90282750bde00d338d4b0c2e68afc907}
+\hypertarget{ID__MM_8C_ab34f4240c62f16e618c5827c9696c5d5}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MML\_\-ShutdownXMS@{MML\_\-ShutdownXMS}}
+\index{MML\_\-ShutdownXMS@{MML\_\-ShutdownXMS}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MML\_\-ShutdownXMS}]{\setlength{\rightskip}{0pt plus 5cm}void MML\_\-ShutdownXMS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_ab34f4240c62f16e618c5827c9696c5d5}
+\hypertarget{ID__MM_8C_abf7ebac49c519babe994fbe8bb070d04}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!MML\_\-UseSpace@{MML\_\-UseSpace}}
+\index{MML\_\-UseSpace@{MML\_\-UseSpace}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{MML\_\-UseSpace}]{\setlength{\rightskip}{0pt plus 5cm}void MML\_\-UseSpace (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{segstart, }
+\item[{unsigned}]{seglength}
+\end{DoxyParamCaption}
+)}}
+\label{ID__MM_8C_abf7ebac49c519babe994fbe8bb070d04}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{ID__MM_8C_abf7ebac49c519babe994fbe8bb070d04_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__MM_8C_abf7ebac49c519babe994fbe8bb070d04_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__MM_8C_ae0417d5723e6713c09a179a9c89b1f14}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!aftersort@{aftersort}}
+\index{aftersort@{aftersort}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{aftersort}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$  {\bf aftersort})(void)}}
+\label{ID__MM_8C_ae0417d5723e6713c09a179a9c89b1f14}
+\hypertarget{ID__MM_8C_a615c8b50b8f67f423250c0ac676a9809}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!beforesort@{beforesort}}
+\index{beforesort@{beforesort}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{beforesort}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$  {\bf beforesort})(void)}}
+\label{ID__MM_8C_a615c8b50b8f67f423250c0ac676a9809}
+\hypertarget{ID__MM_8C_aa0256f88979feb018bba721a5fcf118e}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!bombonerror@{bombonerror}}
+\index{bombonerror@{bombonerror}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{bombonerror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf bombonerror}}}
+\label{ID__MM_8C_aa0256f88979feb018bba721a5fcf118e}
+\hypertarget{ID__MM_8C_a08b9369ae972be8f272065cdf755c4f7}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!bufferseg@{bufferseg}}
+\index{bufferseg@{bufferseg}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{bufferseg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} {\bf bufferseg}}}
+\label{ID__MM_8C_a08b9369ae972be8f272065cdf755c4f7}
+\hypertarget{ID__MM_8C_af6225e828577deb78408396b668247b3}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!farheap@{farheap}}
+\index{farheap@{farheap}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{farheap}]{\setlength{\rightskip}{0pt plus 5cm}void far$\ast$ {\bf farheap}}}
+\label{ID__MM_8C_af6225e828577deb78408396b668247b3}
+\hypertarget{ID__MM_8C_ab30f9819af4fc84362a9a65dc7e75c92}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmblocks@{mmblocks}}
+\index{mmblocks@{mmblocks}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmblocks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mmblocktype} far {\bf mmblocks}\mbox{[}MAXBLOCKS\mbox{]}}}
+\label{ID__MM_8C_ab30f9819af4fc84362a9a65dc7e75c92}
+\hypertarget{ID__MM_8C_ae7aac7996350e0ba6ec288d45c450b68}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmerror@{mmerror}}
+\index{mmerror@{mmerror}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmerror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf mmerror}}}
+\label{ID__MM_8C_ae7aac7996350e0ba6ec288d45c450b68}
+\hypertarget{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmfree@{mmfree}}
+\index{mmfree@{mmfree}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmfree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mmblocktype} far far far$\ast$ {\bf mmfree}}}
+\label{ID__MM_8C_abdac14ac0a96a28e4b111015263bd9fa}
+\hypertarget{ID__MM_8C_a333674074ebb771f34d9bb3386fc6ce2}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmhead@{mmhead}}
+\index{mmhead@{mmhead}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmhead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mmblocktype} far far$\ast$ {\bf mmhead}}}
+\label{ID__MM_8C_a333674074ebb771f34d9bb3386fc6ce2}
+\hypertarget{ID__MM_8C_ac3be51de4543720a019084a1445fe497}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mminfo@{mminfo}}
+\index{mminfo@{mminfo}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mminfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mminfotype} {\bf mminfo}}}
+\label{ID__MM_8C_ac3be51de4543720a019084a1445fe497}
+\hypertarget{ID__MM_8C_ae7f89fec09993591be9e423abd165413}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmnew@{mmnew}}
+\index{mmnew@{mmnew}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmnew}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mmblocktype} far far far far far$\ast$ {\bf mmnew}}}
+\label{ID__MM_8C_ae7f89fec09993591be9e423abd165413}
+\hypertarget{ID__MM_8C_aca288c079a7723294af053529cd35cfb}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmrover@{mmrover}}
+\index{mmrover@{mmrover}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmrover}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mmblocktype} far far far far$\ast$ {\bf mmrover}}}
+\label{ID__MM_8C_aca288c079a7723294af053529cd35cfb}
+\hypertarget{ID__MM_8C_ad8f4bbba342cb366093cbf387ee765e0}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!mmstarted@{mmstarted}}
+\index{mmstarted@{mmstarted}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{mmstarted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf mmstarted}}}
+\label{ID__MM_8C_ad8f4bbba342cb366093cbf387ee765e0}
+\hypertarget{ID__MM_8C_ac7faf2fe2aacd6309c7ccc8c000fd384}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!nearheap@{nearheap}}
+\index{nearheap@{nearheap}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{nearheap}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf nearheap}}}
+\label{ID__MM_8C_ac7faf2fe2aacd6309c7ccc8c000fd384}
+\hypertarget{ID__MM_8C_a43127bf93728af9cfda3afb6ab3def5d}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!numUMBs@{numUMBs}}
+\index{numUMBs@{numUMBs}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{numUMBs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf numUMBs}}}
+\label{ID__MM_8C_a43127bf93728af9cfda3afb6ab3def5d}
+\hypertarget{ID__MM_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!ParmStrings@{ParmStrings}}
+\index{ParmStrings@{ParmStrings}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{ParmStrings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf ParmStrings}\mbox{[}$\,$\mbox{]} = \{\char`\"{}noems\char`\"{},\char`\"{}noxms\char`\"{},\char`\"{}\char`\"{}\}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__MM_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}
+\hypertarget{ID__MM_8C_a81cb635daffbf2fe86d9a814a0e98de1}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!UMBbase@{UMBbase}}
+\index{UMBbase@{UMBbase}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{UMBbase}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf UMBbase}\mbox{[}MAXUMBS\mbox{]}}}
+\label{ID__MM_8C_a81cb635daffbf2fe86d9a814a0e98de1}
+\hypertarget{ID__MM_8C_a2930e4b216dbf278c4e5240d6a91838a}{
+\index{ID\_\-MM.C@{ID\_\-MM.C}!XMSaddr@{XMSaddr}}
+\index{XMSaddr@{XMSaddr}!ID_MM.C@{ID\_\-MM.C}}
+\subsubsection[{XMSaddr}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$  {\bf XMSaddr})(void)}}
+\label{ID__MM_8C_a2930e4b216dbf278c4e5240d6a91838a}

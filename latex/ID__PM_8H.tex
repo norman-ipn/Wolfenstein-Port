@@ -1,0 +1,467 @@
+\hypertarget{ID__PM_8H}{
+\section{ID\_\-PM.H File Reference}
+\label{ID__PM_8H}\index{ID\_\-PM.H@{ID\_\-PM.H}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8H__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structPageListStruct}{PageListStruct}
+\item 
+struct \hyperlink{structEMSListStruct}{EMSListStruct}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__PM_8H_a856b167f452e867314b42dde91dd1984}{EMSPageSize}~16384
+\item 
+\#define \hyperlink{ID__PM_8H_a30071d9742e4792a5cea0c8d787a27a9}{EMSPageSizeSeg}~(EMSPageSize $>$$>$ 4)
+\item 
+\#define \hyperlink{ID__PM_8H_a3c0e4d41b64141a953315eda7ef6bf7c}{EMSPageSizeKB}~(EMSPageSize $>$$>$ 10)
+\item 
+\#define \hyperlink{ID__PM_8H_afffc419fcd53fc6a4f50bd6d9854bd1d}{EMSFrameCount}~4
+\item 
+\#define \hyperlink{ID__PM_8H_a5e4c70ba1e278d1d2fb9cec2b0fecadb}{PMPageSize}~4096
+\item 
+\#define \hyperlink{ID__PM_8H_a7d4ab7bf0b85e8db8ee6ceccacb16e39}{PMPageSizeSeg}~(PMPageSize $>$$>$ 4)
+\item 
+\#define \hyperlink{ID__PM_8H_aca70fe2da2793734afbb08715dd5d545}{PMPageSizeKB}~(PMPageSize $>$$>$ 10)
+\item 
+\#define \hyperlink{ID__PM_8H_a9f2f9b21608730589c4e27d6aa584959}{PMEMSSubPage}~(EMSPageSize / PMPageSize)
+\item 
+\#define \hyperlink{ID__PM_8H_a5a6fe12b7cbcef7f1fb3c798f3265db5}{PMMinMainMem}~10
+\item 
+\#define \hyperlink{ID__PM_8H_a82525b0875c0007597f80f287b853d05}{PMMaxMainMem}~100
+\item 
+\#define \hyperlink{ID__PM_8H_a7340787578cedc2eff541f5ce36699ac}{PMThrashThreshold}~1
+\item 
+\#define \hyperlink{ID__PM_8H_ace1e6a95fd1690cf5163da52e8334dbf}{PMUnThrashThreshold}~5
+\item 
+\#define \hyperlink{ID__PM_8H_a01b9735ae9bc9f8601a2dca0e4b6faf3}{PM\_\-GetSoundPage}(v)~PM\_\-GetPage(\hyperlink{ID__PM_8H_a4274c51cf3dd5e7fd0c4562376e91d3b}{PMSoundStart} + (v))
+\item 
+\#define \hyperlink{ID__PM_8H_ae0fd66bb8ceae9630194a465a8fc2acd}{PM\_\-GetSpritePage}(v)~PM\_\-GetPage(\hyperlink{ID__PM_8H_ac15156742487c3e546be66ffc29b4473}{PMSpriteStart} + (v))
+\item 
+\#define \hyperlink{ID__PM_8H_a1b8d94c3a62d20f392ed7aab4a593342}{PM\_\-LockMainMem}()~PM\_\-SetMainMemPurge(0)
+\item 
+\#define \hyperlink{ID__PM_8H_acd7ffa4f7a2767e6707daa821671e46b}{PM\_\-UnlockMainMem}()~PM\_\-SetMainMemPurge(3)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ID__PM_8H_a470960f2645467be319a542ef1f65851}{PMLockType} \{ \hyperlink{ID__PM_8H_a470960f2645467be319a542ef1f65851ad7573300e04abc96d2c781318ab78f1a}{pml\_\-Unlocked}, 
+\hyperlink{ID__PM_8H_a470960f2645467be319a542ef1f65851a7efa3ea64a5cae5233dd638ca11b35d6}{pml\_\-Locked}
+ \}
+\item 
+enum \hyperlink{ID__PM_8H_a061921eacd832e8d25698aed67818b5b}{PMBlockAttr} \{ \hyperlink{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba439b0558ad54d83b7cca487607714a76}{pmba\_\-Unused} =  0, 
+\hyperlink{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba99ecca1f78b2189c74695a5171796a07}{pmba\_\-Used} =  1, 
+\hyperlink{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba807fb1ba068480551947952c5dd1c14c}{pmba\_\-Allocated} =  2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__PM_8H_a5e5ef876a9184793502a2a5b6884e2d0}{PM\_\-Startup} (void)
+\item 
+void \hyperlink{ID__PM_8H_a4c8f2bd44f288cb9d7d9c4abe52ffa8c}{PM\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__PM_8H_a25eb3f2f08365f6707cb60a298b2366e}{PM\_\-Reset} (void)
+\item 
+void \hyperlink{ID__PM_8H_ab97049dc4c67f252768239ca432f4204}{PM\_\-Preload} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean}($\ast$\hyperlink{WL__PLAY_8C_a377ee66e839b90ae7140bb0dbde6c696}{update})(\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} current, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} total))
+\item 
+void \hyperlink{ID__PM_8H_a18e14139add000a914aa1c385ad33f34}{PM\_\-NextFrame} (void)
+\item 
+void \hyperlink{ID__PM_8H_a1e7da5d85fc01341f8f9a893ddc87cfc}{PM\_\-SetPageLock} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum}, \hyperlink{ID__PM_8H_a470960f2645467be319a542ef1f65851}{PMLockType} lock)
+\item 
+void \hyperlink{ID__PM_8H_aaf911d3a6de179ab5a3bc27e9d263a99}{PM\_\-SetMainPurge} (int level)
+\item 
+void \hyperlink{ID__PM_8H_a2a4e1e1198255c4890972680f9fb5a15}{PM\_\-CheckMainMem} (void)
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8H_a6d8376b84fdfd88c991b82d9d9cebcfd}{PM\_\-GetPageAddress} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum})
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__PM_8H_a80f33d5bd3e0a9a388063a78edf53329}{PM\_\-GetPage} (int \hyperlink{WL__TEXT_8C_ad303d1f16fd753775f930d896512b75b}{pagenum})
+\item 
+void \hyperlink{ID__PM_8H_a5182c3fcfa8dd2f64fa5e9b8254dc991}{PM\_\-SetMainMemPurge} (int level)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8H_a5f57a31d9e6a665cbebbb452d757de61}{XMSPresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__PM_8H_ab35be0811b0150bb1a52eaad6d3d6340}{EMSPresent}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8H_ac00fcb63e290e188116ecc3f43ec3f93}{XMSPagesAvail}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8H_a0b3caaa008ec8ab4b8486880a825bad0}{EMSPagesAvail}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8H_af385634b054d3e3d81d85865b3d7e71e}{ChunksInFile}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8H_ac15156742487c3e546be66ffc29b4473}{PMSpriteStart}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__PM_8H_a4274c51cf3dd5e7fd0c4562376e91d3b}{PMSoundStart}
+\item 
+\hyperlink{structPageListStruct}{PageListStruct} far $\ast$ \hyperlink{ID__PM_8H_aac6e5bfd3ae3497c8b721679578d73f1}{PMPages}
+\item 
+char \hyperlink{ID__PM_8H_a3d2a1c78f3a8c484f8b2ed0cbe566453}{PageFileName} \mbox{[}13\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__PM_8H_afffc419fcd53fc6a4f50bd6d9854bd1d}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!EMSFrameCount@{EMSFrameCount}}
+\index{EMSFrameCount@{EMSFrameCount}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{EMSFrameCount}]{\setlength{\rightskip}{0pt plus 5cm}\#define EMSFrameCount~4}}
+\label{ID__PM_8H_afffc419fcd53fc6a4f50bd6d9854bd1d}
+\hypertarget{ID__PM_8H_a856b167f452e867314b42dde91dd1984}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!EMSPageSize@{EMSPageSize}}
+\index{EMSPageSize@{EMSPageSize}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{EMSPageSize}]{\setlength{\rightskip}{0pt plus 5cm}\#define EMSPageSize~16384}}
+\label{ID__PM_8H_a856b167f452e867314b42dde91dd1984}
+\hypertarget{ID__PM_8H_a3c0e4d41b64141a953315eda7ef6bf7c}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!EMSPageSizeKB@{EMSPageSizeKB}}
+\index{EMSPageSizeKB@{EMSPageSizeKB}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{EMSPageSizeKB}]{\setlength{\rightskip}{0pt plus 5cm}\#define EMSPageSizeKB~(EMSPageSize $>$$>$ 10)}}
+\label{ID__PM_8H_a3c0e4d41b64141a953315eda7ef6bf7c}
+\hypertarget{ID__PM_8H_a30071d9742e4792a5cea0c8d787a27a9}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!EMSPageSizeSeg@{EMSPageSizeSeg}}
+\index{EMSPageSizeSeg@{EMSPageSizeSeg}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{EMSPageSizeSeg}]{\setlength{\rightskip}{0pt plus 5cm}\#define EMSPageSizeSeg~(EMSPageSize $>$$>$ 4)}}
+\label{ID__PM_8H_a30071d9742e4792a5cea0c8d787a27a9}
+\hypertarget{ID__PM_8H_a01b9735ae9bc9f8601a2dca0e4b6faf3}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-GetSoundPage@{PM\_\-GetSoundPage}}
+\index{PM\_\-GetSoundPage@{PM\_\-GetSoundPage}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-GetSoundPage}]{\setlength{\rightskip}{0pt plus 5cm}\#define PM\_\-GetSoundPage(
+\begin{DoxyParamCaption}
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~PM\_\-GetPage({\bf PMSoundStart} + (v))}}
+\label{ID__PM_8H_a01b9735ae9bc9f8601a2dca0e4b6faf3}
+\hypertarget{ID__PM_8H_ae0fd66bb8ceae9630194a465a8fc2acd}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-GetSpritePage@{PM\_\-GetSpritePage}}
+\index{PM\_\-GetSpritePage@{PM\_\-GetSpritePage}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-GetSpritePage}]{\setlength{\rightskip}{0pt plus 5cm}\#define PM\_\-GetSpritePage(
+\begin{DoxyParamCaption}
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~PM\_\-GetPage({\bf PMSpriteStart} + (v))}}
+\label{ID__PM_8H_ae0fd66bb8ceae9630194a465a8fc2acd}
+\hypertarget{ID__PM_8H_a1b8d94c3a62d20f392ed7aab4a593342}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-LockMainMem@{PM\_\-LockMainMem}}
+\index{PM\_\-LockMainMem@{PM\_\-LockMainMem}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-LockMainMem}]{\setlength{\rightskip}{0pt plus 5cm}\#define PM\_\-LockMainMem(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~PM\_\-SetMainMemPurge(0)}}
+\label{ID__PM_8H_a1b8d94c3a62d20f392ed7aab4a593342}
+\hypertarget{ID__PM_8H_acd7ffa4f7a2767e6707daa821671e46b}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-UnlockMainMem@{PM\_\-UnlockMainMem}}
+\index{PM\_\-UnlockMainMem@{PM\_\-UnlockMainMem}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-UnlockMainMem}]{\setlength{\rightskip}{0pt plus 5cm}\#define PM\_\-UnlockMainMem(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~PM\_\-SetMainMemPurge(3)}}
+\label{ID__PM_8H_acd7ffa4f7a2767e6707daa821671e46b}
+\hypertarget{ID__PM_8H_a9f2f9b21608730589c4e27d6aa584959}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMEMSSubPage@{PMEMSSubPage}}
+\index{PMEMSSubPage@{PMEMSSubPage}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMEMSSubPage}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMEMSSubPage~(EMSPageSize / PMPageSize)}}
+\label{ID__PM_8H_a9f2f9b21608730589c4e27d6aa584959}
+\hypertarget{ID__PM_8H_a82525b0875c0007597f80f287b853d05}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMMaxMainMem@{PMMaxMainMem}}
+\index{PMMaxMainMem@{PMMaxMainMem}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMMaxMainMem}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMMaxMainMem~100}}
+\label{ID__PM_8H_a82525b0875c0007597f80f287b853d05}
+\hypertarget{ID__PM_8H_a5a6fe12b7cbcef7f1fb3c798f3265db5}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMMinMainMem@{PMMinMainMem}}
+\index{PMMinMainMem@{PMMinMainMem}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMMinMainMem}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMMinMainMem~10}}
+\label{ID__PM_8H_a5a6fe12b7cbcef7f1fb3c798f3265db5}
+\hypertarget{ID__PM_8H_a5e4c70ba1e278d1d2fb9cec2b0fecadb}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMPageSize@{PMPageSize}}
+\index{PMPageSize@{PMPageSize}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMPageSize}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMPageSize~4096}}
+\label{ID__PM_8H_a5e4c70ba1e278d1d2fb9cec2b0fecadb}
+\hypertarget{ID__PM_8H_aca70fe2da2793734afbb08715dd5d545}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMPageSizeKB@{PMPageSizeKB}}
+\index{PMPageSizeKB@{PMPageSizeKB}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMPageSizeKB}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMPageSizeKB~(PMPageSize $>$$>$ 10)}}
+\label{ID__PM_8H_aca70fe2da2793734afbb08715dd5d545}
+\hypertarget{ID__PM_8H_a7d4ab7bf0b85e8db8ee6ceccacb16e39}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMPageSizeSeg@{PMPageSizeSeg}}
+\index{PMPageSizeSeg@{PMPageSizeSeg}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMPageSizeSeg}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMPageSizeSeg~(PMPageSize $>$$>$ 4)}}
+\label{ID__PM_8H_a7d4ab7bf0b85e8db8ee6ceccacb16e39}
+\hypertarget{ID__PM_8H_a7340787578cedc2eff541f5ce36699ac}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMThrashThreshold@{PMThrashThreshold}}
+\index{PMThrashThreshold@{PMThrashThreshold}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMThrashThreshold}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMThrashThreshold~1}}
+\label{ID__PM_8H_a7340787578cedc2eff541f5ce36699ac}
+\hypertarget{ID__PM_8H_ace1e6a95fd1690cf5163da52e8334dbf}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMUnThrashThreshold@{PMUnThrashThreshold}}
+\index{PMUnThrashThreshold@{PMUnThrashThreshold}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMUnThrashThreshold}]{\setlength{\rightskip}{0pt plus 5cm}\#define PMUnThrashThreshold~5}}
+\label{ID__PM_8H_ace1e6a95fd1690cf5163da52e8334dbf}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{ID__PM_8H_a061921eacd832e8d25698aed67818b5b}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMBlockAttr@{PMBlockAttr}}
+\index{PMBlockAttr@{PMBlockAttr}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMBlockAttr}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PMBlockAttr}}}
+\label{ID__PM_8H_a061921eacd832e8d25698aed67818b5b}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{pmba\_\-Unused@{pmba\_\-Unused}!ID\_\-PM.H@{ID\_\-PM.H}}\index{ID\_\-PM.H@{ID\_\-PM.H}!pmba\_\-Unused@{pmba\_\-Unused}}\item[{\em 
+\hypertarget{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba439b0558ad54d83b7cca487607714a76}{
+pmba\_\-Unused}
+\label{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba439b0558ad54d83b7cca487607714a76}
+}]\index{pmba\_\-Used@{pmba\_\-Used}!ID\_\-PM.H@{ID\_\-PM.H}}\index{ID\_\-PM.H@{ID\_\-PM.H}!pmba\_\-Used@{pmba\_\-Used}}\item[{\em 
+\hypertarget{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba99ecca1f78b2189c74695a5171796a07}{
+pmba\_\-Used}
+\label{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba99ecca1f78b2189c74695a5171796a07}
+}]\index{pmba\_\-Allocated@{pmba\_\-Allocated}!ID\_\-PM.H@{ID\_\-PM.H}}\index{ID\_\-PM.H@{ID\_\-PM.H}!pmba\_\-Allocated@{pmba\_\-Allocated}}\item[{\em 
+\hypertarget{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba807fb1ba068480551947952c5dd1c14c}{
+pmba\_\-Allocated}
+\label{ID__PM_8H_a061921eacd832e8d25698aed67818b5ba807fb1ba068480551947952c5dd1c14c}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{ID__PM_8H_a470960f2645467be319a542ef1f65851}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMLockType@{PMLockType}}
+\index{PMLockType@{PMLockType}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMLockType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf PMLockType}}}
+\label{ID__PM_8H_a470960f2645467be319a542ef1f65851}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{pml\_\-Unlocked@{pml\_\-Unlocked}!ID\_\-PM.H@{ID\_\-PM.H}}\index{ID\_\-PM.H@{ID\_\-PM.H}!pml\_\-Unlocked@{pml\_\-Unlocked}}\item[{\em 
+\hypertarget{ID__PM_8H_a470960f2645467be319a542ef1f65851ad7573300e04abc96d2c781318ab78f1a}{
+pml\_\-Unlocked}
+\label{ID__PM_8H_a470960f2645467be319a542ef1f65851ad7573300e04abc96d2c781318ab78f1a}
+}]\index{pml\_\-Locked@{pml\_\-Locked}!ID\_\-PM.H@{ID\_\-PM.H}}\index{ID\_\-PM.H@{ID\_\-PM.H}!pml\_\-Locked@{pml\_\-Locked}}\item[{\em 
+\hypertarget{ID__PM_8H_a470960f2645467be319a542ef1f65851a7efa3ea64a5cae5233dd638ca11b35d6}{
+pml\_\-Locked}
+\label{ID__PM_8H_a470960f2645467be319a542ef1f65851a7efa3ea64a5cae5233dd638ca11b35d6}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__PM_8H_a2a4e1e1198255c4890972680f9fb5a15}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-CheckMainMem@{PM\_\-CheckMainMem}}
+\index{PM\_\-CheckMainMem@{PM\_\-CheckMainMem}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-CheckMainMem}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-CheckMainMem (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a2a4e1e1198255c4890972680f9fb5a15}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8H_a2a4e1e1198255c4890972680f9fb5a15_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8H_a2a4e1e1198255c4890972680f9fb5a15_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8H_a80f33d5bd3e0a9a388063a78edf53329}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-GetPage@{PM\_\-GetPage}}
+\index{PM\_\-GetPage@{PM\_\-GetPage}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-GetPage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} PM\_\-GetPage (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a80f33d5bd3e0a9a388063a78edf53329}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8H_a80f33d5bd3e0a9a388063a78edf53329_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__PM_8H_a80f33d5bd3e0a9a388063a78edf53329_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8H_a6d8376b84fdfd88c991b82d9d9cebcfd}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-GetPageAddress@{PM\_\-GetPageAddress}}
+\index{PM\_\-GetPageAddress@{PM\_\-GetPageAddress}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-GetPageAddress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} PM\_\-GetPageAddress (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a6d8376b84fdfd88c991b82d9d9cebcfd}
+\hypertarget{ID__PM_8H_a18e14139add000a914aa1c385ad33f34}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-NextFrame@{PM\_\-NextFrame}}
+\index{PM\_\-NextFrame@{PM\_\-NextFrame}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-NextFrame}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-NextFrame (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a18e14139add000a914aa1c385ad33f34}
+\hypertarget{ID__PM_8H_ab97049dc4c67f252768239ca432f4204}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-Preload@{PM\_\-Preload}}
+\index{PM\_\-Preload@{PM\_\-Preload}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-Preload}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Preload (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}($\ast$)({\bf word} current, {\bf word} total)}]{update}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_ab97049dc4c67f252768239ca432f4204}
+\hypertarget{ID__PM_8H_a25eb3f2f08365f6707cb60a298b2366e}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-Reset@{PM\_\-Reset}}
+\index{PM\_\-Reset@{PM\_\-Reset}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a25eb3f2f08365f6707cb60a298b2366e}
+\hypertarget{ID__PM_8H_a5182c3fcfa8dd2f64fa5e9b8254dc991}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-SetMainMemPurge@{PM\_\-SetMainMemPurge}}
+\index{PM\_\-SetMainMemPurge@{PM\_\-SetMainMemPurge}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-SetMainMemPurge}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-SetMainMemPurge (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a5182c3fcfa8dd2f64fa5e9b8254dc991}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=388pt]{ID__PM_8H_a5182c3fcfa8dd2f64fa5e9b8254dc991_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__PM_8H_aaf911d3a6de179ab5a3bc27e9d263a99}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-SetMainPurge@{PM\_\-SetMainPurge}}
+\index{PM\_\-SetMainPurge@{PM\_\-SetMainPurge}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-SetMainPurge}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-SetMainPurge (
+\begin{DoxyParamCaption}
+\item[{int}]{level}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_aaf911d3a6de179ab5a3bc27e9d263a99}
+\hypertarget{ID__PM_8H_a1e7da5d85fc01341f8f9a893ddc87cfc}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-SetPageLock@{PM\_\-SetPageLock}}
+\index{PM\_\-SetPageLock@{PM\_\-SetPageLock}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-SetPageLock}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-SetPageLock (
+\begin{DoxyParamCaption}
+\item[{int}]{pagenum, }
+\item[{{\bf PMLockType}}]{lock}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a1e7da5d85fc01341f8f9a893ddc87cfc}
+\hypertarget{ID__PM_8H_a4c8f2bd44f288cb9d7d9c4abe52ffa8c}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-Shutdown@{PM\_\-Shutdown}}
+\index{PM\_\-Shutdown@{PM\_\-Shutdown}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a4c8f2bd44f288cb9d7d9c4abe52ffa8c}
+\hypertarget{ID__PM_8H_a5e5ef876a9184793502a2a5b6884e2d0}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PM\_\-Startup@{PM\_\-Startup}}
+\index{PM\_\-Startup@{PM\_\-Startup}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PM\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void PM\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__PM_8H_a5e5ef876a9184793502a2a5b6884e2d0}
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__PM_8H_af385634b054d3e3d81d85865b3d7e71e}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!ChunksInFile@{ChunksInFile}}
+\index{ChunksInFile@{ChunksInFile}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{ChunksInFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf ChunksInFile}}}
+\label{ID__PM_8H_af385634b054d3e3d81d85865b3d7e71e}
+\hypertarget{ID__PM_8H_a0b3caaa008ec8ab4b8486880a825bad0}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!EMSPagesAvail@{EMSPagesAvail}}
+\index{EMSPagesAvail@{EMSPagesAvail}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{EMSPagesAvail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf EMSPagesAvail}}}
+\label{ID__PM_8H_a0b3caaa008ec8ab4b8486880a825bad0}
+\hypertarget{ID__PM_8H_ab35be0811b0150bb1a52eaad6d3d6340}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!EMSPresent@{EMSPresent}}
+\index{EMSPresent@{EMSPresent}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{EMSPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf EMSPresent}}}
+\label{ID__PM_8H_ab35be0811b0150bb1a52eaad6d3d6340}
+\hypertarget{ID__PM_8H_a3d2a1c78f3a8c484f8b2ed0cbe566453}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PageFileName@{PageFileName}}
+\index{PageFileName@{PageFileName}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PageFileName}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf PageFileName}\mbox{[}13\mbox{]}}}
+\label{ID__PM_8H_a3d2a1c78f3a8c484f8b2ed0cbe566453}
+\hypertarget{ID__PM_8H_aac6e5bfd3ae3497c8b721679578d73f1}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMPages@{PMPages}}
+\index{PMPages@{PMPages}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMPages}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PageListStruct} far$\ast$ {\bf PMPages}}}
+\label{ID__PM_8H_aac6e5bfd3ae3497c8b721679578d73f1}
+\hypertarget{ID__PM_8H_a4274c51cf3dd5e7fd0c4562376e91d3b}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMSoundStart@{PMSoundStart}}
+\index{PMSoundStart@{PMSoundStart}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMSoundStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PMSoundStart}}}
+\label{ID__PM_8H_a4274c51cf3dd5e7fd0c4562376e91d3b}
+\hypertarget{ID__PM_8H_ac15156742487c3e546be66ffc29b4473}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!PMSpriteStart@{PMSpriteStart}}
+\index{PMSpriteStart@{PMSpriteStart}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{PMSpriteStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf PMSpriteStart}}}
+\label{ID__PM_8H_ac15156742487c3e546be66ffc29b4473}
+\hypertarget{ID__PM_8H_ac00fcb63e290e188116ecc3f43ec3f93}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!XMSPagesAvail@{XMSPagesAvail}}
+\index{XMSPagesAvail@{XMSPagesAvail}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{XMSPagesAvail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf XMSPagesAvail}}}
+\label{ID__PM_8H_ac00fcb63e290e188116ecc3f43ec3f93}
+\hypertarget{ID__PM_8H_a5f57a31d9e6a665cbebbb452d757de61}{
+\index{ID\_\-PM.H@{ID\_\-PM.H}!XMSPresent@{XMSPresent}}
+\index{XMSPresent@{XMSPresent}!ID_PM.H@{ID\_\-PM.H}}
+\subsubsection[{XMSPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf XMSPresent}}}
+\label{ID__PM_8H_a5f57a31d9e6a665cbebbb452d757de61}

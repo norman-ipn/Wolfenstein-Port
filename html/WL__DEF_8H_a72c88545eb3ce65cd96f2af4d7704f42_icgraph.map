@@ -1,0 +1,36 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="661,201,752,230"/>
+<area shape="rect" id="node24" href="$WL__MENU_8H.html#a2ca12f5b43c80ee49b36a78621ac8ce4" title="CP_LoadGame" alt="" coords="149,22,259,51"/>
+<area shape="rect" id="node33" href="$WL__GAME_8C.html#a27540b39d401cbea76d1dc2d5d701736" title="Died" alt="" coords="825,379,873,409"/>
+<area shape="rect" id="node36" href="$WL__GAME_8C.html#ad8f8ba380685262789e9d6931e35e34a" title="DrawPlayScreen" alt="" coords="144,149,264,178"/>
+<area shape="rect" id="node43" href="$WL__DEF_8H.html#ad7b857c66f0f0e7bc7b961a9d2024538" title="HealSelf" alt="" coords="168,329,240,358"/>
+<area shape="rect" id="node56" href="$WL__DEF_8H.html#a383b7b6dc8f0fe10dde5eeaeeb0e9b76" title="TakeDamage" alt="" coords="155,539,253,569"/>
+<area shape="rect" id="node5" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="812,201,887,230"/>
+<area shape="rect" id="node7" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="943,254,1028,283"/>
+<area shape="rect" id="node18" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="944,111,1027,141"/>
+<area shape="rect" id="node21" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="936,165,1035,194"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1083,138,1168,167"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1216,138,1267,167"/>
+<area shape="rect" id="node13" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1316,111,1404,141"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1453,138,1528,167"/>
+<area shape="rect" id="node26" href="$WL__MENU_8H.html#a95a8089ef599aecc8a81f90ba35032dd" title="CP_CheckQuick" alt="" coords="312,22,432,51"/>
+<area shape="rect" id="node28" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="480,22,603,51"/>
+<area shape="rect" id="node45" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="327,382,417,411"/>
+<area shape="rect" id="node48" href="$WL__DEF_8H.html#ae541a99035c0697e4b819dbe96f16a6a" title="GetBonus" alt="" coords="332,329,412,358"/>
+<area shape="rect" id="node50" href="$WL__DRAW_8C.html#a3f31beef974ac9e631c4b634d91ba701" title="DrawScaleds" alt="" coords="492,379,591,409"/>
+<area shape="rect" id="node52" href="$WL__DRAW_8C.html#abde2aab3bb185f39bd50f4574444a034" title="ThreeDRefresh" alt="" coords="652,379,761,409"/>
+<area shape="rect" id="node59" href="$WL__STATE_8C.html#acc590a0c3cb09dd88e7727cbed040ec4" title="MoveObj" alt="" coords="335,673,409,702"/>
+<area shape="rect" id="node81" href="$WL__ACT2_8C.html#a550a43a3c7dddea4766d2814e8418959" title="T_Bite" alt="" coords="343,726,401,755"/>
+<area shape="rect" id="node83" href="$WL__ACT2_8C.html#a1f08a6f94411997213ae0175f6dcf3f4" title="T_Projectile" alt="" coords="327,513,417,542"/>
+<area shape="rect" id="node85" href="$WL__ACT2_8C.html#aef356ee8bcc0d70959cad379dc991266" title="T_Shoot" alt="" coords="337,566,407,595"/>
+<area shape="rect" id="node61" href="$WL__ACT2_8C.html#a91daf02857f7ca74eae329b0329fb66e" title="T_BJJump" alt="" coords="499,966,584,995"/>
+<area shape="rect" id="node63" href="$WL__ACT2_8C.html#a7a0e7fd0cd65af1f29fb483e7690e46e" title="T_BJRun" alt="" coords="503,486,580,515"/>
+<area shape="rect" id="node65" href="$WL__ACT2_8C.html#a2d2e0445a6661b21ec497072f261b2c0" title="T_Chase" alt="" coords="504,539,579,569"/>
+<area shape="rect" id="node67" href="$WL__ACT2_8C.html#a1723fcb57e315538ff5dbe4f9b5f28a0" title="T_DogChase" alt="" coords="492,593,591,622"/>
+<area shape="rect" id="node69" href="$WL__ACT2_8C.html#a5f8b7b86236c7cc444781f34eba13965" title="T_Fake" alt="" coords="508,646,575,675"/>
+<area shape="rect" id="node71" href="$WL__ACT2_8C.html#a7ef997abd87b43b1e1fd675f6aefb5e8" title="T_Fat" alt="" coords="513,699,569,729"/>
+<area shape="rect" id="node73" href="$WL__ACT2_8C.html#a6bde7f5f6c9bef2510fd97adacbfd707" title="T_Ghosts" alt="" coords="503,753,580,782"/>
+<area shape="rect" id="node75" href="$WL__ACT2_8C.html#aa143ff701cf1be118333ca0bb097bc72" title="T_Gift" alt="" coords="512,806,571,835"/>
+<area shape="rect" id="node77" href="$WL__ACT2_8C.html#a297fbc8b826bdbe6e04f2fe6a0c2a128" title="T_Path" alt="" coords="509,859,573,889"/>
+<area shape="rect" id="node79" href="$WL__ACT2_8C.html#ab666f1455bb55512f01418413679962a" title="T_Schabb" alt="" coords="501,913,581,942"/>
+</map>

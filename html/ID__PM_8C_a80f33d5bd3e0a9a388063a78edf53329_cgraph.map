@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__PM_8C.html#a6d8376b84fdfd88c991b82d9d9cebcfd" title="PM_GetPageAddress" alt="" coords="996,354,1143,383"/>
+<area shape="rect" id="node9" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1567,274,1612,303"/>
+<area shape="rect" id="node12" href="$ID__PM_8C.html#a15cc7513b41c134b24cd20536a63f892" title="PML_GetPageFromXMS" alt="" coords="156,146,321,175"/>
+<area shape="rect" id="node32" href="$ID__PM_8C.html#a14156f3e9e18532f92f4c00e761fa0b7" title="PML_LoadPage" alt="" coords="181,199,296,228"/>
+<area shape="rect" id="node5" href="$ID__PM_8C.html#aa4215b4363055b96b571bedb294d39a2" title="PML_GetEMSAddress" alt="" coords="1203,326,1357,355"/>
+<area shape="rect" id="node7" href="$ID__PM_8C.html#ab2f720eba0924c15d0a7c6a487fc0626" title="PML_MapEMS" alt="" coords="1407,351,1516,380"/>
+<area shape="rect" id="node14" href="$ID__PM_8C.html#a4694a0931f68c73c15c7cdd4b6a4cb61" title="PML_GetAPageBuffer" alt="" coords="372,172,521,202"/>
+<area shape="rect" id="node17" href="$ID__PM_8C.html#a1a23d717675f8d14bd6e07bb7bcbd4b4" title="PML_GiveLRUPage" alt="" coords="793,95,932,124"/>
+<area shape="rect" id="node20" href="$ID__PM_8C.html#aa2abd895c0ac117de4d033b6850a9a07" title="PML_TransferPageSpace" alt="" coords="571,327,741,356"/>
+<area shape="rect" id="node23" href="$ID__PM_8C.html#a0b6f9ec457913559bcff1d9258a15552" title="PML_PutPageInXMS" alt="" coords="789,300,936,330"/>
+<area shape="rect" id="node26" href="$ID__PM_8C.html#aa3210f7fc8e7367f2349cd17cbec0c67" title="PML_GiveLRUXMSPage" alt="" coords="985,300,1153,330"/>
+<area shape="rect" id="node35" href="$ID__PM_8C.html#a3e8875fd1618f89f3e98f9d2ae4f0945" title="PML_ReadFromFile" alt="" coords="1211,456,1349,486"/>
+<area shape="rect" id="node37" href="$ID__CA_8C.html#a9d7ef0e3d4f10f25abd940094a4db437" title="CA_FarRead" alt="" coords="1412,507,1511,536"/>
+</map>

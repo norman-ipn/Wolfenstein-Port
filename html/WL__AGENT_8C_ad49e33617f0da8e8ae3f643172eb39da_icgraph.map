@@ -1,0 +1,21 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__AGENT_8C.html#a6091384ff3bca148557c73627df60b77" title="ControlMovement" alt="" coords="112,59,237,88"/>
+<area shape="rect" id="node9" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="1535,187,1620,216"/>
+<area shape="rect" id="node20" href="$WL__DEF_8H.html#a4bc0a75c89b1b52cf115c63b5c07ff9c" title="SpawnPlayer" alt="" coords="125,187,224,216"/>
+<area shape="rect" id="node5" href="$WL__AGENT_8C.html#a0cce1c4b64372c27c6ff79e6fb397772" title="T_Attack" alt="" coords="301,5,376,35"/>
+<area shape="rect" id="node7" href="$WL__AGENT_8C.html#a146c62d526ddb53a04fe11af48e91c96" title="T_Player" alt="" coords="301,59,376,88"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1675,291,1760,320"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1808,291,1859,320"/>
+<area shape="rect" id="node15" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1908,264,1996,293"/>
+<area shape="rect" id="node17" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="2045,291,2120,320"/>
+<area shape="rect" id="node22" href="$WL__GAME_8C.html#a6bcecf9f4e1aed0d5a8de0e3395b73e7" title="ScanInfoPlane" alt="" coords="285,200,392,229"/>
+<area shape="rect" id="node24" href="$WL__GAME_8C.html#a272fa7f65051688198cb04c666d9977a" title="SetupGameLevel" alt="" coords="440,212,563,241"/>
+<area shape="rect" id="node27" href="$WL__MAIN_8C.html#adff0b7d9c79b6ba94151102b17d7e8d2" title="LoadTheGame" alt="" coords="611,264,717,293"/>
+<area shape="rect" id="node40" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="1536,368,1619,397"/>
+<area shape="rect" id="node43" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="1528,264,1627,293"/>
+<area shape="rect" id="node29" href="$WL__MENU_8H.html#a2ca12f5b43c80ee49b36a78621ac8ce4" title="CP_LoadGame" alt="" coords="767,264,876,293"/>
+<area shape="rect" id="node31" href="$WL__MENU_8H.html#a95a8089ef599aecc8a81f90ba35032dd" title="CP_CheckQuick" alt="" coords="925,264,1045,293"/>
+<area shape="rect" id="node33" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="1093,289,1216,319"/>
+<area shape="rect" id="node35" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="1264,264,1355,293"/>
+<area shape="rect" id="node37" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="1404,264,1479,293"/>
+</map>

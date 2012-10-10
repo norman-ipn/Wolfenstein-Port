@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$CONTIGSC_8C.html#a1d7dcb4682fb94ac602a78018af0b729" title="BadScale" alt="" coords="333,25,411,55"/>
+<area shape="rect" id="node7" href="$CONTIGSC_8C.html#a26b6d656e36ed0bff277b79c96ba9993" title="BuildCompScale" alt="" coords="153,153,271,183"/>
+<area shape="rect" id="node9" href="$ID__MM_8C.html#a9464693cb68e9a8ed7586855952f197a" title="MM_FreePtr" alt="" coords="165,207,259,236"/>
+<area shape="rect" id="node12" href="$ID__MM_8C.html#ab70f353278bae916507eb350c39f4ebb" title="MM_GetPtr" alt="" coords="168,260,256,289"/>
+<area shape="rect" id="node14" href="$ID__MM_8C.html#a1ab3355666068dc56c6d591354b17a3e" title="MM_SortMem" alt="" coords="320,391,424,420"/>
+<area shape="rect" id="node16" href="$ID__MM_8C.html#acbec6e3295a580e1067bbd69ea89d275" title="MM_SetLock" alt="" coords="488,497,587,527"/>
+<area shape="rect" id="node5" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="1069,207,1115,236"/>
+<area shape="rect" id="node43" href="$WL__DEF_8H.html#af74ea12ed1f33b5eb32cee5062ea034c" title="SetViewSize" alt="" coords="324,260,420,289"/>
+<area shape="rect" id="node19" href="$ID__SD_8C.html#a32826e61458fce0f5667e3e1f4db95f4" title="SD_SoundPlaying" alt="" coords="473,391,601,420"/>
+<area shape="rect" id="node21" href="$ID__SD_8C.html#ac98e41e0645d624d0645219c8eca9615" title="SD_StopSound" alt="" coords="481,444,593,473"/>
+<area shape="rect" id="node23" href="$ID__SD_8C.html#af508ee24c35bb22fae070def8e7c80ac" title="SD_StopDigitized" alt="" coords="657,444,783,473"/>
+<area shape="rect" id="node36" href="$ID__SD_8C.html#ac4a243a2df697871871f0d62df9248db" title="SDL_ALStopSound" alt="" coords="653,524,787,553"/>
+<area shape="rect" id="node40" href="$ID__SD_8C.html#a8fdd4a72618197048986b80ee715e96f" title="SDL_PCStopSound" alt="" coords="651,391,789,420"/>
+<area shape="rect" id="node25" href="$ID__PM_8C.html#a1e7da5d85fc01341f8f9a893ddc87cfc" title="PM_SetPageLock" alt="" coords="848,391,973,420"/>
+<area shape="rect" id="node28" href="$ID__SD_8C.html#a6cca2dc7a94fe6d4e6a69b7f320b452a" title="SDL_PCStopSample" alt="" coords="839,444,983,473"/>
+<area shape="rect" id="node32" href="$ID__SD_8C.html#ad0bed6aae151cee1ce9b468e83a16c57" title="SDL_SBStopSample" alt="" coords="839,497,983,527"/>
+<area shape="rect" id="node34" href="$ID__SD_8C.html#a4b4cb4383cfa055401dc7ff4ff6f0104" title="SDL_SSStopSample" alt="" coords="839,337,983,367"/>
+<area shape="rect" id="node30" href="$ID__SD_8C.html#a6e015404fba7543853cacd8420353315" title="SDL_IndicatePC" alt="" coords="1032,444,1152,473"/>
+<area shape="rect" id="node38" href="$ID__SD_8C.html#a022c0a65b79644cb7ea86a2ce77b3c42" title="alOut" alt="" coords="884,551,937,580"/>
+<area shape="rect" id="node45" href="$WL__DEF_8H.html#a82156c01cf0c6b616ccb2bc2dff569a6" title="CalcProjection" alt="" coords="484,337,591,367"/>
+<area shape="rect" id="node47" href="$ID__MM_8C.html#aec67dba21150a6028caa41540d8575ca" title="MM_BombOnError" alt="" coords="472,180,603,209"/>
+<area shape="rect" id="node50" href="$CONTIGSC_8C.html#aaba41b509b2c39129abfed4d8e0e4255" title="SetupScaling" alt="" coords="488,233,587,263"/>
+</map>

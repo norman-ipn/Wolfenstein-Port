@@ -1,0 +1,25 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__SD_8C.html#ac98e41e0645d624d0645219c8eca9615" title="SD_StopSound" alt="" coords="209,192,321,221"/>
+<area shape="rect" id="node25" href="$ID__SD_8C.html#a51f0387c80c08ae6998f221ee1d6f708" title="SDL_SetTimerSpeed" alt="" coords="193,377,337,407"/>
+<area shape="rect" id="node37" href="$ID__SD_8C.html#aad3ecb7d81310a813ea9ba6efa0df733" title="SDL_ShutDevice" alt="" coords="204,484,327,513"/>
+<area shape="rect" id="node47" href="$ID__SD_8C.html#abe37c30b8a1828d8e6b362c0a8321979" title="SDL_StartDevice" alt="" coords="204,564,327,593"/>
+<area shape="rect" id="node5" href="$ID__SD_8C.html#af508ee24c35bb22fae070def8e7c80ac" title="SD_StopDigitized" alt="" coords="417,112,543,141"/>
+<area shape="rect" id="node19" href="$ID__SD_8C.html#ac4a243a2df697871871f0d62df9248db" title="SDL_ALStopSound" alt="" coords="628,219,761,248"/>
+<area shape="rect" id="node23" href="$ID__SD_8C.html#a8fdd4a72618197048986b80ee715e96f" title="SDL_PCStopSound" alt="" coords="411,217,549,247"/>
+<area shape="rect" id="node7" href="$ID__PM_8C.html#a1e7da5d85fc01341f8f9a893ddc87cfc" title="PM_SetPageLock" alt="" coords="632,5,757,35"/>
+<area shape="rect" id="node11" href="$ID__SD_8C.html#a6cca2dc7a94fe6d4e6a69b7f320b452a" title="SDL_PCStopSample" alt="" coords="623,59,767,88"/>
+<area shape="rect" id="node15" href="$ID__SD_8C.html#ad0bed6aae151cee1ce9b468e83a16c57" title="SDL_SBStopSample" alt="" coords="623,112,767,141"/>
+<area shape="rect" id="node17" href="$ID__SD_8C.html#a4b4cb4383cfa055401dc7ff4ff6f0104" title="SDL_SSStopSample" alt="" coords="623,165,767,195"/>
+<area shape="rect" id="node9" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="853,5,899,35"/>
+<area shape="rect" id="node13" href="$ID__SD_8C.html#a6e015404fba7543853cacd8420353315" title="SDL_IndicatePC" alt="" coords="816,59,936,88"/>
+<area shape="rect" id="node21" href="$ID__SD_8C.html#a022c0a65b79644cb7ea86a2ce77b3c42" title="alOut" alt="" coords="849,511,903,540"/>
+<area shape="rect" id="node27" href="$ID__SD_8C.html#a70d1b72a654197d7c8c8c3ffbc22760c" title="SDL_SetIntsPerSec" alt="" coords="411,271,549,300"/>
+<area shape="rect" id="node31" href="$ID__SD_8C.html#a310e24eb0bb48c6c4417eab2a7841e15" title="SDL_t0ExtremeAsmService" alt="" coords="387,324,573,353"/>
+<area shape="rect" id="node33" href="$ID__SD_8C.html#ab2123ddce52686655810e1b5ff3c2cc9" title="SDL_t0FastAsmService" alt="" coords="399,377,561,407"/>
+<area shape="rect" id="node35" href="$ID__SD_8C.html#aee695286ef3f3f5f5c4e2d14c88b5e2f" title="SDL_t0SlowAsmService" alt="" coords="397,431,563,460"/>
+<area shape="rect" id="node29" href="$ID__SD_8C.html#a4bc3d9ad81cb035c1487a23854c9ccbe" title="SDL_SetTimer0" alt="" coords="637,272,752,301"/>
+<area shape="rect" id="node39" href="$ID__SD_8C.html#a51fac7990ca45eb8b7f395f27fb11f7b" title="SDL_ShutAL" alt="" coords="431,484,529,513"/>
+<area shape="rect" id="node45" href="$ID__SD_8C.html#ad8432c97c60c7aab1e75effb21ac2dbc" title="SDL_ShutPC" alt="" coords="429,537,531,567"/>
+<area shape="rect" id="node42" href="$ID__SD_8C.html#ab8f9c2968095da11c38e622b6026b595" title="SDL_AlSetFXInst" alt="" coords="632,536,757,565"/>
+<area shape="rect" id="node49" href="$ID__SD_8C.html#a3a39ea51ec25b1a106353d8cba49719f" title="SDL_StartAL" alt="" coords="431,591,529,620"/>
+</map>

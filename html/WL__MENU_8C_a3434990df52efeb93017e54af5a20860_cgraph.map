@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MENU_8C.html#a203c5a4b291ebd6bf7b0fb11b5905e6c" title="ReadAnyControl" alt="" coords="145,85,263,115"/>
+<area shape="rect" id="node5" href="$ID__IN_8C.html#abc6dd93d0e7777cd67e20f61361f353d" title="IN_JoyButtons" alt="" coords="321,5,431,35"/>
+<area shape="rect" id="node7" href="$ID__IN_8C.html#a1dc32dd9a62a416001a9954a70dc4563" title="IN_MouseButtons" alt="" coords="313,59,439,88"/>
+<area shape="rect" id="node9" href="$ID__IN_8C.html#ae921141c5b424cfe4cec9d47f13bd2ca" title="IN_ReadControl" alt="" coords="319,189,433,219"/>
+<area shape="rect" id="node13" href="$ID__IN_8C.html#ad02d54392fab25e9c6e4208ba8c8baab" title="INL_GetJoyDelta" alt="" coords="504,96,627,125"/>
+<area shape="rect" id="node11" href="$ID__IN_8C.html#a15454e5c5f20b31d906b8f49c34ae67b" title="INL_GetJoyButtons" alt="" coords="497,149,633,179"/>
+<area shape="rect" id="node17" href="$ID__IN_8C.html#a4eb848df1ba13e0b61452d4b69b54b0c" title="INL_GetMouseButtons" alt="" coords="488,203,643,232"/>
+<area shape="rect" id="node19" href="$ID__IN_8C.html#a8fc59bb3511dd04107773f88b3063763" title="INL_GetMouseDelta" alt="" coords="495,256,636,285"/>
+<area shape="rect" id="node21" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="543,309,588,339"/>
+<area shape="rect" id="node15" href="$ID__IN_8C.html#aa9699bbe72cdd2c7a2f8d5f291ec1e76" title="IN_GetJoyAbs" alt="" coords="692,96,799,125"/>
+</map>

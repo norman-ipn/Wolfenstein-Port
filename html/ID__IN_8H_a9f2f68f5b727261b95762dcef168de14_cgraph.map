@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__IN_8C.html#a50a122900022f7051ec64d5c4613ebcf" title="IN_CheckAck" alt="" coords="155,5,259,35"/>
+<area shape="rect" id="node9" href="$ID__IN_8C.html#ac666b84a87364ddab589ceb0daaa129a" title="IN_StartAck" alt="" coords="160,59,253,88"/>
+<area shape="rect" id="node5" href="$ID__IN_8C.html#abc6dd93d0e7777cd67e20f61361f353d" title="IN_JoyButtons" alt="" coords="321,59,431,88"/>
+<area shape="rect" id="node7" href="$ID__IN_8C.html#a1dc32dd9a62a416001a9954a70dc4563" title="IN_MouseButtons" alt="" coords="313,5,439,35"/>
+<area shape="rect" id="node11" href="$ID__IN_8C.html#a20251e701cb941d1b39665a9afa51f23" title="IN_ClearKeysDown" alt="" coords="307,112,445,141"/>
+</map>

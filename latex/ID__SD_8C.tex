@@ -1,0 +1,2833 @@
+\hypertarget{ID__SD_8C}{
+\section{ID\_\-SD.C File Reference}
+\label{ID__SD_8C}\index{ID\_\-SD.C@{ID\_\-SD.C}}
+}
+{\ttfamily \#include $<$dos.h$>$}\par
+{\ttfamily \#include \char`\"{}ID\_\-HEADS.H\char`\"{}}\par
+Include dependency graph for ID\_\-SD.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__SD_8C_a7a7ca81d2a85873283b5ec82953b1b25}{nil}~0
+\item 
+\#define \hyperlink{ID__SD_8C_a4367e91effb7508f98e4215dfae889ea}{SDL\_\-SoundFinished}()~\{\hyperlink{ID__SD_8C_a4c4aa04b74e9aeb63645d0b371d03f8e}{SoundNumber} = \hyperlink{ID__SD_8C_a1082f4d01ae4202540aa8c9d40ab1208}{SoundPriority} = 0;\}
+\item 
+\#define \hyperlink{ID__SD_8C_af7f3607b9b02c650b7a022e37f8d19b0}{sbOut}(n, b)~outportb((n) + \hyperlink{ID__SD_8C_ad1041dc24d08c7fc215c300fe99c1609}{sbLocation},b)
+\item 
+\#define \hyperlink{ID__SD_8C_a3cf283ea5ef38cf11674cd9f7194e788}{sbIn}(n)~inportb((n) + \hyperlink{ID__SD_8C_ad1041dc24d08c7fc215c300fe99c1609}{sbLocation})
+\item 
+\#define \hyperlink{ID__SD_8C_a0a9efa68dd24d3e096da052c1e2886ac}{sbWriteDelay}()~while (sbIn(sbWriteStat) \& 0x80);
+\item 
+\#define \hyperlink{ID__SD_8C_a7c872881433badd3687f00851c8e9dab}{sbReadDelay}()~while (sbIn(sbDataAvail) \& 0x80);
+\item 
+\#define \hyperlink{ID__SD_8C_a15e6bd6af7db2d02d00d7a4fc4cbbf1c}{selreg}(n)~outportb(alFMAddr,n)
+\item 
+\#define \hyperlink{ID__SD_8C_a57d191c14b6c2be5bcf48210f997fe91}{writereg}(n)~outportb(alFMData,n)
+\item 
+\#define \hyperlink{ID__SD_8C_a467b4ec8e11cd774be73526dda0fd1d0}{readstat}()~inportb(alFMStatus)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__SD_8C_ad09a3e5c420fbc2e1920f64d496a3bc4}{SDL\_\-SetDS} (void)
+\item 
+void \hyperlink{ID__SD_8C_a6e015404fba7543853cacd8420353315}{SDL\_\-IndicatePC} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} on)
+\item 
+void interrupt \hyperlink{ID__SD_8C_a310e24eb0bb48c6c4417eab2a7841e15}{SDL\_\-t0ExtremeAsmService} (void)
+\item 
+void interrupt \hyperlink{ID__SD_8C_ab2123ddce52686655810e1b5ff3c2cc9}{SDL\_\-t0FastAsmService} (void)
+\item 
+void interrupt \hyperlink{ID__SD_8C_aee695286ef3f3f5f5c4e2d14c88b5e2f}{SDL\_\-t0SlowAsmService} (void)
+\item 
+void \hyperlink{ID__SD_8C_a4de0adfa6affaec933d21e3d0967faf0}{SDL\_\-DigitizedDone} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a4bc3d9ad81cb035c1487a23854c9ccbe}{SDL\_\-SetTimer0} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} speed)
+\item 
+static void \hyperlink{ID__SD_8C_a70d1b72a654197d7c8c8c3ffbc22760c}{SDL\_\-SetIntsPerSec} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} ints)
+\item 
+static void \hyperlink{ID__SD_8C_a51f0387c80c08ae6998f221ee1d6f708}{SDL\_\-SetTimerSpeed} (void)
+\item 
+static void \hyperlink{ID__SD_8C_ad0bed6aae151cee1ce9b468e83a16c57}{SDL\_\-SBStopSample} (void)
+\item 
+static \hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_a4c2002d25ab5bf2f1d36e7253a6111dc}{SDL\_\-SBPlaySeg} (volatile \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} huge $\ast$data, \hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} length)
+\item 
+static void interrupt \hyperlink{ID__SD_8C_ae4006462bf5e2e456f22aed3a75fd07e}{SDL\_\-SBService} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a3ff88aa9463c98a55f373152277e70f7}{SDL\_\-SBPlaySample} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} huge $\ast$data, \hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} len)
+\item 
+static void \hyperlink{ID__SD_8C_a39df2c8b2c24885f28dcebdda4db4062}{SDL\_\-PositionSBP} (int leftpos, int rightpos)
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a5425e51a77b3c1fcc2837766bf514933}{SDL\_\-CheckSB} (int port)
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_aaabd0f719e3f77d97e06d7f8888dace7}{SDL\_\-DetectSoundBlaster} (int port)
+\item 
+void \hyperlink{ID__SD_8C_a5af19b40b692f6731aec85373fa70184}{SDL\_\-SBSetDMA} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} channel)
+\item 
+static void \hyperlink{ID__SD_8C_ac8739ef15d834d9509ba1c34998c4e69}{SDL\_\-StartSB} (void)
+\item 
+static void \hyperlink{ID__SD_8C_ae4b2df23a45a69c1fc95b28f90b16161}{SDL\_\-ShutSB} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a4b4cb4383cfa055401dc7ff4ff6f0104}{SDL\_\-SSStopSample} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a3de2826da55134038984872d4df10fa6}{SDL\_\-SSService} (void)
+\item 
+static void \hyperlink{ID__SD_8C_ad99758f0e9faeac84caa0d153d36c9d1}{SDL\_\-SSPlaySample} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} huge $\ast$data, \hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} len)
+\item 
+static void \hyperlink{ID__SD_8C_a7eb0e3e805cbe44878c2309c4333bdb7}{SDL\_\-StartSS} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a0b2fcc77394b5931fe5e1cf3708345af}{SDL\_\-ShutSS} (void)
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a4efddc6ce316dcbf3faba8369ea72559}{SDL\_\-CheckSS} (void)
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a336af0952076adf1cc0fc9d3c38cc6f0}{SDL\_\-DetectSoundSource} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a0b081a781f9a4e26ec9ce5939cad8601}{SDL\_\-PCPlaySample} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} huge $\ast$data, \hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} len)
+\item 
+static void \hyperlink{ID__SD_8C_a6cca2dc7a94fe6d4e6a69b7f320b452a}{SDL\_\-PCStopSample} (void)
+\item 
+static void \hyperlink{ID__SD_8C_ac3a9aef21cbe8fed7a8e4d3859acf1ec}{SDL\_\-PCPlaySound} (\hyperlink{structPCSound}{PCSound} far $\ast$sound)
+\item 
+static void \hyperlink{ID__SD_8C_a8fdd4a72618197048986b80ee715e96f}{SDL\_\-PCStopSound} (void)
+\item 
+static void \hyperlink{ID__SD_8C_ad8432c97c60c7aab1e75effb21ac2dbc}{SDL\_\-ShutPC} (void)
+\item 
+\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__SD_8C_a2ce9d108bad58960b55ec764a03a8490}{SDL\_\-LoadDigiSegment} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} page)
+\item 
+void \hyperlink{ID__SD_8C_aaf1484a4a6ce7f6fa4a457033cf03515}{SDL\_\-PlayDigiSegment} (\hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} addr, \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} len)
+\item 
+void \hyperlink{ID__SD_8C_af508ee24c35bb22fae070def8e7c80ac}{SD\_\-StopDigitized} (void)
+\item 
+void \hyperlink{ID__SD_8C_a77ae2ddf3d133b4eadcca562a7d2c9d0}{SD\_\-Poll} (void)
+\item 
+void \hyperlink{ID__SD_8C_af4e5a3078b10a358cf45bd82c027bf83}{SD\_\-SetPosition} (int leftpos, int rightpos)
+\item 
+void \hyperlink{ID__SD_8C_a2807a99740c2e669483908fc03bda952}{SD\_\-PlayDigitized} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} which, int leftpos, int rightpos)
+\item 
+void \hyperlink{ID__SD_8C_a9013619e30cc0d50d576724ca21f342a}{SD\_\-SetDigiDevice} (\hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3}{SDSMode} mode)
+\item 
+void \hyperlink{ID__SD_8C_aaa6e5b91a13ba85fc9628f255947e8e5}{SDL\_\-SetupDigi} (void)
+\item 
+void \hyperlink{ID__SD_8C_a022c0a65b79644cb7ea86a2ce77b3c42}{alOut} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} n, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} b)
+\item 
+static void \hyperlink{ID__SD_8C_ac4a243a2df697871871f0d62df9248db}{SDL\_\-ALStopSound} (void)
+\item 
+static void \hyperlink{ID__SD_8C_ab8f9c2968095da11c38e622b6026b595}{SDL\_\-AlSetFXInst} (\hyperlink{structInstrument}{Instrument} far $\ast$inst)
+\item 
+static void \hyperlink{ID__SD_8C_a45e2c8d00474ded03c3203bb310089c4}{SDL\_\-ALPlaySound} (\hyperlink{structAdLibSound}{AdLibSound} far $\ast$sound)
+\item 
+static void \hyperlink{ID__SD_8C_a51fac7990ca45eb8b7f395f27fb11f7b}{SDL\_\-ShutAL} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a10f2aeba6ae2fefe57a58e17199fbe4f}{SDL\_\-CleanAL} (void)
+\item 
+static void \hyperlink{ID__SD_8C_a3a39ea51ec25b1a106353d8cba49719f}{SDL\_\-StartAL} (void)
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_adfbbcb05d81eca7c4367b5644dcbd4cb}{SDL\_\-DetectAdLib} (void)
+\item 
+static void \hyperlink{ID__SD_8C_aad3ecb7d81310a813ea9ba6efa0df733}{SDL\_\-ShutDevice} (void)
+\item 
+static void \hyperlink{ID__SD_8C_ab688129ab28069e8c512cdf561bc9c43}{SDL\_\-CleanDevice} (void)
+\item 
+static void \hyperlink{ID__SD_8C_abe37c30b8a1828d8e6b362c0a8321979}{SDL\_\-StartDevice} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a5150708f32ce380003f87fe23288859a}{SD\_\-SetSoundMode} (\hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} mode)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_ab12f4ca416e4aa16d877ac310f7a6792}{SD\_\-SetMusicMode} (\hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{SMMode} mode)
+\item 
+void \hyperlink{ID__SD_8C_a9e273885efbb6410be25e887f5ac6bdd}{SD\_\-Startup} (void)
+\item 
+void \hyperlink{ID__SD_8C_a00b19d7c488bf8f1b9336e51831462c1}{SD\_\-Default} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} gotit, \hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} sd, \hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{SMMode} sm)
+\item 
+void \hyperlink{ID__SD_8C_ac6d96b7bc78afb4c50dba50009ea7cfa}{SD\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__SD_8C_aaa16861d631580a6d7abb257df4a9555}{SD\_\-SetUserHook} (void($\ast$hook)(void))
+\item 
+void \hyperlink{ID__SD_8C_a6709a4f68792058fd47b17196b876aee}{SD\_\-PositionSound} (int leftvol, int rightvol)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_af6a678e2015e6474a341bbd8ab03c12f}{SD\_\-PlaySound} (\hyperlink{AUDIOSDM_8H_a4a3d02bfe7b02201dbba1993b77ae7e1}{soundnames} sound)
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a32826e61458fce0f5667e3e1f4db95f4}{SD\_\-SoundPlaying} (void)
+\item 
+void \hyperlink{ID__SD_8C_ac98e41e0645d624d0645219c8eca9615}{SD\_\-StopSound} (void)
+\item 
+void \hyperlink{ID__SD_8C_a92c51dce596da266c75185c1c5b37095}{SD\_\-WaitSoundDone} (void)
+\item 
+void \hyperlink{ID__SD_8C_a3de23daedac0200fbc38736dd8c755e3}{SD\_\-MusicOn} (void)
+\item 
+void \hyperlink{ID__SD_8C_ae8e46be37d6285a8cc13d7a68c9f1a0e}{SD\_\-MusicOff} (void)
+\item 
+void \hyperlink{ID__SD_8C_a1b66a386f3785697d07238f3610e3b89}{SD\_\-StartMusic} (\hyperlink{structMusicGroup}{MusicGroup} far $\ast$music)
+\item 
+void \hyperlink{ID__SD_8C_afa09f503f31c9e9c4d77cf6dc8a0932f}{SD\_\-FadeOutMusic} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_aa097386a2a5ed395cef780871ba74a85}{SD\_\-MusicPlaying} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_ad1e0e8f0ed866e2473d8915e769852c5}{SoundSourcePresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_aae5cf4d134b52966bc2aa3de22b0dd03}{AdLibPresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a339e21cdf208764078f89b5b5f72932b}{SoundBlasterPresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_afea4696d6833498198ec4a492d05a80e}{SBProPresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a3fef6357a944508b700309276a423872}{NeedsDigitized}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_aa073cdf1c0836ab07a66b9e73bfe89cd}{NeedsMusic}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a99325c606c4f55b472ccc411b1b2bb02}{SoundPositioned}
+\item 
+\hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} \hyperlink{ID__SD_8C_ae78ec490e7f5cbb26c649cc4034546f7}{SoundMode}
+\item 
+\hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{SMMode} \hyperlink{ID__SD_8C_afcbed1bc96a4997c02b2eb0143c57ba5}{MusicMode}
+\item 
+\hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3}{SDSMode} \hyperlink{ID__SD_8C_ad359668c13523a90cddba7728a33fab9}{DigiMode}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_afae310dc5c7e77f2742ddbfc16b98dd0}{TimeCount}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_af0246b76813385402f7225b423d65c28}{HackCount}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$ \hyperlink{ID__SD_8C_ac4dbee182539e544f1fa2c52de9fd35c}{SoundTable}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a3a770af6d5ddb65c1530f9db23678f23}{ssIsTandy}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a87c9e242eb239995f5b8b3de055f9369}{ssPort} = 2
+\item 
+int \hyperlink{ID__SD_8C_a8eb2938805d7144c34e31598b0ad0263}{DigiMap} \mbox{[}LASTSOUND\mbox{]}
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_aaa7e60c2848c9a99f53b8e3d0d8f3a04}{SD\_\-Started}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_ab34ef4c36d091dd63f5b4c3046d16404}{nextsoundpos}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_a61983b653767fdf64ec0219001dc9d6f}{TimerDivisor}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_ac0891f4aad59f67cc6167b142d6d0765}{TimerCount}
+\item 
+static char $\ast$ \hyperlink{ID__SD_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{ParmStrings} \mbox{[}$\,$\mbox{]}
+\item 
+static void($\ast$ \hyperlink{ID__SD_8C_a15f5e9cb1ffb19981c28948df6691373}{SoundUserHook} )(void)
+\item 
+\hyperlink{AUDIOSDM_8H_a4a3d02bfe7b02201dbba1993b77ae7e1}{soundnames} \hyperlink{ID__SD_8C_a4c4aa04b74e9aeb63645d0b371d03f8e}{SoundNumber}
+\item 
+\hyperlink{AUDIOSDM_8H_a4a3d02bfe7b02201dbba1993b77ae7e1}{soundnames} \hyperlink{ID__SD_8C_a60d58a884f1194a15c4312ca07eeb4e7}{DigiNumber}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a1082f4d01ae4202540aa8c9d40ab1208}{SoundPriority}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_aa96b82bb4353f27d3198a6b79f08c677}{DigiPriority}
+\item 
+int \hyperlink{ID__SD_8C_aa6675177fdb4fdde5519bc5ed2de9d0a}{LeftPosition}
+\item 
+int \hyperlink{ID__SD_8C_add1e77eb812023bd620943a5d6e2d560}{RightPosition}
+\item 
+void interrupt($\ast$ \hyperlink{ID__SD_8C_a953f0c1cacd2d74a3d7c68f2fbec7291}{t0OldService} )(void)
+\item 
+long \hyperlink{ID__SD_8C_a7afd2763911a393050bf2137da76c5fd}{LocalTime}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a23bab8f4441c3742d3c4b434ee538883}{TimerRate}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a916d5f5305d88f51d724828315b59186}{NumDigi}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a89fbd187963ac377958d6b237f1fcc46}{DigiLeft}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_af8e675cf1832477b600b538ac47b7e54}{DigiPage}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \_\-seg $\ast$ \hyperlink{ID__SD_8C_a2b26601a3e4cc93dd3d9334e80b021e9}{DigiList}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a5884c076780a9146beaad7f88bb8281b}{DigiLastStart}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a8e9a757998c8a7fabc44ef7bb4df0c5e}{DigiLastEnd}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a11b9e79724767ea7fe4429444baa39c0}{DigiPlaying}
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a27f3c90423cbb815ee1b0e770a19405f}{DigiMissed}
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a175fff911b205d6eab165b4d663d18ae}{DigiLastSegment}
+\item 
+static \hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} \hyperlink{ID__SD_8C_a846fbdd67326e91ee34af59e8268175a}{DigiNextAddr}
+\item 
+static \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_ac02097e52e282e33c996fe63302ff330}{DigiNextLen}
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a770a1bd139fc8c8c3eabbaee656f7628}{sbNoCheck}
+\item 
+static \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_aad363947cccbc8a4572d133d099d9ab7}{sbNoProCheck}
+\item 
+static volatile \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_afa8de5ddf3415c8a315d1de59fd25477}{sbSamplePlaying}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a625876d28c2c21e717bec3903f217277}{sbOldIntMask} = -\/1
+\item 
+static volatile \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} huge $\ast$ \hyperlink{ID__SD_8C_a2c977a80978d5b38196f2154168d95b1}{sbNextSegPtr}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a230fef19af8ffe22851d12f5221ac36a}{sbDMA} = 1
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a029be078b8479543113f4b29b7030778}{sbDMAa1} = 0x83
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a6ecbb8a785e72da500e045352ca9fa15}{sbDMAa2} = 2
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_ab3f0ab9731e991810f84e1ef14ef28a1}{sbDMAa3} = 3
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_ac10063bd8284cccb099c26a99f7a3f2d}{sba1Vals} \mbox{[}$\,$\mbox{]} = \{0x87,0x83,0,0x82\}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a6a205b1751d365f5b708db37c7085ee6}{sba2Vals} \mbox{[}$\,$\mbox{]} = \{0,2,0,6\}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a571f30f53c21bcb0874d635d10c0ce3c}{sba3Vals} \mbox{[}$\,$\mbox{]} = \{1,3,0,7\}
+\item 
+static int \hyperlink{ID__SD_8C_ad1041dc24d08c7fc215c300fe99c1609}{sbLocation} = -\/1
+\item 
+static int \hyperlink{ID__SD_8C_a5e6359cd4b8a27fa08fd27097c547e5d}{sbInterrupt} = 7
+\item 
+static int \hyperlink{ID__SD_8C_a52f9935f686fca626defb7ec36292506}{sbIntVec} = 0xf
+\item 
+static int \hyperlink{ID__SD_8C_a74811b52c1a1ba6decadc52cfa225e25}{sbIntVectors} \mbox{[}$\,$\mbox{]} = \{-\/1,-\/1,0xa,0xb,-\/1,0xd,-\/1,0xf,-\/1,-\/1,-\/1\}
+\item 
+static volatile \hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_afaf42553cd16229e97ca17918ed5c7e0}{sbNextSegLen}
+\item 
+static volatile \hyperlink{structSampledSound}{SampledSound} huge $\ast$ \hyperlink{ID__SD_8C_a350869bbfe2aab6254a38474d4944661}{sbSamples}
+\item 
+static void interrupt($\ast$ \hyperlink{ID__SD_8C_a3e33d5500965a04a9c3c1cf959efa39b}{sbOldIntHand} )(void)
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a47faa268b0b9910d4994c5f04707b1a6}{sbpOldFMMix}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a9aab7ab61356ba1e14b8f49097650810}{sbpOldVOCMix}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a837aafc6fb5d5f9c711933cbc25c0c8f}{ssNoCheck}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_ab6c0b8a3c16c52edb3fdce3ef94637fb}{ssActive}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_ac50582571050ee8c37353e94c9c8537c}{ssControl}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a21fe4e545446608d7a38a59f55de6c40}{ssStatus}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_ab9aec2326df131568a1bb337ed215323}{ssData}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a6fe70bd7705926047ee7bb735fd9d51a}{ssOn}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_abd66f785699aa96dd9224fd0a9cff9ee}{ssOff}
+\item 
+volatile \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$ \hyperlink{ID__SD_8C_a8cf5075d58538ca559769c25a0e0415f}{ssSample}
+\item 
+volatile \hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_ae32ab0caf3dd74e04df22f5082bba2f5}{ssLengthLeft}
+\item 
+volatile \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_ae1039a6b232e32369a231bb2031bfe69}{pcLastSample}
+\item 
+volatile \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$ \hyperlink{ID__SD_8C_af79ef9eaf2fc8ba85f289bd19e36a6c5}{pcSound}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_af057ee8e6effd1195904b1b8be9412f3}{pcLengthLeft}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_ae415b11bd2fb7f86edc88c0525faeeaf}{pcSoundLookup} \mbox{[}255\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a4a1e51753cfe2aea51d99cffbcd8eb80}{alNoCheck}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$ \hyperlink{ID__SD_8C_abb64954289074edec51f58bb5a122760}{alSound}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a9e81fc8ee3c094431e403b518cbf1875}{alBlock}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_a00615a954b103b34a8699929b7311d1c}{alLengthLeft}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8C_a4d4a035e1ebf79e5bac7b8d0bdef1a98}{alTimeCount}
+\item 
+\hyperlink{structInstrument}{Instrument} \hyperlink{ID__SD_8C_a5f76467e381fc23aed5465e3d65e8a91}{alZeroInst}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a63f30f1ee0d7dfe2b7b22427ed4592ac}{carriers} \mbox{[}9\mbox{]} = \{ 3, 4, 5,11,12,13,19,20,21\}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_ab3ab25119a78988873ef0142305bd2b9}{modifiers} \mbox{[}9\mbox{]} = \{ 0, 1, 2, 8, 9,10,16,17,18\}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_abbe10755880e6acbb43dbc7a5709a3de}{pcarriers} \mbox{[}5\mbox{]} = \{19,0xff,0xff,0xff,0xff\}
+\item 
+static \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__SD_8C_a54b15c4feacf6f7b5754eb7c1a995870}{pmodifiers} \mbox{[}5\mbox{]} = \{16,17,18,20,21\}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8C_a9a9dc3817c917f6707f308b7990cf6eb}{sqActive}
+\item 
+static \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_af75a7f9861fb535b8d8ab10108148245}{alFXReg}
+\item 
+static \hyperlink{structActiveTrack}{ActiveTrack} $\ast$ \hyperlink{ID__SD_8C_a1f3baa4768a9637adddbaee049d33b53}{tracks} \mbox{[}sqMaxTracks\mbox{]}
+\item 
+static \hyperlink{structActiveTrack}{ActiveTrack} \hyperlink{ID__SD_8C_a0917c582991c0b2d37dbe77956aa94b5}{mytracks} \mbox{[}sqMaxTracks\mbox{]}
+\item 
+static \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_ac2982e37cfe58736748373d4b6fde990}{sqMode}
+\item 
+static \hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8C_a66270c63fa51ed1b83f45280950157fa}{sqFadeStep}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} far $\ast$ \hyperlink{ID__SD_8C_a88379c948bdd60bfed55a29a7614c191}{sqHack}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} far far $\ast$ \hyperlink{ID__SD_8C_a095fec841fbb98e55b05ef2ef80420ff}{sqHackPtr}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} far far \hyperlink{ID__SD_8C_aee7a7f98a0ae5f84e98b024b9b863fc9}{sqHackLen}
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} far far \hyperlink{ID__SD_8C_ac2de5c298e18c54886c534938d16229e}{sqHackSeqLen}
+\item 
+long \hyperlink{ID__SD_8C_aa1f6ea8a7e5c678d30c38c663d1ba776}{sqHackTime}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__SD_8C_a7a7ca81d2a85873283b5ec82953b1b25}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!nil@{nil}}
+\index{nil@{nil}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{nil}]{\setlength{\rightskip}{0pt plus 5cm}\#define nil~0}}
+\label{ID__SD_8C_a7a7ca81d2a85873283b5ec82953b1b25}
+\hypertarget{ID__SD_8C_a467b4ec8e11cd774be73526dda0fd1d0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!readstat@{readstat}}
+\index{readstat@{readstat}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{readstat}]{\setlength{\rightskip}{0pt plus 5cm}\#define readstat(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~inportb(alFMStatus)}}
+\label{ID__SD_8C_a467b4ec8e11cd774be73526dda0fd1d0}
+\hypertarget{ID__SD_8C_a3cf283ea5ef38cf11674cd9f7194e788}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbIn@{sbIn}}
+\index{sbIn@{sbIn}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbIn}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbIn(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~inportb((n) + {\bf sbLocation})}}
+\label{ID__SD_8C_a3cf283ea5ef38cf11674cd9f7194e788}
+\hypertarget{ID__SD_8C_af7f3607b9b02c650b7a022e37f8d19b0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbOut@{sbOut}}
+\index{sbOut@{sbOut}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbOut}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbOut(
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~outportb((n) + {\bf sbLocation},b)}}
+\label{ID__SD_8C_af7f3607b9b02c650b7a022e37f8d19b0}
+\hypertarget{ID__SD_8C_a7c872881433badd3687f00851c8e9dab}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbReadDelay@{sbReadDelay}}
+\index{sbReadDelay@{sbReadDelay}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbReadDelay}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbReadDelay(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~while (sbIn(sbDataAvail) \& 0x80);}}
+\label{ID__SD_8C_a7c872881433badd3687f00851c8e9dab}
+\hypertarget{ID__SD_8C_a0a9efa68dd24d3e096da052c1e2886ac}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbWriteDelay@{sbWriteDelay}}
+\index{sbWriteDelay@{sbWriteDelay}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbWriteDelay}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbWriteDelay(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~while (sbIn(sbWriteStat) \& 0x80);}}
+\label{ID__SD_8C_a0a9efa68dd24d3e096da052c1e2886ac}
+\hypertarget{ID__SD_8C_a4367e91effb7508f98e4215dfae889ea}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SoundFinished@{SDL\_\-SoundFinished}}
+\index{SDL\_\-SoundFinished@{SDL\_\-SoundFinished}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SoundFinished}]{\setlength{\rightskip}{0pt plus 5cm}\#define SDL\_\-SoundFinished(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{{\bf SoundNumber} = {\bf SoundPriority} = 0;\}}}
+\label{ID__SD_8C_a4367e91effb7508f98e4215dfae889ea}
+\hypertarget{ID__SD_8C_a15e6bd6af7db2d02d00d7a4fc4cbbf1c}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!selreg@{selreg}}
+\index{selreg@{selreg}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{selreg}]{\setlength{\rightskip}{0pt plus 5cm}\#define selreg(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~outportb(alFMAddr,n)}}
+\label{ID__SD_8C_a15e6bd6af7db2d02d00d7a4fc4cbbf1c}
+\hypertarget{ID__SD_8C_a57d191c14b6c2be5bcf48210f997fe91}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!writereg@{writereg}}
+\index{writereg@{writereg}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{writereg}]{\setlength{\rightskip}{0pt plus 5cm}\#define writereg(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~outportb(alFMData,n)}}
+\label{ID__SD_8C_a57d191c14b6c2be5bcf48210f997fe91}
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__SD_8C_a022c0a65b79644cb7ea86a2ce77b3c42}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alOut@{alOut}}
+\index{alOut@{alOut}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alOut}]{\setlength{\rightskip}{0pt plus 5cm}void alOut (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{n, }
+\item[{{\bf byte}}]{b}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a022c0a65b79644cb7ea86a2ce77b3c42}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a022c0a65b79644cb7ea86a2ce77b3c42_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a00b19d7c488bf8f1b9336e51831462c1}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-Default@{SD\_\-Default}}
+\index{SD\_\-Default@{SD\_\-Default}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Default (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{gotit, }
+\item[{{\bf SDMode}}]{sd, }
+\item[{{\bf SMMode}}]{sm}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a00b19d7c488bf8f1b9336e51831462c1}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a00b19d7c488bf8f1b9336e51831462c1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_afa09f503f31c9e9c4d77cf6dc8a0932f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-FadeOutMusic@{SD\_\-FadeOutMusic}}
+\index{SD\_\-FadeOutMusic@{SD\_\-FadeOutMusic}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-FadeOutMusic}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-FadeOutMusic (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_afa09f503f31c9e9c4d77cf6dc8a0932f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=368pt]{ID__SD_8C_afa09f503f31c9e9c4d77cf6dc8a0932f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_afa09f503f31c9e9c4d77cf6dc8a0932f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ae8e46be37d6285a8cc13d7a68c9f1a0e}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-MusicOff@{SD\_\-MusicOff}}
+\index{SD\_\-MusicOff@{SD\_\-MusicOff}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-MusicOff}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-MusicOff (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_ae8e46be37d6285a8cc13d7a68c9f1a0e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{ID__SD_8C_ae8e46be37d6285a8cc13d7a68c9f1a0e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ae8e46be37d6285a8cc13d7a68c9f1a0e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a3de23daedac0200fbc38736dd8c755e3}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-MusicOn@{SD\_\-MusicOn}}
+\index{SD\_\-MusicOn@{SD\_\-MusicOn}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-MusicOn}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-MusicOn (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a3de23daedac0200fbc38736dd8c755e3}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a3de23daedac0200fbc38736dd8c755e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_aa097386a2a5ed395cef780871ba74a85}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-MusicPlaying@{SD\_\-MusicPlaying}}
+\index{SD\_\-MusicPlaying@{SD\_\-MusicPlaying}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-MusicPlaying}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-MusicPlaying (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_aa097386a2a5ed395cef780871ba74a85}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aa097386a2a5ed395cef780871ba74a85_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a2807a99740c2e669483908fc03bda952}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-PlayDigitized@{SD\_\-PlayDigitized}}
+\index{SD\_\-PlayDigitized@{SD\_\-PlayDigitized}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-PlayDigitized}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-PlayDigitized (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{which, }
+\item[{int}]{leftpos, }
+\item[{int}]{rightpos}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a2807a99740c2e669483908fc03bda952}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a2807a99740c2e669483908fc03bda952_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a2807a99740c2e669483908fc03bda952_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_af6a678e2015e6474a341bbd8ab03c12f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-PlaySound@{SD\_\-PlaySound}}
+\index{SD\_\-PlaySound@{SD\_\-PlaySound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-PlaySound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-PlaySound (
+\begin{DoxyParamCaption}
+\item[{{\bf soundnames}}]{sound}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_af6a678e2015e6474a341bbd8ab03c12f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_af6a678e2015e6474a341bbd8ab03c12f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_af6a678e2015e6474a341bbd8ab03c12f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a77ae2ddf3d133b4eadcca562a7d2c9d0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-Poll@{SD\_\-Poll}}
+\index{SD\_\-Poll@{SD\_\-Poll}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Poll (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a77ae2ddf3d133b4eadcca562a7d2c9d0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a77ae2ddf3d133b4eadcca562a7d2c9d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a77ae2ddf3d133b4eadcca562a7d2c9d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a6709a4f68792058fd47b17196b876aee}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-PositionSound@{SD\_\-PositionSound}}
+\index{SD\_\-PositionSound@{SD\_\-PositionSound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-PositionSound}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-PositionSound (
+\begin{DoxyParamCaption}
+\item[{int}]{leftvol, }
+\item[{int}]{rightvol}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a6709a4f68792058fd47b17196b876aee}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{ID__SD_8C_a6709a4f68792058fd47b17196b876aee_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a9013619e30cc0d50d576724ca21f342a}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-SetDigiDevice@{SD\_\-SetDigiDevice}}
+\index{SD\_\-SetDigiDevice@{SD\_\-SetDigiDevice}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-SetDigiDevice}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-SetDigiDevice (
+\begin{DoxyParamCaption}
+\item[{{\bf SDSMode}}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a9013619e30cc0d50d576724ca21f342a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a9013619e30cc0d50d576724ca21f342a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a9013619e30cc0d50d576724ca21f342a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ab12f4ca416e4aa16d877ac310f7a6792}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-SetMusicMode@{SD\_\-SetMusicMode}}
+\index{SD\_\-SetMusicMode@{SD\_\-SetMusicMode}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-SetMusicMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-SetMusicMode (
+\begin{DoxyParamCaption}
+\item[{{\bf SMMode}}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_ab12f4ca416e4aa16d877ac310f7a6792}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ab12f4ca416e4aa16d877ac310f7a6792_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ab12f4ca416e4aa16d877ac310f7a6792_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_af4e5a3078b10a358cf45bd82c027bf83}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-SetPosition@{SD\_\-SetPosition}}
+\index{SD\_\-SetPosition@{SD\_\-SetPosition}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-SetPosition}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-SetPosition (
+\begin{DoxyParamCaption}
+\item[{int}]{leftpos, }
+\item[{int}]{rightpos}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_af4e5a3078b10a358cf45bd82c027bf83}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{ID__SD_8C_af4e5a3078b10a358cf45bd82c027bf83_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_af4e5a3078b10a358cf45bd82c027bf83_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a5150708f32ce380003f87fe23288859a}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-SetSoundMode@{SD\_\-SetSoundMode}}
+\index{SD\_\-SetSoundMode@{SD\_\-SetSoundMode}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-SetSoundMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-SetSoundMode (
+\begin{DoxyParamCaption}
+\item[{{\bf SDMode}}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a5150708f32ce380003f87fe23288859a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a5150708f32ce380003f87fe23288859a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a5150708f32ce380003f87fe23288859a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_aaa16861d631580a6d7abb257df4a9555}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-SetUserHook@{SD\_\-SetUserHook}}
+\index{SD\_\-SetUserHook@{SD\_\-SetUserHook}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-SetUserHook}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-SetUserHook (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{hook}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_aaa16861d631580a6d7abb257df4a9555}
+\hypertarget{ID__SD_8C_ac6d96b7bc78afb4c50dba50009ea7cfa}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-Shutdown@{SD\_\-Shutdown}}
+\index{SD\_\-Shutdown@{SD\_\-Shutdown}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_ac6d96b7bc78afb4c50dba50009ea7cfa}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ac6d96b7bc78afb4c50dba50009ea7cfa_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__SD_8C_ac6d96b7bc78afb4c50dba50009ea7cfa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a32826e61458fce0f5667e3e1f4db95f4}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-SoundPlaying@{SD\_\-SoundPlaying}}
+\index{SD\_\-SoundPlaying@{SD\_\-SoundPlaying}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-SoundPlaying}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} SD\_\-SoundPlaying (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a32826e61458fce0f5667e3e1f4db95f4}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a32826e61458fce0f5667e3e1f4db95f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a1b66a386f3785697d07238f3610e3b89}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-StartMusic@{SD\_\-StartMusic}}
+\index{SD\_\-StartMusic@{SD\_\-StartMusic}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-StartMusic}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-StartMusic (
+\begin{DoxyParamCaption}
+\item[{{\bf MusicGroup} far $\ast$}]{music}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a1b66a386f3785697d07238f3610e3b89}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=352pt]{ID__SD_8C_a1b66a386f3785697d07238f3610e3b89_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a1b66a386f3785697d07238f3610e3b89_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a9e273885efbb6410be25e887f5ac6bdd}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-Startup@{SD\_\-Startup}}
+\index{SD\_\-Startup@{SD\_\-Startup}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a9e273885efbb6410be25e887f5ac6bdd}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a9e273885efbb6410be25e887f5ac6bdd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a9e273885efbb6410be25e887f5ac6bdd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_af508ee24c35bb22fae070def8e7c80ac}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-StopDigitized@{SD\_\-StopDigitized}}
+\index{SD\_\-StopDigitized@{SD\_\-StopDigitized}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-StopDigitized}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-StopDigitized (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_af508ee24c35bb22fae070def8e7c80ac}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_af508ee24c35bb22fae070def8e7c80ac_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_af508ee24c35bb22fae070def8e7c80ac_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ac98e41e0645d624d0645219c8eca9615}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-StopSound@{SD\_\-StopSound}}
+\index{SD\_\-StopSound@{SD\_\-StopSound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-StopSound}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-StopSound (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_ac98e41e0645d624d0645219c8eca9615}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ac98e41e0645d624d0645219c8eca9615_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ac98e41e0645d624d0645219c8eca9615_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a92c51dce596da266c75185c1c5b37095}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-WaitSoundDone@{SD\_\-WaitSoundDone}}
+\index{SD\_\-WaitSoundDone@{SD\_\-WaitSoundDone}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-WaitSoundDone}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-WaitSoundDone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a92c51dce596da266c75185c1c5b37095}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{ID__SD_8C_a92c51dce596da266c75185c1c5b37095_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a92c51dce596da266c75185c1c5b37095_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a45e2c8d00474ded03c3203bb310089c4}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-ALPlaySound@{SDL\_\-ALPlaySound}}
+\index{SDL\_\-ALPlaySound@{SDL\_\-ALPlaySound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-ALPlaySound}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-ALPlaySound (
+\begin{DoxyParamCaption}
+\item[{{\bf AdLibSound} far $\ast$}]{sound}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a45e2c8d00474ded03c3203bb310089c4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=396pt]{ID__SD_8C_a45e2c8d00474ded03c3203bb310089c4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a45e2c8d00474ded03c3203bb310089c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ab8f9c2968095da11c38e622b6026b595}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-AlSetFXInst@{SDL\_\-AlSetFXInst}}
+\index{SDL\_\-AlSetFXInst@{SDL\_\-AlSetFXInst}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-AlSetFXInst}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-AlSetFXInst (
+\begin{DoxyParamCaption}
+\item[{{\bf Instrument} far $\ast$}]{inst}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ab8f9c2968095da11c38e622b6026b595}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{ID__SD_8C_ab8f9c2968095da11c38e622b6026b595_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ab8f9c2968095da11c38e622b6026b595_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ac4a243a2df697871871f0d62df9248db}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-ALStopSound@{SDL\_\-ALStopSound}}
+\index{SDL\_\-ALStopSound@{SDL\_\-ALStopSound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-ALStopSound}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-ALStopSound (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ac4a243a2df697871871f0d62df9248db}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ID__SD_8C_ac4a243a2df697871871f0d62df9248db_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ac4a243a2df697871871f0d62df9248db_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a5425e51a77b3c1fcc2837766bf514933}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-CheckSB@{SDL\_\-CheckSB}}
+\index{SDL\_\-CheckSB@{SDL\_\-CheckSB}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-CheckSB}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf boolean} SDL\_\-CheckSB (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a5425e51a77b3c1fcc2837766bf514933}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a5425e51a77b3c1fcc2837766bf514933_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a4efddc6ce316dcbf3faba8369ea72559}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-CheckSS@{SDL\_\-CheckSS}}
+\index{SDL\_\-CheckSS@{SDL\_\-CheckSS}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-CheckSS}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf boolean} SDL\_\-CheckSS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a4efddc6ce316dcbf3faba8369ea72559}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{ID__SD_8C_a4efddc6ce316dcbf3faba8369ea72559_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a4efddc6ce316dcbf3faba8369ea72559_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a10f2aeba6ae2fefe57a58e17199fbe4f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-CleanAL@{SDL\_\-CleanAL}}
+\index{SDL\_\-CleanAL@{SDL\_\-CleanAL}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-CleanAL}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-CleanAL (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a10f2aeba6ae2fefe57a58e17199fbe4f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{ID__SD_8C_a10f2aeba6ae2fefe57a58e17199fbe4f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a10f2aeba6ae2fefe57a58e17199fbe4f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ab688129ab28069e8c512cdf561bc9c43}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-CleanDevice@{SDL\_\-CleanDevice}}
+\index{SDL\_\-CleanDevice@{SDL\_\-CleanDevice}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-CleanDevice}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-CleanDevice (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ab688129ab28069e8c512cdf561bc9c43}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=370pt]{ID__SD_8C_ab688129ab28069e8c512cdf561bc9c43_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ab688129ab28069e8c512cdf561bc9c43_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_adfbbcb05d81eca7c4367b5644dcbd4cb}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-DetectAdLib@{SDL\_\-DetectAdLib}}
+\index{SDL\_\-DetectAdLib@{SDL\_\-DetectAdLib}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-DetectAdLib}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf boolean} SDL\_\-DetectAdLib (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_adfbbcb05d81eca7c4367b5644dcbd4cb}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{ID__SD_8C_adfbbcb05d81eca7c4367b5644dcbd4cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_adfbbcb05d81eca7c4367b5644dcbd4cb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_aaabd0f719e3f77d97e06d7f8888dace7}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-DetectSoundBlaster@{SDL\_\-DetectSoundBlaster}}
+\index{SDL\_\-DetectSoundBlaster@{SDL\_\-DetectSoundBlaster}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-DetectSoundBlaster}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf boolean} SDL\_\-DetectSoundBlaster (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_aaabd0f719e3f77d97e06d7f8888dace7}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{ID__SD_8C_aaabd0f719e3f77d97e06d7f8888dace7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aaabd0f719e3f77d97e06d7f8888dace7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a336af0952076adf1cc0fc9d3c38cc6f0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-DetectSoundSource@{SDL\_\-DetectSoundSource}}
+\index{SDL\_\-DetectSoundSource@{SDL\_\-DetectSoundSource}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-DetectSoundSource}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf boolean} SDL\_\-DetectSoundSource (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a336af0952076adf1cc0fc9d3c38cc6f0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a336af0952076adf1cc0fc9d3c38cc6f0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a336af0952076adf1cc0fc9d3c38cc6f0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a4de0adfa6affaec933d21e3d0967faf0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-DigitizedDone@{SDL\_\-DigitizedDone}}
+\index{SDL\_\-DigitizedDone@{SDL\_\-DigitizedDone}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-DigitizedDone}]{\setlength{\rightskip}{0pt plus 5cm}void SDL\_\-DigitizedDone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a4de0adfa6affaec933d21e3d0967faf0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a4de0adfa6affaec933d21e3d0967faf0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a4de0adfa6affaec933d21e3d0967faf0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a6e015404fba7543853cacd8420353315}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-IndicatePC@{SDL\_\-IndicatePC}}
+\index{SDL\_\-IndicatePC@{SDL\_\-IndicatePC}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-IndicatePC}]{\setlength{\rightskip}{0pt plus 5cm}void SDL\_\-IndicatePC (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{on}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a6e015404fba7543853cacd8420353315}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a6e015404fba7543853cacd8420353315_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a2ce9d108bad58960b55ec764a03a8490}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-LoadDigiSegment@{SDL\_\-LoadDigiSegment}}
+\index{SDL\_\-LoadDigiSegment@{SDL\_\-LoadDigiSegment}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-LoadDigiSegment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} SDL\_\-LoadDigiSegment (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{page}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a2ce9d108bad58960b55ec764a03a8490}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a2ce9d108bad58960b55ec764a03a8490_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a2ce9d108bad58960b55ec764a03a8490_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a0b081a781f9a4e26ec9ce5939cad8601}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-PCPlaySample@{SDL\_\-PCPlaySample}}
+\index{SDL\_\-PCPlaySample@{SDL\_\-PCPlaySample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-PCPlaySample}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-PCPlaySample (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} huge $\ast$}]{data, }
+\item[{{\bf longword}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a0b081a781f9a4e26ec9ce5939cad8601}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{ID__SD_8C_a0b081a781f9a4e26ec9ce5939cad8601_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a0b081a781f9a4e26ec9ce5939cad8601_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ac3a9aef21cbe8fed7a8e4d3859acf1ec}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-PCPlaySound@{SDL\_\-PCPlaySound}}
+\index{SDL\_\-PCPlaySound@{SDL\_\-PCPlaySound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-PCPlaySound}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-PCPlaySound (
+\begin{DoxyParamCaption}
+\item[{{\bf PCSound} far $\ast$}]{sound}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ac3a9aef21cbe8fed7a8e4d3859acf1ec}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ac3a9aef21cbe8fed7a8e4d3859acf1ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a6cca2dc7a94fe6d4e6a69b7f320b452a}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-PCStopSample@{SDL\_\-PCStopSample}}
+\index{SDL\_\-PCStopSample@{SDL\_\-PCStopSample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-PCStopSample}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-PCStopSample (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a6cca2dc7a94fe6d4e6a69b7f320b452a}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{ID__SD_8C_a6cca2dc7a94fe6d4e6a69b7f320b452a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a6cca2dc7a94fe6d4e6a69b7f320b452a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a8fdd4a72618197048986b80ee715e96f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-PCStopSound@{SDL\_\-PCStopSound}}
+\index{SDL\_\-PCStopSound@{SDL\_\-PCStopSound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-PCStopSound}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-PCStopSound (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a8fdd4a72618197048986b80ee715e96f}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a8fdd4a72618197048986b80ee715e96f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_aaf1484a4a6ce7f6fa4a457033cf03515}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-PlayDigiSegment@{SDL\_\-PlayDigiSegment}}
+\index{SDL\_\-PlayDigiSegment@{SDL\_\-PlayDigiSegment}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-PlayDigiSegment}]{\setlength{\rightskip}{0pt plus 5cm}void SDL\_\-PlayDigiSegment (
+\begin{DoxyParamCaption}
+\item[{{\bf memptr}}]{addr, }
+\item[{{\bf word}}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_aaf1484a4a6ce7f6fa4a457033cf03515}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aaf1484a4a6ce7f6fa4a457033cf03515_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aaf1484a4a6ce7f6fa4a457033cf03515_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a39df2c8b2c24885f28dcebdda4db4062}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-PositionSBP@{SDL\_\-PositionSBP}}
+\index{SDL\_\-PositionSBP@{SDL\_\-PositionSBP}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-PositionSBP}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-PositionSBP (
+\begin{DoxyParamCaption}
+\item[{int}]{leftpos, }
+\item[{int}]{rightpos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a39df2c8b2c24885f28dcebdda4db4062}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a39df2c8b2c24885f28dcebdda4db4062_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a3ff88aa9463c98a55f373152277e70f7}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SBPlaySample@{SDL\_\-SBPlaySample}}
+\index{SDL\_\-SBPlaySample@{SDL\_\-SBPlaySample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SBPlaySample}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SBPlaySample (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} huge $\ast$}]{data, }
+\item[{{\bf longword}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a3ff88aa9463c98a55f373152277e70f7}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{ID__SD_8C_a3ff88aa9463c98a55f373152277e70f7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a3ff88aa9463c98a55f373152277e70f7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a4c2002d25ab5bf2f1d36e7253a6111dc}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SBPlaySeg@{SDL\_\-SBPlaySeg}}
+\index{SDL\_\-SBPlaySeg@{SDL\_\-SBPlaySeg}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SBPlaySeg}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf longword} SDL\_\-SBPlaySeg (
+\begin{DoxyParamCaption}
+\item[{volatile {\bf byte} huge $\ast$}]{data, }
+\item[{{\bf longword}}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a4c2002d25ab5bf2f1d36e7253a6111dc}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a4c2002d25ab5bf2f1d36e7253a6111dc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ae4006462bf5e2e456f22aed3a75fd07e}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SBService@{SDL\_\-SBService}}
+\index{SDL\_\-SBService@{SDL\_\-SBService}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SBService}]{\setlength{\rightskip}{0pt plus 5cm}static void interrupt SDL\_\-SBService (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ae4006462bf5e2e456f22aed3a75fd07e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ae4006462bf5e2e456f22aed3a75fd07e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ae4006462bf5e2e456f22aed3a75fd07e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a5af19b40b692f6731aec85373fa70184}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SBSetDMA@{SDL\_\-SBSetDMA}}
+\index{SDL\_\-SBSetDMA@{SDL\_\-SBSetDMA}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SBSetDMA}]{\setlength{\rightskip}{0pt plus 5cm}void SDL\_\-SBSetDMA (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a5af19b40b692f6731aec85373fa70184}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{ID__SD_8C_a5af19b40b692f6731aec85373fa70184_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a5af19b40b692f6731aec85373fa70184_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ad0bed6aae151cee1ce9b468e83a16c57}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SBStopSample@{SDL\_\-SBStopSample}}
+\index{SDL\_\-SBStopSample@{SDL\_\-SBStopSample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SBStopSample}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SBStopSample (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ad0bed6aae151cee1ce9b468e83a16c57}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ad0bed6aae151cee1ce9b468e83a16c57_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ad09a3e5c420fbc2e1920f64d496a3bc4}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SetDS@{SDL\_\-SetDS}}
+\index{SDL\_\-SetDS@{SDL\_\-SetDS}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SetDS}]{\setlength{\rightskip}{0pt plus 5cm}void SDL\_\-SetDS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_ad09a3e5c420fbc2e1920f64d496a3bc4}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ad09a3e5c420fbc2e1920f64d496a3bc4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a70d1b72a654197d7c8c8c3ffbc22760c}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SetIntsPerSec@{SDL\_\-SetIntsPerSec}}
+\index{SDL\_\-SetIntsPerSec@{SDL\_\-SetIntsPerSec}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SetIntsPerSec}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SetIntsPerSec (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{ints}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a70d1b72a654197d7c8c8c3ffbc22760c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{ID__SD_8C_a70d1b72a654197d7c8c8c3ffbc22760c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a70d1b72a654197d7c8c8c3ffbc22760c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a4bc3d9ad81cb035c1487a23854c9ccbe}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SetTimer0@{SDL\_\-SetTimer0}}
+\index{SDL\_\-SetTimer0@{SDL\_\-SetTimer0}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SetTimer0}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SetTimer0 (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a4bc3d9ad81cb035c1487a23854c9ccbe}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a4bc3d9ad81cb035c1487a23854c9ccbe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a51f0387c80c08ae6998f221ee1d6f708}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SetTimerSpeed@{SDL\_\-SetTimerSpeed}}
+\index{SDL\_\-SetTimerSpeed@{SDL\_\-SetTimerSpeed}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SetTimerSpeed}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SetTimerSpeed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a51f0387c80c08ae6998f221ee1d6f708}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a51f0387c80c08ae6998f221ee1d6f708_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a51f0387c80c08ae6998f221ee1d6f708_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_aaa6e5b91a13ba85fc9628f255947e8e5}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SetupDigi@{SDL\_\-SetupDigi}}
+\index{SDL\_\-SetupDigi@{SDL\_\-SetupDigi}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SetupDigi}]{\setlength{\rightskip}{0pt plus 5cm}void SDL\_\-SetupDigi (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_aaa6e5b91a13ba85fc9628f255947e8e5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aaa6e5b91a13ba85fc9628f255947e8e5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aaa6e5b91a13ba85fc9628f255947e8e5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a51fac7990ca45eb8b7f395f27fb11f7b}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-ShutAL@{SDL\_\-ShutAL}}
+\index{SDL\_\-ShutAL@{SDL\_\-ShutAL}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-ShutAL}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-ShutAL (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a51fac7990ca45eb8b7f395f27fb11f7b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=362pt]{ID__SD_8C_a51fac7990ca45eb8b7f395f27fb11f7b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a51fac7990ca45eb8b7f395f27fb11f7b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_aad3ecb7d81310a813ea9ba6efa0df733}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-ShutDevice@{SDL\_\-ShutDevice}}
+\index{SDL\_\-ShutDevice@{SDL\_\-ShutDevice}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-ShutDevice}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-ShutDevice (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_aad3ecb7d81310a813ea9ba6efa0df733}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aad3ecb7d81310a813ea9ba6efa0df733_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aad3ecb7d81310a813ea9ba6efa0df733_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ad8432c97c60c7aab1e75effb21ac2dbc}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-ShutPC@{SDL\_\-ShutPC}}
+\index{SDL\_\-ShutPC@{SDL\_\-ShutPC}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-ShutPC}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-ShutPC (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ad8432c97c60c7aab1e75effb21ac2dbc}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ad8432c97c60c7aab1e75effb21ac2dbc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ae4b2df23a45a69c1fc95b28f90b16161}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-ShutSB@{SDL\_\-ShutSB}}
+\index{SDL\_\-ShutSB@{SDL\_\-ShutSB}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-ShutSB}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-ShutSB (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ae4b2df23a45a69c1fc95b28f90b16161}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{ID__SD_8C_ae4b2df23a45a69c1fc95b28f90b16161_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ae4b2df23a45a69c1fc95b28f90b16161_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a0b2fcc77394b5931fe5e1cf3708345af}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-ShutSS@{SDL\_\-ShutSS}}
+\index{SDL\_\-ShutSS@{SDL\_\-ShutSS}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-ShutSS}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-ShutSS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a0b2fcc77394b5931fe5e1cf3708345af}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a0b2fcc77394b5931fe5e1cf3708345af_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ad99758f0e9faeac84caa0d153d36c9d1}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SSPlaySample@{SDL\_\-SSPlaySample}}
+\index{SDL\_\-SSPlaySample@{SDL\_\-SSPlaySample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SSPlaySample}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SSPlaySample (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} huge $\ast$}]{data, }
+\item[{{\bf longword}}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ad99758f0e9faeac84caa0d153d36c9d1}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ad99758f0e9faeac84caa0d153d36c9d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a3de2826da55134038984872d4df10fa6}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SSService@{SDL\_\-SSService}}
+\index{SDL\_\-SSService@{SDL\_\-SSService}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SSService}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SSService (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a3de2826da55134038984872d4df10fa6}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a3de2826da55134038984872d4df10fa6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a4b4cb4383cfa055401dc7ff4ff6f0104}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-SSStopSample@{SDL\_\-SSStopSample}}
+\index{SDL\_\-SSStopSample@{SDL\_\-SSStopSample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-SSStopSample}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-SSStopSample (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a4b4cb4383cfa055401dc7ff4ff6f0104}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a4b4cb4383cfa055401dc7ff4ff6f0104_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a3a39ea51ec25b1a106353d8cba49719f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-StartAL@{SDL\_\-StartAL}}
+\index{SDL\_\-StartAL@{SDL\_\-StartAL}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-StartAL}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-StartAL (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a3a39ea51ec25b1a106353d8cba49719f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=362pt]{ID__SD_8C_a3a39ea51ec25b1a106353d8cba49719f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a3a39ea51ec25b1a106353d8cba49719f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_abe37c30b8a1828d8e6b362c0a8321979}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-StartDevice@{SDL\_\-StartDevice}}
+\index{SDL\_\-StartDevice@{SDL\_\-StartDevice}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-StartDevice}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-StartDevice (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_abe37c30b8a1828d8e6b362c0a8321979}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_abe37c30b8a1828d8e6b362c0a8321979_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_abe37c30b8a1828d8e6b362c0a8321979_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ac8739ef15d834d9509ba1c34998c4e69}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-StartSB@{SDL\_\-StartSB}}
+\index{SDL\_\-StartSB@{SDL\_\-StartSB}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-StartSB}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-StartSB (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ac8739ef15d834d9509ba1c34998c4e69}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ac8739ef15d834d9509ba1c34998c4e69_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ac8739ef15d834d9509ba1c34998c4e69_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a7eb0e3e805cbe44878c2309c4333bdb7}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-StartSS@{SDL\_\-StartSS}}
+\index{SDL\_\-StartSS@{SDL\_\-StartSS}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-StartSS}]{\setlength{\rightskip}{0pt plus 5cm}static void SDL\_\-StartSS (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a7eb0e3e805cbe44878c2309c4333bdb7}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a7eb0e3e805cbe44878c2309c4333bdb7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_a310e24eb0bb48c6c4417eab2a7841e15}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-t0ExtremeAsmService@{SDL\_\-t0ExtremeAsmService}}
+\index{SDL\_\-t0ExtremeAsmService@{SDL\_\-t0ExtremeAsmService}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-t0ExtremeAsmService}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt SDL\_\-t0ExtremeAsmService (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_a310e24eb0bb48c6c4417eab2a7841e15}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_a310e24eb0bb48c6c4417eab2a7841e15_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_ab2123ddce52686655810e1b5ff3c2cc9}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-t0FastAsmService@{SDL\_\-t0FastAsmService}}
+\index{SDL\_\-t0FastAsmService@{SDL\_\-t0FastAsmService}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-t0FastAsmService}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt SDL\_\-t0FastAsmService (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_ab2123ddce52686655810e1b5ff3c2cc9}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_ab2123ddce52686655810e1b5ff3c2cc9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8C_aee695286ef3f3f5f5c4e2d14c88b5e2f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SDL\_\-t0SlowAsmService@{SDL\_\-t0SlowAsmService}}
+\index{SDL\_\-t0SlowAsmService@{SDL\_\-t0SlowAsmService}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SDL\_\-t0SlowAsmService}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt SDL\_\-t0SlowAsmService (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8C_aee695286ef3f3f5f5c4e2d14c88b5e2f}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8C_aee695286ef3f3f5f5c4e2d14c88b5e2f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__SD_8C_aae5cf4d134b52966bc2aa3de22b0dd03}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!AdLibPresent@{AdLibPresent}}
+\index{AdLibPresent@{AdLibPresent}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{AdLibPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf AdLibPresent}}}
+\label{ID__SD_8C_aae5cf4d134b52966bc2aa3de22b0dd03}
+\hypertarget{ID__SD_8C_a9e81fc8ee3c094431e403b518cbf1875}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alBlock@{alBlock}}
+\index{alBlock@{alBlock}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alBlock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf alBlock}}}
+\label{ID__SD_8C_a9e81fc8ee3c094431e403b518cbf1875}
+\hypertarget{ID__SD_8C_af75a7f9861fb535b8d8ab10108148245}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alFXReg@{alFXReg}}
+\index{alFXReg@{alFXReg}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alFXReg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf alFXReg}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_af75a7f9861fb535b8d8ab10108148245}
+\hypertarget{ID__SD_8C_a00615a954b103b34a8699929b7311d1c}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alLengthLeft@{alLengthLeft}}
+\index{alLengthLeft@{alLengthLeft}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alLengthLeft}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf alLengthLeft}}}
+\label{ID__SD_8C_a00615a954b103b34a8699929b7311d1c}
+\hypertarget{ID__SD_8C_a4a1e51753cfe2aea51d99cffbcd8eb80}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alNoCheck@{alNoCheck}}
+\index{alNoCheck@{alNoCheck}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alNoCheck}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf alNoCheck}}}
+\label{ID__SD_8C_a4a1e51753cfe2aea51d99cffbcd8eb80}
+\hypertarget{ID__SD_8C_abb64954289074edec51f58bb5a122760}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alSound@{alSound}}
+\index{alSound@{alSound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alSound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far$\ast$ {\bf alSound}}}
+\label{ID__SD_8C_abb64954289074edec51f58bb5a122760}
+\hypertarget{ID__SD_8C_a4d4a035e1ebf79e5bac7b8d0bdef1a98}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alTimeCount@{alTimeCount}}
+\index{alTimeCount@{alTimeCount}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alTimeCount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf alTimeCount}}}
+\label{ID__SD_8C_a4d4a035e1ebf79e5bac7b8d0bdef1a98}
+\hypertarget{ID__SD_8C_a5f76467e381fc23aed5465e3d65e8a91}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!alZeroInst@{alZeroInst}}
+\index{alZeroInst@{alZeroInst}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{alZeroInst}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Instrument} {\bf alZeroInst}}}
+\label{ID__SD_8C_a5f76467e381fc23aed5465e3d65e8a91}
+\hypertarget{ID__SD_8C_a63f30f1ee0d7dfe2b7b22427ed4592ac}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!carriers@{carriers}}
+\index{carriers@{carriers}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{carriers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf carriers}\mbox{[}9\mbox{]} = \{ 3, 4, 5,11,12,13,19,20,21\}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a63f30f1ee0d7dfe2b7b22427ed4592ac}
+\hypertarget{ID__SD_8C_a8e9a757998c8a7fabc44ef7bb4df0c5e}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiLastEnd@{DigiLastEnd}}
+\index{DigiLastEnd@{DigiLastEnd}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiLastEnd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DigiLastEnd}}}
+\label{ID__SD_8C_a8e9a757998c8a7fabc44ef7bb4df0c5e}
+\hypertarget{ID__SD_8C_a175fff911b205d6eab165b4d663d18ae}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiLastSegment@{DigiLastSegment}}
+\index{DigiLastSegment@{DigiLastSegment}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiLastSegment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf DigiLastSegment}}}
+\label{ID__SD_8C_a175fff911b205d6eab165b4d663d18ae}
+\hypertarget{ID__SD_8C_a5884c076780a9146beaad7f88bb8281b}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiLastStart@{DigiLastStart}}
+\index{DigiLastStart@{DigiLastStart}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiLastStart}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DigiLastStart}}}
+\label{ID__SD_8C_a5884c076780a9146beaad7f88bb8281b}
+\hypertarget{ID__SD_8C_a89fbd187963ac377958d6b237f1fcc46}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiLeft@{DigiLeft}}
+\index{DigiLeft@{DigiLeft}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiLeft}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DigiLeft}}}
+\label{ID__SD_8C_a89fbd187963ac377958d6b237f1fcc46}
+\hypertarget{ID__SD_8C_a2b26601a3e4cc93dd3d9334e80b021e9}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiList@{DigiList}}
+\index{DigiList@{DigiList}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiList}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} \_\-seg$\ast$ {\bf DigiList}}}
+\label{ID__SD_8C_a2b26601a3e4cc93dd3d9334e80b021e9}
+\hypertarget{ID__SD_8C_a8eb2938805d7144c34e31598b0ad0263}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiMap@{DigiMap}}
+\index{DigiMap@{DigiMap}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiMap}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DigiMap}\mbox{[}LASTSOUND\mbox{]}}}
+\label{ID__SD_8C_a8eb2938805d7144c34e31598b0ad0263}
+\hypertarget{ID__SD_8C_a27f3c90423cbb815ee1b0e770a19405f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiMissed@{DigiMissed}}
+\index{DigiMissed@{DigiMissed}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiMissed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf DigiMissed}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a27f3c90423cbb815ee1b0e770a19405f}
+\hypertarget{ID__SD_8C_ad359668c13523a90cddba7728a33fab9}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiMode@{DigiMode}}
+\index{DigiMode@{DigiMode}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SDSMode} {\bf DigiMode}}}
+\label{ID__SD_8C_ad359668c13523a90cddba7728a33fab9}
+\hypertarget{ID__SD_8C_a846fbdd67326e91ee34af59e8268175a}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiNextAddr@{DigiNextAddr}}
+\index{DigiNextAddr@{DigiNextAddr}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiNextAddr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memptr} {\bf DigiNextAddr}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a846fbdd67326e91ee34af59e8268175a}
+\hypertarget{ID__SD_8C_ac02097e52e282e33c996fe63302ff330}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiNextLen@{DigiNextLen}}
+\index{DigiNextLen@{DigiNextLen}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiNextLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DigiNextLen}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ac02097e52e282e33c996fe63302ff330}
+\hypertarget{ID__SD_8C_a60d58a884f1194a15c4312ca07eeb4e7}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiNumber@{DigiNumber}}
+\index{DigiNumber@{DigiNumber}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiNumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf soundnames} {\bf DigiNumber}}}
+\label{ID__SD_8C_a60d58a884f1194a15c4312ca07eeb4e7}
+\hypertarget{ID__SD_8C_af8e675cf1832477b600b538ac47b7e54}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiPage@{DigiPage}}
+\index{DigiPage@{DigiPage}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiPage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DigiPage}}}
+\label{ID__SD_8C_af8e675cf1832477b600b538ac47b7e54}
+\hypertarget{ID__SD_8C_a11b9e79724767ea7fe4429444baa39c0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiPlaying@{DigiPlaying}}
+\index{DigiPlaying@{DigiPlaying}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiPlaying}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf DigiPlaying}}}
+\label{ID__SD_8C_a11b9e79724767ea7fe4429444baa39c0}
+\hypertarget{ID__SD_8C_aa96b82bb4353f27d3198a6b79f08c677}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!DigiPriority@{DigiPriority}}
+\index{DigiPriority@{DigiPriority}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{DigiPriority}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf DigiPriority}}}
+\label{ID__SD_8C_aa96b82bb4353f27d3198a6b79f08c677}
+\hypertarget{ID__SD_8C_af0246b76813385402f7225b423d65c28}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!HackCount@{HackCount}}
+\index{HackCount@{HackCount}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{HackCount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf HackCount}}}
+\label{ID__SD_8C_af0246b76813385402f7225b423d65c28}
+\hypertarget{ID__SD_8C_aa6675177fdb4fdde5519bc5ed2de9d0a}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!LeftPosition@{LeftPosition}}
+\index{LeftPosition@{LeftPosition}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{LeftPosition}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf LeftPosition}}}
+\label{ID__SD_8C_aa6675177fdb4fdde5519bc5ed2de9d0a}
+\hypertarget{ID__SD_8C_a7afd2763911a393050bf2137da76c5fd}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!LocalTime@{LocalTime}}
+\index{LocalTime@{LocalTime}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{LocalTime}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf LocalTime}}}
+\label{ID__SD_8C_a7afd2763911a393050bf2137da76c5fd}
+\hypertarget{ID__SD_8C_ab3ab25119a78988873ef0142305bd2b9}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!modifiers@{modifiers}}
+\index{modifiers@{modifiers}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{modifiers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf modifiers}\mbox{[}9\mbox{]} = \{ 0, 1, 2, 8, 9,10,16,17,18\}}}
+\label{ID__SD_8C_ab3ab25119a78988873ef0142305bd2b9}
+\hypertarget{ID__SD_8C_afcbed1bc96a4997c02b2eb0143c57ba5}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!MusicMode@{MusicMode}}
+\index{MusicMode@{MusicMode}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{MusicMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SMMode} {\bf MusicMode}}}
+\label{ID__SD_8C_afcbed1bc96a4997c02b2eb0143c57ba5}
+\hypertarget{ID__SD_8C_a0917c582991c0b2d37dbe77956aa94b5}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!mytracks@{mytracks}}
+\index{mytracks@{mytracks}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{mytracks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ActiveTrack} {\bf mytracks}\mbox{[}sqMaxTracks\mbox{]}}}
+\label{ID__SD_8C_a0917c582991c0b2d37dbe77956aa94b5}
+\hypertarget{ID__SD_8C_a3fef6357a944508b700309276a423872}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!NeedsDigitized@{NeedsDigitized}}
+\index{NeedsDigitized@{NeedsDigitized}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{NeedsDigitized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf NeedsDigitized}}}
+\label{ID__SD_8C_a3fef6357a944508b700309276a423872}
+\hypertarget{ID__SD_8C_aa073cdf1c0836ab07a66b9e73bfe89cd}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!NeedsMusic@{NeedsMusic}}
+\index{NeedsMusic@{NeedsMusic}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{NeedsMusic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf NeedsMusic}}}
+\label{ID__SD_8C_aa073cdf1c0836ab07a66b9e73bfe89cd}
+\hypertarget{ID__SD_8C_ab34ef4c36d091dd63f5b4c3046d16404}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!nextsoundpos@{nextsoundpos}}
+\index{nextsoundpos@{nextsoundpos}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{nextsoundpos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf nextsoundpos}}}
+\label{ID__SD_8C_ab34ef4c36d091dd63f5b4c3046d16404}
+\hypertarget{ID__SD_8C_a916d5f5305d88f51d724828315b59186}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!NumDigi@{NumDigi}}
+\index{NumDigi@{NumDigi}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{NumDigi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf NumDigi}}}
+\label{ID__SD_8C_a916d5f5305d88f51d724828315b59186}
+\hypertarget{ID__SD_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ParmStrings@{ParmStrings}}
+\index{ParmStrings@{ParmStrings}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ParmStrings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf ParmStrings}\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+                                                {
+                                                        "noal",
+                                                        "nosb",
+                                                        "nopro",
+                                                        "noss",
+                                                        "sst",
+                                                        "ss1",
+                                                        "ss2",
+                                                        "ss3",
+                                                        nil
+                                                }
+\end{DoxyCode}
+\hypertarget{ID__SD_8C_abbe10755880e6acbb43dbc7a5709a3de}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!pcarriers@{pcarriers}}
+\index{pcarriers@{pcarriers}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{pcarriers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf pcarriers}\mbox{[}5\mbox{]} = \{19,0xff,0xff,0xff,0xff\}}}
+\label{ID__SD_8C_abbe10755880e6acbb43dbc7a5709a3de}
+\hypertarget{ID__SD_8C_ae1039a6b232e32369a231bb2031bfe69}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!pcLastSample@{pcLastSample}}
+\index{pcLastSample@{pcLastSample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{pcLastSample}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf byte} {\bf pcLastSample}}}
+\label{ID__SD_8C_ae1039a6b232e32369a231bb2031bfe69}
+\hypertarget{ID__SD_8C_af057ee8e6effd1195904b1b8be9412f3}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!pcLengthLeft@{pcLengthLeft}}
+\index{pcLengthLeft@{pcLengthLeft}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{pcLengthLeft}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf pcLengthLeft}}}
+\label{ID__SD_8C_af057ee8e6effd1195904b1b8be9412f3}
+\hypertarget{ID__SD_8C_af79ef9eaf2fc8ba85f289bd19e36a6c5}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!pcSound@{pcSound}}
+\index{pcSound@{pcSound}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{pcSound}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf byte} far$\ast$ {\bf pcSound}}}
+\label{ID__SD_8C_af79ef9eaf2fc8ba85f289bd19e36a6c5}
+\hypertarget{ID__SD_8C_ae415b11bd2fb7f86edc88c0525faeeaf}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!pcSoundLookup@{pcSoundLookup}}
+\index{pcSoundLookup@{pcSoundLookup}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{pcSoundLookup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf pcSoundLookup}\mbox{[}255\mbox{]}}}
+\label{ID__SD_8C_ae415b11bd2fb7f86edc88c0525faeeaf}
+\hypertarget{ID__SD_8C_a54b15c4feacf6f7b5754eb7c1a995870}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!pmodifiers@{pmodifiers}}
+\index{pmodifiers@{pmodifiers}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{pmodifiers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf pmodifiers}\mbox{[}5\mbox{]} = \{16,17,18,20,21\}}}
+\label{ID__SD_8C_a54b15c4feacf6f7b5754eb7c1a995870}
+\hypertarget{ID__SD_8C_add1e77eb812023bd620943a5d6e2d560}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!RightPosition@{RightPosition}}
+\index{RightPosition@{RightPosition}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{RightPosition}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf RightPosition}}}
+\label{ID__SD_8C_add1e77eb812023bd620943a5d6e2d560}
+\hypertarget{ID__SD_8C_ac10063bd8284cccb099c26a99f7a3f2d}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sba1Vals@{sba1Vals}}
+\index{sba1Vals@{sba1Vals}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sba1Vals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sba1Vals}\mbox{[}$\,$\mbox{]} = \{0x87,0x83,0,0x82\}}}
+\label{ID__SD_8C_ac10063bd8284cccb099c26a99f7a3f2d}
+\hypertarget{ID__SD_8C_a6a205b1751d365f5b708db37c7085ee6}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sba2Vals@{sba2Vals}}
+\index{sba2Vals@{sba2Vals}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sba2Vals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sba2Vals}\mbox{[}$\,$\mbox{]} = \{0,2,0,6\}}}
+\label{ID__SD_8C_a6a205b1751d365f5b708db37c7085ee6}
+\hypertarget{ID__SD_8C_a571f30f53c21bcb0874d635d10c0ce3c}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sba3Vals@{sba3Vals}}
+\index{sba3Vals@{sba3Vals}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sba3Vals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sba3Vals}\mbox{[}$\,$\mbox{]} = \{1,3,0,7\}}}
+\label{ID__SD_8C_a571f30f53c21bcb0874d635d10c0ce3c}
+\hypertarget{ID__SD_8C_a230fef19af8ffe22851d12f5221ac36a}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbDMA@{sbDMA}}
+\index{sbDMA@{sbDMA}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbDMA}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sbDMA} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a230fef19af8ffe22851d12f5221ac36a}
+\hypertarget{ID__SD_8C_a029be078b8479543113f4b29b7030778}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbDMAa1@{sbDMAa1}}
+\index{sbDMAa1@{sbDMAa1}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbDMAa1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sbDMAa1} = 0x83}}
+\label{ID__SD_8C_a029be078b8479543113f4b29b7030778}
+\hypertarget{ID__SD_8C_a6ecbb8a785e72da500e045352ca9fa15}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbDMAa2@{sbDMAa2}}
+\index{sbDMAa2@{sbDMAa2}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbDMAa2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sbDMAa2} = 2}}
+\label{ID__SD_8C_a6ecbb8a785e72da500e045352ca9fa15}
+\hypertarget{ID__SD_8C_ab3f0ab9731e991810f84e1ef14ef28a1}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbDMAa3@{sbDMAa3}}
+\index{sbDMAa3@{sbDMAa3}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbDMAa3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sbDMAa3} = 3}}
+\label{ID__SD_8C_ab3f0ab9731e991810f84e1ef14ef28a1}
+\hypertarget{ID__SD_8C_a5e6359cd4b8a27fa08fd27097c547e5d}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbInterrupt@{sbInterrupt}}
+\index{sbInterrupt@{sbInterrupt}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbInterrupt}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sbInterrupt} = 7}}
+\label{ID__SD_8C_a5e6359cd4b8a27fa08fd27097c547e5d}
+\hypertarget{ID__SD_8C_a52f9935f686fca626defb7ec36292506}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbIntVec@{sbIntVec}}
+\index{sbIntVec@{sbIntVec}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbIntVec}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sbIntVec} = 0xf}}
+\label{ID__SD_8C_a52f9935f686fca626defb7ec36292506}
+\hypertarget{ID__SD_8C_a74811b52c1a1ba6decadc52cfa225e25}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbIntVectors@{sbIntVectors}}
+\index{sbIntVectors@{sbIntVectors}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbIntVectors}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sbIntVectors}\mbox{[}$\,$\mbox{]} = \{-\/1,-\/1,0xa,0xb,-\/1,0xd,-\/1,0xf,-\/1,-\/1,-\/1\}}}
+\label{ID__SD_8C_a74811b52c1a1ba6decadc52cfa225e25}
+\hypertarget{ID__SD_8C_ad1041dc24d08c7fc215c300fe99c1609}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbLocation@{sbLocation}}
+\index{sbLocation@{sbLocation}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbLocation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sbLocation} = -\/1\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ad1041dc24d08c7fc215c300fe99c1609}
+\hypertarget{ID__SD_8C_afaf42553cd16229e97ca17918ed5c7e0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbNextSegLen@{sbNextSegLen}}
+\index{sbNextSegLen@{sbNextSegLen}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbNextSegLen}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf longword} {\bf sbNextSegLen}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_afaf42553cd16229e97ca17918ed5c7e0}
+\hypertarget{ID__SD_8C_a2c977a80978d5b38196f2154168d95b1}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbNextSegPtr@{sbNextSegPtr}}
+\index{sbNextSegPtr@{sbNextSegPtr}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbNextSegPtr}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf byte} huge$\ast$ {\bf sbNextSegPtr}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a2c977a80978d5b38196f2154168d95b1}
+\hypertarget{ID__SD_8C_a770a1bd139fc8c8c3eabbaee656f7628}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbNoCheck@{sbNoCheck}}
+\index{sbNoCheck@{sbNoCheck}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbNoCheck}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf sbNoCheck}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a770a1bd139fc8c8c3eabbaee656f7628}
+\hypertarget{ID__SD_8C_aad363947cccbc8a4572d133d099d9ab7}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbNoProCheck@{sbNoProCheck}}
+\index{sbNoProCheck@{sbNoProCheck}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbNoProCheck}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf sbNoProCheck}}}
+\label{ID__SD_8C_aad363947cccbc8a4572d133d099d9ab7}
+\hypertarget{ID__SD_8C_a3e33d5500965a04a9c3c1cf959efa39b}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbOldIntHand@{sbOldIntHand}}
+\index{sbOldIntHand@{sbOldIntHand}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbOldIntHand}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt($\ast$ {\bf sbOldIntHand})(void)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a3e33d5500965a04a9c3c1cf959efa39b}
+\hypertarget{ID__SD_8C_a625876d28c2c21e717bec3903f217277}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbOldIntMask@{sbOldIntMask}}
+\index{sbOldIntMask@{sbOldIntMask}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbOldIntMask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sbOldIntMask} = -\/1\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a625876d28c2c21e717bec3903f217277}
+\hypertarget{ID__SD_8C_a47faa268b0b9910d4994c5f04707b1a6}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbpOldFMMix@{sbpOldFMMix}}
+\index{sbpOldFMMix@{sbpOldFMMix}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbpOldFMMix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sbpOldFMMix}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a47faa268b0b9910d4994c5f04707b1a6}
+\hypertarget{ID__SD_8C_a9aab7ab61356ba1e14b8f49097650810}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbpOldVOCMix@{sbpOldVOCMix}}
+\index{sbpOldVOCMix@{sbpOldVOCMix}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbpOldVOCMix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf sbpOldVOCMix}}}
+\label{ID__SD_8C_a9aab7ab61356ba1e14b8f49097650810}
+\hypertarget{ID__SD_8C_afea4696d6833498198ec4a492d05a80e}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SBProPresent@{SBProPresent}}
+\index{SBProPresent@{SBProPresent}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SBProPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SBProPresent}}}
+\label{ID__SD_8C_afea4696d6833498198ec4a492d05a80e}
+\hypertarget{ID__SD_8C_afa8de5ddf3415c8a315d1de59fd25477}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbSamplePlaying@{sbSamplePlaying}}
+\index{sbSamplePlaying@{sbSamplePlaying}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbSamplePlaying}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf boolean} {\bf sbSamplePlaying}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_afa8de5ddf3415c8a315d1de59fd25477}
+\hypertarget{ID__SD_8C_a350869bbfe2aab6254a38474d4944661}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sbSamples@{sbSamples}}
+\index{sbSamples@{sbSamples}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sbSamples}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf SampledSound} huge$\ast$ {\bf sbSamples}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a350869bbfe2aab6254a38474d4944661}
+\hypertarget{ID__SD_8C_aaa7e60c2848c9a99f53b8e3d0d8f3a04}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SD\_\-Started@{SD\_\-Started}}
+\index{SD\_\-Started@{SD\_\-Started}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SD\_\-Started}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SD\_\-Started}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_aaa7e60c2848c9a99f53b8e3d0d8f3a04}
+\hypertarget{ID__SD_8C_a339e21cdf208764078f89b5b5f72932b}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundBlasterPresent@{SoundBlasterPresent}}
+\index{SoundBlasterPresent@{SoundBlasterPresent}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundBlasterPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SoundBlasterPresent}}}
+\label{ID__SD_8C_a339e21cdf208764078f89b5b5f72932b}
+\hypertarget{ID__SD_8C_ae78ec490e7f5cbb26c649cc4034546f7}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundMode@{SoundMode}}
+\index{SoundMode@{SoundMode}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SDMode} {\bf SoundMode}}}
+\label{ID__SD_8C_ae78ec490e7f5cbb26c649cc4034546f7}
+\hypertarget{ID__SD_8C_a4c4aa04b74e9aeb63645d0b371d03f8e}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundNumber@{SoundNumber}}
+\index{SoundNumber@{SoundNumber}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundNumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf soundnames} {\bf SoundNumber}}}
+\label{ID__SD_8C_a4c4aa04b74e9aeb63645d0b371d03f8e}
+\hypertarget{ID__SD_8C_a99325c606c4f55b472ccc411b1b2bb02}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundPositioned@{SoundPositioned}}
+\index{SoundPositioned@{SoundPositioned}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundPositioned}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SoundPositioned}}}
+\label{ID__SD_8C_a99325c606c4f55b472ccc411b1b2bb02}
+\hypertarget{ID__SD_8C_a1082f4d01ae4202540aa8c9d40ab1208}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundPriority@{SoundPriority}}
+\index{SoundPriority@{SoundPriority}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundPriority}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf SoundPriority}}}
+\label{ID__SD_8C_a1082f4d01ae4202540aa8c9d40ab1208}
+\hypertarget{ID__SD_8C_ad1e0e8f0ed866e2473d8915e769852c5}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundSourcePresent@{SoundSourcePresent}}
+\index{SoundSourcePresent@{SoundSourcePresent}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundSourcePresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SoundSourcePresent}}}
+\label{ID__SD_8C_ad1e0e8f0ed866e2473d8915e769852c5}
+\hypertarget{ID__SD_8C_ac4dbee182539e544f1fa2c52de9fd35c}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundTable@{SoundTable}}
+\index{SoundTable@{SoundTable}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundTable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word}$\ast$ {\bf SoundTable}}}
+\label{ID__SD_8C_ac4dbee182539e544f1fa2c52de9fd35c}
+\hypertarget{ID__SD_8C_a15f5e9cb1ffb19981c28948df6691373}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!SoundUserHook@{SoundUserHook}}
+\index{SoundUserHook@{SoundUserHook}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{SoundUserHook}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf SoundUserHook})(void)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a15f5e9cb1ffb19981c28948df6691373}
+\hypertarget{ID__SD_8C_a9a9dc3817c917f6707f308b7990cf6eb}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqActive@{sqActive}}
+\index{sqActive@{sqActive}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqActive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf sqActive}}}
+\label{ID__SD_8C_a9a9dc3817c917f6707f308b7990cf6eb}
+\hypertarget{ID__SD_8C_a66270c63fa51ed1b83f45280950157fa}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqFadeStep@{sqFadeStep}}
+\index{sqFadeStep@{sqFadeStep}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqFadeStep}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf sqFadeStep}}}
+\label{ID__SD_8C_a66270c63fa51ed1b83f45280950157fa}
+\hypertarget{ID__SD_8C_a88379c948bdd60bfed55a29a7614c191}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqHack@{sqHack}}
+\index{sqHack@{sqHack}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqHack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} far$\ast$ {\bf sqHack}}}
+\label{ID__SD_8C_a88379c948bdd60bfed55a29a7614c191}
+\hypertarget{ID__SD_8C_aee7a7f98a0ae5f84e98b024b9b863fc9}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqHackLen@{sqHackLen}}
+\index{sqHackLen@{sqHackLen}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqHackLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} far far {\bf sqHackLen}}}
+\label{ID__SD_8C_aee7a7f98a0ae5f84e98b024b9b863fc9}
+\hypertarget{ID__SD_8C_a095fec841fbb98e55b05ef2ef80420ff}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqHackPtr@{sqHackPtr}}
+\index{sqHackPtr@{sqHackPtr}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqHackPtr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} far far$\ast$ {\bf sqHackPtr}}}
+\label{ID__SD_8C_a095fec841fbb98e55b05ef2ef80420ff}
+\hypertarget{ID__SD_8C_ac2de5c298e18c54886c534938d16229e}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqHackSeqLen@{sqHackSeqLen}}
+\index{sqHackSeqLen@{sqHackSeqLen}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqHackSeqLen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} far far {\bf sqHackSeqLen}}}
+\label{ID__SD_8C_ac2de5c298e18c54886c534938d16229e}
+\hypertarget{ID__SD_8C_aa1f6ea8a7e5c678d30c38c663d1ba776}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqHackTime@{sqHackTime}}
+\index{sqHackTime@{sqHackTime}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqHackTime}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf sqHackTime}}}
+\label{ID__SD_8C_aa1f6ea8a7e5c678d30c38c663d1ba776}
+\hypertarget{ID__SD_8C_ac2982e37cfe58736748373d4b6fde990}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!sqMode@{sqMode}}
+\index{sqMode@{sqMode}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{sqMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf sqMode}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_ac2982e37cfe58736748373d4b6fde990}
+\hypertarget{ID__SD_8C_ab6c0b8a3c16c52edb3fdce3ef94637fb}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssActive@{ssActive}}
+\index{ssActive@{ssActive}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssActive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf ssActive}}}
+\label{ID__SD_8C_ab6c0b8a3c16c52edb3fdce3ef94637fb}
+\hypertarget{ID__SD_8C_ac50582571050ee8c37353e94c9c8537c}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssControl@{ssControl}}
+\index{ssControl@{ssControl}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssControl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf ssControl}}}
+\label{ID__SD_8C_ac50582571050ee8c37353e94c9c8537c}
+\hypertarget{ID__SD_8C_ab9aec2326df131568a1bb337ed215323}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssData@{ssData}}
+\index{ssData@{ssData}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf ssData}}}
+\label{ID__SD_8C_ab9aec2326df131568a1bb337ed215323}
+\hypertarget{ID__SD_8C_a3a770af6d5ddb65c1530f9db23678f23}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssIsTandy@{ssIsTandy}}
+\index{ssIsTandy@{ssIsTandy}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssIsTandy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf ssIsTandy}}}
+\label{ID__SD_8C_a3a770af6d5ddb65c1530f9db23678f23}
+\hypertarget{ID__SD_8C_ae32ab0caf3dd74e04df22f5082bba2f5}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssLengthLeft@{ssLengthLeft}}
+\index{ssLengthLeft@{ssLengthLeft}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssLengthLeft}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf longword} {\bf ssLengthLeft}}}
+\label{ID__SD_8C_ae32ab0caf3dd74e04df22f5082bba2f5}
+\hypertarget{ID__SD_8C_a837aafc6fb5d5f9c711933cbc25c0c8f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssNoCheck@{ssNoCheck}}
+\index{ssNoCheck@{ssNoCheck}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssNoCheck}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf ssNoCheck}}}
+\label{ID__SD_8C_a837aafc6fb5d5f9c711933cbc25c0c8f}
+\hypertarget{ID__SD_8C_abd66f785699aa96dd9224fd0a9cff9ee}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssOff@{ssOff}}
+\index{ssOff@{ssOff}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssOff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf ssOff}}}
+\label{ID__SD_8C_abd66f785699aa96dd9224fd0a9cff9ee}
+\hypertarget{ID__SD_8C_a6fe70bd7705926047ee7bb735fd9d51a}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssOn@{ssOn}}
+\index{ssOn@{ssOn}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssOn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf ssOn}}}
+\label{ID__SD_8C_a6fe70bd7705926047ee7bb735fd9d51a}
+\hypertarget{ID__SD_8C_a87c9e242eb239995f5b8b3de055f9369}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssPort@{ssPort}}
+\index{ssPort@{ssPort}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssPort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf ssPort} = 2}}
+\label{ID__SD_8C_a87c9e242eb239995f5b8b3de055f9369}
+\hypertarget{ID__SD_8C_a8cf5075d58538ca559769c25a0e0415f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssSample@{ssSample}}
+\index{ssSample@{ssSample}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssSample}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf byte} far$\ast$ {\bf ssSample}}}
+\label{ID__SD_8C_a8cf5075d58538ca559769c25a0e0415f}
+\hypertarget{ID__SD_8C_a21fe4e545446608d7a38a59f55de6c40}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!ssStatus@{ssStatus}}
+\index{ssStatus@{ssStatus}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{ssStatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf ssStatus}}}
+\label{ID__SD_8C_a21fe4e545446608d7a38a59f55de6c40}
+\hypertarget{ID__SD_8C_a953f0c1cacd2d74a3d7c68f2fbec7291}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!t0OldService@{t0OldService}}
+\index{t0OldService@{t0OldService}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{t0OldService}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt($\ast$ {\bf t0OldService})(void)}}
+\label{ID__SD_8C_a953f0c1cacd2d74a3d7c68f2fbec7291}
+\hypertarget{ID__SD_8C_afae310dc5c7e77f2742ddbfc16b98dd0}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!TimeCount@{TimeCount}}
+\index{TimeCount@{TimeCount}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{TimeCount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf TimeCount}}}
+\label{ID__SD_8C_afae310dc5c7e77f2742ddbfc16b98dd0}
+\hypertarget{ID__SD_8C_ac0891f4aad59f67cc6167b142d6d0765}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!TimerCount@{TimerCount}}
+\index{TimerCount@{TimerCount}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{TimerCount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf TimerCount}}}
+\label{ID__SD_8C_ac0891f4aad59f67cc6167b142d6d0765}
+\hypertarget{ID__SD_8C_a61983b653767fdf64ec0219001dc9d6f}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!TimerDivisor@{TimerDivisor}}
+\index{TimerDivisor@{TimerDivisor}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{TimerDivisor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf TimerDivisor}}}
+\label{ID__SD_8C_a61983b653767fdf64ec0219001dc9d6f}
+\hypertarget{ID__SD_8C_a23bab8f4441c3742d3c4b434ee538883}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!TimerRate@{TimerRate}}
+\index{TimerRate@{TimerRate}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{TimerRate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} {\bf TimerRate}}}
+\label{ID__SD_8C_a23bab8f4441c3742d3c4b434ee538883}
+\hypertarget{ID__SD_8C_a1f3baa4768a9637adddbaee049d33b53}{
+\index{ID\_\-SD.C@{ID\_\-SD.C}!tracks@{tracks}}
+\index{tracks@{tracks}!ID_SD.C@{ID\_\-SD.C}}
+\subsubsection[{tracks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ActiveTrack}$\ast$ {\bf tracks}\mbox{[}sqMaxTracks\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__SD_8C_a1f3baa4768a9637adddbaee049d33b53}

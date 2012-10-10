@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__PLAY_8C.html#a673946129c833c78df674cf8b38fdd61" title="CenterWindow" alt="" coords="116,163,223,192"/>
+<area shape="rect" id="node5" href="$WL__DEBUG_8C.html#ab9152a6602faeb55c8da615da9e8befd" title="CountObjects" alt="" coords="275,109,376,139"/>
+<area shape="rect" id="node7" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="453,109,544,139"/>
+<area shape="rect" id="node27" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="973,293,1072,323"/>
+<area shape="rect" id="node31" href="$WL__DEBUG_8C.html#a5d1644a9390130b32a7ec37c6aaa7f37" title="DebugMemory" alt="" coords="272,163,379,192"/>
+<area shape="rect" id="node34" href="$WL__GAME_8C.html#a51036fd961a852da0bce3844c7f636bb" title="FinishDemoRecord" alt="" coords="791,267,924,296"/>
+<area shape="rect" id="node39" href="$WL__GAME_8C.html#a70fb4c23b70cb34ed1f17005a6279d97" title="SetSoundLoc" alt="" coords="276,216,375,245"/>
+<area shape="rect" id="node46" href="$WL__DEBUG_8C.html#a0c4cc614683ec32e9c6d2ddd544a77ea" title="ShapeTest" alt="" coords="283,5,368,35"/>
+<area shape="rect" id="node9" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="635,135,725,164"/>
+<area shape="rect" id="node11" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="820,213,895,243"/>
+<area shape="rect" id="node13" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="980,240,1065,269"/>
+<area shape="rect" id="node24" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="981,187,1064,216"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1120,240,1205,269"/>
+<area shape="rect" id="node17" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1253,240,1304,269"/>
+<area shape="rect" id="node19" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1353,213,1441,243"/>
+<area shape="rect" id="node21" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1491,240,1565,269"/>
+<area shape="rect" id="node41" href="$WL__GAME_8C.html#ac828a2af8db4f7ce66a84a69313e37ef" title="PlaySoundLocGlobal" alt="" coords="428,164,569,193"/>
+<area shape="rect" id="node43" href="$WL__GAME_8C.html#a616d397cb4e4bb994034cf07913567fc" title="UpdateSoundLoc" alt="" coords="619,215,741,244"/>
+</map>

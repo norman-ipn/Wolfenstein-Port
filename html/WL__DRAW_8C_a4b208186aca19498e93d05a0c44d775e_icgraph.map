@@ -1,0 +1,23 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DRAW_8C.html#aeee237495a97abc0d12cd405446ac92b" title="FarScalePost" alt="" coords="139,5,240,35"/>
+<area shape="rect" id="node30" href="$WL__DRAW_8C.html#a5d1512cb6cadbf0425a0592969b0b3ad" title="HitHorizDoor" alt="" coords="140,59,239,88"/>
+<area shape="rect" id="node32" href="$WL__DRAW_8C.html#ad40f149ac1d729c05048070e5e44222c" title="HitHorizPWall" alt="" coords="137,112,241,141"/>
+<area shape="rect" id="node34" href="$WL__DRAW_8C.html#a489668c5f832e695224cb9b1022f3448" title="HitHorizWall" alt="" coords="141,165,237,195"/>
+<area shape="rect" id="node36" href="$WL__DRAW_8C.html#aae630232d435e6ac2f55605b02234738" title="HitVertDoor" alt="" coords="144,219,235,248"/>
+<area shape="rect" id="node38" href="$WL__DRAW_8C.html#a29679cfe78e8257f4b05113f66b6c1a0" title="HitVertPWall" alt="" coords="140,272,239,301"/>
+<area shape="rect" id="node40" href="$WL__DRAW_8C.html#ad2e8beb940ef03b1bbb0672123ededaf" title="HitVertWall" alt="" coords="145,325,233,355"/>
+<area shape="rect" id="node42" href="$WL__DRAW_8C.html#aed0d4f447eabd05ce9d901771d8cf3de" title="WallRefresh" alt="" coords="292,219,385,248"/>
+<area shape="rect" id="node5" href="$WL__DEBUG_8C.html#a0c4cc614683ec32e9c6d2ddd544a77ea" title="ShapeTest" alt="" coords="296,11,381,40"/>
+<area shape="rect" id="node7" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="435,51,525,80"/>
+<area shape="rect" id="node9" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="584,71,675,100"/>
+<area shape="rect" id="node11" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="735,76,809,105"/>
+<area shape="rect" id="node13" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="865,129,951,159"/>
+<area shape="rect" id="node24" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="867,76,949,105"/>
+<area shape="rect" id="node27" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="859,23,957,52"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1005,76,1091,105"/>
+<area shape="rect" id="node17" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1139,76,1189,105"/>
+<area shape="rect" id="node19" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1239,49,1327,79"/>
+<area shape="rect" id="node21" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1376,76,1451,105"/>
+<area shape="rect" id="node44" href="$WL__DRAW_8C.html#abde2aab3bb185f39bd50f4574444a034" title="ThreeDRefresh" alt="" coords="575,129,684,159"/>
+<area shape="rect" id="node46" href="$WL__GAME_8C.html#a27540b39d401cbea76d1dc2d5d701736" title="Died" alt="" coords="748,129,796,159"/>
+</map>

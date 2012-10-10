@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__SD_8C.html#a4de0adfa6affaec933d21e3d0967faf0" title="SDL_DigitizedDone" alt="" coords="172,59,308,88"/>
+<area shape="rect" id="node5" href="$ID__SD_8C.html#aaf1484a4a6ce7f6fa4a457033cf03515" title="SDL_PlayDigiSegment" alt="" coords="359,59,513,88"/>
+<area shape="rect" id="node7" href="$ID__SD_8C.html#a0b081a781f9a4e26ec9ce5939cad8601" title="SDL_PCPlaySample" alt="" coords="563,5,707,35"/>
+<area shape="rect" id="node11" href="$ID__SD_8C.html#a3ff88aa9463c98a55f373152277e70f7" title="SDL_SBPlaySample" alt="" coords="564,59,705,88"/>
+<area shape="rect" id="node17" href="$ID__SD_8C.html#ad99758f0e9faeac84caa0d153d36c9d1" title="SDL_SSPlaySample" alt="" coords="564,112,705,141"/>
+<area shape="rect" id="node9" href="$ID__SD_8C.html#a6e015404fba7543853cacd8420353315" title="SDL_IndicatePC" alt="" coords="767,5,887,35"/>
+<area shape="rect" id="node13" href="$ID__SD_8C.html#a4c2002d25ab5bf2f1d36e7253a6111dc" title="SDL_SBPlaySeg" alt="" coords="765,59,888,88"/>
+<area shape="rect" id="node15" href="$ID__SD_8C.html#ad0bed6aae151cee1ce9b468e83a16c57" title="SDL_SBStopSample" alt="" coords="755,112,899,141"/>
+</map>

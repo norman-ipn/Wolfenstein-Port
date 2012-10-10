@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__TEXT_8C.html#a2cb5d5c64873238c927112cfa403455a" title="ParseNumber" alt="" coords="589,25,691,54"/>
+<area shape="rect" id="node5" href="$WL__TEXT_8C.html#a54fc6ee9755689f998d8e81754867234" title="ParsePicCommand" alt="" coords="372,25,505,54"/>
+<area shape="rect" id="node8" href="$WL__TEXT_8C.html#a4ce1d6ef4ea4445f18f5d7c2dcce817e" title="RipToEOL" alt="" coords="599,78,681,107"/>
+<area shape="rect" id="node11" href="$WL__TEXT_8C.html#abbecf5fd92e248b4fe47a58f359af86b" title="TimedPicCommand" alt="" coords="177,131,313,161"/>
+<area shape="rect" id="node19" href="$ID__VH_8C.html#a997467dad7e57de584aa100eb9a8c882" title="VWB_DrawPic" alt="" coords="384,235,493,265"/>
+<area shape="rect" id="node25" href="$ID__VH_8C.html#a5496b8df6f9a9de1b3f788ce6951c865" title="VWB_Bar" alt="" coords="205,286,285,315"/>
+<area shape="rect" id="node13" href="$WL__TEXT_8C.html#ab37df8a0a1c922da15b4ed950eaa3f0d" title="ParseTimedCommand" alt="" coords="363,78,515,107"/>
+<area shape="rect" id="node17" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="372,131,505,161"/>
+<area shape="rect" id="node21" href="$ID__VL_8C.html#a9395a541fc6c21a2d7e7d8b4932d134e" title="VL_MemToScreen" alt="" coords="575,234,705,263"/>
+<area shape="rect" id="node23" href="$ID__VH_8C.html#a989fc2652f729213162c520d378578b3" title="VW_MarkUpdateBlock" alt="" coords="563,287,717,317"/>
+</map>

@@ -1,0 +1,827 @@
+\hypertarget{ID__VL_8C}{
+\section{ID\_\-VL.C File Reference}
+\label{ID__VL_8C}\index{ID\_\-VL.C@{ID\_\-VL.C}}
+}
+{\ttfamily \#include $<$dos.h$>$}\par
+{\ttfamily \#include $<$alloc.h$>$}\par
+{\ttfamily \#include $<$mem.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}ID\_\-HEAD.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-VL.H\char`\"{}}\par
+Include dependency graph for ID\_\-VL.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ID__VL_8C_a3304fe571736f2ede98f223788d51091}{VL\_\-VideoID} (void)
+\item 
+void \hyperlink{ID__VL_8C_a89e081d78ddb442fccb756b63b32db7e}{VL\_\-SetCRTC} (int crtc)
+\item 
+void \hyperlink{ID__VL_8C_a3de4b44b45163a1efd172c1ac4153a56}{VL\_\-SetScreen} (int crtc, int \hyperlink{ID__VL_8H_a868e53c86d5ef1ddae46b80290a36cd8}{pelpan})
+\item 
+void \hyperlink{ID__VL_8C_ab76cfea15c66ecd888aa773a7b5ec300}{VL\_\-WaitVBL} (int vbls)
+\item 
+void \hyperlink{ID__VL_8C_aa10dcb97ab8ddbe00ceff643af423bef}{VL\_\-Startup} (void)
+\item 
+void \hyperlink{ID__VL_8C_a138484024a3c6a70dd3f3fc8b0774aa9}{VL\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__VL_8C_a49a6717be931b39c40a299c8e6383d82}{VL\_\-SetVGAPlaneMode} (void)
+\item 
+void \hyperlink{ID__VL_8C_a709f71c569d3ac193681be08c072085b}{VL\_\-SetTextMode} (void)
+\item 
+void \hyperlink{ID__VL_8C_a82e5109ec5af48b755563a47b8760160}{VL\_\-ClearVideo} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} color)
+\item 
+void \hyperlink{ID__VL_8C_a324bc865f0f44dda58c10ada4eae8bb5}{VL\_\-DePlaneVGA} (void)
+\item 
+void \hyperlink{ID__VL_8C_ae6999c2347a63aecb0d5b773727233e4}{VL\_\-SetLineWidth} (unsigned width)
+\item 
+void \hyperlink{ID__VL_8C_aead87cc222e7ecc11ed285babd9df96f}{VL\_\-SetSplitScreen} (int linenum)
+\item 
+void \hyperlink{ID__VL_8C_a5b35f17b2827ed46e5527e980de6522d}{VL\_\-FillPalette} (int red, int green, int blue)
+\item 
+void \hyperlink{ID__VL_8C_a58b95eb8953ab9a02185e8fec86ca80e}{VL\_\-SetColor} (int color, int red, int green, int blue)
+\item 
+void \hyperlink{ID__VL_8C_aac86ea12ff7436142d995dd219146b7a}{VL\_\-GetColor} (int color, int $\ast$red, int $\ast$green, int $\ast$blue)
+\item 
+void \hyperlink{ID__VL_8C_ae2508644c57749de78a11a9122a36157}{VL\_\-SetPalette} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$palette)
+\item 
+void \hyperlink{ID__VL_8C_a9bcb5eb78f4668f31cc3ebcaec2d8e1b}{VL\_\-GetPalette} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$palette)
+\item 
+void \hyperlink{ID__VL_8C_a03069f779ef1392c1d130618114c8783}{VL\_\-FadeOut} (int start, int end, int red, int green, int blue, int steps)
+\item 
+void \hyperlink{ID__VL_8C_a2f911632b5e47f727e64787b40e8781b}{VL\_\-FadeIn} (int start, int end, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$palette, int steps)
+\item 
+void \hyperlink{ID__VL_8C_a29a9e236524d106d97e319b43ade47fa}{VL\_\-TestPaletteSet} (void)
+\item 
+void \hyperlink{ID__VL_8C_a894ae8ddb88f5bcd4a18fe7082a441e4}{VL\_\-ColorBorder} (int color)
+\item 
+void \hyperlink{ID__VL_8C_af6832bc9cfe83972291dcb2d9143fbe6}{VL\_\-Plot} (int x, int y, int color)
+\item 
+void \hyperlink{ID__VL_8C_a0e9e36346595a9d3080888a54e9bab32}{VL\_\-Hlin} (unsigned x, unsigned y, unsigned width, unsigned color)
+\item 
+void \hyperlink{ID__VL_8C_add1ee903f12ff9e8c9c9baff950abcdd}{VL\_\-Vlin} (int x, int y, int height, int color)
+\item 
+void \hyperlink{ID__VL_8C_ae4d749f6bd2e011c5ef11165d2f2b433}{VL\_\-Bar} (int x, int y, int width, int height, int color)
+\item 
+void \hyperlink{ID__VL_8C_aa3a8bd4100a1d27c2680fa2799536ca7}{VL\_\-MemToLatch} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$source, int width, int height, unsigned dest)
+\item 
+void \hyperlink{ID__VL_8C_a9395a541fc6c21a2d7e7d8b4932d134e}{VL\_\-MemToScreen} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$source, int width, int height, int x, int y)
+\item 
+void \hyperlink{ID__VL_8C_a1ac9dd60b620514ade73c12fe349b913}{VL\_\-MaskedToScreen} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$source, int width, int height, int x, int y)
+\item 
+void \hyperlink{ID__VL_8C_a80443116a2a895fc294adfe9b2220819}{VL\_\-LatchToScreen} (unsigned source, int width, int height, int x, int y)
+\item 
+void \hyperlink{ID__VL_8C_aba3f9a475bb578429bdc03681f9c14de}{VL\_\-DrawTile8String} (char $\ast$\hyperlink{WL__MAIN_8C_aaa970ecb4bbdf1eeaf97691045aaf8b5}{str}, char far $\ast$tile8ptr, int printx, int printy)
+\item 
+void \hyperlink{ID__VL_8C_a9680287be27cd138b273267d21bdb148}{VL\_\-DrawLatch8String} (char $\ast$\hyperlink{WL__MAIN_8C_aaa970ecb4bbdf1eeaf97691045aaf8b5}{str}, unsigned tile8ptr, int printx, int printy)
+\item 
+void \hyperlink{ID__VL_8C_af01da85944467c664d21473141c74977}{VL\_\-SizeTile8String} (char $\ast$\hyperlink{WL__MAIN_8C_aaa970ecb4bbdf1eeaf97691045aaf8b5}{str}, int $\ast$width, int $\ast$height)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{ID__VL_8C_a95b7c90690730f0b09409f1fb8ef3730}{bufferofs}
+\item 
+unsigned \hyperlink{ID__VL_8C_ae69449df2121a068cc86de491d7b5956}{displayofs}
+\item 
+unsigned \hyperlink{ID__VL_8C_a868e53c86d5ef1ddae46b80290a36cd8}{pelpan}
+\item 
+unsigned \hyperlink{ID__VL_8C_af6fb80e1232b0b5c33e4174a5b7c7985}{screenseg} = SCREENSEG
+\item 
+unsigned \hyperlink{ID__VL_8C_a4290871866270ef6854fb238a3c8698d}{linewidth}
+\item 
+unsigned \hyperlink{ID__VL_8C_ab3bdd072ceebbac1d50e74d7c34e9c4a}{ylookup} \mbox{[}MAXSCANLINES\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__VL_8C_a81e1545cb2fb150263b44e54eee49451}{screenfaded}
+\item 
+unsigned \hyperlink{ID__VL_8C_a7d243f7a427ebc7df3533c0cd5760971}{bordercolor}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__VL_8C_a675e190adb49e5f2beb6eac8c743e5df}{fastpalette}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{ID__VL_8C_a6b76f235786a33e3e5633337d4040a8e}{palette1} \mbox{[}256\mbox{]}\mbox{[}3\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far far \hyperlink{ID__VL_8C_ab69c3ce9f0621a6327c2be3696acb729}{palette2} \mbox{[}256\mbox{]}\mbox{[}3\mbox{]}
+\item 
+static char $\ast$ \hyperlink{ID__VL_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{ParmStrings} \mbox{[}$\,$\mbox{]} = \{\char`\"{}HIDDENCARD\char`\"{},\char`\"{}\char`\"{}\}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__VL_8C_afff3c766a9857f86d033f67419f5db75}{pixmasks} \mbox{[}4\mbox{]} = \{1,2,4,8\}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__VL_8C_aee788d5b07d9018f62d16a6a04bada6c}{leftmasks} \mbox{[}4\mbox{]} = \{15,14,12,8\}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__VL_8C_adbfff86f9416c48fdb30a8fd703446ae}{rightmasks} \mbox{[}4\mbox{]} = \{1,3,7,15\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__VL_8C_ae4d749f6bd2e011c5ef11165d2f2b433}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-Bar@{VL\_\-Bar}}
+\index{VL\_\-Bar@{VL\_\-Bar}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-Bar (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_ae4d749f6bd2e011c5ef11165d2f2b433}
+\hypertarget{ID__VL_8C_a82e5109ec5af48b755563a47b8760160}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-ClearVideo@{VL\_\-ClearVideo}}
+\index{VL\_\-ClearVideo@{VL\_\-ClearVideo}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-ClearVideo}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-ClearVideo (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a82e5109ec5af48b755563a47b8760160}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a82e5109ec5af48b755563a47b8760160_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a894ae8ddb88f5bcd4a18fe7082a441e4}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-ColorBorder@{VL\_\-ColorBorder}}
+\index{VL\_\-ColorBorder@{VL\_\-ColorBorder}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-ColorBorder}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-ColorBorder (
+\begin{DoxyParamCaption}
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a894ae8ddb88f5bcd4a18fe7082a441e4}
+\hypertarget{ID__VL_8C_a324bc865f0f44dda58c10ada4eae8bb5}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-DePlaneVGA@{VL\_\-DePlaneVGA}}
+\index{VL\_\-DePlaneVGA@{VL\_\-DePlaneVGA}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-DePlaneVGA}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-DePlaneVGA (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a324bc865f0f44dda58c10ada4eae8bb5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{ID__VL_8C_a324bc865f0f44dda58c10ada4eae8bb5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a324bc865f0f44dda58c10ada4eae8bb5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a9680287be27cd138b273267d21bdb148}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-DrawLatch8String@{VL\_\-DrawLatch8String}}
+\index{VL\_\-DrawLatch8String@{VL\_\-DrawLatch8String}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-DrawLatch8String}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-DrawLatch8String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{unsigned}]{tile8ptr, }
+\item[{int}]{printx, }
+\item[{int}]{printy}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a9680287be27cd138b273267d21bdb148}
+\hypertarget{ID__VL_8C_aba3f9a475bb578429bdc03681f9c14de}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-DrawTile8String@{VL\_\-DrawTile8String}}
+\index{VL\_\-DrawTile8String@{VL\_\-DrawTile8String}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-DrawTile8String}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-DrawTile8String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{char far $\ast$}]{tile8ptr, }
+\item[{int}]{printx, }
+\item[{int}]{printy}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_aba3f9a475bb578429bdc03681f9c14de}
+\hypertarget{ID__VL_8C_a2f911632b5e47f727e64787b40e8781b}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-FadeIn@{VL\_\-FadeIn}}
+\index{VL\_\-FadeIn@{VL\_\-FadeIn}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-FadeIn}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-FadeIn (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{{\bf byte} far $\ast$}]{palette, }
+\item[{int}]{steps}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a2f911632b5e47f727e64787b40e8781b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{ID__VL_8C_a2f911632b5e47f727e64787b40e8781b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a2f911632b5e47f727e64787b40e8781b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a03069f779ef1392c1d130618114c8783}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-FadeOut@{VL\_\-FadeOut}}
+\index{VL\_\-FadeOut@{VL\_\-FadeOut}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-FadeOut}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-FadeOut (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end, }
+\item[{int}]{red, }
+\item[{int}]{green, }
+\item[{int}]{blue, }
+\item[{int}]{steps}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a03069f779ef1392c1d130618114c8783}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{ID__VL_8C_a03069f779ef1392c1d130618114c8783_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a03069f779ef1392c1d130618114c8783_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a5b35f17b2827ed46e5527e980de6522d}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-FillPalette@{VL\_\-FillPalette}}
+\index{VL\_\-FillPalette@{VL\_\-FillPalette}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-FillPalette}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-FillPalette (
+\begin{DoxyParamCaption}
+\item[{int}]{red, }
+\item[{int}]{green, }
+\item[{int}]{blue}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a5b35f17b2827ed46e5527e980de6522d}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a5b35f17b2827ed46e5527e980de6522d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_aac86ea12ff7436142d995dd219146b7a}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-GetColor@{VL\_\-GetColor}}
+\index{VL\_\-GetColor@{VL\_\-GetColor}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-GetColor}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-GetColor (
+\begin{DoxyParamCaption}
+\item[{int}]{color, }
+\item[{int $\ast$}]{red, }
+\item[{int $\ast$}]{green, }
+\item[{int $\ast$}]{blue}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_aac86ea12ff7436142d995dd219146b7a}
+\hypertarget{ID__VL_8C_a9bcb5eb78f4668f31cc3ebcaec2d8e1b}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-GetPalette@{VL\_\-GetPalette}}
+\index{VL\_\-GetPalette@{VL\_\-GetPalette}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-GetPalette}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-GetPalette (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} far $\ast$}]{palette}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a9bcb5eb78f4668f31cc3ebcaec2d8e1b}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a9bcb5eb78f4668f31cc3ebcaec2d8e1b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a0e9e36346595a9d3080888a54e9bab32}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-Hlin@{VL\_\-Hlin}}
+\index{VL\_\-Hlin@{VL\_\-Hlin}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-Hlin}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-Hlin (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{x, }
+\item[{unsigned}]{y, }
+\item[{unsigned}]{width, }
+\item[{unsigned}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a0e9e36346595a9d3080888a54e9bab32}
+\hypertarget{ID__VL_8C_a80443116a2a895fc294adfe9b2220819}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-LatchToScreen@{VL\_\-LatchToScreen}}
+\index{VL\_\-LatchToScreen@{VL\_\-LatchToScreen}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-LatchToScreen}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-LatchToScreen (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{source, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a80443116a2a895fc294adfe9b2220819}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a80443116a2a895fc294adfe9b2220819_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a1ac9dd60b620514ade73c12fe349b913}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-MaskedToScreen@{VL\_\-MaskedToScreen}}
+\index{VL\_\-MaskedToScreen@{VL\_\-MaskedToScreen}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-MaskedToScreen}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-MaskedToScreen (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} far $\ast$}]{source, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a1ac9dd60b620514ade73c12fe349b913}
+\hypertarget{ID__VL_8C_aa3a8bd4100a1d27c2680fa2799536ca7}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-MemToLatch@{VL\_\-MemToLatch}}
+\index{VL\_\-MemToLatch@{VL\_\-MemToLatch}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-MemToLatch}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-MemToLatch (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} far $\ast$}]{source, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{unsigned}]{dest}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_aa3a8bd4100a1d27c2680fa2799536ca7}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_aa3a8bd4100a1d27c2680fa2799536ca7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a9395a541fc6c21a2d7e7d8b4932d134e}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-MemToScreen@{VL\_\-MemToScreen}}
+\index{VL\_\-MemToScreen@{VL\_\-MemToScreen}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-MemToScreen}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-MemToScreen (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} far $\ast$}]{source, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a9395a541fc6c21a2d7e7d8b4932d134e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a9395a541fc6c21a2d7e7d8b4932d134e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_af6832bc9cfe83972291dcb2d9143fbe6}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-Plot@{VL\_\-Plot}}
+\index{VL\_\-Plot@{VL\_\-Plot}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-Plot}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-Plot (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_af6832bc9cfe83972291dcb2d9143fbe6}
+\hypertarget{ID__VL_8C_a58b95eb8953ab9a02185e8fec86ca80e}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetColor@{VL\_\-SetColor}}
+\index{VL\_\-SetColor@{VL\_\-SetColor}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetColor}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetColor (
+\begin{DoxyParamCaption}
+\item[{int}]{color, }
+\item[{int}]{red, }
+\item[{int}]{green, }
+\item[{int}]{blue}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a58b95eb8953ab9a02185e8fec86ca80e}
+\hypertarget{ID__VL_8C_a89e081d78ddb442fccb756b63b32db7e}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetCRTC@{VL\_\-SetCRTC}}
+\index{VL\_\-SetCRTC@{VL\_\-SetCRTC}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetCRTC}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetCRTC (
+\begin{DoxyParamCaption}
+\item[{int}]{crtc}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a89e081d78ddb442fccb756b63b32db7e}
+\hypertarget{ID__VL_8C_ae6999c2347a63aecb0d5b773727233e4}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetLineWidth@{VL\_\-SetLineWidth}}
+\index{VL\_\-SetLineWidth@{VL\_\-SetLineWidth}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetLineWidth}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetLineWidth (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{width}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_ae6999c2347a63aecb0d5b773727233e4}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_ae6999c2347a63aecb0d5b773727233e4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_ae2508644c57749de78a11a9122a36157}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetPalette@{VL\_\-SetPalette}}
+\index{VL\_\-SetPalette@{VL\_\-SetPalette}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetPalette}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetPalette (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} far $\ast$}]{palette}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_ae2508644c57749de78a11a9122a36157}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_ae2508644c57749de78a11a9122a36157_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a3de4b44b45163a1efd172c1ac4153a56}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetScreen@{VL\_\-SetScreen}}
+\index{VL\_\-SetScreen@{VL\_\-SetScreen}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetScreen}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetScreen (
+\begin{DoxyParamCaption}
+\item[{int}]{crtc, }
+\item[{int}]{pelpan}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a3de4b44b45163a1efd172c1ac4153a56}
+\hypertarget{ID__VL_8C_aead87cc222e7ecc11ed285babd9df96f}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetSplitScreen@{VL\_\-SetSplitScreen}}
+\index{VL\_\-SetSplitScreen@{VL\_\-SetSplitScreen}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetSplitScreen}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetSplitScreen (
+\begin{DoxyParamCaption}
+\item[{int}]{linenum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_aead87cc222e7ecc11ed285babd9df96f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{ID__VL_8C_aead87cc222e7ecc11ed285babd9df96f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a709f71c569d3ac193681be08c072085b}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetTextMode@{VL\_\-SetTextMode}}
+\index{VL\_\-SetTextMode@{VL\_\-SetTextMode}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetTextMode}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetTextMode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a709f71c569d3ac193681be08c072085b}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{ID__VL_8C_a709f71c569d3ac193681be08c072085b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a49a6717be931b39c40a299c8e6383d82}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SetVGAPlaneMode@{VL\_\-SetVGAPlaneMode}}
+\index{VL\_\-SetVGAPlaneMode@{VL\_\-SetVGAPlaneMode}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SetVGAPlaneMode}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SetVGAPlaneMode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a49a6717be931b39c40a299c8e6383d82}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a49a6717be931b39c40a299c8e6383d82_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a49a6717be931b39c40a299c8e6383d82_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a138484024a3c6a70dd3f3fc8b0774aa9}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-Shutdown@{VL\_\-Shutdown}}
+\index{VL\_\-Shutdown@{VL\_\-Shutdown}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a138484024a3c6a70dd3f3fc8b0774aa9}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{ID__VL_8C_a138484024a3c6a70dd3f3fc8b0774aa9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_af01da85944467c664d21473141c74977}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-SizeTile8String@{VL\_\-SizeTile8String}}
+\index{VL\_\-SizeTile8String@{VL\_\-SizeTile8String}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-SizeTile8String}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-SizeTile8String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int $\ast$}]{width, }
+\item[{int $\ast$}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_af01da85944467c664d21473141c74977}
+\hypertarget{ID__VL_8C_aa10dcb97ab8ddbe00ceff643af423bef}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-Startup@{VL\_\-Startup}}
+\index{VL\_\-Startup@{VL\_\-Startup}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_aa10dcb97ab8ddbe00ceff643af423bef}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{ID__VL_8C_aa10dcb97ab8ddbe00ceff643af423bef_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a29a9e236524d106d97e319b43ade47fa}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-TestPaletteSet@{VL\_\-TestPaletteSet}}
+\index{VL\_\-TestPaletteSet@{VL\_\-TestPaletteSet}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-TestPaletteSet}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-TestPaletteSet (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a29a9e236524d106d97e319b43ade47fa}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{ID__VL_8C_a29a9e236524d106d97e319b43ade47fa_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_a29a9e236524d106d97e319b43ade47fa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_a3304fe571736f2ede98f223788d51091}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-VideoID@{VL\_\-VideoID}}
+\index{VL\_\-VideoID@{VL\_\-VideoID}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-VideoID}]{\setlength{\rightskip}{0pt plus 5cm}int VL\_\-VideoID (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_a3304fe571736f2ede98f223788d51091}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{ID__VL_8C_a3304fe571736f2ede98f223788d51091_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__VL_8C_add1ee903f12ff9e8c9c9baff950abcdd}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-Vlin@{VL\_\-Vlin}}
+\index{VL\_\-Vlin@{VL\_\-Vlin}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-Vlin}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-Vlin (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{height, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_add1ee903f12ff9e8c9c9baff950abcdd}
+\hypertarget{ID__VL_8C_ab76cfea15c66ecd888aa773a7b5ec300}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!VL\_\-WaitVBL@{VL\_\-WaitVBL}}
+\index{VL\_\-WaitVBL@{VL\_\-WaitVBL}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{VL\_\-WaitVBL}]{\setlength{\rightskip}{0pt plus 5cm}void VL\_\-WaitVBL (
+\begin{DoxyParamCaption}
+\item[{int}]{vbls}
+\end{DoxyParamCaption}
+)}}
+\label{ID__VL_8C_ab76cfea15c66ecd888aa773a7b5ec300}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__VL_8C_ab76cfea15c66ecd888aa773a7b5ec300_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__VL_8C_a7d243f7a427ebc7df3533c0cd5760971}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!bordercolor@{bordercolor}}
+\index{bordercolor@{bordercolor}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{bordercolor}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf bordercolor}}}
+\label{ID__VL_8C_a7d243f7a427ebc7df3533c0cd5760971}
+\hypertarget{ID__VL_8C_a95b7c90690730f0b09409f1fb8ef3730}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!bufferofs@{bufferofs}}
+\index{bufferofs@{bufferofs}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{bufferofs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf bufferofs}}}
+\label{ID__VL_8C_a95b7c90690730f0b09409f1fb8ef3730}
+\hypertarget{ID__VL_8C_ae69449df2121a068cc86de491d7b5956}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!displayofs@{displayofs}}
+\index{displayofs@{displayofs}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{displayofs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf displayofs}}}
+\label{ID__VL_8C_ae69449df2121a068cc86de491d7b5956}
+\hypertarget{ID__VL_8C_a675e190adb49e5f2beb6eac8c743e5df}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!fastpalette@{fastpalette}}
+\index{fastpalette@{fastpalette}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{fastpalette}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf fastpalette}}}
+\label{ID__VL_8C_a675e190adb49e5f2beb6eac8c743e5df}
+\hypertarget{ID__VL_8C_aee788d5b07d9018f62d16a6a04bada6c}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!leftmasks@{leftmasks}}
+\index{leftmasks@{leftmasks}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{leftmasks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf leftmasks}\mbox{[}4\mbox{]} = \{15,14,12,8\}}}
+\label{ID__VL_8C_aee788d5b07d9018f62d16a6a04bada6c}
+\hypertarget{ID__VL_8C_a4290871866270ef6854fb238a3c8698d}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!linewidth@{linewidth}}
+\index{linewidth@{linewidth}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{linewidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf linewidth}}}
+\label{ID__VL_8C_a4290871866270ef6854fb238a3c8698d}
+\hypertarget{ID__VL_8C_a6b76f235786a33e3e5633337d4040a8e}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!palette1@{palette1}}
+\index{palette1@{palette1}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{palette1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf palette1}\mbox{[}256\mbox{]}\mbox{[}3\mbox{]}}}
+\label{ID__VL_8C_a6b76f235786a33e3e5633337d4040a8e}
+\hypertarget{ID__VL_8C_ab69c3ce9f0621a6327c2be3696acb729}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!palette2@{palette2}}
+\index{palette2@{palette2}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{palette2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far far {\bf palette2}\mbox{[}256\mbox{]}\mbox{[}3\mbox{]}}}
+\label{ID__VL_8C_ab69c3ce9f0621a6327c2be3696acb729}
+\hypertarget{ID__VL_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!ParmStrings@{ParmStrings}}
+\index{ParmStrings@{ParmStrings}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{ParmStrings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf ParmStrings}\mbox{[}$\,$\mbox{]} = \{\char`\"{}HIDDENCARD\char`\"{},\char`\"{}\char`\"{}\}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{ID__VL_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}
+\hypertarget{ID__VL_8C_a868e53c86d5ef1ddae46b80290a36cd8}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!pelpan@{pelpan}}
+\index{pelpan@{pelpan}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{pelpan}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf pelpan}}}
+\label{ID__VL_8C_a868e53c86d5ef1ddae46b80290a36cd8}
+\hypertarget{ID__VL_8C_afff3c766a9857f86d033f67419f5db75}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!pixmasks@{pixmasks}}
+\index{pixmasks@{pixmasks}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{pixmasks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf pixmasks}\mbox{[}4\mbox{]} = \{1,2,4,8\}}}
+\label{ID__VL_8C_afff3c766a9857f86d033f67419f5db75}
+\hypertarget{ID__VL_8C_adbfff86f9416c48fdb30a8fd703446ae}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!rightmasks@{rightmasks}}
+\index{rightmasks@{rightmasks}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{rightmasks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf rightmasks}\mbox{[}4\mbox{]} = \{1,3,7,15\}}}
+\label{ID__VL_8C_adbfff86f9416c48fdb30a8fd703446ae}
+\hypertarget{ID__VL_8C_a81e1545cb2fb150263b44e54eee49451}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!screenfaded@{screenfaded}}
+\index{screenfaded@{screenfaded}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{screenfaded}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf screenfaded}}}
+\label{ID__VL_8C_a81e1545cb2fb150263b44e54eee49451}
+\hypertarget{ID__VL_8C_af6fb80e1232b0b5c33e4174a5b7c7985}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!screenseg@{screenseg}}
+\index{screenseg@{screenseg}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{screenseg}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf screenseg} = SCREENSEG}}
+\label{ID__VL_8C_af6fb80e1232b0b5c33e4174a5b7c7985}
+\hypertarget{ID__VL_8C_ab3bdd072ceebbac1d50e74d7c34e9c4a}{
+\index{ID\_\-VL.C@{ID\_\-VL.C}!ylookup@{ylookup}}
+\index{ylookup@{ylookup}!ID_VL.C@{ID\_\-VL.C}}
+\subsubsection[{ylookup}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf ylookup}\mbox{[}MAXSCANLINES\mbox{]}}}
+\label{ID__VL_8C_ab3bdd072ceebbac1d50e74d7c34e9c4a}

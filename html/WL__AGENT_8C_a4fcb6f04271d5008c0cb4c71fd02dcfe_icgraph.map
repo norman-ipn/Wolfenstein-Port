@@ -1,0 +1,23 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="656,197,747,227"/>
+<area shape="rect" id="node24" href="$WL__MENU_8H.html#a2ca12f5b43c80ee49b36a78621ac8ce4" title="CP_LoadGame" alt="" coords="149,428,259,457"/>
+<area shape="rect" id="node33" href="$WL__DEF_8H.html#ae61234b6d03ca70ebed1f5a423d17ba5" title="DebugKeys" alt="" coords="496,147,587,176"/>
+<area shape="rect" id="node36" href="$WL__GAME_8C.html#a27540b39d401cbea76d1dc2d5d701736" title="Died" alt="" coords="975,119,1023,148"/>
+<area shape="rect" id="node39" href="$WL__GAME_8C.html#ad8f8ba380685262789e9d6931e35e34a" title="DrawPlayScreen" alt="" coords="144,325,264,355"/>
+<area shape="rect" id="node46" href="$WL__DEF_8H.html#af6a9d18983cf35f34e0cf72dc1af934e" title="GiveAmmo" alt="" coords="161,95,247,124"/>
+<area shape="rect" id="node61" href="$WL__AGENT_8C.html#a0cce1c4b64372c27c6ff79e6fb397772" title="T_Attack" alt="" coords="167,481,241,511"/>
+<area shape="rect" id="node5" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="961,197,1036,227"/>
+<area shape="rect" id="node7" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="1092,224,1177,253"/>
+<area shape="rect" id="node18" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="1093,312,1176,341"/>
+<area shape="rect" id="node21" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="1085,365,1184,395"/>
+<area shape="rect" id="node9" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1232,339,1317,368"/>
+<area shape="rect" id="node11" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1365,339,1416,368"/>
+<area shape="rect" id="node13" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1465,312,1553,341"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1603,339,1677,368"/>
+<area shape="rect" id="node26" href="$WL__MENU_8H.html#a95a8089ef599aecc8a81f90ba35032dd" title="CP_CheckQuick" alt="" coords="312,453,432,483"/>
+<area shape="rect" id="node28" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="480,453,603,483"/>
+<area shape="rect" id="node48" href="$WL__DEF_8H.html#ae541a99035c0697e4b819dbe96f16a6a" title="GetBonus" alt="" coords="501,43,581,72"/>
+<area shape="rect" id="node56" href="$WL__DEF_8H.html#aabcbbb80ba8c11b87f33bd15707410c6" title="GiveWeapon" alt="" coords="324,95,420,124"/>
+<area shape="rect" id="node50" href="$WL__DRAW_8C.html#a3f31beef974ac9e631c4b634d91ba701" title="DrawScaleds" alt="" coords="652,93,751,123"/>
+<area shape="rect" id="node52" href="$WL__DRAW_8C.html#abde2aab3bb185f39bd50f4574444a034" title="ThreeDRefresh" alt="" coords="801,119,911,148"/>
+</map>

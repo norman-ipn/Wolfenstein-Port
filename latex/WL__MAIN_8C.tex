@@ -1,0 +1,1035 @@
+\hypertarget{WL__MAIN_8C}{
+\section{WL\_\-MAIN.C File Reference}
+\label{WL__MAIN_8C}\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}}
+}
+{\ttfamily \#include $<$conio.h$>$}\par
+{\ttfamily \#include \char`\"{}WL\_\-DEF.H\char`\"{}}\par
+Include dependency graph for WL\_\-MAIN.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{WL__MAIN_8C_ab633487e0599eaf29f624ed1ff705d3a}{FOCALLENGTH}~(0x5700l)
+\item 
+\#define \hyperlink{WL__MAIN_8C_a0b32ec8332adb0125574ea0426a15965}{VIEWGLOBAL}~0x10000
+\item 
+\#define \hyperlink{WL__MAIN_8C_af67316b9cea216c26c8d64e0ce74dd3d}{VIEWWIDTH}~256
+\item 
+\#define \hyperlink{WL__MAIN_8C_a7fd5033a7f8306c61fd129c8326dbd99}{VIEWHEIGHT}~144
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{WL__MAIN_8C_a66ba47a93e3e25204f4d72aee7614201}{Quit} (char $\ast$error)
+\item 
+void \hyperlink{WL__MAIN_8C_a147bf0e6c60e52a87c9c0947cb64d2d5}{ReadConfig} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_ab82705424ddc91b0a7d3c5fa8420640d}{WriteConfig} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_a5e78460b9244f183fd88b4549a6cf34d}{Patch386} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_af92c774866a68ff0737e216e1a7d09b2}{NewGame} (int difficulty, int episode)
+\item 
+void \hyperlink{WL__MAIN_8C_af2deb5787535cc63a689ba47c789b23f}{DiskFlopAnim} (int x, int y)
+\item 
+long \hyperlink{WL__MAIN_8C_a98c4c37b0ca7531f6c88b4433696c199}{DoChecksum} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$source, unsigned size, long checksum)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_a4ba711129ae29569db9f9ee134a2779d}{SaveTheGame} (int file, int x, int y)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_adff0b7d9c79b6ba94151102b17d7e8d2}{LoadTheGame} (int file, int x, int y)
+\item 
+void \hyperlink{WL__MAIN_8C_a715f77542ce1f3db369235ae2d841d2e}{ShutdownId} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_aebfb7b9493a691dd53697b23e3189822}{BuildTables} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_a82156c01cf0c6b616ccb2bc2dff569a6}{CalcProjection} (long focal)
+\item 
+void \hyperlink{WL__MAIN_8C_add5a4289c1da44215930d60d42f550ae}{SetupWalls} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_a88d551c35376f2082704379c45c542ec}{SignonScreen} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_a7f8b2d1f1ff753b4eb38f74d62f2f14f}{FinishSignon} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_af7f72d25165824640d12bb37c6d11a23}{MS\_\-CheckParm} (char far $\ast$check)
+\item 
+void \hyperlink{WL__MAIN_8C_a0c38b7da578246b8d7c8c350af1ecdb1}{InitDigiMap} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_aeff0948270bdff815c7b30e558e7129b}{DoJukebox} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_ad05ce539d29b849ef066482e2284a93f}{InitGame} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_af74ea12ed1f33b5eb32cee5062ea034c}{SetViewSize} (unsigned width, unsigned height)
+\item 
+void \hyperlink{WL__MAIN_8C_aa3aa2bb8e2e2e33f4c843747fd68c9c5}{ShowViewSize} (int width)
+\item 
+void \hyperlink{WL__MAIN_8C_accba26d21c8d31a42729fd0039d5c8e8}{NewViewSize} (int width)
+\item 
+void \hyperlink{WL__MAIN_8C_aee1eb6a4b164d3763069996adb02f1b5}{DemoLoop} (void)
+\item 
+void \hyperlink{WL__MAIN_8C_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{WL__MAIN_8C_aaa970ecb4bbdf1eeaf97691045aaf8b5}{str} \mbox{[}80\mbox{]}
+\item 
+char \hyperlink{WL__MAIN_8C_ab4ccbbd4c1a8a1618dcdfede0c63d313}{str2} \mbox{[}20\mbox{]}
+\item 
+int \hyperlink{WL__MAIN_8C_aecad4308d4e4f895479ae314b36ecadb}{tedlevelnum}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_ae4f570f74d8fa87a5c00a8ebb38dbbd5}{tedlevel}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_a6910c9b4b0337ce17f4ea6c2260721bf}{nospr}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_ae705b06258eb47aefcfc554d1e2e0a3b}{IsA386}
+\item 
+int \hyperlink{WL__MAIN_8C_a3a80e8be3138f31dfac72bcf50a43d62}{dirangle} \mbox{[}9\mbox{]}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WL__MAIN_8C_a288677cce66771feddc15ea8cc5c36cc}{focallength}
+\item 
+unsigned \hyperlink{WL__MAIN_8C_abcc8c237b97739d0b0c39acc08dbf2fc}{screenofs}
+\item 
+int \hyperlink{WL__MAIN_8C_a9d8a9239749c5174f26cf73ab9625c3b}{viewwidth}
+\item 
+int \hyperlink{WL__MAIN_8C_abbbcb01b7dcc4679d07cde1acfbf1412}{viewheight}
+\item 
+int \hyperlink{WL__MAIN_8C_a05f5f2b9130da8655f373530b17559f2}{centerx}
+\item 
+int \hyperlink{WL__MAIN_8C_aa63bb3fda19e484f4cbc31ad1760f408}{shootdelta}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WL__MAIN_8C_a849bfcd0a34b52dc70d3d9fa35a9ffc7}{scale}
+\item 
+\hyperlink{WL__DEF_8H_aaf54715c9b83afe8794059fcf5fd5e7e}{fixed} \hyperlink{WL__MAIN_8C_ab4bad4ff8262f2f964b36bb50a8f890c}{maxslope}
+\item 
+long \hyperlink{WL__MAIN_8C_aebfb0db84258aa5fc9301a200f96b8d3}{heightnumerator}
+\item 
+int \hyperlink{WL__MAIN_8C_a45b3f03d729e26d91cddc22055a35e54}{minheightdiv}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_abd09f97b0a5a9701196dba3f6e6c7978}{startgame}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_a2361eb57d882933d300f22fae83e8fa0}{loadedgame}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{WL__MAIN_8C_a19f0beeaba2b97e5c1c18467d930de1c}{virtualreality}
+\item 
+int \hyperlink{WL__MAIN_8C_a8dcec22af342ab93acb6d66d85b69140}{mouseadjustment}
+\item 
+char \hyperlink{WL__MAIN_8C_af1798aca3dc8c86728240ad581d646f7}{configname} \mbox{[}13\mbox{]} = \char`\"{}CONFIG.\char`\"{}
+\item 
+char $\ast$ \hyperlink{WL__MAIN_8C_a8bb692025d52ae676447974bf167c8c2}{JHParmStrings} \mbox{[}$\,$\mbox{]} = \{\char`\"{}no386\char`\"{},nil\}
+\item 
+const float \hyperlink{WL__MAIN_8C_a96225f6b9b90cf6fe6087d34795b9037}{radtoint} = (float)FINEANGLES/2/PI
+\item 
+static int \hyperlink{WL__MAIN_8C_a82000528367f0aa6e7e5ea3df81ac488}{wolfdigimap} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{structCP__iteminfo}{CP\_\-iteminfo} \hyperlink{WL__MAIN_8C_a6e6e340c87aac09f698443f10add2d51}{MusicItems} = \{CTL\_\-X,CTL\_\-Y,6,0,32\}
+\item 
+\hyperlink{structCP__itemtype}{CP\_\-itemtype} far \hyperlink{WL__MAIN_8C_adcf7140c950b56fed629f6553542555f}{MusicMenu} \mbox{[}$\,$\mbox{]}
+\item 
+static char $\ast$ \hyperlink{WL__MAIN_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{ParmStrings} \mbox{[}$\,$\mbox{]} = \{\char`\"{}baby\char`\"{},\char`\"{}easy\char`\"{},\char`\"{}normal\char`\"{},\char`\"{}hard\char`\"{},\char`\"{}\char`\"{}\}
+\item 
+char $\ast$ \hyperlink{WL__MAIN_8C_aff857ab1c5f74eb9b19dffcad87e4dcb}{nosprtxt} \mbox{[}$\,$\mbox{]} = \{\char`\"{}nospr\char`\"{},nil\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{WL__MAIN_8C_ab633487e0599eaf29f624ed1ff705d3a}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!FOCALLENGTH@{FOCALLENGTH}}
+\index{FOCALLENGTH@{FOCALLENGTH}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{FOCALLENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define FOCALLENGTH~(0x5700l)}}
+\label{WL__MAIN_8C_ab633487e0599eaf29f624ed1ff705d3a}
+\hypertarget{WL__MAIN_8C_a0b32ec8332adb0125574ea0426a15965}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!VIEWGLOBAL@{VIEWGLOBAL}}
+\index{VIEWGLOBAL@{VIEWGLOBAL}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{VIEWGLOBAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIEWGLOBAL~0x10000}}
+\label{WL__MAIN_8C_a0b32ec8332adb0125574ea0426a15965}
+\hypertarget{WL__MAIN_8C_a7fd5033a7f8306c61fd129c8326dbd99}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!VIEWHEIGHT@{VIEWHEIGHT}}
+\index{VIEWHEIGHT@{VIEWHEIGHT}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{VIEWHEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIEWHEIGHT~144}}
+\label{WL__MAIN_8C_a7fd5033a7f8306c61fd129c8326dbd99}
+\hypertarget{WL__MAIN_8C_af67316b9cea216c26c8d64e0ce74dd3d}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!VIEWWIDTH@{VIEWWIDTH}}
+\index{VIEWWIDTH@{VIEWWIDTH}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{VIEWWIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIEWWIDTH~256}}
+\label{WL__MAIN_8C_af67316b9cea216c26c8d64e0ce74dd3d}
+
+
+\subsection{Function Documentation}
+\hypertarget{WL__MAIN_8C_aebfb7b9493a691dd53697b23e3189822}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!BuildTables@{BuildTables}}
+\index{BuildTables@{BuildTables}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{BuildTables}]{\setlength{\rightskip}{0pt plus 5cm}void BuildTables (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_aebfb7b9493a691dd53697b23e3189822}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_aebfb7b9493a691dd53697b23e3189822_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a82156c01cf0c6b616ccb2bc2dff569a6}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!CalcProjection@{CalcProjection}}
+\index{CalcProjection@{CalcProjection}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{CalcProjection}]{\setlength{\rightskip}{0pt plus 5cm}void CalcProjection (
+\begin{DoxyParamCaption}
+\item[{long}]{focal}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a82156c01cf0c6b616ccb2bc2dff569a6}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a82156c01cf0c6b616ccb2bc2dff569a6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_aee1eb6a4b164d3763069996adb02f1b5}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!DemoLoop@{DemoLoop}}
+\index{DemoLoop@{DemoLoop}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{DemoLoop}]{\setlength{\rightskip}{0pt plus 5cm}void DemoLoop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_aee1eb6a4b164d3763069996adb02f1b5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_aee1eb6a4b164d3763069996adb02f1b5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_aee1eb6a4b164d3763069996adb02f1b5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_af2deb5787535cc63a689ba47c789b23f}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!DiskFlopAnim@{DiskFlopAnim}}
+\index{DiskFlopAnim@{DiskFlopAnim}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{DiskFlopAnim}]{\setlength{\rightskip}{0pt plus 5cm}void DiskFlopAnim (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_af2deb5787535cc63a689ba47c789b23f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_af2deb5787535cc63a689ba47c789b23f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_af2deb5787535cc63a689ba47c789b23f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a98c4c37b0ca7531f6c88b4433696c199}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!DoChecksum@{DoChecksum}}
+\index{DoChecksum@{DoChecksum}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{DoChecksum}]{\setlength{\rightskip}{0pt plus 5cm}long DoChecksum (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} far $\ast$}]{source, }
+\item[{unsigned}]{size, }
+\item[{long}]{checksum}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a98c4c37b0ca7531f6c88b4433696c199}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a98c4c37b0ca7531f6c88b4433696c199_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_aeff0948270bdff815c7b30e558e7129b}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!DoJukebox@{DoJukebox}}
+\index{DoJukebox@{DoJukebox}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{DoJukebox}]{\setlength{\rightskip}{0pt plus 5cm}void DoJukebox (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_aeff0948270bdff815c7b30e558e7129b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_aeff0948270bdff815c7b30e558e7129b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_aeff0948270bdff815c7b30e558e7129b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a7f8b2d1f1ff753b4eb38f74d62f2f14f}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!FinishSignon@{FinishSignon}}
+\index{FinishSignon@{FinishSignon}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{FinishSignon}]{\setlength{\rightskip}{0pt plus 5cm}void FinishSignon (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a7f8b2d1f1ff753b4eb38f74d62f2f14f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a7f8b2d1f1ff753b4eb38f74d62f2f14f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a7f8b2d1f1ff753b4eb38f74d62f2f14f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a0c38b7da578246b8d7c8c350af1ecdb1}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!InitDigiMap@{InitDigiMap}}
+\index{InitDigiMap@{InitDigiMap}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{InitDigiMap}]{\setlength{\rightskip}{0pt plus 5cm}void InitDigiMap (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a0c38b7da578246b8d7c8c350af1ecdb1}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a0c38b7da578246b8d7c8c350af1ecdb1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_ad05ce539d29b849ef066482e2284a93f}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!InitGame@{InitGame}}
+\index{InitGame@{InitGame}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{InitGame}]{\setlength{\rightskip}{0pt plus 5cm}void InitGame (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_ad05ce539d29b849ef066482e2284a93f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MAIN_8C_ad05ce539d29b849ef066482e2284a93f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{WL__MAIN_8C_ad05ce539d29b849ef066482e2284a93f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_adff0b7d9c79b6ba94151102b17d7e8d2}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!LoadTheGame@{LoadTheGame}}
+\index{LoadTheGame@{LoadTheGame}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{LoadTheGame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} LoadTheGame (
+\begin{DoxyParamCaption}
+\item[{int}]{file, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_adff0b7d9c79b6ba94151102b17d7e8d2}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_adff0b7d9c79b6ba94151102b17d7e8d2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_adff0b7d9c79b6ba94151102b17d7e8d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a6288eba0f8e8ad3ab1544ad731eb7667}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!main@{main}}
+\index{main@{main}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MAIN_8C_a6288eba0f8e8ad3ab1544ad731eb7667_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{WL__MAIN_8C_a6288eba0f8e8ad3ab1544ad731eb7667_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_af7f72d25165824640d12bb37c6d11a23}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!MS\_\-CheckParm@{MS\_\-CheckParm}}
+\index{MS\_\-CheckParm@{MS\_\-CheckParm}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{MS\_\-CheckParm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} MS\_\-CheckParm (
+\begin{DoxyParamCaption}
+\item[{char far $\ast$}]{check}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_af7f72d25165824640d12bb37c6d11a23}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_af7f72d25165824640d12bb37c6d11a23_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_af92c774866a68ff0737e216e1a7d09b2}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!NewGame@{NewGame}}
+\index{NewGame@{NewGame}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{NewGame}]{\setlength{\rightskip}{0pt plus 5cm}void NewGame (
+\begin{DoxyParamCaption}
+\item[{int}]{difficulty, }
+\item[{int}]{episode}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_af92c774866a68ff0737e216e1a7d09b2}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_af92c774866a68ff0737e216e1a7d09b2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_accba26d21c8d31a42729fd0039d5c8e8}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!NewViewSize@{NewViewSize}}
+\index{NewViewSize@{NewViewSize}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{NewViewSize}]{\setlength{\rightskip}{0pt plus 5cm}void NewViewSize (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_accba26d21c8d31a42729fd0039d5c8e8}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_accba26d21c8d31a42729fd0039d5c8e8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_accba26d21c8d31a42729fd0039d5c8e8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a5e78460b9244f183fd88b4549a6cf34d}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!Patch386@{Patch386}}
+\index{Patch386@{Patch386}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{Patch386}]{\setlength{\rightskip}{0pt plus 5cm}void Patch386 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a5e78460b9244f183fd88b4549a6cf34d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{WL__MAIN_8C_a5e78460b9244f183fd88b4549a6cf34d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a5e78460b9244f183fd88b4549a6cf34d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a66ba47a93e3e25204f4d72aee7614201}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!Quit@{Quit}}
+\index{Quit@{Quit}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{Quit}]{\setlength{\rightskip}{0pt plus 5cm}void Quit (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{error}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a66ba47a93e3e25204f4d72aee7614201}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a66ba47a93e3e25204f4d72aee7614201_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a147bf0e6c60e52a87c9c0947cb64d2d5}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!ReadConfig@{ReadConfig}}
+\index{ReadConfig@{ReadConfig}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{ReadConfig}]{\setlength{\rightskip}{0pt plus 5cm}void ReadConfig (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a147bf0e6c60e52a87c9c0947cb64d2d5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a147bf0e6c60e52a87c9c0947cb64d2d5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a147bf0e6c60e52a87c9c0947cb64d2d5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a4ba711129ae29569db9f9ee134a2779d}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!SaveTheGame@{SaveTheGame}}
+\index{SaveTheGame@{SaveTheGame}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{SaveTheGame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SaveTheGame (
+\begin{DoxyParamCaption}
+\item[{int}]{file, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a4ba711129ae29569db9f9ee134a2779d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a4ba711129ae29569db9f9ee134a2779d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a4ba711129ae29569db9f9ee134a2779d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_add5a4289c1da44215930d60d42f550ae}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!SetupWalls@{SetupWalls}}
+\index{SetupWalls@{SetupWalls}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{SetupWalls}]{\setlength{\rightskip}{0pt plus 5cm}void SetupWalls (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_add5a4289c1da44215930d60d42f550ae}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_add5a4289c1da44215930d60d42f550ae_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_af74ea12ed1f33b5eb32cee5062ea034c}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!SetViewSize@{SetViewSize}}
+\index{SetViewSize@{SetViewSize}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{SetViewSize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SetViewSize (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{width, }
+\item[{unsigned}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_af74ea12ed1f33b5eb32cee5062ea034c}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{WL__MAIN_8C_af74ea12ed1f33b5eb32cee5062ea034c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_af74ea12ed1f33b5eb32cee5062ea034c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_aa3aa2bb8e2e2e33f4c843747fd68c9c5}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!ShowViewSize@{ShowViewSize}}
+\index{ShowViewSize@{ShowViewSize}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{ShowViewSize}]{\setlength{\rightskip}{0pt plus 5cm}void ShowViewSize (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_aa3aa2bb8e2e2e33f4c843747fd68c9c5}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_aa3aa2bb8e2e2e33f4c843747fd68c9c5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_aa3aa2bb8e2e2e33f4c843747fd68c9c5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a715f77542ce1f3db369235ae2d841d2e}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!ShutdownId@{ShutdownId}}
+\index{ShutdownId@{ShutdownId}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{ShutdownId}]{\setlength{\rightskip}{0pt plus 5cm}void ShutdownId (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a715f77542ce1f3db369235ae2d841d2e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a715f77542ce1f3db369235ae2d841d2e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MAIN_8C_a715f77542ce1f3db369235ae2d841d2e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_a88d551c35376f2082704379c45c542ec}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!SignonScreen@{SignonScreen}}
+\index{SignonScreen@{SignonScreen}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{SignonScreen}]{\setlength{\rightskip}{0pt plus 5cm}void SignonScreen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_a88d551c35376f2082704379c45c542ec}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a88d551c35376f2082704379c45c542ec_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{WL__MAIN_8C_a88d551c35376f2082704379c45c542ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{WL__MAIN_8C_ab82705424ddc91b0a7d3c5fa8420640d}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!WriteConfig@{WriteConfig}}
+\index{WriteConfig@{WriteConfig}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{WriteConfig}]{\setlength{\rightskip}{0pt plus 5cm}void WriteConfig (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{WL__MAIN_8C_ab82705424ddc91b0a7d3c5fa8420640d}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{WL__MAIN_8C_ab82705424ddc91b0a7d3c5fa8420640d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{WL__MAIN_8C_a05f5f2b9130da8655f373530b17559f2}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!centerx@{centerx}}
+\index{centerx@{centerx}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{centerx}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf centerx}}}
+\label{WL__MAIN_8C_a05f5f2b9130da8655f373530b17559f2}
+\hypertarget{WL__MAIN_8C_af1798aca3dc8c86728240ad581d646f7}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!configname@{configname}}
+\index{configname@{configname}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{configname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf configname}\mbox{[}13\mbox{]} = \char`\"{}CONFIG.\char`\"{}}}
+\label{WL__MAIN_8C_af1798aca3dc8c86728240ad581d646f7}
+\hypertarget{WL__MAIN_8C_a3a80e8be3138f31dfac72bcf50a43d62}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!dirangle@{dirangle}}
+\index{dirangle@{dirangle}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{dirangle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dirangle}\mbox{[}9\mbox{]}}}
+\label{WL__MAIN_8C_a3a80e8be3138f31dfac72bcf50a43d62}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {0,ANGLES/8,2*ANGLES/8,3*ANGLES/8,4*ANGLES/8,
+        5*ANGLES/8,6*ANGLES/8,7*ANGLES/8,ANGLES}
+\end{DoxyCode}
+\hypertarget{WL__MAIN_8C_a288677cce66771feddc15ea8cc5c36cc}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!focallength@{focallength}}
+\index{focallength@{focallength}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{focallength}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} {\bf focallength}}}
+\label{WL__MAIN_8C_a288677cce66771feddc15ea8cc5c36cc}
+\hypertarget{WL__MAIN_8C_aebfb0db84258aa5fc9301a200f96b8d3}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!heightnumerator@{heightnumerator}}
+\index{heightnumerator@{heightnumerator}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{heightnumerator}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf heightnumerator}}}
+\label{WL__MAIN_8C_aebfb0db84258aa5fc9301a200f96b8d3}
+\hypertarget{WL__MAIN_8C_ae705b06258eb47aefcfc554d1e2e0a3b}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!IsA386@{IsA386}}
+\index{IsA386@{IsA386}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{IsA386}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf IsA386}}}
+\label{WL__MAIN_8C_ae705b06258eb47aefcfc554d1e2e0a3b}
+\hypertarget{WL__MAIN_8C_a8bb692025d52ae676447974bf167c8c2}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!JHParmStrings@{JHParmStrings}}
+\index{JHParmStrings@{JHParmStrings}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{JHParmStrings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf JHParmStrings}\mbox{[}$\,$\mbox{]} = \{\char`\"{}no386\char`\"{},nil\}}}
+\label{WL__MAIN_8C_a8bb692025d52ae676447974bf167c8c2}
+\hypertarget{WL__MAIN_8C_a2361eb57d882933d300f22fae83e8fa0}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!loadedgame@{loadedgame}}
+\index{loadedgame@{loadedgame}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{loadedgame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf loadedgame}}}
+\label{WL__MAIN_8C_a2361eb57d882933d300f22fae83e8fa0}
+\hypertarget{WL__MAIN_8C_ab4bad4ff8262f2f964b36bb50a8f890c}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!maxslope@{maxslope}}
+\index{maxslope@{maxslope}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{maxslope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} {\bf maxslope}}}
+\label{WL__MAIN_8C_ab4bad4ff8262f2f964b36bb50a8f890c}
+\hypertarget{WL__MAIN_8C_a45b3f03d729e26d91cddc22055a35e54}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!minheightdiv@{minheightdiv}}
+\index{minheightdiv@{minheightdiv}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{minheightdiv}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf minheightdiv}}}
+\label{WL__MAIN_8C_a45b3f03d729e26d91cddc22055a35e54}
+\hypertarget{WL__MAIN_8C_a8dcec22af342ab93acb6d66d85b69140}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!mouseadjustment@{mouseadjustment}}
+\index{mouseadjustment@{mouseadjustment}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{mouseadjustment}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mouseadjustment}}}
+\label{WL__MAIN_8C_a8dcec22af342ab93acb6d66d85b69140}
+\hypertarget{WL__MAIN_8C_a6e6e340c87aac09f698443f10add2d51}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!MusicItems@{MusicItems}}
+\index{MusicItems@{MusicItems}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{MusicItems}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CP\_\-iteminfo} {\bf MusicItems} = \{CTL\_\-X,CTL\_\-Y,6,0,32\}}}
+\label{WL__MAIN_8C_a6e6e340c87aac09f698443f10add2d51}
+\hypertarget{WL__MAIN_8C_adcf7140c950b56fed629f6553542555f}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!MusicMenu@{MusicMenu}}
+\index{MusicMenu@{MusicMenu}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{MusicMenu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CP\_\-itemtype} far {\bf MusicMenu}\mbox{[}$\,$\mbox{]}}}
+\label{WL__MAIN_8C_adcf7140c950b56fed629f6553542555f}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+        {
+                {1,"Get Them!",0},
+                {1,"Searching",0},
+                {1,"P.O.W.",0},
+                {1,"Suspense",0},
+                {1,"War March",0},
+                {1,"Around The Corner!",0},
+
+                {1,"Nazi Anthem",0},
+                {1,"Lurking...",0},
+                {1,"Going After Hitler",0},
+                {1,"Pounding Headache",0},
+                {1,"Into the Dungeons",0},
+                {1,"Ultimate Conquest",0},
+
+                {1,"Kill the S.O.B.",0},
+                {1,"The Nazi Rap",0},
+                {1,"Twelfth Hour",0},
+                {1,"Zero Hour",0},
+                {1,"Ultimate Conquest",0},
+                {1,"Wolfpack",0}
+        }
+\end{DoxyCode}
+\hypertarget{WL__MAIN_8C_a6910c9b4b0337ce17f4ea6c2260721bf}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!nospr@{nospr}}
+\index{nospr@{nospr}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{nospr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf nospr}}}
+\label{WL__MAIN_8C_a6910c9b4b0337ce17f4ea6c2260721bf}
+\hypertarget{WL__MAIN_8C_aff857ab1c5f74eb9b19dffcad87e4dcb}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!nosprtxt@{nosprtxt}}
+\index{nosprtxt@{nosprtxt}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{nosprtxt}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf nosprtxt}\mbox{[}$\,$\mbox{]} = \{\char`\"{}nospr\char`\"{},nil\}}}
+\label{WL__MAIN_8C_aff857ab1c5f74eb9b19dffcad87e4dcb}
+\hypertarget{WL__MAIN_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!ParmStrings@{ParmStrings}}
+\index{ParmStrings@{ParmStrings}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{ParmStrings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf ParmStrings}\mbox{[}$\,$\mbox{]} = \{\char`\"{}baby\char`\"{},\char`\"{}easy\char`\"{},\char`\"{}normal\char`\"{},\char`\"{}hard\char`\"{},\char`\"{}\char`\"{}\}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{WL__MAIN_8C_af8599e1c1fbb3afabbdaa22e7c4a94b0}
+\hypertarget{WL__MAIN_8C_a96225f6b9b90cf6fe6087d34795b9037}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!radtoint@{radtoint}}
+\index{radtoint@{radtoint}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{radtoint}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf radtoint} = (float)FINEANGLES/2/PI}}
+\label{WL__MAIN_8C_a96225f6b9b90cf6fe6087d34795b9037}
+\hypertarget{WL__MAIN_8C_a849bfcd0a34b52dc70d3d9fa35a9ffc7}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!scale@{scale}}
+\index{scale@{scale}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fixed} {\bf scale}}}
+\label{WL__MAIN_8C_a849bfcd0a34b52dc70d3d9fa35a9ffc7}
+\hypertarget{WL__MAIN_8C_abcc8c237b97739d0b0c39acc08dbf2fc}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!screenofs@{screenofs}}
+\index{screenofs@{screenofs}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{screenofs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf screenofs}}}
+\label{WL__MAIN_8C_abcc8c237b97739d0b0c39acc08dbf2fc}
+\hypertarget{WL__MAIN_8C_aa63bb3fda19e484f4cbc31ad1760f408}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!shootdelta@{shootdelta}}
+\index{shootdelta@{shootdelta}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{shootdelta}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf shootdelta}}}
+\label{WL__MAIN_8C_aa63bb3fda19e484f4cbc31ad1760f408}
+\hypertarget{WL__MAIN_8C_abd09f97b0a5a9701196dba3f6e6c7978}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!startgame@{startgame}}
+\index{startgame@{startgame}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{startgame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf startgame}}}
+\label{WL__MAIN_8C_abd09f97b0a5a9701196dba3f6e6c7978}
+\hypertarget{WL__MAIN_8C_aaa970ecb4bbdf1eeaf97691045aaf8b5}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!str@{str}}
+\index{str@{str}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf str}\mbox{[}80\mbox{]}}}
+\label{WL__MAIN_8C_aaa970ecb4bbdf1eeaf97691045aaf8b5}
+\hypertarget{WL__MAIN_8C_ab4ccbbd4c1a8a1618dcdfede0c63d313}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!str2@{str2}}
+\index{str2@{str2}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{str2}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf str2}\mbox{[}20\mbox{]}}}
+\label{WL__MAIN_8C_ab4ccbbd4c1a8a1618dcdfede0c63d313}
+\hypertarget{WL__MAIN_8C_ae4f570f74d8fa87a5c00a8ebb38dbbd5}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!tedlevel@{tedlevel}}
+\index{tedlevel@{tedlevel}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{tedlevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf tedlevel}}}
+\label{WL__MAIN_8C_ae4f570f74d8fa87a5c00a8ebb38dbbd5}
+\hypertarget{WL__MAIN_8C_aecad4308d4e4f895479ae314b36ecadb}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!tedlevelnum@{tedlevelnum}}
+\index{tedlevelnum@{tedlevelnum}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{tedlevelnum}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tedlevelnum}}}
+\label{WL__MAIN_8C_aecad4308d4e4f895479ae314b36ecadb}
+\hypertarget{WL__MAIN_8C_abbbcb01b7dcc4679d07cde1acfbf1412}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!viewheight@{viewheight}}
+\index{viewheight@{viewheight}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{viewheight}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf viewheight}}}
+\label{WL__MAIN_8C_abbbcb01b7dcc4679d07cde1acfbf1412}
+\hypertarget{WL__MAIN_8C_a9d8a9239749c5174f26cf73ab9625c3b}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!viewwidth@{viewwidth}}
+\index{viewwidth@{viewwidth}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{viewwidth}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf viewwidth}}}
+\label{WL__MAIN_8C_a9d8a9239749c5174f26cf73ab9625c3b}
+\hypertarget{WL__MAIN_8C_a19f0beeaba2b97e5c1c18467d930de1c}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!virtualreality@{virtualreality}}
+\index{virtualreality@{virtualreality}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{virtualreality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf virtualreality}}}
+\label{WL__MAIN_8C_a19f0beeaba2b97e5c1c18467d930de1c}
+\hypertarget{WL__MAIN_8C_a82000528367f0aa6e7e5ea3df81ac488}{
+\index{WL\_\-MAIN.C@{WL\_\-MAIN.C}!wolfdigimap@{wolfdigimap}}
+\index{wolfdigimap@{wolfdigimap}!WL_MAIN.C@{WL\_\-MAIN.C}}
+\subsubsection[{wolfdigimap}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf wolfdigimap}\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{WL__MAIN_8C_a82000528367f0aa6e7e5ea3df81ac488}

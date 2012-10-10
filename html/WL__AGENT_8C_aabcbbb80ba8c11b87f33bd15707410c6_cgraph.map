@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__AGENT_8C.html#a0b198c7d98710fffb49091dae4fc6122" title="DrawWeapon" alt="" coords="288,5,389,35"/>
+<area shape="rect" id="node11" href="$WL__AGENT_8C.html#af6a9d18983cf35f34e0cf72dc1af934e" title="GiveAmmo" alt="" coords="153,57,239,87"/>
+<area shape="rect" id="node5" href="$WL__AGENT_8C.html#adc83960f6d18ebc42df7465f6bbc0e75" title="StatusDrawPic" alt="" coords="588,33,697,63"/>
+<area shape="rect" id="node7" href="$ID__VH_8C.html#a0170b65c8e23e18b960bde1e8908887b" title="LatchDrawPic" alt="" coords="747,33,851,63"/>
+<area shape="rect" id="node9" href="$ID__VL_8C.html#a80443116a2a895fc294adfe9b2220819" title="VL_LatchToScreen" alt="" coords="899,33,1032,63"/>
+<area shape="rect" id="node13" href="$WL__AGENT_8C.html#a4fcb6f04271d5008c0cb4c71fd02dcfe" title="DrawAmmo" alt="" coords="293,59,384,88"/>
+<area shape="rect" id="node15" href="$WL__AGENT_8C.html#a05089437497aca93a4e4125cbfd96b80" title="LatchNumber" alt="" coords="439,59,537,88"/>
+</map>

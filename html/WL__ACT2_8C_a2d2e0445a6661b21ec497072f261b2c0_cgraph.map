@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__DEF_8H.html#ad9ba23a7cef5028a4aafaa790c89ef9e" title="CheckLine" alt="" coords="144,52,227,82"/>
+<area shape="rect" id="node5" href="$WL__DEF_8H.html#acc590a0c3cb09dd88e7727cbed040ec4" title="MoveObj" alt="" coords="148,106,223,135"/>
+<area shape="rect" id="node27" href="$WL__DEF_8H.html#aefe4aac0ca3aa18b1943d8e096162a13" title="NewState" alt="" coords="145,367,225,396"/>
+<area shape="rect" id="node29" href="$WL__ACT1_8C.html#a630648edf8f675df38eb0b5b8abc6a9f" title="OpenDoor" alt="" coords="465,290,545,319"/>
+<area shape="rect" id="node31" href="$WL__DEF_8H.html#aaa5f3bd33e28df6ee38db0b950fb1b45" title="SelectChaseDir" alt="" coords="128,212,243,242"/>
+<area shape="rect" id="node37" href="$ID__US_8H.html#af7dbbf782f072ed2c7cb57cd66b10c24" title="US_RndT" alt="" coords="301,239,381,268"/>
+<area shape="rect" id="node39" href="$WL__DEF_8H.html#abf00c4afcd01d66f8b6ba4d9b308ce6f" title="SelectDodgeDir" alt="" coords="128,159,243,188"/>
+<area shape="rect" id="node7" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="483,186,528,215"/>
+<area shape="rect" id="node9" href="$WL__AGENT_8C.html#a383b7b6dc8f0fe10dde5eeaeeb0e9b76" title="TakeDamage" alt="" coords="292,79,391,108"/>
+<area shape="rect" id="node11" href="$WL__AGENT_8C.html#a8be593acb7e02c668d964d6042679fde" title="DrawFace" alt="" coords="628,27,711,56"/>
+<area shape="rect" id="node13" href="$WL__AGENT_8C.html#adc83960f6d18ebc42df7465f6bbc0e75" title="StatusDrawPic" alt="" coords="769,27,879,56"/>
+<area shape="rect" id="node19" href="$WL__AGENT_8C.html#a72c88545eb3ce65cd96f2af4d7704f42" title="DrawHealth" alt="" coords="460,79,551,108"/>
+<area shape="rect" id="node24" href="$WL__DEF_8H.html#a9d82bd76126e466b5d9fa28eea3d00f1" title="StartDamageFlash" alt="" coords="440,132,571,162"/>
+<area shape="rect" id="node15" href="$ID__VH_8C.html#a0170b65c8e23e18b960bde1e8908887b" title="LatchDrawPic" alt="" coords="928,27,1032,56"/>
+<area shape="rect" id="node17" href="$ID__VL_8C.html#a80443116a2a895fc294adfe9b2220819" title="VL_LatchToScreen" alt="" coords="1080,27,1213,56"/>
+<area shape="rect" id="node21" href="$WL__AGENT_8C.html#a05089437497aca93a4e4125cbfd96b80" title="LatchNumber" alt="" coords="620,80,719,110"/>
+<area shape="rect" id="node33" href="$WL__DEF_8H.html#afc2aee564bbde3329ca837f177130917" title="TryWalk" alt="" coords="307,186,376,215"/>
+</map>

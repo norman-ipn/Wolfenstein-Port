@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__MENU_8H.html#a8d89e45be2c67ed682acb9ee0c09cd75" title="CP_Control" alt="" coords="535,33,625,63"/>
+<area shape="rect" id="node29" href="$WL__MENU_8H.html#a33c03c428f4fe132d1e5006416422ed4" title="CP_Sound" alt="" coords="537,87,623,116"/>
+<area shape="rect" id="node32" href="$WL__MENU_8H.html#ae1fe464efcd5a1d1f43e8dabc2841832" title="DrawLoadSaveScreen" alt="" coords="144,165,296,195"/>
+<area shape="rect" id="node44" href="$WL__MENU_8H.html#a41d17005e1b49c4a62b1506b9d213a12" title="DrawNewEpisode" alt="" coords="157,219,283,248"/>
+<area shape="rect" id="node48" href="$WL__MENU_8H.html#a4f8733a1d462a92cecf3cff18eb486ba" title="DrawNewGame" alt="" coords="163,272,277,301"/>
+<area shape="rect" id="node51" href="$WL__MENU_8H.html#a94d0412c951284a8ea98378116c23566" title="EnterCtrlData" alt="" coords="169,325,271,355"/>
+<area shape="rect" id="node66" href="$WL__MENU_8H.html#a8a190d4f3b624a81b86aa5c75d1bd4d1" title="MouseSensitivity" alt="" coords="159,379,281,408"/>
+<area shape="rect" id="node5" href="$WL__MENU_8C.html#ac823c95233ba863de18fe1d9f39caa1e" title="US_ControlPanel" alt="" coords="688,139,811,168"/>
+<area shape="rect" id="node7" href="$WL__PLAY_8C.html#a17d3d73686c9990962f3957447344f0b" title="CheckKeys" alt="" coords="859,85,949,115"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="1269,85,1355,115"/>
+<area shape="rect" id="node9" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="999,85,1073,115"/>
+<area shape="rect" id="node11" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="1129,5,1215,35"/>
+<area shape="rect" id="node22" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="1131,59,1213,88"/>
+<area shape="rect" id="node25" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="1123,112,1221,141"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1403,85,1453,115"/>
+<area shape="rect" id="node17" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1503,59,1591,88"/>
+<area shape="rect" id="node19" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1640,85,1715,115"/>
+<area shape="rect" id="node34" href="$WL__MENU_8H.html#a2ca12f5b43c80ee49b36a78621ac8ce4" title="CP_LoadGame" alt="" coords="353,139,463,168"/>
+<area shape="rect" id="node40" href="$WL__MENU_8H.html#a62fb7c17655ed1e0031cbeafd182ee31" title="CP_SaveGame" alt="" coords="352,192,464,221"/>
+<area shape="rect" id="node36" href="$WL__MENU_8H.html#a95a8089ef599aecc8a81f90ba35032dd" title="CP_CheckQuick" alt="" coords="520,191,640,220"/>
+<area shape="rect" id="node46" href="$WL__MENU_8H.html#a8f189c2d0971b91261fe50e58bc4b64a" title="CP_NewGame" alt="" coords="353,245,463,275"/>
+<area shape="rect" id="node53" href="$WL__MENU_8H.html#a0a00df1716b0a174dc25901d829aea93" title="DefineJoyBtns" alt="" coords="355,299,461,328"/>
+<area shape="rect" id="node57" href="$WL__MENU_8H.html#a6f23a62131fda11af6f0aa3002bdfffb" title="DefineKeyBtns" alt="" coords="353,352,463,381"/>
+<area shape="rect" id="node60" href="$WL__MENU_8H.html#a666771efec8f7ee7f225adda60c1f5e0" title="DefineKeyMove" alt="" coords="351,405,465,435"/>
+<area shape="rect" id="node63" href="$WL__MENU_8H.html#af9ffcf08793f2da25a6f54f439e15ddf" title="DefineMouseBtns" alt="" coords="345,459,471,488"/>
+<area shape="rect" id="node55" href="$WL__MENU_8H.html#a0631548359f161b2a227317582c6c4a6" title="CustomControls" alt="" coords="521,379,639,408"/>
+</map>

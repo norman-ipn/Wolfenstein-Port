@@ -1,0 +1,1337 @@
+\hypertarget{ID__CA_8C}{
+\section{ID\_\-CA.C File Reference}
+\label{ID__CA_8C}\index{ID\_\-CA.C@{ID\_\-CA.C}}
+}
+{\ttfamily \#include \char`\"{}ID\_\-HEADS.H\char`\"{}}\par
+Include dependency graph for ID\_\-CA.C:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structhuffnode}{huffnode}
+\item 
+struct \hyperlink{structmapfiletype}{mapfiletype}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__CA_8C_a21db63522efe6d7a023778ae6a288f34}{THREEBYTEGRSTARTS}
+\item 
+\#define \hyperlink{ID__CA_8C_a6ec6ce39ad4745cc6276d6b7708183dc}{FILEPOSSIZE}~3
+\item 
+\#define \hyperlink{ID__CA_8C_ae6cc998927a70622236023a6afd3baa3}{NEARTAG}~0xa7
+\item 
+\#define \hyperlink{ID__CA_8C_a8bab425cc3ee80e6da6376848fa5ede0}{FARTAG}~0xa8
+\item 
+\#define \hyperlink{ID__CA_8C_a52220397ecea855b3a99746e451426e1}{BLOCK}~64
+\item 
+\#define \hyperlink{ID__CA_8C_ad081e7628ee9025fbe6b3bbef4dbf828}{MASKBLOCK}~128
+\item 
+\#define \hyperlink{ID__CA_8C_a935ef893851d6e31fa292608599c5296}{MAXEMPTYREAD}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__CA_8C_a416e0b80d0b6e62ba220aebd9b69dbb8}{CA\_\-CannotOpen} (char $\ast$string)
+\item 
+void \hyperlink{ID__CA_8C_ab27354a2a5e6294b670d092bfa9af9d9}{CAL\_\-CarmackExpand} (unsigned far $\ast$source, unsigned far $\ast$dest, unsigned length)
+\item 
+long \hyperlink{ID__CA_8C_a8568e471bb25a89e1bc53f8ca0a629c2}{GRFILEPOS} (int \hyperlink{ID__VH_8C_a6a23f31bb58d6a932349aa926c720e47}{c})
+\item 
+void \hyperlink{ID__CA_8C_a9094160617fdfa866053f3b4a8387dc9}{CA\_\-OpenDebug} (void)
+\item 
+void \hyperlink{ID__CA_8C_a72ac49cbfaaa2ed17141f17e50b30558}{CA\_\-CloseDebug} (void)
+\item 
+void \hyperlink{ID__CA_8C_a1501fbd497c9306ea865625e9382e532}{CAL\_\-GetGrChunkLength} (int chunk)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__CA_8C_a9d7ef0e3d4f10f25abd940094a4db437}{CA\_\-FarRead} (int handle, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$dest, long length)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__CA_8C_a2577d7c247ebeb91941abed324b1035b}{CA\_\-FarWrite} (int handle, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$source, long length)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__CA_8C_a4ec80fcd3a66374c4253d51b4fada60d}{CA\_\-ReadFile} (char $\ast$filename, \hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} $\ast$ptr)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__CA_8C_a1f669cb7875ea0acf136824a1fa1d60f}{CA\_\-WriteFile} (char $\ast$filename, void far $\ast$ptr, long length)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__CA_8C_a99379c81fecc0c0c0c1873f839f1116f}{CA\_\-LoadFile} (char $\ast$filename, \hyperlink{ID__MM_8H_a04062decc7eb282b066c65e9137bb9bf}{memptr} $\ast$ptr)
+\item 
+void \hyperlink{ID__CA_8C_a18407f697ea7c33793eb8385adfa4e1d}{CAL\_\-OptimizeNodes} (\hyperlink{structhuffnode}{huffnode} $\ast$table)
+\item 
+void \hyperlink{ID__CA_8C_ad528d2babf088de313edb739e0c1dcf5}{CAL\_\-HuffExpand} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} huge $\ast$source, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} huge $\ast$dest, long length, \hyperlink{structhuffnode}{huffnode} $\ast$hufftable, \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} screenhack)
+\item 
+long \hyperlink{ID__CA_8C_a5ecb19a0976eb7cc7ebc0636ff16ef6f}{CA\_\-RLEWCompress} (unsigned huge $\ast$source, long length, unsigned huge $\ast$dest, unsigned rlewtag)
+\item 
+void \hyperlink{ID__CA_8C_a8147c0afc9dd7263e43e2499d58782b7}{CA\_\-RLEWexpand} (unsigned huge $\ast$source, unsigned huge $\ast$dest, long length, unsigned rlewtag)
+\item 
+void \hyperlink{ID__CA_8C_a01f3f70d7e61e8d3cb383031a7f3bb62}{CAL\_\-SetupGrFile} (void)
+\item 
+void \hyperlink{ID__CA_8C_a0a406782cb0615131e468e7dcfb70fe0}{CAL\_\-SetupMapFile} (void)
+\item 
+void \hyperlink{ID__CA_8C_ae145d2f5100f331f8f3a25518ceb4959}{CAL\_\-SetupAudioFile} (void)
+\item 
+void \hyperlink{ID__CA_8C_a4a88bf7bd8bef6188a34abe153f071e0}{CA\_\-Startup} (void)
+\item 
+void \hyperlink{ID__CA_8C_a322853b8f928f900e628b0b5d9dd20c7}{CA\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__CA_8C_a3a6c27701a37987c16cd4d4a885db478}{CA\_\-CacheAudioChunk} (int chunk)
+\item 
+void \hyperlink{ID__CA_8C_aa17596e9e057c980117d560cab6c876e}{CA\_\-LoadAllSounds} (void)
+\item 
+void \hyperlink{ID__CA_8C_a34eb9535940d7725a97dc903e19fb4c0}{CAL\_\-ExpandGrChunk} (int chunk, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far $\ast$source)
+\item 
+void \hyperlink{ID__CA_8C_a33faa9e016da5c7e605f67f5c7ecf2a0}{CA\_\-CacheGrChunk} (int chunk)
+\item 
+void \hyperlink{ID__CA_8C_a61ed1e53a23fd4c6ef784e6ec7ae73d2}{CA\_\-CacheScreen} (int chunk)
+\item 
+void \hyperlink{ID__CA_8C_a47feb1d5d4fc9fdd76732533b42a2a73}{CA\_\-CacheMap} (int mapnum)
+\item 
+void \hyperlink{ID__CA_8C_a05669e481a711870643e4c9cb2c00c93}{CA\_\-UpLevel} (void)
+\item 
+void \hyperlink{ID__CA_8C_ab0634ac6163eb8b9e51839469f094bc4}{CA\_\-DownLevel} (void)
+\item 
+void \hyperlink{ID__CA_8C_aadc64e6b6e9b1c11f2dd11282662572e}{CA\_\-ClearMarks} (void)
+\item 
+void \hyperlink{ID__CA_8C_af52e0508cf825cf10a933d377abe764d}{CA\_\-ClearAllMarks} (void)
+\item 
+void \hyperlink{ID__CA_8C_aa71d55f13e89f4276b8ff1d161a51815}{CA\_\-SetGrPurge} (void)
+\item 
+void \hyperlink{ID__CA_8C_a20eee13eb260608d4612aafc05ffc246}{CA\_\-SetAllPurge} (void)
+\item 
+void \hyperlink{ID__CA_8C_a258ef34640d9cb05e8a1e6c4e2f8eb5b}{CA\_\-CacheMarks} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \_\-seg $\ast$ \hyperlink{ID__CA_8C_ac7ecffe82882a03457d1244cff842063}{tinf}
+\item 
+int \hyperlink{ID__CA_8C_a9bc2aa6f5318e11111d85d1f526f4ed9}{mapon}
+\item 
+unsigned \_\-seg $\ast$ \hyperlink{ID__CA_8C_aa491c919acbb7c3a3626dc79014b7b7b}{mapsegs} \mbox{[}MAPPLANES\mbox{]}
+\item 
+\hyperlink{structmaptype}{maptype} \_\-seg $\ast$ \hyperlink{ID__CA_8C_a4fa58ff79559a7ff81611311489c8e70}{mapheaderseg} \mbox{[}NUMMAPS\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \_\-seg $\ast$ \hyperlink{ID__CA_8C_a6a31b9ada480b861c1ed6f0276bda609}{audiosegs} \mbox{[}NUMSNDCHUNKS\mbox{]}
+\item 
+void \_\-seg $\ast$ \hyperlink{ID__CA_8C_aa0e5c34b0901c8cc15a60fe57cb09b3a}{grsegs} \mbox{[}NUMCHUNKS\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{ID__CA_8C_aff6ae5a74b0467508c14a3f3b91ffd90}{grneeded} \mbox{[}NUMCHUNKS\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__CA_8C_af4f718356e28be31a81ef4df1a2f7c96}{ca\_\-levelbit}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__CA_8C_a2010805bcd6b7bda525f99d095cbf380}{ca\_\-levelnum}
+\item 
+int \hyperlink{ID__CA_8C_ad1a5984b9f9fb82e3d9fdc3e79bdb5d0}{profilehandle}
+\item 
+int \hyperlink{ID__CA_8C_a63f7bed9e587f57ce6912f20d2fb4f87}{debughandle}
+\item 
+char \hyperlink{ID__CA_8C_aedfaf0a69707063299a02a1af291edc1}{audioname} \mbox{[}13\mbox{]} = \char`\"{}AUDIO.\char`\"{}
+\item 
+long far \hyperlink{ID__CA_8C_a840bfedccb4af45be5e8596f1baa84fb}{CGAhead}
+\item 
+long far \hyperlink{ID__CA_8C_a064aa90a57944a1d8611fcedfef36eb3}{EGAhead}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__CA_8C_a97afbec4a1e2c2070e62aafe8582f891}{CGAdict}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__CA_8C_adbe333a4416576b70774726085637281}{EGAdict}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{ID__CA_8C_a472b90622a8d5fc66c491bf032d769d2}{maphead}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__CA_8C_aa09440af5bcf6e89898468325f86c2dd}{mapdict}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} far \hyperlink{ID__CA_8C_ab3779f97bce2b6a9ff59f713c69e7b63}{audiohead}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__CA_8C_a8b8b45705a31b3dea9459d4c4aadb0d3}{audiodict}
+\item 
+char \hyperlink{ID__CA_8C_ab39923c10c51a08b6520566a47b307b5}{extension} \mbox{[}5\mbox{]}
+\item 
+char \hyperlink{ID__CA_8C_acc0b8597a65fbc2db1d9085f2155322f}{gheadname} \mbox{[}10\mbox{]} = \char`\"{}HEAD.\char`\"{}
+\item 
+char \hyperlink{ID__CA_8C_a7c0f9e79b593ea1e4b4c11eb3f453441}{gfilename} \mbox{[}10\mbox{]} = \char`\"{}GRAPH.\char`\"{}
+\item 
+char \hyperlink{ID__CA_8C_a33eb86aadf8d284b465028ee5c9fbbc0}{gdictname} \mbox{[}10\mbox{]} = \char`\"{}DICT.\char`\"{}
+\item 
+char \hyperlink{ID__CA_8C_ad22a6c11e49c368ace6f3aca1057b21d}{mheadname} \mbox{[}10\mbox{]} = \char`\"{}MAPHEAD.\char`\"{}
+\item 
+char \hyperlink{ID__CA_8C_aed11d164b12fd19ca11fee978f42673d}{mfilename} \mbox{[}10\mbox{]} = \char`\"{}MAPTEMP.\char`\"{}
+\item 
+char \hyperlink{ID__CA_8C_ae27bc3abca3350509677eede2aa0f32a}{aheadname} \mbox{[}10\mbox{]} = \char`\"{}AUDIOHED.\char`\"{}
+\item 
+char \hyperlink{ID__CA_8C_ac7fd0efffc3b41d475ede3556547646a}{afilename} \mbox{[}10\mbox{]} = \char`\"{}AUDIOT.\char`\"{}
+\item 
+long \_\-seg $\ast$ \hyperlink{ID__CA_8C_a9a8af7c3aff26b9be0edd764efef3bba}{grstarts}
+\item 
+long \_\-seg $\ast$ \hyperlink{ID__CA_8C_aca24eee9c13114cc6f73c094c7eb9379}{audiostarts}
+\item 
+\hyperlink{structhuffnode}{huffnode} \hyperlink{ID__CA_8C_a7c84a882b31be31f96afa20526b740d4}{grhuffman} \mbox{[}255\mbox{]}
+\item 
+\hyperlink{structhuffnode}{huffnode} \hyperlink{ID__CA_8C_a8e5f1f3c10267328291b7098e3647966}{audiohuffman} \mbox{[}255\mbox{]}
+\item 
+int \hyperlink{ID__CA_8C_a28e170b2191c9c1895b6a205499e9ed5}{grhandle}
+\item 
+int \hyperlink{ID__CA_8C_a04317788d33560e757415d06e7688914}{maphandle}
+\item 
+int \hyperlink{ID__CA_8C_a8a34d1a17f2f8ce7cf4fd38f34048890}{audiohandle}
+\item 
+long \hyperlink{ID__CA_8C_a318a356958b8ef67a195419e793ebe0a}{chunkcomplen}
+\item 
+long \hyperlink{ID__CA_8C_a8e972da6995bf0bfdeac78b078feebc8}{chunkexplen}
+\item 
+\hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} \hyperlink{ID__CA_8C_a3b853c53777a93064c62a47de089de01}{oldsoundmode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__CA_8C_a52220397ecea855b3a99746e451426e1}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!BLOCK@{BLOCK}}
+\index{BLOCK@{BLOCK}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{BLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define BLOCK~64}}
+\label{ID__CA_8C_a52220397ecea855b3a99746e451426e1}
+\hypertarget{ID__CA_8C_a8bab425cc3ee80e6da6376848fa5ede0}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!FARTAG@{FARTAG}}
+\index{FARTAG@{FARTAG}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{FARTAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define FARTAG~0xa8}}
+\label{ID__CA_8C_a8bab425cc3ee80e6da6376848fa5ede0}
+\hypertarget{ID__CA_8C_a6ec6ce39ad4745cc6276d6b7708183dc}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!FILEPOSSIZE@{FILEPOSSIZE}}
+\index{FILEPOSSIZE@{FILEPOSSIZE}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{FILEPOSSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FILEPOSSIZE~3}}
+\label{ID__CA_8C_a6ec6ce39ad4745cc6276d6b7708183dc}
+\hypertarget{ID__CA_8C_ad081e7628ee9025fbe6b3bbef4dbf828}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!MASKBLOCK@{MASKBLOCK}}
+\index{MASKBLOCK@{MASKBLOCK}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{MASKBLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define MASKBLOCK~128}}
+\label{ID__CA_8C_ad081e7628ee9025fbe6b3bbef4dbf828}
+\hypertarget{ID__CA_8C_a935ef893851d6e31fa292608599c5296}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!MAXEMPTYREAD@{MAXEMPTYREAD}}
+\index{MAXEMPTYREAD@{MAXEMPTYREAD}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{MAXEMPTYREAD}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXEMPTYREAD~1024}}
+\label{ID__CA_8C_a935ef893851d6e31fa292608599c5296}
+\hypertarget{ID__CA_8C_ae6cc998927a70622236023a6afd3baa3}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!NEARTAG@{NEARTAG}}
+\index{NEARTAG@{NEARTAG}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{NEARTAG}]{\setlength{\rightskip}{0pt plus 5cm}\#define NEARTAG~0xa7}}
+\label{ID__CA_8C_ae6cc998927a70622236023a6afd3baa3}
+\hypertarget{ID__CA_8C_a21db63522efe6d7a023778ae6a288f34}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!THREEBYTEGRSTARTS@{THREEBYTEGRSTARTS}}
+\index{THREEBYTEGRSTARTS@{THREEBYTEGRSTARTS}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{THREEBYTEGRSTARTS}]{\setlength{\rightskip}{0pt plus 5cm}\#define THREEBYTEGRSTARTS}}
+\label{ID__CA_8C_a21db63522efe6d7a023778ae6a288f34}
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__CA_8C_a3a6c27701a37987c16cd4d4a885db478}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-CacheAudioChunk@{CA\_\-CacheAudioChunk}}
+\index{CA\_\-CacheAudioChunk@{CA\_\-CacheAudioChunk}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-CacheAudioChunk}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-CacheAudioChunk (
+\begin{DoxyParamCaption}
+\item[{int}]{chunk}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a3a6c27701a37987c16cd4d4a885db478}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a3a6c27701a37987c16cd4d4a885db478_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a3a6c27701a37987c16cd4d4a885db478_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a33faa9e016da5c7e605f67f5c7ecf2a0}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-CacheGrChunk@{CA\_\-CacheGrChunk}}
+\index{CA\_\-CacheGrChunk@{CA\_\-CacheGrChunk}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-CacheGrChunk}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-CacheGrChunk (
+\begin{DoxyParamCaption}
+\item[{int}]{chunk}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a33faa9e016da5c7e605f67f5c7ecf2a0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a33faa9e016da5c7e605f67f5c7ecf2a0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a33faa9e016da5c7e605f67f5c7ecf2a0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a47feb1d5d4fc9fdd76732533b42a2a73}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-CacheMap@{CA\_\-CacheMap}}
+\index{CA\_\-CacheMap@{CA\_\-CacheMap}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-CacheMap}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-CacheMap (
+\begin{DoxyParamCaption}
+\item[{int}]{mapnum}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a47feb1d5d4fc9fdd76732533b42a2a73}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a47feb1d5d4fc9fdd76732533b42a2a73_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a47feb1d5d4fc9fdd76732533b42a2a73_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a258ef34640d9cb05e8a1e6c4e2f8eb5b}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-CacheMarks@{CA\_\-CacheMarks}}
+\index{CA\_\-CacheMarks@{CA\_\-CacheMarks}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-CacheMarks}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-CacheMarks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a258ef34640d9cb05e8a1e6c4e2f8eb5b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a258ef34640d9cb05e8a1e6c4e2f8eb5b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a258ef34640d9cb05e8a1e6c4e2f8eb5b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a61ed1e53a23fd4c6ef784e6ec7ae73d2}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-CacheScreen@{CA\_\-CacheScreen}}
+\index{CA\_\-CacheScreen@{CA\_\-CacheScreen}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-CacheScreen}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-CacheScreen (
+\begin{DoxyParamCaption}
+\item[{int}]{chunk}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a61ed1e53a23fd4c6ef784e6ec7ae73d2}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a61ed1e53a23fd4c6ef784e6ec7ae73d2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a61ed1e53a23fd4c6ef784e6ec7ae73d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a416e0b80d0b6e62ba220aebd9b69dbb8}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-CannotOpen@{CA\_\-CannotOpen}}
+\index{CA\_\-CannotOpen@{CA\_\-CannotOpen}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-CannotOpen}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-CannotOpen (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a416e0b80d0b6e62ba220aebd9b69dbb8}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{ID__CA_8C_a416e0b80d0b6e62ba220aebd9b69dbb8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a416e0b80d0b6e62ba220aebd9b69dbb8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_af52e0508cf825cf10a933d377abe764d}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-ClearAllMarks@{CA\_\-ClearAllMarks}}
+\index{CA\_\-ClearAllMarks@{CA\_\-ClearAllMarks}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-ClearAllMarks}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-ClearAllMarks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_af52e0508cf825cf10a933d377abe764d}
+\hypertarget{ID__CA_8C_aadc64e6b6e9b1c11f2dd11282662572e}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-ClearMarks@{CA\_\-ClearMarks}}
+\index{CA\_\-ClearMarks@{CA\_\-ClearMarks}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-ClearMarks}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-ClearMarks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_aadc64e6b6e9b1c11f2dd11282662572e}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_aadc64e6b6e9b1c11f2dd11282662572e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a72ac49cbfaaa2ed17141f17e50b30558}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-CloseDebug@{CA\_\-CloseDebug}}
+\index{CA\_\-CloseDebug@{CA\_\-CloseDebug}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-CloseDebug}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-CloseDebug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a72ac49cbfaaa2ed17141f17e50b30558}
+\hypertarget{ID__CA_8C_ab0634ac6163eb8b9e51839469f094bc4}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-DownLevel@{CA\_\-DownLevel}}
+\index{CA\_\-DownLevel@{CA\_\-DownLevel}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-DownLevel}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-DownLevel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_ab0634ac6163eb8b9e51839469f094bc4}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_ab0634ac6163eb8b9e51839469f094bc4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_ab0634ac6163eb8b9e51839469f094bc4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a9d7ef0e3d4f10f25abd940094a4db437}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-FarRead@{CA\_\-FarRead}}
+\index{CA\_\-FarRead@{CA\_\-FarRead}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-FarRead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} CA\_\-FarRead (
+\begin{DoxyParamCaption}
+\item[{int}]{handle, }
+\item[{{\bf byte} far $\ast$}]{dest, }
+\item[{long}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a9d7ef0e3d4f10f25abd940094a4db437}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{ID__CA_8C_a9d7ef0e3d4f10f25abd940094a4db437_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__CA_8C_a9d7ef0e3d4f10f25abd940094a4db437_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a2577d7c247ebeb91941abed324b1035b}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-FarWrite@{CA\_\-FarWrite}}
+\index{CA\_\-FarWrite@{CA\_\-FarWrite}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-FarWrite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} CA\_\-FarWrite (
+\begin{DoxyParamCaption}
+\item[{int}]{handle, }
+\item[{{\bf byte} far $\ast$}]{source, }
+\item[{long}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a2577d7c247ebeb91941abed324b1035b}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{ID__CA_8C_a2577d7c247ebeb91941abed324b1035b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a2577d7c247ebeb91941abed324b1035b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_aa17596e9e057c980117d560cab6c876e}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-LoadAllSounds@{CA\_\-LoadAllSounds}}
+\index{CA\_\-LoadAllSounds@{CA\_\-LoadAllSounds}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-LoadAllSounds}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-LoadAllSounds (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_aa17596e9e057c980117d560cab6c876e}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_aa17596e9e057c980117d560cab6c876e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_aa17596e9e057c980117d560cab6c876e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a99379c81fecc0c0c0c1873f839f1116f}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-LoadFile@{CA\_\-LoadFile}}
+\index{CA\_\-LoadFile@{CA\_\-LoadFile}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-LoadFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} CA\_\-LoadFile (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf memptr} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a99379c81fecc0c0c0c1873f839f1116f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a99379c81fecc0c0c0c1873f839f1116f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a99379c81fecc0c0c0c1873f839f1116f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a9094160617fdfa866053f3b4a8387dc9}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-OpenDebug@{CA\_\-OpenDebug}}
+\index{CA\_\-OpenDebug@{CA\_\-OpenDebug}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-OpenDebug}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-OpenDebug (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a9094160617fdfa866053f3b4a8387dc9}
+\hypertarget{ID__CA_8C_a4ec80fcd3a66374c4253d51b4fada60d}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-ReadFile@{CA\_\-ReadFile}}
+\index{CA\_\-ReadFile@{CA\_\-ReadFile}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-ReadFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} CA\_\-ReadFile (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf memptr} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a4ec80fcd3a66374c4253d51b4fada60d}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{ID__CA_8C_a4ec80fcd3a66374c4253d51b4fada60d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a5ecb19a0976eb7cc7ebc0636ff16ef6f}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-RLEWCompress@{CA\_\-RLEWCompress}}
+\index{CA\_\-RLEWCompress@{CA\_\-RLEWCompress}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-RLEWCompress}]{\setlength{\rightskip}{0pt plus 5cm}long CA\_\-RLEWCompress (
+\begin{DoxyParamCaption}
+\item[{unsigned huge $\ast$}]{source, }
+\item[{long}]{length, }
+\item[{unsigned huge $\ast$}]{dest, }
+\item[{unsigned}]{rlewtag}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a5ecb19a0976eb7cc7ebc0636ff16ef6f}
+\hypertarget{ID__CA_8C_a8147c0afc9dd7263e43e2499d58782b7}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-RLEWexpand@{CA\_\-RLEWexpand}}
+\index{CA\_\-RLEWexpand@{CA\_\-RLEWexpand}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-RLEWexpand}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-RLEWexpand (
+\begin{DoxyParamCaption}
+\item[{unsigned huge $\ast$}]{source, }
+\item[{unsigned huge $\ast$}]{dest, }
+\item[{long}]{length, }
+\item[{unsigned}]{rlewtag}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a8147c0afc9dd7263e43e2499d58782b7}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a8147c0afc9dd7263e43e2499d58782b7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a20eee13eb260608d4612aafc05ffc246}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-SetAllPurge@{CA\_\-SetAllPurge}}
+\index{CA\_\-SetAllPurge@{CA\_\-SetAllPurge}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-SetAllPurge}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-SetAllPurge (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a20eee13eb260608d4612aafc05ffc246}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a20eee13eb260608d4612aafc05ffc246_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a20eee13eb260608d4612aafc05ffc246_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_aa71d55f13e89f4276b8ff1d161a51815}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-SetGrPurge@{CA\_\-SetGrPurge}}
+\index{CA\_\-SetGrPurge@{CA\_\-SetGrPurge}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-SetGrPurge}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-SetGrPurge (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_aa71d55f13e89f4276b8ff1d161a51815}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=362pt]{ID__CA_8C_aa71d55f13e89f4276b8ff1d161a51815_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_aa71d55f13e89f4276b8ff1d161a51815_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a322853b8f928f900e628b0b5d9dd20c7}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-Shutdown@{CA\_\-Shutdown}}
+\index{CA\_\-Shutdown@{CA\_\-Shutdown}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a322853b8f928f900e628b0b5d9dd20c7}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__CA_8C_a322853b8f928f900e628b0b5d9dd20c7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a4a88bf7bd8bef6188a34abe153f071e0}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-Startup@{CA\_\-Startup}}
+\index{CA\_\-Startup@{CA\_\-Startup}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a4a88bf7bd8bef6188a34abe153f071e0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a4a88bf7bd8bef6188a34abe153f071e0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a4a88bf7bd8bef6188a34abe153f071e0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a05669e481a711870643e4c9cb2c00c93}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-UpLevel@{CA\_\-UpLevel}}
+\index{CA\_\-UpLevel@{CA\_\-UpLevel}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-UpLevel}]{\setlength{\rightskip}{0pt plus 5cm}void CA\_\-UpLevel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a05669e481a711870643e4c9cb2c00c93}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{ID__CA_8C_a05669e481a711870643e4c9cb2c00c93_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a05669e481a711870643e4c9cb2c00c93_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a1f669cb7875ea0acf136824a1fa1d60f}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CA\_\-WriteFile@{CA\_\-WriteFile}}
+\index{CA\_\-WriteFile@{CA\_\-WriteFile}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CA\_\-WriteFile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} CA\_\-WriteFile (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{void far $\ast$}]{ptr, }
+\item[{long}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a1f669cb7875ea0acf136824a1fa1d60f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{ID__CA_8C_a1f669cb7875ea0acf136824a1fa1d60f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a1f669cb7875ea0acf136824a1fa1d60f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_ab27354a2a5e6294b670d092bfa9af9d9}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-CarmackExpand@{CAL\_\-CarmackExpand}}
+\index{CAL\_\-CarmackExpand@{CAL\_\-CarmackExpand}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-CarmackExpand}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-CarmackExpand (
+\begin{DoxyParamCaption}
+\item[{unsigned far $\ast$}]{source, }
+\item[{unsigned far $\ast$}]{dest, }
+\item[{unsigned}]{length}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_ab27354a2a5e6294b670d092bfa9af9d9}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_ab27354a2a5e6294b670d092bfa9af9d9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a34eb9535940d7725a97dc903e19fb4c0}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-ExpandGrChunk@{CAL\_\-ExpandGrChunk}}
+\index{CAL\_\-ExpandGrChunk@{CAL\_\-ExpandGrChunk}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-ExpandGrChunk}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-ExpandGrChunk (
+\begin{DoxyParamCaption}
+\item[{int}]{chunk, }
+\item[{{\bf byte} far $\ast$}]{source}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a34eb9535940d7725a97dc903e19fb4c0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a34eb9535940d7725a97dc903e19fb4c0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a34eb9535940d7725a97dc903e19fb4c0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a1501fbd497c9306ea865625e9382e532}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-GetGrChunkLength@{CAL\_\-GetGrChunkLength}}
+\index{CAL\_\-GetGrChunkLength@{CAL\_\-GetGrChunkLength}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-GetGrChunkLength}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-GetGrChunkLength (
+\begin{DoxyParamCaption}
+\item[{int}]{chunk}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a1501fbd497c9306ea865625e9382e532}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{ID__CA_8C_a1501fbd497c9306ea865625e9382e532_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a1501fbd497c9306ea865625e9382e532_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_ad528d2babf088de313edb739e0c1dcf5}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-HuffExpand@{CAL\_\-HuffExpand}}
+\index{CAL\_\-HuffExpand@{CAL\_\-HuffExpand}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-HuffExpand}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-HuffExpand (
+\begin{DoxyParamCaption}
+\item[{{\bf byte} huge $\ast$}]{source, }
+\item[{{\bf byte} huge $\ast$}]{dest, }
+\item[{long}]{length, }
+\item[{{\bf huffnode} $\ast$}]{hufftable, }
+\item[{{\bf boolean}}]{screenhack}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_ad528d2babf088de313edb739e0c1dcf5}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{ID__CA_8C_ad528d2babf088de313edb739e0c1dcf5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a18407f697ea7c33793eb8385adfa4e1d}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-OptimizeNodes@{CAL\_\-OptimizeNodes}}
+\index{CAL\_\-OptimizeNodes@{CAL\_\-OptimizeNodes}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-OptimizeNodes}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-OptimizeNodes (
+\begin{DoxyParamCaption}
+\item[{{\bf huffnode} $\ast$}]{table}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a18407f697ea7c33793eb8385adfa4e1d}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a18407f697ea7c33793eb8385adfa4e1d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_ae145d2f5100f331f8f3a25518ceb4959}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-SetupAudioFile@{CAL\_\-SetupAudioFile}}
+\index{CAL\_\-SetupAudioFile@{CAL\_\-SetupAudioFile}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-SetupAudioFile}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-SetupAudioFile (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_ae145d2f5100f331f8f3a25518ceb4959}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_ae145d2f5100f331f8f3a25518ceb4959_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_ae145d2f5100f331f8f3a25518ceb4959_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a01f3f70d7e61e8d3cb383031a7f3bb62}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-SetupGrFile@{CAL\_\-SetupGrFile}}
+\index{CAL\_\-SetupGrFile@{CAL\_\-SetupGrFile}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-SetupGrFile}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-SetupGrFile (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a01f3f70d7e61e8d3cb383031a7f3bb62}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a01f3f70d7e61e8d3cb383031a7f3bb62_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a01f3f70d7e61e8d3cb383031a7f3bb62_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a0a406782cb0615131e468e7dcfb70fe0}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CAL\_\-SetupMapFile@{CAL\_\-SetupMapFile}}
+\index{CAL\_\-SetupMapFile@{CAL\_\-SetupMapFile}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CAL\_\-SetupMapFile}]{\setlength{\rightskip}{0pt plus 5cm}void CAL\_\-SetupMapFile (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a0a406782cb0615131e468e7dcfb70fe0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a0a406782cb0615131e468e7dcfb70fe0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a0a406782cb0615131e468e7dcfb70fe0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__CA_8C_a8568e471bb25a89e1bc53f8ca0a629c2}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!GRFILEPOS@{GRFILEPOS}}
+\index{GRFILEPOS@{GRFILEPOS}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{GRFILEPOS}]{\setlength{\rightskip}{0pt plus 5cm}long GRFILEPOS (
+\begin{DoxyParamCaption}
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}}
+\label{ID__CA_8C_a8568e471bb25a89e1bc53f8ca0a629c2}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__CA_8C_a8568e471bb25a89e1bc53f8ca0a629c2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__CA_8C_ac7fd0efffc3b41d475ede3556547646a}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!afilename@{afilename}}
+\index{afilename@{afilename}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{afilename}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf afilename}\mbox{[}10\mbox{]} = \char`\"{}AUDIOT.\char`\"{}}}
+\label{ID__CA_8C_ac7fd0efffc3b41d475ede3556547646a}
+\hypertarget{ID__CA_8C_ae27bc3abca3350509677eede2aa0f32a}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!aheadname@{aheadname}}
+\index{aheadname@{aheadname}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{aheadname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf aheadname}\mbox{[}10\mbox{]} = \char`\"{}AUDIOHED.\char`\"{}}}
+\label{ID__CA_8C_ae27bc3abca3350509677eede2aa0f32a}
+\hypertarget{ID__CA_8C_a8b8b45705a31b3dea9459d4c4aadb0d3}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!audiodict@{audiodict}}
+\index{audiodict@{audiodict}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{audiodict}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf audiodict}}}
+\label{ID__CA_8C_a8b8b45705a31b3dea9459d4c4aadb0d3}
+\hypertarget{ID__CA_8C_a8a34d1a17f2f8ce7cf4fd38f34048890}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!audiohandle@{audiohandle}}
+\index{audiohandle@{audiohandle}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{audiohandle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf audiohandle}}}
+\label{ID__CA_8C_a8a34d1a17f2f8ce7cf4fd38f34048890}
+\hypertarget{ID__CA_8C_ab3779f97bce2b6a9ff59f713c69e7b63}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!audiohead@{audiohead}}
+\index{audiohead@{audiohead}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{audiohead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf audiohead}}}
+\label{ID__CA_8C_ab3779f97bce2b6a9ff59f713c69e7b63}
+\hypertarget{ID__CA_8C_a8e5f1f3c10267328291b7098e3647966}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!audiohuffman@{audiohuffman}}
+\index{audiohuffman@{audiohuffman}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{audiohuffman}]{\setlength{\rightskip}{0pt plus 5cm}{\bf huffnode} {\bf audiohuffman}\mbox{[}255\mbox{]}}}
+\label{ID__CA_8C_a8e5f1f3c10267328291b7098e3647966}
+\hypertarget{ID__CA_8C_aedfaf0a69707063299a02a1af291edc1}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!audioname@{audioname}}
+\index{audioname@{audioname}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{audioname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf audioname}\mbox{[}13\mbox{]} = \char`\"{}AUDIO.\char`\"{}}}
+\label{ID__CA_8C_aedfaf0a69707063299a02a1af291edc1}
+\hypertarget{ID__CA_8C_a6a31b9ada480b861c1ed6f0276bda609}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!audiosegs@{audiosegs}}
+\index{audiosegs@{audiosegs}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{audiosegs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} \_\-seg$\ast$ {\bf audiosegs}\mbox{[}NUMSNDCHUNKS\mbox{]}}}
+\label{ID__CA_8C_a6a31b9ada480b861c1ed6f0276bda609}
+\hypertarget{ID__CA_8C_aca24eee9c13114cc6f73c094c7eb9379}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!audiostarts@{audiostarts}}
+\index{audiostarts@{audiostarts}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{audiostarts}]{\setlength{\rightskip}{0pt plus 5cm}long \_\-seg$\ast$ {\bf audiostarts}}}
+\label{ID__CA_8C_aca24eee9c13114cc6f73c094c7eb9379}
+\hypertarget{ID__CA_8C_af4f718356e28be31a81ef4df1a2f7c96}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!ca\_\-levelbit@{ca\_\-levelbit}}
+\index{ca\_\-levelbit@{ca\_\-levelbit}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{ca\_\-levelbit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf ca\_\-levelbit}}}
+\label{ID__CA_8C_af4f718356e28be31a81ef4df1a2f7c96}
+\hypertarget{ID__CA_8C_a2010805bcd6b7bda525f99d095cbf380}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!ca\_\-levelnum@{ca\_\-levelnum}}
+\index{ca\_\-levelnum@{ca\_\-levelnum}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{ca\_\-levelnum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf ca\_\-levelnum}}}
+\label{ID__CA_8C_a2010805bcd6b7bda525f99d095cbf380}
+\hypertarget{ID__CA_8C_a97afbec4a1e2c2070e62aafe8582f891}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CGAdict@{CGAdict}}
+\index{CGAdict@{CGAdict}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CGAdict}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf CGAdict}}}
+\label{ID__CA_8C_a97afbec4a1e2c2070e62aafe8582f891}
+\hypertarget{ID__CA_8C_a840bfedccb4af45be5e8596f1baa84fb}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!CGAhead@{CGAhead}}
+\index{CGAhead@{CGAhead}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{CGAhead}]{\setlength{\rightskip}{0pt plus 5cm}long far {\bf CGAhead}}}
+\label{ID__CA_8C_a840bfedccb4af45be5e8596f1baa84fb}
+\hypertarget{ID__CA_8C_a318a356958b8ef67a195419e793ebe0a}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!chunkcomplen@{chunkcomplen}}
+\index{chunkcomplen@{chunkcomplen}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{chunkcomplen}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf chunkcomplen}}}
+\label{ID__CA_8C_a318a356958b8ef67a195419e793ebe0a}
+\hypertarget{ID__CA_8C_a8e972da6995bf0bfdeac78b078feebc8}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!chunkexplen@{chunkexplen}}
+\index{chunkexplen@{chunkexplen}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{chunkexplen}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf chunkexplen}}}
+\label{ID__CA_8C_a8e972da6995bf0bfdeac78b078feebc8}
+\hypertarget{ID__CA_8C_a63f7bed9e587f57ce6912f20d2fb4f87}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!debughandle@{debughandle}}
+\index{debughandle@{debughandle}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{debughandle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf debughandle}}}
+\label{ID__CA_8C_a63f7bed9e587f57ce6912f20d2fb4f87}
+\hypertarget{ID__CA_8C_adbe333a4416576b70774726085637281}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!EGAdict@{EGAdict}}
+\index{EGAdict@{EGAdict}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{EGAdict}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf EGAdict}}}
+\label{ID__CA_8C_adbe333a4416576b70774726085637281}
+\hypertarget{ID__CA_8C_a064aa90a57944a1d8611fcedfef36eb3}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!EGAhead@{EGAhead}}
+\index{EGAhead@{EGAhead}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{EGAhead}]{\setlength{\rightskip}{0pt plus 5cm}long far {\bf EGAhead}}}
+\label{ID__CA_8C_a064aa90a57944a1d8611fcedfef36eb3}
+\hypertarget{ID__CA_8C_ab39923c10c51a08b6520566a47b307b5}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!extension@{extension}}
+\index{extension@{extension}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf extension}\mbox{[}5\mbox{]}}}
+\label{ID__CA_8C_ab39923c10c51a08b6520566a47b307b5}
+\hypertarget{ID__CA_8C_a33eb86aadf8d284b465028ee5c9fbbc0}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!gdictname@{gdictname}}
+\index{gdictname@{gdictname}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{gdictname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf gdictname}\mbox{[}10\mbox{]} = \char`\"{}DICT.\char`\"{}}}
+\label{ID__CA_8C_a33eb86aadf8d284b465028ee5c9fbbc0}
+\hypertarget{ID__CA_8C_a7c0f9e79b593ea1e4b4c11eb3f453441}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!gfilename@{gfilename}}
+\index{gfilename@{gfilename}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{gfilename}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf gfilename}\mbox{[}10\mbox{]} = \char`\"{}GRAPH.\char`\"{}}}
+\label{ID__CA_8C_a7c0f9e79b593ea1e4b4c11eb3f453441}
+\hypertarget{ID__CA_8C_acc0b8597a65fbc2db1d9085f2155322f}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!gheadname@{gheadname}}
+\index{gheadname@{gheadname}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{gheadname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf gheadname}\mbox{[}10\mbox{]} = \char`\"{}HEAD.\char`\"{}}}
+\label{ID__CA_8C_acc0b8597a65fbc2db1d9085f2155322f}
+\hypertarget{ID__CA_8C_a28e170b2191c9c1895b6a205499e9ed5}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!grhandle@{grhandle}}
+\index{grhandle@{grhandle}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{grhandle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf grhandle}}}
+\label{ID__CA_8C_a28e170b2191c9c1895b6a205499e9ed5}
+\hypertarget{ID__CA_8C_a7c84a882b31be31f96afa20526b740d4}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!grhuffman@{grhuffman}}
+\index{grhuffman@{grhuffman}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{grhuffman}]{\setlength{\rightskip}{0pt plus 5cm}{\bf huffnode} {\bf grhuffman}\mbox{[}255\mbox{]}}}
+\label{ID__CA_8C_a7c84a882b31be31f96afa20526b740d4}
+\hypertarget{ID__CA_8C_aff6ae5a74b0467508c14a3f3b91ffd90}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!grneeded@{grneeded}}
+\index{grneeded@{grneeded}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{grneeded}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf grneeded}\mbox{[}NUMCHUNKS\mbox{]}}}
+\label{ID__CA_8C_aff6ae5a74b0467508c14a3f3b91ffd90}
+\hypertarget{ID__CA_8C_aa0e5c34b0901c8cc15a60fe57cb09b3a}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!grsegs@{grsegs}}
+\index{grsegs@{grsegs}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{grsegs}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-seg$\ast$ {\bf grsegs}\mbox{[}NUMCHUNKS\mbox{]}}}
+\label{ID__CA_8C_aa0e5c34b0901c8cc15a60fe57cb09b3a}
+\hypertarget{ID__CA_8C_a9a8af7c3aff26b9be0edd764efef3bba}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!grstarts@{grstarts}}
+\index{grstarts@{grstarts}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{grstarts}]{\setlength{\rightskip}{0pt plus 5cm}long \_\-seg$\ast$ {\bf grstarts}}}
+\label{ID__CA_8C_a9a8af7c3aff26b9be0edd764efef3bba}
+\hypertarget{ID__CA_8C_aa09440af5bcf6e89898468325f86c2dd}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!mapdict@{mapdict}}
+\index{mapdict@{mapdict}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{mapdict}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf mapdict}}}
+\label{ID__CA_8C_aa09440af5bcf6e89898468325f86c2dd}
+\hypertarget{ID__CA_8C_a04317788d33560e757415d06e7688914}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!maphandle@{maphandle}}
+\index{maphandle@{maphandle}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{maphandle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf maphandle}}}
+\label{ID__CA_8C_a04317788d33560e757415d06e7688914}
+\hypertarget{ID__CA_8C_a472b90622a8d5fc66c491bf032d769d2}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!maphead@{maphead}}
+\index{maphead@{maphead}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{maphead}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} far {\bf maphead}}}
+\label{ID__CA_8C_a472b90622a8d5fc66c491bf032d769d2}
+\hypertarget{ID__CA_8C_a4fa58ff79559a7ff81611311489c8e70}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!mapheaderseg@{mapheaderseg}}
+\index{mapheaderseg@{mapheaderseg}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{mapheaderseg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf maptype} \_\-seg$\ast$ {\bf mapheaderseg}\mbox{[}NUMMAPS\mbox{]}}}
+\label{ID__CA_8C_a4fa58ff79559a7ff81611311489c8e70}
+\hypertarget{ID__CA_8C_a9bc2aa6f5318e11111d85d1f526f4ed9}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!mapon@{mapon}}
+\index{mapon@{mapon}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{mapon}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mapon}}}
+\label{ID__CA_8C_a9bc2aa6f5318e11111d85d1f526f4ed9}
+\hypertarget{ID__CA_8C_aa491c919acbb7c3a3626dc79014b7b7b}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!mapsegs@{mapsegs}}
+\index{mapsegs@{mapsegs}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{mapsegs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned \_\-seg$\ast$ {\bf mapsegs}\mbox{[}MAPPLANES\mbox{]}}}
+\label{ID__CA_8C_aa491c919acbb7c3a3626dc79014b7b7b}
+\hypertarget{ID__CA_8C_aed11d164b12fd19ca11fee978f42673d}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!mfilename@{mfilename}}
+\index{mfilename@{mfilename}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{mfilename}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mfilename}\mbox{[}10\mbox{]} = \char`\"{}MAPTEMP.\char`\"{}}}
+\label{ID__CA_8C_aed11d164b12fd19ca11fee978f42673d}
+\hypertarget{ID__CA_8C_ad22a6c11e49c368ace6f3aca1057b21d}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!mheadname@{mheadname}}
+\index{mheadname@{mheadname}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{mheadname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mheadname}\mbox{[}10\mbox{]} = \char`\"{}MAPHEAD.\char`\"{}}}
+\label{ID__CA_8C_ad22a6c11e49c368ace6f3aca1057b21d}
+\hypertarget{ID__CA_8C_a3b853c53777a93064c62a47de089de01}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!oldsoundmode@{oldsoundmode}}
+\index{oldsoundmode@{oldsoundmode}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{oldsoundmode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SDMode} {\bf oldsoundmode}}}
+\label{ID__CA_8C_a3b853c53777a93064c62a47de089de01}
+\hypertarget{ID__CA_8C_ad1a5984b9f9fb82e3d9fdc3e79bdb5d0}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!profilehandle@{profilehandle}}
+\index{profilehandle@{profilehandle}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{profilehandle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf profilehandle}}}
+\label{ID__CA_8C_ad1a5984b9f9fb82e3d9fdc3e79bdb5d0}
+\hypertarget{ID__CA_8C_ac7ecffe82882a03457d1244cff842063}{
+\index{ID\_\-CA.C@{ID\_\-CA.C}!tinf@{tinf}}
+\index{tinf@{tinf}!ID_CA.C@{ID\_\-CA.C}}
+\subsubsection[{tinf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} \_\-seg$\ast$ {\bf tinf}}}
+\label{ID__CA_8C_ac7ecffe82882a03457d1244cff842063}

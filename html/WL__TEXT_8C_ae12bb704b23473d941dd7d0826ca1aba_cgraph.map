@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__TEXT_8C.html#a453cb4123eb9c983999067d525dc5fe8" title="NewLine" alt="" coords="195,5,267,35"/>
+<area shape="rect" id="node5" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="208,59,253,88"/>
+<area shape="rect" id="node7" href="$ID__VH_8C.html#a6f83e267adde8f5625ff9d63bde9d19f" title="VW_MeasurePropString" alt="" coords="149,112,312,141"/>
+<area shape="rect" id="node11" href="$ID__VH_8C.html#a8efd746c0d9c5c4e7015b569e4f6bb24" title="VWB_DrawPropString" alt="" coords="155,165,307,195"/>
+<area shape="rect" id="node9" href="$ID__VH_8C.html#a1dcff14408a2d43f72ea12a512413f0c" title="VWL_MeasureString" alt="" coords="367,112,508,141"/>
+<area shape="rect" id="node13" href="$ID__VH_8C.html#aa04e30bf96c1946e8ea67a175f3580f2" title="VW_DrawPropString" alt="" coords="367,165,508,195"/>
+<area shape="rect" id="node15" href="$ID__VH_8C.html#a989fc2652f729213162c520d378578b3" title="VW_MarkUpdateBlock" alt="" coords="360,219,515,248"/>
+</map>

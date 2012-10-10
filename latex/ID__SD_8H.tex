@@ -1,0 +1,1019 @@
+\hypertarget{ID__SD_8H}{
+\section{ID\_\-SD.H File Reference}
+\label{ID__SD_8H}\index{ID\_\-SD.H@{ID\_\-SD.H}}
+}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSoundCommon}{SoundCommon}
+\item 
+struct \hyperlink{structPCSound}{PCSound}
+\item 
+struct \hyperlink{structSampledSound}{SampledSound}
+\item 
+struct \hyperlink{structInstrument}{Instrument}
+\item 
+struct \hyperlink{structAdLibSound}{AdLibSound}
+\item 
+struct \hyperlink{structMusicGroup}{MusicGroup}
+\item 
+struct \hyperlink{structActiveTrack}{ActiveTrack}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__SD_8H_aa048ddfc54294d841b77b862a90c7604}{TickBase}~70
+\item 
+\#define \hyperlink{ID__SD_8H_aa0f8cc99f80c058f4ceef45b6f23c5a6}{pcTimer}~0x42
+\item 
+\#define \hyperlink{ID__SD_8H_ad3e4d7b38e1386a68d1426769f3d7bcd}{pcTAccess}~0x43
+\item 
+\#define \hyperlink{ID__SD_8H_a0f6a26797bb04f9d200f8dd63d22e246}{pcSpeaker}~0x61
+\item 
+\#define \hyperlink{ID__SD_8H_a06cfe8cf4ec5a2eab34456123e5fd8eb}{pcSpkBits}~3
+\item 
+\#define \hyperlink{ID__SD_8H_a186278d36eb24b67a1a307ff2a73bd38}{sbReset}~0x206
+\item 
+\#define \hyperlink{ID__SD_8H_aeea108ffaf287365e845415899b1a752}{sbFMStatus}~0x208
+\item 
+\#define \hyperlink{ID__SD_8H_a28e5c9981f7c2100c48b14100f260fc2}{sbFMAddr}~0x208
+\item 
+\#define \hyperlink{ID__SD_8H_af62d9e895eedfee0a282496a66436405}{sbFMData}~0x209
+\item 
+\#define \hyperlink{ID__SD_8H_a7c06c45ded9204942f90510dba4545d2}{sbReadData}~0x20a
+\item 
+\#define \hyperlink{ID__SD_8H_aea5f79e9960d9dc0fa4d97c176a315c9}{sbWriteCmd}~0x20c
+\item 
+\#define \hyperlink{ID__SD_8H_aec3a60f3b7cd1d21b6d847fcf2f5e1ef}{sbWriteData}~0x20c
+\item 
+\#define \hyperlink{ID__SD_8H_a4fa4fcb36c5f0122d3fed217239bcfa1}{sbWriteStat}~0x20c
+\item 
+\#define \hyperlink{ID__SD_8H_a7a85599c5d8c058c132cb9dde94829e1}{sbDataAvail}~0x20e
+\item 
+\#define \hyperlink{ID__SD_8H_aff856bac87f5e395de226f22b30d8083}{sbpLFMStatus}~0x200
+\item 
+\#define \hyperlink{ID__SD_8H_a687e8ff130ea2a2fbbe7657d98c3efeb}{sbpLFMAddr}~0x200
+\item 
+\#define \hyperlink{ID__SD_8H_a980d513248ac1e5a98122b1571a36941}{sbpLFMData}~0x201
+\item 
+\#define \hyperlink{ID__SD_8H_a3921b7893d75d2bf4bdeacdd0c1d14ea}{sbpRFMStatus}~0x202
+\item 
+\#define \hyperlink{ID__SD_8H_a134ba6f8e7ad355fb6f031ff0a9a2912}{sbpRFMAddr}~0x202
+\item 
+\#define \hyperlink{ID__SD_8H_a5d73fcc579b5ca4c70fc3106f5fa4f41}{sbpRFMData}~0x203
+\item 
+\#define \hyperlink{ID__SD_8H_af3ee81e32129f2a64ccfa17d802329d6}{sbpMixerAddr}~0x204
+\item 
+\#define \hyperlink{ID__SD_8H_a72cb8ab797724928b77e969ede464739}{sbpMixerData}~0x205
+\item 
+\#define \hyperlink{ID__SD_8H_a3a690122c2b8bf644ede007e2fbaa26e}{sbpCDData}~0x210
+\item 
+\#define \hyperlink{ID__SD_8H_a24fe8a14986ec313bf32fdba17b0bcfe}{sbpCDCommand}~0x210
+\item 
+\#define \hyperlink{ID__SD_8H_a2ac210b7b732e95a80066bffc3502ce5}{sbpCDStatus}~0x211
+\item 
+\#define \hyperlink{ID__SD_8H_a0dc73f2b8553641016f11b04829695ee}{sbpCDReset}~0x212
+\item 
+\#define \hyperlink{ID__SD_8H_a1d3e21d107905d41be5285de8d619fde}{sbpmReset}~0x00
+\item 
+\#define \hyperlink{ID__SD_8H_a7f14de74e34931c73d1ca9b19b669ca3}{sbpmVoiceVol}~0x04
+\item 
+\#define \hyperlink{ID__SD_8H_a294c8f309b6ba5a36a2cf3ba0f7d21ea}{sbpmMicMix}~0x0a
+\item 
+\#define \hyperlink{ID__SD_8H_a2375218d588250de90f3f938c89d2cb5}{sbpmFilterADC}~0x0c
+\item 
+\#define \hyperlink{ID__SD_8H_ab55efed2980d8c285af3a010e19791fd}{sbpmControl}~0x0e
+\item 
+\#define \hyperlink{ID__SD_8H_a5091ed97284618dea15c906a146c1c88}{sbpmMasterVol}~0x22
+\item 
+\#define \hyperlink{ID__SD_8H_a40006ed2581461c3be963d27dfd56940}{sbpmFMVol}~0x26
+\item 
+\#define \hyperlink{ID__SD_8H_ab0e645be7159792e8ce0a1706a4b2619}{sbpmCDVol}~0x28
+\item 
+\#define \hyperlink{ID__SD_8H_a978793ab177ee1345bb5b3f4800417d9}{sbpmLineVol}~0x2e
+\item 
+\#define \hyperlink{ID__SD_8H_a78167dccc8f90e545691885a09579071}{alFMStatus}~0x388
+\item 
+\#define \hyperlink{ID__SD_8H_a7354a8e8690f7722b4d0d4c20a25c866}{alFMAddr}~0x388
+\item 
+\#define \hyperlink{ID__SD_8H_ab7f038f141d7787833ea44c21722d76f}{alFMData}~0x389
+\item 
+\#define \hyperlink{ID__SD_8H_a99ada014bfd6f2caf85af987419a951b}{alChar}~0x20
+\item 
+\#define \hyperlink{ID__SD_8H_ade01e21626b1cca6d676273b748466f9}{alScale}~0x40
+\item 
+\#define \hyperlink{ID__SD_8H_ab81fb8377c8d8128293a787e91564aeb}{alAttack}~0x60
+\item 
+\#define \hyperlink{ID__SD_8H_a13371290f5b76248bd25ca900a12f9bd}{alSus}~0x80
+\item 
+\#define \hyperlink{ID__SD_8H_a2111312516418f373d67458cc8855354}{alWave}~0xe0
+\item 
+\#define \hyperlink{ID__SD_8H_a53fec1af507ab356bf7d7578de8e5f83}{alFreqL}~0xa0
+\item 
+\#define \hyperlink{ID__SD_8H_a51fbfe1e4f3246d3768bccc2ee26bc3a}{alFreqH}~0xb0
+\item 
+\#define \hyperlink{ID__SD_8H_a290bd6fdb19cb2f8711748538180c428}{alFeedCon}~0xc0
+\item 
+\#define \hyperlink{ID__SD_8H_a13de5bd9ef6dccbf77fc3a97519374be}{alEffects}~0xbd
+\item 
+\#define \hyperlink{ID__SD_8H_a5236b155d598ae9bb472c2947cf3f403}{sqMaxTracks}~10
+\item 
+\#define \hyperlink{ID__SD_8H_aa2b750779049f38b74f94c9c3c9d3b99}{sqMaxMoods}~1
+\item 
+\#define \hyperlink{ID__SD_8H_a83bbcf1d2954eed7097dca9f74d6ed92}{sev\_\-Null}~0
+\item 
+\#define \hyperlink{ID__SD_8H_ad6a1d24927828001013a01b19d60ace0}{sev\_\-NoteOff}~1
+\item 
+\#define \hyperlink{ID__SD_8H_aae792915e01b313065d31df511208ab8}{sev\_\-NoteOn}~2
+\item 
+\#define \hyperlink{ID__SD_8H_a8fdbaf90044b606cef578564ad5ca81e}{sev\_\-NotePitch}~3
+\item 
+\#define \hyperlink{ID__SD_8H_a962799f1a5ec645bd76f8e5999669053}{sev\_\-NewInst}~4
+\item 
+\#define \hyperlink{ID__SD_8H_a899bed0051d90722e7023795fbb10bb5}{sev\_\-NewPerc}~5
+\item 
+\#define \hyperlink{ID__SD_8H_a84edc703b889c817ddd556df857e6c12}{sev\_\-PercOn}~6
+\item 
+\#define \hyperlink{ID__SD_8H_ae16508552136555cdb3eebb7016f154d}{sev\_\-PercOff}~7
+\item 
+\#define \hyperlink{ID__SD_8H_aa1352fb5ee10b2798e1362019192efe8}{sev\_\-SeqEnd}~-\/1
+\item 
+\#define \hyperlink{ID__SD_8H_a3bcfcc1a69109bddd3b1fc2f52c6ad81}{sf\_\-Melodic}~0
+\item 
+\#define \hyperlink{ID__SD_8H_a3feb22aa7afa51c3645bcf0c3171b82a}{sf\_\-Percussive}~1
+\item 
+\#define \hyperlink{ID__SD_8H_a864be0801686806048bbf6bb4607b9b9}{sqmode\_\-Normal}~0
+\item 
+\#define \hyperlink{ID__SD_8H_aacd3e1fd085a55d878eb8360a626d546}{sqmode\_\-FadeIn}~1
+\item 
+\#define \hyperlink{ID__SD_8H_aa4ee0dcefb0265a576b2af0d9f4f1a76}{sqmode\_\-FadeOut}~2
+\item 
+\#define \hyperlink{ID__SD_8H_a4245f44a4345ad1b58568d699a3dbf71}{sqMaxFade}~64
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} \{ \hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6da9e8d831f2f874c9c97cf5a114ebf2e3b}{sdm\_\-Off}, 
+\hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6daed42131277243677704a049738b4846f}{sdm\_\-PC}, 
+\hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6dadfbfbe4c2cdde81a3b8af8d46ed16d44}{sdm\_\-AdLib}
+ \}
+\item 
+enum \hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{SMMode} \{ \hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4deae4326ebdb5d97b82cf20df03ec06ad91}{smm\_\-Off}, 
+\hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4dea2eeb6820f0ebc5f8df241de89f9d2752}{smm\_\-AdLib}
+ \}
+\item 
+enum \hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3}{SDSMode} \{ \hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3af396a40cb4e1c66fa91f8a1c4a9c09fd}{sds\_\-Off}, 
+\hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3a82ea57867b66b38a7e017992bf9970e6}{sds\_\-PC}, 
+\hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3a64ec9317ec8c2d07d939e59e767077f0}{sds\_\-SoundSource}, 
+\hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3aee0d176633ddbf54fb383642688bdb81}{sds\_\-SoundBlaster}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__SD_8H_a022c0a65b79644cb7ea86a2ce77b3c42}{alOut} (\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} n, \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} b)
+\item 
+void \hyperlink{ID__SD_8H_a9e273885efbb6410be25e887f5ac6bdd}{SD\_\-Startup} (void)
+\item 
+void \hyperlink{ID__SD_8H_ac6d96b7bc78afb4c50dba50009ea7cfa}{SD\_\-Shutdown} (void)
+\item 
+void \hyperlink{ID__SD_8H_a00b19d7c488bf8f1b9336e51831462c1}{SD\_\-Default} (\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} gotit, \hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} sd, \hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{SMMode} sm)
+\item 
+void \hyperlink{ID__SD_8H_a6709a4f68792058fd47b17196b876aee}{SD\_\-PositionSound} (int leftvol, int rightvol)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_af6a678e2015e6474a341bbd8ab03c12f}{SD\_\-PlaySound} (\hyperlink{AUDIOSDM_8H_a4a3d02bfe7b02201dbba1993b77ae7e1}{soundnames} sound)
+\item 
+void \hyperlink{ID__SD_8H_ac3f6132e336a573c7bee820b0acebd65}{SD\_\-SetPosition} (int leftvol, int rightvol)
+\item 
+void \hyperlink{ID__SD_8H_ac98e41e0645d624d0645219c8eca9615}{SD\_\-StopSound} (void)
+\item 
+void \hyperlink{ID__SD_8H_a92c51dce596da266c75185c1c5b37095}{SD\_\-WaitSoundDone} (void)
+\item 
+void \hyperlink{ID__SD_8H_a1b66a386f3785697d07238f3610e3b89}{SD\_\-StartMusic} (\hyperlink{structMusicGroup}{MusicGroup} far $\ast$music)
+\item 
+void \hyperlink{ID__SD_8H_a3de23daedac0200fbc38736dd8c755e3}{SD\_\-MusicOn} (void)
+\item 
+void \hyperlink{ID__SD_8H_ae8e46be37d6285a8cc13d7a68c9f1a0e}{SD\_\-MusicOff} (void)
+\item 
+void \hyperlink{ID__SD_8H_afa09f503f31c9e9c4d77cf6dc8a0932f}{SD\_\-FadeOutMusic} (void)
+\item 
+void \hyperlink{ID__SD_8H_aaa16861d631580a6d7abb257df4a9555}{SD\_\-SetUserHook} (void($\ast$hook)(void))
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_aa097386a2a5ed395cef780871ba74a85}{SD\_\-MusicPlaying} (void)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_a5150708f32ce380003f87fe23288859a}{SD\_\-SetSoundMode} (\hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} mode)
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_ab12f4ca416e4aa16d877ac310f7a6792}{SD\_\-SetMusicMode} (\hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{SMMode} mode)
+\item 
+\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{ID__SD_8H_a32826e61458fce0f5667e3e1f4db95f4}{SD\_\-SoundPlaying} (void)
+\item 
+void \hyperlink{ID__SD_8H_af805d2a46f31efbb50c1d92347fd374d}{SD\_\-SetDigiDevice} (\hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3}{SDSMode})
+\item 
+void \hyperlink{ID__SD_8H_a2807a99740c2e669483908fc03bda952}{SD\_\-PlayDigitized} (\hyperlink{ID__HEAD_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word} which, int leftpos, int rightpos)
+\item 
+void \hyperlink{ID__SD_8H_af508ee24c35bb22fae070def8e7c80ac}{SD\_\-StopDigitized} (void)
+\item 
+void \hyperlink{ID__SD_8H_a77ae2ddf3d133b4eadcca562a7d2c9d0}{SD\_\-Poll} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_aae5cf4d134b52966bc2aa3de22b0dd03}{AdLibPresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_ad1e0e8f0ed866e2473d8915e769852c5}{SoundSourcePresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_a339e21cdf208764078f89b5b5f72932b}{SoundBlasterPresent}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_aa073cdf1c0836ab07a66b9e73bfe89cd}{NeedsMusic}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_a99325c606c4f55b472ccc411b1b2bb02}{SoundPositioned}
+\item 
+\hyperlink{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{SDMode} \hyperlink{ID__SD_8H_ae78ec490e7f5cbb26c649cc4034546f7}{SoundMode}
+\item 
+\hyperlink{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3}{SDSMode} \hyperlink{ID__SD_8H_ad359668c13523a90cddba7728a33fab9}{DigiMode}
+\item 
+\hyperlink{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{SMMode} \hyperlink{ID__SD_8H_afcbed1bc96a4997c02b2eb0143c57ba5}{MusicMode}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__SD_8H_a11b9e79724767ea7fe4429444baa39c0}{DigiPlaying}
+\item 
+int \hyperlink{ID__SD_8H_a457a57338904d39467e312608908007c}{DigiMap} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword} \hyperlink{ID__SD_8H_afae310dc5c7e77f2742ddbfc16b98dd0}{TimeCount}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__SD_8H_ab81fb8377c8d8128293a787e91564aeb}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alAttack@{alAttack}}
+\index{alAttack@{alAttack}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alAttack}]{\setlength{\rightskip}{0pt plus 5cm}\#define alAttack~0x60}}
+\label{ID__SD_8H_ab81fb8377c8d8128293a787e91564aeb}
+\hypertarget{ID__SD_8H_a99ada014bfd6f2caf85af987419a951b}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alChar@{alChar}}
+\index{alChar@{alChar}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alChar}]{\setlength{\rightskip}{0pt plus 5cm}\#define alChar~0x20}}
+\label{ID__SD_8H_a99ada014bfd6f2caf85af987419a951b}
+\hypertarget{ID__SD_8H_a13de5bd9ef6dccbf77fc3a97519374be}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alEffects@{alEffects}}
+\index{alEffects@{alEffects}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alEffects}]{\setlength{\rightskip}{0pt plus 5cm}\#define alEffects~0xbd}}
+\label{ID__SD_8H_a13de5bd9ef6dccbf77fc3a97519374be}
+\hypertarget{ID__SD_8H_a290bd6fdb19cb2f8711748538180c428}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alFeedCon@{alFeedCon}}
+\index{alFeedCon@{alFeedCon}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alFeedCon}]{\setlength{\rightskip}{0pt plus 5cm}\#define alFeedCon~0xc0}}
+\label{ID__SD_8H_a290bd6fdb19cb2f8711748538180c428}
+\hypertarget{ID__SD_8H_a7354a8e8690f7722b4d0d4c20a25c866}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alFMAddr@{alFMAddr}}
+\index{alFMAddr@{alFMAddr}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alFMAddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define alFMAddr~0x388}}
+\label{ID__SD_8H_a7354a8e8690f7722b4d0d4c20a25c866}
+\hypertarget{ID__SD_8H_ab7f038f141d7787833ea44c21722d76f}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alFMData@{alFMData}}
+\index{alFMData@{alFMData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alFMData}]{\setlength{\rightskip}{0pt plus 5cm}\#define alFMData~0x389}}
+\label{ID__SD_8H_ab7f038f141d7787833ea44c21722d76f}
+\hypertarget{ID__SD_8H_a78167dccc8f90e545691885a09579071}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alFMStatus@{alFMStatus}}
+\index{alFMStatus@{alFMStatus}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alFMStatus}]{\setlength{\rightskip}{0pt plus 5cm}\#define alFMStatus~0x388}}
+\label{ID__SD_8H_a78167dccc8f90e545691885a09579071}
+\hypertarget{ID__SD_8H_a51fbfe1e4f3246d3768bccc2ee26bc3a}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alFreqH@{alFreqH}}
+\index{alFreqH@{alFreqH}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alFreqH}]{\setlength{\rightskip}{0pt plus 5cm}\#define alFreqH~0xb0}}
+\label{ID__SD_8H_a51fbfe1e4f3246d3768bccc2ee26bc3a}
+\hypertarget{ID__SD_8H_a53fec1af507ab356bf7d7578de8e5f83}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alFreqL@{alFreqL}}
+\index{alFreqL@{alFreqL}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alFreqL}]{\setlength{\rightskip}{0pt plus 5cm}\#define alFreqL~0xa0}}
+\label{ID__SD_8H_a53fec1af507ab356bf7d7578de8e5f83}
+\hypertarget{ID__SD_8H_ade01e21626b1cca6d676273b748466f9}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alScale@{alScale}}
+\index{alScale@{alScale}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alScale}]{\setlength{\rightskip}{0pt plus 5cm}\#define alScale~0x40}}
+\label{ID__SD_8H_ade01e21626b1cca6d676273b748466f9}
+\hypertarget{ID__SD_8H_a13371290f5b76248bd25ca900a12f9bd}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alSus@{alSus}}
+\index{alSus@{alSus}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alSus}]{\setlength{\rightskip}{0pt plus 5cm}\#define alSus~0x80}}
+\label{ID__SD_8H_a13371290f5b76248bd25ca900a12f9bd}
+\hypertarget{ID__SD_8H_a2111312516418f373d67458cc8855354}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alWave@{alWave}}
+\index{alWave@{alWave}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alWave}]{\setlength{\rightskip}{0pt plus 5cm}\#define alWave~0xe0}}
+\label{ID__SD_8H_a2111312516418f373d67458cc8855354}
+\hypertarget{ID__SD_8H_a0f6a26797bb04f9d200f8dd63d22e246}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!pcSpeaker@{pcSpeaker}}
+\index{pcSpeaker@{pcSpeaker}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{pcSpeaker}]{\setlength{\rightskip}{0pt plus 5cm}\#define pcSpeaker~0x61}}
+\label{ID__SD_8H_a0f6a26797bb04f9d200f8dd63d22e246}
+\hypertarget{ID__SD_8H_a06cfe8cf4ec5a2eab34456123e5fd8eb}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!pcSpkBits@{pcSpkBits}}
+\index{pcSpkBits@{pcSpkBits}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{pcSpkBits}]{\setlength{\rightskip}{0pt plus 5cm}\#define pcSpkBits~3}}
+\label{ID__SD_8H_a06cfe8cf4ec5a2eab34456123e5fd8eb}
+\hypertarget{ID__SD_8H_ad3e4d7b38e1386a68d1426769f3d7bcd}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!pcTAccess@{pcTAccess}}
+\index{pcTAccess@{pcTAccess}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{pcTAccess}]{\setlength{\rightskip}{0pt plus 5cm}\#define pcTAccess~0x43}}
+\label{ID__SD_8H_ad3e4d7b38e1386a68d1426769f3d7bcd}
+\hypertarget{ID__SD_8H_aa0f8cc99f80c058f4ceef45b6f23c5a6}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!pcTimer@{pcTimer}}
+\index{pcTimer@{pcTimer}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{pcTimer}]{\setlength{\rightskip}{0pt plus 5cm}\#define pcTimer~0x42}}
+\label{ID__SD_8H_aa0f8cc99f80c058f4ceef45b6f23c5a6}
+\hypertarget{ID__SD_8H_a7a85599c5d8c058c132cb9dde94829e1}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbDataAvail@{sbDataAvail}}
+\index{sbDataAvail@{sbDataAvail}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbDataAvail}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbDataAvail~0x20e}}
+\label{ID__SD_8H_a7a85599c5d8c058c132cb9dde94829e1}
+\hypertarget{ID__SD_8H_a28e5c9981f7c2100c48b14100f260fc2}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbFMAddr@{sbFMAddr}}
+\index{sbFMAddr@{sbFMAddr}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbFMAddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbFMAddr~0x208}}
+\label{ID__SD_8H_a28e5c9981f7c2100c48b14100f260fc2}
+\hypertarget{ID__SD_8H_af62d9e895eedfee0a282496a66436405}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbFMData@{sbFMData}}
+\index{sbFMData@{sbFMData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbFMData}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbFMData~0x209}}
+\label{ID__SD_8H_af62d9e895eedfee0a282496a66436405}
+\hypertarget{ID__SD_8H_aeea108ffaf287365e845415899b1a752}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbFMStatus@{sbFMStatus}}
+\index{sbFMStatus@{sbFMStatus}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbFMStatus}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbFMStatus~0x208}}
+\label{ID__SD_8H_aeea108ffaf287365e845415899b1a752}
+\hypertarget{ID__SD_8H_a24fe8a14986ec313bf32fdba17b0bcfe}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpCDCommand@{sbpCDCommand}}
+\index{sbpCDCommand@{sbpCDCommand}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpCDCommand}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpCDCommand~0x210}}
+\label{ID__SD_8H_a24fe8a14986ec313bf32fdba17b0bcfe}
+\hypertarget{ID__SD_8H_a3a690122c2b8bf644ede007e2fbaa26e}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpCDData@{sbpCDData}}
+\index{sbpCDData@{sbpCDData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpCDData}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpCDData~0x210}}
+\label{ID__SD_8H_a3a690122c2b8bf644ede007e2fbaa26e}
+\hypertarget{ID__SD_8H_a0dc73f2b8553641016f11b04829695ee}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpCDReset@{sbpCDReset}}
+\index{sbpCDReset@{sbpCDReset}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpCDReset}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpCDReset~0x212}}
+\label{ID__SD_8H_a0dc73f2b8553641016f11b04829695ee}
+\hypertarget{ID__SD_8H_a2ac210b7b732e95a80066bffc3502ce5}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpCDStatus@{sbpCDStatus}}
+\index{sbpCDStatus@{sbpCDStatus}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpCDStatus}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpCDStatus~0x211}}
+\label{ID__SD_8H_a2ac210b7b732e95a80066bffc3502ce5}
+\hypertarget{ID__SD_8H_a687e8ff130ea2a2fbbe7657d98c3efeb}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpLFMAddr@{sbpLFMAddr}}
+\index{sbpLFMAddr@{sbpLFMAddr}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpLFMAddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpLFMAddr~0x200}}
+\label{ID__SD_8H_a687e8ff130ea2a2fbbe7657d98c3efeb}
+\hypertarget{ID__SD_8H_a980d513248ac1e5a98122b1571a36941}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpLFMData@{sbpLFMData}}
+\index{sbpLFMData@{sbpLFMData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpLFMData}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpLFMData~0x201}}
+\label{ID__SD_8H_a980d513248ac1e5a98122b1571a36941}
+\hypertarget{ID__SD_8H_aff856bac87f5e395de226f22b30d8083}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpLFMStatus@{sbpLFMStatus}}
+\index{sbpLFMStatus@{sbpLFMStatus}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpLFMStatus}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpLFMStatus~0x200}}
+\label{ID__SD_8H_aff856bac87f5e395de226f22b30d8083}
+\hypertarget{ID__SD_8H_ab0e645be7159792e8ce0a1706a4b2619}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmCDVol@{sbpmCDVol}}
+\index{sbpmCDVol@{sbpmCDVol}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmCDVol}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmCDVol~0x28}}
+\label{ID__SD_8H_ab0e645be7159792e8ce0a1706a4b2619}
+\hypertarget{ID__SD_8H_ab55efed2980d8c285af3a010e19791fd}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmControl@{sbpmControl}}
+\index{sbpmControl@{sbpmControl}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmControl}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmControl~0x0e}}
+\label{ID__SD_8H_ab55efed2980d8c285af3a010e19791fd}
+\hypertarget{ID__SD_8H_a2375218d588250de90f3f938c89d2cb5}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmFilterADC@{sbpmFilterADC}}
+\index{sbpmFilterADC@{sbpmFilterADC}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmFilterADC}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmFilterADC~0x0c}}
+\label{ID__SD_8H_a2375218d588250de90f3f938c89d2cb5}
+\hypertarget{ID__SD_8H_a40006ed2581461c3be963d27dfd56940}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmFMVol@{sbpmFMVol}}
+\index{sbpmFMVol@{sbpmFMVol}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmFMVol}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmFMVol~0x26}}
+\label{ID__SD_8H_a40006ed2581461c3be963d27dfd56940}
+\hypertarget{ID__SD_8H_af3ee81e32129f2a64ccfa17d802329d6}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpMixerAddr@{sbpMixerAddr}}
+\index{sbpMixerAddr@{sbpMixerAddr}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpMixerAddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpMixerAddr~0x204}}
+\label{ID__SD_8H_af3ee81e32129f2a64ccfa17d802329d6}
+\hypertarget{ID__SD_8H_a72cb8ab797724928b77e969ede464739}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpMixerData@{sbpMixerData}}
+\index{sbpMixerData@{sbpMixerData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpMixerData}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpMixerData~0x205}}
+\label{ID__SD_8H_a72cb8ab797724928b77e969ede464739}
+\hypertarget{ID__SD_8H_a978793ab177ee1345bb5b3f4800417d9}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmLineVol@{sbpmLineVol}}
+\index{sbpmLineVol@{sbpmLineVol}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmLineVol}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmLineVol~0x2e}}
+\label{ID__SD_8H_a978793ab177ee1345bb5b3f4800417d9}
+\hypertarget{ID__SD_8H_a5091ed97284618dea15c906a146c1c88}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmMasterVol@{sbpmMasterVol}}
+\index{sbpmMasterVol@{sbpmMasterVol}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmMasterVol}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmMasterVol~0x22}}
+\label{ID__SD_8H_a5091ed97284618dea15c906a146c1c88}
+\hypertarget{ID__SD_8H_a294c8f309b6ba5a36a2cf3ba0f7d21ea}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmMicMix@{sbpmMicMix}}
+\index{sbpmMicMix@{sbpmMicMix}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmMicMix}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmMicMix~0x0a}}
+\label{ID__SD_8H_a294c8f309b6ba5a36a2cf3ba0f7d21ea}
+\hypertarget{ID__SD_8H_a1d3e21d107905d41be5285de8d619fde}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmReset@{sbpmReset}}
+\index{sbpmReset@{sbpmReset}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmReset}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmReset~0x00}}
+\label{ID__SD_8H_a1d3e21d107905d41be5285de8d619fde}
+\hypertarget{ID__SD_8H_a7f14de74e34931c73d1ca9b19b669ca3}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpmVoiceVol@{sbpmVoiceVol}}
+\index{sbpmVoiceVol@{sbpmVoiceVol}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpmVoiceVol}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpmVoiceVol~0x04}}
+\label{ID__SD_8H_a7f14de74e34931c73d1ca9b19b669ca3}
+\hypertarget{ID__SD_8H_a134ba6f8e7ad355fb6f031ff0a9a2912}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpRFMAddr@{sbpRFMAddr}}
+\index{sbpRFMAddr@{sbpRFMAddr}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpRFMAddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpRFMAddr~0x202}}
+\label{ID__SD_8H_a134ba6f8e7ad355fb6f031ff0a9a2912}
+\hypertarget{ID__SD_8H_a5d73fcc579b5ca4c70fc3106f5fa4f41}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpRFMData@{sbpRFMData}}
+\index{sbpRFMData@{sbpRFMData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpRFMData}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpRFMData~0x203}}
+\label{ID__SD_8H_a5d73fcc579b5ca4c70fc3106f5fa4f41}
+\hypertarget{ID__SD_8H_a3921b7893d75d2bf4bdeacdd0c1d14ea}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbpRFMStatus@{sbpRFMStatus}}
+\index{sbpRFMStatus@{sbpRFMStatus}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbpRFMStatus}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbpRFMStatus~0x202}}
+\label{ID__SD_8H_a3921b7893d75d2bf4bdeacdd0c1d14ea}
+\hypertarget{ID__SD_8H_a7c06c45ded9204942f90510dba4545d2}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbReadData@{sbReadData}}
+\index{sbReadData@{sbReadData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbReadData}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbReadData~0x20a}}
+\label{ID__SD_8H_a7c06c45ded9204942f90510dba4545d2}
+\hypertarget{ID__SD_8H_a186278d36eb24b67a1a307ff2a73bd38}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbReset@{sbReset}}
+\index{sbReset@{sbReset}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbReset}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbReset~0x206}}
+\label{ID__SD_8H_a186278d36eb24b67a1a307ff2a73bd38}
+\hypertarget{ID__SD_8H_aea5f79e9960d9dc0fa4d97c176a315c9}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbWriteCmd@{sbWriteCmd}}
+\index{sbWriteCmd@{sbWriteCmd}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbWriteCmd}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbWriteCmd~0x20c}}
+\label{ID__SD_8H_aea5f79e9960d9dc0fa4d97c176a315c9}
+\hypertarget{ID__SD_8H_aec3a60f3b7cd1d21b6d847fcf2f5e1ef}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbWriteData@{sbWriteData}}
+\index{sbWriteData@{sbWriteData}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbWriteData}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbWriteData~0x20c}}
+\label{ID__SD_8H_aec3a60f3b7cd1d21b6d847fcf2f5e1ef}
+\hypertarget{ID__SD_8H_a4fa4fcb36c5f0122d3fed217239bcfa1}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sbWriteStat@{sbWriteStat}}
+\index{sbWriteStat@{sbWriteStat}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sbWriteStat}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbWriteStat~0x20c}}
+\label{ID__SD_8H_a4fa4fcb36c5f0122d3fed217239bcfa1}
+\hypertarget{ID__SD_8H_a962799f1a5ec645bd76f8e5999669053}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-NewInst@{sev\_\-NewInst}}
+\index{sev\_\-NewInst@{sev\_\-NewInst}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-NewInst}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-NewInst~4}}
+\label{ID__SD_8H_a962799f1a5ec645bd76f8e5999669053}
+\hypertarget{ID__SD_8H_a899bed0051d90722e7023795fbb10bb5}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-NewPerc@{sev\_\-NewPerc}}
+\index{sev\_\-NewPerc@{sev\_\-NewPerc}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-NewPerc}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-NewPerc~5}}
+\label{ID__SD_8H_a899bed0051d90722e7023795fbb10bb5}
+\hypertarget{ID__SD_8H_ad6a1d24927828001013a01b19d60ace0}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-NoteOff@{sev\_\-NoteOff}}
+\index{sev\_\-NoteOff@{sev\_\-NoteOff}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-NoteOff}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-NoteOff~1}}
+\label{ID__SD_8H_ad6a1d24927828001013a01b19d60ace0}
+\hypertarget{ID__SD_8H_aae792915e01b313065d31df511208ab8}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-NoteOn@{sev\_\-NoteOn}}
+\index{sev\_\-NoteOn@{sev\_\-NoteOn}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-NoteOn}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-NoteOn~2}}
+\label{ID__SD_8H_aae792915e01b313065d31df511208ab8}
+\hypertarget{ID__SD_8H_a8fdbaf90044b606cef578564ad5ca81e}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-NotePitch@{sev\_\-NotePitch}}
+\index{sev\_\-NotePitch@{sev\_\-NotePitch}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-NotePitch}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-NotePitch~3}}
+\label{ID__SD_8H_a8fdbaf90044b606cef578564ad5ca81e}
+\hypertarget{ID__SD_8H_a83bbcf1d2954eed7097dca9f74d6ed92}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-Null@{sev\_\-Null}}
+\index{sev\_\-Null@{sev\_\-Null}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-Null}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-Null~0}}
+\label{ID__SD_8H_a83bbcf1d2954eed7097dca9f74d6ed92}
+\hypertarget{ID__SD_8H_ae16508552136555cdb3eebb7016f154d}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-PercOff@{sev\_\-PercOff}}
+\index{sev\_\-PercOff@{sev\_\-PercOff}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-PercOff}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-PercOff~7}}
+\label{ID__SD_8H_ae16508552136555cdb3eebb7016f154d}
+\hypertarget{ID__SD_8H_a84edc703b889c817ddd556df857e6c12}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-PercOn@{sev\_\-PercOn}}
+\index{sev\_\-PercOn@{sev\_\-PercOn}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-PercOn}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-PercOn~6}}
+\label{ID__SD_8H_a84edc703b889c817ddd556df857e6c12}
+\hypertarget{ID__SD_8H_aa1352fb5ee10b2798e1362019192efe8}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sev\_\-SeqEnd@{sev\_\-SeqEnd}}
+\index{sev\_\-SeqEnd@{sev\_\-SeqEnd}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sev\_\-SeqEnd}]{\setlength{\rightskip}{0pt plus 5cm}\#define sev\_\-SeqEnd~-\/1}}
+\label{ID__SD_8H_aa1352fb5ee10b2798e1362019192efe8}
+\hypertarget{ID__SD_8H_a3bcfcc1a69109bddd3b1fc2f52c6ad81}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sf\_\-Melodic@{sf\_\-Melodic}}
+\index{sf\_\-Melodic@{sf\_\-Melodic}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sf\_\-Melodic}]{\setlength{\rightskip}{0pt plus 5cm}\#define sf\_\-Melodic~0}}
+\label{ID__SD_8H_a3bcfcc1a69109bddd3b1fc2f52c6ad81}
+\hypertarget{ID__SD_8H_a3feb22aa7afa51c3645bcf0c3171b82a}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sf\_\-Percussive@{sf\_\-Percussive}}
+\index{sf\_\-Percussive@{sf\_\-Percussive}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sf\_\-Percussive}]{\setlength{\rightskip}{0pt plus 5cm}\#define sf\_\-Percussive~1}}
+\label{ID__SD_8H_a3feb22aa7afa51c3645bcf0c3171b82a}
+\hypertarget{ID__SD_8H_a4245f44a4345ad1b58568d699a3dbf71}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sqMaxFade@{sqMaxFade}}
+\index{sqMaxFade@{sqMaxFade}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sqMaxFade}]{\setlength{\rightskip}{0pt plus 5cm}\#define sqMaxFade~64}}
+\label{ID__SD_8H_a4245f44a4345ad1b58568d699a3dbf71}
+\hypertarget{ID__SD_8H_aa2b750779049f38b74f94c9c3c9d3b99}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sqMaxMoods@{sqMaxMoods}}
+\index{sqMaxMoods@{sqMaxMoods}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sqMaxMoods}]{\setlength{\rightskip}{0pt plus 5cm}\#define sqMaxMoods~1}}
+\label{ID__SD_8H_aa2b750779049f38b74f94c9c3c9d3b99}
+\hypertarget{ID__SD_8H_a5236b155d598ae9bb472c2947cf3f403}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sqMaxTracks@{sqMaxTracks}}
+\index{sqMaxTracks@{sqMaxTracks}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sqMaxTracks}]{\setlength{\rightskip}{0pt plus 5cm}\#define sqMaxTracks~10}}
+\label{ID__SD_8H_a5236b155d598ae9bb472c2947cf3f403}
+\hypertarget{ID__SD_8H_aacd3e1fd085a55d878eb8360a626d546}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sqmode\_\-FadeIn@{sqmode\_\-FadeIn}}
+\index{sqmode\_\-FadeIn@{sqmode\_\-FadeIn}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sqmode\_\-FadeIn}]{\setlength{\rightskip}{0pt plus 5cm}\#define sqmode\_\-FadeIn~1}}
+\label{ID__SD_8H_aacd3e1fd085a55d878eb8360a626d546}
+\hypertarget{ID__SD_8H_aa4ee0dcefb0265a576b2af0d9f4f1a76}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sqmode\_\-FadeOut@{sqmode\_\-FadeOut}}
+\index{sqmode\_\-FadeOut@{sqmode\_\-FadeOut}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sqmode\_\-FadeOut}]{\setlength{\rightskip}{0pt plus 5cm}\#define sqmode\_\-FadeOut~2}}
+\label{ID__SD_8H_aa4ee0dcefb0265a576b2af0d9f4f1a76}
+\hypertarget{ID__SD_8H_a864be0801686806048bbf6bb4607b9b9}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!sqmode\_\-Normal@{sqmode\_\-Normal}}
+\index{sqmode\_\-Normal@{sqmode\_\-Normal}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{sqmode\_\-Normal}]{\setlength{\rightskip}{0pt plus 5cm}\#define sqmode\_\-Normal~0}}
+\label{ID__SD_8H_a864be0801686806048bbf6bb4607b9b9}
+\hypertarget{ID__SD_8H_aa048ddfc54294d841b77b862a90c7604}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!TickBase@{TickBase}}
+\index{TickBase@{TickBase}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{TickBase}]{\setlength{\rightskip}{0pt plus 5cm}\#define TickBase~70}}
+\label{ID__SD_8H_aa048ddfc54294d841b77b862a90c7604}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SDMode@{SDMode}}
+\index{SDMode@{SDMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SDMode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf SDMode}}}
+\label{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6d}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{sdm\_\-Off@{sdm\_\-Off}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!sdm\_\-Off@{sdm\_\-Off}}\item[{\em 
+\hypertarget{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6da9e8d831f2f874c9c97cf5a114ebf2e3b}{
+sdm\_\-Off}
+\label{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6da9e8d831f2f874c9c97cf5a114ebf2e3b}
+}]\index{sdm\_\-PC@{sdm\_\-PC}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!sdm\_\-PC@{sdm\_\-PC}}\item[{\em 
+\hypertarget{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6daed42131277243677704a049738b4846f}{
+sdm\_\-PC}
+\label{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6daed42131277243677704a049738b4846f}
+}]\index{sdm\_\-AdLib@{sdm\_\-AdLib}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!sdm\_\-AdLib@{sdm\_\-AdLib}}\item[{\em 
+\hypertarget{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6dadfbfbe4c2cdde81a3b8af8d46ed16d44}{
+sdm\_\-AdLib}
+\label{ID__SD_8H_af66c128f54042fe02b7297e3e29a8b6dadfbfbe4c2cdde81a3b8af8d46ed16d44}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SDSMode@{SDSMode}}
+\index{SDSMode@{SDSMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SDSMode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf SDSMode}}}
+\label{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{sds\_\-Off@{sds\_\-Off}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!sds\_\-Off@{sds\_\-Off}}\item[{\em 
+\hypertarget{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3af396a40cb4e1c66fa91f8a1c4a9c09fd}{
+sds\_\-Off}
+\label{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3af396a40cb4e1c66fa91f8a1c4a9c09fd}
+}]\index{sds\_\-PC@{sds\_\-PC}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!sds\_\-PC@{sds\_\-PC}}\item[{\em 
+\hypertarget{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3a82ea57867b66b38a7e017992bf9970e6}{
+sds\_\-PC}
+\label{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3a82ea57867b66b38a7e017992bf9970e6}
+}]\index{sds\_\-SoundSource@{sds\_\-SoundSource}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!sds\_\-SoundSource@{sds\_\-SoundSource}}\item[{\em 
+\hypertarget{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3a64ec9317ec8c2d07d939e59e767077f0}{
+sds\_\-SoundSource}
+\label{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3a64ec9317ec8c2d07d939e59e767077f0}
+}]\index{sds\_\-SoundBlaster@{sds\_\-SoundBlaster}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!sds\_\-SoundBlaster@{sds\_\-SoundBlaster}}\item[{\em 
+\hypertarget{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3aee0d176633ddbf54fb383642688bdb81}{
+sds\_\-SoundBlaster}
+\label{ID__SD_8H_a5d22d74f0369393939a5d3cf1dcfdaf3aee0d176633ddbf54fb383642688bdb81}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SMMode@{SMMode}}
+\index{SMMode@{SMMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SMMode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf SMMode}}}
+\label{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4de}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{smm\_\-Off@{smm\_\-Off}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!smm\_\-Off@{smm\_\-Off}}\item[{\em 
+\hypertarget{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4deae4326ebdb5d97b82cf20df03ec06ad91}{
+smm\_\-Off}
+\label{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4deae4326ebdb5d97b82cf20df03ec06ad91}
+}]\index{smm\_\-AdLib@{smm\_\-AdLib}!ID\_\-SD.H@{ID\_\-SD.H}}\index{ID\_\-SD.H@{ID\_\-SD.H}!smm\_\-AdLib@{smm\_\-AdLib}}\item[{\em 
+\hypertarget{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4dea2eeb6820f0ebc5f8df241de89f9d2752}{
+smm\_\-AdLib}
+\label{ID__SD_8H_ac43ff64e0d1da85aa6fee6723a38a4dea2eeb6820f0ebc5f8df241de89f9d2752}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__SD_8H_a022c0a65b79644cb7ea86a2ce77b3c42}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!alOut@{alOut}}
+\index{alOut@{alOut}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{alOut}]{\setlength{\rightskip}{0pt plus 5cm}void alOut (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{n, }
+\item[{{\bf byte}}]{b}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a022c0a65b79644cb7ea86a2ce77b3c42}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_a022c0a65b79644cb7ea86a2ce77b3c42_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8H_a00b19d7c488bf8f1b9336e51831462c1}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-Default@{SD\_\-Default}}
+\index{SD\_\-Default@{SD\_\-Default}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Default (
+\begin{DoxyParamCaption}
+\item[{{\bf boolean}}]{gotit, }
+\item[{{\bf SDMode}}]{sd, }
+\item[{{\bf SMMode}}]{sm}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a00b19d7c488bf8f1b9336e51831462c1}
+\hypertarget{ID__SD_8H_afa09f503f31c9e9c4d77cf6dc8a0932f}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-FadeOutMusic@{SD\_\-FadeOutMusic}}
+\index{SD\_\-FadeOutMusic@{SD\_\-FadeOutMusic}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-FadeOutMusic}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-FadeOutMusic (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_afa09f503f31c9e9c4d77cf6dc8a0932f}
+\hypertarget{ID__SD_8H_ae8e46be37d6285a8cc13d7a68c9f1a0e}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-MusicOff@{SD\_\-MusicOff}}
+\index{SD\_\-MusicOff@{SD\_\-MusicOff}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-MusicOff}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-MusicOff (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_ae8e46be37d6285a8cc13d7a68c9f1a0e}
+\hypertarget{ID__SD_8H_a3de23daedac0200fbc38736dd8c755e3}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-MusicOn@{SD\_\-MusicOn}}
+\index{SD\_\-MusicOn@{SD\_\-MusicOn}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-MusicOn}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-MusicOn (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a3de23daedac0200fbc38736dd8c755e3}
+\hypertarget{ID__SD_8H_aa097386a2a5ed395cef780871ba74a85}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-MusicPlaying@{SD\_\-MusicPlaying}}
+\index{SD\_\-MusicPlaying@{SD\_\-MusicPlaying}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-MusicPlaying}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-MusicPlaying (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_aa097386a2a5ed395cef780871ba74a85}
+\hypertarget{ID__SD_8H_a2807a99740c2e669483908fc03bda952}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-PlayDigitized@{SD\_\-PlayDigitized}}
+\index{SD\_\-PlayDigitized@{SD\_\-PlayDigitized}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-PlayDigitized}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-PlayDigitized (
+\begin{DoxyParamCaption}
+\item[{{\bf word}}]{which, }
+\item[{int}]{leftpos, }
+\item[{int}]{rightpos}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a2807a99740c2e669483908fc03bda952}
+\hypertarget{ID__SD_8H_af6a678e2015e6474a341bbd8ab03c12f}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-PlaySound@{SD\_\-PlaySound}}
+\index{SD\_\-PlaySound@{SD\_\-PlaySound}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-PlaySound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-PlaySound (
+\begin{DoxyParamCaption}
+\item[{{\bf soundnames}}]{sound}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_af6a678e2015e6474a341bbd8ab03c12f}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_af6a678e2015e6474a341bbd8ab03c12f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_af6a678e2015e6474a341bbd8ab03c12f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8H_a77ae2ddf3d133b4eadcca562a7d2c9d0}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-Poll@{SD\_\-Poll}}
+\index{SD\_\-Poll@{SD\_\-Poll}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Poll (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a77ae2ddf3d133b4eadcca562a7d2c9d0}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_a77ae2ddf3d133b4eadcca562a7d2c9d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_a77ae2ddf3d133b4eadcca562a7d2c9d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8H_a6709a4f68792058fd47b17196b876aee}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-PositionSound@{SD\_\-PositionSound}}
+\index{SD\_\-PositionSound@{SD\_\-PositionSound}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-PositionSound}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-PositionSound (
+\begin{DoxyParamCaption}
+\item[{int}]{leftvol, }
+\item[{int}]{rightvol}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a6709a4f68792058fd47b17196b876aee}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{ID__SD_8H_a6709a4f68792058fd47b17196b876aee_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8H_af805d2a46f31efbb50c1d92347fd374d}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-SetDigiDevice@{SD\_\-SetDigiDevice}}
+\index{SD\_\-SetDigiDevice@{SD\_\-SetDigiDevice}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-SetDigiDevice}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-SetDigiDevice (
+\begin{DoxyParamCaption}
+\item[{{\bf SDSMode}}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_af805d2a46f31efbb50c1d92347fd374d}
+\hypertarget{ID__SD_8H_ab12f4ca416e4aa16d877ac310f7a6792}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-SetMusicMode@{SD\_\-SetMusicMode}}
+\index{SD\_\-SetMusicMode@{SD\_\-SetMusicMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-SetMusicMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-SetMusicMode (
+\begin{DoxyParamCaption}
+\item[{{\bf SMMode}}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_ab12f4ca416e4aa16d877ac310f7a6792}
+
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_ab12f4ca416e4aa16d877ac310f7a6792_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_ab12f4ca416e4aa16d877ac310f7a6792_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8H_ac3f6132e336a573c7bee820b0acebd65}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-SetPosition@{SD\_\-SetPosition}}
+\index{SD\_\-SetPosition@{SD\_\-SetPosition}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-SetPosition}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-SetPosition (
+\begin{DoxyParamCaption}
+\item[{int}]{leftvol, }
+\item[{int}]{rightvol}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_ac3f6132e336a573c7bee820b0acebd65}
+\hypertarget{ID__SD_8H_a5150708f32ce380003f87fe23288859a}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-SetSoundMode@{SD\_\-SetSoundMode}}
+\index{SD\_\-SetSoundMode@{SD\_\-SetSoundMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-SetSoundMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} SD\_\-SetSoundMode (
+\begin{DoxyParamCaption}
+\item[{{\bf SDMode}}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a5150708f32ce380003f87fe23288859a}
+\hypertarget{ID__SD_8H_aaa16861d631580a6d7abb257df4a9555}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-SetUserHook@{SD\_\-SetUserHook}}
+\index{SD\_\-SetUserHook@{SD\_\-SetUserHook}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-SetUserHook}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-SetUserHook (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{hook}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_aaa16861d631580a6d7abb257df4a9555}
+\hypertarget{ID__SD_8H_ac6d96b7bc78afb4c50dba50009ea7cfa}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-Shutdown@{SD\_\-Shutdown}}
+\index{SD\_\-Shutdown@{SD\_\-Shutdown}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_ac6d96b7bc78afb4c50dba50009ea7cfa}
+\hypertarget{ID__SD_8H_a32826e61458fce0f5667e3e1f4db95f4}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-SoundPlaying@{SD\_\-SoundPlaying}}
+\index{SD\_\-SoundPlaying@{SD\_\-SoundPlaying}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-SoundPlaying}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} SD\_\-SoundPlaying (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a32826e61458fce0f5667e3e1f4db95f4}
+
+
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__SD_8H_a32826e61458fce0f5667e3e1f4db95f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{ID__SD_8H_a1b66a386f3785697d07238f3610e3b89}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-StartMusic@{SD\_\-StartMusic}}
+\index{SD\_\-StartMusic@{SD\_\-StartMusic}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-StartMusic}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-StartMusic (
+\begin{DoxyParamCaption}
+\item[{{\bf MusicGroup} far $\ast$}]{music}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a1b66a386f3785697d07238f3610e3b89}
+\hypertarget{ID__SD_8H_a9e273885efbb6410be25e887f5ac6bdd}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-Startup@{SD\_\-Startup}}
+\index{SD\_\-Startup@{SD\_\-Startup}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-Startup}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-Startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a9e273885efbb6410be25e887f5ac6bdd}
+\hypertarget{ID__SD_8H_af508ee24c35bb22fae070def8e7c80ac}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-StopDigitized@{SD\_\-StopDigitized}}
+\index{SD\_\-StopDigitized@{SD\_\-StopDigitized}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-StopDigitized}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-StopDigitized (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_af508ee24c35bb22fae070def8e7c80ac}
+\hypertarget{ID__SD_8H_ac98e41e0645d624d0645219c8eca9615}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-StopSound@{SD\_\-StopSound}}
+\index{SD\_\-StopSound@{SD\_\-StopSound}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-StopSound}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-StopSound (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_ac98e41e0645d624d0645219c8eca9615}
+\hypertarget{ID__SD_8H_a92c51dce596da266c75185c1c5b37095}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SD\_\-WaitSoundDone@{SD\_\-WaitSoundDone}}
+\index{SD\_\-WaitSoundDone@{SD\_\-WaitSoundDone}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SD\_\-WaitSoundDone}]{\setlength{\rightskip}{0pt plus 5cm}void SD\_\-WaitSoundDone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{ID__SD_8H_a92c51dce596da266c75185c1c5b37095}
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__SD_8H_aae5cf4d134b52966bc2aa3de22b0dd03}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!AdLibPresent@{AdLibPresent}}
+\index{AdLibPresent@{AdLibPresent}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{AdLibPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf AdLibPresent}}}
+\label{ID__SD_8H_aae5cf4d134b52966bc2aa3de22b0dd03}
+\hypertarget{ID__SD_8H_a457a57338904d39467e312608908007c}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!DigiMap@{DigiMap}}
+\index{DigiMap@{DigiMap}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{DigiMap}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf DigiMap}\mbox{[}$\,$\mbox{]}}}
+\label{ID__SD_8H_a457a57338904d39467e312608908007c}
+\hypertarget{ID__SD_8H_ad359668c13523a90cddba7728a33fab9}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!DigiMode@{DigiMode}}
+\index{DigiMode@{DigiMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{DigiMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SDSMode} {\bf DigiMode}}}
+\label{ID__SD_8H_ad359668c13523a90cddba7728a33fab9}
+\hypertarget{ID__SD_8H_a11b9e79724767ea7fe4429444baa39c0}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!DigiPlaying@{DigiPlaying}}
+\index{DigiPlaying@{DigiPlaying}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{DigiPlaying}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf DigiPlaying}}}
+\label{ID__SD_8H_a11b9e79724767ea7fe4429444baa39c0}
+\hypertarget{ID__SD_8H_afcbed1bc96a4997c02b2eb0143c57ba5}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!MusicMode@{MusicMode}}
+\index{MusicMode@{MusicMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{MusicMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SMMode} {\bf MusicMode}}}
+\label{ID__SD_8H_afcbed1bc96a4997c02b2eb0143c57ba5}
+\hypertarget{ID__SD_8H_aa073cdf1c0836ab07a66b9e73bfe89cd}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!NeedsMusic@{NeedsMusic}}
+\index{NeedsMusic@{NeedsMusic}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{NeedsMusic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf NeedsMusic}}}
+\label{ID__SD_8H_aa073cdf1c0836ab07a66b9e73bfe89cd}
+\hypertarget{ID__SD_8H_a339e21cdf208764078f89b5b5f72932b}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SoundBlasterPresent@{SoundBlasterPresent}}
+\index{SoundBlasterPresent@{SoundBlasterPresent}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SoundBlasterPresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SoundBlasterPresent}}}
+\label{ID__SD_8H_a339e21cdf208764078f89b5b5f72932b}
+\hypertarget{ID__SD_8H_ae78ec490e7f5cbb26c649cc4034546f7}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SoundMode@{SoundMode}}
+\index{SoundMode@{SoundMode}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SoundMode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SDMode} {\bf SoundMode}}}
+\label{ID__SD_8H_ae78ec490e7f5cbb26c649cc4034546f7}
+\hypertarget{ID__SD_8H_a99325c606c4f55b472ccc411b1b2bb02}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SoundPositioned@{SoundPositioned}}
+\index{SoundPositioned@{SoundPositioned}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SoundPositioned}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SoundPositioned}}}
+\label{ID__SD_8H_a99325c606c4f55b472ccc411b1b2bb02}
+\hypertarget{ID__SD_8H_ad1e0e8f0ed866e2473d8915e769852c5}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!SoundSourcePresent@{SoundSourcePresent}}
+\index{SoundSourcePresent@{SoundSourcePresent}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{SoundSourcePresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf SoundSourcePresent}}}
+\label{ID__SD_8H_ad1e0e8f0ed866e2473d8915e769852c5}
+\hypertarget{ID__SD_8H_afae310dc5c7e77f2742ddbfc16b98dd0}{
+\index{ID\_\-SD.H@{ID\_\-SD.H}!TimeCount@{TimeCount}}
+\index{TimeCount@{TimeCount}!ID_SD.H@{ID\_\-SD.H}}
+\subsubsection[{TimeCount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf longword} {\bf TimeCount}}}
+\label{ID__SD_8H_afae310dc5c7e77f2742ddbfc16b98dd0}

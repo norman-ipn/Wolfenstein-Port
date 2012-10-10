@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__STATE_8C.html#ab414c5cb884ce9d89439a787a5b8c8de" title="KillActor" alt="" coords="175,32,244,61"/>
+<area shape="rect" id="node5" href="$WL__STATE_8C.html#a0dd7c0f5423efb70928fd80fa08e013a" title="DamageActor" alt="" coords="295,32,396,61"/>
+<area shape="rect" id="node7" href="$WL__AGENT_8C.html#a1afb01b78673abfdfaddceee3a198eb5" title="GunAttack" alt="" coords="449,5,532,35"/>
+<area shape="rect" id="node11" href="$WL__AGENT_8C.html#afd37f9f9ac8d36180f9348c67195a4db" title="KnifeAttack" alt="" coords="445,59,536,88"/>
+<area shape="rect" id="node9" href="$WL__AGENT_8C.html#a0cce1c4b64372c27c6ff79e6fb397772" title="T_Attack" alt="" coords="584,32,659,61"/>
+</map>

@@ -1,0 +1,314 @@
+\hypertarget{ID__HEADS_8H}{
+\section{ID\_\-HEADS.H File Reference}
+\label{ID__HEADS_8H}\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}}
+}
+{\ttfamily \#include $<$ALLOC.H$>$}\par
+{\ttfamily \#include $<$CTYPE.H$>$}\par
+{\ttfamily \#include $<$DOS.H$>$}\par
+{\ttfamily \#include $<$ERRNO.H$>$}\par
+{\ttfamily \#include $<$FCNTL.H$>$}\par
+{\ttfamily \#include $<$IO.H$>$}\par
+{\ttfamily \#include $<$MEM.H$>$}\par
+{\ttfamily \#include $<$PROCESS.H$>$}\par
+{\ttfamily \#include $<$STDIO.H$>$}\par
+{\ttfamily \#include $<$STDLIB.H$>$}\par
+{\ttfamily \#include $<$STRING.H$>$}\par
+{\ttfamily \#include $<$SYS$\backslash$STAT.H$>$}\par
+{\ttfamily \#include $<$VALUES.H$>$}\par
+{\ttfamily \#include $<$DIR.H$>$}\par
+{\ttfamily \#include \char`\"{}VERSION.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}GFXV\_\-WL6.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}AUDIOWL6.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}MAPSWL6.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-MM.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-PM.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-CA.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-VL.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-VH.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-IN.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-SD.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ID\_\-US.H\char`\"{}}\par
+Include dependency graph for ID\_\-HEADS.H:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__HEADS_8H__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{ID__HEADS_8H__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structPoint}{Point}
+\item 
+struct \hyperlink{structRect}{Rect}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ID__HEADS_8H_ae474cb5b9cbc094abcdb9dd27ffb0adf}{\_\-\_\-ID\_\-GLOB\_\-\_\-}
+\item 
+\#define \hyperlink{ID__HEADS_8H_ae7f77f137be688c5ddcd90429356ded7}{introscn}~\hyperlink{ID__HEADS_8H_a22560db608c8ce9c9c0275585bf34980}{signon}
+\item 
+\#define \hyperlink{ID__HEADS_8H_a9a9541e78d738e65128cbd385fe29ffd}{GREXT}~\char`\"{}VGA\char`\"{}
+\item 
+\#define \hyperlink{ID__HEADS_8H_a7a7ca81d2a85873283b5ec82953b1b25}{nil}~((void $\ast$)0)
+\item 
+\#define \hyperlink{ID__HEADS_8H_afa3ac1c662c109ebb7be5de495de831b}{PORTTILESWIDE}~20
+\item 
+\#define \hyperlink{ID__HEADS_8H_ad1269eb32fea385c5db6c10d4190d6eb}{PORTTILESHIGH}~13
+\item 
+\#define \hyperlink{ID__HEADS_8H_a40cd9d9262b9ea0fbcd5b793e69331e6}{UPDATEWIDE}~PORTTILESWIDE
+\item 
+\#define \hyperlink{ID__HEADS_8H_ad2cc891daa548d3c1c773338e4337edc}{UPDATEHIGH}~PORTTILESHIGH
+\item 
+\#define \hyperlink{ID__HEADS_8H_a8e50b0fdb28a5a704176b37a86310281}{MAXTICS}~10
+\item 
+\#define \hyperlink{ID__HEADS_8H_a4eea8ea53242abc3c45f249e575e0625}{DEMOTICS}~4
+\item 
+\#define \hyperlink{ID__HEADS_8H_a797d7a97620edcdf1bdaf82dc77231b2}{UPDATETERMINATE}~0x0301
+\item 
+\#define \hyperlink{ID__HEADS_8H_a988e7152670dd3bd260a9e849c740cb6}{SETFONTCOLOR}(f, b)~\hyperlink{ID__VH_8H_a37dfad01117cac8636922fd4d030131b}{fontcolor}=f;\hyperlink{ID__VH_8C_ae05eaca54ea12a430673a8732425a748}{backcolor}=b;
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{ID__HEADS_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte}
+\item 
+typedef unsigned int \hyperlink{ID__HEADS_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{word}
+\item 
+typedef unsigned long \hyperlink{ID__HEADS_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{longword}
+\item 
+typedef \hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$ \hyperlink{ID__HEADS_8H_a12c6a4af9f1e5c1a48e22de17a94ed1b}{Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \{ \hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}{false}, 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275eda08f175a5505a10b9ed657defeb050e4b}{true}, 
+\hyperlink{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}{false}, 
+\hyperlink{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275eda08f175a5505a10b9ed657defeb050e4b}{true}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ID__HEADS_8H_a66ba47a93e3e25204f4d72aee7614201}{Quit} (char $\ast$error)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char far \hyperlink{ID__HEADS_8H_a22560db608c8ce9c9c0275585bf34980}{signon}
+\item 
+unsigned \hyperlink{ID__HEADS_8H_a18042bb0860852b7365837e7fb7366c1}{mapwidth}
+\item 
+unsigned \hyperlink{ID__HEADS_8H_aa57a71a17124e3d1995584f7b4fe1ca0}{mapheight}
+\item 
+unsigned \hyperlink{ID__HEADS_8H_a2b5fccfe4a509a1a5f685bb7b7399997}{tics}
+\item 
+\hyperlink{ID__HEAD_8H_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \hyperlink{ID__HEADS_8H_ac82e52209129dcc9cad9d8c8d6b2a77a}{compatability}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$ \hyperlink{ID__HEADS_8H_a120692504a35218a45eabb70ed0e4fe7}{updateptr}
+\item 
+unsigned \hyperlink{ID__HEADS_8H_af6ce3eaaf641bdbacc8cd7e98eaa90b9}{uwidthtable} \mbox{[}UPDATEHIGH\mbox{]}
+\item 
+unsigned \hyperlink{ID__HEADS_8H_a55e89f395ced8a12eba2634336292526}{blockstarts} \mbox{[}UPDATEWIDE $\ast$UPDATEHIGH\mbox{]}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__HEADS_8H_a37dfad01117cac8636922fd4d030131b}{fontcolor}
+\item 
+\hyperlink{ID__HEAD_8H_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{ID__HEADS_8H_ae05eaca54ea12a430673a8732425a748}{backcolor}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{ID__HEADS_8H_ae474cb5b9cbc094abcdb9dd27ffb0adf}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!\_\-\_\-ID\_\-GLOB\_\-\_\-@{\_\-\_\-ID\_\-GLOB\_\-\_\-}}
+\index{\_\-\_\-ID\_\-GLOB\_\-\_\-@{\_\-\_\-ID\_\-GLOB\_\-\_\-}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{\_\-\_\-ID\_\-GLOB\_\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-\_\-ID\_\-GLOB\_\-\_\-}}
+\label{ID__HEADS_8H_ae474cb5b9cbc094abcdb9dd27ffb0adf}
+\hypertarget{ID__HEADS_8H_a4eea8ea53242abc3c45f249e575e0625}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!DEMOTICS@{DEMOTICS}}
+\index{DEMOTICS@{DEMOTICS}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{DEMOTICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEMOTICS~4}}
+\label{ID__HEADS_8H_a4eea8ea53242abc3c45f249e575e0625}
+\hypertarget{ID__HEADS_8H_a9a9541e78d738e65128cbd385fe29ffd}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!GREXT@{GREXT}}
+\index{GREXT@{GREXT}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{GREXT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GREXT~\char`\"{}VGA\char`\"{}}}
+\label{ID__HEADS_8H_a9a9541e78d738e65128cbd385fe29ffd}
+\hypertarget{ID__HEADS_8H_ae7f77f137be688c5ddcd90429356ded7}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!introscn@{introscn}}
+\index{introscn@{introscn}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{introscn}]{\setlength{\rightskip}{0pt plus 5cm}\#define introscn~{\bf signon}}}
+\label{ID__HEADS_8H_ae7f77f137be688c5ddcd90429356ded7}
+\hypertarget{ID__HEADS_8H_a8e50b0fdb28a5a704176b37a86310281}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!MAXTICS@{MAXTICS}}
+\index{MAXTICS@{MAXTICS}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{MAXTICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXTICS~10}}
+\label{ID__HEADS_8H_a8e50b0fdb28a5a704176b37a86310281}
+\hypertarget{ID__HEADS_8H_a7a7ca81d2a85873283b5ec82953b1b25}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!nil@{nil}}
+\index{nil@{nil}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{nil}]{\setlength{\rightskip}{0pt plus 5cm}\#define nil~((void $\ast$)0)}}
+\label{ID__HEADS_8H_a7a7ca81d2a85873283b5ec82953b1b25}
+\hypertarget{ID__HEADS_8H_ad1269eb32fea385c5db6c10d4190d6eb}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!PORTTILESHIGH@{PORTTILESHIGH}}
+\index{PORTTILESHIGH@{PORTTILESHIGH}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{PORTTILESHIGH}]{\setlength{\rightskip}{0pt plus 5cm}\#define PORTTILESHIGH~13}}
+\label{ID__HEADS_8H_ad1269eb32fea385c5db6c10d4190d6eb}
+\hypertarget{ID__HEADS_8H_afa3ac1c662c109ebb7be5de495de831b}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!PORTTILESWIDE@{PORTTILESWIDE}}
+\index{PORTTILESWIDE@{PORTTILESWIDE}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{PORTTILESWIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PORTTILESWIDE~20}}
+\label{ID__HEADS_8H_afa3ac1c662c109ebb7be5de495de831b}
+\hypertarget{ID__HEADS_8H_a988e7152670dd3bd260a9e849c740cb6}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!SETFONTCOLOR@{SETFONTCOLOR}}
+\index{SETFONTCOLOR@{SETFONTCOLOR}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{SETFONTCOLOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SETFONTCOLOR(
+\begin{DoxyParamCaption}
+\item[{}]{f, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf fontcolor}=f;{\bf backcolor}=b;}}
+\label{ID__HEADS_8H_a988e7152670dd3bd260a9e849c740cb6}
+\hypertarget{ID__HEADS_8H_ad2cc891daa548d3c1c773338e4337edc}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!UPDATEHIGH@{UPDATEHIGH}}
+\index{UPDATEHIGH@{UPDATEHIGH}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{UPDATEHIGH}]{\setlength{\rightskip}{0pt plus 5cm}\#define UPDATEHIGH~PORTTILESHIGH}}
+\label{ID__HEADS_8H_ad2cc891daa548d3c1c773338e4337edc}
+\hypertarget{ID__HEADS_8H_a797d7a97620edcdf1bdaf82dc77231b2}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!UPDATETERMINATE@{UPDATETERMINATE}}
+\index{UPDATETERMINATE@{UPDATETERMINATE}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{UPDATETERMINATE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UPDATETERMINATE~0x0301}}
+\label{ID__HEADS_8H_a797d7a97620edcdf1bdaf82dc77231b2}
+\hypertarget{ID__HEADS_8H_a40cd9d9262b9ea0fbcd5b793e69331e6}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!UPDATEWIDE@{UPDATEWIDE}}
+\index{UPDATEWIDE@{UPDATEWIDE}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{UPDATEWIDE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UPDATEWIDE~PORTTILESWIDE}}
+\label{ID__HEADS_8H_a40cd9d9262b9ea0fbcd5b793e69331e6}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{ID__HEADS_8H_a0c8186d9b9b7880309c27230bbb5e69d}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!byte@{byte}}
+\index{byte@{byte}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf byte}}}
+\label{ID__HEADS_8H_a0c8186d9b9b7880309c27230bbb5e69d}
+\hypertarget{ID__HEADS_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!longword@{longword}}
+\index{longword@{longword}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{longword}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf longword}}}
+\label{ID__HEADS_8H_a8a9a7dd50c6fdb45dcdf0eb929479663}
+\hypertarget{ID__HEADS_8H_a12c6a4af9f1e5c1a48e22de17a94ed1b}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf byte}$\ast$ {\bf Ptr}}}
+\label{ID__HEADS_8H_a12c6a4af9f1e5c1a48e22de17a94ed1b}
+\hypertarget{ID__HEADS_8H_abad51e07ab6d26bec9f1f786c8d65bcd}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!word@{word}}
+\index{word@{word}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{word}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf word}}}
+\label{ID__HEADS_8H_abad51e07ab6d26bec9f1f786c8d65bcd}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275ed}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!boolean@{boolean}}
+\index{boolean@{boolean}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{boolean}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf boolean}}}
+\label{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275ed}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{false@{false}!ID\_\-HEADS.H@{ID\_\-HEADS.H}}\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!false@{false}}\item[{\em 
+\hypertarget{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}{
+false}
+\label{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}
+}]\index{true@{true}!ID\_\-HEADS.H@{ID\_\-HEADS.H}}\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!true@{true}}\item[{\em 
+\hypertarget{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275eda08f175a5505a10b9ed657defeb050e4b}{
+true}
+\label{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275eda08f175a5505a10b9ed657defeb050e4b}
+}]\index{false@{false}!ID\_\-HEADS.H@{ID\_\-HEADS.H}}\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!false@{false}}\item[{\em 
+\hypertarget{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}{
+false}
+\label{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275edae9de385ef6fe9bf3360d1038396b884c}
+}]\index{true@{true}!ID\_\-HEADS.H@{ID\_\-HEADS.H}}\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!true@{true}}\item[{\em 
+\hypertarget{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275eda08f175a5505a10b9ed657defeb050e4b}{
+true}
+\label{ID__HEADS_8H_a7c6368b321bd9acd0149b030bb8275eda08f175a5505a10b9ed657defeb050e4b}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ID__HEADS_8H_a66ba47a93e3e25204f4d72aee7614201}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!Quit@{Quit}}
+\index{Quit@{Quit}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{Quit}]{\setlength{\rightskip}{0pt plus 5cm}void Quit (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{error}
+\end{DoxyParamCaption}
+)}}
+\label{ID__HEADS_8H_a66ba47a93e3e25204f4d72aee7614201}
+
+
+\subsection{Variable Documentation}
+\hypertarget{ID__HEADS_8H_ae05eaca54ea12a430673a8732425a748}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!backcolor@{backcolor}}
+\index{backcolor@{backcolor}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{backcolor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf backcolor}}}
+\label{ID__HEADS_8H_ae05eaca54ea12a430673a8732425a748}
+\hypertarget{ID__HEADS_8H_a55e89f395ced8a12eba2634336292526}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!blockstarts@{blockstarts}}
+\index{blockstarts@{blockstarts}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{blockstarts}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf blockstarts}\mbox{[}UPDATEWIDE $\ast$UPDATEHIGH\mbox{]}}}
+\label{ID__HEADS_8H_a55e89f395ced8a12eba2634336292526}
+\hypertarget{ID__HEADS_8H_ac82e52209129dcc9cad9d8c8d6b2a77a}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!compatability@{compatability}}
+\index{compatability@{compatability}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{compatability}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boolean} {\bf compatability}}}
+\label{ID__HEADS_8H_ac82e52209129dcc9cad9d8c8d6b2a77a}
+\hypertarget{ID__HEADS_8H_a37dfad01117cac8636922fd4d030131b}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!fontcolor@{fontcolor}}
+\index{fontcolor@{fontcolor}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{fontcolor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} {\bf fontcolor}}}
+\label{ID__HEADS_8H_a37dfad01117cac8636922fd4d030131b}
+\hypertarget{ID__HEADS_8H_aa57a71a17124e3d1995584f7b4fe1ca0}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!mapheight@{mapheight}}
+\index{mapheight@{mapheight}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{mapheight}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf mapheight}}}
+\label{ID__HEADS_8H_aa57a71a17124e3d1995584f7b4fe1ca0}
+\hypertarget{ID__HEADS_8H_a18042bb0860852b7365837e7fb7366c1}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!mapwidth@{mapwidth}}
+\index{mapwidth@{mapwidth}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{mapwidth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf mapwidth}}}
+\label{ID__HEADS_8H_a18042bb0860852b7365837e7fb7366c1}
+\hypertarget{ID__HEADS_8H_a22560db608c8ce9c9c0275585bf34980}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!signon@{signon}}
+\index{signon@{signon}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{signon}]{\setlength{\rightskip}{0pt plus 5cm}char far {\bf signon}}}
+\label{ID__HEADS_8H_a22560db608c8ce9c9c0275585bf34980}
+\hypertarget{ID__HEADS_8H_a2b5fccfe4a509a1a5f685bb7b7399997}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!tics@{tics}}
+\index{tics@{tics}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{tics}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf tics}}}
+\label{ID__HEADS_8H_a2b5fccfe4a509a1a5f685bb7b7399997}
+\hypertarget{ID__HEADS_8H_a120692504a35218a45eabb70ed0e4fe7}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!updateptr@{updateptr}}
+\index{updateptr@{updateptr}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{updateptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte}$\ast$ {\bf updateptr}}}
+\label{ID__HEADS_8H_a120692504a35218a45eabb70ed0e4fe7}
+\hypertarget{ID__HEADS_8H_af6ce3eaaf641bdbacc8cd7e98eaa90b9}{
+\index{ID\_\-HEADS.H@{ID\_\-HEADS.H}!uwidthtable@{uwidthtable}}
+\index{uwidthtable@{uwidthtable}!ID_HEADS.H@{ID\_\-HEADS.H}}
+\subsubsection[{uwidthtable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf uwidthtable}\mbox{[}UPDATEHIGH\mbox{]}}}
+\label{ID__HEADS_8H_af6ce3eaaf641bdbacc8cd7e98eaa90b9}

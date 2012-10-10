@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$WL__GAME_8C.html#a70fb4c23b70cb34ed1f17005a6279d97" title="SetSoundLoc" alt="" coords="169,32,268,61"/>
+<area shape="rect" id="node5" href="$WL__GAME_8C.html#ac828a2af8db4f7ce66a84a69313e37ef" title="PlaySoundLocGlobal" alt="" coords="319,5,460,35"/>
+<area shape="rect" id="node7" href="$WL__GAME_8C.html#a616d397cb4e4bb994034cf07913567fc" title="UpdateSoundLoc" alt="" coords="328,59,451,88"/>
+<area shape="rect" id="node9" href="$WL__PLAY_8C.html#a1093a19e7a1263f20a026e662db7121f" title="PlayLoop" alt="" coords="511,59,585,88"/>
+<area shape="rect" id="node11" href="$WL__GAME_8C.html#aceb580a0e9c038f9f4a99672883b287a" title="GameLoop" alt="" coords="641,5,727,35"/>
+<area shape="rect" id="node22" href="$WL__GAME_8C.html#a55c9fa06b5f7b6dc6805e3721a15922a" title="PlayDemo" alt="" coords="643,59,725,88"/>
+<area shape="rect" id="node25" href="$WL__GAME_8C.html#aad40e6bfb5d6c51cef4fb25993b309bb" title="RecordDemo" alt="" coords="635,112,733,141"/>
+<area shape="rect" id="node13" href="$WL__MAIN_8C.html#aee1eb6a4b164d3763069996adb02f1b5" title="DemoLoop" alt="" coords="781,59,867,88"/>
+<area shape="rect" id="node15" href="$WL__MAIN_8C.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="915,59,965,88"/>
+<area shape="rect" id="node17" href="$WL__MENU_8C.html#a98260bc22d24f0075ec75a375a865b1d" title="IntroScreen" alt="" coords="1015,32,1103,61"/>
+<area shape="rect" id="node19" href="$WL__MAIN_8C.html#ad05ce539d29b849ef066482e2284a93f" title="InitGame" alt="" coords="1152,59,1227,88"/>
+</map>

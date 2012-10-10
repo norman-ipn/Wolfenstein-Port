@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__PM_8C.html#a5a2578fa944d0908a0d43e7f362036cb" title="PML_ClosePageFile" alt="" coords="175,59,316,88"/>
+<area shape="rect" id="node12" href="$ID__PM_8C.html#aadca17cdf940e28b8da2e6d1f19fd791" title="PML_ShutdownEMS" alt="" coords="380,112,521,141"/>
+<area shape="rect" id="node15" href="$ID__PM_8C.html#a788c597ebc679e6114cafede80c05388" title="PML_ShutdownMainMem" alt="" coords="160,5,331,35"/>
+<area shape="rect" id="node18" href="$ID__PM_8C.html#a363e2f98515f8d1e08746e89465d2e24" title="PML_ShutdownXMS" alt="" coords="175,164,316,193"/>
+<area shape="rect" id="node5" href="$ID__MM_8C.html#a9464693cb68e9a8ed7586855952f197a" title="MM_FreePtr" alt="" coords="404,5,497,35"/>
+<area shape="rect" id="node9" href="$ID__MM_8C.html#acbec6e3295a580e1067bbd69ea89d275" title="MM_SetLock" alt="" coords="401,59,500,88"/>
+<area shape="rect" id="node7" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="572,85,617,115"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ID__SD_8C.html#af4e5a3078b10a358cf45bd82c027bf83" title="SD_SetPosition" alt="" coords="176,59,291,88"/>
+<area shape="rect" id="node9" href="$WL__GAME_8C.html#a70fb4c23b70cb34ed1f17005a6279d97" title="SetSoundLoc" alt="" coords="184,192,283,221"/>
+<area shape="rect" id="node5" href="$ID__HEAD_8H.html#a66ba47a93e3e25204f4d72aee7614201" title="Quit" alt="" coords="384,5,429,35"/>
+<area shape="rect" id="node7" href="$ID__SD_8C.html#a39df2c8b2c24885f28dcebdda4db4062" title="SDL_PositionSBP" alt="" coords="343,59,471,88"/>
+<area shape="rect" id="node11" href="$WL__DEF_8H.html#a673946129c833c78df674cf8b38fdd61" title="CenterWindow" alt="" coords="353,112,460,141"/>
+<area shape="rect" id="node17" href="$WL__DEF_8H.html#ac58e6db60be1fcbd21351db5a7ca8210" title="FixedByFrac" alt="" coords="359,165,455,195"/>
+<area shape="rect" id="node19" href="$ID__US_8H.html#ae158b4a99ff8fe4bca4517925b6b429c" title="US_Print" alt="" coords="369,219,444,248"/>
+<area shape="rect" id="node21" href="$ID__US_8H.html#adcea441d26d8338b8eb2cd44c3c4a105" title="US_PrintSigned" alt="" coords="349,272,464,301"/>
+<area shape="rect" id="node23" href="$ID__VH_8C.html#a0968c2c5350fb70b79df6fdc2733e243" title="VW_UpdateScreen" alt="" coords="340,325,473,355"/>
+<area shape="rect" id="node13" href="$WL__DEF_8H.html#a31ead32276ab38dbf2991c82ee38ea7c" title="FixOfs" alt="" coords="556,85,617,115"/>
+<area shape="rect" id="node15" href="$ID__US_8H.html#a06cee19903ed682701ef040c7f1b1ffa" title="US_DrawWindow" alt="" coords="524,139,649,168"/>
+</map>
