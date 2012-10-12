@@ -855,7 +855,10 @@ void VL_MaskedToScreen (byte far *source, int width, int height, int x, int y)
 =
 = VL_LatchToScreen
 =
-=================
+
+
+\brief This function seems to be the ultimate drawing function .
+
 */
 
 void VL_LatchToScreen (unsigned source, int width, int height, int x, int y)
@@ -863,7 +866,16 @@ void VL_LatchToScreen (unsigned source, int width, int height, int x, int y)
 	VGAWRITEMODE(1);
 	VGAMAPMASK(15);
 
+/* 
+ set the parameters to draw the 'source'
+
+ [y] gets the content of the variable 'y'
+
+
+*/
+/*  store the 'y' value on 'di' register */
 asm	mov	di,[y]				// dest = bufferofs+ylookup[y]+(x>>2)
+/*  'shl' what does this assembly code does?  */
 asm	shl	di,1
 asm	mov	di,[WORD PTR ylookup+di]
 asm	add	di,[bufferofs]
@@ -880,6 +892,8 @@ asm	mov	cx,SCREENSEG
 asm	mov	ds,cx
 asm	mov	es,cx
 
+
+/* draw lines of the 'source' */
 drawline:
 asm	mov	cx,ax
 asm	rep movsb

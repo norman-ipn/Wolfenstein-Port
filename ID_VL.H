@@ -98,6 +98,21 @@ extern	unsigned	bordercolor;
 // VGA hardware routines
 //
 
+/*
+  We do not need these routines to be macros, 
+  the idea is to rewrite them to functions, 
+  maybe inline functions.
+
+*/
+
+
+/**
+ The VGAWRITEMODE macro 
+ sets the VGA card mode, to the specific mode.
+ We do not need this, because the drawing VGA setting will be managed
+ by the Gtk+ libraries.
+
+*/
 #define VGAWRITEMODE(x) asm{\
 cli;\
 mov dx,GC_INDEX;\

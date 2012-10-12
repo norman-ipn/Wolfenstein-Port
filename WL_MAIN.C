@@ -315,11 +315,19 @@ void NewGame (int difficulty,int episode)
 
 //===========================================================================
 
+
+/**
+  Draws an animation on the screen.
+
+  Use of the VWB_DrawPic(..) function, 
+  an important function to follow.
+*/
 void DiskFlopAnim(int x,int y)
 {
  static char which=0;
  if (!x && !y)
    return;
+ 
  VWB_DrawPic(x,y,C_DISKLOADING1PIC+which);
  VW_UpdateScreen();
  which^=1;
@@ -580,9 +588,6 @@ boolean LoadTheGame(int file,int x,int y)
 = ShutdownId
 =
 = Shuts down all ID_?? managers
-
-:w
-
 
 
 
@@ -1624,6 +1629,10 @@ void main (void)
 	int     i;
 
 
+/*
+ We can remove the beta conditionals.
+
+*/
 #ifdef BETA
 	//
 	// THIS IS FOR BETA ONLY!
