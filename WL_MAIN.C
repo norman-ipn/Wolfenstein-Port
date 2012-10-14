@@ -325,11 +325,41 @@ void NewGame (int difficulty,int episode)
 void DiskFlopAnim(int x,int y)
 {
  static char which=0;
+
+ /* check the values of the coordinates
+  if the two coordinates are 0, the functions returns.*/
  if (!x && !y)
    return;
- 
+
+ /* Draw the picture of a floppy disk, 
+    using a secuence. 
+    Because 'which' is a static variable, 
+    the number change in each call to this function
+	C_DISKLOADING1PIC is a number that
+	tell the 'VWB_DrawPic' function 
+	which image is going to be used.
+*/ 
  VWB_DrawPic(x,y,C_DISKLOADING1PIC+which);
+ /* show the changes on screen. */
  VW_UpdateScreen();
+ /* update the number of the animation image, 
+  '^' operator is XOR 
+Xor Table
+---------
+a	b	a xor b
+-------------------------
+0  	0	0	
+0	1	1
+1	0	1
+1	1	0
+
+  0000 xor 0001 = 0001 < first call
+  0001 xor 0001 = 0000 < second call
+  0000 xor 0001 = 0001 < third call
+  0001 xor 0001 = 0000 < fourth call
+
+   */
+ /* alternates the picture */
  which^=1;
 }
 
@@ -485,8 +515,10 @@ boolean LoadTheGame(int file,int x,int y)
 
 
 	checksum = 0;
-
+	
+        /* each call changes the disk animation */  	
 	DiskFlopAnim(x,y);
+
 	CA_FarRead (file,(void far *)&gamestate,sizeof(gamestate));
 	checksum = DoChecksum((byte far *)&gamestate,sizeof(gamestate),checksum);
 
@@ -528,7 +560,6 @@ boolean LoadTheGame(int file,int x,int y)
 	 // don't copy over the links
 		memcpy (new,&nullobj,sizeof(nullobj)-4);
 	}
-
 
 
 	DiskFlopAnim(x,y);
@@ -747,6 +778,8 @@ void CalcProjection (long focal)
 void SetupWalls (void)
 {
 	int     i;
+
+	
 
 	for (i=1;i<MAXWALLTILES;i++)
 	{
@@ -1631,7 +1664,6 @@ void main (void)
 
 /*
  We can remove the beta conditionals.
-
 */
 #ifdef BETA
 	//

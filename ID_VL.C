@@ -4,14 +4,19 @@
 #include <alloc.h>
 #include <mem.h>
 #include <string.h>
+
 #include "ID_HEAD.H"
 #include "ID_VL.H"
+
 #pragma hdrstop
 
 //
 // SC_INDEX is expected to stay at SC_MAPMASK for proper operation
 //
 
+/**
+ 'unsigned' type means 'unsigned int'
+*/
 unsigned	bufferofs;
 unsigned	displayofs,pelpan;
 
@@ -30,8 +35,11 @@ byte		far	palette1[256][3],far palette2[256][3];
 //===========================================================================
 
 // asm
+/* 
+ These functions are implemented on assembly code. 
+*/
 
-int	 VL_VideoID (void);
+int VL_VideoID (void);
 void VL_SetCRTC (int crtc);
 void VL_SetScreen (int crtc, int pelpan);
 void VL_WaitVBL (int vbls);
@@ -72,9 +80,16 @@ void	VL_Startup (void)
 {
 	int i,videocard;
 
-	asm	cld;
 
+	/* 'cld' assemble code: clear direction flag */
+
+	asm	cld;
+	
+        /*
+           integer for refering the Video Card.
+         */
 	videocard = VL_VideoID ();
+
 	for (i = 1;i < _argc;i++)
 		if (US_CheckParm(_argv[i],ParmStrings) == 0)
 		{
@@ -144,12 +159,16 @@ asm	int	0x10
 = VL_ClearVideo
 =
 = Fill the entire video buffer with a given color
+
+  This function has information about the video frame buffer.
+  
 =
 =================
 */
 
 void VL_ClearVideo (byte color)
 {
+
 asm	mov	dx,GC_INDEX
 asm	mov	al,GC_MODE
 asm	out	dx,al
@@ -160,6 +179,7 @@ asm	out	dx,al
 
 asm	mov	dx,SC_INDEX
 asm	mov	ax,SC_MAPMASK+15*256
+/* Use of the four planes in VGA video cards. */
 asm	out	dx,ax				// write through all four planes
 
 asm	mov	ax,SCREENSEG
