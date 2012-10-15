@@ -2,6 +2,17 @@
 
 #include "ID_HEADS.H"
 
+
+/*
+ Al define values need to be changed to 'const' values
+
+ Ex 
+
+ cont short int SCREENWIDTH = 80;
+
+
+*/
+
 #define	SCREENWIDTH		80
 #define CHARWIDTH		2
 #define TILEWIDTH		4
@@ -37,6 +48,18 @@ void	VWL_UpdateScreenBlocks (void);
 
 //==========================================================================
 
+
+/*
+
+  char far * 
+
+  'far pointers' area used to point to an adress that is 'far' away from
+  the current block of memory,
+
+  We can asume that all the memory space is not 'far'
+
+
+*/
 void VW_DrawPropString (char far *string)
 {
 	fontstruct	far	*font;
@@ -58,6 +81,24 @@ void VW_DrawPropString (char far *string)
 		{
 			VGAMAPMASK(mask);
 
+/*
+ The 'asm' keyword is used to introduce assembly code.
+ Most of the assembly instruction are simple to 'decode'
+
+ 'mov' moves data from one position to another.
+
+  Post a new Wikipage if can find the right order
+  for the assembly instructions, 
+	Does 'mov al,[si]'  moves 'al' to [si] or [si] to 'al' ?
+
+  On the same "Assembly page" we need to figure out
+  the meaning of the instructions: lds, les, or, je, add, loop, ...
+  and others...
+
+
+
+*/
+
 asm	mov	ah,[BYTE PTR fontcolor]
 asm	mov	bx,[step]
 asm	mov	cx,[height]
@@ -65,6 +106,11 @@ asm	mov	dx,[linewidth]
 asm	lds	si,[source]
 asm	les	di,[dest]
 
+/* Here 'vertloop' is a tag, 
+   used to refer the 'mov' operation, 
+   for example a few lines below you can see the instruction 'loop vertloop'
+   That instruction return control to this 'tag'
+*/
 vertloop:
 asm	mov	al,[si]
 asm	or	al,al
@@ -292,6 +338,8 @@ void VWB_DrawTile8 (int x, int y, int tile)
 {
 	if (VW_MarkUpdateBlock (x,y,x+7,y+7))
 		LatchDrawChar(x,y,tile);
+
+        /* LatchDraw.... functions seems to be the final drawing functions.....lets check it..*/
 }
 
 void VWB_DrawTile8M (int x, int y, int tile)
@@ -380,6 +428,8 @@ void LatchDrawPic (unsigned x, unsigned y, unsigned picnum)
 	height = pictable[picnum-STARTPICS].height;
 	source = latchpics[2+picnum-LATCHPICS_LUMP_START];
 
+	/* Latch to Screen
+        */
 	VL_LatchToScreen (source,wide/4,height,x*8,y);
 }
 

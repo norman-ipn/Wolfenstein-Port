@@ -312,6 +312,10 @@ InitFailed      label   near
 
 ;       Return to DOS the amount of memory in excess
 ;       Set far heap base and pointer
+;       This assenbly code produces a function named 'ExcessOfMemory'
+;       This function can be used inside the C code. 
+;       Our project will replace all this functions for C functions.
+; 	
 
 ExcessOfMemory  label   near
                 mov     bx, di

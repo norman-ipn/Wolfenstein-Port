@@ -68,6 +68,7 @@ long SetupScaling (int maxscaleheight)
 
 
 	maxscaleheight/=2;			// one scaler every two pixels
+	
 
 	maxscale = maxscaleheight-1;
 	maxscaleshl2 = maxscale<<2;
@@ -81,6 +82,7 @@ long SetupScaling (int maxscaleheight)
 
 	for (i=1;i<=maxscaleheight;i++)
 	{
+		/* segment and offset of memory position of what? */
 		seg = FP_SEG(dest);
 		ofs = (FP_OFF(dest)+15)&~15;
 		dest = MK_FP(seg+ofs/16,0);

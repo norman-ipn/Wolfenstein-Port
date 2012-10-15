@@ -3886,6 +3886,8 @@ void CheckForEpisodes(void)
 //
 // JAPANESE VERSION
 //
+
+/* not using JAPANESE version */
 #ifdef JAPAN
 #ifdef JAPDEMO
 	if (!findfirst("*.WJ1",&f,FA_ARCH))
@@ -3895,7 +3897,7 @@ void CheckForEpisodes(void)
 	if (!findfirst("*.WJ6",&f,FA_ARCH))
 	{
 		strcpy(extension,"WJ6");
-#endif
+#endif /* JAPDEMO END*/
 		strcat(configname,extension);
 		strcat(SaveName,extension);
 		strcat(PageFileName,extension);
@@ -3916,6 +3918,10 @@ void CheckForEpisodes(void)
 //
 #ifndef UPLOAD
 #ifndef SPEAR
+	/* .WL6 Files content the wolfenstein data 
+            We have to make our own file data. 
+	    Need to check the WL6 format 
+	*/
 	if (!findfirst("*.WL6",&f,FA_ARCH))
 	{
 		strcpy(extension,"WL6");
@@ -3963,6 +3969,10 @@ void CheckForEpisodes(void)
 #endif
 
 #else
+	/* WL1 files are the shareware version, 
+		They can be download for testing propouses. 
+ 	*/
+
 	if (!findfirst("*.WL1",&f,FA_ARCH))
 	{
 		strcpy(extension,"WL1");
@@ -3970,7 +3980,8 @@ void CheckForEpisodes(void)
 	else
 		Quit("NO WOLFENSTEIN 3-D DATA FILES to be found!");
 #endif
-
+	/* Once this function has the 'extension' 
+           it concatenates to the expected names */
 	strcat(configname,extension);
 	strcat(SaveName,extension);
 	strcat(PageFileName,extension);
