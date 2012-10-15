@@ -1638,10 +1638,25 @@ void main (void)
 	 exit(1);
 	}
 #endif
-
+/*
+ *
+ *    We are going to program a mini episode 'escom-episode'
+ *    because we do not have the original 'data' for the episodes on the game
+ *    We can work with the 'shareware' files to get info. 
+ *
+ */
 	CheckForEpisodes();
 
+ /*
+ *     We don't really need the 386 patch, because all the operations will be 
+ *     on C language.
+ * */
 	Patch386 ();
+
+
+  /*
+ *     This is a 'must be' function because we need. 
+ * */
 
 	InitGame ();
 

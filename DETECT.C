@@ -3,6 +3,10 @@
 //	SDL_CheckSB() - Checks to see if a SoundBlaster resides at a
 //		particular I/O location
 //
+//
+//NOTE: All the sound system is going to change to another approach in linux.
+//     	
+//
 ///////////////////////////////////////////////////////////////////////////
 static boolean
 SDL_CheckSB(int port)
@@ -84,4 +88,3 @@ SDL_DetectSoundBlaster(int port)
 		return(SDL_CheckSB(port));	// User specified address or default
 }
 
-
