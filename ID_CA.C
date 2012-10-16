@@ -40,7 +40,7 @@ typedef struct
 {
 	unsigned	RLEWtag;
 	long		headeroffsets[100];
-	byte		tileinfo[];
+	byte		tileinfo[];/* maybe we can change to a pointer ex. byte *tileinfo; */
 } mapfiletype;
 
 
@@ -210,6 +210,10 @@ void CAL_GetGrChunkLength (int chunk)
 ==========================
 */
 
+
+/*
+ Another function for far distances in memory , may not be necessary for the Port. 
+*/
 boolean CA_FarRead (int handle, byte far *dest, long length)
 {
 	if (length>0xffffl)
@@ -601,6 +605,10 @@ asm	mov	ds,ax
 = Length is the length of the EXPANDED data
 =
 ======================
+*/
+
+/*
+ Anothers defines to be change to const.
 */
 
 #define NEARTAG	0xa7

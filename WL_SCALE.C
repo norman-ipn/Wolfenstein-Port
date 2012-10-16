@@ -13,6 +13,10 @@
 =============================================================================
 */
 
+/*
+ Maybe we can send the global variables by reference 
+*/
+
 t_compscale _seg *scaledirectory[MAXSCALEHEIGHT+1];
 long			fullscalefarcall[MAXSCALEHEIGHT+1];
 
