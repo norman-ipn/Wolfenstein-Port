@@ -1,3 +1,9 @@
+/*
+ Control the final compiled version.
+
+ We need to 
+*/
+
 #define SPEAR
 #define ARTSEXTERN
 #define DEMOSEXTERN

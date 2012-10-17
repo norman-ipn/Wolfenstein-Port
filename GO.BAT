@@ -1,3 +1,7 @@
+/*
+  We do not need this file.
+*/
+
 sv readme\license.doc
 sv readme\release.txt
 sv readme\readme.txt
