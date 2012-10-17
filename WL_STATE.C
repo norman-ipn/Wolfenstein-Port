@@ -1,5 +1,10 @@
 // WL_STATE.C
 
+/*
+ Contains some movement IA algorithms for enemies, and other stuff.
+
+*/
+
 #include "WL_DEF.H"
 #pragma hdrstop
 
@@ -81,6 +86,8 @@ boolean	CheckSight (objtype *ob);
 void SpawnNewObj (unsigned tilex, unsigned tiley, statetype *state)
 {
 	GetNewActor ();
+ 
+        /* new was not a key word those days, but now we need to change it (or nor?)*/
 	new->state = state;
 	if (state->tictime)
 		new->ticcount = US_RndT () % state->tictime;
@@ -151,6 +158,10 @@ void NewState (objtype *ob, statetype *state)
 ==================================
 */
 
+
+/*
+  macro functions will be changed for inline function, or regular functions.
+*/
 #define CHECKDIAG(x,y)								\
 {                                                   \
 	temp=(unsigned)actorat[x][y];                   \
@@ -178,6 +189,12 @@ void NewState (objtype *ob, statetype *state)
 }
 
 
+/*
+  An interesting way of 'explore' the world and try to walk.
+  This is the original algorithm that provides IA to the 'walkers'
+  
+
+*/
 boolean TryWalk (objtype *ob)
 {
 	int			doornum;

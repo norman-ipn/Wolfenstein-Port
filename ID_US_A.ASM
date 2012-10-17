@@ -4,6 +4,9 @@ MODEL	MEDIUM,C
 ;	Assembly portion of the User Mgr. This is just John Carmack's table
 ;		driven pseudo-random number generator, and we put it in the User Mgr
 ;		because we couldn't figure out where it should go
+;	We definively can change this code for a C version, 
+;       because we don't have interest in pseudo-random number generator algorithms,
+;       at least for now.
 
 
 ;============================================================================

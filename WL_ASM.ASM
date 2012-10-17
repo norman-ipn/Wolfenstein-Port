@@ -15,6 +15,9 @@ DATASEG
 CODESEG
 
 ;	Hacked up Juan Jimenez's code a bit to just return 386/not 386
+;     
+;       We dont need this code, We are coding all on C language.
+;
 PROC	_CheckIs386
 PUBLIC	_CheckIs386
 

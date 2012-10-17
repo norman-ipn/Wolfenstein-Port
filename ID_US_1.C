@@ -170,13 +170,20 @@ US_Startup(void)
 {
 	int	i,n;
 
+	/* A global flag that tells if the Manager is already started. 
+           in that case, the Startup function finish. */
 	if (US_Started)
 		return;
 
+        
 	harderr(USL_HardError);	// Install the fatal error handler
+
+        /* random numbers could be generated with 'rand' and 'srand' funtions */
 
 	US_InitRndT(true);		// Initialize the random number generator
 
+
+        /* Check the command line arguments for the compatibility with ....  */
 	for (i = 1;i < _argc;i++)
 	{
 		switch (US_CheckParm(_argv[i],ParmStrings2))
@@ -191,6 +198,8 @@ US_Startup(void)
 	}
 
 	// Check for TED launching here
+         /* The TED is present also in the command line arguments, 
+           and can have diferent levels. TED means..... */
 	for (i = 1;i < _argc;i++)
 	{
 		n = US_CheckParm(_argv[i],ParmStrings);
@@ -220,6 +229,7 @@ US_Startup(void)
 void
 US_Shutdown(void)
 {
+	/* just used the global flag to inicate the state of the manager */
 	if (!US_Started)
 		return;
 
@@ -231,6 +241,9 @@ US_Shutdown(void)
 //	US_CheckParm() - checks to see if a string matches one of a set of
 //		strings. The check is case insensitive. The routine returns the
 //		index of the string that matched, or -1 if no matches were found
+
+//    This is a parser function, can be implemented with flex/bison
+//    or other options....     
 //
 ///////////////////////////////////////////////////////////////////////////
 int
