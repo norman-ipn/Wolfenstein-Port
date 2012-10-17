@@ -27,13 +27,13 @@ SDL_CheckSB(int port)
  
 */
 asm	mov	dx,0x388				// Wait >4usec
-asm	in	al, dx
-asm	in	al, dx
-asm	in	al, dx
-asm	in	al, dx
-asm	in	al, dx
-asm	in	al, dx
-asm	in	al, dx
+asm	in	al, dx  /* each instruction requieres an amount of time to be */
+asm	in	al, dx  /* executed. The time depends on the CPU clock speed. */
+asm	in	al, dx  /* these 9 instructions are spected to waste four microseconds */
+asm	in	al, dx  /* has the above comentary says: "> 4usec" */
+asm	in	al, dx  /* so this code has the purpouse of wait for some event. */
+asm	in	al, dx  /* Post your doubts an general information on the wiki */
+asm	in	al, dx  /* there is already a section dedicated to Assembly */
 asm	in	al, dx
 asm	in	al, dx
 
