@@ -1101,12 +1101,12 @@ void PlayDemo (int demonumber)
 
 //==========================================================================
 
-/*
-==================
-=
-= Died
-=
-==================
+/**
+*
+* Died
+* This function perfoms the process of animation the character's death and restart the level 
+* if you still have lives.
+* 
 */
 
 #define DEATHROTATE 2
@@ -1205,7 +1205,7 @@ void Died (void)
 	if (tedlevel == false)	// SO'S YA DON'T GET KILLED WHILE LAUNCHING!
 	  gamestate.lives--;
 
-	if (gamestate.lives > -1)
+	if (gamestate.lives > -1) //if the character has lives, set a new level
 	{
 		gamestate.health = 100;
 		gamestate.weapon = gamestate.bestweapon
@@ -1245,7 +1245,7 @@ void GameLoop (void)
 #endif
 
 restartgame:
-	ClearMemory ();
+	ClearMemory (); 
 	SETFONTCOLOR(0,15);
 	DrawPlayScreen ();
 	died = false;

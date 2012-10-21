@@ -288,14 +288,16 @@ extern int far  CheckIs386(void);
 
 //===========================================================================
 
-/*
-=====================
-=
-= NewGame
-=
-= Set up new game to start from the beginning
-=
-=====================
+/**
+*
+* NewGame
+*
+* Set up new game to start from the beginning 
+* 
+* @param int difficulty is a integer value of the game difficulty 
+* @param int episodie is a integer value of the game episodie
+*
+* @return void
 */
 
 void NewGame (int difficulty,int episode)

@@ -183,7 +183,7 @@ far NewEmenu[]=
 	{1,"",0},
 	{0,"",0}
 #endif
-#else
+#else	//Definitions of episodies in Spanish
 	#ifdef SPANISH
 	{1,"Episodio 1\n"
 	   "Fuga desde Wolfenstein",0},
@@ -202,7 +202,7 @@ far NewEmenu[]=
 	{0,"",0},
 	{3,"Episodio 6\n"
 		  "Confrontacion",0}
-	#else
+	#else	//Definitiosn of episodies in English
 	{1,"Episode 1\n"
 	   "Escape from Wolfenstein",0},
 	{0,"",0},

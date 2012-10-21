@@ -1000,27 +1000,27 @@ void DamageActor (objtype *ob, unsigned damage)
 		switch (ob->obclass)		// dogs only have one hit point
 		{
 		case guardobj:
-			if (ob->hitpoints&1)
+			if (ob->hitpoints&1)  	//damage of the actor with a guard enemy 
 				NewState (ob,&s_grdpain);
 			else
 				NewState (ob,&s_grdpain1);
 			break;
 
-		case officerobj:
+		case officerobj:		//damage of the actor with a office enemy
 			if (ob->hitpoints&1)
 				NewState (ob,&s_ofcpain);
 			else
 				NewState (ob,&s_ofcpain1);
 			break;
 
-		case mutantobj:
+		case mutantobj:			//damage of the actor with a mutant enemy
 			if (ob->hitpoints&1)
 				NewState (ob,&s_mutpain);
 			else
 				NewState (ob,&s_mutpain1);
 			break;
 
-		case ssobj:
+		case ssobj:			
 			if (ob->hitpoints&1)
 				NewState (ob,&s_sspain);
 			else
