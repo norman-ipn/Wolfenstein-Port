@@ -380,12 +380,17 @@ long DoChecksum(byte far *source,unsigned size,long checksum)
 }
 
 
-/*
-==================
-=
-= SaveTheGame
-=
-==================
+/**
+*
+* SaveTheGame
+* This function saves a files and the each components of the game
+*
+* @param int file File descriptor index
+*  @param int x coordinate "x" of animation
+*  @param int y coordinate "y" of animation
+*
+*  @return boolean is a boolean value
+*
 */
 
 boolean SaveTheGame(int file,int x,int y)
@@ -498,14 +503,18 @@ boolean SaveTheGame(int file,int x,int y)
 	return(true);
 }
 
-//===========================================================================
 
-/*
-==================
-=
-= LoadTheGame
-=
-==================
+/**
+*
+* LoadTheGame
+* This function loads a saved game from a file and verifies the checksums,
+* if not matching the chelsums add default values.
+*
+* @param int file saved game file
+* @oaram int x coordinate "x" of animation
+* @param int y coordinate "y" of animation 
+*
+* @return boolean value 
 */
 
 boolean LoadTheGame(int file,int x,int y)
