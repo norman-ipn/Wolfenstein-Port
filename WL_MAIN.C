@@ -302,6 +302,12 @@ extern int far  CheckIs386(void);
 
 void NewGame (int difficulty,int episode)
 {
+	/** Modify the API, 
+ *
+ *         use something like
+ *            game_state_clear();
+ *
+ *      */
 	memset (&gamestate,0,sizeof(gamestate));
 	gamestate.difficulty = difficulty;
 	gamestate.weapon = gamestate.bestweapon
