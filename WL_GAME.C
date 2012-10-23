@@ -1,4 +1,8 @@
-// WL_GAME.C
+/* 
+  \filename WL_GAME.C
+
+*/
+
 
 #include "WL_DEF.H"
 #pragma hdrstop
@@ -1101,27 +1105,34 @@ void PlayDemo (int demonumber)
 
 //==========================================================================
 
+#define DEATHROTATE 2
 /**
+*
+* \name Died()
 *
 * Died
 * This function perfoms the process of animation the character's death and restart the level 
 * if you still have lives.
 * 
 */
-
-#define DEATHROTATE 2
-
 void Died (void)
 {
 	float	fangle;
 	long	dx,dy;
 	int		iangle,curangle,clockwise,counter,change;
 
+	/* -1 means the player has no weapon */
 	gamestate.weapon = -1;			// take away weapon
+
+        /* We need another way to play sounds */
 	SD_PlaySound (PLAYERDEATHSND);
 //
 // swing around to face attacker
 //
+/* 
+         could be a function for this animation 
+	 like:  died_animation() or died_rotated_animation()
+*/
 	dx = killerobj->x - player->x;
 	dy = player->y - killerobj->y;
 
@@ -1188,6 +1199,7 @@ void Died (void)
 			CalcTics ();
 		} while (curangle != iangle);
 	}
+	/* FINISH of rotation animation */
 
 //
 // fade to red
@@ -1215,6 +1227,8 @@ void Died (void)
 		gamestate.attackframe = gamestate.attackcount =
 		gamestate.weaponframe = 0;
 
+		/* We need to change those Draw function
+		   to Draw3D functions. */
 		DrawKeys ();
 		DrawWeapon ();
 		DrawAmmo ();
@@ -1234,13 +1248,19 @@ void Died (void)
 =
 ===================
 */
-
 void GameLoop (void)
 {
 	int i,xl,yl,xh,yh;
 	char num[20];
 	boolean	died;
 #ifdef MYPROFILE
+	/* clock_t type variables
+	   may register times, 
+		start and and times 
+		could be used to measure 
+		the speed of the graphics system.
+		Speed is measured in fps- frames per second.
+*/
 	clock_t start,end;
 #endif
 

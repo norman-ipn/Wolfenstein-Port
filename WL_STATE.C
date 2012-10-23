@@ -1,4 +1,7 @@
-// WL_STATE.C
+/** 
+ \filename WL_STATE.C
+
+*/
 
 /*
  Contains some movement IA algorithms for enemies, and other stuff.
@@ -974,6 +977,9 @@ void KillActor (objtype *ob)
 =
 = Does damage points to enemy ob, either putting it into a stun frame or
 = killing it.
+
+ \param ob The enemy.
+ \param damage The amount of damage.
 =
 ===================
 */
@@ -1006,7 +1012,7 @@ void DamageActor (objtype *ob, unsigned damage)
 				NewState (ob,&s_grdpain1);
 			break;
 
-		case officerobj:		//damage of the actor with a office enemy
+		case officerobj:		//damage of the actor with a officer enemy
 			if (ob->hitpoints&1)
 				NewState (ob,&s_ofcpain);
 			else
@@ -1047,6 +1053,9 @@ void DamageActor (objtype *ob, unsigned damage)
 = CheckLine
 =
 = Returns true if a straight line between the player and ob is unobstructed
+
+  NOTE: This code must be the 'famous' ray casting algoritm.
+         
 =
 =====================
 */
