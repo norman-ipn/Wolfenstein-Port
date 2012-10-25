@@ -68,7 +68,7 @@ boolean		layoutdone;
 =====================
 */
 
-void RipToEOL (void)
+void RipToEOL (void)// this funcion just walking the values int the pointer "text" to the end of the line
 {
 	while (*text++ != '\n')		// scan to end of line
 	;
@@ -83,30 +83,30 @@ void RipToEOL (void)
 =====================
 */
 
-int	ParseNumber (void)
+int	ParseNumber (void)//this funcion returns an integer
 {
-	char	ch;
-	char	num[80],*numptr;
+	char	ch;// characher variable
+	char	num[80],*numptr;//pointer and array
 
 //
 // scan until a number is found
 //
-	ch = *text;
-	while (ch < '0' || ch >'9')
-		ch = *++text;
+	ch = *text;// itś given the value in the pointer "text" to "ch"
+	while (ch < '0' || ch >'9')//this while itś cycling util the value in "ch" have a value less than 0 and greater to 9
+		ch = *++text;//itś given the next value in the ponter "text" to "ch"
 
 //
 // copy the number out
 //
-	numptr = num;
+	numptr = num;// itś assigned  the value int "num" to "numptr"
 	do
 	{
-		*numptr++ = ch;
-		ch = *++text;
-	} while (ch >= '0' && ch <= '9');
+		*numptr++ = ch;// itś assigned the value in "ch" to the next posicion of "numptr"
+		ch = *++text;//itś assigned the next value in "text" to "ch"
+	} while (ch >= '0' && ch <= '9');//this while will be cyclin while the value is between 0 and 9
 	*numptr = 0;
 
-	return atoi (num);
+	return atoi (num);//return the value in "num" and converted to an integer
 }
 
 
@@ -124,20 +124,20 @@ int	ParseNumber (void)
 
 void	ParsePicCommand (void)
 {
-	picy=ParseNumber();
-	picx=ParseNumber();
-	picnum=ParseNumber();
-	RipToEOL ();
+	picy=ParseNumber();//itś assigned the value that is returned the  funcion "ParseNumber" in "picy"
+	picx=ParseNumber();//itś  assigned the value that is returned the funcon "ParseNumber" in "picx"
+	picnum=ParseNumber();//itś assigned the value that is returned the funcion "parrseNumber" in "picnum"
+	RipToEOL ();//ths funcion just walking the values in the ponter "text"
 }
 
 
 void	ParseTimedCommand (void)
 {
-	picy=ParseNumber();
-	picx=ParseNumber();
-	picnum=ParseNumber();
-	picdelay=ParseNumber();
-	RipToEOL ();
+	picy=ParseNumber();//itś assigned the value that is returned the  funcion "ParseNumber" in "picy"
+	picx=ParseNumber();//itś  assigned the value that is returned the funcon "ParseNumber" in "picx"
+	picnum=ParseNumber();//itś assigned the value that is returned the funcion "parrseNumber" in "picnum"
+	picdelay=ParseNumber();//itś assigned the value tha is retruned the funcion"ParseNumber"in "picdelay"
+	RipToEOL ();//ths funcion just walking the values in the ponter "text"
 }
 
 
@@ -152,9 +152,9 @@ void	ParseTimedCommand (void)
 =====================
 */
 
-void	TimedPicCommand (void)
+void	TimedPicCommand (void)"
 {
-	ParseTimedCommand ();
+	ParseTimedCommand ();//Just execute to given the values to the varaibles
 
 //
 // update the screen, and wait for time delay
@@ -165,7 +165,7 @@ void	TimedPicCommand (void)
 // wait for time
 //
 	TimeCount = 0;
-	while (TimeCount < picdelay)
+	while (TimeCount < picdelay)//ths whie itś cycling whit a counter util itś less than picedlay
 	;
 
 //
@@ -185,21 +185,21 @@ void	TimedPicCommand (void)
 
 void HandleCommand (void)
 {
-	int	i,margin,top,bottom;
-	int	picwidth,picheight,picmid;
+	int	i,margin,top,bottom;//integer variables
+	int	picwidth,picheight,picmid;//integer variables
 
-	switch (toupper(*++text))
+	switch (toupper(*++text))//this switch execut the funcion depending the value that is returned by the fucnion "toupper"
 	{
 	case 'B':
-		picy=ParseNumber();
-		picx=ParseNumber();
-		picwidth=ParseNumber();
-		picheight=ParseNumber();
+		picy=ParseNumber();//itś assigned the value returned from the funcon"ParseNumber" to "picy"
+		picx=ParseNumber();//itś assigned the value returned from the funcon"ParseNumber" to "picx"
+		picwidth=ParseNumber();//itś assigned the value returned from the funcon"ParseNumber" to "picwidth"
+		picheight=ParseNumber();//itś assigned the value returned from the funcon"ParseNumber" to "picheight"
 		VWB_Bar(picx,picy,picwidth,picheight,BACKCOLOR);
-		RipToEOL();
+		RipToEOL ();//ths funcion just walking the values in the ponter "text"
 		break;
 	case ';':		// comment
-		RipToEOL();
+		RipToEOL ();//ths funcion just walking the values in the ponter "text"
 		break;
 	case 'P':		// ^P is start of next page, ^E is end of file
 	case 'E':
@@ -208,11 +208,11 @@ void HandleCommand (void)
 		break;
 
 	case 'C':		// ^c<hex digit> changes text color
-		i = toupper(*++text);
-		if (i>='0' && i<='9')
-			fontcolor = i-'0';
-		else if (i>='A' && i<='F')
-			fontcolor = i-'A'+10;
+		i = toupper(*++text);//given th value to get "toupper" to "i"
+		if (i>='0' && i<='9')//on this condition
+			fontcolor = i-'0';//it's given this value to "fontcolor"
+		else if (i>='A' && i<='F')//if the first condition didn't work out 
+			fontcolor = i-'A'+10;//itś given this value to "fontcolor"
 
 		fontcolor *= 16;
 		i = toupper(*++text);
@@ -224,15 +224,15 @@ void HandleCommand (void)
 		break;
 
 	case '>':
-		px = 160;
-		text++;
+		px = 160;//given the value fo 160 to "px"
+		text++;//increment the pointer "text"
 		break;
 
 	case 'L':
-		py=ParseNumber();
-		rowon = (py-TOPMARGIN)/FONTHEIGHT;
-		py = TOPMARGIN+rowon*FONTHEIGHT;
-		px=ParseNumber();
+		py=ParseNumber();//given the value returned by the funcion "ParseNumber" to "py"
+		rowon = (py-TOPMARGIN)/FONTHEIGHT;//given the value  of the result of this fomula that contains default numbers to "rowon"
+		py = TOPMARGIN+rowon*FONTHEIGHT;//given the value  of the result of this fomula that contains default numbers to "py"
+		px=ParseNumber();//given the value retruned b the funcion "ParseNumebr" to "px"
 		while (*text++ != '\n')		// scan to end of line
 		;
 		break;
@@ -244,35 +244,35 @@ void HandleCommand (void)
 	case 'G':		// ^Gyyy,xxx,ppp draws graphic
 		ParsePicCommand ();
 		VWB_DrawPic (picx&~7,picy,picnum);
-		picwidth = pictable[picnum-STARTPICS].width;
-		picheight = pictable[picnum-STARTPICS].height;
+		picwidth = pictable[picnum-STARTPICS].width;//given the value of the width  to "picwidth"
+		picheight = pictable[picnum-STARTPICS].height;//given the value of the height to "picheight"
 		//
 		// adjust margins
 		//
-		picmid = picx + picwidth/2;
+		picmid = picx + picwidth/2;//just assignes the value of the result of this fomula to "picmid"
 		if (picmid > SCREENMID)
 			margin = picx-PICMARGIN;			// new right margin
 		else
 			margin = picx+picwidth+PICMARGIN;	// new left margin
 
-		top = (picy-TOPMARGIN)/FONTHEIGHT;
+		top = (picy-TOPMARGIN)/FONTHEIGHT;//given the value  of the result of this fomula that contains default numbers to "top"
 		if (top<0)
 			top = 0;
-		bottom = (picy+picheight-TOPMARGIN)/FONTHEIGHT;
+		bottom = (picy+picheight-TOPMARGIN)/FONTHEIGHT;//given the value  of the result of this fomula that contains default numbers to "bottom"
 		if (bottom>=TEXTROWS)
-			bottom = TEXTROWS-1;
+			bottom = TEXTROWS-1;//given the value  of the result of this fomula that contains default numbers to "bottom"
 
-		for (i=top;i<=bottom;i++)
-			if (picmid > SCREENMID)
-				rightmargin[i] = margin;
+		for (i=top;i<=bottom;i++)//this will be cycling until the top get the same value whith bottom
+			if (picmid > SCREENMID)//if tha condition is true...
+				rightmargin[i] = margin;//it's the value of "margin" to "roghtmargin" in "i" posicion
 			else
-				leftmargin[i] = margin;
+				leftmargin[i] = margin;//it's the value of "margin" to "leftmargin" in "i" posicion
 
 		//
 		// adjust this line if needed
 		//
-		if (px < leftmargin[rowon])
-			px = leftmargin[rowon];
+		if (px < leftmargin[rowon])//if this condicion is true ...
+			px = leftmargin[rowon];//it's assignes the value of "leftmargin" in "rowon" posicion in to "px"
 		break;
 	}
 }
