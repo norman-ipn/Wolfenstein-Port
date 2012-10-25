@@ -1,5 +1,33 @@
 // WL_TEXT.C
 
+/*
+ List of functions in this file
+ (NOTE: This file need his .h file)
+
+ void RipToEOL (void);
+ int ParseNumber (void);
+ void ParsePicCommand (void);
+void	ParseTimedCommand (void);
+void	TimedPicCommand (void);
+void HandleCommand (void);
+void NewLine(void);
+void HandleCtrls (void)
+void HandleWord (void)
+void PageLayout (boolean shownumber)
+void BackPage (void)
+
+void CacheLayoutGraphics (void)
+void ShowArticle (char far *article)
+void HelpScreens (void)
+void EndText(void);
+
+These function seems to work with global variable 'text'
+to parse text commands, but Where in the game are those text
+functions used?? We need them?
+ 
+
+*/
+
 #include "WL_DEF.H"
 #pragma	hdrstop
 
@@ -26,7 +54,6 @@ TEXT FORMATTING COMMANDS
 */
 
 #define BACKCOLOR		0x11
-
 
 #define WORDLIMIT		80
 #define FONTHEIGHT		10
@@ -152,7 +179,7 @@ void	ParseTimedCommand (void)
 =====================
 */
 
-void	TimedPicCommand (void)"
+void	TimedPicCommand (void)
 {
 	ParseTimedCommand ();//Just execute to given the values to the varaibles
 
