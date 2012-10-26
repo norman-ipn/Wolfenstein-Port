@@ -1,6 +1,10 @@
 // WOLFHACK.C
 
 #include "WL_DEF.H"
+/*
+This code is about the drawing of the plane, or the drawing of the screen, 
+the size of the screen specially talking about the depth of the vision
+*/
 
 #define	MAXVIEWHEIGHT	200
 
@@ -41,6 +45,11 @@ int		mr_dest;
 = Height ranges from 0 (infinity) to viewheight/2 (nearest)
 ==============
 */
+
+/*
+This draws the screen, the floor and the roof, uses sines and cosines to know the angles for drawing.
+*/
+
 
 void DrawSpans (int x1, int x2, int height)
 {
@@ -95,6 +104,12 @@ void DrawSpans (int x1, int x2, int height)
 ===================
 */
 
+/*
+According to the scale and the screen size, this draws the plane (screen or scenary) with another size; or at least
+this sets the sizes to draw that
+*/
+
+
 void SetPlaneViewSize (void)
 {
 	int		x,y;
@@ -138,6 +153,12 @@ void SetPlaneViewSize (void)
 =
 ===================
 */
+
+/*
+Now this uses sines and cosines to know how to draw correctly the walls in the screen (again this is for drawing the
+screen and the plane).
+*/
+
 
 void DrawPlanes (void)
 {
