@@ -15,6 +15,13 @@
 #include "FOREIGN.H"
 #endif
 
+/*
+    The SPEAR macro refers to the "Spear of Destiny" version of the game.
+    Info about this version could be found at:
+    http://wolfenstein.wikia.com/wiki/Spear_of_Destiny
+
+    This version uses mostly the same engine but has different leves.
+*/
 #ifdef SPEAR
 #include "F_SPEAR.H"
 #endif
@@ -733,7 +740,15 @@ typedef	struct
 	boolean		victoryflag;		// set during victory animations
 } gametype;
 
+/*
+    This enum is "type-defined" and used as "playstate" in the game code.
 
+    It represents a general state of the game which is used functions like
+    GameLoop and PlayLoop.
+
+    Based on this state, some actions like restart of current
+    level or transition to the next level, are performed.
+*/
 typedef	enum	{
 	ex_stillplaying,
 	ex_completed,

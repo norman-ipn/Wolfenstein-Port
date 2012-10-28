@@ -896,6 +896,15 @@ void VL_LatchToScreen (unsigned source, int width, int height, int x, int y)
 /*  store the 'y' value on 'di' register */
 asm	mov	di,[y]				// dest = bufferofs+ylookup[y]+(x>>2)
 /*  'shl' what does this assembly code does?  */
+/*
+    "SHL shifts the source operand left by from 1 to 31 positions. The empty
+    bit positions are cleared and the CF flag is loaded with the last bit
+    shifted out operand.
+
+    -Source: Intel 64 and IA-32 Architecture Software Developers Manual
+
+    Just answering. Will add this to the assemble wiki page soon.
+*/
 asm	shl	di,1
 asm	mov	di,[WORD PTR ylookup+di]
 asm	add	di,[bufferofs]

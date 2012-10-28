@@ -1497,8 +1497,13 @@ void Quit (char *error)
 = DemoLoop
 =
 =====================
-*/
 
+"Wrapper" for the GameLoop function or game start.
+
+Sets difficulty, enable debugging/recording of the game and show some screens
+like highscores, credits and age rating/classifications information like PG13
+on japanase version, (probably) on player inactivity (like in classic arcades).
+*/
 static  char *ParmStrings[] = {"baby","easy","normal","hard",""};
 
 void    DemoLoop (void)

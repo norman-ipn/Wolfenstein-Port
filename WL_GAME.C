@@ -528,6 +528,9 @@ void ScanInfoPlane (void)
 				SpawnHitler (x,y);
 				break;
 #else
+/*
+    Spawns different (creepier) bosses for the Spear of Destiny version.
+*/
 			case 106:
 				SpawnSpectre (x,y);
 				break;
@@ -597,6 +600,11 @@ void ScanInfoPlane (void)
 //
 // ghosts
 //
+
+/*
+    Some enemies are the pacman's ghosts!
+    Example: http://www.youtube.com/watch?v=zaKWLUvLrMg
+*/
 #ifndef SPEAR
 			case 224:
 				SpawnGhosts (en_blinky,x,y);
@@ -1247,6 +1255,15 @@ void Died (void)
 = GameLoop
 =
 ===================
+
+This function controls the flow between states of the game.
+
+It loads previous saved games, setup levels states, controls the
+flow between levels, including when player loses or when completes the game,
+and checks if the result of the current game is a highscore.
+
+The "real" game loop (player actions in like moving, killing, etc.) is in the
+PlayLoop function.
 */
 void GameLoop (void)
 {

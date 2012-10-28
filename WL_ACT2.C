@@ -38,7 +38,10 @@
 
 dirtype dirtable[9] = {northwest,north,northeast,west,nodir,east,
 	southwest,south,southeast};
-
+/*
+    One difference between game difficulties is that enemies have more
+    hit points/resistance in the higher ones.
+*/
 int	starthitpoints[4][NUMENEMIES] =
 	 //
 	 // BABY MODE
@@ -835,6 +838,20 @@ statetype s_gretelshoot7 	= {false,SPR_GRETEL_SHOOT3,10,NULL,T_Shoot,&s_gretelsh
 statetype s_gretelshoot8 	= {false,SPR_GRETEL_SHOOT1,10,NULL,NULL,&s_gretelchase1};
 #endif
 
+/*
+    Spawn* functions create new enemies.
+    In the position defined by tilex,tiley
+    Of the type which.
+    Facing to the dir direction.
+
+    This functions use the helper functions SpawnNewObj and GetNewActor for
+    more low level details like managing the memory and the list of existing
+    objects.
+
+    Most of this functions increment the killtotal variable (total of enemies in
+    a level) it's used to calculate the final score.
+*/
+
 
 /*
 ===============
@@ -930,7 +947,8 @@ void SpawnDeadGuard (int tilex, int tiley)
 =
 = SpawnBoss
 =
-===============
+===============(when available, some spawnings are similar so they're
+    grouped)
 */
 
 void SpawnBoss (int tilex, int tiley)
