@@ -45,7 +45,7 @@ dirtype diagonal[9][9] =
 			{nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir}
 };
 
-
+//Occupying the structure functions objtype.
 
 void	SpawnNewObj (unsigned tilex, unsigned tiley, statetype *state);
 void	NewState (objtype *ob, statetype *state);
