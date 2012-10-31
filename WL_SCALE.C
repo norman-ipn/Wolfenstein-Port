@@ -64,7 +64,9 @@ void far BadScale (void)
 
 void SetupScaling (int maxscaleheight)
 {
-	int		i,x,y;
+	int i = 0;
+	int x = 0;
+	int y = 0;
 	byte	far *dest;
 
 	insetupscaling = true;
@@ -157,12 +159,18 @@ void SetupScaling (int maxscaleheight)
 
 unsigned BuildCompScale (int height, memptr *finalspot)
 {
-	byte		far *code;
+	byte	far;
+	byte  *code = NULL;
 
-	int			i;
-	long		fix,step;
-	unsigned	src,totalscaled,totalsize;
-	int			startpix,endpix,toppix;
+	int i = 0;
+	long fix = 0
+	long step = 0;
+	unsigned src = 0;
+	unsigned totalscaled = 0;
+	unsigned totalsize = 0;
+	int startpix = 0;
+	int endpix = 0;
+	int toppix = 0;
 
 
 	step = ((long)height<<16) / 64;
@@ -243,7 +251,7 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 =======================
 */
 
-extern	int			slinex,slinewidth;
+extern	int		slinex,slinewidth;
 extern	unsigned	far *linecmds;
 extern	long		linescale;
 extern	unsigned	maskword;
