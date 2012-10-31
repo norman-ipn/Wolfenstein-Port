@@ -29,11 +29,13 @@
 =============================================================================
 */
 
-boolean		ingame,fizzlein;
+boolean		ingame;
+boolean 	fizzlein;
 unsigned	latchpics[NUMLATCHPICS];
 gametype	gamestate;
 
-long		spearx,speary;
+long		spearx;
+long		speary;
 unsigned	spearangle;
 boolean		spearflag;
 
@@ -116,8 +118,10 @@ byte lefttable[ATABLEMAX][ATABLEMAX * 2] = {
 void
 SetSoundLoc(fixed gx,fixed gy)
 {
-	fixed	xt,yt;
-	int		x,y;
+	fixed	xt;
+	fixef 	yt;
+	int	x=0;
+	int 	y=0;
 
 //
 // translate point to view centered coordinates
@@ -224,9 +228,12 @@ void ClearMemory (void)
 
 void ScanInfoPlane (void)
 {
-	unsigned	x,y,i,j;
-	int			tile;
-	unsigned	far	*start;
+	unsigned	x=0;
+	unsigned	y=0;
+	unsigned	i=0;
+	unsigned	j=0;
+	int		tile=0;
+	unsigned	far	*start = NULL;
 
 	start = mapsegs[1];
 	for (y=0;y<mapheight;y++)
