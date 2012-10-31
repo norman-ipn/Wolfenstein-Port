@@ -185,34 +185,27 @@ ansok:;
 
 //==========================================================================
 
-/*
-========================
-=
-= TransformActor
-=
-= Takes paramaters:
-=   gx,gy		: globalx/globaly of point
-=
-= globals:
-=   viewx,viewy		: point of view
-=   viewcos,viewsin	: sin/cos of viewangle
-=   scale		: conversion from global value to screen value
-=
-= sets:
-=   screenx,transx,transy,screenheight: projected edge location and size
-=
-========================
+/**
+* \brief sets: screenx,transx,transy,screenheight: projected edge location and size.
+*
+* @param ob Takes paramaters gx,gy: globalx/globaly of point
+*
+* globals:
+*   viewx,viewy		: point of view
+*   viewcos,viewsin	: sin/cos of viewangle
+*   scale		: conversion from global value to screen value
+*
 */
-
-
-//
-// transform actor
-//
 void TransformActor (objtype *ob)
 {
-	int ratio;
-	fixed gx,gy,gxt,gyt,nx,ny;
-	long	temp;
+	int ratio = 0;
+	fixed gx = 0;
+	fixed gy = 0;
+	fixed gxt = 0;
+	fixed gyt = 0;
+	fixed nx = 0;
+	fixed ny = 0;
+	long temp = 0;
 
 //
 // translate point to view centered coordinates
@@ -1072,14 +1065,19 @@ visobj_t	vislist[MAXVISABLE],*visptr,*visstep,*farthest;
 
 void DrawScaleds (void)
 {
-	int 		i,j,least,numvisable,height;
-	memptr		shape;
-	byte		*tilespot,*visspot;
-	int			shapenum;
-	unsigned	spotloc;
+	int i = 0;
+	int j = 0;
+	int least = 0;
+	int numvisable = 0;
+	int height = 0;
+	int shapenum = 0;
+	unsigned spotloc = 0;
+	memptr shape;
+	byte* tilespot = NULL;
+	byte* visspot = NULL;
 
-	statobj_t	*statptr;
-	objtype		*obj;
+	statobj_t *statptr;
+	objtype *obj;
 
 	visptr = &vislist[0];
 
@@ -1088,11 +1086,14 @@ void DrawScaleds (void)
 //
 	for (statptr = &statobjlist[0] ; statptr !=laststatobj ; statptr++)
 	{
-		if ((visptr->shapenum = statptr->shapenum) == -1)
+		if ((visptr->shapenum = statptr->shapenum) == -1){
 			continue;						// object has been deleted
+		}
 
 		if (!*statptr->visspot)
+		{
 			continue;						// not visable
+		}
 
 		if (TransformTile (statptr->tilex,statptr->tiley
 			,&visptr->viewx,&visptr->viewheight) && statptr->flags & FL_BONUS)
@@ -1101,11 +1102,13 @@ void DrawScaleds (void)
 			continue;
 		}
 
-		if (!visptr->viewheight)
-			continue;						// to close to the object
+		if (!visptr->viewheight){
+			continue;						// too close to the object
+		}
 
-		if (visptr < &vislist[MAXVISABLE-1])	// don't let it overflow
+		if (visptr < &vislist[MAXVISABLE-1]){	// don't let it overflow
 			visptr++;
+		}
 	}
 
 //
@@ -1114,7 +1117,9 @@ void DrawScaleds (void)
 	for (obj = player->next;obj;obj=obj->next)
 	{
 		if (!(visptr->shapenum = obj->state->shapenum))
+		{
 			continue;						// no shape
+		}
 
 		spotloc = (obj->tilex<<6)+obj->tiley;	// optimize: keep in struct?
 		visspot = &spotvis[0][0]+spotloc;
@@ -1144,14 +1149,19 @@ void DrawScaleds (void)
 				visptr->shapenum = obj->temp1;	// special shape
 
 			if (obj->state->rotate)
+			{
 				visptr->shapenum += CalcRotate (obj);
+			}
 
-			if (visptr < &vislist[MAXVISABLE-1])	// don't let it overflow
+			if (visptr < &vislist[MAXVISABLE-1]){	// don't let it overflow
 				visptr++;
+			}
 			obj->flags |= FL_VISABLE;
 		}
 		else
+		{
 			obj->flags &= ~FL_VISABLE;
+		}
 	}
 
 //
@@ -1186,40 +1196,42 @@ void DrawScaleds (void)
 
 //==========================================================================
 
-/*
-==============
-=
-= DrawPlayerWeapon
-=
-= Draw the player's hands
-=
-==============
+/**
+* \brief Array of integers for the scale of the different weapons.
 */
-
 int	weaponscale[NUMWEAPONS] = {SPR_KNIFEREADY,SPR_PISTOLREADY
 	,SPR_MACHINEGUNREADY,SPR_CHAINREADY};
 
+/**
+* \brief Draw the player's hands.
+* 
+* Based on the current 
+*/
 void DrawPlayerWeapon (void)
 {
-	int	shapenum;
+	int shapenum = 0;
 
 #ifndef SPEAR
-	if (gamestate.victoryflag)
+	if (gamestate.victoryflag) /**< If victory flag is on, the game will draw SPR_DEATHCAM. */
 	{
 		if (player->state == &s_deathcam && (TimeCount&32) )
+		{
 			SimpleScaleShape(viewwidth/2,SPR_DEATHCAM,viewheight+1);
+		}
 		return;
 	}
 #endif
 
-	if (gamestate.weapon != -1)
+	if (gamestate.weapon != -1) /**< If the player has a weapon, the game will draw the specific position of it.*/
 	{
 		shapenum = weaponscale[gamestate.weapon]+gamestate.weaponframe;
 		SimpleScaleShape(viewwidth/2,shapenum,viewheight+1);
 	}
 
-	if (demorecord || demoplayback)
+	if (demorecord || demoplayback) /**< In case the game is in demo version.*/
+	{
 		SimpleScaleShape(viewwidth/2,SPR_DEMO,viewheight+1);
+	}
 }
 
 
