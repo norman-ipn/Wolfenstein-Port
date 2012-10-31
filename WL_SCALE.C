@@ -251,15 +251,19 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 =======================
 */
 
-extern	int		slinex,slinewidth;
-extern	unsigned	far *linecmds;
-extern	long		linescale;
-extern	unsigned	maskword;
+extern	int slinex = 0;
+extern	int slinewidth = 0;
+extern	unsigned far = 0;
+extern	unsigned *linecmds = NULL;
+extern	long linescale = 0;
+extern	unsigned maskword = 0;
 
-byte	mask1,mask2,mask3;
+byte	mask1;
+byte	mask2;
+byte	mask3;
 
 
-void near ScaleLine (void)
+void near ScaleLine (void)/*Check how it works this tipe of fuction sign*/
 {
 asm	mov	cx,WORD PTR [linescale+2]
 asm	mov	es,cx						// segment of scaler
@@ -429,16 +433,19 @@ asm	jmp	scaletriple					// do the next segment
 =======================
 */
 
-static	long		longtemp;
+static	long longtemp = 0;
 
 void ScaleShape (int xcenter, int shapenum, unsigned height)
 {
-	t_compshape	_seg *shape;
-	t_compscale _seg *comptable;
-	unsigned	scale,srcx,stopx,tempx;
-	int			t;
-	unsigned	far *cmdptr;
-	boolean		leftvis,rightvis;
+	t_compshape	_seg *shape = NULL;
+	t_compscale _seg *comptable = NULL;
+	unsigned scale = 0;
+	unsigned srcx = 0;
+	unsigned stopx = 0;
+	unsigned tempx = 0;
+	int 	 t = 0;
+	unsigned	far *cmdptr = NULL;
+	boolean		leftvis,rightvis;/*Search where is the definition of boolean*/
 
 
 	shape = PM_GetSpritePage (shapenum);
@@ -637,12 +644,15 @@ void ScaleShape (int xcenter, int shapenum, unsigned height)
 
 void SimpleScaleShape (int xcenter, int shapenum, unsigned height)
 {
-	t_compshape	_seg *shape;
-	t_compscale _seg *comptable;
-	unsigned	scale,srcx,stopx,tempx;
-	int			t;
-	unsigned	far *cmdptr;
-	boolean		leftvis,rightvis;
+	t_compshape	_seg *shape = NULL;
+	t_compscale _seg *comptable = NULL;
+	unsigned	scale = 0;
+	unsigned 	srcx = 0;
+	unsigned	stopx = 0;
+	unsigned	tempx = 0;
+	int		t = 0;
+	unsigned	far *cmdptr = NULL;
+	boolean		leftvis,rightvis; /*more booleans*/
 
 
 	shape = PM_GetSpritePage (shapenum);
@@ -739,8 +749,9 @@ unsigned	wordmasks[8][8] = {
 {0x0002,0x0003,0x8003,0xc003,0xe003,0xf003,0xf803,0xfc03},
 {0x0001,0x8001,0xc001,0xe001,0xf001,0xf801,0xfc01,0xfe01} };
 
-int			slinex,slinewidth;
-unsigned	far *linecmds;
-long		linescale;
-unsigned	maskword;
+int	slinex = 0;
+int 	slinewidth = 0;
+unsigned	far *linecmds = NULL;
+long	linescale = 0;
+unsigned	maskword = 0;
 
