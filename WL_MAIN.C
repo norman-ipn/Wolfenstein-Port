@@ -75,7 +75,9 @@ int                     minheightdiv;
 
 void            Quit (char *error);
 
-boolean         startgame,loadedgame,virtualreality;
+boolean         startgame;
+boolean 	loadedgame;
+booelan		virtualreality;
 int             mouseadjustment;
 
 char	configname[13]="CONFIG.";
@@ -214,7 +216,7 @@ void ReadConfig(void)
 
 void WriteConfig(void)
 {
-	int                     file;
+	int                     file = 0;
 
 	file = open(configname,O_CREAT | O_BINARY | O_WRONLY,
 				S_IREAD | S_IWRITE | S_IFREG);
@@ -270,7 +272,7 @@ void Patch386 (void)
 extern void far jabhack2(void);
 extern int far  CheckIs386(void);
 
-	int     i;
+	int     i = 0;
 
 	for (i = 1;i < _argc;i++)
 		if (US_CheckParm(_argv[i],JHParmStrings) == 0)
@@ -381,7 +383,7 @@ a	b	a xor b
  * */
 long DoChecksum(byte far *source,unsigned size,long checksum)
 {
- unsigned i;
+ unsigned int i=0;
 
  for (i=0;i<size-1;i++)
    checksum += source[i]^source[i+1];
@@ -406,9 +408,12 @@ long DoChecksum(byte far *source,unsigned size,long checksum)
 boolean SaveTheGame(int file,int x,int y)
 {
 	struct diskfree_t dfree;
-	long avail,size,checksum;
-	objtype *ob,nullobj;
+	long int avail = 0; 
+	long int size = 0;
+	long int checksum = 0;
 
+	objtype *ob = NULL
+        objtype nullobj;
 
 	if (_dos_getdiskfree(0,&dfree))
 	  Quit("Error in _dos_getdiskfree call");
@@ -529,8 +534,10 @@ boolean SaveTheGame(int file,int x,int y)
 
 boolean LoadTheGame(int file,int x,int y)
 {
-	long checksum,oldchecksum;
-	objtype *ob,nullobj;
+	long int checksum = 0;
+	long int oldchecksum = 0;
+	objtype *ob = NULL;
+	objtype nullobj;
 
 
 	checksum = 0;

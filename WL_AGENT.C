@@ -12,12 +12,11 @@
 =============================================================================
 */
 
-#define MAXMOUSETURN	10
+const short int MAXMOUSETURN = 10;
 
-
-#define MOVESCALE		150l
-#define BACKMOVESCALE	100l
-#define ANGLESCALE		20
+const long int MOVESCALE = 150;
+const long int BACKMOVESCALE = 100;
+const short int ANGLESCALE = 20;
 
 /*
 =============================================================================
@@ -35,7 +34,8 @@
 boolean		running;
 long		thrustspeed;
 
-unsigned	plux,pluy;			// player coordinates scaled to unsigned
+unsigned int plux = 0;
+unsigned int pluy = 0;			// player coordinates scaled to unsigned
 
 int			anglefrac;
 int			gotgatgun;	// JR
