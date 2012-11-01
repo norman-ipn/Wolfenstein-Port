@@ -263,8 +263,17 @@ byte	mask2;
 byte	mask3;
 
 
+
+/*
+ *  NOTE: near modifier is used to 
+ *  ask the compiler to put the code of the function 'ScaleLine'
+ *  to be allacated in the near memory locations.
+ *  far is used to refear no far memory locations.
+ * */
 void near ScaleLine (void)/*Check how it works this tipe of fuction sign*/
 {
+
+/* assembly code will change for C language equivalent code.*/
 asm	mov	cx,WORD PTR [linescale+2]
 asm	mov	es,cx						// segment of scaler
 
