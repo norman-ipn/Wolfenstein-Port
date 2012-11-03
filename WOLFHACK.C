@@ -28,13 +28,13 @@ fixed FixedMul (fixed a, fixed b)
 }
 
 
-int		mr_rowofs;
-int		mr_count;
-int		mr_xstep;
-int		mr_ystep;
-int		mr_xfrac;
-int		mr_yfrac;
-int		mr_dest;
+int		mr_rowofs = 0;
+int		mr_count = 0;
+int		mr_xstep = 0;
+int		mr_ystep = 0;
+int		mr_xfrac = 0;
+int		mr_yfrac = 0;
+int		mr_dest = 0;
 
 
 /*
@@ -53,13 +53,20 @@ This draws the screen, the floor and the roof, uses sines and cosines to know th
 
 void DrawSpans (int x1, int x2, int height)
 {
-	fixed		length;
-	int			ofs;
-	int			prestep;
-	fixed		startxfrac, startyfrac;
+	fixed length;
+	int ofs = 0;
+	int prestep = 0;
+	fixed startxfrac;
+	fixed startyfrac;
 
-	int			x, startx, count, plane, startplane;
-	byte		far	*toprow, far *dest;
+	int x = 0;
+	int startx = 0;
+	int count = 0;
+	int  plane = 0;
+	int  startplane = 0;
+	byte far;
+	byte *toprow = NULL;
+	byte far *dest = NULL;
 
 	toprow = planeylookup[height]+bufferofs;
 	mr_rowofs = mirrorofs[height];
@@ -112,8 +119,10 @@ this sets the sizes to draw that
 
 void SetPlaneViewSize (void)
 {
-	int		x,y;
-	byte 	far *dest, far *src;
+	int x = 0;
+	int y = 0;
+	byte 	far *dest = NULL;
+	byte	far *src = NULL;
 
 	halfheight = viewheight>>1;
 
@@ -162,8 +171,9 @@ screen and the plane).
 
 void DrawPlanes (void)
 {
-	int		height, lastheight;
-	int		x;
+	int height = 0
+	int lastheight = 0;
+	int x = 0;
 
 	if (viewheight>>1 != halfheight)
 		SetPlaneViewSize ();		// screen size has changed

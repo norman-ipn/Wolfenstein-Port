@@ -200,8 +200,8 @@ void NewState (objtype *ob, statetype *state)
 */
 boolean TryWalk (objtype *ob)
 {
-	int			doornum;
-	unsigned	temp;
+	int doornum = 0;
+	unsigned temp = 0;
 
 	doornum = -1;
 
@@ -378,8 +378,11 @@ boolean TryWalk (objtype *ob)
 
 void SelectDodgeDir (objtype *ob)
 {
-	int 		deltax,deltay,i;
-	unsigned	absdx,absdy;
+	int 	deltax = 0;
+	int	deltay = 0;
+	int	i = 0;
+	unsigned	absdx = 0;
+	unsigned 	absdy = 0;
 	dirtype 	dirtry[5];
 	dirtype 	turnaround,tdir;
 
@@ -494,9 +497,13 @@ void SelectDodgeDir (objtype *ob)
 
 void SelectChaseDir (objtype *ob)
 {
-	int deltax,deltay,i;
+	int deltax = 0;
+	int deltay = 0;
+	int i = 0;
 	dirtype d[3];
-	dirtype tdir, olddir, turnaround;
+	dirtype tdir;
+	dirtype olddir;
+	dirtype turnaround;
 
 
 	olddir=ob->dir;
@@ -604,9 +611,13 @@ void SelectChaseDir (objtype *ob)
 
 void SelectRunDir (objtype *ob)
 {
-	int deltax,deltay,i;
+	int deltax = 0;
+	int deltay = 0;
+	int i = 0;
 	dirtype d[3];
-	dirtype tdir, olddir, turnaround;
+	dirtype tdir;
+	dirtype olddir;
+	dirtype turnaround;
 
 
 	deltax=player->tilex - ob->tilex;
@@ -678,7 +689,8 @@ void SelectRunDir (objtype *ob)
 
 void MoveObj (objtype *ob, long move)
 {
-	long	deltax,deltay;
+	long	deltax = 0;
+	long	deltay = 0;
 
 	switch (ob->dir)
 	{
@@ -797,7 +809,12 @@ moveok:
 
 void DropItem (stat_t itemtype, int tilex, int tiley)
 {
-	int	x,y,xl,xh,yl,yh;
+	int	x = 0;
+	int	y = 0;
+	int	xl = 0;
+	int	xh = 0;
+	int	yl = 0;
+	int	yh = 0;
 
 //
 // find a free spot to put it in
@@ -834,7 +851,8 @@ void DropItem (stat_t itemtype, int tilex, int tiley)
 
 void KillActor (objtype *ob)
 {
-	int	tilex,tiley;
+	int	tilex = 0;
+	int	tiley = 0;
 
 	tilex = ob->tilex = ob->x >> TILESHIFT;		// drop item on center
 	tiley = ob->tiley = ob->y >> TILESHIFT;
@@ -1062,14 +1080,29 @@ void DamageActor (objtype *ob, unsigned damage)
 
 boolean CheckLine (objtype *ob)
 {
-	int	x1,y1,xt1,yt1,x2,y2,xt2,yt2;
-	int	x,y;
-	int	xdist,ydist,xstep,ystep;
-	int	temp;
-	int	partial,delta;
-	long	ltemp;
-	int	xfrac,yfrac,deltafrac;
-	unsigned	value,intercept;
+	int	x1 = 0;
+	int 	y1 = 0;
+	int 	xt1 = 0;
+	int 	yt1 = 0;
+	int 	x2 = 0;
+	int 	y2 = 0;
+	int 	xt2 = 0;
+	int 	yt2 = 0;
+	int	x = 0;
+	int 	y = 0;
+	int	xdist = 0;
+	int 	ydist = 0;
+	int 	xstep = 0;
+	int 	ystep = 0;
+	int	temp = 0;
+	int	partial = 0;
+	int 	delta = 0;
+	long	ltemp = 0;
+	int	xfrac = 0;
+	int 	yfrac = 0;
+	int 	deltafrac = 0;
+	unsigned	value = 0;
+	unsigned	intercept = 0;
 
 	x1 = ob->x >> UNSIGNEDSHIFT;		// 1/256 tile precision
 	y1 = ob->y >> UNSIGNEDSHIFT;
@@ -1212,7 +1245,8 @@ boolean CheckLine (objtype *ob)
 
 boolean CheckSight (objtype *ob)
 {
-	long		deltax,deltay;
+	long		deltax = 0;
+	long 		deltay = 0;
 
 //
 // don't bother tracing a line if the area isn't connected to the player's

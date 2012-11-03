@@ -19,10 +19,9 @@
 */
 
 t_compscale _seg *scaledirectory[MAXSCALEHEIGHT+1];
-long			fullscalefarcall[MAXSCALEHEIGHT+1];
-
-int			maxscale,maxscaleshl2;
-
+long fullscalefarcall[MAXSCALEHEIGHT+1];
+int maxscale = 0;
+int maxscaleshl2 = 0;
 boolean	insetupscaling;
 
 /*
