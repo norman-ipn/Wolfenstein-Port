@@ -5,8 +5,10 @@
 //
 /////////////////////////////////////////////////
 
-#define NUMSOUNDS		81
-#define NUMSNDCHUNKS		267
+//#define NUMSOUNDS		81
+const int NUMSOUNDS = 81;
+//#define NUMSNDCHUNKS		267
+const int NUMSNDCHUNKS = 257;
 
 //
 // Sound names & indexes
