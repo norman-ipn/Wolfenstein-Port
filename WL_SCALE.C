@@ -1,11 +1,16 @@
-// WL_SCALE.C
-//This file is editing by Oscar Aaron Revilla Escalona.
+/**
+\filename WL_SCALE.C 
+
+This file is editing by Oscar Aaron Revilla Escalona.
+
+*/
+
 
 #include "WL_DEF.H"
 #pragma hdrstop
 
-#define OP_RETF	0xcb
-
+//#define OP_RETF	0xcb
+constant unsigned char OP_RETF = 0xcb;
 /*
 =============================================================================
 
@@ -32,10 +37,10 @@ boolean	insetupscaling;
 =============================================================================
 */
 
-t_compscale 	_seg *work;
+t_compscale 	_seg *work = NULL;
 unsigned BuildCompScale (int height, memptr *finalspot);
 
-int			stepbytwo;
+int stepbytwo = 0;
 
 //===========================================================================
 
@@ -66,7 +71,7 @@ void SetupScaling (int maxscaleheight)
 	int i = 0;
 	int x = 0;
 	int y = 0;
-	byte	far *dest;
+	unsigned char *dest = NULL;
 
 	insetupscaling = true;
 
@@ -158,8 +163,8 @@ void SetupScaling (int maxscaleheight)
 
 unsigned BuildCompScale (int height, memptr *finalspot)
 {
-	byte	far;
-	byte  *code = NULL;
+	char far;
+	unsigned char *code = NULL;
 
 	int i = 0;
 	long fix = 0
@@ -252,10 +257,10 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 
 extern	int slinex = 0;
 extern	int slinewidth = 0;
-extern	unsigned far = 0;
+extern	unsigned int far = 0;  
 extern	unsigned *linecmds = NULL;
-extern	long linescale = 0;
-extern	unsigned maskword = 0;
+extern	long int linescale = 0;
+extern	unsigned int maskword = 0;
 
 byte	mask1;
 byte	mask2;
@@ -269,14 +274,27 @@ byte	mask3;
  *  to be allacated in the near memory locations.
  *  far is used to refear no far memory locations.
  * */
-void near ScaleLine (void)/*Check how it works this tipe of fuction sign*/
+void near ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
 {
 
-/* assembly code will change for C language equivalent code.*/
-asm	mov	cx,WORD PTR [linescale+2]
-asm	mov	es,cx						// segment of scaler
+/*
+  assembly code will change for C language equivalent code. 
 
-asm	mov bp,WORD PTR [linecmds]
+              mov destiny, source       destiny <- source
+*/
+ int CX = 0;
+ int ES = 0;
+ int BP = 0;
+
+//asm	mov	cx,WORD PTR [linescale+2]    /// 
+CX = *(linescale+2);
+
+//asm	mov	es,cx						// segment of scaler
+ES = CX;
+
+//asm	mov 	bp,WORD PTR [linecmds]
+BP = *(linecmds);
+
 asm	mov	dx,SC_INDEX+1				// to set SC_MAPMASK
 
 asm	mov	bx,[slinex]
@@ -660,7 +678,8 @@ void SimpleScaleShape (int xcenter, int shapenum, unsigned height)
 	unsigned	tempx = 0;
 	int		t = 0;
 	unsigned	far *cmdptr = NULL;
-	boolean		leftvis,rightvis; /*more booleans*/
+	boolean		leftvis;
+	boolean 	rightvis; /*more booleans*/
 
 
 	shape = PM_GetSpritePage (shapenum);
@@ -760,6 +779,6 @@ unsigned	wordmasks[8][8] = {
 int	slinex = 0;
 int 	slinewidth = 0;
 unsigned	far *linecmds = NULL;
-long	linescale = 0;
+long int	linescale = 0;
 unsigned	maskword = 0;
 
