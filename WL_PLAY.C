@@ -6,7 +6,7 @@
 
 /*
 =============================================================================
-I WILL WORK ON THIS FILE
+I ENRIQUE HERNÁNDEZ JIMÉNEZ WILL WORK ON THIS FILE
 						 LOCAL CONSTANTS
 
 =============================================================================
@@ -80,7 +80,7 @@ boolean		buttonstate[NUMBUTTONS];
 
 
 //===========================================================================
-
+// control variables (play menu)
 
 void	CenterWindow(word w,word h);
 void 	InitObjList (void);
@@ -247,7 +247,6 @@ int songs[]=
 #define RUNMOVE			70
 #define BASETURN		35
 #define RUNTURN			70
-
 #define JOYSCALE		2
 
 /*
@@ -257,6 +256,7 @@ int songs[]=
 =
 ===================
 */
+//this function is used to control the Keyboard
 
 void PollKeyboardButtons (void)
 {
@@ -275,7 +275,7 @@ void PollKeyboardButtons (void)
 =
 ===================
 */
-
+//this function is used to control mouse buttons right,left and scroll
 void PollMouseButtons (void)
 {
 	int	buttons;
@@ -299,7 +299,7 @@ void PollMouseButtons (void)
 =
 ===================
 */
-
+//this function is used in the case that we use joystick
 void PollJoystickButtons (void)
 {
 	int	buttons;
@@ -337,7 +337,7 @@ void PollJoystickButtons (void)
 =
 ===================
 */
-
+//this controls the direction that will be taken in the pollkeyboardbuttons function
 void PollKeyboardMove (void)
 {
 	if (buttonstate[bt_run])
@@ -372,7 +372,7 @@ void PollKeyboardMove (void)
 =
 ===================
 */
-
+//controls the mouse direction and calculate a "delta" to adjust the amount of move
 void PollMouseMove (void)
 {
 	int	mousexmove,mouseymove;
@@ -394,7 +394,7 @@ void PollMouseMove (void)
 =
 ===================
 */
-
+//calculates if the move is continuous or step by step in the x,y axis
 void PollJoystickMove (void)
 {
 	int	joyx,joyy;
