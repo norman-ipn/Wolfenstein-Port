@@ -6,7 +6,7 @@
 
 /*
 =============================================================================
-I ENRIQUE HERNÁNDEZ JIMÉNEZ WILL WORK ON THIS FILE
+I ENRIQUE HERNï¿½NDEZ JIMÃ‰NEZ WILL WORK ON THIS FILE
 						 LOCAL CONSTANTS
 
 =============================================================================
@@ -207,7 +207,7 @@ int songs[]=
  XFUNKIE_MUS,
  XDEATH_MUS,
  XGETYOU_MUS,		// DON'T KNOW
- ULTIMATE_MUS,	// Trans Gr”sse
+ ULTIMATE_MUS,	// Trans Grï¿½sse
 
  DUNGEON_MUS,
  GOINGAFT_MUS,
@@ -243,11 +243,11 @@ int songs[]=
 */
 
 
-#define BASEMOVE		35
-#define RUNMOVE			70
-#define BASETURN		35
-#define RUNTURN			70
-#define JOYSCALE		2
+const short int BASEMOVE = 35;
+const short int RUNMOVE = 70;
+const short int BASETURN = 35;
+const short int RUNTURN = 70
+const short int JOYSCALE = 2;
 
 /*
 ===================
@@ -260,7 +260,7 @@ int songs[]=
 
 void PollKeyboardButtons (void)
 {
-	int		i;
+	unsigned int i = 0;
 
 	for (i=0;i<NUMBUTTONS;i++)
 		if (Keyboard[buttonscan[i]])
@@ -278,7 +278,7 @@ void PollKeyboardButtons (void)
 //this function is used to control mouse buttons right,left and scroll
 void PollMouseButtons (void)
 {
-	int	buttons;
+	int buttons = 0;
 
 	buttons = IN_MouseButtons ();
 
@@ -302,7 +302,7 @@ void PollMouseButtons (void)
 //this function is used in the case that we use joystick
 void PollJoystickButtons (void)
 {
-	int	buttons;
+	int buttons = 0;
 
 	buttons = IN_JoyButtons ();
 
@@ -375,7 +375,8 @@ void PollKeyboardMove (void)
 //controls the mouse direction and calculate a "delta" to adjust the amount of move
 void PollMouseMove (void)
 {
-	int	mousexmove,mouseymove;
+	int mousexmove = 0;
+	int mouseymove = 0;
 
 	Mouse(MDelta);
 	mousexmove = _CX;
@@ -397,7 +398,8 @@ void PollMouseMove (void)
 //calculates if the move is continuous or step by step in the x,y axis
 void PollJoystickMove (void)
 {
-	int	joyx,joyy;
+	int joyx = 0;
+	int joyy = 0;
 
 	INL_GetJoyDelta(joystickport,&joyx,&joyy);
 
