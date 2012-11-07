@@ -37,10 +37,10 @@ unsigned screenloc[3]= {PAGE1START,PAGE2START,PAGE3START};
 #endif
 unsigned freelatch = FREESTART;
 
-long 	lasttimecount;
-long 	frameon;
+long int lasttimecount = 0;
+long int frameon = 0;
 
-unsigned	wallheight[MAXVIEWWIDTH];
+unsigned int wallheight[MAXVIEWWIDTH];
 
 fixed	tileglobal	= TILEGLOBAL;
 fixed	mindist		= MINDIST;
@@ -49,24 +49,29 @@ fixed	mindist		= MINDIST;
 //
 // math tables
 //
-int			pixelangle[MAXVIEWWIDTH];
-long		far finetangent[FINEANGLES/4];
-fixed 		far sintable[ANGLES+ANGLES/4],far *costable = sintable+(ANGLES/4);
+int	 pixelangle[MAXVIEWWIDTH];
+long int finetangent[FINEANGLES/4];
+int sintable[ANGLES+ANGLES/4];
+int *costable = sintable+(ANGLES/4);
+
 
 //
 // refresh variables
 //
-fixed	viewx,viewy;			// the focal point
-int		viewangle;
-fixed	viewsin,viewcos;
+int viewx = 0
+int viewy = 0;			// the focal point
+int viewangle = 0;
+int viewsin = 0;
+int viewcos = 0;
 
 
+/** these definitions need to be moved to a .h file */
 
 fixed	FixedByFrac (fixed a, fixed b);
 void	TransformActor (objtype *ob);
 void	BuildTables (void);
 void	ClearScreen (void);
-int		CalcRotate (objtype *ob);
+int	CalcRotate (objtype *ob);
 void	DrawScaleds (void);
 void	CalcTics (void);
 void	FixOfs (void);
@@ -77,30 +82,43 @@ void	ThreeDRefresh (void);
 //
 // wall optimization variables
 //
-int		lastside;		// true for vertical
-long	lastintercept;
-int		lasttilehit;
+int	 lastside = 0;		// true for vertical
+long int lastintercept = 0;
+int	 lasttilehit = 0;
 
 
 //
 // ray tracing variables
 //
-int			focaltx,focalty,viewtx,viewty;
+int focaltx = 0;
+int focalty = 0;
+int viewtx = 0;
+int viewty = 0;
 
-int			midangle,angle;
-unsigned	xpartial,ypartial;
-unsigned	xpartialup,xpartialdown,ypartialup,ypartialdown;
-unsigned	xinttile,yinttile;
+int midangle=0;
+int angle = 0;
+unsigned int xpartial = 0;
+unsigned int ypartial = 0;
+unsigned int xpartialup = 0;
+unsigned int xpartialdown = 0;
+unsigned int ypartialup = 0;
+unsigned int ypartialdown = 0;
+unsigned int xinttile = 0;
+unsigend int yinttile = 0;
+unsigned int tilehit = 0;
+unsigned int pixx = 0;
 
-unsigned	tilehit;
-unsigned	pixx;
+int xtile = 0;
+int ytile = 0;
+int xtilestep = 0;
+int ytilestep = 0;
+long int xintercept = 0;
+long int yintercept = 0;
+long int xstep = 0;
+long int ystep = 0;
 
-int		xtile,ytile;
-int		xtilestep,ytilestep;
-long	xintercept,yintercept;
-long	xstep,ystep;
-
-int		horizwall[MAXWALLTILES],vertwall[MAXWALLTILES];
+int horizwall[MAXWALLTILES];
+int vertwall[MAXWALLTILES];
 
 
 /*
