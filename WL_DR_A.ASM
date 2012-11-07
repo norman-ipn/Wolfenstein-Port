@@ -69,9 +69,14 @@ CODESEG
 
 ;-------------------
 ;
-; xpartialbyystep
+; xpartialbyystep = x partial by step
 ;
 ; multiplies long [ystep] (possibly negative), by word [xpartial] (in BX)
+;
+; This seems to be a simple multiplication. 
+; maybe this way was efficient on 286, 
+; we are not going to reach that level.
+; 
 ;
 ; returns dx:ax
 ; trashes bx,cx,di
@@ -82,10 +87,14 @@ PROC xpartialbyystep NEAR
 ;
 ; setup
 ;
-	mov	ax,[WORD ystep]
-	mov	cx,[WORD ystep+2]
-	or	cx,cx               ; is ystep negatice?
-	jns	@@multpos
+	mov	ax,[WORD ystep]		; ystep is of type int (signed)  (16 bits)
+	mov	cx,[WORD ystep+2]	; ystep + 2 second  part of the ystep variable (other 16 bits)
+	or	cx,cx                	; is ystep negative?
+	jns	@@multpos		; jump on no sign
+
+					; if ( ystep < 0 ) 	{ return cx:ax * bx;  }
+					; else 			{ return cx:ax * bx; }
+
 ;
 ; multiply negative cx:ax by bx
 ;
@@ -127,6 +136,9 @@ ENDP
 ; ypartialbyxstep
 ;
 ; multiplies long [xstep] (possibly negative), by word [ypartial] (in BP)
+;
+; Another simple multiplications. 
+;
 ;
 ; returns dx:ax
 ; trashes cx,di,bp
@@ -189,7 +201,7 @@ PUBLIC	AsmRefresh
 	push	di
 	push	bp
 
-	mov	[pixx],0
+	mov	[pixx],0	; pixx = 0;
 ;---------------------------------------------------------------------------
 ;
 ; Setup to trace a ray through pixx view pixel
@@ -209,7 +221,7 @@ pixxloop:
 	mov	es,ax
 	mov	cx,[midangle]			; center of view area
 	mov	bx,[pixx]
-	shl	bx,1
+	shl	bx,1				; shift left 010101 << 1 = 101010, the final effect is multiply by 2 
 	add	cx,[pixelangle+bx]		; delta for this pixel
 	cmp	cx,0
 	jge	not0
