@@ -285,25 +285,42 @@ void near ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
  int CX = 0;
  int ES = 0;
  int BP = 0;
+ int DX = 0;
+ int DI = 0;//destination register
 
 //asm	mov	cx,WORD PTR [linescale+2]    /// 
 CX = *(linescale+2);
 
 //asm	mov	es,cx						// segment of scaler
 ES = CX;
-
+0
 //asm	mov 	bp,WORD PTR [linecmds]
 BP = *(linecmds);
 
-asm	mov	dx,SC_INDEX+1				// to set SC_MAPMASK
+//asm	mov	dx,SC_INDEX+1	// to set SC_MAPMASK
+DX = SC_INDEX+1;
 
-asm	mov	bx,[slinex]
-asm	mov	di,bx
-asm	shr	di,2						// X in bytes
-asm	add	di,[bufferofs]
-asm	and	bx,3
-asm	shl	bx,3
-asm	add	bx,[slinewidth]				// bx = (pixel*8+pixwidth)
+//asm	mov	bx,[slinex]
+BX = *(slinex);
+
+//asm	mov	di,bx
+DI = BX;
+
+//asm	shr	di,2						// X in bytes
+DI>>2;
+
+//asm	add	di,[bufferofs]
+DI = *(bufferofs);
+
+//asm	and	bx,3
+BX = BX & 0x3;
+
+//asm	shl	bx,3
+BX<<2;
+
+//asm	add	bx,[slinewidth]				// bx = (pixel*8+pixwidth)
+BX = BX + *(slinewidth);
+
 asm	mov	al,BYTE [mapmasks3-1+bx]	// -1 because pixwidth of 1 is first
 asm	mov	ds,WORD PTR [linecmds+2]
 asm	or	al,al
