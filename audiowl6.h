@@ -1,3 +1,12 @@
+/**
+ \file audiowl6.h
+
+ new version of AUDIOWL6.H 
+
+ 
+*/
+
+
 /////////////////////////////////////////////////
 //
 // MUSE Header for .WL6

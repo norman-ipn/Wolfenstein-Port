@@ -1,87 +1,57 @@
-// ID_VH.C
+/**
+  
+ \filename id_vh.c
 
-#include "ID_HEADS.H"
+  new version of ID_VH.C
 
-
-/*
- Al define values need to be changed to 'const' values
-
- Ex 
-
- cont short int SCREENWIDTH = 80;
-
+  All the .h stuff is in id_vh.h and all the .c stuff is here.
 
 */
 
-#define	SCREENWIDTH		80
-#define CHARWIDTH		2
-#define TILEWIDTH		4
-#define GRPLANES		4
-#define BYTEPIXELS		4
-
-#define SCREENXMASK		(~3)
-#define SCREENXPLUS		(3)
-#define SCREENXDIV		(4)
-
-#define VIEWWIDTH		80
-
-#define PIXTOBLOCK		4		// 16 pixels to an update block
-
-#define UNCACHEGRCHUNK(chunk)	{MM_FreePtr(&grsegs[chunk]);grneeded[chunk]&=~ca_levelbit;}
-
-byte	update[UPDATEHIGH][UPDATEWIDE];
-
-//==========================================================================
-
-pictabletype	_seg *pictable;
-
-
-int	px,py;
-byte	fontcolor,backcolor;
-int	fontnumber;
-int bufferwidth,bufferheight;
-
-
-//==========================================================================
-
-void	VWL_UpdateScreenBlocks (void);
-
-//==========================================================================
-
+#include "id_vh.h"
 
 /*
+  
+  Drawing a String on the screen.
 
-  char far * 
-
-  'far pointers' area used to point to an adress that is 'far' away from
-  the current block of memory,
-
-  We can asume that all the memory space is not 'far'
-
+  Will be done using cairo.
 
 */
-void VW_DrawPropString (char far *string)
+void VW_DrawPropString (char *string)
 {
-	fontstruct	far	*font;
-	int		width,step,height,i;
-	byte	far *source, far *dest, far *origdest;
-	byte	ch,mask;
 
-	font = (fontstruct far *)grsegs[STARTFONT+fontnumber];
+/* ------------- COMMENTED CODE, WAITING TO BE CHANGED ------------------
+
+	fontstruct	*font;
+	int		width,step,height,i;
+	byte	*source;
+        byte *dest;
+   	byte *origdest;
+	byte	ch,mask;
+  	int offset = 0;
+
+	font = (fontstruct  *)grsegs[STARTFONT+fontnumber];
 	height = bufferheight = font->height;
-	dest = origdest = MK_FP(SCREENSEG,bufferofs+ylookup[py]+(px>>2));
+
+	// access to a specific position on the Screen segment
+        //    the position is 'bufferofs + ylookup..'  
+        offset = bufferofs+ylookup[py]+(px>>2);
+
+	origdest = MK_FP( SCREENSEG, offset );
+        dest = origdest;
+
 	mask = 1<<(px&3);
 
 
 	while ((ch = *string++)!=0)
 	{
 		width = step = font->width[ch];
-		source = ((byte far *)font)+font->location[ch];
+		source = ((byte *)font)+font->location[ch];
 		while (width--)
 		{
 			VGAMAPMASK(mask);
 
-/*
+*//*
  The 'asm' keyword is used to introduce assembly code.
  Most of the assembly instruction are simple to 'decode'
 
@@ -94,10 +64,7 @@ void VW_DrawPropString (char far *string)
   On the same "Assembly page" we need to figure out
   the meaning of the instructions: lds, les, or, je, add, loop, ...
   and others...
-
-
-
-*/
+*//*
 
 asm	mov	ah,[BYTE PTR fontcolor]
 asm	mov	bx,[step]
@@ -106,11 +73,11 @@ asm	mov	dx,[linewidth]
 asm	lds	si,[source]
 asm	les	di,[dest]
 
-/* Here 'vertloop' is a tag, 
+*//* Here 'vertloop' is a tag, 
    used to refer the 'mov' operation, 
    for example a few lines below you can see the instruction 'loop vertloop'
    That instruction return control to this 'tag'
-*/
+*//*
 vertloop:
 asm	mov	al,[si]
 asm	or	al,al
@@ -136,14 +103,19 @@ asm	mov	ds,ax
 	}
 bufferheight = height;
 bufferwidth = ((dest+1)-origdest)*4;
+------------------------COMMENTED CODE, WAITING TO BE REVIEWED--------------------*/
+
 }
 
 
-void VW_DrawColorPropString (char far *string)
+void VW_DrawColorPropString (char  *string)
 {
-	fontstruct	far	*font;
+
+/* ---------------------TEMPORAL COMMENT ----------------------
+
+	fontstruct	*font;
 	int		width,step,height,i;
-	byte	far *source, far *dest, far *origdest;
+	byte	 *source, *dest, *origdest;
 	byte	ch,mask;
 
 	font = (fontstruct far *)grsegs[STARTFONT+fontnumber];
@@ -199,10 +171,8 @@ asm	mov	ds,ax
 	}
 bufferheight = height;
 bufferwidth = ((dest+1)-origdest)*4;
+----------------TEMPORAL COMMENT------------------------*/
 }
-
-
-//==========================================================================
 
 
 /*
@@ -213,8 +183,11 @@ bufferwidth = ((dest+1)-origdest)*4;
 =================
 */
 
-void VL_MungePic (byte far *source, unsigned width, unsigned height)
+void VL_MungePic (byte *source, unsigned width, unsigned height)
 {
+/*
+-----------------------------TEMPORAL COMMENT----------------------------------
+
 	unsigned	x,y,plane,size,pwidth;
 	byte		_seg *temp, far *dest, far *srcline;
 
@@ -247,24 +220,25 @@ void VL_MungePic (byte far *source, unsigned width, unsigned height)
 	}
 
 	MM_FreePtr (&(memptr)temp);
+-----------------TEMPORAL COMMENT -------------------------*/
 }
 
-void VWL_MeasureString (char far *string, word *width, word *height
-	, fontstruct _seg *font)
+void VWL_MeasureString (char *string, word *width, word *height
+	, fontstruct *font)
 {
 	*height = font->height;
 	for (*width = 0;*string;string++)
-		*width += font->width[*((byte far *)string)];	// proportional width
+		*width += font->width[*((byte *)string)];	// proportional width
 }
 
-void	VW_MeasurePropString (char far *string, word *width, word *height)
+void	VW_MeasurePropString (char *string, word *width, word *height)
 {
-	VWL_MeasureString(string,width,height,(fontstruct _seg *)grsegs[STARTFONT+fontnumber]);
+	VWL_MeasureString(string,width,height,(fontstruct *)grsegs[STARTFONT+fontnumber]);
 }
 
-void	VW_MeasureMPropString  (char far *string, word *width, word *height)
+void	VW_MeasureMPropString  (char *string, word *width, word *height)
 {
-	VWL_MeasureString(string,width,height,(fontstruct _seg *)grsegs[STARTFONTM+fontnumber]);
+	VWL_MeasureString(string,width,height,(fontstruct *)grsegs[STARTFONTM+fontnumber]);
 }
 
 
@@ -336,21 +310,26 @@ int VW_MarkUpdateBlock (int x1, int y1, int x2, int y2)
 
 void VWB_DrawTile8 (int x, int y, int tile)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	if (VW_MarkUpdateBlock (x,y,x+7,y+7))
 		LatchDrawChar(x,y,tile);
 
-        /* LatchDraw.... functions seems to be the final drawing functions.....lets check it..*/
+    //     LatchDraw.... functions seems to be the final drawing functions.....lets check it..
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 void VWB_DrawTile8M (int x, int y, int tile)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	if (VW_MarkUpdateBlock (x,y,x+7,y+7))
 		VL_MemToScreen (((byte far *)grsegs[STARTTILE8M])+tile*64,8,8,x,y);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 
 void VWB_DrawPic (int x, int y, int chunknum)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	int	picnum = chunknum - STARTPICS;
 	unsigned width,height;
 
@@ -361,46 +340,59 @@ void VWB_DrawPic (int x, int y, int chunknum)
 
 	if (VW_MarkUpdateBlock (x,y,x+width-1,y+height-1))
 		VL_MemToScreen (grsegs[chunknum],width,height,x,y);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 
 
-void VWB_DrawPropString	 (char far *string)
+void VWB_DrawPropString	 (char *string)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	int x;
 	x=px;
 	VW_DrawPropString (string);
 	VW_MarkUpdateBlock(x,py,px-1,py+bufferheight-1);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 
 void VWB_Bar (int x, int y, int width, int height, int color)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	if (VW_MarkUpdateBlock (x,y,x+width,y+height-1) )
 		VW_Bar (x,y,width,height,color);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 void VWB_Plot (int x, int y, int color)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	if (VW_MarkUpdateBlock (x,y,x,y))
 		VW_Plot(x,y,color);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 void VWB_Hlin (int x1, int x2, int y, int color)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	if (VW_MarkUpdateBlock (x1,y,x2,y))
 		VW_Hlin(x1,x2,y,color);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 void VWB_Vlin (int y1, int y2, int x, int color)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	if (VW_MarkUpdateBlock (x,y1,x,y2))
 		VW_Vlin(y1,y2,x,color);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 void VW_UpdateScreen (void)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	VH_UpdateScreen ();
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 
@@ -422,15 +414,15 @@ void VW_UpdateScreen (void)
 
 void LatchDrawPic (unsigned x, unsigned y, unsigned picnum)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	unsigned wide, height, source;
 
 	wide = pictable[picnum-STARTPICS].width;
 	height = pictable[picnum-STARTPICS].height;
 	source = latchpics[2+picnum-LATCHPICS_LUMP_START];
 
-	/* Latch to Screen
-        */
 	VL_LatchToScreen (source,wide/4,height,x*8,y);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 
@@ -446,6 +438,7 @@ void LatchDrawPic (unsigned x, unsigned y, unsigned picnum)
 
 void LoadLatchMem (void)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	int	i,j,p,m,width,height,start,end;
 	byte	far *src;
 	unsigned	destoff;
@@ -502,6 +495,7 @@ void LoadLatchMem (void)
 	}
 
 	EGAMAPMASK(15);
+------------------TEMPORAL COMMENT -------------------------*/
 }
 
 //==========================================================================
@@ -516,11 +510,10 @@ void LoadLatchMem (void)
 ===================
 */
 
-extern	ControlInfo	c;
-
 boolean FizzleFade (unsigned source, unsigned dest,
 	unsigned width,unsigned height, unsigned frames, boolean abortable)
 {
+/*------------------TEMPORAL COMMENT -------------------------
 	int			pixperframe;
 	unsigned	drawofs,pagedelta;
 	byte 		mask,maskb[8] = {1,2,4,8};
@@ -594,4 +587,6 @@ noxor:
 	} while (1);
 
 
+------------------TEMPORAL COMMENT -------------------------*/
+ return 0;
 }

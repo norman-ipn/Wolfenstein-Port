@@ -1,8 +1,19 @@
 // ID_MM.H
 
 #ifndef __ID_CA__
-
 #define __ID_CA__
+
+/**
+  Include section
+*/
+#include "id_heads.h"
+
+
+/**
+
+  Define section
+
+*/
 
 #define SAVENEARHEAP	0x400		// space to leave in data segment
 #define SAVEFARHEAP		0			// space to leave in far heap

@@ -1,3 +1,10 @@
+/**
+  \file gfxv_wl6.h
+
+   new version of GFXV_WL6.H
+
+*/
+
 //////////////////////////////////////
 //
 // Graphics .H file for .WL6

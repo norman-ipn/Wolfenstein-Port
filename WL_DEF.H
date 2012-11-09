@@ -1,7 +1,14 @@
 //#define BETA
+
+/** 
+
+  \filename WL_DEF.H
+ 
+*/
+
 #define YEAR	1992
 #define MONTH	9
-#define DAY		30
+#define DAY	30
 
 #include "ID_HEADS.H"
 #include <MATH.H>
