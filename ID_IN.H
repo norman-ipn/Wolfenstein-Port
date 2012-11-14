@@ -4,6 +4,9 @@
 //	v1.0d1
 //	By Jason Blochowiak
 //
+//
+
+#include "id_heads.h"
 
 #ifndef	__ID_IN__
 #define	__ID_IN__
