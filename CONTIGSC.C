@@ -31,9 +31,6 @@ long int	freescalermemory;
 
 =============================================================================
 */
-/*
- Implemented on asm(?)
-*/
 unsigned BuildCompScale (int height, byte far *code);
 
 int	stepbytwo = 0;
@@ -159,18 +156,24 @@ long SetupScaling (int maxscaleheight)
 ========================
 */
 
-unsigned BuildCompScale (int height, byte far *code)
+unsigned BuildCompScale (int height, byte *code)
 {
-	t_compscale 	far *work;
+	t_compscale 	*work = NULL;
 
-	int			i;
-	long		fix,step;
-	unsigned	src,totalscaled,totalsize;
-	int			startpix,endpix,toppix;
+	int	 i = 0;
+	long int fix = 0;
+	long int step = 0;
+	unsigned int src = 0;
+	unsigned int totalscaled = 0;
+	unsigned int totalsize = 0;
+	int startpix = 0;
+	int endpix = 0;
+	int toppix = 0;
 
-	work = (t_compscale far *)code;
+	work = (t_compscale *)code;
 
-	step = ((long)height<<16) / 64;
+	step = ((long)height<<16) / 64;  
+
 	code = &work->code[0];
 	toppix = (viewheight-height)/2;
 	fix = 0;
