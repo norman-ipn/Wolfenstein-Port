@@ -4,7 +4,7 @@
 // by John Romero (C) 1992 Id Software, Inc.
 //
 ////////////////////////////////////////////////////////////////////
-#include "wl_def.h"
+#include "wl_def.h"	/*We have to check for this library, i cannot find it*/
 #pragma hdrstop
 
 //
