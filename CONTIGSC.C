@@ -31,7 +31,9 @@ long int	freescalermemory;
 
 =============================================================================
 */
-
+/*
+ Implemented on asm(?)
+*/
 unsigned BuildCompScale (int height, byte far *code);
 
 int	stepbytwo = 0;
@@ -62,10 +64,13 @@ void far BadScale (void)
 
 long SetupScaling (int maxscaleheight)
 {
-	int		i,x,y;
-	byte	far *dest;
-	unsigned	seg,ofs;
-	long	size;
+	int	i = 0;
+	int 	x = 0;
+	int 	y = 0;
+	byte	 *dest = NULL;
+	unsigned int seg = 0;
+	unsigned int ofs = 0;
+	long	int size = 0;
 
 
 	maxscaleheight/=2;			// one scaler every two pixels
@@ -88,7 +93,7 @@ long SetupScaling (int maxscaleheight)
 		ofs = (FP_OFF(dest)+15)&~15;
 		dest = MK_FP(seg+ofs/16,0);
 
-		scaledirectory[i] = (t_compscale far *)dest;
+		scaledirectory[i] = (t_compscale f*)dest;
 		size = BuildCompScale (i*2,dest);
 		dest += size;
 
