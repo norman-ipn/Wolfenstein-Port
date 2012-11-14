@@ -1,6 +1,14 @@
 //
 // WL_MENU.H
 //
+//
+
+#ifndef __WL_MENU_H__
+#define __WL_MENU_H__
+
+#include "ID_IN.H" // for ControlInfo structure 
+
+
 #ifdef SPEAR
 
 #define BORDCOLOR	0x99
@@ -227,5 +235,4 @@ extern LRstruct LevelRatios[];
 void Write (int x,int y,char *string);
 void NonShareware(void);
 int GetYorN(int x,int y,int pic);
-
-
+#endif//__WL_MENU_H__

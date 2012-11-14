@@ -6,6 +6,9 @@
  
 */
 
+#ifndef __WL_DEF_H__
+#define __WL_DEF_H__
+
 #define YEAR	1992
 #define MONTH	9
 #define DAY	30
@@ -15,6 +18,7 @@
 #include <values.h>
 
 #include "WL_MENU.H"
+#include "ID_MM.H" // for memptr datatype
 
 #ifdef SPANISH
 #include "SPANISH.H"
@@ -718,7 +722,7 @@ typedef enum	{
 	gd_easy,
 	gd_medium,
 	gd_hard
-};
+} level ; /* unknow name for this type, added just to make it compile */
 
 //---------------
 //
@@ -1296,3 +1300,7 @@ extern	char	helpfilename[],endfilename[];
 
 extern	void	HelpScreens(void);
 extern	void	EndText(void);
+
+
+
+#endif//__WL_DEF_H__
