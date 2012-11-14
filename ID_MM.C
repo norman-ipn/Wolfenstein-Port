@@ -1,6 +1,13 @@
 // NEWMM.C
 
 /*
+--------------------------------------------------------------------------------------------
+Im working with this file, im trying to change it from C to c.
+But i need to know how to upload a file to submit the .c code and dont modify to much this.
+Eduardo Adolfo Arroyo Lopez
+
+--------------------------------------------------------------------------------------------
+
 =============================================================================
 
 		   ID software memory manager

@@ -1,12 +1,21 @@
 // ID_VL.C
 
-#include <dos.h>
-#include <alloc.h>
-#include <mem.h>
+//#include <dos.h>
+//#include <alloc.h>
+//#include <mem.h>
 #include <string.h>
 
-#include "ID_HEAD.H"
+//#include "ID_HEAD.H"
+/*I replaced de ID_HEAD.H by new library id_heads.h*/
+
+#include "id_heads.h"
 #include "ID_VL.H"
+
+/*I'm not sure what the next line it means*/
+
+/*I found that all the code before #pragma hdrstop will be part of a precompiled header. If no filename parameter is given, the name of the header will be the base name of the source file with a .PCH extension, as mentioned in the documentation:
+
+*/
 
 #pragma hdrstop
 
@@ -55,6 +64,13 @@ void VL_WaitVBL (int vbls);
 = VL_Startup
 =
 =======================
+*/
+
+
+/*How is it work this function?, somebody can help me, because when i tried to compile this the
+compiler said this: 	expected "(" before cld 
+			cld no se declaro aqui
+Where _argc variable come from?
 */
 
 #if 0
