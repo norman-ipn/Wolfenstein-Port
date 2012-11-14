@@ -13,14 +13,15 @@
 =============================================================================
 */
 
-t_compscale far *scaledirectory[MAXSCALEHEIGHT+1];
-long			fullscalefarcall[MAXSCALEHEIGHT+1];
+t_compscale *scaledirectory[MAXSCALEHEIGHT+1];
+long	int		fullscalefarcall[MAXSCALEHEIGHT+1];
 
-int			maxscale,maxscaleshl2;
+int			maxscale = 0;
+int maxscaleshl2 = 0;
 
-byte far	*scalermemory;
-byte _seg	*endscalermemory;
-long		freescalermemory;
+byte 	*scalermemory;
+byte 	*endscalermemory;
+long int	freescalermemory;
 
 
 /*
@@ -33,7 +34,7 @@ long		freescalermemory;
 
 unsigned BuildCompScale (int height, byte far *code);
 
-int			stepbytwo;
+int	stepbytwo = 0;
 
 //===========================================================================
 
