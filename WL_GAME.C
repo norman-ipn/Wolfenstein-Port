@@ -644,7 +644,7 @@ void ScanInfoPlane (void)
 void SetupGameLevel (void)
 {
 	int	x,y,i;
-	unsigned	far *map,tile,spot;
+	unsigned	*map,tile,spot;
 
 
 	if (!loadedgame)
