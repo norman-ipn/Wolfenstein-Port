@@ -9,6 +9,10 @@
 Im working on this code
 Salazar Ortiz Evila Lucero
 
+Found a veery common error in a lot of lines
+error: "se requiere un l-valor como operando izquierdo de la asignacion"
+searchig what it can be
+
 							STATICS
 
 =============================================================================
