@@ -4,7 +4,10 @@
 #pragma hdrstop
 
 /*
+
 =============================================================================
+Im working on this code
+Salazar Ortiz Evila Lucero
 
 							STATICS
 
