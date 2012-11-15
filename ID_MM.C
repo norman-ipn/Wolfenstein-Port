@@ -11,6 +11,10 @@ have found are the word "far" for some variables (i dont know what is far, i've 
 someone see this). And the other error is because the mmblocktype structure has a field called *useptr in a commit
 i deleted the commit part and now those errors are not showing anymore
 
+*Update:
+Another error that i found is the memptr, is not recognized by any function like a type, and some variables are not 
+declared in here.
+Now im working on that memptr...
 --------------------------------------------------------------------------------------------
 
 =============================================================================
