@@ -6,6 +6,11 @@ Im working with this file, im trying to change it from C to c.
 But i need to know how to upload a file to submit the .c code and dont modify to much this.
 Eduardo Adolfo Arroyo Lopez
 
+Im getting troubles to upload a file, but by the lines sthat i've already checked, two of the very common errors that i 
+have found are the word "far" for some variables (i dont know what is far, i've posted on the help page from wiki if 
+someone see this). And the other error is because the mmblocktype structure has a field called *useptr in a commit
+i deleted the commit part and now those errors are not showing anymore
+
 --------------------------------------------------------------------------------------------
 
 =============================================================================
