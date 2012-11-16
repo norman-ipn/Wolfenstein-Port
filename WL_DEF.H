@@ -21,9 +21,9 @@
 #include "ID_MM.H" // for memptr datatype
 
 #ifdef SPANISH
-#include "SPANISH.H"
+#include "SPANISH.h"
 #else
-#include "FOREIGN.H"
+#include "FOREIGN.h"
 #endif
 
 /*
@@ -34,7 +34,7 @@
     This version uses mostly the same engine but has different leves.
 */
 #ifdef SPEAR
-#include "F_SPEAR.H"
+#include "F_SPEAR.h"
 #endif
 
 /*
