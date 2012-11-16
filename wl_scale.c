@@ -6,7 +6,7 @@ This file is editing by Oscar Aaron Revilla Escalona.
 */
 
 
-#include "WL_DEF.h"
+#include "wl_def.h"
 #pragma hdrstop
 
 //#define OP_RETF	0xcb
