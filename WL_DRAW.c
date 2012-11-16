@@ -58,7 +58,7 @@ int *costable = sintable+(ANGLES/4);
 //
 // refresh variables
 //
-int viewx = 0
+int viewx = 0;
 int viewy = 0;			// the focal point
 int viewangle = 0;
 int viewsin = 0;
@@ -104,7 +104,7 @@ unsigned int xpartialdown = 0;
 unsigned int ypartialup = 0;
 unsigned int ypartialdown = 0;
 unsigned int xinttile = 0;
-unsigend int yinttile = 0;
+unsigned int yinttile = 0;
 unsigned int tilehit = 0;
 unsigned int pixx = 0;
 
@@ -157,46 +157,20 @@ void AsmRefresh (void);			// in WL_DR_A.ASM
 
 #pragma warn -rvl			// I stick the return value in with ASMs
 
-fixed FixedByFrac (fixed a, fixed b)
-{
-//
-// setup
-//
-asm	mov	si,[WORD PTR b+2]	// sign of result = sign of fraction
+/**
+* \brief Multiplies a long by an int
+*
+* @param a The number whose type is long (can be fixed either)
+* @param b The number whose type is int (can be fixed either)
+*
+*/
+fixed FixedByFrac (fixed a, fixed b){
+	long la = 0;
+	long lb = 0;
+	long result = 0;
 
-asm	mov	ax,[WORD PTR a]
-asm	mov	cx,[WORD PTR a+2]
-
-asm	or	cx,cx
-asm	jns	aok:				// negative?
-asm	neg	cx
-asm	neg	ax
-asm	sbb	cx,0
-asm	xor	si,0x8000			// toggle sign of result
-aok:
-
-//
-// multiply  cx:ax by bx
-//
-asm	mov	bx,[WORD PTR b]
-asm	mul	bx					// fraction*fraction
-asm	mov	di,dx				// di is low word of result
-asm	mov	ax,cx				//
-asm	mul	bx					// units*fraction
-asm add	ax,di
-asm	adc	dx,0
-
-//
-// put result dx:ax in 2's complement
-//
-asm	test	si,0x8000		// is the result negative?
-asm	jz	ansok:
-asm	neg	dx
-asm	neg	ax
-asm	sbb	dx,0
-
-ansok:;
-
+	result = la*lb;
+	return (fixed)result;
 }
 
 #pragma warn +rvl
@@ -264,38 +238,24 @@ void TransformActor (objtype *ob)
 //
 // calculate height (heightnumerator/(nx>>8))
 //
-	asm	mov	ax,[WORD PTR heightnumerator]
-	asm	mov	dx,[WORD PTR heightnumerator+2]
-	asm	idiv	[WORD PTR nx+1]			// nx>>8
-	asm	mov	[WORD PTR temp],ax
-	asm	mov	[WORD PTR temp+2],dx
-
-	ob->viewheight = temp;
+	ob->viewheight = heightnumerator/(nx>>8);
 }
 
 //==========================================================================
 
-/*
-========================
-=
-= TransformTile
-=
-= Takes paramaters:
-=   tx,ty		: tile the object is centered in
-=
-= globals:
-=   viewx,viewy		: point of view
-=   viewcos,viewsin	: sin/cos of viewangle
-=   scale		: conversion from global value to screen value
-=
-= sets:
-=   screenx,transx,transy,screenheight: projected edge location and size
-=
-= Returns true if the tile is withing getting distance
-=
-========================
+/**
+* \brief sets: screenx,transx,transy,screenheight: projected edge location and size.
+*
+* @param tx X coordinate where the object is centered in.
+* @param ty Y coordinate where the object is centered in.
+* @return Returns true if the tile is withing getting distance
+* 
+* globals:
+*   viewx,viewy		: point of view
+*   viewcos,viewsin	: sin/cos of viewangle
+*   scale		: conversion from global value to screen value
+*
 */
-
 boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 {
 	int ratio;
@@ -337,13 +297,8 @@ boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 //
 // calculate height (heightnumerator/(nx>>8))
 //
-	asm	mov	ax,[WORD PTR heightnumerator]
-	asm	mov	dx,[WORD PTR heightnumerator+2]
-	asm	idiv	[WORD PTR nx+1]			// nx>>8
-	asm	mov	[WORD PTR temp],ax
-	asm	mov	[WORD PTR temp+2],dx
 
-	*dispheight = temp;
+	*dispheight = heightnumerator/(nx>>8);
 
 //
 // see if it should be grabbed
@@ -356,18 +311,19 @@ boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 
 //==========================================================================
 
-/*
-====================
-=
-= CalcHeight
-=
-= Calculates the height of xintercept,yintercept from viewx,viewy
-=
-====================
-*/
-
 #pragma warn -rvl			// I stick the return value in with ASMs
 
+/**
+* \brief Calculates the height of xintercept,yintercept from viewx,viewy
+*
+* @param return Calculated height
+*
+* globals:
+*   viewx,viewy		: point of view
+*   viewcos,viewsin	: sin/cos of viewangle
+* 	xintercept,yintercept : interception point
+*
+*/
 int	CalcHeight (void)
 {
 	int	transheight;
@@ -389,9 +345,8 @@ int	CalcHeight (void)
 	if (nx<mindist)
 		nx=mindist;			// don't let divide overflow
 
-	asm	mov	ax,[WORD PTR heightnumerator]
-	asm	mov	dx,[WORD PTR heightnumerator+2]
-	asm	idiv	[WORD PTR nx+1]			// nx>>8
+	ratio = heightnumerator/(nx>>8);
+	return ratio;
 }
 
 
@@ -409,7 +364,7 @@ long		postsource;
 unsigned	postx;
 unsigned	postwidth;
 
-void	near ScalePost (void)		// VGA version
+void ScalePost (void)		// VGA version
 {
 	asm	mov	ax,SCREENSEG
 	asm	mov	es,ax
@@ -512,7 +467,7 @@ void HitVertWall (void)
 		else
 		{
 			ScalePost ();
-			(unsigned)postsource = texture;
+			postsource = (long)texture;
 			postwidth = 1;
 			postx = pixx;
 		}
@@ -542,7 +497,7 @@ void HitVertWall (void)
 			wallpic = vertwall[tilehit];
 
 		*( ((unsigned *)&postsource)+1) = (unsigned)PM_GetPage(wallpic);
-		(unsigned)postsource = texture;
+		postsource = (long)texture;
 
 	}
 }
@@ -584,7 +539,7 @@ void HitHorizWall (void)
 		else
 		{
 			ScalePost ();
-			(unsigned)postsource = texture;
+			postsource = (long)texture;
 			postwidth = 1;
 			postx = pixx;
 		}
@@ -614,7 +569,7 @@ void HitHorizWall (void)
 			wallpic = horizwall[tilehit];
 
 		*( ((unsigned *)&postsource)+1) = (unsigned)PM_GetPage(wallpic);
-		(unsigned)postsource = texture;
+		postsource = (long)texture;
 	}
 
 }
@@ -651,7 +606,7 @@ void HitHorizDoor (void)
 		else
 		{
 			ScalePost ();
-			(unsigned)postsource = texture;
+			postsource = (long)texture;
 			postwidth = 1;
 			postx = pixx;
 		}
@@ -683,7 +638,7 @@ void HitHorizDoor (void)
 		}
 
 		*( ((unsigned *)&postsource)+1) = (unsigned)PM_GetPage(doorpage);
-		(unsigned)postsource = texture;
+		postsource = (long)texture;
 	}
 }
 
@@ -719,7 +674,7 @@ void HitVertDoor (void)
 		else
 		{
 			ScalePost ();
-			(unsigned)postsource = texture;
+			postsource = (long)texture;
 			postwidth = 1;
 			postx = pixx;
 		}
@@ -751,7 +706,7 @@ void HitVertDoor (void)
 		}
 
 		*( ((unsigned *)&postsource)+1) = (unsigned)PM_GetPage(doorpage+1);
-		(unsigned)postsource = texture;
+		postsource = (long)texture;
 	}
 }
 
@@ -798,7 +753,7 @@ void HitHorizPWall (void)
 		else
 		{
 			ScalePost ();
-			(unsigned)postsource = texture;
+			postsource = (long)texture;
 			postwidth = 1;
 			postx = pixx;
 		}
@@ -816,7 +771,7 @@ void HitHorizPWall (void)
 		wallpic = horizwall[tilehit&63];
 
 		*( ((unsigned *)&postsource)+1) = (unsigned)PM_GetPage(wallpic);
-		(unsigned)postsource = texture;
+		postsource = (long)texture;
 	}
 
 }
@@ -862,7 +817,7 @@ void HitVertPWall (void)
 		else
 		{
 			ScalePost ();
-			(unsigned)postsource = texture;
+			postsource = (long)texture;
 			postwidth = 1;
 			postx = pixx;
 		}
@@ -880,7 +835,7 @@ void HitVertPWall (void)
 		wallpic = vertwall[tilehit&63];
 
 		*( ((unsigned *)&postsource)+1) = (unsigned)PM_GetPage(wallpic);
-		(unsigned)postsource = texture;
+		postsource = (long)texture;
 	}
 
 }
@@ -981,7 +936,7 @@ unsigned vgaCeiling[]=
 
 void VGAClearScreen (void)
 {
- unsigned ceiling=vgaCeiling[gamestate.episode*10+mapon];
+ unsigned ceiling=vgaCeiling[gamestate.episode*10+gamestate.mapon];
 
   //
   // clear the screen
@@ -1232,7 +1187,7 @@ void DrawPlayerWeapon (void)
 #ifndef SPEAR
 	if (gamestate.victoryflag) /**< If victory flag is on, the game will draw SPR_DEATHCAM. */
 	{
-		if (player->state == &s_deathcam && (TimeCount&32) )
+		if (player->state == &s_deathcam && (gamestate.TimeCount&32) )
 		{
 			SimpleScaleShape(viewwidth/2,SPR_DEATHCAM,viewheight+1);
 		}
@@ -1271,12 +1226,12 @@ void CalcTics (void)
 //
 // calculate tics since last refresh for adaptive timing
 //
-	if (lasttimecount > TimeCount)
-		TimeCount = lasttimecount;		// if the game was paused a LONG time
+	if (lasttimecount > gamestate.TimeCount)
+		gamestate.TimeCount = lasttimecount;		// if the game was paused a LONG time
 
 	do
 	{
-		newtime = TimeCount;
+		newtime = gamestate.TimeCount;
 		tics = newtime-lasttimecount;
 	} while (!tics);			// make sure at least one tic passes
 
@@ -1292,7 +1247,7 @@ void CalcTics (void)
 
 	if (tics>MAXTICS)
 	{
-		TimeCount -= (tics-MAXTICS);
+		gamestate.TimeCount -= (tics-MAXTICS);
 		tics = MAXTICS;
 	}
 }
@@ -1369,7 +1324,7 @@ void	ThreeDRefresh (void)
 	int tracedir;
 
 // this wouldn't need to be done except for my debugger/video wierdness
-	outportb (SC_INDEX,SC_MAPMASK);
+//	outportb (SC_INDEX,SC_MAPMASK);
 
 //
 // clear out the traced array
@@ -1404,7 +1359,7 @@ asm	rep stosw
 		FizzleFade(bufferofs,displayofs+screenofs,viewwidth,viewheight,20,false);
 		fizzlein = false;
 
-		lasttimecount = TimeCount = 0;		// don't make a big tic count
+		lasttimecount = gamestate.TimeCount = 0;		// don't make a big tic count
 
 	}
 

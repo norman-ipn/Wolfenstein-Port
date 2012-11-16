@@ -64,6 +64,8 @@ int                     dirangle[9] = {0,ANGLES/8,2*ANGLES/8,3*ANGLES/8,4*ANGLES
 //
 fixed           focallength;
 unsigned        screenofs;
+unsigned        displayofs;
+unsigned        bufferofs;
 int             viewwidth;
 int             viewheight;
 int             centerx;

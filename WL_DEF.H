@@ -19,6 +19,7 @@
 
 #include "WL_MENU.H"
 #include "id_mm.h" // for memptr datatype
+#include "ID_PM.H" // for PMSpriteStart
 
 #ifdef SPANISH
 #include "SPANISH.h"
@@ -795,6 +796,8 @@ extern	byte /*far*/	*scalermemory;
 extern	fixed		focallength;
 extern	unsigned	viewangles;
 extern	unsigned	screenofs;
+extern	unsigned	displayofs;
+extern	unsigned	bufferofs;
 extern	int		    viewwidth;
 extern	int			viewheight;
 extern	int			centerx;
