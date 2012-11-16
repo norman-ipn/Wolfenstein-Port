@@ -18,7 +18,7 @@
 #include <values.h>
 
 #include "WL_MENU.H"
-#include "ID_MM.H" // for memptr datatype
+#include "id_mm.h" // for memptr datatype
 
 #ifdef SPANISH
 #include "SPANISH.h"
@@ -809,7 +809,7 @@ extern	int		mouseadjustment;
 //
 extern	int			pixelangle[MAXVIEWWIDTH];
 extern	long		/*far*/ finetangent[FINEANGLES/4];
-extern	fixed 		/*far*/ sintable[],/*far*/ *costable;
+extern	int 		/*far*/ sintable[],/*far*/ *costable;
 
 //
 // derived constants
@@ -1007,7 +1007,7 @@ extern	fixed	mindist;
 //
 extern	int			pixelangle[MAXVIEWWIDTH];
 extern	long		/*far*/ finetangent[FINEANGLES/4];
-extern	fixed 		/*far*/ sintable[],/*far*/ *costable;
+extern	int 		/*far*/ sintable[],/*far*/ *costable;
 
 //
 // derived constants
@@ -1018,9 +1018,9 @@ extern	long	heightnumerator,mindist;
 //
 // refresh variables
 //
-extern	fixed	viewx,viewy;			// the focal point
+extern	int	viewx,viewy;			// the focal point
 extern	int		viewangle;
-extern	fixed	viewsin,viewcos;
+extern	int	viewsin,viewcos;
 
 extern	long		postsource;
 extern	unsigned	postx;
