@@ -11,7 +11,7 @@
  * */
 
 /*
---------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 Im working with this file, im trying to change it from C to c.
 But i need to know how to upload a file to submit the .c code and dont modify to much this.
 Eduardo Adolfo Arroyo Lopez
@@ -25,7 +25,22 @@ i deleted the commit part and now those errors are not showing anymore
 Another error that i found is the memptr, is not recognized by any function like a type, and some variables are not 
 declared in here.
 Now im working on that memptr...
---------------------------------------------------------------------------------------------
+
+
+File edited by Eduardo Adolfo Arroyo Lopez
+
+The commits that start with //* are the ones for the editions by me, to try to run the file.c
+
+*Just cheched it up to the line 224, the assambly parts are the ones that are giving me errors until now.	
+
+*Update I just finished to check all the code (in a fast way), the most common errors i found are, the word "far", 
+the assambly code, some variables that are not declared, and that the memptr is not recognized by any function like a 
+type.
+
+*New update, a lot of errors were in the assambly code, so i erased (just put them in a comment) the functions because
+they has no calls in any other part of the program.
+-----------------------------------------------------------------------------
+
 
 =============================================================================
 
@@ -50,9 +65,13 @@ EMS / XMS unmanaged routines
 =============================================================================
 */
 
-// #pragma hdrstop    // Not nessesary really.
-//#pragma warn -pro
-//#pragma warn -use
+#include "id_heads.h"
+#include <stdlib.h>
+#include <stdio.h>
+#pragma hdrstop
+
+#pragma warn -pro
+#pragma warn -use
 
 /*
 =============================================================================
@@ -62,12 +81,29 @@ EMS / XMS unmanaged routines
 =============================================================================
 */
 
+#define LOCKBIT		0x80	// if set in attributes, block cannot be moved
+#define PURGEBITS	3		// 0-3 level, 0= unpurgable, 3= purge first
+#define PURGEMASK	0xfffc
+#define BASEATTRIBUTES	0	// unlocked, non purgable
+
+#define MAXUMBS		10
+
+typedef struct mmblockstruct
+{
+	unsigned	start,length;
+	unsigned	attributes;
+	memptr		*useptr;	// pointer to the segment
+ //*This was in a comment, i put it back again start	
+	struct mmblockstruct *next;		//*erased the far because that solve an error
+} mmblocktype;
 
 
 //#define GETNEWBLOCK {if(!(mmnew=mmfree))Quit("MM_GETNEWBLOCK: No free blocks!")\
 //	;mmfree=mmfree->next;}
 
+#define GETNEWBLOCK {if(!mmfree)MML_ClearBlock();mmnew=mmfree;mmfree=mmfree->next;}
 
+#define FREEBLOCK(x) {*x->useptr=NULL;x->next=mmfree;mmfree=x;}
 
 /*
 =============================================================================
@@ -77,6 +113,12 @@ EMS / XMS unmanaged routines
 =============================================================================
 */
 
+//mminfotype	mminfo;				//* erased variables to solve errors
+//memptr		bufferseg;
+boolean		mmerror;
+
+void		(* beforesort) (void);
+void		(* aftersort) (void);
 
 /*
 =============================================================================
@@ -86,7 +128,34 @@ EMS / XMS unmanaged routines
 =============================================================================
 */
 
+boolean		mmstarted;
 
+void 		*farheap;			//*Erased the far word
+void		*nearheap;
+
+mmblocktype	mmblocks[100],*mmhead,*mmfree,*mmrover,*mmnew;	//*Changed the word MAXBLOCKS by 100, just a number for checking
+
+boolean		bombonerror;
+
+//unsigned	totalEMSpages,freeEMSpages,EMSpageframe,EMSpagesmapped,EMShandle;
+
+void		(* XMSaddr) (void);		// far pointer to XMS driver
+
+unsigned	numUMBs,UMBbase[MAXUMBS];
+
+//==========================================================================
+
+//
+// local prototypes
+//
+
+boolean		MML_CheckForEMS (void);
+void 		MML_ShutdownEMS (void);
+void 		MM_MapEMS (void);
+boolean 	MML_CheckForXMS (void);
+void 		MML_ShutdownXMS (void);
+void		MML_UseSpace (unsigned segstart, unsigned seglength);
+void 		MML_ClearBlock (void);
 
 //==========================================================================
 
@@ -99,23 +168,23 @@ EMS / XMS unmanaged routines
 =
 =======================
 */
-
+/*
 boolean MML_CheckForXMS (void)
 {
 	numUMBs = 0;
 
-asm {
-	mov	ax,0x4300
-	int	0x2f				// query status of installed diver
-	cmp	al,0x80
-	je	good
-	}
+//asm 						//*The part for assambly marks an error
+asm	mov	ax,0x4300
+asm	int	0x2f				// query status of installed diver
+asm	cmp	al,0x80
+asm	je	good
+	
 
 	return false;
 good:
 	return true;
 }
-
+*/						//*Erased this function, is not used in any other part of the program
 
 /*
 ======================
@@ -126,12 +195,12 @@ good:
 =
 =======================
 */
-
+/*
 void MML_SetupXMS (void)
 {
 	unsigned	base,size;
 
-asm	{
+asm	{					//*Assambly gets an error
 	mov	ax,0x4310
 	int	0x2f
 	mov	[WORD PTR XMSaddr],bx
@@ -169,7 +238,7 @@ asm	{
 
 done:;
 }
-
+*/		//*Deleted this function, is not used in any part of the program
 
 /*
 ======================
@@ -178,7 +247,7 @@ done:;
 =
 ======================
 */
-
+/*
 void MML_ShutdownXMS (void)
 {
 	int	i;
@@ -188,12 +257,12 @@ void MML_ShutdownXMS (void)
 	{
 		base = UMBbase[i];
 
-asm	mov	ah,XMS_FREEUMB
+asm	mov	ah,XMS_FREEUMB		//*The asm section is gettin a lot of errors
 asm	mov	dx,[base]
 asm	call	[DWORD PTR XMSaddr]
 	}
 }
-
+*/					//*
 //==========================================================================
 
 /*
@@ -210,7 +279,7 @@ asm	call	[DWORD PTR XMSaddr]
 
 void MML_UseSpace (unsigned segstart, unsigned seglength)
 {
-	mmblocktype far *scan,far *last;
+	mmblocktype *scan, *last;	//*The word far was deleted (in both variables)
 	unsigned	oldend;
 	long		extra;
 
@@ -237,7 +306,8 @@ void MML_UseSpace (unsigned segstart, unsigned seglength)
 	if (segstart == scan->start)
 	{
 		last->next = scan->next;			// unlink block
-		FREEBLOCK(scan);
+		FREEBLOCK(scan);	//*says that mmblocktype doest have a member called useptr and NULL is no declared here (i think is from the header but im check it at the end).
+//*The mmblocktype is already fixed
 		scan = last;
 	}
 	else
@@ -271,7 +341,7 @@ void MML_UseSpace (unsigned segstart, unsigned seglength)
 
 void MML_ClearBlock (void)
 {
-	mmblocktype far *scan,far *last;
+	mmblocktype *scan, *last;	//*deleted the far word
 
 	scan = mmhead->next;
 
@@ -308,7 +378,8 @@ void MM_Startup (void)
 {
 	int i;
 	unsigned 	long length;
-	void far 	*start;
+	unsigned 	*start;				//*Deleted the word far		
+	//*Changed the type from *start (from void to unsigned)
 	unsigned 	segstart,seglength,endfree;
 
 	if (mmstarted)
@@ -320,11 +391,11 @@ void MM_Startup (void)
 //
 // set up the linked list (everything in the free list;
 //
-	mmhead = NULL;
+	mmhead = 'NULL';			//*Put '' in NULL
 	mmfree = &mmblocks[0];
-	for (i=0;i<MAXBLOCKS-1;i++)
+	for (i=0;i<100-1;i++)			//*Changed MAXBLOCKS by 100 just for testing
 		mmblocks[i].next = &mmblocks[i+1];
-	mmblocks[i].next = NULL;
+	mmblocks[i].next = 'NULL';		//*Put '' in NULL
 
 //
 // locked block of all memory until we punch out free space
@@ -334,7 +405,7 @@ void MM_Startup (void)
 	mmnew->start = 0;
 	mmnew->length = 0xffff;
 	mmnew->attributes = LOCKBIT;
-	mmnew->next = NULL;
+	mmnew->next = 'NULL';			//*Put '' in NULL
 	mmrover = mmhead;
 
 
@@ -342,10 +413,10 @@ void MM_Startup (void)
 // get all available near conventional memory segments
 //
 	length=coreleft();
-	start = (void far *)(nearheap = malloc(length));
+	start = (void *)(nearheap = malloc(length));	//*Deleted far
 
 	length -= 16-(FP_OFF(start)&15);
-	length -= SAVENEARHEAP;
+	length -= 1000;			//*SAVENEARHEAP is not declared, chaged by a 1000 just for testing
 	seglength = length / 16;			// now in paragraphs
 	segstart = FP_SEG(start)+(FP_OFF(start)+15)/16;
 	MML_UseSpace (segstart,seglength);
@@ -357,7 +428,7 @@ void MM_Startup (void)
 	length=farcoreleft();
 	start = farheap = farmalloc(length);
 	length -= 16-(FP_OFF(start)&15);
-	length -= SAVEFARHEAP;
+	length -= 1000;		//*SAVEFARHEAP is not declared, changed by 1000 just for testing
 	seglength = length / 16;			// now in paragraphs
 	segstart = FP_SEG(start)+(FP_OFF(start)+15)/16;
 	MML_UseSpace (segstart,seglength);
@@ -369,7 +440,7 @@ void MM_Startup (void)
 //
 	mmrover = mmhead;		// start looking for space after low block
 
-	MM_GetPtr (&bufferseg,BUFFERSIZE);
+	MM_GetPtr (&bufferseg,BUFFERSIZE);	//*bufferseg and BUFFERSIZE are not declared, changed BUFFERSIZE by 1000 just for testing, the &bufferseg stills without any change (dont know what can be instead of this).
 }
 
 //==========================================================================
@@ -406,7 +477,7 @@ void MM_Shutdown (void)
 ====================
 */
 
-void MM_GetPtr (memptr *baseptr,unsigned long size)
+void MM_GetPtr (memptr *baseptr,unsigned long size)	//*The memptr is not recognized
 {
 	mmblocktype far *scan,far *lastscan,far *endscan
 				,far *purge,far *next;
@@ -530,9 +601,9 @@ mmblocktype	far *savedmmnew;
 ====================
 */
 
-void MM_FreePtr (memptr *baseptr)
+void MM_FreePtr (memptr *baseptr)		//*the memptr is not recognized
 {
-	mmblocktype far *scan,far *last;
+	mmblocktype *scan, *last;	//*Deleted the word far in both variables
 
 	last = mmhead;
 	scan = last->next;
@@ -565,7 +636,7 @@ void MM_FreePtr (memptr *baseptr)
 =====================
 */
 
-void MM_SetPurge (memptr *baseptr, int purge)
+void MM_SetPurge (memptr *baseptr, int purge)		//*memptr is not recognized
 {
 	mmblocktype far *start;
 
@@ -601,7 +672,7 @@ void MM_SetPurge (memptr *baseptr, int purge)
 =====================
 */
 
-void MM_SetLock (memptr *baseptr, boolean locked)
+void MM_SetLock (memptr *baseptr, boolean locked)	//*memptr is not recognized
 {
 	mmblocktype far *start;
 
@@ -639,7 +710,7 @@ void MM_SetLock (memptr *baseptr, boolean locked)
 
 void MM_SortMem (void)
 {
-	mmblocktype far *scan,far *last,far *next;
+	mmblocktype  *scan, *last, *next;
 	unsigned	start,length,source,dest;
 	int			playing;
 
@@ -649,16 +720,16 @@ void MM_SortMem (void)
 	playing = SD_SoundPlaying ();
 	if (playing)
 	{
-		switch (SoundMode)
+		switch (SoundMode)	//*SoundMode is not declared (dont know how to change it)
 		{
-		case sdm_PC:
+		case sdm_PC:		//*sdm_PC is not declared
 			playing += STARTPCSOUNDS;
 			break;
-		case sdm_AdLib:
+		case sdm_AdLib:		//*sdm_AdLib is not declared
 			playing += STARTADLIBSOUNDS;
 			break;
 		}
-		MM_SetLock(&(memptr)audiosegs[playing],true);
+		MM_SetLock(&(memptr)audiosegs[playing],true);	//*memptr is not declared
 	}
 
 
@@ -669,7 +740,8 @@ void MM_SortMem (void)
 
 	scan = mmhead;
 
-	last = NULL;		// shut up compiler warning
+	last = 'NULL';		// shut up compiler warning
+	//*put '' in NULL
 
 	while (scan)
 	{
@@ -729,7 +801,7 @@ void MM_SortMem (void)
 		aftersort();
 
 	if (playing)
-		MM_SetLock(&(memptr)audiosegs[playing],false);
+		MM_SetLock(&(memptr)audiosegs[playing],false);		//*again the memptr is gettin error
 }
 
 
@@ -745,13 +817,13 @@ void MM_SortMem (void)
 
 void MM_ShowMemory (void)
 {
-	mmblocktype far *scan;
+	mmblocktype *scan;		//*Deleted the far....says scan is not declared
 	unsigned color,temp,x,y;
 	long	end,owner;
 	char    scratch[80],str[10];
 
-	temp = bufferofs;
-	bufferofs = displayofs;
+	temp = bufferofs;		//*bufferofs is not declared
+	bufferofs = displayofs;		//*displayofs is not declared
 	scan = mmhead;
 
 	end = -1;
@@ -795,7 +867,7 @@ void MM_ShowMemory (void)
 
 void MM_DumpData (void)
 {
-	mmblocktype far *scan,far *best;
+	mmblocktype *scan, *best;	//*Deleted he far word
 	long	lowest,oldlowest;
 	unsigned	owner;
 	char	lock,purge;
@@ -863,7 +935,7 @@ void MM_DumpData (void)
 long MM_UnusedMemory (void)
 {
 	unsigned free;
-	mmblocktype far *scan;
+	mmblocktype *scan;		//*Deleted far
 
 	free = 0;
 	scan = mmhead;
@@ -893,7 +965,7 @@ long MM_UnusedMemory (void)
 long MM_TotalFree (void)
 {
 	unsigned free;
-	mmblocktype far *scan;
+	mmblocktype *scan;		//*Deleted far
 
 	free = 0;
 	scan = mmhead;
@@ -923,5 +995,4 @@ void MM_BombOnError (boolean bomb)
 {
 	bombonerror = bomb;
 }
-
 
