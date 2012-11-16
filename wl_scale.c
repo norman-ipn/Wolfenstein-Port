@@ -231,7 +231,7 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 			*code++ = 0x26;
 			*code++ = 0x88;
 			*code++ = 0x85;
-			*((unsigned far*)code)++ = startpix*SCREENBWIDE;
+			*((unsigned*)code)++ = startpix*SCREENBWIDE;
 		}
 
 	}
@@ -296,7 +296,7 @@ void  ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
  int DI = 0;//destination register
 
 //asm	mov	cx,WORD PTR [linescale+2]    /// 
-CX = *(linescale+2);
+CX =(int) *(linescale+2);
 
 //asm	mov	es,cx						// segment of scaler
 ES = CX;
@@ -328,20 +328,20 @@ BX<<2;
 //asm	add	bx,[slinewidth]				// bx = (pixel*8+pixwidth)
 BX = BX +  *(slinewidth);
 
-asm	mov	al,BYTE [mapmasks3-1+bx]	// -1 because pixwidth of 1 is first
+asm	mov	al,BYTE [mapmasks3-1+BX]	// -1 because pixwidth of 1 is first
 asm	mov	ds,WORD PTR [linecmds+2]
 asm	or	al,al
 asm	jz	notthreebyte				// scale across three bytes
 asm	jmp	threebyte
 notthreebyte:
-asm	mov	al,BYTE PTR ss:[mapmasks2-1+bx]	// -1 because pixwidth of 1 is first
+asm	mov	al,BYTE PTR ss:[mapmasks2-1+BX]	// -1 because pixwidth of 1 is first
 asm	or	al,al
 asm	jnz	twobyte						// scale across two bytes
 
 //
 // one byte scaling
 //
-asm	mov	al,BYTE PTR ss:[mapmasks1-1+bx]	// -1 because pixwidth of 1 is first
+asm	mov	al,BYTE PTR ss:[mapmasks1-1+BX]	// -1 because pixwidth of 1 is first
 asm	out	dx,al						// set map mask register
 
 scalesingle:
@@ -349,9 +349,9 @@ scalesingle:
 asm	mov	bx,[ds:bp]					// table location of rtl to patch
 asm	or	bx,bx
 asm	jz	linedone					// 0 signals end of segment list
-asm	mov	bx,[es:bx]
-asm	mov	dl,[es:bx]					// save old value
-asm	mov	BYTE PTR es:[bx],OP_RETF	// patch a RETF in
+asm	mov	bx,[es:BX]
+asm	mov	dl,[es:BX]					// save old value
+asm	mov	BYTE PTR es:[BX],OP_RETF	// patch a RETF in
 asm	mov	si,[ds:bp+4]				// table location of entry spot
 asm	mov	ax,[es:si]
 asm	mov	WORD PTR ss:[linescale],ax	// call here to start scaling
@@ -363,7 +363,7 @@ asm	mov	es,ax
 asm	call ss:[linescale]				// scale the segment of pixels
 
 asm	mov	es,cx						// segment of scaler
-asm	mov	BYTE PTR es:[bx],dl			// unpatch the RETF
+asm	mov	BYTE PTR es:[BX],dl			// unpatch the RETF
 asm	jmp	scalesingle					// do the next segment
 
 
