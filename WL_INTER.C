@@ -1,6 +1,6 @@
 // WL_INTER.C
 
-#include "WL_DEF.H"
+#include "wl_def.h"
 #pragma hdrstop
 
 
@@ -1318,7 +1318,7 @@ void NonShareware(void)
 // COPY PROTECTION FOR FormGen
 //
 ////////////////////////////////////////////////////////
-char 	far CopyProFailedStrs[][100] = {
+char 	 CopyProFailedStrs[][100] = {
 			STR_COPY1,
 			STR_COPY2,
 
@@ -1347,7 +1347,7 @@ char 	far CopyProFailedStrs[][100] = {
 			""
 			},
 
-		far BackDoorStrs[5][16] = {
+		 BackDoorStrs[5][16] = {
 			"a spoon?",
 			"bite me!",
 			"joshua",
@@ -1359,7 +1359,7 @@ char 	far CopyProFailedStrs[][100] = {
 #endif
 			},
 
-		far GoodBoyStrs[10][40] = {
+		 GoodBoyStrs[10][40] = {
 			"...is the CORRECT ANSWER!",
 			"",
 
@@ -1380,23 +1380,23 @@ char 	far CopyProFailedStrs[][100] = {
 			""
 			},
 
-		far bossstrs[4][24] = {
+		 bossstrs[4][24] = {
 			"DEATH KNIGHT",
 			"BARNACLE WILHELM",
 			"UBERMUTANTUBER MUTANT",
 			"TRANS GROSSE"
 			},
 
-		far WordStr[5][20] = {
+		 WordStr[5][20] = {
 			"New Game",
 			"Sound...F4",
 			"Control...F6",
 			"Change View...F5",
 			"Quit...F10"},
 
-		far	WordCorrect[5][2] = {"3","4","4","5","5"},
+		 WordCorrect[5][2] = {"3","4","4","5","5"},
 
-		far MemberStr[10][40] = {
+		 MemberStr[10][40] = {
 			STR_COPY15,
 			"",
 
@@ -1412,14 +1412,14 @@ char 	far CopyProFailedStrs[][100] = {
 			STR_COPY21,
 			STR_COPY22},
 
-		far MemberCorrect[5][24] = {
+		 MemberCorrect[5][24] = {
 			"adrian carmack",
 			"john carmackjohn romero",
 			"tom hall",
 			"jay wilbur",
 			"kevin cloud"},
 
-		far DosMessages[9][80] = {
+		 DosMessages[9][80] = {
 			STR_NOPE1,
 			STR_NOPE2,
 			STR_NOPE3,
@@ -1430,14 +1430,14 @@ char 	far CopyProFailedStrs[][100] = {
 			STR_NOPE8,
 			STR_NOPE9},
 
-		far MiscTitle[4][20] = {
+		 MiscTitle[4][20] = {
 			"BLOOD TEST",
 			"STRAIGHT-LACED",
 			"QUITE SHAPELY",
 			"I AM WHAT I AMMO"
 			},
 
-		far MiscStr[12][40] = {
+		 MiscStr[12][40] = {
 			STR_MISC1,
 			STR_MISC2,
 			"",
@@ -1455,7 +1455,7 @@ char 	far CopyProFailedStrs[][100] = {
 			STR_MISC9
 			},
 
-		far MiscCorrect[4][5] = {"ss","8",STR_STAR,"45"};
+		 MiscCorrect[4][5] = {"ss","8",STR_STAR,"45"};
 
 
 int  BackDoor(char *s)
