@@ -39,6 +39,8 @@ type.
 
 *New update, a lot of errors were in the assambly code, so i erased (just put them in a comment) the functions because
 they has no calls in any other part of the program.
+
+***Using the library im getting many errors more, check them for the momemt
 -----------------------------------------------------------------------------
 
 
