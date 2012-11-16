@@ -1,5 +1,5 @@
 //
-// WL_MENU.H
+// wl_menu.h
 //
 #ifdef SPEAR
 

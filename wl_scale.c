@@ -1,12 +1,12 @@
 /**
-\filename WL_SCALE.C 
+\filename wl_scale.c 
 
 This file is editing by Oscar Aaron Revilla Escalona.
   
 */
 
 
-#include "WL_DEF.h"
+#include "wl_def.h"
 #pragma hdrstop
 
 //#define OP_RETF	0xcb
@@ -23,7 +23,7 @@ This file is editing by Oscar Aaron Revilla Escalona.
  Maybe we can send the global variables by reference 
 */
 
-t_compscale /*_seg*/ *scaledirectory[MAXSCALEHEIGHT+1];
+t_compscale *scaledirectory[MAXSCALEHEIGHT+1];
 long fullscalefarcall[MAXSCALEHEIGHT+1];
 int maxscale = 0;
 int maxscaleshl2 = 0;
@@ -37,7 +37,7 @@ boolean	insetupscaling;
 =============================================================================
 */
 
-t_compscale 	/*_seg*/ *work = NULL;
+t_compscale  *work = NULL;
 unsigned BuildCompScale (int height, memptr *finalspot);
 
 int stepbytwo = 0;
@@ -52,7 +52,7 @@ int stepbytwo = 0;
 ==============
 */
 
-void /*far*/ BadScale (void)
+void BadScale (void)
 {
 	Quit ("BadScale called!");
 }
@@ -87,7 +87,7 @@ void SetupScaling (int maxscaleheight)
 	{
 		if (scaledirectory[i])
 			{
-			MM_FreePtr (&(memptr)scaledirectory[i]);
+			MM_FreePtr (/*&*/(memptr)scaledirectory[i]);
 			}
 		if (i>=stepbytwo)
 			{
@@ -102,15 +102,15 @@ void SetupScaling (int maxscaleheight)
 // build the compiled scalers
 //
 	stepbytwo = viewheight/2;	// save space by double stepping
-	MM_GetPtr (&(memptr)work,20000);
+	MM_GetPtr (/*&*/(memptr)work,20000);
 
 	for (i=1;i<=maxscaleheight;i++)
 	{
-		BuildCompScale (i*2,&(memptr)scaledirectory[i]);
+		BuildCompScale (i*2,/*&*/(memptr)scaledirectory[i]);
 		if (i>=stepbytwo)
 			i+= 2;
 	}
-	MM_FreePtr (&(memptr)work);
+	MM_FreePtr (/*&*/(memptr)work);
 
 //
 // compact memory and lock down scalers
@@ -118,7 +118,7 @@ void SetupScaling (int maxscaleheight)
 	MM_SortMem ();
 	for (i=1;i<=maxscaleheight;i++)
 	{
-		MM_SetLock (&(memptr)scaledirectory[i],true);
+		MM_SetLock (/*&*/(memptr)scaledirectory[i],true);
 		fullscalefarcall[i] = (unsigned)scaledirectory[i];
 		fullscalefarcall[i] <<=16;
 		fullscalefarcall[i] += scaledirectory[i]->codeofs[0];
@@ -171,7 +171,7 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 	unsigned char *code = NULL;
 
 	int i = 0;
-	long fix = 0
+	long fix = 0;
 	long step = 0;
 	unsigned src = 0;
 	unsigned totalscaled = 0;
@@ -231,7 +231,7 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 			*code++ = 0x26;
 			*code++ = 0x88;
 			*code++ = 0x85;
-			*((unsigned far *)code)++ = startpix*SCREENBWIDE;
+			*((unsigned*)code)++ = startpix*SCREENBWIDE;
 		}
 
 	}
@@ -243,7 +243,7 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 
 	totalsize = FP_OFF(code);
 	MM_GetPtr (finalspot,totalsize);
-	_fmemcpy ((byte _seg *)(*finalspot),(byte _seg *)work,totalsize);
+	_fmemcpy ((byte *)(*finalspot),(byte *)work,totalsize);
 
 	return totalsize;
 }
@@ -260,12 +260,12 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 */
 
 //Becouse this variables are extern the declaration needs to be in the file where are used.
-extern	int slinex /* = 0;*/
-extern	int slinewidth /*= 0;*/
-extern	unsigned int far /*= 0;*/  //is this far variable name different of the other fars?
-extern	unsigned *linecmds /*= NULL;*/
-extern	long int linescale /*= 0;*/
-extern	unsigned int maskword /*= 0;*/
+extern	int slinex ;/* = 0;*/
+extern	int slinewidth ;/*= 0;*/
+extern	unsigned int far; /*= 0;*/  //is this far variable name different of the other fars?
+extern	unsigned *linecmds; /*= NULL;*/
+extern	long int linescale ;/*= 0;*/
+extern	unsigned int maskword; /*= 0;*/
 
 byte	mask1;
 byte	mask2;
@@ -279,7 +279,7 @@ byte	mask3;
  *  to be allacated in the near memory locations.
  *  far is used to refear no far memory locations.
  * */
-void /*near*/ ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
+void  ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
 {
 
 /*
@@ -296,7 +296,7 @@ void /*near*/ ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
  int DI = 0;//destination register
 
 //asm	mov	cx,WORD PTR [linescale+2]    /// 
-CX = *(linescale+2);
+CX =(int) *(linescale+2);
 
 //asm	mov	es,cx						// segment of scaler
 ES = CX;
@@ -328,20 +328,20 @@ BX<<2;
 //asm	add	bx,[slinewidth]				// bx = (pixel*8+pixwidth)
 BX = BX +  *(slinewidth);
 
-asm	mov	al,BYTE [mapmasks3-1+bx]	// -1 because pixwidth of 1 is first
+asm	mov	al,BYTE [mapmasks3-1+BX]	// -1 because pixwidth of 1 is first
 asm	mov	ds,WORD PTR [linecmds+2]
 asm	or	al,al
 asm	jz	notthreebyte				// scale across three bytes
 asm	jmp	threebyte
 notthreebyte:
-asm	mov	al,BYTE PTR ss:[mapmasks2-1+bx]	// -1 because pixwidth of 1 is first
+asm	mov	al,BYTE PTR ss:[mapmasks2-1+BX]	// -1 because pixwidth of 1 is first
 asm	or	al,al
 asm	jnz	twobyte						// scale across two bytes
 
 //
 // one byte scaling
 //
-asm	mov	al,BYTE PTR ss:[mapmasks1-1+bx]	// -1 because pixwidth of 1 is first
+asm	mov	al,BYTE PTR ss:[mapmasks1-1+BX]	// -1 because pixwidth of 1 is first
 asm	out	dx,al						// set map mask register
 
 scalesingle:
@@ -349,9 +349,9 @@ scalesingle:
 asm	mov	bx,[ds:bp]					// table location of rtl to patch
 asm	or	bx,bx
 asm	jz	linedone					// 0 signals end of segment list
-asm	mov	bx,[es:bx]
-asm	mov	dl,[es:bx]					// save old value
-asm	mov	BYTE PTR es:[bx],OP_RETF	// patch a RETF in
+asm	mov	bx,[es:BX]
+asm	mov	dl,[es:BX]					// save old value
+asm	mov	BYTE PTR es:[BX],OP_RETF	// patch a RETF in
 asm	mov	si,[ds:bp+4]				// table location of entry spot
 asm	mov	ax,[es:si]
 asm	mov	WORD PTR ss:[linescale],ax	// call here to start scaling
@@ -363,7 +363,7 @@ asm	mov	es,ax
 asm	call ss:[linescale]				// scale the segment of pixels
 
 asm	mov	es,cx						// segment of scaler
-asm	mov	BYTE PTR es:[bx],dl			// unpatch the RETF
+asm	mov	BYTE PTR es:[BX],dl			// unpatch the RETF
 asm	jmp	scalesingle					// do the next segment
 
 
@@ -494,7 +494,7 @@ void ScaleShape (int xcenter, int shapenum, unsigned height)
 	unsigned stopx = 0;
 	unsigned tempx = 0;
 	int 	 t = 0;
-	unsigned	/*far*/ *cmdptr = NULL;// is this far the same of the up declaration line 260
+	unsigned	*cmdptr = NULL;// is this far the same of the up declaration line 260
 	boolean		leftvis,rightvis;/*Search where is the definition of boolean*/
 
 
@@ -694,8 +694,8 @@ void ScaleShape (int xcenter, int shapenum, unsigned height)
 
 void SimpleScaleShape (int xcenter, int shapenum, unsigned height)
 {
-	t_compshape	/*_seg*/ *shape = NULL;
-	t_compscale /*_seg*/ *comptable = NULL;
+	t_compshape *shape = NULL;
+	t_compscale *comptable = NULL;
 	unsigned	scale = 0;
 	unsigned 	srcx = 0;
 	unsigned	stopx = 0;
@@ -802,7 +802,7 @@ unsigned	wordmasks[8][8] = {
 
 int	slinex = 0;
 int 	slinewidth = 0;
-unsigned	/*far*/ *linecmds = NULL;
+unsigned	*linecmds = NULL;
 long int	linescale = 0;
 unsigned	maskword = 0;
 

@@ -17,14 +17,14 @@
 #include <math.h>
 #include <values.h>
 
-#include "WL_MENU.H"
+#include "wl_menu.h"
 #include "id_mm.h" // for memptr datatype
 #include "ID_PM.H" // for PMSpriteStart
 
 #ifdef SPANISH
-#include "SPANISH.h"
+#include "spanish.h"
 #else
-#include "FOREIGN.h"
+#include "foreign.h"
 #endif
 
 /*
