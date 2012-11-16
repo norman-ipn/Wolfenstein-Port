@@ -1,7 +1,7 @@
 // WL_DRAW.C
 // Currently reviewed by: bquartz (Alberto Barradas Spezzia)
 
-#include "WL_DEF.H"
+#include "wl_def.h"
 //#include <DOS.H>
 #pragma hdrstop
 
