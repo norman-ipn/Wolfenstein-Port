@@ -56,7 +56,7 @@ const char EXTENSION[4] = "WLF";
 /**
     Some typedef for the game.
 */
-typedef	enum {false,true} boolean;
+typedef	enum {FALSE,TRUE} boolean;
 typedef	unsigned char     byte;
 typedef	unsigned int      word;
 typedef	unsigned long     longword;

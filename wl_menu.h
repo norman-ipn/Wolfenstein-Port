@@ -1,5 +1,5 @@
 //
-// WL_MENU.H
+// wl_menu.h
 //
 #ifdef SPEAR
 
@@ -86,7 +86,7 @@
 #define CST_START	60
 #define CST_SPC	60
 
-
+#include "ID_IN.H"
 //
 // TYPEDEFS
 //
