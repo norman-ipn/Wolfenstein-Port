@@ -97,7 +97,7 @@ int viewty = 0;
 
 int midangle=0;
 int angle = 0;
-unsigned int xpartial = 0;
+ nsigned int xpartial = 0;
 unsigned int ypartial = 0;
 unsigned int xpartialup = 0;
 unsigned int xpartialdown = 0;
@@ -412,7 +412,7 @@ heightok:
 	asm	or	al,al
 	asm	jz	nomore
 	//
-	// draw a third byte for vertical strips that cross three bytes
+	//   draw a third byte for vertical strips that cross three bytes
 	//
 	asm	inc	di
 	asm	out	dx,al						// set bit mask register
