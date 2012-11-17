@@ -11,31 +11,31 @@
 
 #ifdef SPEAR
 
-#define BORDCOLOR	0x99
-#define BORD2COLOR	0x93
-#define DEACTIVE	0x9b
-#define BKGDCOLOR	0x9d
+const int BORDCOLOR	0x99
+const int BORD2COLOR	0x93
+const int DEACTIVE	0x9b
+const int BKGDCOLOR	0x9d
 //#define STRIPE		0x9c
 
 #define MenuFadeOut()	VL_FadeOut(0,255,0,0,51,10)
 
 #else
 
-#define BORDCOLOR	0x29
-#define BORD2COLOR	0x23
-#define DEACTIVE	0x2b
-#define BKGDCOLOR	0x2d
-#define STRIPE		0x2c
+const int BORDCOLOR	0x29
+const int BORD2COLOR	0x23
+const int DEACTIVE	0x2b
+const int BKGDCOLOR	0x2d
+const int STRIPE		0x2c
 
 #define MenuFadeOut()	VL_FadeOut(0,255,43,0,0,10)
 
 #endif
 
-#define READCOLOR	0x4a
-#define READHCOLOR	0x47
-#define VIEWCOLOR	0x7f
-#define TEXTCOLOR	0x17
-#define HIGHLIGHT	0x13
+const int READCOLOR	0x4a
+const int READHCOLOR	0x47
+const int VIEWCOLOR	0x7f
+const int TEXTCOLOR	0x17
+const int HIGHLIGHT	0x13
 #define MenuFadeIn()	VL_FadeIn(0,255,&gamepal,10)
 
 
@@ -47,52 +47,52 @@
 #define INTROSONG	XTOWER2_MUS
 #endif
 
-#define SENSITIVE	60
-#define CENTER		SENSITIVE*2
+const int SENSITIVE	60
+const int CENTER		SENSITIVE*2
 
-#define MENU_X	76
-#define MENU_Y	55
-#define MENU_W	178
+const int MENU_X	76
+const int MENU_Y	55
+const int MENU_W	178
 #ifndef SPEAR
-#define MENU_H	13*10+6
+const int MENU_H	13*10+6
 #else
-#define MENU_H	13*9+6
+const int MENU_H	13*9+6
 #endif
 
-#define SM_X	48
-#define SM_W	250
+const int SM_X	48
+const int SM_W	250
 
-#define SM_Y1	20
-#define SM_H1	4*13-7
-#define SM_Y2	SM_Y1+5*13
-#define SM_H2	4*13-7
-#define SM_Y3	SM_Y2+5*13
-#define SM_H3	3*13-7
+const int SM_Y1	20
+const int SM_H1	4*13-7
+const int SM_Y2	SM_Y1+5*13
+const int SM_H2	4*13-7
+const int SM_Y3	SM_Y2+5*13
+const int SM_H3	3*13-7
 
-#define CTL_X	24
-#define CTL_Y	70
-#define CTL_W	284
-#define CTL_H	13*7-7
+const int CTL_X	24
+const int CTL_Y	70
+const int CTL_W	284
+const int CTL_H	13*7-7
 
-#define LSM_X	85
-#define LSM_Y	55
-#define LSM_W	175
-#define LSM_H	10*13+10
+const int LSM_X	85
+const int LSM_Y	55
+const int LSM_W	175
+const int LSM_H	10*13+10
 
-#define NM_X	50
-#define NM_Y	100
-#define NM_W	225
-#define NM_H	13*4+15
+const int NM_X	50
+const int NM_Y	100
+const int NM_W	225
+const int NM_H	13*4+15
 
-#define NE_X	10
-#define NE_Y	23
-#define NE_W	320-NE_X*2
-#define NE_H	200-NE_Y*2
+const int NE_X	10
+const int NE_Y	23
+const int NE_W	320-NE_X*2
+const int NE_H	200-NE_Y*2
 
-#define CST_X		20
-#define CST_Y		48
-#define CST_START	60
-#define CST_SPC	60
+const int CST_X		20
+const int CST_Y		48
+const int CST_START	60
+const int CST_SPC	60
 
 
 //
