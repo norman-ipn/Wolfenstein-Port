@@ -1,6 +1,9 @@
 // ID_CA.H
 //===========================================================================
 
+#ifndef __ID_CA_H__
+#define __ID_CA_H__
+
 #define NUMMAPS		60
 #define MAPPLANES	2
 
@@ -99,3 +102,5 @@ void CA_CacheMap (int mapnum);
 void CA_CacheMarks (void);
 
 void CA_CacheScreen (int chunk);
+
+#endif

@@ -19,7 +19,7 @@
 
 #include "wl_menu.h"
 #include "id_mm.h" // for memptr datatype
-#include "ID_PM.H" // for PMSpriteStart
+#include "id_pm.h" // for PMSpriteStart
 
 #ifdef SPANISH
 #include "spanish.h"

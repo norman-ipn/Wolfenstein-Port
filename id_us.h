@@ -5,8 +5,15 @@
 //	By Jason Blochowiak
 //
 
-#ifndef	__ID_US__
-#define	__ID_US__
+#ifndef	__ID_US_H__
+#define	__ID_US_H__
+
+/*
+  Include section
+*/
+#include <stdlib.h> // for random generator
+#include <time.h> // for random seed
+
 
 #ifdef	__DEBUG__
 #define	__DEBUG_UserMgr__

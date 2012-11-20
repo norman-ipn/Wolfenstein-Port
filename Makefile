@@ -14,5 +14,9 @@ id_vl.o: id_vl.c
 id_mm.o: id_mm.c
 	gcc -c id_mm.c -Wall
 
+wl_state.o: wl_state.c
+	gcc -c wl_state.c -Wall
+
+
 clean:
 	rm id_vh.o main.o wolf3d

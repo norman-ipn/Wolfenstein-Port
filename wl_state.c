@@ -1,77 +1,12 @@
 /** 
- \filename WL_STATE.C
+ \filename wl_state.c
 
-*/
+ New version of WL_STATE.C
 
-/*
  Contains some movement IA algorithms for enemies, and other stuff.
-
 */
 
-#include "WL_DEF.H"
-#pragma hdrstop
-
-/*
-=============================================================================
-
-						 LOCAL CONSTANTS
-
-=============================================================================
-*/
-
-
-/*
-=============================================================================
-
-						 GLOBAL VARIABLES
-
-=============================================================================
-*/
-
-
-dirtype opposite[9] =
-	{west,southwest,south,southeast,east,northeast,north,northwest,nodir};
-
-dirtype diagonal[9][9] =
-{
-/* east */	{nodir,nodir,northeast,nodir,nodir,nodir,southeast,nodir,nodir},
-			{nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
-/* north */ {northeast,nodir,nodir,nodir,northwest,nodir,nodir,nodir,nodir},
-			{nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
-/* west */  {nodir,nodir,northwest,nodir,nodir,nodir,southwest,nodir,nodir},
-			{nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
-/* south */ {southeast,nodir,nodir,nodir,southwest,nodir,nodir,nodir,nodir},
-			{nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir},
-			{nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir,nodir}
-};
-
-//Occupying the structure functions objtype.
-
-void	SpawnNewObj (unsigned tilex, unsigned tiley, statetype *state);
-void	NewState (objtype *ob, statetype *state);
-
-boolean TryWalk (objtype *ob);
-void	MoveObj (objtype *ob, long move);
-
-void	KillActor (objtype *ob);
-void	DamageActor (objtype *ob, unsigned damage);
-
-boolean CheckLine (objtype *ob);
-void FirstSighting (objtype *ob);
-boolean	CheckSight (objtype *ob);
-
-/*
-=============================================================================
-
-						 LOCAL VARIABLES
-
-=============================================================================
-*/
-
-
-
-//===========================================================================
-
+#include "wl_state.h"
 
 /*
 ===================
