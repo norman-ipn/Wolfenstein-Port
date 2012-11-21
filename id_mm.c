@@ -29,7 +29,7 @@ Now im working on that memptr...
 
 File edited by Eduardo Adolfo Arroyo Lopez
 
-The commits that start with //* are the ones for the editions by me, to try to run the file.c
+The commits that start with  are the ones for the editions by me, to try to run the file.c
 
 *Just cheched it up to the line 224, the assambly parts are the ones that are giving me errors until now.	
 
@@ -175,7 +175,7 @@ boolean MML_CheckForXMS (void)
 {
 	numUMBs = 0;
 
-//asm 						//*The part for assambly marks an error
+//asm 						//The part for assambly marks an error
 asm	mov	ax,0x4300
 asm	int	0x2f				// query status of installed diver
 asm	cmp	al,0x80

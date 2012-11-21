@@ -546,7 +546,7 @@ void VL_FadeOut (int start, int end, int red, int green, int blue, int steps)
 //
 	VL_FillPalette (red,green,blue);
 
-	screenfaded = true;
+	screenfaded = TRUE;
 }
 
 
@@ -590,7 +590,7 @@ void VL_FadeIn (int start, int end, byte *palette, int steps)
 // final color
 //
 	VL_SetPalette (palette);
-	screenfaded = false;
+	screenfaded = FALSE;
 }
 
 
@@ -613,11 +613,11 @@ void VL_TestPaletteSet (void)
 	for (i=0;i<768;i++)
 		palette1[0][i] = i;
 
-	fastpalette = true;
+	fastpalette = TRUE;
 	VL_SetPalette (&palette1[0][0]);
 	VL_GetPalette (&palette2[0][0]);
 	if (memcmp (&palette1[0][0],&palette2[0][0],768))
-		fastpalette = false;
+		fastpalette = FALSE;
 }
 
 
