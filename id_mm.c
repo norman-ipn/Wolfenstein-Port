@@ -43,6 +43,14 @@ they has no calls in any other part of the program.
 ***Using the library im getting many errors more, check them for the momemt
 -----------------------------------------------------------------------------
 
+-- Deleted pragma directives.
+-- All defines were moved to id_mm.h 
+-- All includes were moved to id_mm.h
+-- All typedefs were moved to id_mm.h
+-- All macros were moved to id_mm.h
+-- All global variables were moved to id_mm.h
+
+
 
 =============================================================================
 
@@ -67,97 +75,12 @@ EMS / XMS unmanaged routines
 =============================================================================
 */
 
-#include "id_heads.h"
-#include <stdlib.h>
-#include <stdio.h>
-#pragma hdrstop
-
-#pragma warn -pro
-#pragma warn -use
-
-/*
-=============================================================================
-
-							LOCAL INFO
-
-=============================================================================
-*/
-
-#define LOCKBIT		0x80	// if set in attributes, block cannot be moved
-#define PURGEBITS	3		// 0-3 level, 0= unpurgable, 3= purge first
-#define PURGEMASK	0xfffc
-#define BASEATTRIBUTES	0	// unlocked, non purgable
-
-#define MAXUMBS		10
-
-typedef struct mmblockstruct
-{
-	unsigned	start,length;
-	unsigned	attributes;
-	memptr		*useptr;	// pointer to the segment
- //*This was in a comment, i put it back again start	
-	struct mmblockstruct *next;		//*erased the far because that solve an error
-} mmblocktype;
+#include "id_mm.h"
 
 
-//#define GETNEWBLOCK {if(!(mmnew=mmfree))Quit("MM_GETNEWBLOCK: No free blocks!")\
-//	;mmfree=mmfree->next;}
 
-#define GETNEWBLOCK {if(!mmfree)MML_ClearBlock();mmnew=mmfree;mmfree=mmfree->next;}
 
-#define FREEBLOCK(x) {*x->useptr=NULL;x->next=mmfree;mmfree=x;}
 
-/*
-=============================================================================
-
-						 GLOBAL VARIABLES
-
-=============================================================================
-*/
-
-//mminfotype	mminfo;				//* erased variables to solve errors
-//memptr		bufferseg;
-boolean		mmerror;
-
-void		(* beforesort) (void);
-void		(* aftersort) (void);
-
-/*
-=============================================================================
-
-						 LOCAL VARIABLES
-
-=============================================================================
-*/
-
-boolean		mmstarted;
-
-void 		*farheap;			//*Erased the far word
-void		*nearheap;
-
-mmblocktype	mmblocks[100],*mmhead,*mmfree,*mmrover,*mmnew;	//*Changed the word MAXBLOCKS by 100, just a number for checking
-
-boolean		bombonerror;
-
-//unsigned	totalEMSpages,freeEMSpages,EMSpageframe,EMSpagesmapped,EMShandle;
-
-void		(* XMSaddr) (void);		// far pointer to XMS driver
-
-unsigned	numUMBs,UMBbase[MAXUMBS];
-
-//==========================================================================
-
-//
-// local prototypes
-//
-
-boolean		MML_CheckForEMS (void);
-void 		MML_ShutdownEMS (void);
-void 		MM_MapEMS (void);
-boolean 	MML_CheckForXMS (void);
-void 		MML_ShutdownXMS (void);
-void		MML_UseSpace (unsigned segstart, unsigned seglength);
-void 		MML_ClearBlock (void);
 
 //==========================================================================
 
@@ -202,7 +125,7 @@ void MML_SetupXMS (void)
 {
 	unsigned	base,size;
 
-asm	{					//*Assambly gets an error
+asm	{					//Assambly gets an error
 	mov	ax,0x4310
 	int	0x2f
 	mov	[WORD PTR XMSaddr],bx
@@ -259,7 +182,7 @@ void MML_ShutdownXMS (void)
 	{
 		base = UMBbase[i];
 
-asm	mov	ah,XMS_FREEUMB		//*The asm section is gettin a lot of errors
+asm	mov	ah,XMS_FREEUMB		//The asm section is gettin a lot of errors
 asm	mov	dx,[base]
 asm	call	[DWORD PTR XMSaddr]
 	}
@@ -343,7 +266,7 @@ void MML_UseSpace (unsigned segstart, unsigned seglength)
 
 void MML_ClearBlock (void)
 {
-	mmblocktype *scan, *last;	//*deleted the far word
+	mmblocktype *scan = NULL;
 
 	scan = mmhead->next;
 
@@ -388,16 +311,16 @@ void MM_Startup (void)
 		MM_Shutdown ();
 
 
-	mmstarted = true;
-	bombonerror = true;
+	mmstarted = TRUE;
+	bombonerror = TRUE;
 //
 // set up the linked list (everything in the free list;
 //
-	mmhead = 'NULL';			//*Put '' in NULL
+	mmhead = NULL;			//*Put '' in NULL
 	mmfree = &mmblocks[0];
 	for (i=0;i<100-1;i++)			//*Changed MAXBLOCKS by 100 just for testing
 		mmblocks[i].next = &mmblocks[i+1];
-	mmblocks[i].next = 'NULL';		//*Put '' in NULL
+	mmblocks[i].next = NULL;		//*Put '' in NULL
 
 //
 // locked block of all memory until we punch out free space
@@ -407,7 +330,7 @@ void MM_Startup (void)
 	mmnew->start = 0;
 	mmnew->length = 0xffff;
 	mmnew->attributes = LOCKBIT;
-	mmnew->next = 'NULL';			//*Put '' in NULL
+	mmnew->next = NULL;			//*Put '' in NULL
 	mmrover = mmhead;
 
 

@@ -8,6 +8,10 @@
 */
 #include "id_heads.h"
 
+#include <stdlib.h>
+#include <stdio.h>
+
+
 
 /**
 
