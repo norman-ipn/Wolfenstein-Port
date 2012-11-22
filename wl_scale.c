@@ -73,7 +73,7 @@ void SetupScaling (int maxscaleheight)
 	int y = 0;
 	unsigned char *dest = NULL;
 
-	insetupscaling = true;
+	insetupscaling = TRUE;
 
 	maxscaleheight/=2;			// one scaler every two pixels
 
@@ -118,7 +118,7 @@ void SetupScaling (int maxscaleheight)
 	MM_SortMem ();
 	for (i=1;i<=maxscaleheight;i++)
 	{
-		MM_SetLock (/*&*/(memptr)scaledirectory[i],true);
+		MM_SetLock (/*&*/(memptr)scaledirectory[i],TRUE);
 		fullscalefarcall[i] = (unsigned)scaledirectory[i];
 		fullscalefarcall[i] <<=16;
 		fullscalefarcall[i] += scaledirectory[i]->codeofs[0];
@@ -140,7 +140,7 @@ void SetupScaling (int maxscaleheight)
 	for (i=maxscaleheight;i<MAXSCALEHEIGHT;i++)
 		fullscalefarcall[i] = (long)BadScale;
 
-	insetupscaling = false;
+	insetupscaling = FALSE;
 }
 
 //===========================================================================
@@ -296,7 +296,7 @@ void  ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
  int DI = 0;//destination register
 
 //asm	mov	cx,WORD PTR [linescale+2]    /// 
-CX =(int) *(linescale+2);
+CX =(int) /*'*'*/(linescale+2);
 
 //asm	mov	es,cx						// segment of scaler
 ES = CX;
@@ -308,7 +308,7 @@ BP = *(linecmds);
 DX = SC_INDEX+1;
 
 //asm	mov	bx,[slinex]
-BX = *(slinex);
+BX = /*'*'*/(slinex);
 
 //asm	mov	di,bx
 DI = BX;
@@ -317,7 +317,7 @@ DI = BX;
 DI>>2;
 
 //asm	add	di,[bufferofs]
-DI = *(bufferofs);
+DI =/*'*'*/(bufferofs);
 
 //asm	and	bx,3
 BX = BX & 0x3;
@@ -326,7 +326,7 @@ BX = BX & 0x3;
 BX<<2;
 
 //asm	add	bx,[slinewidth]				// bx = (pixel*8+pixwidth)
-BX = BX +  *(slinewidth);
+BX = BX +  /*'*'*/(slinewidth);
 
 asm	mov	al,BYTE [mapmasks3-1+BX]	// -1 because pixwidth of 1 is first
 asm	mov	ds,WORD PTR [linecmds+2]
@@ -487,14 +487,14 @@ static	long longtemp = 0;
 
 void ScaleShape (int xcenter, int shapenum, unsigned height)
 {
-	t_compshape	/*_seg*/ *shape = NULL;
-	t_compscale /*_seg*/ *comptable = NULL;
+	t_compshape *shape = NULL;
+	t_compscale  *comptable = NULL;
 	unsigned scale = 0;
 	unsigned srcx = 0;
 	unsigned stopx = 0;
 	unsigned tempx = 0;
 	int 	 t = 0;
-	unsigned	*cmdptr = NULL;// is this far the same of the up declaration line 260
+	unsigned	*cmdptr = NULL;
 	boolean		leftvis,rightvis;/*Search where is the definition of boolean*/
 
 
