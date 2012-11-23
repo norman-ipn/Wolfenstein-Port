@@ -231,7 +231,7 @@ unsigned BuildCompScale (int height, memptr *finalspot)
 			*code++ = 0x26;
 			*code++ = 0x88;
 			*code++ = 0x85;
-			*((unsigned*)code)++ = startpix*SCREENBWIDE;
+			*((unsigned*)code++) = startpix*SCREENBWIDE;
 		}
 
 	}
@@ -328,15 +328,18 @@ BX<<2;
 //asm	add	bx,[slinewidth]				// bx = (pixel*8+pixwidth)
 BX = BX +  /*'*'*/(slinewidth);
 
-asm	mov	al,BYTE [mapmasks3-1+BX]	// -1 because pixwidth of 1 is first
-asm	mov	ds,WORD PTR [linecmds+2]
-asm	or	al,al
-asm	jz	notthreebyte				// scale across three bytes
-asm	jmp	threebyte
+asm(
+	mov	al,BYTE [mapmasks3-1+BX]	// -1 because pixwidth of 1 is first
+	mov	ds,WORD PTR [linecmds+2]
+	or	al,al
+	jz	notthreebyte				// scale across three bytes
+	jmp	threebyte
+   );
+
 notthreebyte:
 asm	mov	al,BYTE PTR ss:[mapmasks2-1+BX]	// -1 because pixwidth of 1 is first
-asm	or	al,al
-asm	jnz	twobyte						// scale across two bytes
+asm 	or	al,al
+asm 	jnz	twobyte						// scale across two bytes
 
 //
 // one byte scaling
@@ -505,8 +508,8 @@ void ScaleShape (int xcenter, int shapenum, unsigned height)
 		return;								// too close or far away
 	comptable = scaledirectory[scale];
 
-	*(((unsigned *)&linescale)+1)=(unsigned)comptable;	// seg of far call
-	*(((unsigned *)&linecmds)+1)=(unsigned)shape;		// seg of shape
+	*(((unsigned *)&linescale)+1) = (unsigned) comptable;	// seg of far call
+	*(((unsigned *)&linecmds)+1) = (unsigned) shape;		// seg of shape
 
 //
 // scale to the left (from pixel 31 to shape->leftpix)
@@ -518,7 +521,7 @@ void ScaleShape (int xcenter, int shapenum, unsigned height)
 
 	while ( --srcx >=stopx && slinex>0)
 	{
-		(unsigned)linecmds = *cmdptr--;
+		*((unsigned *)&linecmds) = *cmdptr--;
 		if ( !(slinewidth = comptable->width[srcx]) )
 			continue;
 
@@ -601,7 +604,7 @@ void ScaleShape (int xcenter, int shapenum, unsigned height)
 
 	while ( ++srcx <= stopx && (slinex+=slinewidth)<viewwidth)
 	{
-		(unsigned)linecmds = *cmdptr++;
+		*((unsigned *)&linecmds) = *cmdptr++;
 		if ( !(slinewidth = comptable->width[srcx]) )
 			continue;
 
@@ -724,7 +727,7 @@ void SimpleScaleShape (int xcenter, int shapenum, unsigned height)
 
 	while ( --srcx >=stopx )
 	{
-		(unsigned)linecmds = *cmdptr--;
+		*((unsigned *)&linecmds) = *cmdptr--;
 		if ( !(slinewidth = comptable->width[srcx]) )
 			continue;
 
@@ -752,7 +755,7 @@ void SimpleScaleShape (int xcenter, int shapenum, unsigned height)
 
 	while ( ++srcx <= stopx )
 	{
-		(unsigned)linecmds = *cmdptr++;
+		*((unsigned *)&linecmds) = *cmdptr++;
 		if ( !(slinewidth = comptable->width[srcx]) )
 			continue;
 
