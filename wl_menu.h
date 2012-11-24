@@ -86,7 +86,7 @@
 #define CST_START	60
 #define CST_SPC	60
 
-#include "ID_IN.H"
+#include "id_in.h"
 //
 // TYPEDEFS
 //

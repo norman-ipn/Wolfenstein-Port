@@ -1,6 +1,6 @@
 //
 //	ID Engine
-//	ID_IN.h - Header file for Input Manager
+//	id_in.h - Header file for Input Manager
 //	v1.0d1
 //	By Jason Blochowiak
 //

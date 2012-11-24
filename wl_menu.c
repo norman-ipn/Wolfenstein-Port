@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////
 //
-// WL_MENU.C
+// wl_menu.c
 // by John Romero (C) 1992 Id Software, Inc.
 //
 ////////////////////////////////////////////////////////////////////
@@ -59,7 +59,8 @@ CP_iteminfo
 	NewItems={NM_X,NM_Y,4,2,24};
 
 #pragma warn -sus
-CP_itemtype MainMenu[]=
+CP_itemtype 
+MainMenu[]=
 {
 #ifdef JAPAN
 	{1,"",CP_NewGame},
