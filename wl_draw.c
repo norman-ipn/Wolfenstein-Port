@@ -1,4 +1,4 @@
-// WL_DRAW.C
+//              WL_DRAW.C
 // Currently reviewed by: bquartz (Alberto Barradas Spezzia)
 
 #include "wl_def.h"
@@ -97,7 +97,7 @@ int viewty = 0;
 
 int midangle=0;
 int angle = 0;
- nsigned int xpartial = 0;
+unsigned int xpartial = 0;
 unsigned int ypartial = 0;
 unsigned int xpartialup = 0;
 unsigned int xpartialdown = 0;
@@ -235,7 +235,7 @@ void TransformActor (objtype *ob)
 
 	ob->viewx = centerx + ny*scale/nx;	// DEBUG: use assembly divide
 
-//
+  //
 // calculate height (heightnumerator/(nx>>8))
 //
 	ob->viewheight = heightnumerator/(nx>>8);
@@ -254,7 +254,7 @@ void TransformActor (objtype *ob)
 *   viewx,viewy		: point of view
 *   viewcos,viewsin	: sin/cos of viewangle
 *   scale		: conversion from global value to screen value
-*
+* 
 */
 boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 {
@@ -277,7 +277,7 @@ boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 
 //
 // calculate newy
-//
+// 
 	gxt = FixedByFrac(gx,viewsin);
 	gyt = FixedByFrac(gy,viewcos);
 	ny = gyt+gxt;
@@ -316,7 +316,7 @@ boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 /**
 * \brief Calculates the height of xintercept,yintercept from viewx,viewy
 *
-* @param return Calculated height
+* @ param return Calculated height
 *
 * globals:
 *   viewx,viewy		: point of view
@@ -454,7 +454,7 @@ void HitVertWall (void)
 	}
 	wallheight[pixx] = CalcHeight();
 
-	if (lastside==1 && lastintercept == xtile && lasttilehit == tilehit)
+ 	if (lastside==1 && lastintercept == xtile && lasttilehit == tilehit)
 	{
 		// in the same wall type as last time, so check for optimized draw
 		if (texture == (unsigned)postsource)
