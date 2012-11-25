@@ -4,6 +4,8 @@
  New version of WL_STATE.C
 
  Contains some movement IA algorithms for enemies, and other stuff.
+
+ I Alberto Angel Alvarado Bautista comment in  this file.
 */
 
 #include "wl_state.h"
