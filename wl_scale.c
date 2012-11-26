@@ -296,7 +296,8 @@ void  ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
  int DI = 0;//destination register
 
 //asm	mov	cx,WORD PTR [linescale+2]    /// 
-CX =(int) /*'*'*/(linescale+2);
+//No sign lacks the pointer here, as in line 306: CX =(int) *(linescale+2);
+CX =(int) (linescale+2);
 
 //asm	mov	es,cx						// segment of scaler
 ES = CX;
@@ -317,7 +318,7 @@ DI = BX;
 DI>>2;
 
 //asm	add	di,[bufferofs]
-DI =/*'*'*/(bufferofs);
+DI +=/*'*'*/(bufferofs);
 
 //asm	and	bx,3
 BX = BX & 0x3;
