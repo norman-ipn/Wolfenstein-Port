@@ -119,7 +119,7 @@ void
 SetSoundLoc(fixed gx,fixed gy)
 {
 	fixed	xt;
-	fixef 	yt;
+	fixed 	yt;
 	int	x=0;
 	int 	y=0;
 
@@ -233,7 +233,7 @@ void ScanInfoPlane (void)
 	unsigned	i=0;
 	unsigned	j=0;
 	int		tile=0;
-	unsigned	far	*start = NULL;
+	unsigned	*start = NULL;
 
 	start = mapsegs[1];
 	for (y=0;y<mapheight;y++)
@@ -659,9 +659,9 @@ void SetupGameLevel (void)
 	}
 
 	if (demoplayback || demorecord)
-		US_InitRndT (false);
+		US_InitRndT (FALSE);
 	else
-		US_InitRndT (true);
+		US_InitRndT (TRUE);
 
 //
 // load the level
