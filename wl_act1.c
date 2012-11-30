@@ -40,7 +40,11 @@ line 886	error: "se requiere un l-valor como operando izquierdo de la asignacion
 
 // WL_ACT1.C
 
-#include "WL_DEF.H"
+//#include "WL_DEF.H"
+
+#include "wl_def.h"
+#include <stdio.h> 
+#include <stdbool.h>
 #pragma hdrstop
 
 /*
@@ -186,7 +190,7 @@ void SpawnStatic (int tilex, int tiley, int type)
 	switch (statinfo[type].type)
 	{
 	case block:
-		(unsigned)actorat[tilex][tiley] = 1;		// consider it a blocking tile
+		(unsigned) actorat[tilex][tiley];		// consider it a blocking tile
 	case dressing:
 		laststatobj->flags = 0;
 		break;
@@ -309,16 +313,21 @@ Every time a door opens or closes the areabyplayer matrix gets recalculated.
 #define DOORWIDTH	0x7800
 #define OPENTICS	300
 
-doorobj_t	doorobjlist[MAXDOORS],*lastdoorobj;
-int			doornum;
+doorobj_t doorobjlist[MAXDOORS],*lastdoorobj;
+int doornum;
 
-unsigned	doorposition[MAXDOORS];		// leading edge of door 0=closed
+unsigned doorposition[MAXDOORS];		// leading edge of door 0=closed
 										// 0xffff = fully open
 
-byte	areaconnect[NUMAREAS][NUMAREAS];
+byte areaconnect[NUMAREAS][NUMAREAS];
 
-boolean		areabyplayer[NUMAREAS];
+/* The type bool will be change for a int
+===========================
+= bool areabyplayer[NUMAREAS];
+===========================
+*/
 
+int areabyplayer[NUMAREAS];
 
 /*
 ==============
@@ -338,7 +347,9 @@ void RecursiveConnect (int areanumber)
 	{
 		if (areaconnect[areanumber][i] && !areabyplayer[i])
 		{
-			areabyplayer[i] = true;
+			//areabyplayer[i] = true;
+			
+			areabyplayer[i] = 1;
 			RecursiveConnect (i);
 		}
 	}

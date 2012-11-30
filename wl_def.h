@@ -1177,8 +1177,12 @@ extern	int			doornum;
 extern	unsigned	doorposition[MAXDOORS],pwallstate;
 
 extern	byte		/*far*/ areaconnect[NUMAREAS][NUMAREAS];
-
-extern	boolean		areabyplayer[NUMAREAS];
+/*
+==================
+The variable areabyplayer is declared in wl_act1.c
+==================
+extern	int areabyplayer[NUMAREAS];
+*/
 
 extern unsigned	pwallstate;
 extern unsigned	pwallpos;			// amount a pushable wall has been moved (0-63)
