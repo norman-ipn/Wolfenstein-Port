@@ -45,6 +45,7 @@ line 886	error: "se requiere un l-valor como operando izquierdo de la asignacion
 #include "wl_def.h"
 #include <stdio.h> 
 #include <stdbool.h>
+#include <string.h>
 #pragma hdrstop
 
 /*
