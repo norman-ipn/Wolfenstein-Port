@@ -169,6 +169,8 @@ fixed FixedByFrac (fixed a, fixed b){
 	long lb = 0;
 	long result = 0;
 
+	la = a;
+	lb = b;
 	result = la*lb;
 	return (fixed)result;
 }
