@@ -258,7 +258,7 @@ void TransformActor (objtype *ob)
 *   scale		: conversion from global value to screen value
 * 
 */
-boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
+int TransformTile (int tx, int ty, int *dispx, int *dispheight)
 {
 	int ratio;
 	fixed gx,gy,gxt,gyt,nx,ny;
@@ -291,7 +291,7 @@ boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 	if (nx<mindist)			// too close, don't overflow the divide
 	{
 		*dispheight = 0;
-		return false;
+		return 0;
 	}
 
 	*dispx = centerx + ny*scale/nx;	// DEBUG: use assembly divide
@@ -306,9 +306,9 @@ boolean TransformTile (int tx, int ty, int *dispx, int *dispheight)
 // see if it should be grabbed
 //
 	if (nx<TILEGLOBAL && ny>-TILEGLOBAL/2 && ny<TILEGLOBAL/2)
-		return true;
+		return 1;
 	else
-		return false;
+		return 0;
 }
 
 //==========================================================================
@@ -368,31 +368,35 @@ unsigned	postwidth;
 
 void ScalePost (void)		// VGA version
 {
-	asm	mov	ax,SCREENSEG
-	asm	mov	es,ax
+	unsigned bx = 0;
+	unsigned bp = 0;
+	unsigned di = 0;
+	//asm	mov	ax,SCREENSEG
+	//asm	mov	es,ax
 
-	asm	mov	bx,[postx]
-	asm	shl	bx,1
-	asm	mov	bp,WORD PTR [wallheight+bx]		// fractional height (low 3 bits frac)
-	asm	and	bp,0xfff8				// bp = heightscaler*4
-	asm	shr	bp,1
-	asm	cmp	bp,[maxscaleshl2]
-	asm	jle	heightok
-	asm	mov	bp,[maxscaleshl2]
-heightok:
-	asm	add	bp,OFFSET fullscalefarcall
+	bx = postx;
+	bx = bx<<1;
+	bp = wallheight[bx];		// fractional height (low 3 bits frac)
+	bp = bp * 4;
+	if( bp <= maxscaleshl2 ){
+		bp = bp + *fullscalefarcall;
+	}else{
+		bp = *fullscalefarcall;
+	}
+	
 	//
 	// scale a byte wide strip of wall
 	//
-	asm	mov	bx,[postx]
-	asm	mov	di,bx
-	asm	shr	di,2						// X in bytes
-	asm	add	di,[bufferofs]
+	bx = postx;
+	di = bx;
+	di = di >> 2;
+	di = di + bufferofs;
 
-	asm	and	bx,3
-	asm	shl	bx,3						// bx = pixel*8+pixwidth
-	asm	add	bx,[postwidth]
+	bx = bx & 3;
+	bx = bx << 3;
+	bx += postwidth;
 
+	#if 0
 	asm	mov	al,BYTE PTR [mapmasks1-1+bx]	// -1 because no widths of 0
 	asm	mov	dx,SC_INDEX+1
 	asm	out	dx,al						// set bit mask register
@@ -424,6 +428,7 @@ heightok:
 nomore:
 	asm	mov	ax,ss
 	asm	mov	ds,ax
+#endif
 }
 
 void  FarScalePost (void)				// just so other files can call
@@ -480,7 +485,7 @@ void HitVertWall (void)
 		if (lastside != -1)				// if not the first scaled post
 			ScalePost ();
 
-		lastside = true;
+		lastside = 1;
 		lastintercept = xtile;
 
 		lasttilehit = tilehit;
@@ -939,45 +944,52 @@ unsigned vgaCeiling[]=
 void VGAClearScreen (void)
 {
  unsigned ceiling=vgaCeiling[gamestate.episode*10+gamestate.mapon];
+ unsigned dx = 0;
+ unsigned bl = 0;
+ unsigned bh = 0;
+ unsigned es = 0;
+ unsigned di = 0;
+ unsigned ax = 0;
 
   //
   // clear the screen
   //
+#if 0
 asm	mov	dx,SC_INDEX
 asm	mov	ax,SC_MAPMASK+15*256	// write through all planes
 asm	out	dx,ax
+#endif
 
-asm	mov	dx,80
-asm	mov	ax,[viewwidth]
-asm	shr	ax,2
-asm	sub	dx,ax					// dx = 40-viewwidth/2
+	dx = 40-viewwidth/2;
 
-asm	mov	bx,[viewwidth]
-asm	shr	bx,3					// bl = viewwidth/8
-asm	mov	bh,BYTE PTR [viewheight]
-asm	shr	bh,1					// half height
+	bl = viewwidth/8;
+	
+	bh = viewheight/2;
 
-asm	mov	es,[screenseg]
-asm	mov	di,[bufferofs]
-asm	mov	ax,[ceiling]
+	es = SCREENSEG;
+	di = bufferofs;
+	ax = ceiling;
 
-toploop:
-asm	mov	cl,bl
-asm	rep	stosw
-asm	add	di,dx
-asm	dec	bh
-asm	jnz	toploop
+	while(bh!=0){
+#if 0
+		asm	mov	cl,bl
+		asm	rep	stosw //Fill (E)CX words at ES:[(E)DI] with AX
+		asm	add	di,dx
+#endif
+		bh--;
+	}
 
-asm	mov	bh,BYTE PTR [viewheight]
-asm	shr	bh,1					// half height
-asm	mov	ax,0x1919
+	bh = viewheight/2;
+	ax = 0x1919;
 
-bottomloop:
-asm	mov	cl,bl
-asm	rep	stosw
-asm	add	di,dx
-asm	dec	bh
-asm	jnz	bottomloop
+	while(bh!=0){
+#if 0
+		asm	mov	cl,bl
+		asm	rep	stosw //Fill (E)CX words at ES:[(E)DI] with AX
+		asm	add	di,dx
+#endif
+		bh--;
+	}
 }
 
 //==========================================================================
@@ -1113,7 +1125,7 @@ void DrawScaleds (void)
 		|| ( *(visspot+64) && !*(tilespot+64) )
 		|| ( *(visspot+63) && !*(tilespot+63) ) )
 		{
-			obj->active = true;
+			obj->active = 1;
 			TransformActor (obj);
 			if (!obj->viewheight)
 				continue;						// too close or far away
@@ -1323,20 +1335,23 @@ void WallRefresh (void)
 
 void	ThreeDRefresh (void)
 {
-	int tracedir;
+	int tracedir = 0;
+	int i = 0;
+	int j = 0;
+	int size = 0;
 
-// this wouldn't need to be done except for my debugger/video wierdness
-//	outportb (SC_INDEX,SC_MAPMASK);
+	// this wouldn't need to be done except for my debugger/video wierdness
+	//	outportb (SC_INDEX,SC_MAPMASK);
 
-//
-// clear out the traced array
-//
-asm	mov	ax,ds
-asm	mov	es,ax
-asm	mov	di,OFFSET spotvis
-asm	xor	ax,ax
-asm	mov	cx,2048							// 64*64 / 2
-asm	rep stosw
+	//
+	// clear out the traced array
+	//
+	size = MAPSIZE*MAPSIZE; 
+	for(i=0;i<size;i++){
+		for(j=0;j<size;j++){
+			spotvis[i][j] = 0;
+		}
+	}
 
 	bufferofs += screenofs;
 
@@ -1358,8 +1373,8 @@ asm	rep stosw
 //
 	if (fizzlein)
 	{
-		FizzleFade(bufferofs,displayofs+screenofs,viewwidth,viewheight,20,false);
-		fizzlein = false;
+		FizzleFade(bufferofs,displayofs+screenofs,viewwidth,viewheight,20,0);
+		fizzlein = 0;
 
 		lasttimecount = gamestate.TimeCount = 0;		// don't make a big tic count
 
@@ -1368,6 +1383,7 @@ asm	rep stosw
 	bufferofs -= screenofs;
 	displayofs = bufferofs;
 
+	/*< Updates the screen, I found the function VW_UpdateScreen() in id_vh.c but it is empty so I will call it from here hoping that it will be ready in the future.
 	asm	cli
 	asm	mov	cx,[displayofs]
 	asm	mov	dx,3d4h		// CRTC address register
@@ -1377,7 +1393,9 @@ asm	rep stosw
 	asm	mov	al,ch
 	asm	out	dx,al   	// set the high byte
 	asm	sti
-
+	*/
+	VW_UpdateScreen();
+	
 	bufferofs += SCREENSIZE;
 	if (bufferofs > PAGE3START)
 		bufferofs = PAGE1START;
