@@ -22,8 +22,6 @@
 
 =============================================================================
 */
-
-
 int DebugKeys (void);
 
 /*
@@ -56,14 +54,14 @@ void DebugMemory (void)
 	int	i;
 	char    scratch[80],str[10];
 	long	mem;
-	spritetype _seg	*block;
+	spritetype _seg	*block; //Is it a file type of WL_DEF.H or BIOS.H? I'll check it...
 
-	CenterWindow (16,7);
-
+	CenterWindow (16,7); 
+		//Printing in the scene...
 	US_CPrint ("Memory Usage");
 	US_CPrint ("------------");
 	US_Print ("Total     :");
-	US_PrintUnsigned (mminfo.mainmem/1024);
+	US_PrintUnsigned (mminfo.mainmem/1024); // ¿?
 	US_Print ("k\nFree      :");
 	US_PrintUnsigned (MM_UnusedMemory()/1024);
 	US_Print ("k\nWith purge:");
@@ -87,10 +85,8 @@ void CountObjects (void)
 {
 	int	i,total,count,active,inactive,doors;
 	objtype	*obj;
-
 	CenterWindow (16,7);
 	active = inactive = count = doors = 0;
-
 	US_Print ("Total statics :");
 	total = laststatobj-&statobjlist[0];
 	US_PrintUnsigned (total);
@@ -136,15 +132,18 @@ void CountObjects (void)
 
 void PicturePause (void)
 {
+//Is it used to debug the frame un pause while playing the game? 
+// Going to check it...
 	int			i;
 	byte		p;
 	unsigned	x;
 	byte		far	*dest,far *src;
 	memptr		buffer;
+	//Pointers buffer
 
 	VW_ColorBorder (15);
 	FinishPaletteShifts ();
-
+//Maybe, waiting for press a button to continue playing...
 	LastScan = 0;
 	while (!LastScan)
 	;
@@ -158,16 +157,18 @@ void PicturePause (void)
 	VW_SetScreen (0,0);
 //
 // vga stuff...
+//Maybe, it is to test the structure of video settings...
 //
-
 	ClearMemory ();
 	CA_SetAllPurge();
 	MM_GetPtr (&buffer,64000);
+
 	for (p=0;p<4;p++)
 	{
 	   src = MK_FP(0xa000,displayofs);
 	   dest = (byte far *)buffer+p;
-	   VGAREADMAP(p);
+	   VGAREADMAP(p); // ¿?
+
 	   for (x=0;x<16000;x++,dest+=4)
 		   *dest = *src++;
 	}
@@ -183,18 +184,19 @@ void PicturePause (void)
 			*dest = *src++;
 	}
 #endif
-
+//Assembler code¿? B
 	asm	mov	ax,0x13
 	asm	int	0x10
 
 	dest = MK_FP(0xa000,0);
 	_fmemcpy (dest,buffer,64000);
+//checking the origin of _fmemcpy
 
 	VL_SetPalette (&gamepal);
 
 
 	IN_Shutdown ();
-
+//Function to check! Hard Code!
 	VW_WaitVBL(70);
 	bioskey(0);
 	VW_WaitVBL(70);
@@ -216,6 +218,8 @@ void PicturePause (void)
 #pragma warn -pia
 void ShapeTest (void)
 {
+//the fuction ShapeTest will use it to debug the shapes' parts in the debug's seccion of the frames
+//generated in the code..
 extern	word	NumDigi;
 extern	word	_seg *DigiList;
 static	char	buf[10];
@@ -226,9 +230,9 @@ static	char	buf[10];
 	longword		l;
 	memptr			addr;
 	PageListStruct	far *page;
-
 	CenterWindow(20,16);
 	VW_UpdateScreen();
+//
 	for (i = 0,done = false;!done;)
 	{
 		US_ClearWindow();
@@ -245,7 +249,7 @@ static	char	buf[10];
 			US_Print(" (Sound Info)");
 		else
 			US_Print(" (Sound)");
-
+//searching something about XMS...
 		US_Print("\n XMS: ");
 		if (page->xmsPage != -1)
 			US_PrintUnsigned(page->xmsPage);
@@ -262,7 +266,7 @@ static	char	buf[10];
 		}
 		else
 			US_Print("No");
-
+//printings and checking codes 
 		US_Print("\n Last hit: ");
 		US_PrintUnsigned(page->lastHit);
 
