@@ -1,36 +1,19 @@
 /*
-Salazar Ortiz Evila Lucero
+=============================
+* Salazar Ortiz Evila Lucero
+=============================
 
-That error was the most comun and I'm working to resolve.
+The last errors
 
-Line 149 	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-Line 278 	erased "far"
-Line 278 	error: expected = , ; asm or __attribute__ before areaconnect
-Line 353 	erased "far"
-Line 365 	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-Line 372	"mapsegs" is not declared, erased for testing porpouse.
-Line 471	again "mapsegs" is not declared, erased for testing.
-Line 471	erased the * 
-Line 483	join it with the previou line
-Line 482 	error 	"se requiere un l-valor como operando izquierdo de la asignacion"
-line 556	erased "far"
-line 565	"mapsegs" is not declared, erased
-line 619	erased "far"
-line 648	erased "mapsegs" (mapsegs[0]+...)
-line 751	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 761	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 771	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 781	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 793	erased "mapsegs"
-line 793	erased the * previous to the (
-line 793	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 828	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 829	erased "mapsegs" and * previous to the (
-line 829	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 853	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 864	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 875	error: "se requiere un l-valor como operando izquierdo de la asignacion"
-line 886	error: "se requiere un l-valor como operando izquierdo de la asignacion"	((unsigned)actorat[pwallx-1][pwally] = tilemap[pwallx-1][pwally] = oldtile;)
+wl_act1.c: En la función ‘SpawnDoor’:
+wl_act1.c:417:34: error: se requiere un l-valor como operando izquierdo de la asignación
+wl_act1.c: En la función ‘CloseDoor’:
+wl_act1.c:541:34: error: se requiere un l-valor como operando izquierdo de la asignación
+wl_act1.c: En la función ‘PushWall’:
+wl_act1.c:856:33: error: se requiere un l-valor como operando izquierdo de la asignación
+wl_act1.c: En la función ‘MovePWalls’:
+wl_act1.c:893:34: error: se requiere un l-valor como operando izquierdo de la asignación
+
 
 
 */
@@ -421,7 +404,8 @@ void SpawnDoor (int tilex, int tiley, boolean vertical, int lock)
 // for door sides
 //
 	tilemap[tilex][tiley] = doornum | 0x80;
-	map = farmapylookup[tiley]+tilex;
+	//
+	*map = farmapylookup[tiley]+tilex;
 	if (vertical)
 	{
 		*map = *(map-1);                        // set area number
@@ -531,6 +515,12 @@ void CloseDoor (int door)
 //
 // make the door space solid
 //
+
+/*
+====================
+= The same case with the Spawndoor function
+====================
+*/
 	(unsigned)actorat[tilex][tiley] = door | 0x80;
 }
 
@@ -608,13 +598,13 @@ void DoorOpening (int door)
 	unsigned	*map;
 	long	position;
 
-	position = doorposition[door];
+	position = (long)doorposition[door];
 	if (!position)
 	{
 	//
 	// door is just starting to open, so connect the areas
 	//
-		map =	farmapylookup[doorobjlist[door].tiley]
+		*map =	farmapylookup[doorobjlist[door].tiley]
 			+doorobjlist[door].tilex;
 
 		if (doorobjlist[door].vertical)
@@ -697,7 +687,7 @@ void DoorClosing (int door)
 
 		doorobjlist[door].action = dr_closed;
 
-		map = farmapylookup[doorobjlist[door].tiley]
+		*map = farmapylookup[doorobjlist[door].tiley]
 			+doorobjlist[door].tilex;
 
 		if (doorobjlist[door].vertical)
@@ -782,7 +772,7 @@ int			pwalldir;
 
 void PushWall (int checkx, int checky, int dir)
 {
-	int		oldtile;
+	int oldtile;
 
 	if (pwallstate)
 	  return;
@@ -800,7 +790,8 @@ void PushWall (int checkx, int checky, int dir)
 			SD_PlaySound (NOWAYSND);
 			return;
 		}
-		(unsigned)actorat[checkx][checky-1] =
+		//(unsigned)actorat[checkx][checky-1] = 
+		(unsigned)actorat[checkx][checky-1];
 		tilemap[checkx][checky-1] = oldtile;
 		break;
 
@@ -810,7 +801,8 @@ void PushWall (int checkx, int checky, int dir)
 			SD_PlaySound (NOWAYSND);
 			return;
 		}
-		(unsigned)actorat[checkx+1][checky] =
+		//(unsigned)actorat[checkx+1][checky] = tilemap[checkx+1][checky] = oldtile;
+		(unsigned)actorat[checkx+1][checky];//need initials values
 		tilemap[checkx+1][checky] = oldtile;
 		break;
 
@@ -820,7 +812,8 @@ void PushWall (int checkx, int checky, int dir)
 			SD_PlaySound (NOWAYSND);
 			return;
 		}
-		(unsigned)actorat[checkx][checky+1] =
+		//(unsigned)actorat[checkx][checky+1] = tilemap[checkx][checky+1] = oldtile;
+		(unsigned)actorat[checkx][checky+1];
 		tilemap[checkx][checky+1] = oldtile;
 		break;
 
@@ -830,7 +823,8 @@ void PushWall (int checkx, int checky, int dir)
 			SD_PlaySound (NOWAYSND);
 			return;
 		}
-		(unsigned)actorat[checkx-1][checky] =
+		//(unsigned)actorat[checkx-1][checky] = tilemap[checkx-1][checky] = oldtile;
+		(unsigned)actorat[checkx-1][checky];
 		tilemap[checkx-1][checky] = oldtile;
 		break;
 	}
@@ -877,7 +871,8 @@ void MovePWalls (void)
 		// the tile can now be walked into
 		//
 		tilemap[pwallx][pwally] = 0;
-		(unsigned)actorat[pwallx][pwally] = 0;
+		//(unsigned)actorat[pwallx][pwally] = 0;
+		(unsigned)actorat[pwallx][pwally];
 		(farmapylookup[pwally]+pwallx) = player->areanumber+AREATILE;
 
 		//
@@ -902,7 +897,8 @@ void MovePWalls (void)
 					pwallstate = 0;
 					return;
 				}
-				(unsigned)actorat[pwallx][pwally-1] =
+				//(unsigned)actorat[pwallx][pwally-1] =
+				(unsigned)actorat[pwallx][pwally-1];
 				tilemap[pwallx][pwally-1] = oldtile;
 				break;
 
@@ -913,7 +909,8 @@ void MovePWalls (void)
 					pwallstate = 0;
 					return;
 				}
-				(unsigned)actorat[pwallx+1][pwally] =
+				//(unsigned)actorat[pwallx+1][pwally] =
+				(unsigned)actorat[pwallx+1][pwally];
 				tilemap[pwallx+1][pwally] = oldtile;
 				break;
 
@@ -924,7 +921,8 @@ void MovePWalls (void)
 					pwallstate = 0;
 					return;
 				}
-				(unsigned)actorat[pwallx][pwally+1] =
+				//(unsigned)actorat[pwallx][pwally+1] =
+				(unsigned)actorat[pwallx][pwally+1];				
 				tilemap[pwallx][pwally+1] = oldtile;
 				break;
 
@@ -935,11 +933,16 @@ void MovePWalls (void)
 					pwallstate = 0;
 					return;
 				}
-				(unsigned)actorat[pwallx-1][pwally] =
+				//(unsigned)actorat[pwallx-1][pwally] =
+				(unsigned)actorat[pwallx-1][pwally];
 				tilemap[pwallx-1][pwally] = oldtile;
 				break;
 			}
-
+/*
+==================
+* The last case
+==================
+*/
 			tilemap[pwallx][pwally] = oldtile | 0xc0;
 		}
 	}
