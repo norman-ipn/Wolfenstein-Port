@@ -277,7 +277,7 @@ boolean TryWalk (objtype *ob)
 	{
 		OpenDoor (doornum);
 		ob->distance = -doornum-1;
-		return true;
+		return 1;
 	}
 
 
@@ -285,7 +285,7 @@ boolean TryWalk (objtype *ob)
 		*(mapsegs[0] + farmapylookup[ob->tiley]+ob->tilex) - AREATILE;
 
 	ob->distance = TILEGLOBAL;
-	return true;
+	return 1;
 }
 
 
@@ -941,7 +941,7 @@ void KillActor (objtype *ob)
 
 void DamageActor (objtype *ob, unsigned damage)
 {
-	madenoise = true;
+	madenoise = 1;
 
 //
 // do double damage if shooting a non attack mode actor
@@ -1092,7 +1092,7 @@ boolean CheckLine (objtype *ob)
 				continue;
 
 			if (value<128 || value>256)
-				return false;
+				return 0;
 
 			//
 			// see if the door is open enough
@@ -1101,7 +1101,7 @@ boolean CheckLine (objtype *ob)
 			intercept = yfrac-ystep/2;
 
 			if (intercept>doorposition[value])
-				return false;
+				return 0;
 
 		} while (x != xt2);
 	}
@@ -1159,7 +1159,7 @@ boolean CheckLine (objtype *ob)
 		} while (y != yt2);
 	}
 
-	return true;
+	return 1;
 }
 
 
@@ -1189,7 +1189,7 @@ boolean CheckSight (objtype *ob)
 // don't bother tracing a line if the area isn't connected to the player's
 //
 	if (!areabyplayer[ob->areanumber])
-		return false;
+		return 0;
 
 //
 // if the player is real close, sight is automatic
@@ -1199,7 +1199,7 @@ boolean CheckSight (objtype *ob)
 
 	if (deltax > -MINSIGHT && deltax < MINSIGHT
 	&& deltay > -MINSIGHT && deltay < MINSIGHT)
-		return true;
+		return 1;
 
 //
 // see if they are looking in the right direction
@@ -1208,22 +1208,22 @@ boolean CheckSight (objtype *ob)
 	{
 	case north:
 		if (deltay > 0)
-			return false;
+			return 0;
 		break;
 
 	case east:
 		if (deltax < 0)
-			return false;
+			return 0;
 		break;
 
 	case south:
 		if (deltay < 0)
-			return false;
+			return 0;
 		break;
 
 	case west:
 		if (deltax > 0)
-			return false;
+			return 0;
 		break;
 	}
 
@@ -1410,24 +1410,24 @@ boolean SightPlayer (objtype *ob)
 	//
 		ob->temp2 -= tics;
 		if (ob->temp2 > 0)
-			return false;
+			return 0;
 		ob->temp2 = 0;					// time to react
 	}
 	else
 	{
 		if (!areabyplayer[ob->areanumber])
-			return false;
+			return 0;
 
 		if (ob->flags & FL_AMBUSH)
 		{
 			if (!CheckSight (ob))
-				return false;
+				return 0;
 			ob->flags &= ~FL_AMBUSH;
 		}
 		else
 		{
 			if (!madenoise && !CheckSight (ob))
-				return false;
+				return 0;
 		}
 
 
@@ -1466,12 +1466,12 @@ boolean SightPlayer (objtype *ob)
 			ob->temp2 = 1;
 			break;
 		}
-		return false;
+		return 0;
 	}
 
 	FirstSighting (ob);
 
-	return true;
+	return 1;
 }
 
 

@@ -76,7 +76,7 @@ EMS / XMS unmanaged routines
 */
 
 #include "id_mm.h"
-
+#include <stdio.h> //This fixed many problems, including the ones that said that NULL was not declared here
 
 
 
@@ -311,8 +311,8 @@ void MM_Startup (void)
 		MM_Shutdown ();
 
 
-	mmstarted = TRUE;
-	bombonerror = TRUE;
+	mmstarted = 1;
+	bombonerror = 1;	//Changed TRUE by 1 because TRUE and FALSE are not declared in c sintaxis, they are 1 and 0
 //
 // set up the linked list (everything in the free list;
 //
@@ -404,8 +404,7 @@ void MM_Shutdown (void)
 
 void MM_GetPtr (memptr *baseptr,unsigned long size)	//*The memptr is not recognized
 {
-	mmblocktype far *scan,far *lastscan,far *endscan
-				,far *purge,far *next;
+	mmblocktype  *scan, *lastscan, *endscan, *purge, *next;	//Erased the "far"
 	int			search;
 	unsigned	needed,startseg;
 
@@ -499,7 +498,7 @@ boolean SetViewSize (unsigned width, unsigned height);
 //
 		if (!insetupscaling && viewsize>10)
 		{
-mmblocktype	far *savedmmnew;
+			mmblocktype  *savedmmnew;	//Erased "far"
 			savedmmnew = mmnew;
 			viewsize -= 2;
 			SetViewSize (viewsize*16,viewsize*16*HEIGHTRATIO);
@@ -563,7 +562,7 @@ void MM_FreePtr (memptr *baseptr)		//*the memptr is not recognized
 
 void MM_SetPurge (memptr *baseptr, int purge)		//*memptr is not recognized
 {
-	mmblocktype far *start;
+	mmblocktype  *start;	//erassed "far"
 
 	start = mmrover;
 
@@ -599,7 +598,7 @@ void MM_SetPurge (memptr *baseptr, int purge)		//*memptr is not recognized
 
 void MM_SetLock (memptr *baseptr, boolean locked)	//*memptr is not recognized
 {
-	mmblocktype far *start;
+	mmblocktype *start;	//erased "far"
 
 	start = mmrover;
 
@@ -654,7 +653,7 @@ void MM_SortMem (void)
 			playing += STARTADLIBSOUNDS;
 			break;
 		}
-		MM_SetLock(&(memptr)audiosegs[playing],true);	//*memptr is not declared
+		MM_SetLock(&(memptr)audiosegs[playing],true);	//*audiosegs is not declarde
 	}
 
 
