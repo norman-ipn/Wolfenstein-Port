@@ -933,13 +933,13 @@ void DrawPlayScreen (void)
 void StartDemoRecord (int levelnumber)
 {
 	MM_GetPtr (&demobuffer,MAXDEMOSIZE);
-	MM_SetLock (&demobuffer,true);
+	MM_SetLock (&demobuffer,TRUE);
 	demoptr = (char far *)demobuffer;
 	lastdemoptr = demoptr+MAXDEMOSIZE;
 
 	*demoptr = levelnumber;
 	demoptr += 4;				// leave space for length
-	demorecord = true;
+	demorecord = TRUE;
 }
 
 
@@ -969,7 +969,7 @@ void FinishDemoRecord (void)
 	US_Print(" Demo number (0-9):");
 	VW_UpdateScreen();
 
-	if (US_LineInput (px,py,str,NULL,true,2,0))
+	if (US_LineInput (px,py,str,NULL,TRUE,2,0))
 	{
 		level = atoi (str);
 		if (level>=0 && level<=9)
@@ -1006,7 +1006,7 @@ void RecordDemo (void)
 	US_Print("  Demo which level(1-10):");
 	VW_UpdateScreen();
 	VW_FadeIn ();
-	esc = !US_LineInput (px,py,str,NULL,true,2,0);
+	esc = !US_LineInput (px,py,str,NULL,TRUE,2,0);
 	if (esc)
 		return;
 
@@ -1030,12 +1030,12 @@ void RecordDemo (void)
 	VW_FadeIn ();
 
 	startgame = false;
-	demorecord = true;
+	demorecord = TRUE;
 
 	SetupGameLevel ();
 	StartMusic ();
 	PM_CheckMainMem ();
-	fizzlein = true;
+	fizzlein = TRUE;
 
 	PlayLoop ();
 
@@ -1074,11 +1074,11 @@ void PlayDemo (int demonumber)
 
 	CA_CacheGrChunk(dems[demonumber]);
 	demoptr = grsegs[dems[demonumber]];
-	MM_SetLock (&grsegs[dems[demonumber]],true);
+	MM_SetLock (&grsegs[dems[demonumber]],TRUE);
 #else
 	demoname[4] = '0'+demonumber;
 	CA_LoadFile (demoname,&demobuffer);
-	MM_SetLock (&demobuffer,true);
+	MM_SetLock (&demobuffer,TRUE);
 	demoptr = (char far *)demobuffer;
 #endif
 
@@ -1096,12 +1096,12 @@ void PlayDemo (int demonumber)
 	VW_FadeIn ();
 
 	startgame = false;
-	demoplayback = true;
+	demoplayback = TRUE;
 
 	SetupGameLevel ();
 	StartMusic ();
 	PM_CheckMainMem ();
-	fizzlein = true;
+	fizzlein = TRUE;
 
 	PlayLoop ();
 
@@ -1314,7 +1314,7 @@ restart:
 		}
 #endif
 
-		ingame = true;
+		ingame = TRUE;
 		StartMusic ();
 		PM_CheckMainMem ();
 		if (!died)
