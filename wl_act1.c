@@ -1,4 +1,10 @@
 /*
+
+ \filename wl_act1.c
+
+ New version of WL_ACT1.C
+
+
 =============================
 * Salazar Ortiz Evila Lucero
 =============================
@@ -15,21 +21,12 @@ wl_act1.c: En la función ‘MovePWalls’:
 wl_act1.c:893:34: error: se requiere un l-valor como operando izquierdo de la asignación
 
 
-
 */
-
-
-
-
-// WL_ACT1.C
-
-//#include "WL_DEF.H"
 
 #include "wl_def.h"
 #include <stdio.h> 
 #include <stdbool.h>
 #include <string.h>
-#pragma hdrstop
 
 /*
 =============================================================================
@@ -40,12 +37,13 @@ wl_act1.c:893:34: error: se requiere un l-valor como operando izquierdo de la as
 */
 
 
-statobj_t	statobjlist[MAXSTATS],*laststatobj;
+statobj_t	statobjlist[MAXSTATS];
+statobj_t	*laststatobj = NULL;
 
 
 struct
 {
-	int		picnum;
+	int	picnum;
 	stat_t	type;
 } statinfo[] =
 {
@@ -378,6 +376,10 @@ void InitDoorList (void)
 ===============
 =
 = SpawnDoor
+
+http://www.merriam-webster.com/dictionary/spawn
+
+You can change it by generate/create door.
 =
 ===============
 */
@@ -396,6 +398,8 @@ void SpawnDoor (int tilex, int tiley, boolean vertical, int lock)
 	lastdoorobj->vertical = vertical;
 	lastdoorobj->lock = lock;
 	lastdoorobj->action = dr_closed;
+
+        /* this code puts a door on the position tilex, tiley */
 
 	(unsigned)actorat[tilex][tiley] = doornum | 0x80;	// consider it a solid wall
 
