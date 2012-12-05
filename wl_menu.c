@@ -308,7 +308,7 @@ static byte
 	"?","?","?","?","?","?","?","?","?","?","?","?","?","?","?","?",
 	"?","?","?","?","?","?","?","?","?","?","?","?","?","?","?","?"
 					},	// DEBUG - consolidate these
-					far ExtScanCodes[] =	// Scan codes with >1 char names
+					ExtScanCodes[] =	// Scan codes with >1 char names
 					{
 	1,0xe,0xf,0x1d,0x2a,0x39,0x3a,0x3b,0x3c,0x3d,0x3e,
 	0x3f,0x40,0x41,0x42,0x43,0x44,0x57,0x59,0x46,0x1c,0x36,
@@ -1390,9 +1390,9 @@ int CP_LoadGame(int quick)
 			name[7]=which+'0';
 			handle=open(name,O_BINARY);
 			lseek(handle,32,SEEK_SET);
-			loadedgame=true;
+			loadedgame=TRUE;
 			LoadTheGame(handle,0,0);
-			loadedgame=false;
+			loadedgame=FALSE;
 			close(handle);
 
 			DrawFace ();
@@ -1427,7 +1427,7 @@ int CP_LoadGame(int quick)
 			lseek(handle,32,SEEK_SET);
 
 			DrawLSAction(0);
-			loadedgame=true;
+			loadedgame=TRUE;
 
 			LoadTheGame(handle,LSA_X+8,LSA_Y+5);
 			close(handle);
@@ -1611,7 +1611,7 @@ int CP_SaveGame(int quick)
 				VWB_Bar(LSM_X+LSItems.indent+1,LSM_Y+which*13+1,LSM_W-LSItems.indent-16,10,BKGDCOLOR);
 			VW_UpdateScreen();
 
-			if (US_LineInput(LSM_X+LSItems.indent+2,LSM_Y+which*13+1,input,input,true,31,LSM_W-LSItems.indent-30))
+			if (US_LineInput(LSM_X+LSItems.indent+2,LSM_Y+which*13+1,input,input,TRUE,31,LSM_W-LSItems.indent-30))
 			{
 				SaveGamesAvail[which]=1;
 				strcpy(&SaveGameNames[which][0],input);
@@ -2179,7 +2179,7 @@ void EnterCtrlData(int index,CustomCtrls *cust,void (*DrawRtn)(int),void (*Print
 	if (IN_KeyDown(sc_Enter)||IN_KeyDown(sc_Control)||IN_KeyDown(sc_Alt))
 	{
 	 IN_ClearKeysDown();
-	 ci.button0=ci.button1=false;
+	 ci.button0=ci.button1=FALSE;
 	}
 
   //
@@ -3103,7 +3103,7 @@ void CleanupControlPanel(void)
 // Handle moving gun around a menu
 //
 ////////////////////////////////////////////////////////////////////
-int HandleMenu(CP_iteminfo *item_i,CP_itemtype far *items,void (*routine)(int w))
+int HandleMenu(CP_iteminfo *item_i,CP_itemtype *items,void (*routine)(int w))
 {
 	char key;
 	static int redrawitem=1,lastitem=-1;
@@ -3349,7 +3349,7 @@ int HandleMenu(CP_iteminfo *item_i,CP_itemtype far *items,void (*routine)(int w)
 //
 // ERASE GUN & DE-HIGHLIGHT STRING
 //
-void EraseGun(CP_iteminfo *item_i,CP_itemtype far *items,int x,int y,int which)
+void EraseGun(CP_iteminfo *item_i,CP_itemtype *items,int x,int y,int which)
 {
 	VWB_Bar(x-1,y,25,16,BKGDCOLOR);
 	SetTextColor(items+which,0);
@@ -3377,7 +3377,7 @@ void DrawHalfStep(int x,int y)
 //
 // DRAW GUN AT NEW POSITION
 //
-void DrawGun(CP_iteminfo *item_i,CP_itemtype far *items,int x,int *y,int which,int basey,void (*routine)(int w))
+void DrawGun(CP_iteminfo *item_i,CP_itemtype *items,int x,int *y,int which,int basey,void (*routine)(int w))
 {
 	VWB_Bar(x-1,*y,25,16,BKGDCOLOR);
 	*y=basey+which*13;
@@ -3420,7 +3420,7 @@ void TicDelay(int count)
 // Draw a menu
 //
 ////////////////////////////////////////////////////////////////////
-void DrawMenu(CP_iteminfo *item_i,CP_itemtype far *items)
+void DrawMenu(CP_iteminfo *item_i,CP_itemtype *items)
 {
 	int i,which=item_i->curpos;
 
@@ -3454,7 +3454,7 @@ void DrawMenu(CP_iteminfo *item_i,CP_itemtype far *items)
 // SET TEXT COLOR (HIGHLIGHT OR NO)
 //
 ////////////////////////////////////////////////////////////////////
-void SetTextColor(CP_itemtype far *items,int hlight)
+void SetTextColor(CP_itemtype *items,int hlight)
 {
 	if (hlight)
 		{SETFONTCOLOR(color_hlite[items->active],BKGDCOLOR);}
@@ -3589,7 +3589,7 @@ void ReadAnyControl(ControlInfo *ci)
 // DRAW DIALOG AND CONFIRM YES OR NO TO QUESTION
 //
 ////////////////////////////////////////////////////////////////////
-int Confirm(char far *string)
+int Confirm(char *string)
 {
 	int xit=0,i,x,y,tick=0,time,whichsnd[2]={ESCPRESSEDSND,SHOOTSND};
 
@@ -3721,7 +3721,7 @@ int GetYorN(int x,int y,int pic)
 // PRINT A MESSAGE IN A WINDOW
 //
 ////////////////////////////////////////////////////////////////////
-void Message(char far *string)
+void Message(char *string)
 {
 	int h=0,w=0,mw=0,i,x,y,time;
 	fontstruct _seg *font;
@@ -3774,15 +3774,15 @@ void StartCPMusic(int song)
 	SD_MusicOff();
 	chunk =	song;
 
-	MM_BombOnError (false);
+	MM_BombOnError (FALSE);
 	CA_CacheAudioChunk(STARTMUSIC + chunk);
-	MM_BombOnError (true);
+	MM_BombOnError (TRUE);
 	if (mmerror)
-		mmerror = false;
+		mmerror = FALSE;
 	else
 	{
 		MM_SetLock(&((memptr)audiosegs[STARTMUSIC + chunk]),true);
-		SD_StartMusic((MusicGroup far *)audiosegs[STARTMUSIC + chunk]);
+		SD_StartMusic((MusicGroup *)audiosegs[STARTMUSIC + chunk]);
 	}
 }
 
@@ -3803,7 +3803,7 @@ byte *
 IN_GetScanName(ScanCode scan)
 {
 	byte		**p;
-	ScanCode	far *s;
+	ScanCode	*s;
 
 	for (s = ExtScanCodes,p = ExtScanNames;*s;p++,s++)
 		if (*s == scan)
@@ -3831,7 +3831,7 @@ void CheckPause(void)
 		SoundStatus^=1;
 		VW_WaitVBL(3);
 		IN_ClearKeysDown();
-		Paused=false;
+		Paused=FALSE;
  }
 }
 
