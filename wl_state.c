@@ -1146,7 +1146,7 @@ boolean CheckLine (objtype *ob)
 				continue;
 
 			if (value<128 || value>256)
-				return false;
+				return 0;
 
 			//
 			// see if the door is open enough
