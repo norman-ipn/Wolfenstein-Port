@@ -287,6 +287,7 @@ void  ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
 
               mov destiny, source       destiny <- source
 */
+
  int CX = 0;
  int ES = 0;
  int BP = 0;
@@ -294,6 +295,10 @@ void  ScaleLine (void)  /*Check how it works this tipe of fuction sign*/
  int BX = 0;
  int SC_INDEX = 0;
  int DI = 0;//destination register
+ int AL = 0;
+ int AX = 0;
+ int SS = 0;
+ int DS = 0;
 
 //asm	mov	cx,WORD PTR [linescale+2]    /// 
 //No sign lacks the pointer here, as in line 306: CX =(int) *(linescale+2);
@@ -329,16 +334,70 @@ BX<<2;
 //asm	add	bx,[slinewidth]				// bx = (pixel*8+pixwidth)
 BX = BX +  /*'*'*/(slinewidth);
 
-asm(	"mov	al,BYTE [mapmasks3-1+BX]"	// -1 because pixwidth of 1 is first
-	"mov	ds,WORD PTR [linecmds+2]"
-	"or	al,al"
-	"jz	notthreebyte"				// scale across three bytes
-	"jmp	threebyte"
+AL = *(mapmasks3-1+BX);
+DS = *(unsigned short*)(linecmds+2);
+if((AL|AL) == 0)
+	{
+	//nothreebyte
+	AL = *(unsigned char*)(mapmasks2-1+BX);
+	if((AL|AL) != 0)
+		{
+		//twobyte
+		mask2 = AL;//in case of erro of the var mask2 maybe it make reference to the mapmasks
+		AL = *(unsigned char*)(mapmasks1-1+BX);
+		mask1 = AL; // same as two lines before
+		//scaledouble
+		//mov bx,[ds:bp]
+		if((BX|BX) == 0)
+			{
+			//linedone
+			AX = SS;//in what time this segmes its loaded?
+			DS = AX;
+			//return ;
+			}
+		else
+			{
+			//if not occurs the jump
+			}
+		}
+	else
+		{
+		// if not occurs the jump
+		}
+	}
+else
+	{
+	//threebyte
+	mask3 = AL;
+	AL = *(unsigned char*)(mapmasks2+-1+BX);
+	mask2 = AL;
+	AL = *(unsigned char*)(mapmasks1-1+BX);
+	mask1 = AL;
+	//scaletriple
+	//mov bx,[ds:bp]
+	if((BX|BX) == 0)
+		{
+		//linedone
+		AX = SS;
+		DS = AX;
+		//return ;
+		}
+	else
+		{
+		//if not occurs the jump
+		}
+	}
 
-"notthreebyte:"
-	"mov	al,BYTE PTR ss:[mapmasks2-1+BX]"	// -1 because pixwidth of 1 is first
- 	"or	al,al"
- 	"jnz	twobyte"						// scale across two bytes
+//asm(	"mov	al,BYTE[mapmasks3-1+BX]"	// -1 because pixwidth of 1 is first
+//	"mov	ds,WORD PTR[linecmds+2]"
+//	"or	al,al"
+//	"jz	notthreebyte"				// scale across three bytes
+	//"jmp	threebyte"
+
+//"notthreebyte:"
+//	"mov	al,BYTE PTR ss:[mapmasks2-1+BX]"	// -1 because pixwidth of 1 is first
+// 	"or	al,al"
+// 	"jnz	twobyte"						// scale across two bytes
 
 //
 // one byte scaling
@@ -372,24 +431,25 @@ asm(	"mov	al,BYTE [mapmasks3-1+BX]"	// -1 because pixwidth of 1 is first
 //
 // done
 //
-"linedone:"
-	"mov	ax,ss"
-	"mov	ds,ax"
-"return;"
+//"linedone:"
+//	"mov	ax,ss"
+//	"mov	ds,ax"
+//"return;"	//this returns goes back from the last jz? or just do nothing?
 
 //
 // two byte scaling
 //
-"twobyte:"
-	"mov	ss:[mask2],al"
-	"mov	al,BYTE PTR ss:[mapmasks1-1+bx]"	// -1 because pixwidth of 1 is first
-	"mov	ss:[mask1],al"
 
-"scaledouble:"
+//"twobyte:"
+	//"mov	ss:[mask2],al"
+	//"mov	al,BYTE PTR ss:[mapmasks1-1+bx]"	// -1 because pixwidth of 1 is first
+	//"mov	ss:[mask1],al"
 
-	"mov	bx,[ds:bp]"					// table location of rtl to patch
-	"or	bx,bx"
-	"jz	linedone"					// 0 signals end of segment list
+//"scaledouble:"
+
+//	"mov	bx,[ds:bp]"	//Im not sure if it is an offset bx=bx>> bp	// table location of rtl to patch
+//	"or	bx,bx"
+//	"jz	linedone"					// 0 signals end of segment list
 	"mov	bx,[es:bx]"
 	"mov	cl,[es:bx]"					// save old value
 	"mov	BYTE PTR es:[bx],OP_RETF"	// patch a RETF in
@@ -418,14 +478,14 @@ asm(	"mov	al,BYTE [mapmasks3-1+BX]"	// -1 because pixwidth of 1 is first
 //
 // three byte scaling
 //
-"threebyte:"
-	"mov	ss:[mask3],al"
-	"mov	al,BYTE PTR ss:[mapmasks2-1+bx]"	// -1 because pixwidth of 1 is first
-	"mov	ss:[mask2],al"
-	"mov	al,BYTE PTR ss:[mapmasks1-1+bx]"	// -1 because pixwidth of 1 is first
-	"mov	ss:[mask1],al"
+//"threebyte:"
+//	"mov	ss:[mask3],al"
+//	"mov	al,BYTE PTR ss:[mapmasks2-1+bx]"	// -1 because pixwidth of 1 is first
+//	"mov	ss:[mask2],al"
+//	"mov	al,BYTE PTR ss:[mapmasks1-1+bx]"	// -1 because pixwidth of 1 is first
+//	"mov	ss:[mask1],al"
 
-"scaletriple:"
+//"scaletriple:"
 	"mov	bx,[ds:bp]"					// table location of rtl to patch
 	"mov	bx,bx"
 	"jz	linedone"					// 0 signals end of segment list
