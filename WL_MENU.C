@@ -4,6 +4,11 @@
 // by John Romero (C) 1992 Id Software, Inc.
 //
 ////////////////////////////////////////////////////////////////////
+//
+//  Notes: needs improvment on i18n.
+// 
+////////////////////////////////////
+
 #include "wl_def.h"	/*We have to check for this library, i cannot find it*/
 #pragma hdrstop
 
@@ -2650,7 +2655,7 @@ void DrawCustMouse(int hilight)
 
 void PrintCustJoy(int i)
 {
-	int j;
+	int j=0;
 
 	for (j=0;j<4;j++)
 		if (order[i]==buttonjoy[j])
@@ -2695,7 +2700,6 @@ void DrawCustKeybd(int hilight)
 {
 	int i,color;
 
-
 	color=TEXTCOLOR;
 	if (hilight)
 		color=HIGHLIGHT;
@@ -2712,19 +2716,30 @@ void PrintCustKeys(int i)
 	US_Print(IN_GetScanName(dirscan[moveorder[i]]));
 }
 
-void DrawCustKeys(int hilight)
+/* 
+  @param hilight indicates wheter or not nihlight the color.  
+*/
+void DrawCustKeys(int hilight) 
 {
-	int i,color;
+  int i = 0;
+  int color = 0;
 
+  /* uses the global text color */
+  color=TEXTCOLOR;
+    
+  if (hilight)
+  {
+	color=HIGHLIGHT;
+  }
+  
+  SETFONTCOLOR(color,BKGDCOLOR);
 
-	color=TEXTCOLOR;
-	if (hilight)
-		color=HIGHLIGHT;
-	SETFONTCOLOR(color,BKGDCOLOR);
-
-	PrintY=CST_Y+13*10;
-	for (i=0;i<4;i++)
-		PrintCustKeys(i);
+  PrintY = CST_Y + 13*10;
+  
+  for (i=0;i<4;i++)
+  {
+    PrintCustKeys(i);
+  }
 }
 
 
