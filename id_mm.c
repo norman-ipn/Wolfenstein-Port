@@ -1,8 +1,6 @@
 // NEWMM.C
-//
-//
 
-#include "id_mm.h" // this is the only .H file need here.
+#include "id_mm.h" 
 
 /*
  * only functions on this .c file.
@@ -204,7 +202,8 @@ asm	call	[DWORD PTR XMSaddr]
 
 void MML_UseSpace (unsigned segstart, unsigned seglength)
 {
-	mmblocktype *scan, *last;	//*The word far was deleted (in both variables)
+	mmblocktype     *scan = NULL;
+	mmblocktype     *last = NULL;	//*The word far was deleted (in both variables)
 	unsigned	oldend;
 	long		extra;
 
